@@ -1,0 +1,22 @@
+[
+  "net_BENIGN",
+  "net_Bot",
+  "net_BruteForce",
+  "net_DoS",
+  "net_Infiltration",
+  "net_PortScan",
+  "net_WebAttack",
+  "can_BENIGN",
+  "can_DoS",
+  "can_GAS",
+  "can_RPM",
+  "can_SPEED",
+  "can_STEERING_WHEEL",
+  "gps_Normal",
+  "gps_Spoofing",
+  "lid_Normal",
+  "lid_PointDrop",
+  "lid_IntensitySpoof",
+  "lid_GhostCluster",
+  "zd_score"
+]

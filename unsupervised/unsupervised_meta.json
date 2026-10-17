@@ -1,0 +1,44 @@
+{
+  "feat_dim": 19,
+  "domain_dims": {
+    "network": 7,
+    "can": 6,
+    "gps": 2,
+    "lidar": 4
+  },
+  "domain_classes": {
+    "network": [
+      "BENIGN",
+      "Bot",
+      "BruteForce",
+      "DoS",
+      "Infiltration",
+      "PortScan",
+      "WebAttack"
+    ],
+    "can": [
+      "BENIGN",
+      "DoS",
+      "GAS",
+      "RPM",
+      "SPEED",
+      "STEERING_WHEEL"
+    ],
+    "gps": [
+      "Normal",
+      "Spoofing"
+    ],
+    "lidar": [
+      "Normal",
+      "PointDrop",
+      "IntensitySpoof",
+      "GhostCluster"
+    ]
+  },
+  "kernel": "rbf",
+  "nu": 0.05,
+  "train_samples": 5000,
+  "train_normal_frac": 0.9496,
+  "false_positive_rate": 0.0504,
+  "detection_rate": 1.0
+}
