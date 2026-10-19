@@ -11,7 +11,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S1 | IN PROGRESS | worker sonnet (medium) | 2026-10-19 | S0 APPROVED (D11 7.47 GB, 62 duplicate files) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
-| WP5 V2X | S0b | REVIEW | worker sonnet (medium) | 2026-10-20 | S1b APPROVED partial (Tampa sample = 38 vehicles, too small). S0b NOT MET: Tampa raw data needs ITS DataHub Sandbox request (reports/WP5_S0b.md). S3b waits for receiver positions |
+| WP5 V2X | S4 | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S0b closed NOT MET (full Tampa needs user request to ITS DataHub). Tampa = illustration only. S3b waits for receiver positions |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 
