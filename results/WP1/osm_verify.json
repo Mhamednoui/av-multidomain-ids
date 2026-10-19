@@ -1,0 +1,211 @@
+{
+ "file_bytes": 36924973,
+ "osm_timestamp": "2026-10-19T21:54:50Z",
+ "n_nodes": 193170,
+ "n_ways": 57018,
+ "highway_types_top": [
+  [
+   "service",
+   14128
+  ],
+  [
+   "footway",
+   13491
+  ],
+  [
+   "path",
+   9044
+  ],
+  [
+   "residential",
+   5066
+  ],
+  [
+   "track",
+   3872
+  ],
+  [
+   "steps",
+   2538
+  ],
+  [
+   "secondary",
+   2101
+  ],
+  [
+   "tertiary",
+   1256
+  ]
+ ],
+ "node_bbox": [
+  48.9203476,
+  49.1146787,
+  8.3071014,
+  8.5051313
+ ],
+ "all_drives_inside": true,
+ "min_frac_within_50m": 1.0,
+ "drives": {
+  "0001": {
+   "n": 108,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 4.462361949473596,
+   "max_dist_m": 5.3741079833646825
+  },
+  "0015": {
+   "n": 297,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.0197370815905455,
+   "max_dist_m": 3.24493710075052
+  },
+  "0002": {
+   "n": 77,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 1.7119651038025772,
+   "max_dist_m": 3.130204047011873
+  },
+  "0005": {
+   "n": 154,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.0068389838958653,
+   "max_dist_m": 3.5666888558967367
+  },
+  "0011": {
+   "n": 233,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.9042184214492353,
+   "max_dist_m": 3.9534208807697713
+  },
+  "0013": {
+   "n": 144,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.243492796189996,
+   "max_dist_m": 3.9223700060155715
+  },
+  "0017": {
+   "n": 114,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 5.725507901842375,
+   "max_dist_m": 5.754458007593395
+  },
+  "0019": {
+   "n": 481,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.02872955060146,
+   "max_dist_m": 4.55516366251859
+  },
+  "0020": {
+   "n": 86,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 3.3736126574836063,
+   "max_dist_m": 4.135152836453457
+  },
+  "0027": {
+   "n": 188,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 5.259634147483176,
+   "max_dist_m": 7.115934828740757
+  },
+  "0028": {
+   "n": 430,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 4.89505048042159,
+   "max_dist_m": 7.2071882285989055
+  },
+  "0029": {
+   "n": 430,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 3.7478243398355082,
+   "max_dist_m": 5.792095636285233
+  },
+  "0035": {
+   "n": 131,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 1.4697438497448359,
+   "max_dist_m": 3.7232359304136824
+  },
+  "0039": {
+   "n": 395,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 1.6251820895550722,
+   "max_dist_m": 3.5979186054125094
+  },
+  "0046": {
+   "n": 125,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 1.9656495375436573,
+   "max_dist_m": 5.151272338689059
+  },
+  "0048": {
+   "n": 22,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 1.962113020964721,
+   "max_dist_m": 2.8568874698234636
+  },
+  "0052": {
+   "n": 78,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 3.304979259317008,
+   "max_dist_m": 3.5845821794662682
+  },
+  "0060": {
+   "n": 78,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 3.686710787734805,
+   "max_dist_m": 3.6912826268343695
+  },
+  "0070": {
+   "n": 420,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.3869148961960907,
+   "max_dist_m": 5.982393089583122
+  },
+  "0079": {
+   "n": 100,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.2343992095166767,
+   "max_dist_m": 3.6290771315452854
+  },
+  "0095": {
+   "n": 268,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.2760936216680916,
+   "max_dist_m": 4.63894122599282
+  },
+  "0106": {
+   "n": 227,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 1.884017597670025,
+   "max_dist_m": 4.414998133135965
+  },
+  "0113": {
+   "n": 87,
+   "inside_bbox_margin": true,
+   "frac_within_50m_of_road": 1.0,
+   "median_dist_m": 2.14771215879698,
+   "max_dist_m": 3.1450023625617005
+  }
+ }
+}

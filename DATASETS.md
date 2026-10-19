@@ -27,7 +27,7 @@ source page before downloading.
 | D12 | VeReMi Extension (Kamel et al. 2020) | WP5: labelled V2X misbehaviour benchmark (comparable with literature) | simulated (Veins / SUMO, Luxembourg scenario) | ~3.2 M labelled messages (size to confirm) | Mendeley Data (licence to check) | https://data.mendeley.com/datasets/k62n4z9gdz |
 | D13 | V2AIX (RWTH ika, 2024): real ETSI ITS CAM / DENM messages in public traffic | WP5: real V2X messages (normal behaviour), inject misbehaviour | real | JSON 20 GB full (to confirm; ROS bags 1.26 TB: do not download) | non-commercial; v2aix.ika.rwth-aachen.de | arXiv 2403.10221 |
 | D14 | Tampa CV Pilot BSM sample (US DOT ITS DataHub) | WP5: real BSMs (alternative / complement to D13) | real | sample (to confirm) | CC BY-SA 4.0 | catalog.data.gov "Tampa CV Pilot Basic Safety Message" |
-| D15 | OpenStreetMap extract around Karlsruhe (KITTI area) | WP1 map matching, WP5 road plausibility | real map | < 100 MB | ODbL | Geofabrik / Overpass API |
+| D15 | OpenStreetMap highway ways, Karlsruhe (KITTI bbox + 1 km) | WP1 map matching, WP5 road plausibility | real map | 35.2 MB json (57,018 ways, 193,170 nodes) | ODbL 1.0; attribution (c) OpenStreetMap contributors | DOWNLOADED 2026-10-19 via Overpass API (OSM base 2026-10-19T21:54Z) to ../data_extra/D15_osm/karlsruhe_highways.json; see SOURCE.txt there |
 
 Real V2X with labelled real attacks: none found (search 20 Oct 2026). Standard practice (e.g.
 VCADS) = real field messages + physically consistent injected misbehaviour; VeReMi for
