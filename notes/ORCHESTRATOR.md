@@ -57,3 +57,5 @@ Open questions for the user at the start of the next session:
 | 2026-10-19 | WP5 | S0 | sonnet | ASSIGNED | D12 VeReMi Ext + D14 Tampa; D13 V2AIX subset decided by orchestrator: JSON only, <= 5 GB, whole recordings (split by recording later), no ROS bags. |
 | 2026-10-19 | WP0 | S3 | sonnet | APPROVED, M0 CLOSED | commit fb5b6b1, 19/19 tests. All B2 alarm numbers identical to v2; threshold 6.658872 vs 6.657975 m (order statistic vs np.quantile interpolation, no test row in between). B2 FA 1.58% > 1% budget = inherited drive shift, baseline for WP1. |
 | 2026-10-19 | WP1 | S1 | sonnet | ASSIGNED | GPS data layer |
+| 2026-10-19 | WP1 | S1 | sonnet | APPROVED | commit 8ecdf70, 29/29 tests, B2 bit-identical on new stream; Doppler spoof / meaconing velocity-consistency 1.03x clean (physically consistent). B2 baseline run-level: Doppler 0.414, meaconing 0.471. Caveat: attack generator KITTI only; UAV onset 117 s is v2 estimate. |
+| 2026-10-19 | WP1 | S2 | sonnet | ASSIGNED | L1 receiver sanity rules |
