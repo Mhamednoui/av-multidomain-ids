@@ -53,3 +53,5 @@ Open questions for the user at the start of the next session:
 | 2026-10-19 | WP0 | S3 | sonnet | ASSIGNED | v2 B2 regression, closes M0 |
 | 2026-10-19 | WP1 | S0 | sonnet | ASSIGNED | download D15 OSM; S0 is data-only, does not need common/, so started in parallel with WP0 S3 to save time. S1 still waits for M0. |
 | 2026-10-19 | WP2 | S0 | sonnet | ASSIGNED | download D11 (7.5 GB); same reasoning. |
+| 2026-10-19 | WP1 | S0 | sonnet | APPROVED | commit 6cb0207, D15 OSM 35 MB, 23/23 drives inside bbox. Note for S6: extract has footways/paths, filter to drivable highway classes. |
+| 2026-10-19 | WP5 | S0 | sonnet | ASSIGNED | D12 VeReMi Ext + D14 Tampa; D13 V2AIX subset decided by orchestrator: JSON only, <= 5 GB, whole recordings (split by recording later), no ROS bags. |
