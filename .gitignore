@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+results/*/logs/
+results/*/cache/
+*.pkl
+*.npz
+locks/*.lock
+# model files > 50 MB cannot be expressed as a pattern: check sizes before every commit
+*.joblib
+*.h5
+*.keras
+*.pt
+*.onnx
