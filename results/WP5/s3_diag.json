@@ -1,0 +1,122 @@
+{
+ "veremi_val_mechanisms": {
+  "genuine": {
+   "n_pairs": 159940,
+   "median_dt_s": 1.0,
+   "median_displacement_m": 11.99291484647156,
+   "median_speed_x_dt_m": 12.064831095437771,
+   "median_pos_speed_residual_m": 0.09518846391535174,
+   "frac_zero_displacement": 0.00450794047767913
+  },
+  "11_DataReplay": {
+   "n_pairs": 3999,
+   "median_dt_s": 1.0,
+   "median_displacement_m": 26.777650334423953,
+   "median_speed_x_dt_m": 11.383620452698777,
+   "median_pos_speed_residual_m": 24.910992256142077,
+   "frac_zero_displacement": 0.14928732183045762
+  },
+  "13_DoS": {
+   "n_pairs": 11086,
+   "median_dt_s": 0.25,
+   "median_displacement_m": 0.0,
+   "median_speed_x_dt_m": 3.2721551196236147,
+   "median_pos_speed_residual_m": 3.4653712528445215,
+   "frac_zero_displacement": 0.6636298033555836
+  },
+  "16_GridSybil": {
+   "n_pairs": 11060,
+   "median_dt_s": 1.0,
+   "median_displacement_m": 10.89038807712565,
+   "median_speed_x_dt_m": 0.896612815675254,
+   "median_pos_speed_residual_m": 2.8844209450222893,
+   "frac_zero_displacement": 0.031193490054249547
+  }
+ },
+ "tampa_map": {
+  "val_distance_quantiles_m": {
+   "0.5": 3.1709183926467723,
+   "0.9": 5.150306415070874,
+   "0.99": 9.961538493890181,
+   "1.0": 12.580961976452265
+  },
+  "test_distance_quantiles_m": {
+   "0.5": 2.875612684995172,
+   "0.9": 7.033059335125562,
+   "0.99": 40.647175528431546,
+   "1.0": 50.46822167780972
+  },
+  "val_q99_m": 9.961538493890181,
+  "test_frac_above_val_q99": 0.05501691093573845,
+  "test_vehicles": 45,
+  "top_vehicles_by_alarms": [
+   {
+    "sender": "8837891",
+    "n": 510,
+    "above": 359,
+    "med_d": 27.602611470102993,
+    "rsu": "thea24",
+    "share_of_alarms": 0.735655737704918
+   },
+   {
+    "sender": "8585034",
+    "n": 147,
+    "above": 83,
+    "med_d": 26.703149510486035,
+    "rsu": "thea1",
+    "share_of_alarms": 0.17008196721311475
+   },
+   {
+    "sender": "8868057",
+    "n": 82,
+    "above": 28,
+    "med_d": 7.364106654999675,
+    "rsu": "thea42",
+    "share_of_alarms": 0.05737704918032787
+   },
+   {
+    "sender": "8965636",
+    "n": 160,
+    "above": 18,
+    "med_d": 1.2358410593262117,
+    "rsu": "thea42",
+    "share_of_alarms": 0.036885245901639344
+   },
+   {
+    "sender": "8007505",
+    "n": 392,
+    "above": 0,
+    "med_d": 2.5893423733009753,
+    "rsu": "thea38",
+    "share_of_alarms": 0.0
+   }
+  ],
+  "vehicles_with_any_alarm": 4,
+  "val_vehicles": 45,
+  "val_top_vehicles_by_alarms": [
+   {
+    "sender": "8290703",
+    "n": 75,
+    "above": 28,
+    "rsu": "thea42"
+   },
+   {
+    "sender": "8619526",
+    "n": 244,
+    "above": 14,
+    "rsu": "thea1"
+   },
+   {
+    "sender": "8411785",
+    "n": 219,
+    "above": 2,
+    "rsu": "thea24"
+   }
+  ]
+ },
+ "tampa_non_map_L2_union_genuine": {
+  "val_FA": 0.009574704965486529,
+  "test_FA": 0.009808342728297632,
+  "test_genuine_vehicles_with_any_alarm": 0.4
+ }
+}

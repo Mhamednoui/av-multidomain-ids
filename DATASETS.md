@@ -45,6 +45,7 @@ train / val / test splits), MisbehaviorX (IEEE DataPort, Veins, 68 attacks), V2X
 | D24 | TOW-IDS automotive Ethernet (AVTP, gPTP, UDP-from-CAN; 5 attack scenarios) | WP4 in-vehicle Ethernet (closer to an AV than CICIDS) | to confirm | IEEE DataPort (may need login), DOI 10.21227/bz0w-zc12 |
 | D25 | VeReMi NextGen | WP5 | to confirm | Ulm University (OPARU) |
 | D26 | UrbanNav (Hong Kong urban canyons: GNSS RINEX, IMU, LiDAR) | WP1 realistic urban GNSS errors | 17-43 GB per sequence | academic; low priority |
+| D27 | OpenStreetMap drivable highway ways, Tampa (D14 bbox + ~300 m) | WP5 S3 map / road plausibility on Tampa BSMs | real map | DOWNLOADED 2026-10-19 via Overpass API (OSM base 2026-10-19T22:42Z) to ../data_extra/D27_osm_tampa/tampa_highways.json 1.4 MB: 1,782 ways, 6,934 nodes, drivable classes only; see SOURCE.txt there | ODbL 1.0; attribution (c) OpenStreetMap contributors | https://www.openstreetmap.org |
 
 ## 4. Rough disk plan
 
