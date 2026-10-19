@@ -8,7 +8,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
 | WP1 GPS | S5 | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S4 APPROVED with misses. S6 must filter OSM to drivable classes |
-| WP2 CAN | S1 | REVIEW | worker sonnet (medium) | 2026-10-20 | unified frame format + 3 adapters + splits; ROAD 41/41 = v2; D11 vehicle README contradicted once (set_01/test_04); see reports/WP2_S1.md |
+| WP2 CAN | S2 | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S1 APPROVED |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
 | WP5 V2X | S4 | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S0b closed NOT MET (full Tampa needs user request to ITS DataHub). Tampa = illustration only. S3b waits for receiver positions |

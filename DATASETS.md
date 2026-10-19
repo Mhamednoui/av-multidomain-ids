@@ -64,4 +64,10 @@ Known / unknown vehicle per set: set_01 Impala / Silverado; set_02 Traverse / Su
 set_03 Silverado / Subaru; set_04 Subaru / Traverse. Full numbers: `results/WP2/s0_inventory.json`,
 `s0_summary.txt`. Caveats: many files are byte-identical copies shared across sets (174 distinct
 of 236); timestamps start at the synthetic epoch 1672531200.0 in every file; small timestamp
-inversions (<= 0.15 ms, float rounding) around injected frames in many files.
+inversions around injected frames. CORRECTED by WP2 S1 (2026-10-20, reports/WP2_S1.md):
+12,527 inversions in 100 files, down to -7.9 ms, 12,394 adjacent to an injected frame: keep
+recorded order, use `dt_clipped`, never use the sign of dt as a feature. set_01/test_04 is NOT
+Silverado: its 12 files are byte copies of set_02/test_01 (Traverse, confirmed by ID-set
+fingerprint); 41 files with non-discriminative ID sets take the subset's majority vehicle
+(source recorded per file). 32,378 frames with empty data_field (dlc 0), all in fuzzing files;
+one file has a trailing tab. 62 duplicate pairs, none inside one set.
