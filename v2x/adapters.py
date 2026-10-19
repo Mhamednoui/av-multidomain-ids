@@ -17,6 +17,7 @@ import numpy as np
 import pandas as pd
 
 from common.config import DATA_EXTRA
+from v2x import tampa_link
 from v2x.schema import COLUMNS, TEXT, CLASS_NAMES, DataNotAvailableError
 
 VEREMI_CSV = DATA_EXTRA / "D12_veremi_extension" / "mixalldata_clean.csv"
@@ -64,8 +65,10 @@ def load_veremi(path=VEREMI_CSV, nrows=None) -> pd.DataFrame:
     return _finish(out)
 
 
-def load_tampa(path=TAMPA_CSV, with_age=False) -> pd.DataFrame:
-    """with_age=True adds the extra column age_s = RSU log time - generation time (s; 1 s log resolution)."""
+def load_tampa_v1(path=TAMPA_CSV, with_age=False) -> pd.DataFrame:
+    """LEGACY (S1-S3 of WP5, kept for the record): sender = coreData_id, which is per RSU, so one over-the-air message heard by
+    several RSUs appears under several ids (S1b finding). Use load_tampa().
+    with_age=True adds the extra column age_s = RSU log time - generation time (s; 1 s log resolution)."""
     cols = ["metadata_recordGeneratedAt", "metadata_RSUID", "coreData_id",
             "coreData_secMark", "coreData_lat", "coreData_long", "coreData_accelset_yaw",
             "coreData_accelset_long", "coreData_speed", "coreData_heading"]
@@ -119,3 +122,50 @@ def load_v2aix(path=V2AIX_DIR) -> pd.DataFrame:
     raise DataNotAvailableError(
         "V2AIX (D13) data not available: the user must request access at "
         "https://v2aix.ika.rwth-aachen.de and download the JSON subset to " + str(path))
+
+
+_TAMPA_CACHE = {}
+
+
+def tampa_messages(path=TAMPA_CSV, tier2=True):
+    """Deduplicated unique messages + info of v2x.tampa_link.build (cached)."""
+    key = (str(path), bool(tier2))
+    if key not in _TAMPA_CACHE:
+        _TAMPA_CACHE[key] = tampa_link.build(path, link=tier2)
+    u, info = _TAMPA_CACHE[key]
+    return u.copy(), info
+
+
+def load_tampa(path=TAMPA_CSV, with_age=False, tier2=True) -> pd.DataFrame:
+    """Tampa BSMs, deduplicated and linked (WP5 S1b, v2x/tampa_link.py): one row per over-the-air message; sender = passage of a
+    physical vehicle (id 'P007_1' = vehicle 7, passage 1; passages are cut at silences > 120 s); pseudo = sender; track = sender +
+    segment (new segment after a gap > 5 s). rx_id is NaN: the message was heard by one or more RSUs (the receiver is not a single
+    one after deduplication). with_age=True adds age_s = RSU log time of the first received copy - generation time (s).
+    Same units and conventions as load_tampa_v1."""
+    u, _ = tampa_messages(path, tier2)
+    u = u.sort_values(["sender", "t"], kind="stable").drop_duplicates(["sender", "t"]).reset_index(drop=True)
+    sd = u["sender"]
+    seg = (u.groupby("sender")["t"].diff() > TAMPA_GAP_S).groupby(sd).cumsum()
+    lat = u["lat_i"].to_numpy(float) / 1e7
+    lon = u["lon_i"].to_numpy(float) / 1e7
+    spd = u["spd_i"].to_numpy(float) * 0.02
+    spd[u["spd_i"].to_numpy() == 8191] = np.nan
+    th = np.pi / 2 - np.radians(u["hd_i"].to_numpy(float) * 0.0125)
+    th[u["hd_i"].to_numpy() == 28800] = np.nan
+    acl = u["acl_i"].to_numpy(float) * 0.01
+    acl[u["acl_i"].to_numpy() == 2001] = np.nan
+    yaw = -np.radians(u["yaw_i"].to_numpy(float) * 0.01)
+    out = pd.DataFrame({
+        "msg_id": "tampa:" + sd + ":" + u["t"].map("{:.3f}".format),
+        "source": "tampa", "sender": sd, "pseudo": sd, "track": sd + "/" + seg.astype(str),
+        "t": u["t"].to_numpy(),
+        "x": (lon - TAMPA_LON0) * _M_PER_DEG * np.cos(np.radians(TAMPA_LAT0)),
+        "y": (lat - TAMPA_LAT0) * _M_PER_DEG,
+        "speed": spd, "vx": spd * np.cos(th), "vy": spd * np.sin(th),
+        "heading": th, "acl": acl, "yaw_rate": yaw, "lat": lat, "lon": lon,
+        "label": 0, "attack": "Genuine", "injected": False})
+    age = pd.Series(u["age_s"].to_numpy(), index=out["msg_id"].to_numpy())
+    out = _finish(out[np.isfinite(out["speed"])])
+    if with_age:
+        out["age_s"] = age.loc[out["msg_id"].to_numpy()].to_numpy()
+    return out

@@ -145,7 +145,7 @@ def main():
     schema.validate(v)
     jdump("s1_classmap_evidence.json", classmap_evidence(v))
     split, info = veremi_splits(v)
-    t = adapters.load_tampa()
+    t = adapters.load_tampa_v1()
     schema.validate(t)
     tsplit = splitting.tampa_vehicle_split(t)
     save_splits(tsplit, OUT / "splits_tampa.json")

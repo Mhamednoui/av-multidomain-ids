@@ -1,0 +1,340 @@
+{
+ "guard_s": 30.0,
+ "n_episodes": 11,
+ "episodes": {
+  "train": [
+   "10",
+   "4",
+   "5",
+   "6",
+   "7",
+   "8",
+   "9"
+  ],
+  "val": [
+   "1",
+   "3"
+  ],
+  "test": [
+   "0",
+   "2"
+  ]
+ },
+ "seed": 48,
+ "episode_of_sender": {
+  "P000_0": 0,
+  "P001_0": 1,
+  "P002_0": 0,
+  "P000_1": 0,
+  "P003_0": 2,
+  "P004_0": 3,
+  "P005_0": 3,
+  "P006_0": 3,
+  "P007_0": 3,
+  "P008_0": 3,
+  "P009_0": 4,
+  "P010_0": 4,
+  "P011_0": 4,
+  "P012_0": 4,
+  "P013_0": 4,
+  "P014_0": 5,
+  "P015_0": 5,
+  "P016_0": 5,
+  "P017_0": 6,
+  "P018_0": 6,
+  "P019_0": 7,
+  "P020_0": 7,
+  "P021_0": 7,
+  "P022_0": 7,
+  "P023_0": 7,
+  "P024_0": 7,
+  "P025_0": 7,
+  "P026_0": 7,
+  "P027_0": 7,
+  "P028_0": 7,
+  "P029_0": 7,
+  "P030_0": 7,
+  "P031_0": 8,
+  "P032_0": 8,
+  "P033_0": 9,
+  "P034_0": 10,
+  "P035_0": 10,
+  "P036_0": 10,
+  "P037_0": 10,
+  "P027_1": 7
+ },
+ "tried_seeds": [
+  {
+   "seed": 42,
+   "parts": {
+    "train": {
+     "passages": 29,
+     "messages": 15852,
+     "share": 0.8121317690455454,
+     "eligible_ge50": 20,
+     "attackers_per_type": 10
+    },
+    "val": {
+     "passages": 7,
+     "messages": 2411,
+     "share": 0.12352067216558225,
+     "eligible_ge50": 5,
+     "attackers_per_type": 2
+    },
+    "test": {
+     "passages": 4,
+     "messages": 1256,
+     "share": 0.06434755878887238,
+     "eligible_ge50": 2,
+     "attackers_per_type": 1
+    }
+   },
+   "criteria_met": false
+  },
+  {
+   "seed": 43,
+   "parts": {
+    "train": {
+     "passages": 26,
+     "messages": 13635,
+     "share": 0.6985501306419386,
+     "eligible_ge50": 17,
+     "attackers_per_type": 8
+    },
+    "val": {
+     "passages": 6,
+     "messages": 1829,
+     "share": 0.09370357087965572,
+     "eligible_ge50": 4,
+     "attackers_per_type": 2
+    },
+    "test": {
+     "passages": 8,
+     "messages": 4055,
+     "share": 0.20774629847840564,
+     "eligible_ge50": 6,
+     "attackers_per_type": 3
+    }
+   },
+   "criteria_met": false
+  },
+  {
+   "seed": 44,
+   "parts": {
+    "train": {
+     "passages": 28,
+     "messages": 15544,
+     "share": 0.7963522721450894,
+     "eligible_ge50": 19,
+     "attackers_per_type": 10
+    },
+    "val": {
+     "passages": 6,
+     "messages": 1829,
+     "share": 0.09370357087965572,
+     "eligible_ge50": 4,
+     "attackers_per_type": 2
+    },
+    "test": {
+     "passages": 6,
+     "messages": 2146,
+     "share": 0.10994415697525488,
+     "eligible_ge50": 4,
+     "attackers_per_type": 2
+    }
+   },
+   "criteria_met": false
+  },
+  {
+   "seed": 45,
+   "parts": {
+    "train": {
+     "passages": 30,
+     "messages": 14221,
+     "share": 0.7285721604590399,
+     "eligible_ge50": 19,
+     "attackers_per_type": 10
+    },
+    "val": {
+     "passages": 6,
+     "messages": 1073,
+     "share": 0.05497207848762744,
+     "eligible_ge50": 4,
+     "attackers_per_type": 2
+    },
+    "test": {
+     "passages": 4,
+     "messages": 4225,
+     "share": 0.21645576105333264,
+     "eligible_ge50": 4,
+     "attackers_per_type": 2
+    }
+   },
+   "criteria_met": false
+  },
+  {
+   "seed": 46,
+   "parts": {
+    "train": {
+     "passages": 13,
+     "messages": 7283,
+     "share": 0.37312362313643116,
+     "eligible_ge50": 10,
+     "attackers_per_type": 5
+    },
+    "val": {
+     "passages": 9,
+     "messages": 2181,
+     "share": 0.11173728162303397,
+     "eligible_ge50": 5,
+     "attackers_per_type": 2
+    },
+    "test": {
+     "passages": 18,
+     "messages": 10055,
+     "share": 0.5151390952405349,
+     "eligible_ge50": 12,
+     "attackers_per_type": 6
+    }
+   },
+   "criteria_met": false
+  },
+  {
+   "seed": 47,
+   "parts": {
+    "train": {
+     "passages": 31,
+     "messages": 14581,
+     "share": 0.7470157282647677,
+     "eligible_ge50": 20,
+     "attackers_per_type": 10
+    },
+    "val": {
+     "passages": 4,
+     "messages": 3417,
+     "share": 0.17506019775603257,
+     "eligible_ge50": 4,
+     "attackers_per_type": 2
+    },
+    "test": {
+     "passages": 5,
+     "messages": 1521,
+     "share": 0.07792407397919976,
+     "eligible_ge50": 3,
+     "attackers_per_type": 2
+    }
+   },
+   "criteria_met": false
+  },
+  {
+   "seed": 48,
+   "parts": {
+    "train": {
+     "passages": 30,
+     "messages": 13200,
+     "share": 0.6762641528766843,
+     "eligible_ge50": 19,
+     "attackers_per_type": 10
+    },
+    "val": {
+     "passages": 6,
+     "messages": 2094,
+     "share": 0.1072800860699831,
+     "eligible_ge50": 4,
+     "attackers_per_type": 2
+    },
+    "test": {
+     "passages": 4,
+     "messages": 4225,
+     "share": 0.21645576105333264,
+     "eligible_ge50": 4,
+     "attackers_per_type": 2
+    }
+   },
+   "criteria_met": true
+  }
+ ],
+ "gap_s_between_parts": {
+  "train-val": 800.9500000000007,
+  "train-test": 2042.4969999999994,
+  "val-test": 78.90000000000009
+ },
+ "required_min_gap_s": 60.0,
+ "residual_vehicles_with_passages_in_several_parts": {},
+ "n_residual_vehicles": 0,
+ "messages_in_residual_vehicle_passages": 0,
+ "parts": {
+  "train": {
+   "passages": 30,
+   "messages": 13200,
+   "eligible_ge50": 19,
+   "share": 0.6762641528766843
+  },
+  "val": {
+   "passages": 6,
+   "messages": 2094,
+   "eligible_ge50": 4,
+   "share": 0.1072800860699831
+  },
+  "test": {
+   "passages": 4,
+   "messages": 4225,
+   "eligible_ge50": 4,
+   "share": 0.21645576105333264
+  }
+ },
+ "sender_overlap_between_parts": 0,
+ "heldout_attack_types_for_supervised_training": [
+  6,
+  12,
+  17
+ ],
+ "attackers_per_type_min": {
+  "train": 10,
+  "val": 2,
+  "test": 2
+ },
+ "all_types_present_every_part": true,
+ "vehicle_of_passage": {
+  "P000_0": "V000",
+  "P000_1": "V000",
+  "P001_0": "V001",
+  "P002_0": "V002",
+  "P003_0": "V003",
+  "P004_0": "V004",
+  "P005_0": "V005",
+  "P006_0": "V006",
+  "P007_0": "V007",
+  "P008_0": "V008",
+  "P009_0": "V009",
+  "P010_0": "V010",
+  "P011_0": "V011",
+  "P012_0": "V012",
+  "P013_0": "V013",
+  "P014_0": "V014",
+  "P015_0": "V015",
+  "P016_0": "V016",
+  "P017_0": "V017",
+  "P018_0": "V018",
+  "P019_0": "V019",
+  "P020_0": "V020",
+  "P021_0": "V021",
+  "P022_0": "V022",
+  "P023_0": "V023",
+  "P024_0": "V024",
+  "P025_0": "V025",
+  "P026_0": "V026",
+  "P027_0": "V027",
+  "P027_1": "V027",
+  "P028_0": "V028",
+  "P029_0": "V029",
+  "P030_0": "V030",
+  "P031_0": "V031",
+  "P032_0": "V032",
+  "P033_0": "V033",
+  "P034_0": "V034",
+  "P035_0": "V035",
+  "P036_0": "V036",
+  "P037_0": "V037"
+ }
+}

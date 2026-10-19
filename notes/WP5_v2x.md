@@ -152,3 +152,67 @@ Misses are reported plainly. No re-splitting, no re-tuning after seeing results;
 - S20 overlap 76.9% is a construction artefact (messages of the same victim 0.1 s apart as separate tracks), not credited.
 - Not done by design: acceptance-range threshold and sudden appearance (S3b), map on VeReMi.
 - Acceptance: S3 PARTIAL (only the Tampa FA bound of the map check missed).
+
+## 2026-10-20 S1b Tampa dedup + re-split + rerun of S2/S3 Tampa: acceptance rule (written before any S1b result judged)
+Context: S3 found that coreData_id is per RSU. Structure facts looked at before writing this rule (no detection result involved): 34,464 rows,
+38 RSUs, 226 ids; the key (msgCnt, generation time, lat, long, speed, heading) is shared by rows with different ids (8,532 keys); msgCnt is a
+per-vehicle counter (+1 per BSM, so +10 per second at 10 Hz) and is therefore usable as a linking cue across ids; the sample has two data bursts
+(about t = 0.6-3 ks and 17.4-24.6 ks of the UTC day) with a long empty stretch in between.
+Design (fixed now), module v2x/tampa_link.py (+ adapters.load_tampa default = deduplicated, load_tampa_v1 = old behaviour for the record):
+ 1. DEDUP. Same transmitted message = same (msgCnt, generation time to the ms, lat, long, speed, heading). One row is kept (copy received first); the
+    number of copies, the ids and the RSUs that heard it are recorded. Justification measured, not assumed: (a) no id occurs twice in one key,
+    (b) among (msgCnt, generation time) groups with several ids, 100% have identical content (so content in the key never splits a true copy),
+    (c) a tolerance rule (|dt| <= 2 ms, position <= 1 m, speed <= 0.1 m/s, heading <= 1 deg, different ids) adds only a few merges: reported;
+    if it adds > 1% of the messages the exact key is extended to it.
+ 2. LINKING of ids into physical vehicles. Tier 1 (certain): ids that share a bit-identical message (union-find). Tier 2 (high confidence): components
+    whose end/start are continuous: 0 < gap <= 5 s (the Tampa track-gap rule), dead-reckoned end position within 2 + 0.5 g^2 m of the start position,
+    speed within 1 + 1.5 g m/s, heading within 20 deg if both speeds >= 3 m/s, msgCnt difference within +-2 of 10 g, and the candidate is the UNIQUE
+    candidate of both the end and the start (otherwise "ambiguous", left unlinked). Passes repeated until no new link. Controls on real data:
+    positive control (cut real tier-1 vehicles at random points with 0.5-5 s holes, ask whether the matcher re-links the halves among all other
+    components: recall, wrong-link rate) and msgCnt negative control (shuffled msgCnt: links that survive). Tier-2 links are used only if the wrong-link
+    rate in the positive control is <= 5% (else only tier 1 is used and that is stated). Merging two different vehicles is harmless for leakage (only
+    makes groups larger); missing a link is what leaks, so the buffer in 3 covers the remaining risk.
+ 3. SPLIT by time block with buffers. Unit = a "passage": a physical vehicle cut where it is silent > 120 s (SILENCE_S). Blocks of BLOCK_S seconds, a
+    passage belongs to the block of its first message; it is dropped if its life extended by BUFFER_S = 30 s on both sides touches a second block
+    (no passage alive on both sides of a boundary, 30 s guard, gaps dropped). Non-empty blocks shuffled 60/20/20 with common.config.SEED = 42 (same call as
+    VeReMi). BLOCK_S is the smallest of {300, 600, 900} for which (i) every part has >= 8 eligible passages (>= 50 messages), (ii) message shares are
+    train 50-70%, val 10-30%, test 10-30%, (iii) every injected type 1..19 has >= 4 attackers in val and test. No re-seeding / re-drawing afterwards.
+    Held-out attack types 6, 12, 17 unchanged. Saved to results/WP5/splits_tampa_v2.json (+ s1b_*.json); old splits_tampa.json kept.
+    Checked automatically: zero passage overlap, zero shared physical vehicle ALIVE in two parts within the guard, number of physical vehicles with
+    passages in more than one part reported (residual, not hidden), zero bit-identical messages across parts.
+ 4. RERUN with methods unchanged (v2x/l1.py, v2x/l2.py, same attack code and seeds, calibration on new val only, test scored once). Differences, all
+    declared: unit = passage, deduplicated messages, overlap check compares all vehicles (the same-receiver restriction was only there because of the
+    copies: rx_id is NaN after dedup; check: genuine val overlap FA reported); map_road is NOT part of the deployable Tampa union or combiner: it is
+    scored as a separate soft layer (own FA and detection). Reference "old" numbers = results of S2 / S3 as reported; in addition the same code is run on
+    the OLD data and OLD split with map excluded ("v1 same method") so the leak effect is not mixed with the union-definition change.
+S1b is MET if: (1) the rule items 1-3 are carried out and the split checks pass; (2) FA on genuine test messages <= 2% for every deployable Tampa check
+and union (S2/S3 bound), physical limits <= 0.1% (val and test); (3) old vs new tables written from the JSON; (4) unit tests pass.
+Pre-registered expectation (leak): old test FA and detection were optimistic: new FA of data-driven checks at their budget >= old FA, and the deployable
+union detection on types caught by data-driven checks drops (not tuned to). Misses reported plainly.
+- AMENDMENT of item 3 (2026-10-20, written after looking at the STRUCTURE of the linked data, before any split was drawn and before any detection result):
+  Linking result seen: 226 ids = 48 tier-1 components = 38 physical vehicles = 40 passages (27 with >= 50 messages), 19,527 unique messages. The activity is
+  bursty (13 episodes separated by silences of >= 60 s; one episode holds 40% of the messages, one bus passage alone 24%), so the fixed 300 / 600 / 900 s grid
+  would drop that bus (it is alive across any boundary). The criteria "(i) >= 8 eligible passages per part, (iii) >= 4 attackers per type" cannot be met by 27
+  eligible passages; replaced by: (i') >= 3 eligible passages in val and in test, (iii') every attack type 1..19 has >= 2 attackers in val and test (n_att =
+  round(0.5 * eligible) >= 2 needs >= 3 eligible). New split procedure (fixed now): EPISODES = maximal groups of passages whose lives, extended by the 30 s guard on
+  both sides, overlap or touch (i.e. cuts only in corridor-wide silences >= 60 s). Boundaries therefore lie where no passage is alive on either side, with a
+  30 s guard on each side, and nothing is dropped. Episodes are the shuffled blocks: group_split(episodes, 60/20/20, seed) with seed = 42; criteria (i'), (ii)
+  [message shares train 50-70%, val and test 10-30%], (iii'). If seed 42 fails the criteria the next seed of 43, 44, ... that satisfies them is taken (size
+  criteria only, no detection result is ever used; every tried seed is listed in results/WP5/s1b_split_info.json).
+  The wide CIs that follow (about 2 attackers per type in val and test instead of 10) are a property of the public sample, not hidden.
+- AMENDMENT 2 (2026-10-20, after the first split draw, before any detection run): the first draw (seed 42, episodes only) satisfied the size criteria but left
+  ONE physical vehicle (V027, a bus: passages 25 min apart, 4,649 + 1,476 messages) with a passage in train and one in val. That is the identity leak the task
+  is about, at a longer time scale. Fix, made on structure only: episodes that contain passages of the same physical vehicle are merged into one block
+  (v2x/splitting.tampa_episodes(vehicle_of=...)), so no physical vehicle is on two sides. Same seeds list and size criteria. The first draw is kept in the
+  notes as a record (train 27 / val 6 / test 7 passages; its test part did not contain V027); no detection number was computed on it.
+
+## 2026-10-20 S1b results (numbers in results/WP5/s1b_*.json, s2_*_tampa_v2/v1same, s3_*_tampa_v2/v1same; scripts tools/WP5_S1b_build.py, WP5_S1b_rerun.py, WP5_S1b_report.py; logs results/WP5/logs/s1b_*.log)
+- Code: v2x/tampa_link.py, adapters.load_tampa (new default, dedup passages) / load_tampa_v1 (legacy), splitting.tampa_episodes / tampa_time_block_split, tests/v2x/test_tampa_link.py; suite 131 passed. Methods of l1 / l2 / attacks untouched.
+- Dedup: 34,464 rows = 19,527 distinct messages (43.3% copies); tolerance rule adds 0 merges; content never differs inside a (msgCnt, time) group (0 of 8,661).
+- Linking: 226 ids -> 48 tier-1 components -> 38 physical vehicles (10 tier-2 links; positive control 128 correct / 0 wrong / 64 missed of 192; shuffled-msgCnt control 0.23 links vs 10) -> 40 passages (27 eligible >= 50 msgs). msgCnt advances 10/s within +-1 in 99.4% of pairs.
+- Old split leakage: 68.0% of old test rows had a bit-identical copy in train (67.5%) or val (1.5%); 87% of old test ids belong to vehicles that also own ids in train / val; old test double counted 8,870 rows = 6,820 messages.
+- New split (seed 48 after seeds 42-47 failed the size criteria): train 30 / val 6 / test 4 passages, 13,200 / 2,094 / 4,225 messages, eligible 19 / 4 / 4, attackers per type 10 / 2 / 2, gaps >= 79 s, 0 vehicles on two sides. Test = 3 physical vehicles.
+- Rerun (test scored once, run1): FA <= 2% everywhere except heading_rate 2.7% (CI 1-5); physical limits 0.000%; L2 union 1.8%, L1+L2 union 1.8%, combined 1.7%; mean detection over 19 types L1+L2 union: old 54.4% (with map, FA 7.6%), v1same 47.4% (FA 2.3%), new 44.7% (FA 1.8%). map_road soft: FA 7.8%, out of the union.
+- Interpretation: the S2/S3 layers are val-calibrated thresholds, so the leak mostly mattered for learned layers; v1same vs new mixes leak removal with a much smaller test (3 vehicles, 2 attackers per type), CIs over 2 attackers are not valid.
+- Acceptance: S1b PARTIAL (heading_rate FA bound missed on a 2,094-message validation part; everything else MET).
+- Open: user could request the fuller Tampa data (ITS DataHub Sandbox, several days); DATASETS.md D14 note (226 ids = 38 vehicles) is for the orchestrator.

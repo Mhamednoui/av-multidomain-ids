@@ -1,0 +1,268 @@
+{
+ "copies": {
+  "rows": 34464,
+  "unique_messages": 19527,
+  "duplicate_rows": 14937,
+  "duplicate_fraction": 0.4334087743732591,
+  "mean_copies_per_message": 1.7649408511292057,
+  "copies_histogram": {
+   "1": 10866,
+   "2": 4715,
+   "3": 2631,
+   "4": 781,
+   "5": 246,
+   "6": 131,
+   "7": 127,
+   "8": 25,
+   "9": 4,
+   "10": 1
+  },
+  "messages_heard_by_more_than_one_rsu": 8661,
+  "id_repeated_inside_a_key": 0,
+  "msgCnt_t_groups_with_several_ids": 8661,
+  "msgCnt_t_groups_with_several_ids_and_different_content": 0,
+  "copy_receive_time_spread_s": {
+   "0": 8271,
+   "1": 389,
+   "2": 1
+  }
+ },
+ "tolerance_rule": {
+  "pairs_same_msgCnt_within_2ms_different_id": 0,
+  "extra_merges_by_tolerance_rule": 0,
+  "extra_fraction_of_unique_messages": 0.0
+ },
+ "tier1": {
+  "ids": 226,
+  "components": 48,
+  "component_sizes_ids": {
+   "1": 21,
+   "2": 3,
+   "3": 8,
+   "4": 4,
+   "5": 3,
+   "9": 1,
+   "10": 1,
+   "12": 1,
+   "14": 1,
+   "15": 1,
+   "16": 1,
+   "18": 2,
+   "32": 1
+  },
+  "ids_per_rsu_max": 14,
+  "rsus": 38
+ },
+ "msgCnt_rule_inside_tier1": {
+  "pairs": 19462,
+  "within_1": 0.9939882848628095,
+  "within_2": 0.9944507244887473
+ },
+ "positive_control": {
+  "correct": 128,
+  "wrong": 0,
+  "ambiguous": 0,
+  "missed": 64,
+  "trials": 192,
+  "recall": 0.6666666666666666,
+  "wrong_link_rate_of_accepted": 0.0,
+  "wrong_link_rate_of_trials": 0.0,
+  "mean_hole_s": {
+   "correct": 2.4949849094109684,
+   "ambiguous": null,
+   "missed": 3.3732400717809705,
+   "wrong": null
+  }
+ },
+ "negative_control_msgCnt": {
+  "unshuffled_candidates": 13,
+  "unshuffled_unique_links": 10,
+  "shuffled_msgCnt_mean_candidates": 0.3,
+  "shuffled_msgCnt_mean_unique_links": 0.23333333333333334,
+  "shuffled_msgCnt_max_unique_links": 1
+ },
+ "tier2_used": true,
+ "tier2_links": [
+  {
+   "a": 3,
+   "b": 43,
+   "ok": true,
+   "gap": 1.129000000000815,
+   "extrap_err_m": 0.4392787770531678,
+   "dv": 1.2600000000000016,
+   "dhead_deg": 1.762500000000017,
+   "msgcnt_err": 0,
+   "pass": 1
+  },
+  {
+   "a": 21,
+   "b": 13,
+   "ok": true,
+   "gap": 0.2999999999992724,
+   "extrap_err_m": 0.08240196500201316,
+   "dv": 0.03999999999999915,
+   "dhead_deg": 0.5625,
+   "msgcnt_err": 0,
+   "pass": 1
+  },
+  {
+   "a": 42,
+   "b": 47,
+   "ok": true,
+   "gap": 1.5999999999985448,
+   "extrap_err_m": 1.2187851656975583,
+   "dv": 0.4399999999999977,
+   "dhead_deg": 2.625,
+   "msgcnt_err": 0,
+   "pass": 1
+  },
+  {
+   "a": 47,
+   "b": 46,
+   "ok": true,
+   "gap": 3.75,
+   "extrap_err_m": 8.489600197551875,
+   "dv": 0.060000000000002274,
+   "dhead_deg": 8.387500000000017,
+   "msgcnt_err": 0,
+   "pass": 1
+  },
+  {
+   "a": 46,
+   "b": 36,
+   "ok": true,
+   "gap": 0.25,
+   "extrap_err_m": 0.34917019516938325,
+   "dv": 0.05999999999999872,
+   "dhead_deg": 0.7249999999999943,
+   "msgcnt_err": 0,
+   "pass": 1
+  },
+  {
+   "a": 9,
+   "b": 8,
+   "ok": true,
+   "gap": 2.100000000002183,
+   "extrap_err_m": 0.4501084329041929,
+   "dv": 0.41999999999999993,
+   "dhead_deg": 1.3375000000000057,
+   "msgcnt_err": 0,
+   "pass": 1
+  },
+  {
+   "a": 5,
+   "b": 20,
+   "ok": true,
+   "gap": 0.7119999999995343,
+   "extrap_err_m": 0.6106735089278404,
+   "dv": 0.11999999999999744,
+   "dhead_deg": 0.8625000000000114,
+   "msgcnt_err": 0,
+   "pass": 1
+  },
+  {
+   "a": 18,
+   "b": 7,
+   "ok": true,
+   "gap": 2.319999999999709,
+   "extrap_err_m": 0.7125299874796795,
+   "dv": 0.379999999999999,
+   "dhead_deg": 1.0,
+   "msgcnt_err": -1,
+   "pass": 1
+  },
+  {
+   "a": 40,
+   "b": 31,
+   "ok": true,
+   "gap": 1.1440000000002328,
+   "extrap_err_m": 2.091568291113339,
+   "dv": 0.08000000000000185,
+   "dhead_deg": 2.2624999999999886,
+   "msgcnt_err": 0,
+   "pass": 1
+  },
+  {
+   "a": 41,
+   "b": 17,
+   "ok": true,
+   "gap": 1.3400000000001455,
+   "extrap_err_m": 0.5644826834445751,
+   "dv": 0.21999999999999886,
+   "dhead_deg": 0.3374999999999999,
+   "msgcnt_err": 0,
+   "pass": 1
+  }
+ ],
+ "ambiguous_candidates": [
+  {
+   "a": 11,
+   "b": 30,
+   "ok": true,
+   "gap": 3.625,
+   "extrap_err_m": 1.3973120951877605,
+   "dv": 0.4800000000000004,
+   "dhead_deg": 0.0625,
+   "msgcnt_err": -1
+  },
+  {
+   "a": 11,
+   "b": 33,
+   "ok": true,
+   "gap": 4.658999999999651,
+   "extrap_err_m": 1.180111690531422,
+   "dv": 0.6600000000000001,
+   "dhead_deg": 2.9124999999999943,
+   "msgcnt_err": -2
+  },
+  {
+   "a": 30,
+   "b": 33,
+   "ok": true,
+   "gap": 0.9330000000009022,
+   "extrap_err_m": 1.3085887144953319,
+   "dv": 0.17999999999999972,
+   "dhead_deg": 2.799999999999983,
+   "msgcnt_err": 0
+  }
+ ],
+ "linking_summary": {
+  "ids": 226,
+  "tier1_vehicles": 48,
+  "physical_vehicles": 38,
+  "passages": 40,
+  "silence_s": 120.0,
+  "n_tier2_links": 10,
+  "n_ambiguous_unlinked": 3,
+  "confidence": "tier 1 certain (bit-identical shared message); tier 2 high (unique mutual continuity, see controls); ambiguous pairs left unlinked"
+ },
+ "old_split_leakage": {
+  "old_split_vehicles_ids": {
+   "train": 136,
+   "val": 45,
+   "test": 45
+  },
+  "unique_messages_heard_under_ids_of_more_than_one_old_part": 6451,
+  "fraction_of_unique_messages": 0.33036308700773287,
+  "old_test_rows_(id,t)": 8870,
+  "old_test_rows_with_a_bit_identical_copy_under_a_train_or_val_id": 6033,
+  "fraction_old_test_rows_with_copy_in_train_or_val": 0.6801578354002255,
+  "fraction_old_test_rows_with_copy_in_val": 0.014543404735062007,
+  "physical_vehicles": 38,
+  "physical_vehicles_with_ids_in_more_than_one_old_part": 23,
+  "old_test_ids": 45,
+  "old_test_ids_whose_physical_vehicle_also_has_ids_in_train_or_val": 39,
+  "fraction_old_test_ids_of_such_vehicles": 0.8666666666666667,
+  "old_test_row_share_of_such_vehicles": 0.9151071025930101
+ },
+ "table": {
+  "rows": 19519,
+  "passages": 40,
+  "tracks": 65,
+  "t_range_s": [
+   1035.8,
+   25183.232
+  ],
+  "eligible_ge50_passages": 27
+ }
+}

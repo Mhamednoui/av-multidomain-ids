@@ -39,6 +39,13 @@ L1_NAMES = ["v2x.beacon_rate", "v2x.freshness", "v2x.field_ranges"]
 L2_NAMES = [l.name for l in l2.make_layers()]
 PHYS_L2 = ["v2x.speed_change", "v2x.implied_speed", "v2x.heading_rate"]
 log, aname, fmt = s2.log, s2.aname, s2.fmt
+# Tampa data configuration (WP5 S1b), same convention as in WP5_S2_l1.py; tools/WP5_S1b_rerun.py --legacy overrides it.
+TAMPA_SPLIT_FILE = "splits_tampa_v2.json"
+SOFT_LAYERS = ("v2x.map_road",)      # scored, reported alone, but NOT in the deployable union / combiner (supervisor decision 2026-10-20)
+
+
+def tampa_loader():
+    return adapters.load_tampa(with_age=True)
 
 
 class Lite:
@@ -97,7 +104,7 @@ def raw_equiv_val(layer, raw_val, cal_val):
     return float(raw_val[m].min()) if m.any() else None
 
 
-def analyse(tag, layers_all, raw_val, raw_test, phys_val, phys_test, vmeta, tmeta, val_group, test_group, classes, evaluable, supp=False):
+def analyse(tag, layers_all, raw_val, raw_test, phys_val, phys_test, vmeta, tmeta, val_group, test_group, classes, evaluable, supp=False, soft=()):
     """Everything after the raw scores exist. layers_all: evaluable layers (L1 + L2), calibrated."""
     names = [l.name for l in layers_all]
     n_l1 = [n for n in names if n in L1_NAMES]
@@ -145,6 +152,14 @@ def analyse(tag, layers_all, raw_val, raw_test, phys_val, phys_test, vmeta, tmet
     ops["L1_union_at_operating_points"] = al_l1u
     ops["L1_and_L2_union"] = al_l1u | al_u2
     ops.update(comb_alarm)
+    soft_info = {}
+    for l in soft:                  # soft-evidence layers: scored and reported alone, never part of the union / combiner
+        a_t = l.calibrator.transform(raw_test[l.name]) >= l.threshold
+        a_v = l.calibrator.transform(raw_val[l.name]) >= l.threshold
+        ops[l.name] = a_t
+        ops["L1_and_L2_union_OR_" + l.name] = al_l1u | al_u2 | a_t
+        soft_info[l.name] = {"val_FA_budget_op": float(a_v[~yv].mean()),
+                             "threshold_raw_equivalent": raw_equiv_val(l, raw_val[l.name], l.calibrator.transform(raw_val[l.name]))}
     pc = s2.per_class(tmeta, ops, classes)
     rng = np.random.RandomState(SEED)
     if supp:
@@ -168,6 +183,7 @@ def analyse(tag, layers_all, raw_val, raw_test, phys_val, phys_test, vmeta, tmet
             "per_operating_point": {k: {kk: vv for kk, vv in d.items() if kk != "by_class"} for k, d in pc.items()},
             "by_class": {k: {c: {kk: vv for kk, vv in s.items() if not kk.startswith("attackers_")} for c, s in d["by_class"].items()}
                          for k, d in pc.items()},
+            "soft_layers": soft_info,
             "sender_ge3_alarms": s3,
             "harness_method": res["combined"]["method"], "harness_selection": res["combined"]["method_selection"]}
     return res, summ, pc, s3, ops
@@ -295,8 +311,8 @@ def tampa_frames(tp, vehicles, drop_heldout):
 
 def run_tampa(dev, summary, tables):
     log("Tampa: loading")
-    tp = adapters.load_tampa(with_age=True)
-    sp = json.loads((OUT / "splits_tampa.json").read_text())
+    tp = tampa_loader()
+    sp = json.loads((OUT / TAMPA_SPLIT_FILE).read_text())
     tree = l2.build_road_tree(OSM_TAMPA, adapters.TAMPA_LAT0, adapters.TAMPA_LON0)
     log("road tree points", tree.n)
     val_df = splitting.rows_of(tp, sp["val"])
@@ -308,6 +324,8 @@ def run_tampa(dev, summary, tables):
     for l in l2_layers:
         l.calibrate_masked(val_df, np.ones(len(val_df), bool), BUDGET)
     layers = l1_layers + l2_layers
+    soft = [l for l in layers if l.name in SOFT_LAYERS]
+    deploy = [l for l in layers if l.name not in SOFT_LAYERS]
     evaluable = {l.name: bool(l.evaluable(val_df)) for l in layers}
     log("Tampa evaluable:", evaluable)
     vf, vk, vmeta = tampa_frames(tp, sp["val"], True)
@@ -323,8 +341,8 @@ def run_tampa(dev, summary, tables):
     log("Tampa: scoring test", len(tmeta), "messages")
     raw_test, phys_test = raw_over_frames(tf, tk, layers)
     classes = [aname(c) for c in range(1, 20)] + [SUPP]
-    res, summ, pc, s3, ops = analyse("tampa" + SUF, layers, raw_val, raw_test, phys_val, phys_test, vmeta, tmeta,
-                                     vmeta["sender"].to_numpy(), tmeta["sender"].to_numpy(), classes, evaluable, supp=True)
+    res, summ, pc, s3, ops = analyse("tampa" + SUF, deploy, raw_val, raw_test, phys_val, phys_test, vmeta, tmeta,
+                                     vmeta["sender"].to_numpy(), tmeta["sender"].to_numpy(), classes, evaluable, supp=True, soft=soft)
     summ["map_road_threshold_note"] = "distance (m) to the nearest drivable OSM way, threshold = raw equivalent above"
     summary["tampa"] = summ
     l2cols = [n for n in L2_NAMES if n in summ["layers_run"]]

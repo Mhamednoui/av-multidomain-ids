@@ -48,7 +48,7 @@ for c in (0, 11, 13, 16):
 res["veremi_val_mechanisms"] = rows
 
 # ---- B: Tampa map check
-tp = adapters.load_tampa(with_age=True)
+tp = adapters.load_tampa_v1(with_age=True)
 spt = json.loads((OUT / "splits_tampa.json").read_text())
 tree = l2.build_road_tree(m.OSM_TAMPA, adapters.TAMPA_LAT0, adapters.TAMPA_LON0)
 vd = splitting.rows_of(tp, spt["val"]).copy()

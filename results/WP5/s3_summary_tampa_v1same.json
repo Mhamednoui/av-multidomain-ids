@@ -1,0 +1,6081 @@
+{
+ "tag": "v1same",
+ "split_file": "splits_tampa.json",
+ "budget": 0.01,
+ "heldout_attack_types": [
+  6,
+  12,
+  17
+ ],
+ "soft_layers_outside_union": [
+  "v2x.map_road"
+ ],
+ "tampa": {
+  "evaluable": {
+   "v2x.beacon_rate": true,
+   "v2x.freshness": true,
+   "v2x.field_ranges": true,
+   "v2x.pos_speed": true,
+   "v2x.pos_heading": true,
+   "v2x.speed_change": true,
+   "v2x.implied_speed": true,
+   "v2x.heading_rate": true,
+   "v2x.accel_consistency": true,
+   "v2x.yaw_consistency": true,
+   "v2x.overlap": true,
+   "v2x.map_road": true
+  },
+  "layers_run": [
+   "v2x.beacon_rate",
+   "v2x.freshness",
+   "v2x.field_ranges",
+   "v2x.pos_speed",
+   "v2x.pos_heading",
+   "v2x.speed_change",
+   "v2x.implied_speed",
+   "v2x.heading_rate",
+   "v2x.accel_consistency",
+   "v2x.yaw_consistency",
+   "v2x.overlap"
+  ],
+  "n_val_genuine": 4491,
+  "n_val_for_combiner": 60643,
+  "n_test": 121574,
+  "n_test_genuine": 8870,
+  "n_test_attack": 112704,
+  "threshold_raw_equivalent": {
+   "v2x.beacon_rate": 2.0408163265306123,
+   "v2x.freshness": 3.084000000002561,
+   "v2x.field_ranges": 0.48831616395927346,
+   "v2x.pos_speed": 1.8159799017999738,
+   "v2x.pos_heading": 0.051228454472747105,
+   "v2x.speed_change": 0.2562335535377413,
+   "v2x.implied_speed": 0.49606688609536137,
+   "v2x.heading_rate": 0.18699956271366167,
+   "v2x.accel_consistency": 2.5300000000000002,
+   "v2x.yaw_consistency": 0.08379911305316376,
+   "v2x.overlap": 2.632701106292718e-05
+  },
+  "threshold_union_L2_score": 0.997995991983968,
+  "physical_FA": {
+   "v2x.field_ranges": {
+    "val_genuine": 0.0,
+    "test_genuine": 0.0
+   },
+   "v2x.speed_change": {
+    "val_genuine": 0.0,
+    "test_genuine": 0.00022547914317925591
+   },
+   "v2x.implied_speed": {
+    "val_genuine": 0.0,
+    "test_genuine": 0.0
+   },
+   "v2x.heading_rate": {
+    "val_genuine": 0.0,
+    "test_genuine": 0.0
+   },
+   "L2_physical_union": {
+    "val_genuine": 0.0,
+    "test_genuine": 0.00022547914317925591
+   }
+  },
+  "val_FA_budget_ops": {
+   "v2x.beacon_rate": 0.009352037408149633,
+   "v2x.freshness": 0.009797372522823424,
+   "v2x.field_ranges": 0.008238699621465152,
+   "v2x.pos_speed": 0.009574704965486529,
+   "v2x.pos_heading": 0.009797372522823424,
+   "v2x.speed_change": 0.009797372522823424,
+   "v2x.implied_speed": 0.009574704965486529,
+   "v2x.heading_rate": 0.009797372522823424,
+   "v2x.accel_consistency": 0.009797372522823424,
+   "v2x.yaw_consistency": 0.009797372522823424,
+   "v2x.overlap": 0.0
+  },
+  "groups": {
+   "L1": {
+    "threshold": 0.9988268899425707,
+    "budget": 0.01,
+    "false_alarm_rate": 0.009244644870349492,
+    "detection": 0.18445662975582056,
+    "detection_by_attack": {
+     "01_ConstPos": 0.004696531791907515,
+     "02_ConstPosOffset": 0.0111731843575419,
+     "03_RandomPos": 0.011783827712312069,
+     "04_RandomPosOffset": 0.015015806111696523,
+     "05_ConstSpeed": 0.004775549188156638,
+     "06_ConstSpeedOffset": 0.0697495183044316,
+     "07_RandomSpeed": 0.03656849179679779,
+     "08_RandomSpeedOffset": 0.05779153766769866,
+     "09_EventualStop": 0.0,
+     "10_Disruptive": 0.013181818181818182,
+     "11_DataReplay": 0.00017889087656529517,
+     "12_DelayedMessages": 0.0023222579492675954,
+     "13_DoS": 0.05469865752642102,
+     "14_DoSRandom": 0.9441275167785235,
+     "15_DoSDisruptive": 0.9281479390175043,
+     "16_GridSybil": 0.0064786585365853655,
+     "17_DataReplaySybil": 0.030727519204699502,
+     "18_DoSRandomSybil": 0.04282357966680905,
+     "19_DoSDisruptiveSybil": 0.016974645466265578,
+     "S20_StaleReplay": 1.0
+    },
+    "auc": 0.6293183405228018,
+    "n_test": 121574,
+    "n_test_attack": 112704,
+    "method": "noisy_or",
+    "delay": {
+     "n_segments": 8476,
+     "detected_fraction": 0.4873761208117036,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.06126155894468041
+    }
+   },
+   "L2": {
+    "threshold": 0.763755668112273,
+    "budget": 0.01,
+    "false_alarm_rate": 0.013077790304396843,
+    "detection": 0.48008056501987506,
+    "detection_by_attack": {
+     "01_ConstPos": 0.1936416184971098,
+     "02_ConstPosOffset": 0.012476722532588455,
+     "03_RandomPos": 0.9819179195449005,
+     "04_RandomPosOffset": 0.9860379346680717,
+     "05_ConstSpeed": 0.6625278573702642,
+     "06_ConstSpeedOffset": 0.4238921001926782,
+     "07_RandomSpeed": 0.9808262502470844,
+     "08_RandomSpeedOffset": 0.9504643962848297,
+     "09_EventualStop": 0.0024054982817869417,
+     "10_Disruptive": 0.9295454545454546,
+     "11_DataReplay": 0.06923076923076923,
+     "12_DelayedMessages": 0.13040371561271882,
+     "13_DoS": 0.009568694658668952,
+     "14_DoSRandom": 0.9958892617449664,
+     "15_DoSDisruptive": 0.9339356295878035,
+     "16_GridSybil": 0.01721290650406504,
+     "17_DataReplaySybil": 0.24582015363759602,
+     "18_DoSRandomSybil": 0.4721272960273387,
+     "19_DoSDisruptiveSybil": 0.6177481736140954,
+     "S20_StaleReplay": 0.769
+    },
+    "auc": 0.7353035194664621,
+    "n_test": 121574,
+    "n_test_attack": 112704,
+    "method": "logistic",
+    "delay": {
+     "n_segments": 8476,
+     "detected_fraction": 0.996342614440774,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.40208969804618105
+    }
+   },
+   "L1+L2": {
+    "threshold": 0.9986639946559788,
+    "budget": 0.01,
+    "false_alarm_rate": 0.012626832018038332,
+    "detection": 0.4662212521294719,
+    "detection_by_attack": {
+     "01_ConstPos": 0.09645953757225434,
+     "02_ConstPosOffset": 0.013221601489757914,
+     "03_RandomPos": 0.995530272247054,
+     "04_RandomPosOffset": 0.9949947312961012,
+     "05_ConstSpeed": 0.39414199299586117,
+     "06_ConstSpeedOffset": 0.17764932562620425,
+     "07_RandomSpeed": 0.9723265467483693,
+     "08_RandomSpeedOffset": 0.8833849329205367,
+     "09_EventualStop": 0.0024054982817869417,
+     "10_Disruptive": 0.9427272727272727,
+     "11_DataReplay": 0.03363148479427549,
+     "12_DelayedMessages": 0.03411932833154698,
+     "13_DoS": 0.033990288489003144,
+     "14_DoSRandom": 0.9983221476510067,
+     "15_DoSDisruptive": 0.993365330321852,
+     "16_GridSybil": 0.017276422764227643,
+     "17_DataReplaySybil": 0.21283325802078626,
+     "18_DoSRandomSybil": 0.48344724476719353,
+     "19_DoSDisruptiveSybil": 0.6411688869789428,
+     "S20_StaleReplay": 1.0
+    },
+    "auc": 0.7563470291146263,
+    "n_test": 121574,
+    "n_test_attack": 112704,
+    "method": "max",
+    "delay": {
+     "n_segments": 8476,
+     "detected_fraction": 0.99079754601227,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0002887294593956241
+    }
+   }
+  },
+  "per_operating_point": {
+   "v2x.beacon_rate": {
+    "false_alarm_messages": 0.0021420518602029313,
+    "false_alarm_genuine_senders": 0.15555555555555556,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.00035884825692070876,
+     0.006863841258897593
+    ]
+   },
+   "v2x.freshness": {
+    "false_alarm_messages": 0.010822998872604284,
+    "false_alarm_genuine_senders": 0.1111111111111111,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.00035974354306515647,
+     0.03430796624090923
+    ]
+   },
+   "v2x.field_ranges": {
+    "false_alarm_messages": 0.003269447576099211,
+    "false_alarm_genuine_senders": 0.13333333333333333,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0008476297527000143,
+     0.007773154413284037
+    ]
+   },
+   "v2x.pos_speed": {
+    "false_alarm_messages": 0.002029312288613303,
+    "false_alarm_genuine_senders": 0.2,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0005930274806813626,
+     0.0054343577788049146
+    ]
+   },
+   "v2x.pos_heading": {
+    "false_alarm_messages": 0.008004509582863585,
+    "false_alarm_genuine_senders": 0.4,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0035664201669084196,
+     0.012897207344342288
+    ]
+   },
+   "v2x.speed_change": {
+    "false_alarm_messages": 0.006877113866967306,
+    "false_alarm_genuine_senders": 0.3333333333333333,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.004446103351658164,
+     0.010536500983608556
+    ]
+   },
+   "v2x.implied_speed": {
+    "false_alarm_messages": 0.0016910935738444193,
+    "false_alarm_genuine_senders": 0.13333333333333333,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0003229858639658704,
+     0.004293817850937268
+    ]
+   },
+   "v2x.heading_rate": {
+    "false_alarm_messages": 0.00890642615558061,
+    "false_alarm_genuine_senders": 0.2,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.002698425299409417,
+     0.01583535719781369
+    ]
+   },
+   "v2x.accel_consistency": {
+    "false_alarm_messages": 0.007328072153325817,
+    "false_alarm_genuine_senders": 0.4,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0049923360254293635,
+     0.011583185184195047
+    ]
+   },
+   "v2x.yaw_consistency": {
+    "false_alarm_messages": 0.006426155580608794,
+    "false_alarm_genuine_senders": 0.15555555555555556,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0015634711097944278,
+     0.011992601598232934
+    ]
+   },
+   "v2x.overlap": {
+    "false_alarm_messages": 0.0,
+    "false_alarm_genuine_senders": 0.0,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0,
+     0.0
+    ]
+   },
+   "v2x.field_ranges@physical": {
+    "false_alarm_messages": 0.0,
+    "false_alarm_genuine_senders": 0.0,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0,
+     0.0
+    ]
+   },
+   "v2x.speed_change@physical": {
+    "false_alarm_messages": 0.00022547914317925591,
+    "false_alarm_genuine_senders": 0.044444444444444446,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0,
+     0.0007270520701062394
+    ]
+   },
+   "v2x.implied_speed@physical": {
+    "false_alarm_messages": 0.0,
+    "false_alarm_genuine_senders": 0.0,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0,
+     0.0
+    ]
+   },
+   "v2x.heading_rate@physical": {
+    "false_alarm_messages": 0.0,
+    "false_alarm_genuine_senders": 0.0,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0,
+     0.0
+    ]
+   },
+   "L2_physical_union": {
+    "false_alarm_messages": 0.00022547914317925591,
+    "false_alarm_genuine_senders": 0.044444444444444446,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0,
+     0.000700847108489919
+    ]
+   },
+   "L2_union": {
+    "false_alarm_messages": 0.009808342728297632,
+    "false_alarm_genuine_senders": 0.4,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.005652811919787791,
+     0.016333270867271106
+    ]
+   },
+   "L1_union_at_operating_points": {
+    "false_alarm_messages": 0.012965050732807215,
+    "false_alarm_genuine_senders": 0.26666666666666666,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.002434657072732556,
+     0.03648949268200544
+    ]
+   },
+   "L1_and_L2_union": {
+    "false_alarm_messages": 0.02266065388951522,
+    "false_alarm_genuine_senders": 0.5333333333333333,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0110893123128448,
+     0.049784015902492255
+    ]
+   },
+   "combined_L1": {
+    "false_alarm_messages": 0.009244644870349492,
+    "false_alarm_genuine_senders": 0.3111111111111111,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0020722691994260784,
+     0.0274901700107962
+    ]
+   },
+   "combined_L2": {
+    "false_alarm_messages": 0.013077790304396843,
+    "false_alarm_genuine_senders": 0.5333333333333333,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.009390029942465664,
+     0.019677425400203123
+    ]
+   },
+   "combined_L1+L2": {
+    "false_alarm_messages": 0.012626832018038332,
+    "false_alarm_genuine_senders": 0.37777777777777777,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.005831037205685596,
+     0.024342878644839163
+    ]
+   },
+   "combined_all": {
+    "false_alarm_messages": 0.012626832018038332,
+    "false_alarm_genuine_senders": 0.37777777777777777,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.00563936502199401,
+     0.02574273825171871
+    ]
+   },
+   "v2x.map_road": {
+    "false_alarm_messages": 0.05501691093573845,
+    "false_alarm_genuine_senders": 0.08888888888888889,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.0025832282060724463,
+     0.17020293139457893
+    ]
+   },
+   "L1_and_L2_union_OR_v2x.map_road": {
+    "false_alarm_messages": 0.07677564825253665,
+    "false_alarm_genuine_senders": 0.5555555555555556,
+    "n_genuine_senders": 45,
+    "false_alarm_ci95_vehicle_bootstrap": [
+     0.02177336161374951,
+     0.19887198619013546
+    ]
+   }
+  },
+  "by_class": {
+   "v2x.beacon_rate": {
+    "01_ConstPos": {
+     "msg_detection": 0.005780346820809248,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 1.8989999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0005422846607426975,
+      0.01672281434876514
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0007448789571694599,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 58.63600000000224,
+     "ci95_attacker_bootstrap": [
+      0.0001127597372584613,
+      0.002395921551502097
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.002641202763104429,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 76.64950000000078,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.011637363583793692
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.001053740779768177,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 2.1489999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0034404437424104877
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.004138809296402419,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 29.892500000001178,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.013379173896826297
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.005780346820809248,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 1.6489999999998872,
+     "ci95_attacker_bootstrap": [
+      0.000282036447787099,
+      0.015913094167884025
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.0023720102787112077,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.1490000000001146,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.010825148249349138
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.0010319917440660474,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 1.8989999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.004055690471174249
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.003436426116838488,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 5.4500000000000455,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.022938422187460363
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.006818181818181818,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 1.6489999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0003191538778236426,
+      0.0171755946101487
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.00017889087656529517,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 152.15000000000146,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0006234657268785576
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0003572704537334762,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 30.854500000001053,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0012167030774758048
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.056555269922879174,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.837499999999636,
+     "ci95_attacker_bootstrap": [
+      0.04668765149801416,
+      0.07594094910725048
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9425335570469798,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9174527853977632,
+      0.9552709925261249
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9281479390175043,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9051914954538391,
+      0.9527579463959923
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.005716463414634146,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 1.6489999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.016618018419488997
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.00022593764121102577,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 152.15000000000146,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0005402566066348331
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.0005339598462195643,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 71.41299999999865,
+     "ci95_attacker_bootstrap": [
+      0.00016892545157951675,
+      0.0010054853097850767
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.0004297378599054577,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 116.90100000000166,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0007931288606447279
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.freshness": {
+    "01_ConstPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0111731843575419,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 14.521500000000742,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.051836533032185196
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.012190166598943519,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 14.521500000000742,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.05444263454872309
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.015806111696522657,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 14.521500000000742,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0612437413750398
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0007707129094412332,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.7710000000006403,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0028503322527922282
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.000395335046451868,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.7710000000006403,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0022134653240554764
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.019951840385276916,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 27.272000000000844,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.08152510588190982
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.0009090909090909091,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.7710000000006403,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.003137316465047557
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.0,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.0006711409395973154,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.7710000000006403,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.002990709137452115
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.001129305477131564,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.7710000000006403,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.003800235690384806
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.013556258472661545,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 14.521500000000742,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.05792828005096242
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.012387868432293891,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 27.272000000000844,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.050347222222222224
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.01289213579716373,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 14.521500000000742,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.06659014801136202
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 1.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "v2x.field_ranges": {
+    "01_ConstPos": {
+     "msg_detection": 0.004335260115606936,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.7969999999986612,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.014614891579250654
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0014897579143389199,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 887.4750000000004,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0028214622127913863
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.0010158472165786266,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1774.9500000000007,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.001882317520883064
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.0013171759747102212,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 799.7204999999994,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0032233798281480807
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.06705202312138728,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 944.2994999999999,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.20696676576296755
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.02391777031033801,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 11.38799999999901,
+     "ci95_attacker_bootstrap": [
+      0.020396591737761958,
+      0.025478019233170977
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.038183694530443756,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.1450969769545077
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.003181818181818182,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 23.947000000000116,
+     "ci95_attacker_bootstrap": [
+      0.0014915579895442663,
+      0.005523002924064234
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0014290818149339049,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 1601.4470000000001,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.002351758087060259
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.00485575549842902,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 1.7969999999986612,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.014796902573162624
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.025167785234899327,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.576999999999316,
+     "ci95_attacker_bootstrap": [
+      0.021811245561161166,
+      0.03206345126784826
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.001411631846414455,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 52.30899999999747,
+     "ci95_attacker_bootstrap": [
+      0.0005387858499062262,
+      0.002219712960462037
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.005716463414634146,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 0.8984999999993306,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.01622588579800543
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.023067065356685176,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 5.158500000001368,
+     "ci95_attacker_bootstrap": [
+      0.020329995329513083,
+      0.02670799634331995
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.00558659217877095,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 26.653999999998632,
+     "ci95_attacker_bootstrap": [
+      0.004748039257840645,
+      0.008398773843243905
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.006,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 15790.847,
+     "ci95_attacker_bootstrap": [
+      0.001,
+      0.011
+     ]
+    }
+   },
+   "v2x.pos_speed": {
+    "01_ConstPos": {
+     "msg_detection": 0.13836705202312138,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.6345000000019354,
+     "ci95_attacker_bootstrap": [
+      0.06517439875977758,
+      0.32910327093847824
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.00037243947858472997,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 51.824500000000626,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.00143315872869653
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.995530272247054,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.9899685635516084,
+      0.9975395095927285
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9944678609062171,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9891735358475995,
+      0.9965556777370783
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.6889525628780643,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.1850000000013097,
+     "ci95_attacker_bootstrap": [
+      0.498976074358205,
+      0.8406137660318537
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.1857418111753372,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.45849999999995816,
+     "ci95_attacker_bootstrap": [
+      0.09752049289205847,
+      0.2851176310600394
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.4166831389602688,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.5779999999995198,
+     "ci95_attacker_bootstrap": [
+      0.2678655925298428,
+      0.46542656096308566
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.0694874441004472,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9839999999985594,
+     "ci95_attacker_bootstrap": [
+      0.040373648059233797,
+      0.13288814937793048
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0010309278350515464,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.005736909542807112
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9431818181818182,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9269072317819311,
+      0.9510559754411273
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.045259391771019675,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 1.6530000000020664,
+     "ci95_attacker_bootstrap": [
+      0.030513291505793613,
+      0.08410386857596959
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.04501607717041801,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.2955000000001746,
+     "ci95_attacker_bootstrap": [
+      0.025183723005075147,
+      0.11195921263796385
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.0012853470437017994,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 25.061499999999796,
+     "ci95_attacker_bootstrap": [
+      0.00018941436811364682,
+      0.005094314601684562
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9959731543624161,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9870685641934968,
+      0.9988457630912805
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9394409937888198,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9247171319007367,
+      0.9520311572584423
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.003620426829268293,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 21.254499999999098,
+     "ci95_attacker_bootstrap": [
+      0.0005825651961843759,
+      0.011034622319239523
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.23746046091278808,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.3084999999991851,
+     "ci95_attacker_bootstrap": [
+      0.2004754287116472,
+      0.27913125870800803
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.4719137120888509,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.41968084692578245,
+      0.5042961458507231
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.44950580146110874,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.7824999999993452,
+     "ci95_attacker_bootstrap": [
+      0.36910051371611075,
+      0.4795773497985199
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.pos_heading": {
+    "01_ConstPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.00819366852886406,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 17.245500000000902,
+     "ci95_attacker_bootstrap": [
+      0.0021878467367192154,
+      0.01302313782189681
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.39821210889882164,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.2960796239555389,
+      0.7309354684283594
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.4457323498419389,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.1555000000007567,
+     "ci95_attacker_bootstrap": [
+      0.27703090057146706,
+      0.8717771456243625
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.01591849729385546,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 8.004500000000917,
+     "ci95_attacker_bootstrap": [
+      0.009594514746638742,
+      0.023607936987970507
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.018111753371868978,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 12.28900000000067,
+     "ci95_attacker_bootstrap": [
+      0.010546634117032681,
+      0.02633197220050848
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.010476378730974501,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 14.015500000001339,
+     "ci95_attacker_bootstrap": [
+      0.005501483859245352,
+      0.015092158012643655
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.006191950464396285,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 12.495999999999185,
+     "ci95_attacker_bootstrap": [
+      0.003444024378527028,
+      0.0121339674096195
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.1572727272727273,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6749999999999545,
+     "ci95_attacker_bootstrap": [
+      0.13366052468370623,
+      0.17962767014601222
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0007155635062611807,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 185.73300000000017,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0008850577369218486
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.007324044301536263,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 32.790500000000975,
+     "ci95_attacker_bootstrap": [
+      0.001909638160646391,
+      0.011694670762832109
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.006283918880319908,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 9.542000000001053,
+     "ci95_attacker_bootstrap": [
+      0.002545721644485324,
+      0.014389473495830201
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.8209731543624161,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02600000000165892,
+     "ci95_attacker_bootstrap": [
+      0.8050162690876841,
+      0.8306139154756724
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.14892715979672502,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.3356249999992542,
+     "ci95_attacker_bootstrap": [
+      0.13936618794675062,
+      0.15787289969192103
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.028074186991869917,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 1.417499999999336,
+     "ci95_attacker_bootstrap": [
+      0.012221519740035776,
+      0.045977240861949424
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.011522819701762313,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 10.850999999998749,
+     "ci95_attacker_bootstrap": [
+      0.01002901896111664,
+      0.014156408757034965
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.3953438701409654,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.34843732344334666,
+      0.4239609169627184
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.1068972926514826,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.896250000000691,
+     "ci95_attacker_bootstrap": [
+      0.08647330983049066,
+      0.11535946748253334
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.speed_change": {
+    "01_ConstPos": {
+     "msg_detection": 0.008670520231213872,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 3.4579999999987194,
+     "ci95_attacker_bootstrap": [
+      0.0035542834890965732,
+      0.015780407301951817
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.00484171322160149,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 32.12000000000262,
+     "ci95_attacker_bootstrap": [
+      0.003743382625669231,
+      0.006382995701217649
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.007923608289313287,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 32.12000000000262,
+     "ci95_attacker_bootstrap": [
+      0.004395184406650105,
+      0.015451719566366555
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.003951527924130664,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 55.862999999999374,
+     "ci95_attacker_bootstrap": [
+      0.0022877185788782845,
+      0.00637523885328981
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.012716763005780347,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 3.664999999997235,
+     "ci95_attacker_bootstrap": [
+      0.006626367517876605,
+      0.018746432785357977
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.9693615338999803,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9645138977432105,
+      0.972176913423345
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.8981768145854833,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10300000000097498,
+     "ci95_attacker_bootstrap": [
+      0.8527677016562303,
+      0.9137401266663727
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0024054982817869417,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0009795803120906728,
+      0.010834524068624196
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.7263636363636363,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.1555000000007567,
+     "ci95_attacker_bootstrap": [
+      0.7083098885576228,
+      0.7423094512195122
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.018962432915921288,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 3.885999999998603,
+     "ci95_attacker_bootstrap": [
+      0.016544661470268434,
+      0.021539820527201343
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.017506252232940337,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 6.816500000000815,
+     "ci95_attacker_bootstrap": [
+      0.014057902337345982,
+      0.026724921631929174
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.01985147100828335,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 4.370999999999185,
+     "ci95_attacker_bootstrap": [
+      0.012634547453558813,
+      0.03057829582163615
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9866610738255034,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9736487646824834,
+      0.991302549298113
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.7837380011293055,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025875000001178705,
+     "ci95_attacker_bootstrap": [
+      0.7751452568486109,
+      0.7911064844931124
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.009146341463414634,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 3.4579999999987194,
+     "ci95_attacker_bootstrap": [
+      0.0030820884042688378,
+      0.01665370913456807
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.09331224582015364,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.8560000000015862,
+     "ci95_attacker_bootstrap": [
+      0.07606229200117932,
+      0.10436051827797692
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.31599743699273813,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.27638929855506555,
+      0.3445928281999166
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.2351740438332617,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.503499999998894,
+     "ci95_attacker_bootstrap": [
+      0.1887878641993817,
+      0.2581424214214896
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.implied_speed": {
+    "01_ConstPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0007448789571694599,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 48.36800000000039,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0027560649176843447
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.995530272247054,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.990453358107932,
+      0.9974250855338913
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9934141201264489,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9877322591766673,
+      0.9964007257829053
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0028653295128939827,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 4.958999999998923,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.007740740146617686
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0011560693641618498,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 56.210000000002765,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0033274882923408785
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.0017790077090334058,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 4.958999999998923,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.007535337594102879
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.002407980736154111,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 4.958999999998923,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.009222835948340271
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9340909090909091,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9147837305284078,
+      0.9444887012170252
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0110912343470483,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 3.82799999999952,
+     "ci95_attacker_bootstrap": [
+      0.007537421537699423,
+      0.023619761256001032
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.015541264737406217,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 9.473000000001775,
+     "ci95_attacker_bootstrap": [
+      0.006249240551842296,
+      0.046225637785239124
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.003998857469294488,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 11.5470000000023,
+     "ci95_attacker_bootstrap": [
+      0.001854875346622643,
+      0.00932129341866736
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9959731543624161,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9866478187338993,
+      0.9988661283444651
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9450875211744777,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9329546173254529,
+      0.9557624268896344
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.003429878048780488,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 4.958999999998923,
+     "ci95_attacker_bootstrap": [
+      0.0007513073991314309,
+      0.009868769349845201
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.14347040216900137,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.3594999999986612,
+     "ci95_attacker_bootstrap": [
+      0.11692301742532005,
+      0.1696663322485797
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.4667876975651431,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.4106209014904636,
+      0.49857243733229
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.4071766222604211,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.7824999999993452,
+     "ci95_attacker_bootstrap": [
+      0.33264314556339025,
+      0.43707985087429385
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.heading_rate": {
+    "01_ConstPos": {
+     "msg_detection": 0.013367052023121388,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 1.290499999999156,
+     "ci95_attacker_bootstrap": [
+      0.0013529187851269214,
+      0.03218346754911149
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.008007448789571695,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 19.475500000000466,
+     "ci95_attacker_bootstrap": [
+      0.0020262473115541042,
+      0.012512012595220948
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.00914262494920764,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 21.324000000000524,
+     "ci95_attacker_bootstrap": [
+      0.0013783879321372634,
+      0.01423012004344375
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.003424657534246575,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 21.324000000000524,
+     "ci95_attacker_bootstrap": [
+      0.001592810852041692,
+      0.006361858359186071
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0015414258188824663,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 6.580500000001848,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.003836471759160629
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.000197667523225934,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1775.9840000000004,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.00038294020912080896
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.0010319917440660474,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 804.0749999999989,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0030242316748816554
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.13090909090909092,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.3524999999997362,
+     "ci95_attacker_bootstrap": [
+      0.11092605719643694,
+      0.1484996884896942
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.009481216457960644,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 23.115999999999985,
+     "ci95_attacker_bootstrap": [
+      0.006658129602088587,
+      0.013861409953642961
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.007324044301536263,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 17.449000000000524,
+     "ci95_attacker_bootstrap": [
+      0.0035841710346179835,
+      0.010511396740761667
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.006426735218508998,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 1.6499999999996362,
+     "ci95_attacker_bootstrap": [
+      0.0013935430580870373,
+      0.01563444297850184
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.0038590604026845637,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 1.7145000000000437,
+     "ci95_attacker_bootstrap": [
+      0.0006907900102768222,
+      0.009245456186915274
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.13946922642574816,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.5124999999999318,
+     "ci95_attacker_bootstrap": [
+      0.13286687194419358,
+      0.14542170395537937
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.01524390243902439,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 0.5344999999997526,
+     "ci95_attacker_bootstrap": [
+      0.002012994010691102,
+      0.03452606598500493
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.021690013556258474,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 14.643500000000131,
+     "ci95_attacker_bootstrap": [
+      0.013659167772802433,
+      0.03694637395155825
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.00010679196924391286,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 114.5010000000002,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0002787670234261472
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.04716373012462398,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 3.46100000000024,
+     "ci95_attacker_bootstrap": [
+      0.0361393033755804,
+      0.05147267109547476
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.accel_consistency": {
+    "01_ConstPos": {
+     "msg_detection": 0.008309248554913294,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 16.648999999999887,
+     "ci95_attacker_bootstrap": [
+      0.004246868727213141,
+      0.01494003695259466
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.005400372439478585,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 33.17900000000009,
+     "ci95_attacker_bootstrap": [
+      0.0034342365945611263,
+      0.008866003974575336
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.007923608289313287,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 31.911000000000058,
+     "ci95_attacker_bootstrap": [
+      0.004458719947341685,
+      0.01606589893262455
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.0050052687038988405,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 77.82700000000114,
+     "ci95_attacker_bootstrap": [
+      0.0025714290262488933,
+      0.009822303528253844
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.012716763005780347,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 10.156999999998561,
+     "ci95_attacker_bootstrap": [
+      0.006181816112766097,
+      0.019694852034476854
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.9756868946432101,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9704957711004576,
+      0.9774273283733382
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.9198486412108703,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10300000000097498,
+     "ci95_attacker_bootstrap": [
+      0.883839022732022,
+      0.9333350025037557
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0024054982817869417,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0009843373691936978,
+      0.010014784618255414
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.7427272727272727,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.1555000000007567,
+     "ci95_attacker_bootstrap": [
+      0.7233085143103697,
+      0.7596052390394019
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.01967799642218247,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 3.885999999998603,
+     "ci95_attacker_bootstrap": [
+      0.017360955266307602,
+      0.02130792720464685
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.018399428367274026,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 6.816500000000815,
+     "ci95_attacker_bootstrap": [
+      0.013966608116209445,
+      0.030248418358371575
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.018137674950014282,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 4.460999999999331,
+     "ci95_attacker_bootstrap": [
+      0.011622084688855587,
+      0.02778141361256544
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9893456375838926,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9777660293406616,
+      0.993650819019869
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.7899491812535291,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025875000001178705,
+     "ci95_attacker_bootstrap": [
+      0.7815103454273431,
+      0.7978801006966805
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.008384146341463415,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 3.4579999999987194,
+     "ci95_attacker_bootstrap": [
+      0.003259108963842081,
+      0.015185111614027559
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.09263443289652055,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.8560000000015862,
+     "ci95_attacker_bootstrap": [
+      0.07320960108919748,
+      0.10404638358830388
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.34856898761213156,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.30405574188116863,
+      0.379432298967084
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.26482595616673826,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.2722499999999854,
+     "ci95_attacker_bootstrap": [
+      0.2155399350182548,
+      0.291876016596655
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.yaw_consistency": {
+    "01_ConstPos": {
+     "msg_detection": 0.007947976878612716,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 103.8179999999993,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.02551238072020617
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.006517690875232775,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 33.89899999999761,
+     "ci95_attacker_bootstrap": [
+      0.0015920819556986964,
+      0.010321481438191053
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.005485574969524584,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 63.90299999999843,
+     "ci95_attacker_bootstrap": [
+      0.0009216060172678637,
+      0.00870195794053662
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.004214963119072708,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 33.89899999999761,
+     "ci95_attacker_bootstrap": [
+      0.0014872655131677476,
+      0.010080290294062948
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.018147086914995225,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 10.52100000000246,
+     "ci95_attacker_bootstrap": [
+      0.006879671812659175,
+      0.029630025808204292
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.01695568400770713,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 18.233000000000175,
+     "ci95_attacker_bootstrap": [
+      0.004238193419494193,
+      0.03164592785991083
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.004744020557422415,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 71.90299999999843,
+     "ci95_attacker_bootstrap": [
+      0.0005831992188625613,
+      0.007753370167221189
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.004471964224286206,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 18.92450000000099,
+     "ci95_attacker_bootstrap": [
+      0.0012124302358361865,
+      0.01228163723475583
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.14681818181818182,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.3524999999997362,
+     "ci95_attacker_bootstrap": [
+      0.12287647201719527,
+      0.1648482469381616
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.010912343470483005,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 2.3335000000006403,
+     "ci95_attacker_bootstrap": [
+      0.007669659910017408,
+      0.02175491206671395
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.017327617006073597,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 16.516999999999825,
+     "ci95_attacker_bootstrap": [
+      0.0072171217725992155,
+      0.0378983872357061
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.02542130819765781,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 3.104000000000269,
+     "ci95_attacker_bootstrap": [
+      0.009906474782450755,
+      0.05276420829794989
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.05394295302013423,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.0499999999992724,
+     "ci95_attacker_bootstrap": [
+      0.024860597652713142,
+      0.10965575065936574
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.1541501976284585,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.3356249999992542,
+     "ci95_attacker_bootstrap": [
+      0.1438546899554319,
+      0.16343131854828946
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.010670731707317074,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 0.5344999999997526,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.026872541624674
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.04631721644826028,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.5950000000011642,
+     "ci95_attacker_bootstrap": [
+      0.03566300151689457,
+      0.06334473447571592
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.0017086715079026058,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 10.94050000000243,
+     "ci95_attacker_bootstrap": [
+      0.00046957166777567526,
+      0.0031056829104154997
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.08659217877094973,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.896250000000691,
+     "ci95_attacker_bootstrap": [
+      0.07064845550445004,
+      0.09452741685735112
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.overlap": {
+    "01_ConstPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.0,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.0,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.0,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.0,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.0003175813008130081,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 2.730999999999767,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.00048177061444902586
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.00010679196924391286,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 117.45000000000005,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.00042714899572027253
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.33970777825526427,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6165000000019063,
+     "ci95_attacker_bootstrap": [
+      0.3048937734993631,
+      0.35328329821103055
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.769,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.737,
+      0.804
+     ]
+    }
+   },
+   "v2x.field_ranges@physical": {
+    "01_ConstPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.0,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.0,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 8.389261744966443e-05,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.848999999998341,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.00029106851399539113
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.0,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.speed_change@physical": {
+    "01_ConstPos": {
+     "msg_detection": 0.000361271676300578,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 35.70300000000134,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.001464494198964555
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.0002031694433157253,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 35.909999999999854,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0008066072669122176
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0007707129094412332,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 35.8065000000006,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.001841658111791567
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.8904921921328326,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.8775864623428723,
+      0.897918491448186
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.6790505675954592,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.1540000000004511,
+     "ci95_attacker_bootstrap": [
+      0.6274468918710795,
+      0.6993026424018458
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.002061855670103093,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0008093463573741217,
+      0.008267432077992772
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.6386363636363637,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.1555000000007567,
+     "ci95_attacker_bootstrap": [
+      0.604985315915608,
+      0.6633623619029213
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0017889087656529517,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 28.4479999999985,
+     "ci95_attacker_bootstrap": [
+      0.000814655658531084,
+      0.002472206991286206
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0017863522686673813,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 37.41849999999977,
+     "ci95_attacker_bootstrap": [
+      0.0008135538085495841,
+      0.004470623492786423
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.0014281633818908884,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 10.959999999999127,
+     "ci95_attacker_bootstrap": [
+      0.0005859647409372146,
+      0.002602404652440435
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9663590604026846,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.949916815988102,
+      0.9725152686185228
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.7494353472614342,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.026125000000320142,
+     "ci95_attacker_bootstrap": [
+      0.7366660649819495,
+      0.7600408441116405
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.00038109756097560977,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 35.70300000000134,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0017385445471203998
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.027338454586534118,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 3.308000000000902,
+     "ci95_attacker_bootstrap": [
+      0.020374537688393,
+      0.03296750992063492
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.12313114053823153,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.1110698570117611,
+      0.13658394860453288
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.0878813923506661,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.503499999998894,
+     "ci95_attacker_bootstrap": [
+      0.06997715656150143,
+      0.09663836990522509
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.implied_speed@physical": {
+    "01_ConstPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.9953271028037384,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.9901718200639538,
+      0.9970425198507497
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9891991570073762,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9773504945018684,
+      0.9955391153771599
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9259090909090909,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9059849927709503,
+      0.9367706278108449
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.006082289803220036,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 5.968500000000859,
+     "ci95_attacker_bootstrap": [
+      0.0035213165510508504,
+      0.011498884074469473
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.005001786352268668,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 16.27599999999802,
+     "ci95_attacker_bootstrap": [
+      0.001964505672237604,
+      0.015635808380474736
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.000856898029134533,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 9.199999999999818,
+     "ci95_attacker_bootstrap": [
+      0.00023259559969013332,
+      0.0027040980013007224
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9957214765100671,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9877493713947406,
+      0.9984607850000168
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9367588932806324,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9227173304760865,
+      0.9498267711269098
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.07207410754631721,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.4724999999998545,
+     "ci95_attacker_bootstrap": [
+      0.06329528113808237,
+      0.08263039431299782
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.45311832550192227,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.40153688580554764,
+      0.4879224413915146
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.3707563386334336,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.7824999999993452,
+     "ci95_attacker_bootstrap": [
+      0.30508759037323974,
+      0.3966661158572374
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "v2x.heading_rate@physical": {
+    "01_ConstPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.0,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.11181818181818182,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.1075000000018917,
+     "ci95_attacker_bootstrap": [
+      0.09045894183231389,
+      0.13013982604260707
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0007155635062611807,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 185.73300000000017,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0008884666927461107
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0010718113612004287,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 11.682000000000698,
+     "ci95_attacker_bootstrap": [
+      0.0004992678889737713,
+      0.0022130796460176983
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.0012853470437017994,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.4860000000007858,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.004975850522201336
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.0003355704697986577,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 1.4860000000007858,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0012497815074949496
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.11956521739130435,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.5124999999999318,
+     "ci95_attacker_bootstrap": [
+      0.11327350425062635,
+      0.1252136051017979
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.005648441030275644,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 19.224500000000262,
+     "ci95_attacker_bootstrap": [
+      0.003990108230695991,
+      0.00834761848370891
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.0,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.010098839707778254,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 5.451999999997497,
+     "ci95_attacker_bootstrap": [
+      0.007500997244246741,
+      0.011610898958101905
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "L2_physical_union": {
+    "01_ConstPos": {
+     "msg_detection": 0.000361271676300578,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 35.70300000000134,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0016220311220311217
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.9953271028037384,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.9895896447046434,
+      0.9971215509150895
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9891991570073762,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9760129243280016,
+      0.9956026946086636
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.0,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0007707129094412332,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 35.8065000000006,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0018136602266553088
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.8904921921328326,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.8778660794598447,
+      0.898174528428554
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.6790505675954592,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.1540000000004511,
+     "ci95_attacker_bootstrap": [
+      0.6249245674172293,
+      0.6990043713058897
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.002061855670103093,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.000778391862870351,
+      0.009910818287711115
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9313636363636364,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9117908708992888,
+      0.942806966915823
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0064400715563506265,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 8.72899999999936,
+     "ci95_attacker_bootstrap": [
+      0.004341001880122422,
+      0.010832879178002231
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0057163272597356195,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 9.473000000001775,
+     "ci95_attacker_bootstrap": [
+      0.0025415489002496936,
+      0.01619507024193104
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.003427592116538132,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 4.958999999998923,
+     "ci95_attacker_bootstrap": [
+      0.001182772206628313,
+      0.00871585371240595
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9958892617449664,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9866069433635428,
+      0.9987482062868381
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9432523997741389,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9294433439498693,
+      0.9544743358475379
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.00038109756097560977,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 35.70300000000134,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0017104006749140259
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.07614098508811568,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.4724999999998545,
+     "ci95_attacker_bootstrap": [
+      0.06704108324689473,
+      0.08666185207840217
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.4533319094404101,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.3982903875053049,
+      0.4854906026647843
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.3715083798882682,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.7824999999993452,
+     "ci95_attacker_bootstrap": [
+      0.30551397205588826,
+      0.39787362194500936
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    }
+   },
+   "L2_union": {
+    "01_ConstPos": {
+     "msg_detection": 0.09971098265895954,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.005499999998733,
+     "ci95_attacker_bootstrap": [
+      0.04859028063426458,
+      0.22856229654340898
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.007262569832402235,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 40.31550000000061,
+     "ci95_attacker_bootstrap": [
+      0.0034930700588570343,
+      0.010201531995100028
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.995530272247054,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.9898966607825832,
+      0.997412080782385
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9944678609062171,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9889339097710677,
+      0.9966232567006406
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.4250238777459408,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.206000000000131,
+     "ci95_attacker_bootstrap": [
+      0.14607571461229832,
+      0.6628511274218627
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.12408477842003854,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.705999999998653,
+     "ci95_attacker_bootstrap": [
+      0.06412405866437447,
+      0.20078797212981905
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.9756868946432101,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9668188233859775,
+      0.978984315768472
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.8930168558651531,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10300000000097498,
+     "ci95_attacker_bootstrap": [
+      0.8812779420340267,
+      0.8987983779613119
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0024054982817869417,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0009500027323774753,
+      0.011237770234702581
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9436363636363636,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9297024197360387,
+      0.9510380157758161
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.03631484794275492,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.4174999999995634,
+     "ci95_attacker_bootstrap": [
+      0.02520240380884579,
+      0.07126084536039158
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.036084315827081104,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.5134999999991123,
+     "ci95_attacker_bootstrap": [
+      0.02251242055263664,
+      0.071054932396642
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.018994572979148815,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 4.370999999999185,
+     "ci95_attacker_bootstrap": [
+      0.007699693669391096,
+      0.042261673010430885
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9959731543624161,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9865202543604652,
+      0.9988747367309373
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9507340485601355,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9387888699247632,
+      0.9606872404531913
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.019817073170731708,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 4.958999999998923,
+     "ci95_attacker_bootstrap": [
+      0.007877819166418856,
+      0.03793446821761643
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.21780388612742882,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.2679999999982101,
+     "ci95_attacker_bootstrap": [
+      0.18368533782345095,
+      0.25977179118302024
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.4723408799658266,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.42493628044119336,
+      0.5064967653433838
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.6374086807047701,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6165000000019063,
+     "ci95_attacker_bootstrap": [
+      0.5502931889941363,
+      0.6663690670063156
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.769,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.735,
+      0.803
+     ]
+    }
+   },
+   "L1_union_at_operating_points": {
+    "01_ConstPos": {
+     "msg_detection": 0.005780346820809248,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 1.8989999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0005537930095663039,
+      0.017627282652719806
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.011918063314711359,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 27.272000000000844,
+     "ci95_attacker_bootstrap": [
+      0.0005161307474170414,
+      0.051147893360065456
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.014831369362047948,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 14.521500000000742,
+     "ci95_attacker_bootstrap": [
+      0.0003236993438072129,
+      0.05927129428900142
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.01685985247629083,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 2.1489999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0006798679549351237,
+      0.0698811831200576
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.004138809296402419,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 29.892500000001178,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.012219303473083537
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.006551059730250481,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 1.7100000000002638,
+     "ci95_attacker_bootstrap": [
+      0.0005982359868701296,
+      0.016233618724320636
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.0027673453251630758,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 1.4600000000003774,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.01201744804794712
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.020983832129342964,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 2.1489999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.08299153865865493
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.003436426116838488,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 5.4500000000000455,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.020899735758013425
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.007727272727272728,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 1.7100000000002638,
+     "ci95_attacker_bootstrap": [
+      0.0008471392999632155,
+      0.018542796719617716
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.00017889087656529517,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 152.15000000000146,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0005800671992035648
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0003572704537334762,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 30.854500000001053,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.001210788706322979
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.056555269922879174,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.837499999999636,
+     "ci95_attacker_bootstrap": [
+      0.04638656005998063,
+      0.07689460462346845
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9425335570469798,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9175805519716405,
+      0.9552008610990398
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9281479390175043,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9058542706958236,
+      0.9512619636660793
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.005716463414634146,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 1.6489999999998872,
+     "ci95_attacker_bootstrap": [
+      0.0003018484389267572,
+      0.017727237219601153
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.013782196113872571,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 27.272000000000844,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.058764694015440905
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.012921828278513455,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 32.667999999997846,
+     "ci95_attacker_bootstrap": [
+      0.00030243373689202614,
+      0.04665326839713044
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.013321873657069187,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 27.272000000000844,
+     "ci95_attacker_bootstrap": [
+      0.00034393410741213805,
+      0.07099730187184808
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 1.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "L1_and_L2_union": {
+    "01_ConstPos": {
+     "msg_detection": 0.10513005780346821,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.005499999998733,
+     "ci95_attacker_bootstrap": [
+      0.053943160447090584,
+      0.23789107308789129
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.019180633147113595,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 13.16700000000128,
+     "ci95_attacker_bootstrap": [
+      0.006271096982257894,
+      0.06196696372497045
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.995530272247054,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.9897185352212529,
+      0.9974141375958121
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9944678609062171,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9887896453920527,
+      0.9966568439384664
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.4291626870423432,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.206000000000131,
+     "ci95_attacker_bootstrap": [
+      0.17377439034982145,
+      0.6914802321418937
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.130635838150289,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.705999999998653,
+     "ci95_attacker_bootstrap": [
+      0.0712131402838849,
+      0.20883277385155288
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.9756868946432101,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9666796472625598,
+      0.9789557493748366
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.8947368421052632,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10300000000097498,
+     "ci95_attacker_bootstrap": [
+      0.8839669284900807,
+      0.9000175613502824
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.00584192439862543,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.001161708615650974,
+      0.029820406482125864
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.945,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9309666789320904,
+      0.9522686420174323
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.036493738819320214,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.4174999999995634,
+     "ci95_attacker_bootstrap": [
+      0.025480570270547336,
+      0.070467210488515
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.03644158628081458,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.5134999999991123,
+     "ci95_attacker_bootstrap": [
+      0.02447847955052793,
+      0.07274470446107842
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.07183661810911168,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 2.837499999999636,
+     "ci95_attacker_bootstrap": [
+      0.0532806054288944,
+      0.11008958274529568
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9981543624161073,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9959532802666712,
+      0.99908054874519
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.993365330321852,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9906508243231168,
+      0.9955767953322098
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.025152439024390245,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 4.558000000000902,
+     "ci95_attacker_bootstrap": [
+      0.009353466761699371,
+      0.04679401499719849
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.22571170356981474,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.2679999999982101,
+     "ci95_attacker_bootstrap": [
+      0.1860566079966832,
+      0.2863737402548013
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.4789619820589492,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.430256183947989,
+      0.515596079609866
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.6414911903738719,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6165000000019063,
+     "ci95_attacker_bootstrap": [
+      0.5645462395724714,
+      0.6710610955891939
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 1.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "combined_L1": {
+    "01_ConstPos": {
+     "msg_detection": 0.004696531791907515,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 76.97350000000006,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.015241805483817358
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.0111731843575419,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 58.63600000000224,
+     "ci95_attacker_bootstrap": [
+      0.001021774286999052,
+      0.044427767208112263
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.011783827712312069,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 42.190999999998894,
+     "ci95_attacker_bootstrap": [
+      0.0008783101972587897,
+      0.049261474639590325
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.015015806111696523,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 27.272000000000844,
+     "ci95_attacker_bootstrap": [
+      0.0009168123119196443,
+      0.06365005568770243
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.004775549188156638,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 8.979999999999563,
+     "ci95_attacker_bootstrap": [
+      0.0015230098212452988,
+      0.008697487891325528
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.0697495183044316,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 13.853500000001077,
+     "ci95_attacker_bootstrap": [
+      0.0023142088423502034,
+      0.2146886825345508
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.03656849179679779,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 9.808000000000902,
+     "ci95_attacker_bootstrap": [
+      0.02001763889844204,
+      0.08209208990869667
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.05779153766769866,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 7.741500000000087,
+     "ci95_attacker_bootstrap": [
+      0.013357951502330163,
+      0.19203284532323958
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.0,
+     "median_delay_s": null,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.013181818181818182,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 3.981999999999971,
+     "ci95_attacker_bootstrap": [
+      0.002436190486292313,
+      0.02544446620088885
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.00017889087656529517,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 152.15000000000146,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.0005910999757621742
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.0023222579492675954,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.5,
+     "median_delay_s": 13.759000000001834,
+     "ci95_attacker_bootstrap": [
+      0.0011061641324011148,
+      0.003104240509176098
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.05469865752642102,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.4109999999991487,
+     "ci95_attacker_bootstrap": [
+      0.026816434074657603,
+      0.14575560957581518
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9441275167785235,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9192892957540204,
+      0.9563842587394285
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9281479390175043,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9056560510953717,
+      0.9520917913105412
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.0064786585365853655,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 2.6074999999982538,
+     "ci95_attacker_bootstrap": [
+      0.0006471764563650382,
+      0.015532568627979094
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.030727519204699502,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.4,
+     "median_delay_s": 22.34350000000086,
+     "ci95_attacker_bootstrap": [
+      0.00042411936038783333,
+      0.09590821305967273
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.04282357966680905,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 4.317000000002736,
+     "ci95_attacker_bootstrap": [
+      0.018074730033184695,
+      0.08963111602422377
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.016974645466265578,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 6.169750000000931,
+     "ci95_attacker_bootstrap": [
+      0.005458232876131895,
+      0.06049558657137665
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 1.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "combined_L2": {
+    "01_ConstPos": {
+     "msg_detection": 0.1936416184971098,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.9784999999992579,
+     "ci95_attacker_bootstrap": [
+      0.09928797163193517,
+      0.42239081053082156
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.012476722532588455,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 10.53900000000067,
+     "ci95_attacker_bootstrap": [
+      0.008063169814857572,
+      0.022033462501880756
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.9819179195449005,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.14949999999953434,
+     "ci95_attacker_bootstrap": [
+      0.9748662332815404,
+      0.9890410139591005
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9860379346680717,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.1555000000007567,
+     "ci95_attacker_bootstrap": [
+      0.9755525646304051,
+      0.9905802356502096
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.6625278573702642,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.8775000000005093,
+     "ci95_attacker_bootstrap": [
+      0.4821219723714657,
+      0.8162549789606546
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.4238921001926782,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.3035000000004402,
+     "ci95_attacker_bootstrap": [
+      0.3010341892451789,
+      0.5424675252783134
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.9808262502470844,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.14949999999953434,
+     "ci95_attacker_bootstrap": [
+      0.9593669505602257,
+      0.9872689400855567
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.9504643962848297,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10300000000097498,
+     "ci95_attacker_bootstrap": [
+      0.9233186429141228,
+      0.9618071207754458
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0024054982817869417,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.000984365146481,
+      0.010666768292682927
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9295454545454546,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9177994050311669,
+      0.9363589693101114
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.06923076923076923,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.1479999999992287,
+     "ci95_attacker_bootstrap": [
+      0.05534408788736231,
+      0.10321626284782476
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.13040371561271882,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.2704999999997426,
+     "ci95_attacker_bootstrap": [
+      0.09187742452620877,
+      0.25803065383595003
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.009568694658668952,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 11.364500000001499,
+     "ci95_attacker_bootstrap": [
+      0.006733523259362567,
+      0.013907226262419336
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9958892617449664,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9853717556185564,
+      0.998798607850859
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9339356295878035,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9212750991204075,
+      0.9450625659835955
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.01721290650406504,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 5.7995000000009895,
+     "ci95_attacker_bootstrap": [
+      0.011974673109617476,
+      0.02238411701928098
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.24582015363759602,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.4665000000004511,
+     "ci95_attacker_bootstrap": [
+      0.21029419083592388,
+      0.2894079152026618
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.4721272960273387,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.41908584393968845,
+      0.503456818721647
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.6177481736140954,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6165000000019063,
+     "ci95_attacker_bootstrap": [
+      0.5352063609531174,
+      0.6458384040333798
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.769,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.734,
+      0.803
+     ]
+    }
+   },
+   "combined_L1+L2": {
+    "01_ConstPos": {
+     "msg_detection": 0.09645953757225434,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.257499999999709,
+     "ci95_attacker_bootstrap": [
+      0.04636301874815281,
+      0.22639958985824427
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.013221601489757914,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 44.56800000000112,
+     "ci95_attacker_bootstrap": [
+      0.00425628541764017,
+      0.04198485405730714
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.995530272247054,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.9899475488039274,
+      0.9973943527428192
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9949947312961012,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10300000000097498,
+     "ci95_attacker_bootstrap": [
+      0.9891221519482482,
+      0.997232901416136
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.39414199299586117,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.206000000000131,
+     "ci95_attacker_bootstrap": [
+      0.13157297103470256,
+      0.6382481765773407
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.17764932562620425,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.705999999998653,
+     "ci95_attacker_bootstrap": [
+      0.08672007968911408,
+      0.3201543361640556
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.9723265467483693,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9630136533902752,
+      0.9755204770363609
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.8833849329205367,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10249999999905413,
+     "ci95_attacker_bootstrap": [
+      0.8713015137026837,
+      0.8955569843671205
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0024054982817869417,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0010077915788397579,
+      0.010380622837370242
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9427272727272727,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9276382372525172,
+      0.9508723188072471
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.03363148479427549,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.5560000000004948,
+     "ci95_attacker_bootstrap": [
+      0.022669939195958957,
+      0.0681913625455792
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.03411932833154698,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.5134999999991123,
+     "ci95_attacker_bootstrap": [
+      0.02262609372810305,
+      0.06664984718951433
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.033990288489003144,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 3.4899999999979627,
+     "ci95_attacker_bootstrap": [
+      0.021925643705554814,
+      0.05723493377379247
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9983221476510067,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9963007489610449,
+      0.9992066205636595
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.993365330321852,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.99073854034643,
+      0.995602838132507
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.017276422764227643,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 4.758499999999913,
+     "ci95_attacker_bootstrap": [
+      0.00628724411974652,
+      0.03551968955758064
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.21283325802078626,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.2679999999982101,
+     "ci95_attacker_bootstrap": [
+      0.17609746328086157,
+      0.2641895001250673
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.48344724476719353,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.4318075066634341,
+      0.5183028117773864
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.6411688869789428,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6165000000019063,
+     "ci95_attacker_bootstrap": [
+      0.5611757451782583,
+      0.6692371651406828
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 1.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "combined_all": {
+    "01_ConstPos": {
+     "msg_detection": 0.09645953757225434,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.257499999999709,
+     "ci95_attacker_bootstrap": [
+      0.045809206799027676,
+      0.21779282041674064
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.013221601489757914,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 44.56800000000112,
+     "ci95_attacker_bootstrap": [
+      0.004470955806166376,
+      0.03853964794365379
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.995530272247054,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10349999999925785,
+     "ci95_attacker_bootstrap": [
+      0.9901253425218044,
+      0.9972925571489423
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9949947312961012,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10300000000097498,
+     "ci95_attacker_bootstrap": [
+      0.9896563609867624,
+      0.9973746227721552
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.39414199299586117,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.206000000000131,
+     "ci95_attacker_bootstrap": [
+      0.1412373761409063,
+      0.6281839991123443
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.17764932562620425,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.705999999998653,
+     "ci95_attacker_bootstrap": [
+      0.0922097885256051,
+      0.3415029074210784
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.9723265467483693,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9625199356601591,
+      0.9755268396200715
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.8833849329205367,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10249999999905413,
+     "ci95_attacker_bootstrap": [
+      0.8715530616683463,
+      0.8951962084899924
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.0024054982817869417,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.7,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0010161743877735874,
+      0.010183447617522982
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9427272727272727,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9276100199503958,
+      0.9506598322986233
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.03363148479427549,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.5560000000004948,
+     "ci95_attacker_bootstrap": [
+      0.022844082165407793,
+      0.06990078086449304
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.03411932833154698,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.5134999999991123,
+     "ci95_attacker_bootstrap": [
+      0.022162268113334344,
+      0.06915843986346293
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.033990288489003144,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 3.4899999999979627,
+     "ci95_attacker_bootstrap": [
+      0.021930950231147446,
+      0.060121178867494365
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.9983221476510067,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.02599999999983993,
+     "ci95_attacker_bootstrap": [
+      0.9961032577544954,
+      0.999130051434245
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.993365330321852,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.9907267095988147,
+      0.995597267257561
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.017276422764227643,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 4.758499999999913,
+     "ci95_attacker_bootstrap": [
+      0.006260174790321201,
+      0.03535536316877779
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.21283325802078626,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.2679999999982101,
+     "ci95_attacker_bootstrap": [
+      0.17871337207436794,
+      0.26074696040025386
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.48344724476719353,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.9250000000007503,
+     "ci95_attacker_bootstrap": [
+      0.43131913448147724,
+      0.5181499719959476
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.6411688869789428,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6165000000019063,
+     "ci95_attacker_bootstrap": [
+      0.5563292922752237,
+      0.670481034189514
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 1.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      1.0,
+      1.0
+     ]
+    }
+   },
+   "v2x.map_road": {
+    "01_ConstPos": {
+     "msg_detection": 0.052745664739884394,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.2398526289754106
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.3754189944134078,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.2608714565456093,
+      0.5340656139449853
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.4709467696058513,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.4583046630128821,
+      0.4898548918067622
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.4430979978925184,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.20499999999992724,
+     "ci95_attacker_bootstrap": [
+      0.4133422467065769,
+      0.5001918390411609
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.14071951607768227,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.38566808332094804
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.17726396917148363,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.005768501837685023,
+      0.405822263712047
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.0709626408381103,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.3003634788992318
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.12968696250429995,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.4120760567097547
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.028178694158075602,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.20190855862640242
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.008636363636363636,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 23.592499999998836,
+     "ci95_attacker_bootstrap": [
+      0.0053186102252308996,
+      0.014275559948893478
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.0815742397137746,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 0.2,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.32923652300411893
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.07127545551982852,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 0.3,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0018865619727633273,
+      0.2983539911518231
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.007997714938588975,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.04200184072126221
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.45796979865771814,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.012500000000045475,
+     "ci95_attacker_bootstrap": [
+      0.4488428529043181,
+      0.4705639481136024
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.05858272162619989,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.2124999999996362,
+     "ci95_attacker_bootstrap": [
+      0.05253883800813962,
+      0.06276945471767763
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.03315548780487805,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.1,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0,
+      0.13737341484879123
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.22074107546317218,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 5.346499999999651,
+     "ci95_attacker_bootstrap": [
+      0.14808331933870728,
+      0.26643569053491584
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.45301153353267837,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.44158769403829495,
+      0.4611777324581096
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.004727116458960034,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 0.6,
+     "median_delay_s": 15.659499999999753,
+     "ci95_attacker_bootstrap": [
+      0.0026939026332870393,
+      0.005887765020454365
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 0.119,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 19993.440499999997,
+     "ci95_attacker_bootstrap": [
+      0.096,
+      0.143
+     ]
+    }
+   },
+   "L1_and_L2_union_OR_v2x.map_road": {
+    "01_ConstPos": {
+     "msg_detection": 0.15570809248554912,
+     "n_msgs": 2768,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.005499999998733,
+     "ci95_attacker_bootstrap": [
+      0.06577433819556996,
+      0.36932189716902103
+     ]
+    },
+    "02_ConstPosOffset": {
+     "msg_detection": 0.3851024208566108,
+     "n_msgs": 5370,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.27363200298033197,
+      0.5734667586134194
+     ]
+    },
+    "03_RandomPos": {
+     "msg_detection": 0.9975619666802112,
+     "n_msgs": 4922,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.9946069618485115,
+      0.9985185185185185
+     ]
+    },
+    "04_RandomPosOffset": {
+     "msg_detection": 0.9971022128556375,
+     "n_msgs": 3796,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10250000000087311,
+     "ci95_attacker_bootstrap": [
+      0.9928696843736522,
+      0.998844664574728
+     ]
+    },
+    "05_ConstSpeed": {
+     "msg_detection": 0.5590576249602037,
+     "n_msgs": 3141,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.558500000000322,
+     "ci95_attacker_bootstrap": [
+      0.3160071440531339,
+      0.741872846938079
+     ]
+    },
+    "06_ConstSpeedOffset": {
+     "msg_detection": 0.29672447013487474,
+     "n_msgs": 2595,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.3035000000004402,
+     "ci95_attacker_bootstrap": [
+      0.1358870737419318,
+      0.4863754869507973
+     ]
+    },
+    "07_RandomSpeed": {
+     "msg_detection": 0.9776635698754694,
+     "n_msgs": 5059,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9686758157222265,
+      0.9829749636043215
+     ]
+    },
+    "08_RandomSpeedOffset": {
+     "msg_detection": 0.9084967320261438,
+     "n_msgs": 2907,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10300000000097498,
+     "ci95_attacker_bootstrap": [
+      0.8881563782150262,
+      0.9355124048469927
+     ]
+    },
+    "09_EventualStop": {
+     "msg_detection": 0.03402061855670103,
+     "n_msgs": 2910,
+     "n_attackers": 10,
+     "sender_detected": 0.8,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.0014128776103683577,
+      0.2123911031923376
+     ]
+    },
+    "10_Disruptive": {
+     "msg_detection": 0.9454545454545454,
+     "n_msgs": 2200,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10350000000107684,
+     "ci95_attacker_bootstrap": [
+      0.9332368585732166,
+      0.9524941341368417
+     ]
+    },
+    "11_DataReplay": {
+     "msg_detection": 0.11627906976744186,
+     "n_msgs": 5590,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.753500000000713,
+     "ci95_attacker_bootstrap": [
+      0.033886747224607355,
+      0.4056255184227187
+     ]
+    },
+    "12_DelayedMessages": {
+     "msg_detection": 0.10575205430510896,
+     "n_msgs": 5598,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6219999999993888,
+     "ci95_attacker_bootstrap": [
+      0.029840183206729685,
+      0.3043786826394037
+     ]
+    },
+    "13_DoS": {
+     "msg_detection": 0.07954870037132247,
+     "n_msgs": 7002,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 1.6759999999976571,
+     "ci95_attacker_bootstrap": [
+      0.056456098571786205,
+      0.12821491810535635
+     ]
+    },
+    "14_DoSRandom": {
+     "msg_detection": 0.998993288590604,
+     "n_msgs": 11920,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.012500000000045475,
+     "ci95_attacker_bootstrap": [
+      0.9969040029774356,
+      0.999716785074827
+     ]
+    },
+    "15_DoSDisruptive": {
+     "msg_detection": 0.9937888198757764,
+     "n_msgs": 7084,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.025874999999359716,
+     "ci95_attacker_bootstrap": [
+      0.991365804828541,
+      0.9959194713556533
+     ]
+    },
+    "16_GridSybil": {
+     "msg_detection": 0.05748221544715447,
+     "n_msgs": 15744,
+     "n_attackers": 10,
+     "sender_detected": 0.9,
+     "median_delay_s": 1.6489999999998872,
+     "ci95_attacker_bootstrap": [
+      0.012332654369566712,
+      0.1672353103107222
+     ]
+    },
+    "17_DataReplaySybil": {
+     "msg_detection": 0.40894713059195664,
+     "n_msgs": 4426,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.10299999999915599,
+     "ci95_attacker_bootstrap": [
+      0.3671471228914273,
+      0.43629546777950307
+     ]
+    },
+    "18_DoSRandomSybil": {
+     "msg_detection": 0.717001281503631,
+     "n_msgs": 9364,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      0.6834286795164959,
+      0.7375494535157923
+     ]
+    },
+    "19_DoSDisruptiveSybil": {
+     "msg_detection": 0.6439621830683283,
+     "n_msgs": 9308,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.6165000000019063,
+     "ci95_attacker_bootstrap": [
+      0.5530607833717354,
+      0.6721752461875653
+     ]
+    },
+    "S20_StaleReplay": {
+     "msg_detection": 1.0,
+     "n_msgs": 1000,
+     "n_attackers": 10,
+     "sender_detected": 1.0,
+     "median_delay_s": 0.0,
+     "ci95_attacker_bootstrap": [
+      1.0,
+      1.0
+     ]
+    }
+   }
+  },
+  "soft_layers": {
+   "v2x.map_road": {
+    "val_FA_budget_op": 0.009797372522823424,
+    "threshold_raw_equivalent": 9.965849625926003
+   }
+  },
+  "sender_ge3_alarms": {
+   "L2_union": {
+    "false_alarm_genuine_senders": 0.24444444444444444,
+    "by_class": {
+     "01_ConstPos": 1.0,
+     "02_ConstPosOffset": 0.5,
+     "03_RandomPos": 1.0,
+     "04_RandomPosOffset": 1.0,
+     "05_ConstSpeed": 1.0,
+     "06_ConstSpeedOffset": 1.0,
+     "07_RandomSpeed": 1.0,
+     "08_RandomSpeedOffset": 1.0,
+     "09_EventualStop": 0.0,
+     "10_Disruptive": 1.0,
+     "11_DataReplay": 0.9,
+     "12_DelayedMessages": 0.9,
+     "13_DoS": 0.5,
+     "14_DoSRandom": 1.0,
+     "15_DoSDisruptive": 1.0,
+     "16_GridSybil": 0.9,
+     "17_DataReplaySybil": 1.0,
+     "18_DoSRandomSybil": 1.0,
+     "19_DoSDisruptiveSybil": 1.0,
+     "S20_StaleReplay": 1.0
+    }
+   },
+   "L1_and_L2_union": {
+    "false_alarm_genuine_senders": 0.3111111111111111,
+    "by_class": {
+     "01_ConstPos": 1.0,
+     "02_ConstPosOffset": 0.6,
+     "03_RandomPos": 1.0,
+     "04_RandomPosOffset": 1.0,
+     "05_ConstSpeed": 1.0,
+     "06_ConstSpeedOffset": 1.0,
+     "07_RandomSpeed": 1.0,
+     "08_RandomSpeedOffset": 1.0,
+     "09_EventualStop": 0.1,
+     "10_Disruptive": 1.0,
+     "11_DataReplay": 0.9,
+     "12_DelayedMessages": 1.0,
+     "13_DoS": 1.0,
+     "14_DoSRandom": 1.0,
+     "15_DoSDisruptive": 1.0,
+     "16_GridSybil": 0.9,
+     "17_DataReplaySybil": 1.0,
+     "18_DoSRandomSybil": 1.0,
+     "19_DoSDisruptiveSybil": 1.0,
+     "S20_StaleReplay": 1.0
+    }
+   },
+   "combined_all": {
+    "false_alarm_genuine_senders": 0.17777777777777778,
+    "by_class": {
+     "01_ConstPos": 1.0,
+     "02_ConstPosOffset": 0.5,
+     "03_RandomPos": 1.0,
+     "04_RandomPosOffset": 1.0,
+     "05_ConstSpeed": 1.0,
+     "06_ConstSpeedOffset": 1.0,
+     "07_RandomSpeed": 1.0,
+     "08_RandomSpeedOffset": 1.0,
+     "09_EventualStop": 0.0,
+     "10_Disruptive": 1.0,
+     "11_DataReplay": 0.9,
+     "12_DelayedMessages": 0.9,
+     "13_DoS": 1.0,
+     "14_DoSRandom": 1.0,
+     "15_DoSDisruptive": 1.0,
+     "16_GridSybil": 0.8,
+     "17_DataReplaySybil": 1.0,
+     "18_DoSRandomSybil": 1.0,
+     "19_DoSDisruptiveSybil": 1.0,
+     "S20_StaleReplay": 1.0
+    }
+   }
+  },
+  "harness_method": "max",
+  "harness_selection": {
+   "noisy_or": 0.4635332976322194,
+   "logistic": 0.4785049111868184,
+   "max": 0.4933274072529084
+  },
+  "map_road_threshold_note": "distance (m) to the nearest drivable OSM way, threshold = raw equivalent above"
+ }
+}

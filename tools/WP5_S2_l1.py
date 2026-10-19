@@ -30,6 +30,14 @@ BUDGET = 0.01
 HELDOUT = [6, 12, 17]
 SUPP = "S20_StaleReplay"
 LAYERS = ["v2x.beacon_rate", "v2x.freshness", "v2x.field_ranges"]
+# Tampa data configuration (WP5 S1b): default = deduplicated passages + time-block split v2. The S2 record (v1 data, split by
+# coreData_id) is reproduced by tools/WP5_S1b_rerun.py --legacy, which overrides these three names.
+TAMPA_SPLIT_FILE = "splits_tampa_v2.json"
+TAMPA_NAME = "s2_tampa_v2"
+
+
+def tampa_loader():
+    return adapters.load_tampa(with_age=True)
 
 
 def aname(a):
@@ -238,8 +246,8 @@ def stale_replay(df, vehicles, seed=SEED + 20000, per_att=100, frac=0.5, min_msg
 
 def run_tampa(summary, tables):
     log("Tampa: loading")
-    tp = adapters.load_tampa(with_age=True)
-    sp = json.loads((OUT / "splits_tampa.json").read_text())
+    tp = tampa_loader()
+    sp = json.loads((OUT / TAMPA_SPLIT_FILE).read_text())
     layers = l1.make_layers()
     byname = {l.name: l for l in layers}
     test_df = splitting.rows_of(tp, sp["test"])
@@ -292,7 +300,7 @@ def run_tampa(summary, tables):
     ES = lambda ev, m: EvalSet(ev, m["y"].to_numpy().astype(int), m["atype"].to_numpy(), m["sender"].to_numpy(), m["t"].to_numpy())
     log("harness Tampa; test messages", len(tmeta), "attack messages", int(yt.sum()))
     val_es, test_es = ES(ev_val, vmeta), ES(ev_test, tmeta)
-    res = evaluate_domain("s2_tampa", val_es, test_es, wp="WP5", budget=BUDGET, method="auto")
+    res = evaluate_domain(TAMPA_NAME, val_es, test_es, wp="WP5", budget=BUDGET, method="auto")
     alarms, _, th = prepare_alarms(res, val_es, test_es, byname, None, names)
     # physical operating point on the same messages: re-evaluate rules on the frames (message order = same)
     phys = {}
@@ -336,7 +344,7 @@ def run_tampa(summary, tables):
                            lambda d, c: "[" + ", ".join(fmt(x) for x in d["by_class"][c]["ci95_attacker_bootstrap"]) + "]", ""))
     fa_rows = "\n".join(f"| {k} | {fmt(d['false_alarm_messages'])} | [{', '.join(fmt(x) for x in d['false_alarm_ci95_vehicle_bootstrap'])}] | {fmt(d['false_alarm_genuine_senders'])} |" for k, d in pc.items())
     tables.append("**Tampa test, false alarms on genuine messages and vehicles**\n\n| operating point | genuine messages | 95% CI (vehicle bootstrap) | genuine vehicles with >= 1 alarm |\n|---|---|---|---|\n" + fa_rows + "\n")
-    tables.append(open(OUT / "s2_tampa.md").read())
+    tables.append(open(OUT / (TAMPA_NAME + ".md")).read())
     return res
 
 

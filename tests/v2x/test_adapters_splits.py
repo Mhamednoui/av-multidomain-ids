@@ -42,11 +42,11 @@ def test_tampa_adapter_synthetic_units():
     rows = []
     for i in range(5):
         r = dict(base, metadata_recordGeneratedAt="03/19/2021 05:14:5%d AM" % i,
-                 coreData_secMark=51000 + 100 * i)
+                 coreData_secMark=51000 + 100 * i, coreData_msgCnt=i)
         rows.append(r)
     rows.append(dict(rows[0]))                         # duplicate heard by a second RSU
     rows.append(dict(base, metadata_recordGeneratedAt="03/19/2021 05:20:00 AM", coreData_secMark=5000,
-                     coreData_speed=8191))             # unavailable speed -> dropped
+                     coreData_msgCnt=9, coreData_speed=8191))             # unavailable speed -> dropped
     with tempfile.TemporaryDirectory() as d:
         p = Path(d) / "t.csv"
         pd.DataFrame(rows).to_csv(p, index=False)
@@ -64,7 +64,10 @@ def test_tampa_real_file_if_present():
         return
     df = adapters.load_tampa()
     schema.validate(df)
-    assert df["sender"].nunique() > 200 and df["speed"].max() < 60
+    assert 30 <= df["sender"].nunique() <= 60 and len(df) < 20000 and df["speed"].max() < 60      # passages, deduplicated
+    old = adapters.load_tampa_v1()
+    schema.validate(old)
+    assert old["sender"].nunique() > 200 and len(old) > 30000                                  # legacy: ids per RSU
 
 
 def test_v2aix_stub_raises():

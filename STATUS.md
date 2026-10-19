@@ -11,7 +11,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S1 | IN PROGRESS | worker sonnet (medium) | 2026-10-19 | S0 APPROVED (D11 7.47 GB, 62 duplicate files) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
-| WP5 V2X | S1b | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S3 APPROVED partial. S1b = Tampa re-split (coreData_id is per RSU -> leakage) + rerun S2/S3 Tampa. S3b (acceptance range) still waits for receiver positions |
+| WP5 V2X | S1b | REVIEW | worker sonnet (medium) | 2026-10-20 | S1b PARTIAL: Tampa = 38 physical vehicles, 19,527 msgs; new split splits_tampa_v2.json; reruns done (heading_rate FA 2.7%). S3b still waits for receiver positions |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 

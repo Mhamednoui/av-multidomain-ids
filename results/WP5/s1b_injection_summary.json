@@ -1,0 +1,350 @@
+{
+ "train": {
+  "1": {
+   "name": "ConstPos",
+   "n_attackers": 10,
+   "n_labelled_attack": 9468,
+   "n_messages": 13200
+  },
+  "2": {
+   "name": "ConstPosOffset",
+   "n_attackers": 10,
+   "n_labelled_attack": 8464,
+   "n_messages": 13200
+  },
+  "3": {
+   "name": "RandomPos",
+   "n_attackers": 10,
+   "n_labelled_attack": 9069,
+   "n_messages": 13200
+  },
+  "4": {
+   "name": "RandomPosOffset",
+   "n_attackers": 10,
+   "n_labelled_attack": 7955,
+   "n_messages": 13200
+  },
+  "5": {
+   "name": "ConstSpeed",
+   "n_attackers": 10,
+   "n_labelled_attack": 3828,
+   "n_messages": 13200
+  },
+  "6": {
+   "name": "ConstSpeedOffset",
+   "n_attackers": 10,
+   "n_labelled_attack": 8882,
+   "n_messages": 13200
+  },
+  "7": {
+   "name": "RandomSpeed",
+   "n_attackers": 10,
+   "n_labelled_attack": 5014,
+   "n_messages": 13200
+  },
+  "8": {
+   "name": "RandomSpeedOffset",
+   "n_attackers": 10,
+   "n_labelled_attack": 4615,
+   "n_messages": 13200
+  },
+  "9": {
+   "name": "EventualStop",
+   "n_attackers": 10,
+   "n_labelled_attack": 2594,
+   "n_messages": 13200
+  },
+  "10": {
+   "name": "Disruptive",
+   "n_attackers": 10,
+   "n_labelled_attack": 3940,
+   "n_messages": 13200
+  },
+  "11": {
+   "name": "DataReplay",
+   "n_attackers": 10,
+   "n_labelled_attack": 8956,
+   "n_messages": 13200
+  },
+  "12": {
+   "name": "DelayedMessages",
+   "n_attackers": 10,
+   "n_labelled_attack": 4091,
+   "n_messages": 12976
+  },
+  "13": {
+   "name": "DoS",
+   "n_attackers": 10,
+   "n_labelled_attack": 7666,
+   "n_messages": 17033
+  },
+  "14": {
+   "name": "DoSRandom",
+   "n_attackers": 10,
+   "n_labelled_attack": 11872,
+   "n_messages": 22104
+  },
+  "15": {
+   "name": "DoSDisruptive",
+   "n_attackers": 10,
+   "n_labelled_attack": 15888,
+   "n_messages": 25116
+  },
+  "16": {
+   "name": "GridSybil",
+   "n_attackers": 10,
+   "n_labelled_attack": 20418,
+   "n_messages": 30215
+  },
+  "17": {
+   "name": "DataReplaySybil",
+   "n_attackers": 10,
+   "n_labelled_attack": 8270,
+   "n_messages": 13200
+  },
+  "18": {
+   "name": "DoSRandomSybil",
+   "n_attackers": 10,
+   "n_labelled_attack": 15664,
+   "n_messages": 21032
+  },
+  "19": {
+   "name": "DoSDisruptiveSybil",
+   "n_attackers": 10,
+   "n_labelled_attack": 21292,
+   "n_messages": 23846
+  }
+ },
+ "val": {
+  "1": {
+   "name": "ConstPos",
+   "n_attackers": 2,
+   "n_labelled_attack": 588,
+   "n_messages": 2094
+  },
+  "2": {
+   "name": "ConstPosOffset",
+   "n_attackers": 2,
+   "n_labelled_attack": 588,
+   "n_messages": 2094
+  },
+  "3": {
+   "name": "RandomPos",
+   "n_attackers": 2,
+   "n_labelled_attack": 588,
+   "n_messages": 2094
+  },
+  "4": {
+   "name": "RandomPosOffset",
+   "n_attackers": 2,
+   "n_labelled_attack": 1495,
+   "n_messages": 2094
+  },
+  "5": {
+   "name": "ConstSpeed",
+   "n_attackers": 2,
+   "n_labelled_attack": 649,
+   "n_messages": 2094
+  },
+  "6": {
+   "name": "ConstSpeedOffset",
+   "n_attackers": 2,
+   "n_labelled_attack": 1366,
+   "n_messages": 2094
+  },
+  "7": {
+   "name": "RandomSpeed",
+   "n_attackers": 2,
+   "n_labelled_attack": 588,
+   "n_messages": 2094
+  },
+  "8": {
+   "name": "RandomSpeedOffset",
+   "n_attackers": 2,
+   "n_labelled_attack": 717,
+   "n_messages": 2094
+  },
+  "9": {
+   "name": "EventualStop",
+   "n_attackers": 2,
+   "n_labelled_attack": 630,
+   "n_messages": 2094
+  },
+  "10": {
+   "name": "Disruptive",
+   "n_attackers": 2,
+   "n_labelled_attack": 717,
+   "n_messages": 2094
+  },
+  "11": {
+   "name": "DataReplay",
+   "n_attackers": 2,
+   "n_labelled_attack": 1434,
+   "n_messages": 2094
+  },
+  "12": {
+   "name": "DelayedMessages",
+   "n_attackers": 2,
+   "n_labelled_attack": 1455,
+   "n_messages": 2054
+  },
+  "13": {
+   "name": "DoS",
+   "n_attackers": 2,
+   "n_labelled_attack": 2868,
+   "n_messages": 3528
+  },
+  "14": {
+   "name": "DoSRandom",
+   "n_attackers": 2,
+   "n_labelled_attack": 5464,
+   "n_messages": 6192
+  },
+  "15": {
+   "name": "DoSDisruptive",
+   "n_attackers": 2,
+   "n_labelled_attack": 2352,
+   "n_messages": 3858
+  },
+  "16": {
+   "name": "GridSybil",
+   "n_attackers": 2,
+   "n_labelled_attack": 3528,
+   "n_messages": 5034
+  },
+  "17": {
+   "name": "DataReplaySybil",
+   "n_attackers": 2,
+   "n_labelled_attack": 649,
+   "n_messages": 2094
+  },
+  "18": {
+   "name": "DoSRandomSybil",
+   "n_attackers": 2,
+   "n_labelled_attack": 1298,
+   "n_messages": 2743
+  },
+  "19": {
+   "name": "DoSDisruptiveSybil",
+   "n_attackers": 2,
+   "n_labelled_attack": 1298,
+   "n_messages": 2743
+  }
+ },
+ "test": {
+  "1": {
+   "name": "ConstPos",
+   "n_attackers": 2,
+   "n_labelled_attack": 2458,
+   "n_messages": 4225
+  },
+  "2": {
+   "name": "ConstPosOffset",
+   "n_attackers": 2,
+   "n_labelled_attack": 2458,
+   "n_messages": 4225
+  },
+  "3": {
+   "name": "RandomPos",
+   "n_attackers": 2,
+   "n_labelled_attack": 2458,
+   "n_messages": 4225
+  },
+  "4": {
+   "name": "RandomPosOffset",
+   "n_attackers": 2,
+   "n_labelled_attack": 1767,
+   "n_messages": 4225
+  },
+  "5": {
+   "name": "ConstSpeed",
+   "n_attackers": 2,
+   "n_labelled_attack": 1732,
+   "n_messages": 4225
+  },
+  "6": {
+   "name": "ConstSpeedOffset",
+   "n_attackers": 2,
+   "n_labelled_attack": 2351,
+   "n_messages": 4225
+  },
+  "7": {
+   "name": "RandomSpeed",
+   "n_attackers": 2,
+   "n_labelled_attack": 2458,
+   "n_messages": 4225
+  },
+  "8": {
+   "name": "RandomSpeedOffset",
+   "n_attackers": 2,
+   "n_labelled_attack": 1874,
+   "n_messages": 4225
+  },
+  "9": {
+   "name": "EventualStop",
+   "n_attackers": 2,
+   "n_labelled_attack": 1124,
+   "n_messages": 4225
+  },
+  "10": {
+   "name": "Disruptive",
+   "n_attackers": 2,
+   "n_labelled_attack": 1874,
+   "n_messages": 4225
+  },
+  "11": {
+   "name": "DataReplay",
+   "n_attackers": 2,
+   "n_labelled_attack": 2493,
+   "n_messages": 4225
+  },
+  "12": {
+   "name": "DelayedMessages",
+   "n_attackers": 2,
+   "n_labelled_attack": 1709,
+   "n_messages": 4167
+  },
+  "13": {
+   "name": "DoS",
+   "n_attackers": 2,
+   "n_labelled_attack": 4986,
+   "n_messages": 6718
+  },
+  "14": {
+   "name": "DoSRandom",
+   "n_attackers": 2,
+   "n_labelled_attack": 9404,
+   "n_messages": 11278
+  },
+  "15": {
+   "name": "DoSDisruptive",
+   "n_attackers": 2,
+   "n_labelled_attack": 9832,
+   "n_messages": 11599
+  },
+  "16": {
+   "name": "GridSybil",
+   "n_attackers": 2,
+   "n_labelled_attack": 14748,
+   "n_messages": 16515
+  },
+  "17": {
+   "name": "DataReplaySybil",
+   "n_attackers": 2,
+   "n_labelled_attack": 1732,
+   "n_messages": 4225
+  },
+  "18": {
+   "name": "DoSRandomSybil",
+   "n_attackers": 2,
+   "n_labelled_attack": 3464,
+   "n_messages": 5957
+  },
+  "19": {
+   "name": "DoSDisruptiveSybil",
+   "n_attackers": 2,
+   "n_labelled_attack": 3464,
+   "n_messages": 5957
+  }
+ }
+}

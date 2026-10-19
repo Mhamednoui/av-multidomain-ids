@@ -47,3 +47,72 @@ def tampa_vehicle_split(df: pd.DataFrame, seed: int = SEED) -> dict:
 
 def rows_of(df: pd.DataFrame, ids, col: str = "sender") -> pd.DataFrame:
     return df[df[col].isin(set(map(str, ids)))]
+
+
+# ---------------------------------------------------------------------------------------------------------------
+# Tampa v2 (WP5 S1b): the public sample has 40 passages of 38 physical vehicles in 13 bursts, so a fixed time grid would drop
+# the biggest vehicle. Blocks = EPISODES: maximal groups of passages whose lives, extended by GUARD_S on both sides, overlap or
+# touch. Cuts lie only where no passage is alive on either side, with a 2 x GUARD_S silence between any two parts.
+GUARD_S = 30.0
+
+
+def tampa_episodes(df: pd.DataFrame, guard: float = GUARD_S, vehicle_of: dict = None) -> pd.Series:
+    """Episode index (0..) of every sender (passage) of df, from the sender lives extended by `guard` s.
+    vehicle_of (passage -> physical vehicle): episodes that contain passages of the same physical vehicle are merged into one block,
+    so no physical vehicle is ever on two sides of the split."""
+    life = df.groupby("sender")["t"].agg(["min", "max"]).sort_values("min")
+    ep, cur, k = {}, -np.inf, -1
+    for s, r in life.iterrows():
+        if r["min"] - guard > cur + guard:       # silence longer than 2 x guard: new episode
+            k += 1
+        ep[s] = max(k, 0)
+        cur = max(cur, r["max"])
+    ep = pd.Series(ep)
+    if vehicle_of:
+        parent = {e: e for e in ep.unique()}
+
+        def find(a):
+            while parent[a] != a:
+                parent[a] = parent[parent[a]]
+                a = parent[a]
+            return a
+        first = {}
+        for s, e in ep.items():
+            v = vehicle_of.get(s)
+            if v is None:
+                continue
+            if v in first:
+                parent[find(e)] = find(first[v])
+            else:
+                first[v] = e
+        roots = {r: i for i, r in enumerate(sorted({find(e) for e in ep.unique()}))}
+        ep = ep.map(lambda e: roots[find(e)])
+    return ep
+
+
+def tampa_time_block_split(df: pd.DataFrame, seed: int = SEED, guard: float = GUARD_S, vehicle_of: dict = None):
+    """Returns (split {train,val,test: [sender ids]}, info). Episodes are shuffled 60/20/20 with the seed."""
+    ep = tampa_episodes(df, guard, vehicle_of)
+    blocks = group_split([str(b) for b in sorted(ep.unique())], seed=seed)
+    part_of = {b: p for p, bs in blocks.items() for b in bs}
+    split = {p: [] for p in blocks}
+    for s, e in ep.items():
+        split[part_of[str(e)]].append(str(s))
+    split = {p: sorted(v) for p, v in split.items()}
+    return split, {"guard_s": guard, "n_episodes": int(ep.nunique()), "episodes": blocks, "seed": seed,
+                   "episode_of_sender": {str(k): int(v) for k, v in ep.items()}}
+
+
+def min_gap_between_parts(df: pd.DataFrame, split: dict) -> dict:
+    """Smallest time distance (s) between the life of a sender of one part and the life of a sender of another part
+    (negative = they are alive at the same time)."""
+    life = df.groupby("sender")["t"].agg(["min", "max"])
+    out = {}
+    for a, b in (("train", "val"), ("train", "test"), ("val", "test")):
+        la, lb = life.loc[split[a]], life.loc[split[b]]
+        best = np.inf
+        for s0, s1 in zip(la["min"].to_numpy(), la["max"].to_numpy()):
+            gap = np.maximum(lb["min"].to_numpy() - s1, s0 - lb["max"].to_numpy())
+            best = min(best, float(gap.min()))
+        out[f"{a}-{b}"] = best
+    return out
