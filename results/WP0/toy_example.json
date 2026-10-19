@@ -1,0 +1,248 @@
+{
+ "name": "toy_example",
+ "budget": 0.01,
+ "layers": {
+  "toy.f1": {
+   "threshold": 0.9899305555555556,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009895833333333333,
+   "detection": 0.26875,
+   "detection_by_attack": {
+    "alpha": 0.73125,
+    "beta": 0.0,
+    "gamma": 0.075
+   },
+   "auc": 0.7419547526041665,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 0.6666666666666666,
+    "median_delay_s": 1.5,
+    "mean_delay_s": 3.0
+   },
+   "n_test": 2400,
+   "n_test_attack": 480
+  },
+  "toy.f2": {
+   "threshold": 0.9899305555555556,
+   "budget": 0.01,
+   "false_alarm_rate": 0.008333333333333333,
+   "detection": 0.24166666666666667,
+   "detection_by_attack": {
+    "alpha": 0.05625,
+    "beta": 0.6625,
+    "gamma": 0.00625
+   },
+   "auc": 0.7460096571180556,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 0.6666666666666666,
+    "median_delay_s": 3.0,
+    "mean_delay_s": 7.0
+   },
+   "n_test": 2400,
+   "n_test_attack": 480
+  },
+  "toy.f3": {
+   "threshold": 0.9899305555555556,
+   "budget": 0.01,
+   "false_alarm_rate": 0.010416666666666666,
+   "detection": 0.2125,
+   "detection_by_attack": {
+    "alpha": 0.00625,
+    "beta": 0.0125,
+    "gamma": 0.61875
+   },
+   "auc": 0.6535546875,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 0.5833333333333334,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 7.0
+   },
+   "n_test": 2400,
+   "n_test_attack": 480
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.9965277777777779,
+   "budget": 0.01,
+   "false_alarm_rate": 0.0109375,
+   "detection": 0.5145833333333333,
+   "detection_by_attack": {
+    "alpha": 0.56875,
+    "beta": 0.55,
+    "gamma": 0.425
+   },
+   "auc": 0.9546354166666666,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 1.0,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 1.0833333333333333
+   },
+   "n_test": 2400,
+   "n_test_attack": 480,
+   "method": "max",
+   "method_selection": {
+    "noisy_or": 0.5472222222222223,
+    "logistic": 0.4722222222222222,
+    "max": 0.5638888888888889
+   }
+  },
+  "only_toy.f1": {
+   "threshold": 0.9899305555555556,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009895833333333333,
+   "detection": 0.26875,
+   "detection_by_attack": {
+    "alpha": 0.73125,
+    "beta": 0.0,
+    "gamma": 0.075
+   },
+   "auc": 0.7419547526041665,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 0.6666666666666666,
+    "median_delay_s": 1.5,
+    "mean_delay_s": 3.0
+   },
+   "n_test": 2400,
+   "n_test_attack": 480
+  },
+  "only_toy.f2": {
+   "threshold": 0.9899305555555556,
+   "budget": 0.01,
+   "false_alarm_rate": 0.008333333333333333,
+   "detection": 0.24166666666666667,
+   "detection_by_attack": {
+    "alpha": 0.05625,
+    "beta": 0.6625,
+    "gamma": 0.00625
+   },
+   "auc": 0.7460096571180556,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 0.6666666666666666,
+    "median_delay_s": 3.0,
+    "mean_delay_s": 7.0
+   },
+   "n_test": 2400,
+   "n_test_attack": 480
+  },
+  "only_toy.f3": {
+   "threshold": 0.9899305555555556,
+   "budget": 0.01,
+   "false_alarm_rate": 0.010416666666666666,
+   "detection": 0.2125,
+   "detection_by_attack": {
+    "alpha": 0.00625,
+    "beta": 0.0125,
+    "gamma": 0.61875
+   },
+   "auc": 0.6535546875,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 0.5833333333333334,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 7.0
+   },
+   "n_test": 2400,
+   "n_test_attack": 480
+  },
+  "all_but_toy.f1": {
+   "threshold": 0.9947916666666667,
+   "budget": 0.01,
+   "false_alarm_rate": 0.011979166666666667,
+   "detection": 0.37083333333333335,
+   "detection_by_attack": {
+    "alpha": 0.03125,
+    "beta": 0.6,
+    "gamma": 0.48125
+   },
+   "auc": 0.8616861979166666,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 0.9166666666666666,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 5.7272727272727275
+   },
+   "n_test": 2400,
+   "n_test_attack": 480,
+   "method": "max"
+  },
+  "all_but_toy.f2": {
+   "threshold": 0.9984613715277779,
+   "budget": 0.01,
+   "false_alarm_rate": 0.011458333333333333,
+   "detection": 0.4041666666666667,
+   "detection_by_attack": {
+    "alpha": 0.60625,
+    "beta": 0.00625,
+    "gamma": 0.6
+   },
+   "auc": 0.8149110243055556,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 0.75,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 5.0
+   },
+   "n_test": 2400,
+   "n_test_attack": 480,
+   "method": "noisy_or"
+  },
+  "all_but_toy.f3": {
+   "threshold": 0.998636188271605,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009895833333333333,
+   "detection": 0.4375,
+   "detection_by_attack": {
+    "alpha": 0.68125,
+    "beta": 0.5875,
+    "gamma": 0.04375
+   },
+   "auc": 0.871100802951389,
+   "delay": {
+    "n_segments": 12,
+    "detected_fraction": 1.0,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 4.583333333333333
+   },
+   "n_test": 2400,
+   "n_test_attack": 480,
+   "method": "noisy_or"
+  }
+ },
+ "layer_names": [
+  "toy.f1",
+  "toy.f2",
+  "toy.f3"
+ ],
+ "combined": {
+  "threshold": 0.9965277777777779,
+  "budget": 0.01,
+  "false_alarm_rate": 0.0109375,
+  "detection": 0.5145833333333333,
+  "detection_by_attack": {
+   "alpha": 0.56875,
+   "beta": 0.55,
+   "gamma": 0.425
+  },
+  "auc": 0.9546354166666666,
+  "delay": {
+   "n_segments": 12,
+   "detected_fraction": 1.0,
+   "median_delay_s": 1.0,
+   "mean_delay_s": 1.0833333333333333
+  },
+  "n_test": 2400,
+  "n_test_attack": 480,
+  "method": "max",
+  "method_selection": {
+   "noisy_or": 0.5472222222222223,
+   "logistic": 0.4722222222222222,
+   "max": 0.5638888888888889
+  }
+ }
+}
