@@ -216,3 +216,12 @@ union detection on types caught by data-driven checks drops (not tuned to). Miss
 - Interpretation: the S2/S3 layers are val-calibrated thresholds, so the leak mostly mattered for learned layers; v1same vs new mixes leak removal with a much smaller test (3 vehicles, 2 attackers per type), CIs over 2 attackers are not valid.
 - Acceptance: S1b PARTIAL (heading_rate FA bound missed on a 2,094-message validation part; everything else MET).
 - Open: user could request the fuller Tampa data (ITS DataHub Sandbox, several days); DATASETS.md D14 note (226 ids = 38 vehicles) is for the orchestrator.
+
+## 2026-10-20 S0b more Tampa BSM data (worker sonnet)
+Acceptance rule (written before the source probes were interpreted): MET if a public no-login source gives >= 7 different days of daytime Tampa BSMs, >= 300 physical vehicles (tampa_link dedupe+linking), <= 3 GB, licence allows research use, fields as S1 schema, >= 15 GB disk free. If every source needs login / registration / sandbox request: NOT MET, write exactly what the user must do, no workaround, stop.
+Probes (all 2026-10-20, no login):
+- Socrata nm7w-nvbm: $select=count(*) = 34,464 rows = exactly the file already held (D14); min/max metadata_recordGeneratedAt 2021-03-19T00:17:15 / 06:59:43. The Socrata dataset is a fixed sample (rowsUpdatedAt 1755807917 = 2025-08-21), so $where/$offset paging cannot return more.
+- Socrata catalog search "Tampa": only BSM sample nm7w-nvbm, SPaT sample xn7c-yu2n, TIM sample in46-gmir, and 5 aggregated BSM maps (speed / acceleration, no per-message data); none is more BSM data. Dataset description: "The full set of raw BSM data from Tampa CV Pilot can be requested from the ITS DataHub Sandbox" (https://its.dot.gov/data/data-request).
+- S3 bucket usdot-its-cvpilot-publicdata (and usdot-its-cvpilot-public-data, the name in older metadata): both listing requests (prefix TAMPA/, list-type=2, index.html) return AccessDenied (403); the other guessed names do not exist (404). The bucket is closed to anonymous listing; guessing object keys would be working around the access control, not done.
+- catalog.data.gov: only points back to the Socrata sample.
+Result: S0b NOT MET, nothing downloaded, D14 unchanged. User action needed (see reports/WP5_S0b.md).
