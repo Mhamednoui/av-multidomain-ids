@@ -11,7 +11,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S0 | IN PROGRESS | worker sonnet | 2026-10-19 | download only, started before M0 (orchestrator) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
-| WP5 V2X | S0 | IN PROGRESS | worker sonnet | 2026-10-19 | download only, started before M0 (orchestrator) |
+| WP5 V2X | S0 | REVIEW | worker sonnet | 2026-10-19 | D12 done; D14 one day only; D13 needs user access request (see reports/WP5_S0.md) |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 

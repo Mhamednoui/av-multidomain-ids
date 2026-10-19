@@ -1,0 +1,279 @@
+{
+ "D12": {
+  "rows": 3194808,
+  "columns": [
+   "type",
+   "sendTime",
+   "sender",
+   "senderPseudo",
+   "messageID",
+   "class",
+   "posx",
+   "posy",
+   "posz",
+   "posx_n",
+   "posy_n",
+   "posz_n",
+   "spdx",
+   "spdy",
+   "spdz",
+   "spdx_n",
+   "spdy_n",
+   "spdz_n",
+   "aclx",
+   "acly",
+   "aclz",
+   "aclx_n",
+   "acly_n",
+   "aclz_n",
+   "hedx",
+   "hedy",
+   "hedz",
+   "hedx_n",
+   "hedy_n",
+   "hedz_n"
+  ],
+  "label_col": "class",
+  "label_counts": {
+   "0": 1900539,
+   "16": 175391,
+   "13": 131305,
+   "15": 129270,
+   "14": 126724,
+   "18": 86883,
+   "19": 82100,
+   "6": 44359,
+   "11": 44337,
+   "17": 44310,
+   "3": 43857,
+   "1": 43653,
+   "2": 43567,
+   "10": 43264,
+   "12": 43118,
+   "9": 42790,
+   "8": 42583,
+   "4": 42575,
+   "7": 42258,
+   "5": 41925
+  },
+  "n_unique_sender": 24663,
+  "n_unique_senderPseudo": 118909,
+  "describe": {
+   "type": [
+    4.0,
+    4.0
+   ],
+   "sendTime": [
+    240.602763370378,
+    86399.98493806412
+   ],
+   "sender": [
+    9.0,
+    147981.0
+   ],
+   "senderPseudo": [
+    1.0,
+    4206511862.0
+   ],
+   "messageID": [
+    4184.0,
+    458622809.0
+   ],
+   "class": [
+    0.0,
+    19.0
+   ],
+   "posx": [
+    -20.01299218283596,
+    1518.9556909741427
+   ],
+   "posy": [
+    -22.47955791131378,
+    1522.6086272866387
+   ],
+   "posz": [
+    0.0,
+    0.0
+   ],
+   "posx_n": [
+    0.0,
+    8.245799564253035
+   ],
+   "posy_n": [
+    0.0,
+    8.29282635651494
+   ],
+   "posz_n": [
+    0.0,
+    0.0
+   ],
+   "spdx": [
+    -26.993423912186824,
+    39.99998819515526
+   ],
+   "spdy": [
+    -27.87225556600123,
+    39.99979595357743
+   ],
+   "spdz": [
+    0.0,
+    0.0
+   ],
+   "spdx_n": [
+    -0.108312710898649,
+    0.08892374671934
+   ],
+   "spdy_n": [
+    -0.108254450679259,
+    0.107535537519936
+   ],
+   "spdz_n": [
+    0.0,
+    0.0
+   ],
+   "aclx": [
+    -6.999003995944449,
+    4.506170154897107
+   ],
+   "acly": [
+    -4.499935475149522,
+    4.504407749803829
+   ],
+   "aclz": [
+    0.0,
+    0.0
+   ],
+   "aclx_n": [
+    0.0,
+    0.146510027789643
+   ],
+   "acly_n": [
+    0.0,
+    0.133583682852856
+   ],
+   "aclz_n": [
+    0.0,
+    0.0
+   ],
+   "hedx": [
+    -0.999999999999422,
+    1.0
+   ],
+   "hedy": [
+    -0.99999999999996,
+    0.9999999999997672
+   ],
+   "hedz": [
+    0.0,
+    0.0
+   ],
+   "hedx_n": [
+    0.0,
+    121.30637235838084
+   ],
+   "hedy_n": [
+    0.0,
+    113.69652199869228
+   ],
+   "hedz_n": [
+    0.0,
+    0.0
+   ]
+  },
+  "nan_counts": {}
+ },
+ "D14": {
+  "rows": 34464,
+  "columns": [
+   "dataType",
+   "metadata_recordGeneratedAt",
+   "metadata_recordGeneratedBy",
+   "metadata_logFileName",
+   "metadata_schemaVersion",
+   "metadata_RSUID",
+   "metadata_kind",
+   "metadata_psid",
+   "metadata_bsmSource",
+   "metadata_externalID",
+   "coreData_msgCnt",
+   "coreData_id",
+   "coreData_secMark",
+   "coreData_lat",
+   "coreData_long",
+   "coreData_elev",
+   "coreData_accelset_yaw",
+   "coreData_accelset_lat",
+   "coreData_accelset_long",
+   "coreData_accelset_vert",
+   "coreData_angle",
+   "coreData_accuracy_orientation",
+   "coreData_accuracy_semiMajor",
+   "coreData_accuracy_semiMinor",
+   "coreData_transmission",
+   "coreData_speed",
+   "coreData_heading",
+   "coreData_wheelBrakes",
+   "coreData_brakes_traction",
+   "coreData_brakes_abs",
+   "coreData_brakes_scs",
+   "coreData_brakes_brakeBoost",
+   "coreData_brakes_auxBrakes",
+   "coreData_size",
+   "part2_suve_classification",
+   "part2_suve_cd_hpmstype",
+   "part2_suve_cd_role",
+   "part2_suve_vd_height",
+   "part2_suve_vd_mass",
+   "part2_suve_vd_bumpers_front",
+   "part2_suve_vd_bumpers_rear",
+   "part2_vse_events",
+   "part2_vse_ph_crumbdata",
+   "part2_vse_pp_confidence",
+   "part2_vse_pp_radiusofcurve",
+   "part2_vse_lights",
+   "coreData_position",
+   "randomNum",
+   "metadata_generatedAt_timeOfDay"
+  ],
+  "n_vehicle_ids": 226,
+  "t_min": "2021-03-19 00:17:15+00:00",
+  "t_max": "2021-03-19 06:59:43+00:00",
+  "n_days": 1,
+  "msgs_per_day": {
+   "2021-03-19": 34464
+  },
+  "coreData_lat": [
+   279433831.0,
+   279566898.0,
+   0
+  ],
+  "coreData_long": [
+   -824604530.0,
+   -824435749.0,
+   0
+  ],
+  "coreData_speed": [
+   0.0,
+   1724.0,
+   0
+  ],
+  "coreData_heading": [
+   0.0,
+   28790.0,
+   0
+  ],
+  "coreData_secMark": [
+   0.0,
+   59997.0,
+   0
+  ],
+  "msgs_per_vehicle": {
+   "median": 51.5,
+   "max": 2064,
+   "ge_100": 72
+  },
+  "bsm_source": {
+   "RV": 34464
+  }
+ }
+}
