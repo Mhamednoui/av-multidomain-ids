@@ -60,7 +60,9 @@ class DomainCombiner:
 ```
 
 `MotionEstimate` (common/motion.py): `t, source, speed, yaw_rate, displacement(dx, dy over
-the last second), sigma` published by any domain that observes ego motion.
+the last second), sigma` published by any domain that observes ego motion. Frame (clarified
+2026-10-20): displacement in the BODY frame (x forward, y left) over the last second; consumers
+that need east-north rotate it with their own heading.
 
 ## 4. Shared conventions
 
