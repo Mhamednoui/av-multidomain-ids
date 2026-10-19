@@ -52,3 +52,7 @@ Toy domain only (table above). Real layers: later WPs.
 
 ## Proposed next step
 WP0 S3 (regression of the v2 GPS B2 rule through the harness), after review.
+
+## S2b: ECDF tail fix (supervisor follow-up)
+`common/calibration.py`: ECDF unchanged up to the largest validation normal score `max`; above it the score is `1 - exp(-min((x-max)/scale, 30)) / n` (starts at 1 - 1/n, so it never goes below the ECDF at `max`; strictly increasing, < 1 up to 30 scales, then constant at about 1 - 1e-13/n). `scale = max(q99 - q90, IQR, 1e-9*(1+|max|))` of the validation normals, stored in `to_dict`/`from_dict`. 2 new tests (strictly monotone above max, < 1, joins at max without a backwards step, monotone over normal + tail, round-trip, constant normals); the old test that expected exactly 1.0 far above max was changed to `0.999 < s < 1`. Full suite: 16 passed, 0 failed.
+Toy rerun (results/WP0/toy_example.json): combined detection at the 1% budget 51.5%, AUC 0.955, false alarms 1.09%: unchanged (toy test scores rarely exceed the validation normal maximum, so the tail is hardly exercised; logistic selection score moved 0.472 -> 0.467, `max` still chosen). The fix matters for real layers whose attacks sit far above normal range.

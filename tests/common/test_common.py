@@ -40,7 +40,7 @@ def test_calibration_monotone_and_range():
     x = np.sort(rng.exponential(size=2000) * 3)
     c = cal.transform(x)
     assert np.all(np.diff(c) >= 0) and c.min() >= 0 and c.max() <= 1
-    assert cal.transform(np.array([1e9]))[0] == 1.0 and cal.transform(np.array([-1e9]))[0] == 0.0
+    assert 0.999 < cal.transform(np.array([1e9]))[0] < 1.0 and cal.transform(np.array([-1e9]))[0] == 0.0
     c2 = ECDFCalibrator.from_dict(json.loads(json.dumps(cal.to_dict())))
     assert np.array_equal(c2.transform(x), c)
 
@@ -172,3 +172,28 @@ def test_harness_resets_state_per_group():
     streams = {"a": pd.DataFrame({"x": range(5)}), "b": pd.DataFrame({"x": range(5)})}
     ev = score_groups(l, streams)
     assert [e.details["raw"] for e in ev] == [0, 1, 2, 3, 4] * 2
+
+
+def test_calibration_tail_strict_and_continuous():
+    rng = np.random.RandomState(4)
+    normal = rng.exponential(size=1000)
+    cal = ECDFCalibrator().fit(normal)
+    top = normal.max()
+    x = top + np.linspace(1e-6, 20, 400) * cal.scale_
+    c = cal.transform(x)
+    assert np.all(np.diff(c[:200]) > 0) and c.max() < 1.0 and c.min() >= cal.transform(np.array([top]))[0]
+    at = cal.transform(np.array([top, np.nextafter(top, np.inf)]))
+    assert at[1] >= at[0] and at[1] - at[0] <= 1.0 / len(normal) + 1e-12      # joins, no backwards step
+    both = cal.transform(np.sort(np.r_[normal, x]))
+    assert np.all(np.diff(both) >= 0)
+    assert cal.transform(np.float64(top + 1.0)).shape == ()
+
+
+def test_calibration_tail_roundtrip_and_constant_normals():
+    cal = ECDFCalibrator().fit(np.r_[np.zeros(100), np.ones(5)])
+    cal2 = ECDFCalibrator.from_dict(json.loads(json.dumps(cal.to_dict())))
+    x = np.array([0.0, 1.0, 1.5, 3.0, 100.0])
+    assert np.array_equal(cal.transform(x), cal2.transform(x)) and cal2.scale_ == cal.scale_
+    k = ECDFCalibrator().fit(np.full(50, 2.0))
+    r = k.transform(np.array([2.0, 2.0 + 1e-9, 2.0 + 2e-9]))
+    assert r[1] < r[2] < 1.0 and k.scale_ > 0

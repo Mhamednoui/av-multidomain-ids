@@ -40,3 +40,5 @@ Decisions (details in reports/WP0_S2.md): Layer.raw_scores template; logistic co
 -log(1-s+1e-3) features (raw ECDF scores gave 12% vs 49% toy detection); auto method selection on
 group halves; score_groups resets per group. Pitfall: ECDF scores saturate at 1.0 above the max
 validation normal score (ties inside combiner); logged as open question.
+
+2026-10-19 S2b: ECDF tail fix in common/calibration.py (strictly increasing tail above the max validation normal, scale stored). 16 tests pass. Toy combined detection unchanged (51.5%, AUC 0.955). See reports/WP0_S2.md "S2b".
