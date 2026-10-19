@@ -51,3 +51,44 @@ Done (S1): gps/stream.py, tools/WP1_S1_b2.py, tests/gps/test_stream.py (10 tests
 - Physics: median |v_rep - track derivative| ratio to clean: doppler 1.03, meaconing 1.03, drift 2.53, accel_drift 3.95, freeze 19.4.
 - Pitfalls: capped linear delay ramp left a speed step (test caught it); AV-GPS time = row counter; UAV onset 117 s approximate.
 Acceptance: MET. S1 -> REVIEW.
+
+## 2026-10-19 S2 (L1 receiver sanity rules)
+Acceptance rule (written before any S2 result was computed; I had only looked at column names / value ranges
+of the UAV and AV-GPS receiver fields and at the AV-GPS step sizes, no rule has been scored yet):
+Coverage (stated before results, from the data layer): KITTI has no receiver fields (fix_type / hdop are constants
+written by the simulator, numsats is the real OXTS count but the attack simulator never touches it, clock_offset is
+produced by our own meaconing generator) -> on KITTI ONLY the kinematic rules and the receiver self-consistency rule
+(Doppler vs position) are evaluated. Fix-type, satellite, DOP, noise/jamming-indicator, clock rules are not evaluated
+on KITTI (no invented fields). AV-GPS (1 Hz confirmed: median step / odometry speed ~ 1): kinematic rules from
+position only (no Doppler, no IMU accel); hdop = 100 and numsats = 0 mark the no-fix placeholder of the spoofed
+sessions (artefact), so receiver-field rules there are reported as artefact only, never as detection. UAV: fix type,
+satellites, HDOP, noise_per_ms, jamming_indicator (the PX4 stand-in for AGC; AGC itself is absent), Doppler vs position.
+Clock rule: time_utc_usec is 0 in the spoofing and jamming flights, so the clock rule is implemented and unit-tested but
+evaluated nowhere.
+A1 unit tests tests/gps/test_l1.py pass; whole suite passes.
+A2 Physical limits (max speed, longitudinal / lateral acceleration, jerk, minimum turn radius, min satellites, HDOP,
+clock rate) are constants in gps/l1.py with a written source each, fixed before any run and not changed afterwards.
+A3 At the physical operating point (alarm iff the quantity exceeds its limit; no fitted threshold) the UNION of the
+kinematic rules has false alarms <= 1.0% on KITTI clean test runs, and each rule alone <= 1.0%. Detection is NOT a pass
+criterion: a rule that detects little and never false-alarms is kept.
+A4 Data-driven thresholds (Doppler-vs-position consistency; satellite / HDOP / noise / jamming-indicator jumps) are set
+on validation normal rows only (KITTI val drives; UAV: the benign flight, see decision below), 1% budget, tie-safe,
+test scored once.
+A5 AV-GPS: false alarms of the kinematic physical union <= 1.0% of test normal rows (report what fires, incl. glitches).
+A6 UAV spoofing flight: at least one L1 rule alarms within 2 s of the first spoofed fix (118.0 s); L1 union false alarms
+<= 2% on the spoofing flight before 117 s (out-of-sample), benign flight false alarms reported (in-sample for the
+calibrated rules).
+A7 Harness ablation on KITTI at the 1% budget: B2 alone vs L1 alone vs B2+L1 vs all-but-one. "L1 adds" is judged
+only as: the B2+L1 combination does not lose more than 1 point of AUC against B2 alone and the test false alarms stay <= 1.5%;
+which attacks it adds detection for is reported, including "nothing".
+Decision (documented, flagged to the supervisor): all UAV flights are test in splits.json (case study). The receiver-jump
+rules need normal data from that receiver and no other data exists, so the BENIGN flight is used as their calibration
+set and is excluded from their out-of-sample claims; their false alarms are then measured on the pre-onset part of the
+spoofing flight (117 fixes). The jamming flight has no onset label and stays unlabeled (alarm timeline only).
+Done (S2): gps/l1.py, tests/gps/test_l1.py (12 tests, suite 41 pass), tools/WP1_S2_l1.py, tools/WP1_S2_tables.py, results/WP1/S2_*.{json,md}, reports/WP1_S2.md.
+- KITTI physical kinematic rules: 0.00% FA on clean test runs (each and union); detect jump 86% of runs, freeze 14%, everything else 0% (they never fire on drift, Doppler spoof, meaconing). Margins: yaw 0.77-0.87 of limit, others < 0.33.
+- Doppler-vs-position (val 1% budget): FA 1.26% clean test runs; run-level drift 70%, accel_drift 56%, freeze 84%, jump 100%, Doppler spoof 16%, meaconing 17%.
+- Harness: B2 alone AUC 0.847 FA 0.70%; B2+all L1 AUC 0.860 FA 1.39%; B2+kinematic 0.855 / 0.99%; without B2 0.709.
+- AV-GPS kinematic union FA 0.61%, detection 13.7% (placeholder coordinates); sat/HDOP rules = artefact.
+- UAV spoofing: sat_jump, hdop_jump, noise_jump, vel_pos fire at 118.0 s; union FA before 117 s 2.54% (3/118) -> A6 FA part NOT MET (not retuned); benign flight used as calibration set (decision flagged).
+Acceptance: A1-A5, A7 MET; A6 detection MET, A6 FA NOT MET. S2 -> REVIEW.

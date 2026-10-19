@@ -7,7 +7,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
-| WP1 GPS | S2 | IN PROGRESS | worker sonnet | 2026-10-19 | S1 APPROVED. S6 must filter OSM to drivable classes |
+| WP1 GPS | S2 | REVIEW | worker sonnet | 2026-10-19 | L1 rules done; A6 UAV FA part not met (2.54% vs 2%), see reports/WP1_S2.md. S6 must filter OSM to drivable classes |
 | WP2 CAN | S0 | IN PROGRESS | worker sonnet | 2026-10-19 | download only, started before M0 (orchestrator) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |

@@ -1,0 +1,274 @@
+{
+ "rows": {
+  "test": 7526,
+  "train": 53524,
+  "val": 8518
+ },
+ "rules_evaluated": [
+  "r_speed",
+  "r_long",
+  "r_lat",
+  "r_jerk",
+  "r_yaw"
+ ],
+ "artefact_only": [
+  "r_sat_low",
+  "r_dop",
+  "d_sat",
+  "d_hdop"
+ ],
+ "coverage": {
+  "evaluated": [
+   "r_speed",
+   "r_long",
+   "r_lat",
+   "r_jerk",
+   "r_yaw"
+  ],
+  "artefact_only": [
+   "r_sat_low",
+   "r_dop",
+   "d_sat",
+   "d_hdop"
+  ],
+  "not_evaluated": {
+   "e_velpos": "no Doppler velocity in AV-GPS",
+   "r_fix": "no fix type field",
+   "r_clock": "Clock Time not parseable on every row",
+   "d_noise": "no noise / AGC field",
+   "d_jam": "no jamming indicator"
+  }
+ },
+ "limits": {
+  "V_MAX": 70.0,
+  "A_LONG": 12.748645,
+  "A_LAT": 11.76798,
+  "J_MAX": 50.0,
+  "R_MIN": 5.0,
+  "YAW_MIN_SPEED": 3.0,
+  "DIR_MIN_SPEED": 0.5,
+  "SAT_MIN": 4.0,
+  "HDOP_MAX": 5.0,
+  "FIX_MIN": 3.0,
+  "CLOCK_RATE": 0.001
+ },
+ "test_sessions": {
+  "f2:0-1706": {
+   "label": 1,
+   "rows": 1706
+  },
+  "f2:1706-6890": {
+   "label": 0,
+   "rows": 5184
+  },
+  "f3:0-142": {
+   "label": 0,
+   "rows": 142
+  },
+  "f3:142-323": {
+   "label": 1,
+   "rows": 181
+  },
+  "f3:323-412": {
+   "label": 0,
+   "rows": 89
+  },
+  "f3:412-636": {
+   "label": 1,
+   "rows": 224
+  }
+ },
+ "test_attack_rows_with_step_over_100km": 0.011842728564661297,
+ "test_normal_rows_with_step_over_100km": 0.0,
+ "union_physical_kinematic": {
+  "false_alarm_normal_rows": 0.006094182825484765,
+  "detection_attack_rows": 0.1369019422074846,
+  "normal_rows_flagged": 33,
+  "normal_rows": 5415
+ },
+ "per_rule": {
+  "gps.max_speed": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.0,
+    "detection_attack_rows": 0.04642349597347229,
+    "normal_rows_flagged": 0,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.0,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.032825322391559206,
+     "f3:142-323": 0.0,
+     "f3:412-636": 0.1875
+    },
+    "attack_rows_flagged_with_step_over_100km": 25.0,
+    "attack_rows_flagged_total": 98
+   },
+   "auc_calibrated_score": 0.10137878666598434,
+   "artefact": false
+  },
+  "gps.long_accel": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.004986149584487534,
+    "detection_attack_rows": 0.09521553765987684,
+    "normal_rows_flagged": 27,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.005208333333333333,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.0627198124267292,
+     "f3:142-323": 0.055248618784530384,
+     "f3:412-636": 0.375
+    },
+    "attack_rows_flagged_with_step_over_100km": 25.0,
+    "attack_rows_flagged_total": 201
+   },
+   "auc_calibrated_score": 0.11838813793815361,
+   "artefact": false
+  },
+  "gps.lat_accel": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.0,
+    "detection_attack_rows": 0.0004737091425864519,
+    "normal_rows_flagged": 0,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.0,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.0,
+     "f3:142-323": 0.0055248618784530384,
+     "f3:412-636": 0.0
+    },
+    "attack_rows_flagged_with_step_over_100km": 0.0,
+    "attack_rows_flagged_total": 1
+   },
+   "auc_calibrated_score": 0.12289515456346371,
+   "artefact": false
+  },
+  "gps.jerk": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.0014773776546629731,
+    "detection_attack_rows": 0.13074372335386072,
+    "normal_rows_flagged": 8,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.0015432098765432098,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.08675263774912075,
+     "f3:142-323": 0.011049723756906077,
+     "f3:412-636": 0.5625
+    },
+    "attack_rows_flagged_with_step_over_100km": 25.0,
+    "attack_rows_flagged_total": 276
+   },
+   "auc_calibrated_score": 0.15958657395439535,
+   "artefact": false
+  },
+  "gps.yaw_rate": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.00110803324099723,
+    "detection_attack_rows": 0.0,
+    "normal_rows_flagged": 6,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.0011574074074074073,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.0,
+     "f3:142-323": 0.0,
+     "f3:412-636": 0.0
+    },
+    "attack_rows_flagged_with_step_over_100km": 0.0,
+    "attack_rows_flagged_total": 0
+   },
+   "auc_calibrated_score": 0.4992465268984123,
+   "artefact": false
+  },
+  "gps.sat_low": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.0003693444136657433,
+    "detection_attack_rows": 0.9876835622927522,
+    "normal_rows_flagged": 2,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.00019290123456790122,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.011235955056179775
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.9976553341148886,
+     "f3:142-323": 0.9447513812154696,
+     "f3:412-636": 0.9464285714285714
+    }
+   },
+   "auc_calibrated_score": 0.9937479578674427,
+   "artefact": true
+  },
+  "gps.hdop_high": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.00110803324099723,
+    "detection_attack_rows": 0.9943154902889626,
+    "normal_rows_flagged": 6,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.0011574074074074073,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.9994138335287222,
+     "f3:142-323": 0.988950276243094,
+     "f3:412-636": 0.9598214285714286
+    }
+   },
+   "auc_calibrated_score": 0.9990924730110449,
+   "artefact": true
+  },
+  "gps.sat_jump": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.002770083102493075,
+    "detection_attack_rows": 0.007579346281383231,
+    "normal_rows_flagged": 15,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.002700617283950617,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.011235955056179775
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.0035169988276670576,
+     "f3:142-323": 0.0055248618784530384,
+     "f3:412-636": 0.04017857142857143
+    }
+   },
+   "auc_calibrated_score": 0.3814589016858884,
+   "artefact": true,
+   "threshold_calibrated_on_val": 0.9861251261352171
+  },
+  "gps.hdop_jump": {
+   "physical_alarm": {
+    "false_alarm_normal_rows": 0.01680517082179132,
+    "detection_attack_rows": 0.00994789199431549,
+    "normal_rows_flagged": 91,
+    "false_alarm_by_session": {
+     "f2:1706-6890": 0.01678240740740741,
+     "f3:0-142": 0.014084507042253521,
+     "f3:323-412": 0.02247191011235955
+    },
+    "detected_by_session": {
+     "f2:0-1706": 0.004103165298944901,
+     "f3:142-323": 0.027624309392265192,
+     "f3:412-636": 0.04017857142857143
+    }
+   },
+   "auc_calibrated_score": 0.39628258609324674,
+   "artefact": true,
+   "threshold_calibrated_on_val": 0.9899091826437942
+  }
+ }
+}

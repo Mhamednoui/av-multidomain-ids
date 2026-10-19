@@ -1,0 +1,162 @@
+{
+ "name": "S2_kitti_b2_velpos",
+ "budget": 0.01,
+ "layers": {
+  "gps.dr_resid_10": {
+   "threshold": 0.9898767605633804,
+   "budget": 0.01,
+   "false_alarm_rate": 0.007036981584069471,
+   "detection": 0.5139931740614334,
+   "detection_by_attack": {
+    "accel_drift": 0.43733681462140994,
+    "doppler_spoof": 0.44312169312169314,
+    "drift": 0.29767441860465116,
+    "freeze": 0.8620253164556962,
+    "jump": 0.7083333333333334,
+    "meaconing": 0.28690807799442897
+   },
+   "auc": 0.8472097949850796,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.5714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 3.029166666666667
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "gps.vel_pos_consistency": {
+   "threshold": 0.9898767605633804,
+   "budget": 0.01,
+   "false_alarm_rate": 0.011079502919598742,
+   "detection": 0.30602957906712175,
+   "detection_by_attack": {
+    "accel_drift": 0.5156657963446475,
+    "doppler_spoof": 0.01455026455026455,
+    "drift": 0.27286821705426356,
+    "freeze": 0.8430379746835444,
+    "jump": 0.11527777777777778,
+    "meaconing": 0.019498607242339833
+   },
+   "auc": 0.7027075848247295,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.5714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.0375
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.9986348272292205,
+   "budget": 0.01,
+   "false_alarm_rate": 0.014223686180565954,
+   "detection": 0.5342434584755403,
+   "detection_by_attack": {
+    "accel_drift": 0.5391644908616188,
+    "doppler_spoof": 0.4007936507936508,
+    "drift": 0.44031007751937984,
+    "freeze": 0.8582278481012658,
+    "jump": 0.6958333333333333,
+    "meaconing": 0.23537604456824512
+   },
+   "auc": 0.8474945242087122,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.6714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.482269503546099
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "noisy_or",
+   "method_selection": {
+    "noisy_or": 0.47724498869784204,
+    "logistic": 0.46947263384402343,
+    "max": 0.4653875655898505
+   }
+  },
+  "only_gps.dr_resid_10": {
+   "threshold": 0.9898767605633804,
+   "budget": 0.01,
+   "false_alarm_rate": 0.007036981584069471,
+   "detection": 0.5139931740614334,
+   "detection_by_attack": {
+    "accel_drift": 0.43733681462140994,
+    "doppler_spoof": 0.44312169312169314,
+    "drift": 0.29767441860465116,
+    "freeze": 0.8620253164556962,
+    "jump": 0.7083333333333334,
+    "meaconing": 0.28690807799442897
+   },
+   "auc": 0.8472097949850796,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.5714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 3.029166666666667
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "only_gps.vel_pos_consistency": {
+   "threshold": 0.9898767605633804,
+   "budget": 0.01,
+   "false_alarm_rate": 0.011079502919598742,
+   "detection": 0.30602957906712175,
+   "detection_by_attack": {
+    "accel_drift": 0.5156657963446475,
+    "doppler_spoof": 0.01455026455026455,
+    "drift": 0.27286821705426356,
+    "freeze": 0.8430379746835444,
+    "jump": 0.11527777777777778,
+    "meaconing": 0.019498607242339833
+   },
+   "auc": 0.7027075848247295,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.5714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.0375
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  }
+ },
+ "layer_names": [
+  "gps.dr_resid_10",
+  "gps.vel_pos_consistency"
+ ],
+ "combined": {
+  "threshold": 0.9986348272292205,
+  "budget": 0.01,
+  "false_alarm_rate": 0.014223686180565954,
+  "detection": 0.5342434584755403,
+  "detection_by_attack": {
+   "accel_drift": 0.5391644908616188,
+   "doppler_spoof": 0.4007936507936508,
+   "drift": 0.44031007751937984,
+   "freeze": 0.8582278481012658,
+   "jump": 0.6958333333333333,
+   "meaconing": 0.23537604456824512
+  },
+  "auc": 0.8474945242087122,
+  "delay": {
+   "n_segments": 420,
+   "detected_fraction": 0.6714285714285714,
+   "median_delay_s": 1.0,
+   "mean_delay_s": 2.482269503546099
+  },
+  "n_test": 11074,
+  "n_test_attack": 4395,
+  "method": "noisy_or",
+  "method_selection": {
+   "noisy_or": 0.47724498869784204,
+   "logistic": 0.46947263384402343,
+   "max": 0.4653875655898505
+  }
+ }
+}
