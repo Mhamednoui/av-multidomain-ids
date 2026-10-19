@@ -8,7 +8,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
 | WP1 GPS | S4 | IN PROGRESS | worker sonnet (medium) | 2026-10-19 | S3 APPROVED with misses (FA did not transfer from 3 val drives). S6 must filter OSM to drivable classes |
-| WP2 CAN | S0 | IN PROGRESS | worker sonnet | 2026-10-19 | download only, started before M0 (orchestrator) |
+| WP2 CAN | S0 | REVIEW | worker sonnet | 2026-10-19 | D11 downloaded + verified, see reports/WP2_S0.md |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
 | WP5 V2X | S3 | IN PROGRESS | worker sonnet (medium) | 2026-10-19 | S2 APPROVED. Acceptance range / sudden appearance deferred to S3b (needs receiver positions: D25 NextGen or D13 V2AIX) |

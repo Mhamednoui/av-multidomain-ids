@@ -1,0 +1,15 @@
+distinct 174 dup groups 62
+['set_01/test_02_unknown_vehicle_known_attack/DoS-3.csv', 'set_03/train_01/DoS-3.csv']
+['set_01/test_02_unknown_vehicle_known_attack/DoS-4.csv', 'set_03/train_01/DoS-4.csv']
+['set_01/test_02_unknown_vehicle_known_attack/force-neutral-3.csv', 'set_03/train_01/force-neutral-3.csv']
+['set_01/test_02_unknown_vehicle_known_attack/force-neutral-4.csv', 'set_03/train_01/force-neutral-4.csv']
+['set_01/test_04_unknown_vehicle_unknown_attack/double-3.csv', 'set_02/test_01_known_vehicle_known_attack/double-3.csv']
+['set_01/test_04_unknown_vehicle_unknown_attack/double-4.csv', 'set_02/test_01_known_vehicle_known_attack/double-4.csv']
+set_01/test_01_known_vehicle_known_attack/rpm-3.csv inversions 100 min dt -0.0001468658447265625 attack rows after inversion 56
+           timestamp arbitration_id        data_field  attack
+280277  1.672531e+09            0C9  800AAB2A00011800       1
+280282  1.672531e+09            0C9  800AAB2A00011800       1
+set_01/test_03_known_vehicle_unknown_attack/double-3.csv inversions 33 min dt -0.00011420249938964844 attack rows after inversion 14
+           timestamp arbitration_id        data_field  attack
+323511  1.672531e+09            1F1  800E00000800007A       1
+323514  1.672531e+09            0C9    840AF207004108       1

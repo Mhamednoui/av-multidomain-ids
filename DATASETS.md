@@ -23,7 +23,7 @@ source page before downloading.
 | Id | Dataset | For | Real / synthetic | Size | Access / licence | Source |
 |---|---|---|---|---|---|---|
 | D10 | CICIDS2017 full labelled flows (GeneratedLabelledFlows, with IPs, ports, timestamps) | WP4: host / time logic, time split | real lab traffic | ~0.3 GB zip (to confirm) | UNB CIC (form), mirrors exist: verify against the official files | https://www.unb.ca/cic/datasets/ids-2017.html |
-| D11 | can-train-and-test (DTU, Lampe & Meng 2023; v1.5 by Kidmose & Meng 2024) | WP2: 4 vehicles (Chevrolet, Subaru), 9 attacks, known / unknown vehicle test splits | real cars | 7.5 GB | DTU data repository (licence to check) | https://data.dtu.dk/articles/dataset/can-train-and-test/24805533 ; paper arXiv 2308.04972 |
+| D11 | can-train-and-test (DTU, Lampe & Meng 2023). DOWNLOADED 2026-10-19 (figshare version 1, published 2023-12-15) | WP2: 4 vehicles (2011 Chevrolet Impala, 2011 Chevrolet Traverse, 2016 Chevrolet Silverado, 2017 Subaru Forester), 9+ attack types, known / unknown vehicle test splits | real cars, injected attacks | 7.47 GB extracted (1.51 GB zip, MD5 verified); free disk after: 44 GB | CC BY 4.0 (read from the DTU page and the figshare API) | ../data_extra/D11_can-train-and-test/can-train-and-test/ ; source https://data.dtu.dk/articles/dataset/can-train-and-test/24805533 (DOI 10.11583/DTU.24805533.v1); paper arXiv 2308.04972. Layout: section 5 |
 | D12 | VeReMi Extension (Kamel et al. 2020; combined CSV by Slama et al.) | WP5: labelled V2X misbehaviour benchmark | simulated (Veins / SUMO, LuST) | DOWNLOADED 2026-10-19 to ../data_extra/D12_veremi_extension/ : mixalldata_clean.csv 1.21 GB (+ tar.xz 0.33 GB), 3,194,808 messages, 24,663 senders, class 0-19 (0 = genuine, 59.5%); columns sendTime, sender, senderPseudo, pos/spd/acl/hed x,y,z (+ noise cols), no receiver id / no per-simulation id | CC BY 4.0 (checked via Mendeley API) | https://data.mendeley.com/datasets/k62n4z9gdz ; WP5 S0 check: results/WP5/s0_data_check.json |
 | D13 | V2AIX (RWTH ika, 2024) real ETSI ITS CAM / DENM | WP5 real V2X messages | real | NOT DOWNLOADED: access needs a request form with manual approval (name, e-mail, 2 consent boxes) at the Download button of the site; user action needed. Layout when granted: json/{Mobile,Stationary}/{V2X-only,V2X-with-Sensor-Context}/<location>/{joined.json, scenarios/<timestamp>.json}; 263,467 CAMs, 2,388 stations | non-commercial research, cite paper, do NOT redistribute dataset or modified versions (checked on site) | https://v2aix.ika.rwth-aachen.de |
 | D14 | Tampa CV Pilot BSM sample (US DOT FHWA) | WP5 real BSMs | real | DOWNLOADED 2026-10-19 to ../data_extra/D14_tampa_bsm/bsm_sample.csv 39 MB: 34,464 BSMs, 226 vehicle ids, ONE day only (2021-03-19, 00:17-06:59 UTC), 72 vehicles with >=100 msgs; lat/long (1e-7 deg), speed, heading, secMark, accel, yaw present. Full raw data only via ITS DataHub Sandbox request | CC BY-SA 4.0 (Socrata metadata) | https://data.transportation.gov/d/nm7w-nvbm |
@@ -50,3 +50,17 @@ train / val / test splits), MisbehaviorX (IEEE DataPort, Veins, 68 attacks), V2X
 
 Batch A: ~8 GB without D13; ~28 GB with the full V2AIX JSON (prefer a subset of drives).
 Batch B items one at a time. Keep at least 15 GB free at all times.
+
+## 5. D11 can-train-and-test: layout (WP2 S0, 2026-10-19)
+
+Folder `../data_extra/D11_can-train-and-test/` holds `raw/can-train-and-test.zip` (1,507,455,719 B,
+MD5 bd6509d670c0a0009cb3ecab34111bcd = published) and the extracted `can-train-and-test/`
+(README.md + `set_01..set_04`/`{train_01, test_01_known_vehicle_known_attack,
+test_02_unknown_vehicle_known_attack, test_03_known_vehicle_unknown_attack,
+test_04_unknown_vehicle_unknown_attack}`/`<attack>-<n>.csv`). 236 CSV, 193,240,845 frames.
+Columns: `timestamp, arbitration_id (hex str), data_field (hex str, no DLC column), attack (0/1)`.
+Known / unknown vehicle per set: set_01 Impala / Silverado; set_02 Traverse / Subaru;
+set_03 Silverado / Subaru; set_04 Subaru / Traverse. Full numbers: `results/WP2/s0_inventory.json`,
+`s0_summary.txt`. Caveats: many files are byte-identical copies shared across sets (174 distinct
+of 236); timestamps start at the synthetic epoch 1672531200.0 in every file; small timestamp
+inversions (<= 0.15 ms, float rounding) around injected frames in many files.

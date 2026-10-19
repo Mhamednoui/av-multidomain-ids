@@ -1,0 +1,6811 @@
+{
+ "root": "C:/Users/nouir/PFE/data_extra/D11_can-train-and-test/can-train-and-test",
+ "n_files": 236,
+ "files": [
+  {
+   "path": "set_01/test_01_known_vehicle_known_attack/DoS-3.csv",
+   "bytes": 5992583,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 154255,
+   "labels": {
+    "0": 135032,
+    "1": 19223
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 99367,
+    "14": 16678,
+    "8": 14263,
+    "10": 10456,
+    "12": 7057,
+    "4": 6434
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 93.36004400253296,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_01_known_vehicle_known_attack/DoS-4.csv",
+   "bytes": 35705429,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 920350,
+   "labels": {
+    "0": 884204,
+    "1": 36146
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 560712,
+    "14": 109195,
+    "8": 93374,
+    "10": 68452,
+    "12": 46209,
+    "4": 42408
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 611.2881679534912,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_01_known_vehicle_known_attack/force-neutral-3.csv",
+   "bytes": 35169260,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 904145,
+   "labels": {
+    "0": 901913,
+    "1": 2232
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 537457,
+    "14": 111411,
+    "8": 95275,
+    "10": 69846,
+    "12": 47148,
+    "4": 43008
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 623.7024688720703,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_01_known_vehicle_known_attack/force-neutral-4.csv",
+   "bytes": 32576569,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 839873,
+   "labels": {
+    "0": 839614,
+    "1": 259
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 498968,
+    "14": 103799,
+    "8": 88760,
+    "10": 65072,
+    "12": 43924,
+    "4": 39350
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 581.0633671283722,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_01_known_vehicle_known_attack/rpm-3.csv",
+   "bytes": 31339311,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 809398,
+   "labels": {
+    "0": 805802,
+    "1": 3596
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 481758,
+    "14": 99529,
+    "8": 85111,
+    "10": 62394,
+    "12": 42118,
+    "4": 38488
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 557.1527888774872,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_01_known_vehicle_known_attack/rpm-4.csv",
+   "bytes": 31981845,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 824211,
+   "labels": {
+    "0": 823886,
+    "1": 325
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 489307,
+    "14": 101773,
+    "8": 87031,
+    "10": 63804,
+    "12": 43067,
+    "4": 39229
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 569.7675130367279,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_01_known_vehicle_known_attack/standstill-3.csv",
+   "bytes": 24292224,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 629156,
+   "labels": {
+    "0": 627709,
+    "1": 1447
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 372542,
+    "14": 79001,
+    "8": 66324,
+    "10": 48622,
+    "12": 32819,
+    "4": 29848
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 434.6962411403656,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_01_known_vehicle_known_attack/standstill-4.csv",
+   "bytes": 23977213,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 621282,
+   "labels": {
+    "0": 621230,
+    "1": 52
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 368759,
+    "14": 76823,
+    "8": 65649,
+    "10": 48127,
+    "12": 32488,
+    "4": 29436
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 429.7679319381714,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_02_unknown_vehicle_known_attack/DoS-3.csv",
+   "bytes": 42431037,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1100971,
+   "labels": {
+    "0": 943319,
+    "1": 157652
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 654415,
+    "12": 112206,
+    "14": 107226,
+    "8": 70790,
+    "4": 49152,
+    "10": 45022,
+    "6": 31719,
+    "2": 30441
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 366.8123450279236,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_02_unknown_vehicle_known_attack/DoS-4.csv",
+   "bytes": 26343887,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 689028,
+   "labels": {
+    "0": 683104,
+    "1": 5924
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 365664,
+    "12": 81274,
+    "14": 77647,
+    "8": 51261,
+    "4": 35589,
+    "10": 32598,
+    "6": 22950,
+    "2": 22045
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 265.59928703308105,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_02_unknown_vehicle_known_attack/force-neutral-3.csv",
+   "bytes": 17064422,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 449461,
+   "labels": {
+    "0": 449429,
+    "1": 32
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 236745,
+    "12": 53460,
+    "14": 51074,
+    "8": 33719,
+    "4": 23410,
+    "10": 21445,
+    "6": 15107,
+    "2": 14501
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 174.70668005943298,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_02_unknown_vehicle_known_attack/force-neutral-4.csv",
+   "bytes": 62637610,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1646238,
+   "labels": {
+    "0": 1646182,
+    "1": 56
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 867101,
+    "12": 195794,
+    "14": 187082,
+    "8": 123510,
+    "4": 85754,
+    "10": 78549,
+    "6": 55334,
+    "2": 53114
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 639.9689679145813,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_02_unknown_vehicle_known_attack/rpm-3.csv",
+   "bytes": 24085526,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 635397,
+   "labels": {
+    "0": 635271,
+    "1": 126
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 334715,
+    "12": 75554,
+    "14": 72199,
+    "8": 47667,
+    "4": 33094,
+    "10": 30315,
+    "6": 21356,
+    "2": 20497
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 246.9786250591278,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_02_unknown_vehicle_known_attack/rpm-4.csv",
+   "bytes": 24583034,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 645613,
+   "labels": {
+    "0": 645587,
+    "1": 26
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 339983,
+    "12": 76817,
+    "14": 73387,
+    "8": 48449,
+    "4": 33638,
+    "10": 30812,
+    "6": 21692,
+    "2": 20835
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 251.04083395004272,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_02_unknown_vehicle_known_attack/standstill-3.csv",
+   "bytes": 24165206,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 635543,
+   "labels": {
+    "0": 635271,
+    "1": 272
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 334861,
+    "12": 75554,
+    "14": 72199,
+    "8": 47667,
+    "4": 33094,
+    "10": 30315,
+    "6": 21356,
+    "2": 20497
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 246.978835105896,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_02_unknown_vehicle_known_attack/standstill-4.csv",
+   "bytes": 24726257,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 645666,
+   "labels": {
+    "0": 645587,
+    "1": 79
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 340036,
+    "12": 76817,
+    "14": 73387,
+    "8": 48449,
+    "4": 33638,
+    "10": 30812,
+    "6": 21692,
+    "2": 20835
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 251.04034280776978,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/double-3.csv",
+   "bytes": 34817685,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 902805,
+   "labels": {
+    "0": 901913,
+    "1": 892
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 535671,
+    "14": 111857,
+    "8": 95275,
+    "10": 69846,
+    "12": 47148,
+    "4": 43008
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 623.7027850151062,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/double-4.csv",
+   "bytes": 32780010,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 840014,
+   "labels": {
+    "0": 839614,
+    "1": 400
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 498709,
+    "14": 103999,
+    "8": 88960,
+    "10": 65072,
+    "12": 43924,
+    "4": 39350
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 581.063266992569,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/fuzzing-3.csv",
+   "bytes": 22136964,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 573786,
+   "labels": {
+    "0": 567849,
+    "1": 5937
+   },
+   "n_ids": 1946,
+   "hexlen_counts": {
+    "16": 339809,
+    "14": 70482,
+    "8": 60315,
+    "10": 44292,
+    "12": 30050,
+    "4": 27701,
+    "6": 390,
+    "2": 362
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 392.49882102012634,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/fuzzing-4.csv",
+   "bytes": 15879440,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 409146,
+   "labels": {
+    "0": 409108,
+    "1": 38
+   },
+   "n_ids": 89,
+   "hexlen_counts": {
+    "16": 242736,
+    "14": 50515,
+    "8": 43194,
+    "10": 31667,
+    "12": 21374,
+    "4": 19657,
+    "2": 1,
+    "6": 1
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 282.7647759914398,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/interval-3.csv",
+   "bytes": 30698545,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 786935,
+   "labels": {
+    "0": 782643,
+    "1": 4292
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 468504,
+    "14": 96605,
+    "8": 82607,
+    "10": 60558,
+    "12": 40881,
+    "4": 37780
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 540.7932889461517,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/interval-4.csv",
+   "bytes": 34341759,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 884330,
+   "labels": {
+    "0": 884204,
+    "1": 126
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 524692,
+    "14": 109195,
+    "8": 93374,
+    "10": 68452,
+    "12": 46209,
+    "4": 42408
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 611.2878649234772,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/speed-3.csv",
+   "bytes": 24604895,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 631438,
+   "labels": {
+    "0": 627709,
+    "1": 3729
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 376271,
+    "14": 77554,
+    "8": 66324,
+    "10": 48622,
+    "12": 32819,
+    "4": 29848
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 434.69686794281006,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/speed-4.csv",
+   "bytes": 24049791,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 622822,
+   "labels": {
+    "0": 621230,
+    "1": 1592
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 370351,
+    "14": 76771,
+    "8": 65649,
+    "10": 48127,
+    "12": 32488,
+    "4": 29436
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 429.7675619125366,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/systematic-3.csv",
+   "bytes": 30325595,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 783562,
+   "labels": {
+    "0": 782643,
+    "1": 919
+   },
+   "n_ids": 940,
+   "hexlen_counts": {
+    "16": 464642,
+    "14": 96653,
+    "8": 82668,
+    "10": 60623,
+    "12": 40949,
+    "4": 37849,
+    "6": 64,
+    "2": 47
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 540.7935519218445,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/systematic-4.csv",
+   "bytes": 22146425,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 567973,
+   "labels": {
+    "0": 567849,
+    "1": 124
+   },
+   "n_ids": 175,
+   "hexlen_counts": {
+    "16": 336865,
+    "14": 70119,
+    "8": 59960,
+    "10": 43963,
+    "12": 29678,
+    "4": 27350,
+    "2": 13,
+    "6": 8
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 392.4986021518707,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/triple-3.csv",
+   "bytes": 31298504,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 807996,
+   "labels": {
+    "0": 805802,
+    "1": 2194
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 478894,
+    "14": 99529,
+    "8": 85842,
+    "10": 63125,
+    "12": 42118,
+    "4": 38488
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 557.152144908905,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_03_known_vehicle_unknown_attack/triple-4.csv",
+   "bytes": 32162261,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 824468,
+   "labels": {
+    "0": 823886,
+    "1": 582
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 488982,
+    "14": 101773,
+    "8": 87419,
+    "10": 63998,
+    "12": 43067,
+    "4": 39229
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 569.76757979393,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/double-3.csv",
+   "bytes": 41775703,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1106909,
+   "labels": {
+    "0": 1105633,
+    "1": 1276
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 661647,
+    "8": 178393,
+    "4": 82471,
+    "10": 58323,
+    "6": 56359,
+    "12": 38682,
+    "14": 31034
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 554.3853409290314,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/double-4.csv",
+   "bytes": 49379769,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1300435,
+   "labels": {
+    "0": 1299820,
+    "1": 615
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 777987,
+    "8": 209785,
+    "4": 96793,
+    "10": 68510,
+    "6": 66215,
+    "12": 45442,
+    "14": 35703
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 651.9969170093536,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/fuzzing-3.csv",
+   "bytes": 18755856,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 495332,
+   "labels": {
+    "0": 489220,
+    "1": 6112
+   },
+   "n_ids": 1925,
+   "hexlen_counts": {
+    "16": 295891,
+    "8": 79418,
+    "4": 36624,
+    "10": 26124,
+    "6": 25260,
+    "12": 17465,
+    "14": 13790,
+    "2": 390
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 246.12062406539917,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/fuzzing-4.csv",
+   "bytes": 23502550,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 619269,
+   "labels": {
+    "0": 619066,
+    "1": 203
+   },
+   "n_ids": 250,
+   "hexlen_counts": {
+    "16": 370343,
+    "8": 99925,
+    "4": 46222,
+    "10": 32610,
+    "6": 31516,
+    "12": 21633,
+    "14": 17003,
+    "2": 7
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 310.995090007782,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/interval-3.csv",
+   "bytes": 33584019,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 891053,
+   "labels": {
+    "0": 890946,
+    "1": 107
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 532960,
+    "8": 143802,
+    "4": 66167,
+    "10": 47010,
+    "6": 45432,
+    "12": 31183,
+    "14": 24499
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 445.4300570487976,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/interval-4.csv",
+   "bytes": 32589943,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 857658,
+   "labels": {
+    "0": 857632,
+    "1": 26
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 513174,
+    "8": 138477,
+    "4": 63588,
+    "10": 45199,
+    "6": 43686,
+    "12": 29980,
+    "14": 23554
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 510.23660683631897,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/speed-3.csv",
+   "bytes": 98986383,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 2625443,
+   "labels": {
+    "0": 2622302,
+    "1": 3141
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1571793,
+    "8": 423327,
+    "4": 194890,
+    "10": 138195,
+    "6": 133557,
+    "12": 91661,
+    "14": 72020
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1610.014899969101,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/speed-4.csv",
+   "bytes": 71749378,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1898360,
+   "labels": {
+    "0": 1898296,
+    "1": 64
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1135108,
+    "8": 306314,
+    "4": 141415,
+    "10": 100138,
+    "6": 96777,
+    "12": 66421,
+    "14": 52187
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 948.8104450702667,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/systematic-3.csv",
+   "bytes": 19340328,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 507374,
+   "labels": {
+    "0": 507315,
+    "1": 59
+   },
+   "n_ids": 121,
+   "hexlen_counts": {
+    "16": 303514,
+    "8": 81904,
+    "4": 37579,
+    "10": 26775,
+    "6": 25878,
+    "12": 17760,
+    "14": 13955,
+    "2": 5
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 253.69231581687927,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/systematic-4.csv",
+   "bytes": 12530600,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 330614,
+   "labels": {
+    "0": 329692,
+    "1": 922
+   },
+   "n_ids": 585,
+   "hexlen_counts": {
+    "16": 197496,
+    "8": 53240,
+    "4": 24722,
+    "10": 17461,
+    "6": 16851,
+    "12": 11600,
+    "14": 9120,
+    "2": 63
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 164.72261881828308,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/triple-3.csv",
+   "bytes": 75208963,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1993660,
+   "labels": {
+    "0": 1993054,
+    "1": 606
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1192030,
+    "8": 321577,
+    "4": 148821,
+    "10": 105056,
+    "6": 101538,
+    "12": 69686,
+    "14": 54952
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 997.5164830684662,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/test_04_unknown_vehicle_unknown_attack/triple-4.csv",
+   "bytes": 22523639,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 594448,
+   "labels": {
+    "0": 593335,
+    "1": 1113
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 355359,
+    "8": 95709,
+    "4": 44417,
+    "10": 31293,
+    "6": 30235,
+    "12": 20754,
+    "14": 16681
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 296.5454750061035,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/DoS-1.csv",
+   "bytes": 3498722,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 90169,
+   "labels": {
+    "0": 81030,
+    "1": 9139
+   },
+   "n_ids": 52,
+   "hexlen_counts": {
+    "16": 57238,
+    "14": 10009,
+    "8": 8561,
+    "10": 6276,
+    "12": 4236,
+    "4": 3849
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 56.03853797912598,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/DoS-2.csv",
+   "bytes": 12122150,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 311045,
+   "labels": {
+    "0": 285091,
+    "1": 25954
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 195148,
+    "14": 35209,
+    "8": 30112,
+    "10": 22072,
+    "12": 14900,
+    "4": 13604
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 197.10180711746216,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/accessory-1.csv",
+   "bytes": 8085578,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 207704,
+   "labels": {
+    "0": 207704
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 123307,
+    "14": 25660,
+    "8": 21945,
+    "10": 16087,
+    "12": 10858,
+    "4": 9847
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 143.64134693145752,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/accessory-2.csv",
+   "bytes": 8768770,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 226166,
+   "labels": {
+    "0": 226166
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 134372,
+    "14": 27964,
+    "8": 23913,
+    "10": 17531,
+    "12": 11833,
+    "4": 10553
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 156.53177690505981,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/attack-free-1.csv",
+   "bytes": 75976161,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1952833,
+   "labels": {
+    "0": 1952833
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 1159022,
+    "14": 241197,
+    "8": 206259,
+    "10": 151208,
+    "12": 102069,
+    "4": 93078
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1350.2157139778137,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/attack-free-2.csv",
+   "bytes": 49385649,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1265599,
+   "labels": {
+    "0": 1265599
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 751030,
+    "14": 156293,
+    "8": 133649,
+    "10": 97980,
+    "12": 66139,
+    "4": 60508
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 874.9271538257599,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/force-neutral-1.csv",
+   "bytes": 27754807,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 715435,
+   "labels": {
+    "0": 708935,
+    "1": 6500
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 427116,
+    "14": 87561,
+    "8": 74883,
+    "10": 54895,
+    "12": 37054,
+    "4": 33926
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 490.18517208099365,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/force-neutral-2.csv",
+   "bytes": 38541656,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 998485,
+   "labels": {
+    "0": 997993,
+    "1": 492
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 592784,
+    "14": 123306,
+    "8": 105449,
+    "10": 77303,
+    "12": 52180,
+    "4": 47463
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 872.925852060318,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/rpm-1.csv",
+   "bytes": 32695456,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 841053,
+   "labels": {
+    "0": 837715,
+    "1": 3338
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 497168,
+    "14": 106830,
+    "8": 88504,
+    "10": 64882,
+    "12": 43795,
+    "4": 39874
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 579.3520929813385,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/rpm-2.csv",
+   "bytes": 31718456,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 822459,
+   "labels": {
+    "0": 822085,
+    "1": 374
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 487989,
+    "14": 101935,
+    "8": 86848,
+    "10": 63668,
+    "12": 42978,
+    "4": 39041
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 568.535581111908,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/standstill-1.csv",
+   "bytes": 75978651,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1955048,
+   "labels": {
+    "0": 1952833,
+    "1": 2215
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 1159022,
+    "14": 243412,
+    "8": 206259,
+    "10": 151208,
+    "12": 102069,
+    "4": 93078
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1350.2150750160217,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_01/train_01/standstill-2.csv",
+   "bytes": 48937495,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1267144,
+   "labels": {
+    "0": 1265599,
+    "1": 1545
+   },
+   "n_ids": 51,
+   "hexlen_counts": {
+    "16": 751030,
+    "14": 157838,
+    "8": 133649,
+    "10": 97980,
+    "12": 66139,
+    "4": 60508
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 874.9261660575867,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/double-3.csv",
+   "bytes": 41775703,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1106909,
+   "labels": {
+    "0": 1105633,
+    "1": 1276
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 661647,
+    "8": 178393,
+    "4": 82471,
+    "10": 58323,
+    "6": 56359,
+    "12": 38682,
+    "14": 31034
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 554.3853409290314,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/double-4.csv",
+   "bytes": 49379769,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1300435,
+   "labels": {
+    "0": 1299820,
+    "1": 615
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 777987,
+    "8": 209785,
+    "4": 96793,
+    "10": 68510,
+    "6": 66215,
+    "12": 45442,
+    "14": 35703
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 651.9969170093536,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/fuzzing-3.csv",
+   "bytes": 18755856,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 495332,
+   "labels": {
+    "0": 489220,
+    "1": 6112
+   },
+   "n_ids": 1925,
+   "hexlen_counts": {
+    "16": 295891,
+    "8": 79418,
+    "4": 36624,
+    "10": 26124,
+    "6": 25260,
+    "12": 17465,
+    "14": 13790,
+    "2": 390
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 246.12062406539917,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/fuzzing-4.csv",
+   "bytes": 23502550,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 619269,
+   "labels": {
+    "0": 619066,
+    "1": 203
+   },
+   "n_ids": 250,
+   "hexlen_counts": {
+    "16": 370343,
+    "8": 99925,
+    "4": 46222,
+    "10": 32610,
+    "6": 31516,
+    "12": 21633,
+    "14": 17003,
+    "2": 7
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 310.995090007782,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/interval-3.csv",
+   "bytes": 33584019,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 891053,
+   "labels": {
+    "0": 890946,
+    "1": 107
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 532960,
+    "8": 143802,
+    "4": 66167,
+    "10": 47010,
+    "6": 45432,
+    "12": 31183,
+    "14": 24499
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 445.4300570487976,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/interval-4.csv",
+   "bytes": 32589943,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 857658,
+   "labels": {
+    "0": 857632,
+    "1": 26
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 513174,
+    "8": 138477,
+    "4": 63588,
+    "10": 45199,
+    "6": 43686,
+    "12": 29980,
+    "14": 23554
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 510.23660683631897,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/speed-3.csv",
+   "bytes": 98986383,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 2625443,
+   "labels": {
+    "0": 2622302,
+    "1": 3141
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1571793,
+    "8": 423327,
+    "4": 194890,
+    "10": 138195,
+    "6": 133557,
+    "12": 91661,
+    "14": 72020
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1610.014899969101,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/speed-4.csv",
+   "bytes": 71749378,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1898360,
+   "labels": {
+    "0": 1898296,
+    "1": 64
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1135108,
+    "8": 306314,
+    "4": 141415,
+    "10": 100138,
+    "6": 96777,
+    "12": 66421,
+    "14": 52187
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 948.8104450702667,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/systematic-3.csv",
+   "bytes": 19340328,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 507374,
+   "labels": {
+    "0": 507315,
+    "1": 59
+   },
+   "n_ids": 121,
+   "hexlen_counts": {
+    "16": 303514,
+    "8": 81904,
+    "4": 37579,
+    "10": 26775,
+    "6": 25878,
+    "12": 17760,
+    "14": 13955,
+    "2": 5
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 253.69231581687927,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/systematic-4.csv",
+   "bytes": 12530600,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 330614,
+   "labels": {
+    "0": 329692,
+    "1": 922
+   },
+   "n_ids": 585,
+   "hexlen_counts": {
+    "16": 197496,
+    "8": 53240,
+    "4": 24722,
+    "10": 17461,
+    "6": 16851,
+    "12": 11600,
+    "14": 9120,
+    "2": 63
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 164.72261881828308,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/triple-3.csv",
+   "bytes": 75208963,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1993660,
+   "labels": {
+    "0": 1993054,
+    "1": 606
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1192030,
+    "8": 321577,
+    "4": 148821,
+    "10": 105056,
+    "6": 101538,
+    "12": 69686,
+    "14": 54952
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 997.5164830684662,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_01_known_vehicle_known_attack/triple-4.csv",
+   "bytes": 22523639,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 594448,
+   "labels": {
+    "0": 593335,
+    "1": 1113
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 355359,
+    "8": 95709,
+    "4": 44417,
+    "10": 31293,
+    "6": 30235,
+    "12": 20754,
+    "14": 16681
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 296.5454750061035,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/double-3.csv",
+   "bytes": 28042269,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 699508,
+   "labels": {
+    "0": 697212,
+    "1": 2296
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 624318,
+    "14": 22038,
+    "8": 21606,
+    "4": 21605,
+    "2": 8644,
+    "10": 1297
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 432.10103392601013,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/double-4.csv",
+   "bytes": 24732034,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 611726,
+   "labels": {
+    "0": 610370,
+    "1": 1356
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 545895,
+    "14": 19299,
+    "8": 18915,
+    "4": 18914,
+    "2": 7568,
+    "10": 1135
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 378.2772099971771,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/fuzzing-3.csv",
+   "bytes": 20500553,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 510835,
+   "labels": {
+    "0": 509965,
+    "1": 870
+   },
+   "n_ids": 759,
+   "hexlen_counts": {
+    "16": 455377,
+    "14": 16179,
+    "4": 15863,
+    "8": 15854,
+    "2": 6386,
+    "10": 1003,
+    "6": 59,
+    "12": 57
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 316.06025099754333,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/fuzzing-4.csv",
+   "bytes": 25311406,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 629562,
+   "labels": {
+    "0": 628052,
+    "1": 1510
+   },
+   "n_ids": 1096,
+   "hexlen_counts": {
+    "16": 561091,
+    "14": 19943,
+    "4": 19581,
+    "8": 19550,
+    "2": 7885,
+    "10": 1257,
+    "12": 108,
+    "6": 77
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 389.2455859184265,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/interval-3.csv",
+   "bytes": 15924892,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 393679,
+   "labels": {
+    "0": 392891,
+    "1": 788
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 351303,
+    "14": 12423,
+    "8": 12175,
+    "4": 12175,
+    "2": 4871,
+    "10": 732
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 243.48821020126343,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/interval-4.csv",
+   "bytes": 36715373,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 907454,
+   "labels": {
+    "0": 907204,
+    "1": 250
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 809540,
+    "14": 28604,
+    "8": 28004,
+    "4": 28004,
+    "2": 11622,
+    "10": 1680
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 581.0097990036011,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/speed-3.csv",
+   "bytes": 25981307,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 649177,
+   "labels": {
+    "0": 648844,
+    "1": 333
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 579201,
+    "14": 20509,
+    "8": 20107,
+    "4": 20107,
+    "2": 8045,
+    "10": 1208
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 402.1292190551758,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/speed-4.csv",
+   "bytes": 19603552,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 486777,
+   "labels": {
+    "0": 486443,
+    "1": 334
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 434315,
+    "14": 15377,
+    "8": 15074,
+    "4": 15074,
+    "2": 6031,
+    "10": 906
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 301.47398591041565,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/systematic-3.csv",
+   "bytes": 40594450,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1012913,
+   "labels": {
+    "0": 1003139,
+    "1": 9774
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 899873,
+    "14": 32308,
+    "8": 31700,
+    "4": 31665,
+    "2": 13019,
+    "10": 2508,
+    "12": 626,
+    "6": 609
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 621.7078950405121,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/systematic-4.csv",
+   "bytes": 49950983,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1235881,
+   "labels": {
+    "0": 1233676,
+    "1": 2205
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 1101754,
+    "14": 39137,
+    "4": 38367,
+    "8": 38353,
+    "2": 15432,
+    "10": 2435,
+    "6": 148,
+    "12": 124
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 764.5858981609344,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/triple-3.csv",
+   "bytes": 27993164,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 697350,
+   "labels": {
+    "0": 697212,
+    "1": 138
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 622114,
+    "14": 22038,
+    "8": 21652,
+    "4": 21605,
+    "2": 8644,
+    "10": 1297
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 432.10148215293884,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_02_unknown_vehicle_known_attack/triple-4.csv",
+   "bytes": 24453962,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 610565,
+   "labels": {
+    "0": 610370,
+    "1": 195
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 544734,
+    "14": 19299,
+    "8": 18915,
+    "4": 18914,
+    "2": 7568,
+    "10": 1135
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 378.2782609462738,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_03_known_vehicle_unknown_attack/DoS-3.csv",
+   "bytes": 36972674,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 971181,
+   "labels": {
+    "0": 957582,
+    "1": 13599
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 586325,
+    "8": 154563,
+    "4": 71083,
+    "10": 50528,
+    "6": 48832,
+    "12": 33515,
+    "14": 26335
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 478.755234003067,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_03_known_vehicle_unknown_attack/DoS-4.csv",
+   "bytes": 19794271,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 521593,
+   "labels": {
+    "0": 506500,
+    "1": 15093
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 317942,
+    "8": 81731,
+    "4": 37727,
+    "10": 26720,
+    "6": 25822,
+    "12": 17722,
+    "14": 13929
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 253.1484661102295,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_03_known_vehicle_unknown_attack/force-neutral-3.csv",
+   "bytes": 160101768,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 4210018,
+   "labels": {
+    "0": 4209985,
+    "1": 33
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 2516685,
+    "8": 679222,
+    "4": 314484,
+    "10": 222042,
+    "6": 214589,
+    "12": 147277,
+    "14": 115719
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 2103.8579761981964,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_03_known_vehicle_unknown_attack/force-neutral-4.csv",
+   "bytes": 100792113,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 2657027,
+   "labels": {
+    "0": 2657010,
+    "1": 17
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1588824,
+    "8": 428800,
+    "4": 197718,
+    "10": 140179,
+    "6": 135471,
+    "12": 92979,
+    "14": 73056
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1328.1945719718933,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_03_known_vehicle_unknown_attack/rpm-3.csv",
+   "bytes": 47718330,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1254259,
+   "labels": {
+    "0": 1254246,
+    "1": 13
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 749973,
+    "8": 202390,
+    "4": 93624,
+    "10": 66099,
+    "6": 63881,
+    "12": 43842,
+    "14": 34450
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 628.3492910861969,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_03_known_vehicle_unknown_attack/rpm-4.csv",
+   "bytes": 39658058,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1052123,
+   "labels": {
+    "0": 1052106,
+    "1": 17
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 629572,
+    "8": 169891,
+    "4": 77877,
+    "10": 55470,
+    "6": 53611,
+    "12": 36793,
+    "14": 28909
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 527.6480638980865,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_03_known_vehicle_unknown_attack/standstill-3.csv",
+   "bytes": 26145407,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 686802,
+   "labels": {
+    "0": 686796,
+    "1": 6
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 410726,
+    "8": 110829,
+    "4": 51287,
+    "10": 36168,
+    "6": 34954,
+    "12": 23989,
+    "14": 18849
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 371.67028188705444,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_03_known_vehicle_unknown_attack/standstill-4.csv",
+   "bytes": 30320520,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 797053,
+   "labels": {
+    "0": 797040,
+    "1": 13
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 476813,
+    "8": 128667,
+    "4": 59251,
+    "10": 41992,
+    "6": 40590,
+    "12": 27855,
+    "14": 21885
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 399.9655570983887,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_04_unknown_vehicle_unknown_attack/DoS-3.csv",
+   "bytes": 11778073,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 291582,
+   "labels": {
+    "0": 287013,
+    "1": 4569
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 260630,
+    "14": 9072,
+    "8": 8894,
+    "4": 8894,
+    "2": 3558,
+    "10": 534
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 177.8777310848236,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_04_unknown_vehicle_unknown_attack/DoS-4.csv",
+   "bytes": 26293077,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 653469,
+   "labels": {
+    "0": 643639,
+    "1": 9830
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 583584,
+    "14": 19813,
+    "8": 19282,
+    "4": 19282,
+    "2": 10350,
+    "10": 1158
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 982.575670003891,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_04_unknown_vehicle_unknown_attack/force-neutral-3.csv",
+   "bytes": 19196850,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 479368,
+   "labels": {
+    "0": 478124,
+    "1": 1244
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 427802,
+    "14": 15118,
+    "8": 14816,
+    "4": 14816,
+    "2": 5928,
+    "10": 888
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 296.3159649372101,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_04_unknown_vehicle_unknown_attack/force-neutral-4.csv",
+   "bytes": 34849085,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 870399,
+   "labels": {
+    "0": 870065,
+    "1": 334
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 776552,
+    "14": 27521,
+    "8": 26961,
+    "4": 26961,
+    "2": 10786,
+    "10": 1618
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 539.2023069858551,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_04_unknown_vehicle_unknown_attack/rpm-3.csv",
+   "bytes": 27688947,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 689308,
+   "labels": {
+    "0": 688742,
+    "1": 566
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 615032,
+    "14": 21770,
+    "8": 21343,
+    "4": 21343,
+    "2": 8539,
+    "10": 1281
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 426.8613369464874,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_04_unknown_vehicle_unknown_attack/rpm-4.csv",
+   "bytes": 25863545,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 642822,
+   "labels": {
+    "0": 641942,
+    "1": 880
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 573592,
+    "14": 20291,
+    "8": 19893,
+    "4": 19893,
+    "2": 7959,
+    "10": 1194
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 397.85229206085205,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_04_unknown_vehicle_unknown_attack/standstill-3.csv",
+   "bytes": 32472163,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 810295,
+   "labels": {
+    "0": 809782,
+    "1": 513
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 722955,
+    "14": 25609,
+    "8": 25093,
+    "4": 25093,
+    "2": 10039,
+    "10": 1506
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 501.8628990650177,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/test_04_unknown_vehicle_unknown_attack/standstill-4.csv",
+   "bytes": 14179466,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 352661,
+   "labels": {
+    "0": 352589,
+    "1": 72
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 314634,
+    "14": 11147,
+    "8": 10926,
+    "4": 10926,
+    "2": 4372,
+    "10": 656
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 218.52398300170898,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/accessory-1.csv",
+   "bytes": 20134969,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 529370,
+   "labels": {
+    "0": 529370
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 316653,
+    "8": 85456,
+    "4": 39232,
+    "10": 27938,
+    "6": 26999,
+    "12": 18530,
+    "14": 14562
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 264.6984369754791,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/accessory-2.csv",
+   "bytes": 11649554,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 307057,
+   "labels": {
+    "0": 307057
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 183646,
+    "8": 49560,
+    "4": 22796,
+    "10": 16203,
+    "6": 15658,
+    "12": 10747,
+    "14": 8447
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 153.51315903663635,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/attack-free-1.csv",
+   "bytes": 33719258,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 889331,
+   "labels": {
+    "0": 889331
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 531863,
+    "8": 143536,
+    "4": 66081,
+    "10": 46924,
+    "6": 45347,
+    "12": 31124,
+    "14": 24456
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 444.5891799926758,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/attack-free-2.csv",
+   "bytes": 21757010,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 573956,
+   "labels": {
+    "0": 573956
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 343208,
+    "8": 92624,
+    "4": 42718,
+    "10": 30280,
+    "6": 29262,
+    "12": 20084,
+    "14": 15780
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 286.8939781188965,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/double-1.csv",
+   "bytes": 41185016,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1092582,
+   "labels": {
+    "0": 1087627,
+    "1": 4955
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 652888,
+    "8": 175523,
+    "4": 81104,
+    "10": 57314,
+    "6": 55390,
+    "12": 38015,
+    "14": 32348
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 545.1621429920197,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/double-2.csv",
+   "bytes": 17526419,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 463001,
+   "labels": {
+    "0": 454101,
+    "1": 8900
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 280492,
+    "8": 73295,
+    "4": 33703,
+    "10": 23967,
+    "6": 23157,
+    "12": 15895,
+    "14": 12492
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 254.25114703178406,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/fuzzing-1.csv",
+   "bytes": 46782254,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1235992,
+   "labels": {
+    "0": 1122478,
+    "1": 113514
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 727846,
+    "8": 188328,
+    "4": 90420,
+    "10": 66349,
+    "6": 64307,
+    "12": 46440,
+    "14": 37943,
+    "2": 7194
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 561.2269351482391,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/fuzzing-2.csv",
+   "bytes": 44490428,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1167769,
+   "labels": {
+    "0": 1161656,
+    "1": 6113
+   },
+   "n_ids": 1935,
+   "hexlen_counts": {
+    "16": 697347,
+    "8": 187798,
+    "4": 87372,
+    "10": 61605,
+    "6": 59555,
+    "12": 41006,
+    "14": 32332,
+    "2": 395
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 580.4120688438416,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/interval-1.csv",
+   "bytes": 23948856,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 634191,
+   "labels": {
+    "0": 619066,
+    "1": 15125
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 385362,
+    "8": 99912,
+    "4": 46212,
+    "10": 32596,
+    "6": 31502,
+    "12": 21620,
+    "14": 16987
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 310.9954218864441,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/interval-2.csv",
+   "bytes": 62683875,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1653840,
+   "labels": {
+    "0": 1652661,
+    "1": 1179
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 989663,
+    "8": 266759,
+    "4": 122849,
+    "10": 87138,
+    "6": 84219,
+    "12": 57798,
+    "14": 45414
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 827.6774971485138,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/speed-1.csv",
+   "bytes": 99358561,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 2619677,
+   "labels": {
+    "0": 2619663,
+    "1": 14
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1566343,
+    "8": 422699,
+    "4": 195449,
+    "10": 138113,
+    "6": 133485,
+    "12": 91611,
+    "14": 71977
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1310.7408950328827,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/speed-2.csv",
+   "bytes": 104275419,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 2734513,
+   "labels": {
+    "0": 2734475,
+    "1": 38
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1635426,
+    "8": 441341,
+    "4": 203358,
+    "10": 144208,
+    "6": 139372,
+    "12": 95653,
+    "14": 75155
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1368.4769940376282,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/systematic-1.csv",
+   "bytes": 20551827,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 541323,
+   "labels": {
+    "0": 504198,
+    "1": 37125
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 320265,
+    "8": 83715,
+    "4": 39590,
+    "10": 28946,
+    "6": 27986,
+    "12": 19973,
+    "14": 16185,
+    "2": 2339
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 252.19433116912842,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/systematic-2.csv",
+   "bytes": 17343447,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 456086,
+   "labels": {
+    "0": 453827,
+    "1": 2259
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 272617,
+    "8": 73414,
+    "4": 33725,
+    "10": 24108,
+    "6": 23307,
+    "12": 16012,
+    "14": 12641,
+    "2": 128
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 226.94373083114624,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/triple-1.csv",
+   "bytes": 67253172,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1780543,
+   "labels": {
+    "0": 1749487,
+    "1": 31056
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1066651,
+    "8": 282285,
+    "4": 130484,
+    "10": 92283,
+    "6": 89183,
+    "14": 58448,
+    "12": 61209
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 874.363697052002,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_02/train_01/triple-2.csv",
+   "bytes": 24947957,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 661579,
+   "labels": {
+    "0": 657520,
+    "1": 4059
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 395743,
+    "8": 106073,
+    "4": 49143,
+    "10": 34680,
+    "6": 33511,
+    "12": 23001,
+    "14": 19428
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 328.62271904945374,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/DoS-1.csv",
+   "bytes": 9780523,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 252707,
+   "labels": {
+    "0": 208924,
+    "1": 43783
+   },
+   "n_ids": 99,
+   "hexlen_counts": {
+    "16": 153772,
+    "12": 24867,
+    "14": 23755,
+    "8": 15682,
+    "4": 10889,
+    "10": 9975,
+    "6": 7023,
+    "2": 6744
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 81.25668597221375,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/DoS-2.csv",
+   "bytes": 17055036,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 445731,
+   "labels": {
+    "0": 391486,
+    "1": 54245
+   },
+   "n_ids": 99,
+   "hexlen_counts": {
+    "16": 260464,
+    "12": 46539,
+    "14": 44483,
+    "8": 29368,
+    "4": 20391,
+    "10": 18676,
+    "6": 13182,
+    "2": 12628
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 152.17134499549866,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/double-1.csv",
+   "bytes": 48119530,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1257705,
+   "labels": {
+    "0": 1254632,
+    "1": 3073
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 662362,
+    "12": 149234,
+    "14": 142578,
+    "8": 94129,
+    "4": 65353,
+    "10": 61397,
+    "6": 42174,
+    "2": 40478
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 487.72804713249207,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/double-2.csv",
+   "bytes": 34879907,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 920226,
+   "labels": {
+    "0": 918266,
+    "1": 1960
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 483583,
+    "12": 110228,
+    "14": 105353,
+    "8": 68905,
+    "4": 47842,
+    "10": 43824,
+    "6": 30858,
+    "2": 29633
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 357.0358989238739,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/force-neutral-1.csv",
+   "bytes": 47687878,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1257602,
+   "labels": {
+    "0": 1254632,
+    "1": 2970
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 663795,
+    "12": 149234,
+    "14": 142578,
+    "8": 94129,
+    "4": 65353,
+    "10": 59861,
+    "6": 42174,
+    "2": 40478
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 487.7281379699707,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/force-neutral-2.csv",
+   "bytes": 35237942,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 918980,
+   "labels": {
+    "0": 918266,
+    "1": 714
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 484297,
+    "12": 109248,
+    "14": 104373,
+    "8": 68905,
+    "4": 47842,
+    "10": 43824,
+    "6": 30858,
+    "2": 29633
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 357.0362298488617,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/fuzzing-1.csv",
+   "bytes": 40309244,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1059035,
+   "labels": {
+    "0": 1008513,
+    "1": 50522
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 556306,
+    "12": 123190,
+    "14": 117794,
+    "8": 78797,
+    "4": 55642,
+    "10": 51381,
+    "6": 37104,
+    "2": 35678
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 392.2755000591278,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/fuzzing-2.csv",
+   "bytes": 30393790,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 793574,
+   "labels": {
+    "0": 793021,
+    "1": 553
+   },
+   "n_ids": 563,
+   "hexlen_counts": {
+    "16": 417761,
+    "12": 94419,
+    "14": 90201,
+    "8": 59572,
+    "4": 41376,
+    "10": 37898,
+    "6": 26690,
+    "2": 25630
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 308.46182894706726,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/triple-1.csv",
+   "bytes": 20128527,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 524898,
+   "labels": {
+    "0": 522688,
+    "1": 2210
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 276027,
+    "12": 62178,
+    "14": 60138,
+    "8": 39219,
+    "4": 27229,
+    "10": 25678,
+    "6": 17564,
+    "2": 16865
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 203.20952916145325,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_01_known_vehicle_known_attack/triple-2.csv",
+   "bytes": 43483949,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1145333,
+   "labels": {
+    "0": 1142858,
+    "1": 2475
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 602007,
+    "12": 137582,
+    "14": 130691,
+    "8": 85733,
+    "4": 59527,
+    "10": 54528,
+    "6": 38396,
+    "2": 36869
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 444.2384068965912,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/DoS-1.csv",
+   "bytes": 25795857,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 643807,
+   "labels": {
+    "0": 631716,
+    "1": 12091
+   },
+   "n_ids": 55,
+   "hexlen_counts": {
+    "16": 575675,
+    "14": 19974,
+    "8": 19577,
+    "4": 19577,
+    "2": 7831,
+    "10": 1173
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 391.53028893470764,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/DoS-2.csv",
+   "bytes": 28481072,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 709039,
+   "labels": {
+    "0": 683731,
+    "1": 25308
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 635244,
+    "14": 21554,
+    "8": 21100,
+    "4": 21100,
+    "2": 8776,
+    "10": 1265
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 438.7151548862457,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/double-1.csv",
+   "bytes": 50097196,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1244063,
+   "labels": {
+    "0": 1233676,
+    "1": 10387
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 1111017,
+    "14": 38996,
+    "8": 38230,
+    "4": 38230,
+    "2": 15295,
+    "10": 2295
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 764.5854761600494,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/double-2.csv",
+   "bytes": 27856480,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 695540,
+   "labels": {
+    "0": 690926,
+    "1": 4614
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 621019,
+    "14": 21849,
+    "8": 21410,
+    "4": 21410,
+    "2": 8566,
+    "10": 1286
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 428.187381029129,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/force-neutral-1.csv",
+   "bytes": 21158090,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 527589,
+   "labels": {
+    "0": 525869,
+    "1": 1720
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 470877,
+    "14": 16623,
+    "8": 16296,
+    "4": 16296,
+    "2": 6519,
+    "10": 978
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 325.92437505722046,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/force-neutral-2.csv",
+   "bytes": 19047891,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 475757,
+   "labels": {
+    "0": 474378,
+    "1": 1379
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 424598,
+    "14": 14994,
+    "8": 14701,
+    "4": 14700,
+    "2": 5881,
+    "10": 883
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 294.0099949836731,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/fuzzing-1.csv",
+   "bytes": 26438538,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 660170,
+   "labels": {
+    "0": 631716,
+    "1": 28454
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 577861,
+    "14": 21683,
+    "8": 21357,
+    "4": 21351,
+    "2": 9629,
+    "10": 2982,
+    "12": 1761,
+    "6": 1709
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 391.5298390388489,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/fuzzing-2.csv",
+   "bytes": 26107792,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 650196,
+   "labels": {
+    "0": 643639,
+    "1": 6557
+   },
+   "n_ids": 1961,
+   "hexlen_counts": {
+    "16": 577020,
+    "14": 20249,
+    "4": 19672,
+    "8": 19668,
+    "2": 10777,
+    "10": 1586,
+    "12": 399,
+    "6": 391
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 982.5758540630341,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/triple-1.csv",
+   "bytes": 22022316,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 544385,
+   "labels": {
+    "0": 491468,
+    "1": 52917
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 491384,
+    "14": 15535,
+    "8": 15230,
+    "4": 15230,
+    "2": 6093,
+    "10": 913
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 304.5881381034851,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_02_unknown_vehicle_known_attack/triple-2.csv",
+   "bytes": 28462391,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 703688,
+   "labels": {
+    "0": 690926,
+    "1": 12762
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 624913,
+    "8": 25664,
+    "14": 21849,
+    "4": 21410,
+    "2": 8566,
+    "10": 1286
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 428.18742394447327,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/interval-1.csv",
+   "bytes": 36111498,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 950657,
+   "labels": {
+    "0": 943319,
+    "1": 7338
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 504101,
+    "12": 112206,
+    "14": 107226,
+    "8": 70790,
+    "4": 49152,
+    "10": 45022,
+    "6": 31719,
+    "2": 30441
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 366.81196904182434,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/interval-2.csv",
+   "bytes": 38619635,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1009145,
+   "labels": {
+    "0": 1008513,
+    "1": 632
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 531568,
+    "12": 120033,
+    "14": 114674,
+    "8": 75707,
+    "4": 52564,
+    "10": 48147,
+    "6": 33895,
+    "2": 32557
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 392.27513098716736,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/rpm-1.csv",
+   "bytes": 19991280,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 524212,
+   "labels": {
+    "0": 522688,
+    "1": 1524
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 276814,
+    "12": 62178,
+    "14": 59402,
+    "8": 39219,
+    "4": 27229,
+    "10": 24941,
+    "6": 17564,
+    "2": 16865
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 203.2086238861084,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/rpm-2.csv",
+   "bytes": 43556158,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1143081,
+   "labels": {
+    "0": 1142858,
+    "1": 223
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 602230,
+    "12": 135932,
+    "14": 129866,
+    "8": 85733,
+    "4": 59527,
+    "10": 54528,
+    "6": 38396,
+    "2": 36869
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 444.2386260032654,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/rpm-accessory-1.csv",
+   "bytes": 6301600,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 166162,
+   "labels": {
+    "0": 166134,
+    "1": 28
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 87492,
+    "12": 19775,
+    "14": 18891,
+    "8": 12473,
+    "4": 8659,
+    "10": 7931,
+    "6": 5578,
+    "2": 5363
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 64.61852598190308,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/rpm-accessory-2.csv",
+   "bytes": 5718844,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 149740,
+   "labels": {
+    "0": 149710,
+    "1": 30
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 78843,
+    "12": 17818,
+    "14": 17028,
+    "8": 11239,
+    "4": 7803,
+    "10": 7146,
+    "6": 5028,
+    "2": 4835
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 58.224544048309326,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/speed-1.csv",
+   "bytes": 47698202,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1255235,
+   "labels": {
+    "0": 1254632,
+    "1": 603
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 661428,
+    "12": 149234,
+    "14": 142578,
+    "8": 94129,
+    "4": 65353,
+    "10": 59861,
+    "6": 42174,
+    "2": 40478
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 487.72738099098206,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/speed-2.csv",
+   "bytes": 34863874,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 919087,
+   "labels": {
+    "0": 918266,
+    "1": 821
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 484404,
+    "12": 109248,
+    "14": 104373,
+    "8": 68905,
+    "4": 47842,
+    "10": 43824,
+    "6": 30858,
+    "2": 29633
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 357.0364429950714,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/speed-accessory-1.csv",
+   "bytes": 6494350,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 170115,
+   "labels": {
+    "0": 166134,
+    "1": 3981
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 91445,
+    "12": 19775,
+    "14": 18891,
+    "8": 12473,
+    "4": 8659,
+    "10": 7931,
+    "6": 5578,
+    "2": 5363
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 64.61789083480835,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/speed-accessory-2.csv",
+   "bytes": 5716613,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 149831,
+   "labels": {
+    "0": 149710,
+    "1": 121
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 78934,
+    "12": 17818,
+    "14": 17028,
+    "8": 11239,
+    "4": 7803,
+    "10": 7146,
+    "6": 5028,
+    "2": 4835
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 58.22495198249817,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/standstill-1.csv",
+   "bytes": 19907126,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 524245,
+   "labels": {
+    "0": 522688,
+    "1": 1557
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 276847,
+    "12": 62178,
+    "14": 59402,
+    "8": 39219,
+    "4": 27229,
+    "10": 24941,
+    "6": 17564,
+    "2": 16865
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 203.20892190933228,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/standstill-2.csv",
+   "bytes": 43445690,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1143404,
+   "labels": {
+    "0": 1142858,
+    "1": 546
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 602553,
+    "12": 135932,
+    "14": 129866,
+    "8": 85733,
+    "4": 59527,
+    "10": 54528,
+    "6": 38396,
+    "2": 36869
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 444.2387640476227,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/systematic-1.csv",
+   "bytes": 29763272,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 776168,
+   "labels": {
+    "0": 775672,
+    "1": 496
+   },
+   "n_ids": 548,
+   "hexlen_counts": {
+    "16": 408604,
+    "12": 92361,
+    "14": 88227,
+    "8": 58259,
+    "4": 40452,
+    "10": 37060,
+    "6": 26103,
+    "2": 25072
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 301.7117660045624,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_03_known_vehicle_unknown_attack/systematic-2.csv",
+   "bytes": 21678193,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 566869,
+   "labels": {
+    "0": 566617,
+    "1": 252
+   },
+   "n_ids": 339,
+   "hexlen_counts": {
+    "16": 298418,
+    "12": 67452,
+    "14": 64453,
+    "8": 42559,
+    "4": 29548,
+    "10": 27064,
+    "6": 19054,
+    "2": 18309
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 220.3914930820465,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/interval-1.csv",
+   "bytes": 34641107,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 857154,
+   "labels": {
+    "0": 765470,
+    "1": 91684
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 774600,
+    "14": 24197,
+    "8": 23722,
+    "4": 23721,
+    "2": 9490,
+    "10": 1424
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 474.4132151603699,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/interval-2.csv",
+   "bytes": 18663978,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 465145,
+   "labels": {
+    "0": 451553,
+    "1": 13592
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 416443,
+    "14": 14278,
+    "8": 13993,
+    "4": 13993,
+    "2": 5598,
+    "10": 840
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 279.84522914886475,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/rpm-1.csv",
+   "bytes": 19720399,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 488528,
+   "labels": {
+    "0": 483698,
+    "1": 4830
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 436356,
+    "14": 15298,
+    "8": 14989,
+    "4": 14989,
+    "2": 5997,
+    "10": 899
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 299.769562959671,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/rpm-2.csv",
+   "bytes": 22946502,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 569888,
+   "labels": {
+    "0": 569420,
+    "1": 468
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 508478,
+    "14": 18001,
+    "8": 17646,
+    "4": 17645,
+    "2": 7059,
+    "10": 1059
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 352.9057970046997,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/rpm-accessory-1.csv",
+   "bytes": 5220106,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 129817,
+   "labels": {
+    "0": 128469,
+    "1": 1348
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 115961,
+    "14": 4061,
+    "8": 3981,
+    "4": 3981,
+    "2": 1593,
+    "10": 240
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 79.61555695533752,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/rpm-accessory-2.csv",
+   "bytes": 5596879,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 138381,
+   "labels": {
+    "0": 138166,
+    "1": 215
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 123479,
+    "14": 4368,
+    "8": 4282,
+    "4": 4282,
+    "2": 1713,
+    "10": 257
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 85.6334969997406,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/speed-1.csv",
+   "bytes": 30421072,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 757055,
+   "labels": {
+    "0": 744180,
+    "1": 12875
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 676793,
+    "14": 23529,
+    "8": 23061,
+    "4": 23061,
+    "2": 9226,
+    "10": 1385
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 461.20890402793884,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/speed-2.csv",
+   "bytes": 28643415,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 714871,
+   "labels": {
+    "0": 713513,
+    "1": 1358
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 637924,
+    "14": 22553,
+    "8": 22111,
+    "4": 22111,
+    "2": 8846,
+    "10": 1326
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 442.207927942276,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/speed-accessory-1.csv",
+   "bytes": 10558989,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 262041,
+   "labels": {
+    "0": 260611,
+    "1": 1430
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 233933,
+    "14": 8240,
+    "8": 8077,
+    "4": 8077,
+    "2": 3231,
+    "10": 483
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 161.52469491958618,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/speed-accessory-2.csv",
+   "bytes": 6647294,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 164771,
+   "labels": {
+    "0": 164681,
+    "1": 90
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 147012,
+    "14": 5205,
+    "8": 5103,
+    "4": 5103,
+    "2": 2042,
+    "10": 306
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 102.06635189056396,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/standstill-1.csv",
+   "bytes": 12404934,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 306189,
+   "labels": {
+    "0": 298327,
+    "1": 7862
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 274015,
+    "14": 9430,
+    "8": 9245,
+    "4": 9245,
+    "2": 3699,
+    "10": 555
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 184.8970170021057,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/standstill-2.csv",
+   "bytes": 35735469,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 892327,
+   "labels": {
+    "0": 889966,
+    "1": 2361
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 796349,
+    "14": 28131,
+    "8": 27579,
+    "4": 27579,
+    "2": 11034,
+    "10": 1655
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 551.5566029548645,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/systematic-1.csv",
+   "bytes": 20886277,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 519433,
+   "labels": {
+    "0": 509965,
+    "1": 9468
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 459749,
+    "14": 16727,
+    "8": 16391,
+    "4": 16381,
+    "2": 6911,
+    "10": 1539,
+    "6": 589,
+    "12": 579
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 316.0603859424591,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/test_04_unknown_vehicle_unknown_attack/systematic-2.csv",
+   "bytes": 25236201,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 630419,
+   "labels": {
+    "0": 628052,
+    "1": 2367
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 561489,
+    "14": 19991,
+    "4": 19610,
+    "8": 19598,
+    "2": 7959,
+    "10": 1315,
+    "12": 164,
+    "6": 134
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 389.24634408950806,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/DoS-3.csv",
+   "bytes": 42431037,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1100971,
+   "labels": {
+    "0": 943319,
+    "1": 157652
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 654415,
+    "12": 112206,
+    "14": 107226,
+    "8": 70790,
+    "4": 49152,
+    "10": 45022,
+    "6": 31719,
+    "2": 30441
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 366.8123450279236,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/DoS-4.csv",
+   "bytes": 26343887,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 689028,
+   "labels": {
+    "0": 683104,
+    "1": 5924
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 365664,
+    "12": 81274,
+    "14": 77647,
+    "8": 51261,
+    "4": 35589,
+    "10": 32598,
+    "6": 22950,
+    "2": 22045
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 265.59928703308105,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/accessory-3.csv",
+   "bytes": 8227506,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 216573,
+   "labels": {
+    "0": 216573
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 114014,
+    "12": 25775,
+    "14": 24623,
+    "8": 16258,
+    "4": 11288,
+    "10": 10337,
+    "6": 7286,
+    "2": 6992
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 84.23611092567444,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/accessory-4.csv",
+   "bytes": 16994933,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 446433,
+   "labels": {
+    "0": 446433
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 235034,
+    "12": 53134,
+    "14": 50766,
+    "8": 33511,
+    "4": 23268,
+    "10": 21311,
+    "6": 14995,
+    "2": 14414
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 173.6440269947052,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/attack-free-3.csv",
+   "bytes": 65768839,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1711471,
+   "labels": {
+    "0": 1711471
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 901058,
+    "12": 203686,
+    "14": 194597,
+    "8": 128469,
+    "4": 89197,
+    "10": 81696,
+    "6": 57520,
+    "2": 55248
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 666.5693719387054,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/attack-free-4.csv",
+   "bytes": 49512315,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1295306,
+   "labels": {
+    "0": 1295306
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 681956,
+    "12": 154115,
+    "14": 147284,
+    "8": 97242,
+    "4": 67516,
+    "10": 61835,
+    "6": 43539,
+    "2": 41819
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 503.89113306999207,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/double-3.csv",
+   "bytes": 17242768,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 449725,
+   "labels": {
+    "0": 449429,
+    "1": 296
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 236861,
+    "12": 53608,
+    "14": 51074,
+    "8": 33719,
+    "4": 23410,
+    "10": 21445,
+    "6": 15107,
+    "2": 14501
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 174.7071030139923,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/double-4.csv",
+   "bytes": 62773392,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1646538,
+   "labels": {
+    "0": 1646182,
+    "1": 356
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 867045,
+    "12": 195794,
+    "14": 187082,
+    "8": 123510,
+    "4": 85754,
+    "10": 78727,
+    "6": 55512,
+    "2": 53114
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 639.9697368144989,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/force-neutral-3.csv",
+   "bytes": 17064422,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 449461,
+   "labels": {
+    "0": 449429,
+    "1": 32
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 236745,
+    "12": 53460,
+    "14": 51074,
+    "8": 33719,
+    "4": 23410,
+    "10": 21445,
+    "6": 15107,
+    "2": 14501
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 174.70668005943298,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/force-neutral-4.csv",
+   "bytes": 62637610,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1646238,
+   "labels": {
+    "0": 1646182,
+    "1": 56
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 867101,
+    "12": 195794,
+    "14": 187082,
+    "8": 123510,
+    "4": 85754,
+    "10": 78549,
+    "6": 55334,
+    "2": 53114
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 639.9689679145813,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/fuzzing-3.csv",
+   "bytes": 11292970,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 296365,
+   "labels": {
+    "0": 292517,
+    "1": 3848
+   },
+   "n_ids": 1756,
+   "hexlen_counts": {
+    "16": 155905,
+    "12": 35008,
+    "14": 33507,
+    "8": 22191,
+    "4": 15483,
+    "10": 14223,
+    "6": 10111,
+    "2": 9699,
+    "17": 1
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 113.78568005561829,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/fuzzing-4.csv",
+   "bytes": 30393754,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 795457,
+   "labels": {
+    "0": 795285,
+    "1": 172
+   },
+   "n_ids": 257,
+   "hexlen_counts": {
+    "16": 419201,
+    "12": 93946,
+    "14": 90527,
+    "8": 59771,
+    "4": 41500,
+    "10": 38019,
+    "6": 26773,
+    "2": 25708
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 309.6437199115753,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/triple-3.csv",
+   "bytes": 24267026,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 635673,
+   "labels": {
+    "0": 635271,
+    "1": 402
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 334723,
+    "12": 75688,
+    "14": 72333,
+    "8": 47667,
+    "4": 33094,
+    "10": 30315,
+    "6": 21356,
+    "2": 20497
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 246.9789741039276,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_03/train_01/triple-4.csv",
+   "bytes": 24693880,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 646528,
+   "labels": {
+    "0": 645587,
+    "1": 941
+   },
+   "n_ids": 98,
+   "hexlen_counts": {
+    "16": 340584,
+    "12": 76817,
+    "14": 73387,
+    "8": 48449,
+    "4": 33638,
+    "10": 31126,
+    "6": 21692,
+    "2": 20835
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 251.04057908058167,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/interval-1.csv",
+   "bytes": 34641107,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 857154,
+   "labels": {
+    "0": 765470,
+    "1": 91684
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 774600,
+    "14": 24197,
+    "8": 23722,
+    "4": 23721,
+    "2": 9490,
+    "10": 1424
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 474.4132151603699,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/interval-2.csv",
+   "bytes": 18663978,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 465145,
+   "labels": {
+    "0": 451553,
+    "1": 13592
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 416443,
+    "14": 14278,
+    "8": 13993,
+    "4": 13993,
+    "2": 5598,
+    "10": 840
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 279.84522914886475,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/rpm-1.csv",
+   "bytes": 19720399,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 488528,
+   "labels": {
+    "0": 483698,
+    "1": 4830
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 436356,
+    "14": 15298,
+    "8": 14989,
+    "4": 14989,
+    "2": 5997,
+    "10": 899
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 299.769562959671,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/rpm-2.csv",
+   "bytes": 22946502,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 569888,
+   "labels": {
+    "0": 569420,
+    "1": 468
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 508478,
+    "14": 18001,
+    "8": 17646,
+    "4": 17645,
+    "2": 7059,
+    "10": 1059
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 352.9057970046997,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/rpm-accessory-1.csv",
+   "bytes": 5220106,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 129817,
+   "labels": {
+    "0": 128469,
+    "1": 1348
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 115961,
+    "14": 4061,
+    "8": 3981,
+    "4": 3981,
+    "2": 1593,
+    "10": 240
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 79.61555695533752,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/rpm-accessory-2.csv",
+   "bytes": 5596879,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 138381,
+   "labels": {
+    "0": 138166,
+    "1": 215
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 123479,
+    "14": 4368,
+    "8": 4282,
+    "4": 4282,
+    "2": 1713,
+    "10": 257
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 85.6334969997406,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/speed-1.csv",
+   "bytes": 30421072,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 757055,
+   "labels": {
+    "0": 744180,
+    "1": 12875
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 676793,
+    "14": 23529,
+    "8": 23061,
+    "4": 23061,
+    "2": 9226,
+    "10": 1385
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 461.20890402793884,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/speed-2.csv",
+   "bytes": 28643415,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 714871,
+   "labels": {
+    "0": 713513,
+    "1": 1358
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 637924,
+    "14": 22553,
+    "8": 22111,
+    "4": 22111,
+    "2": 8846,
+    "10": 1326
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 442.207927942276,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/speed-accessory-1.csv",
+   "bytes": 10558989,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 262041,
+   "labels": {
+    "0": 260611,
+    "1": 1430
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 233933,
+    "14": 8240,
+    "8": 8077,
+    "4": 8077,
+    "2": 3231,
+    "10": 483
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 161.52469491958618,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/speed-accessory-2.csv",
+   "bytes": 6647294,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 164771,
+   "labels": {
+    "0": 164681,
+    "1": 90
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 147012,
+    "14": 5205,
+    "8": 5103,
+    "4": 5103,
+    "2": 2042,
+    "10": 306
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 102.06635189056396,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/standstill-1.csv",
+   "bytes": 12404934,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 306189,
+   "labels": {
+    "0": 298327,
+    "1": 7862
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 274015,
+    "14": 9430,
+    "8": 9245,
+    "4": 9245,
+    "2": 3699,
+    "10": 555
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 184.8970170021057,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/standstill-2.csv",
+   "bytes": 35735469,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 892327,
+   "labels": {
+    "0": 889966,
+    "1": 2361
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 796349,
+    "14": 28131,
+    "8": 27579,
+    "4": 27579,
+    "2": 11034,
+    "10": 1655
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 551.5566029548645,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/systematic-1.csv",
+   "bytes": 20886277,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 519433,
+   "labels": {
+    "0": 509965,
+    "1": 9468
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 459749,
+    "14": 16727,
+    "8": 16391,
+    "4": 16381,
+    "2": 6911,
+    "10": 1539,
+    "6": 589,
+    "12": 579
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 316.0603859424591,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_01_known_vehicle_known_attack/systematic-2.csv",
+   "bytes": 25236201,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 630419,
+   "labels": {
+    "0": 628052,
+    "1": 2367
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 561489,
+    "14": 19991,
+    "4": 19610,
+    "8": 19598,
+    "2": 7959,
+    "10": 1315,
+    "12": 164,
+    "6": 134
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 389.24634408950806,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/interval-1.csv",
+   "bytes": 23948856,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 634191,
+   "labels": {
+    "0": 619066,
+    "1": 15125
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 385362,
+    "8": 99912,
+    "4": 46212,
+    "10": 32596,
+    "6": 31502,
+    "12": 21620,
+    "14": 16987
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 310.9954218864441,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/interval-2.csv",
+   "bytes": 62683875,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1653840,
+   "labels": {
+    "0": 1652661,
+    "1": 1179
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 989663,
+    "8": 266759,
+    "4": 122849,
+    "10": 87138,
+    "6": 84219,
+    "12": 57798,
+    "14": 45414
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 827.6774971485138,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/rpm-1.csv",
+   "bytes": 125672401,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 3296008,
+   "labels": {
+    "0": 3295597,
+    "1": 411
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1971838,
+    "8": 532019,
+    "4": 244566,
+    "10": 173787,
+    "6": 167956,
+    "12": 115271,
+    "14": 90571
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 2025.215663909912,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/rpm-2.csv",
+   "bytes": 74511748,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1975925,
+   "labels": {
+    "0": 1975831,
+    "1": 94
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1181917,
+    "8": 318950,
+    "4": 146682,
+    "10": 104216,
+    "6": 100722,
+    "12": 69125,
+    "14": 54313
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 988.9946930408478,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/rpm-accessory-1.csv",
+   "bytes": 19994030,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 529658,
+   "labels": {
+    "0": 529370,
+    "1": 288
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 316941,
+    "8": 85456,
+    "4": 39232,
+    "10": 27938,
+    "6": 26999,
+    "12": 18530,
+    "14": 14562
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 264.69746804237366,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/rpm-accessory-2.csv",
+   "bytes": 11574573,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 307113,
+   "labels": {
+    "0": 307057,
+    "1": 56
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 183702,
+    "8": 49560,
+    "4": 22796,
+    "10": 16203,
+    "6": 15658,
+    "12": 10747,
+    "14": 8447
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 153.51238894462585,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/speed-1.csv",
+   "bytes": 99358561,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 2619677,
+   "labels": {
+    "0": 2619663,
+    "1": 14
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1566343,
+    "8": 422699,
+    "4": 195449,
+    "10": 138113,
+    "6": 133485,
+    "12": 91611,
+    "14": 71977
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1310.7408950328827,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/speed-2.csv",
+   "bytes": 104275419,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 2734513,
+   "labels": {
+    "0": 2734475,
+    "1": 38
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1635426,
+    "8": 441341,
+    "4": 203358,
+    "10": 144208,
+    "6": 139372,
+    "12": 95653,
+    "14": 75155
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 1368.4769940376282,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/speed-accessory-1.csv",
+   "bytes": 20175669,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 529420,
+   "labels": {
+    "0": 529370,
+    "1": 50
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 316703,
+    "8": 85456,
+    "4": 39232,
+    "10": 27938,
+    "6": 26999,
+    "12": 18530,
+    "14": 14562
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 264.69798517227173,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/speed-accessory-2.csv",
+   "bytes": 11605872,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 307067,
+   "labels": {
+    "0": 307057,
+    "1": 10
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 183656,
+    "8": 49560,
+    "4": 22796,
+    "10": 16203,
+    "6": 15658,
+    "12": 10747,
+    "14": 8447
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 153.5127489566803,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/standstill-1.csv",
+   "bytes": 45606102,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1208289,
+   "labels": {
+    "0": 1207723,
+    "1": 566
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 722675,
+    "8": 194872,
+    "4": 90223,
+    "10": 63637,
+    "6": 61506,
+    "12": 42211,
+    "14": 33165
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 605.0169389247894,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/standstill-2.csv",
+   "bytes": 23370239,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 614984,
+   "labels": {
+    "0": 614960,
+    "1": 24
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 367755,
+    "8": 99242,
+    "4": 45756,
+    "10": 32447,
+    "6": 31352,
+    "12": 21520,
+    "14": 16912
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 307.4338209629059,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/systematic-1.csv",
+   "bytes": 20551827,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 541323,
+   "labels": {
+    "0": 504198,
+    "1": 37125
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 320265,
+    "8": 83715,
+    "4": 39590,
+    "10": 28946,
+    "6": 27986,
+    "12": 19973,
+    "14": 16185,
+    "2": 2339
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 252.19433116912842,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_02_unknown_vehicle_known_attack/systematic-2.csv",
+   "bytes": 17343447,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 456086,
+   "labels": {
+    "0": 453827,
+    "1": 2259
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 272617,
+    "8": 73414,
+    "4": 33725,
+    "10": 24108,
+    "6": 23307,
+    "12": 16012,
+    "14": 12641,
+    "2": 128
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 226.94373083114624,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/DoS-1.csv",
+   "bytes": 25795857,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 643807,
+   "labels": {
+    "0": 631716,
+    "1": 12091
+   },
+   "n_ids": 55,
+   "hexlen_counts": {
+    "16": 575675,
+    "14": 19974,
+    "8": 19577,
+    "4": 19577,
+    "2": 7831,
+    "10": 1173
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 391.53028893470764,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/DoS-2.csv",
+   "bytes": 28481072,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 709039,
+   "labels": {
+    "0": 683731,
+    "1": 25308
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 635244,
+    "14": 21554,
+    "8": 21100,
+    "4": 21100,
+    "2": 8776,
+    "10": 1265
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 438.7151548862457,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/double-1.csv",
+   "bytes": 50097196,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1244063,
+   "labels": {
+    "0": 1233676,
+    "1": 10387
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 1111017,
+    "14": 38996,
+    "8": 38230,
+    "4": 38230,
+    "2": 15295,
+    "10": 2295
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 764.5854761600494,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/double-2.csv",
+   "bytes": 27856480,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 695540,
+   "labels": {
+    "0": 690926,
+    "1": 4614
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 621019,
+    "14": 21849,
+    "8": 21410,
+    "4": 21410,
+    "2": 8566,
+    "10": 1286
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 428.187381029129,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/force-neutral-1.csv",
+   "bytes": 21158090,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 527589,
+   "labels": {
+    "0": 525869,
+    "1": 1720
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 470877,
+    "14": 16623,
+    "8": 16296,
+    "4": 16296,
+    "2": 6519,
+    "10": 978
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 325.92437505722046,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/force-neutral-2.csv",
+   "bytes": 19047891,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 475757,
+   "labels": {
+    "0": 474378,
+    "1": 1379
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 424598,
+    "14": 14994,
+    "8": 14701,
+    "4": 14700,
+    "2": 5881,
+    "10": 883
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 294.0099949836731,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/fuzzing-1.csv",
+   "bytes": 26438538,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 660170,
+   "labels": {
+    "0": 631716,
+    "1": 28454
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 577861,
+    "14": 21683,
+    "8": 21357,
+    "4": 21351,
+    "2": 9629,
+    "10": 2982,
+    "12": 1761,
+    "6": 1709
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 391.5298390388489,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/fuzzing-2.csv",
+   "bytes": 26107792,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 650196,
+   "labels": {
+    "0": 643639,
+    "1": 6557
+   },
+   "n_ids": 1961,
+   "hexlen_counts": {
+    "16": 577020,
+    "14": 20249,
+    "4": 19672,
+    "8": 19668,
+    "2": 10777,
+    "10": 1586,
+    "12": 399,
+    "6": 391
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 982.5758540630341,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/triple-1.csv",
+   "bytes": 22022316,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 544385,
+   "labels": {
+    "0": 491468,
+    "1": 52917
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 491384,
+    "14": 15535,
+    "8": 15230,
+    "4": 15230,
+    "2": 6093,
+    "10": 913
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 304.5881381034851,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_03_known_vehicle_unknown_attack/triple-2.csv",
+   "bytes": 28462391,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 703688,
+   "labels": {
+    "0": 690926,
+    "1": 12762
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 624913,
+    "8": 25664,
+    "14": 21849,
+    "4": 21410,
+    "2": 8566,
+    "10": 1286
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 428.18742394447327,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/DoS-1.csv",
+   "bytes": 15324766,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 402001,
+   "labels": {
+    "0": 381441,
+    "1": 20560
+   },
+   "n_ids": 63,
+   "hexlen_counts": {
+    "16": 248548,
+    "8": 61530,
+    "4": 28547,
+    "10": 20114,
+    "6": 19441,
+    "12": 13341,
+    "14": 10480
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 190.59249114990234,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/DoS-2.csv",
+   "bytes": 15998666,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 416866,
+   "labels": {
+    "0": 386218,
+    "1": 30648
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 261574,
+    "8": 62319,
+    "4": 28784,
+    "10": 20371,
+    "6": 19688,
+    "12": 13513,
+    "14": 10617
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 193.03603410720825,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/double-1.csv",
+   "bytes": 41185016,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1092582,
+   "labels": {
+    "0": 1087627,
+    "1": 4955
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 652888,
+    "8": 175523,
+    "4": 81104,
+    "10": 57314,
+    "6": 55390,
+    "12": 38015,
+    "14": 32348
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 545.1621429920197,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/double-2.csv",
+   "bytes": 17526419,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 463001,
+   "labels": {
+    "0": 454101,
+    "1": 8900
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 280492,
+    "8": 73295,
+    "4": 33703,
+    "10": 23967,
+    "6": 23157,
+    "12": 15895,
+    "14": 12492
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 254.25114703178406,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/force-neutral-1.csv",
+   "bytes": 19220276,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 509087,
+   "labels": {
+    "0": 507921,
+    "1": 1166
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 304987,
+    "8": 82003,
+    "4": 37627,
+    "10": 26808,
+    "6": 25908,
+    "12": 17782,
+    "14": 13972
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 254.0476360321045,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/force-neutral-2.csv",
+   "bytes": 17227950,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 454206,
+   "labels": {
+    "0": 454206
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 271452,
+    "8": 73269,
+    "4": 34015,
+    "10": 23952,
+    "6": 23147,
+    "12": 15887,
+    "14": 12484
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 226.92805314064026,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/fuzzing-1.csv",
+   "bytes": 46782254,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1235992,
+   "labels": {
+    "0": 1122478,
+    "1": 113514
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 727846,
+    "8": 188328,
+    "4": 90420,
+    "10": 66349,
+    "6": 64307,
+    "12": 46440,
+    "14": 37943,
+    "2": 7194
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 561.2269351482391,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/fuzzing-2.csv",
+   "bytes": 44490428,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1167769,
+   "labels": {
+    "0": 1161656,
+    "1": 6113
+   },
+   "n_ids": 1935,
+   "hexlen_counts": {
+    "16": 697347,
+    "8": 187798,
+    "4": 87372,
+    "10": 61605,
+    "6": 59555,
+    "12": 41006,
+    "14": 32332,
+    "2": 395
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 580.4120688438416,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/triple-1.csv",
+   "bytes": 67253172,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1780543,
+   "labels": {
+    "0": 1749487,
+    "1": 31056
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 1066651,
+    "8": 282285,
+    "4": 130484,
+    "10": 92283,
+    "6": 89183,
+    "14": 58448,
+    "12": 61209
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 874.363697052002,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/test_04_unknown_vehicle_unknown_attack/triple-2.csv",
+   "bytes": 24947957,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 661579,
+   "labels": {
+    "0": 657520,
+    "1": 4059
+   },
+   "n_ids": 62,
+   "hexlen_counts": {
+    "16": 395743,
+    "8": 106073,
+    "4": 49143,
+    "10": 34680,
+    "6": 33511,
+    "12": 23001,
+    "14": 19428
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 328.62271904945374,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/accessory-3.csv",
+   "bytes": 1262428,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 31991,
+   "labels": {
+    "0": 31991
+   },
+   "n_ids": 13,
+   "hexlen_counts": {
+    "16": 27857,
+    "2": 3932,
+    "14": 202
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 196.54575204849243,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/accessory-4.csv",
+   "bytes": 2113444,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 52783,
+   "labels": {
+    "0": 52783
+   },
+   "n_ids": 48,
+   "hexlen_counts": {
+    "16": 46861,
+    "14": 1655,
+    "8": 1604,
+    "4": 1604,
+    "2": 960,
+    "10": 99
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 47.980916023254395,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/attack-free-3.csv",
+   "bytes": 36838630,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 920346,
+   "labels": {
+    "0": 920346
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 821076,
+    "14": 29103,
+    "8": 28508,
+    "4": 28508,
+    "2": 11441,
+    "10": 1710
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 572.0202589035034,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/attack-free-4.csv",
+   "bytes": 13555370,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 336011,
+   "labels": {
+    "0": 336011
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 299767,
+    "14": 10629,
+    "8": 10413,
+    "4": 10413,
+    "2": 4165,
+    "10": 624
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 208.24905514717102,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/interval-3.csv",
+   "bytes": 15924892,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 393679,
+   "labels": {
+    "0": 392891,
+    "1": 788
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 351303,
+    "14": 12423,
+    "8": 12175,
+    "4": 12175,
+    "2": 4871,
+    "10": 732
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 243.48821020126343,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/interval-4.csv",
+   "bytes": 36715373,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 907454,
+   "labels": {
+    "0": 907204,
+    "1": 250
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 809540,
+    "14": 28604,
+    "8": 28004,
+    "4": 28004,
+    "2": 11622,
+    "10": 1680
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 581.0097990036011,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/rpm-3.csv",
+   "bytes": 27688947,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 689308,
+   "labels": {
+    "0": 688742,
+    "1": 566
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 615032,
+    "14": 21770,
+    "8": 21343,
+    "4": 21343,
+    "2": 8539,
+    "10": 1281
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 426.8613369464874,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/rpm-4.csv",
+   "bytes": 25863545,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 642822,
+   "labels": {
+    "0": 641942,
+    "1": 880
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 573592,
+    "14": 20291,
+    "8": 19893,
+    "4": 19893,
+    "2": 7959,
+    "10": 1194
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 397.85229206085205,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/rpm-accessory-3.csv",
+   "bytes": 6347809,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 157883,
+   "labels": {
+    "0": 157654,
+    "1": 229
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 140883,
+    "14": 4983,
+    "8": 4886,
+    "4": 4886,
+    "2": 1954,
+    "10": 291
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 97.71816897392273,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/rpm-accessory-4.csv",
+   "bytes": 7094561,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 175015,
+   "labels": {
+    "0": 166722,
+    "1": 8293
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 157034,
+    "14": 5270,
+    "8": 5166,
+    "4": 5166,
+    "2": 2067,
+    "10": 312
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 103.33187699317932,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/speed-3.csv",
+   "bytes": 25981307,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 649177,
+   "labels": {
+    "0": 648844,
+    "1": 333
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 579201,
+    "14": 20509,
+    "8": 20107,
+    "4": 20107,
+    "2": 8045,
+    "10": 1208
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 402.1292190551758,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/speed-4.csv",
+   "bytes": 19603552,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 486777,
+   "labels": {
+    "0": 486443,
+    "1": 334
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 434315,
+    "14": 15377,
+    "8": 15074,
+    "4": 15074,
+    "2": 6031,
+    "10": 906
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 301.47398591041565,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/speed-accessory-3.csv",
+   "bytes": 10058153,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 249865,
+   "labels": {
+    "0": 249660,
+    "1": 205
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 222940,
+    "14": 7892,
+    "8": 7737,
+    "4": 7737,
+    "2": 3095,
+    "10": 464
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 154.74188590049744,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/speed-accessory-4.csv",
+   "bytes": 15533840,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 387940,
+   "labels": {
+    "0": 386303,
+    "1": 1637
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 344643,
+    "8": 13609,
+    "14": 12211,
+    "4": 11971,
+    "2": 4788,
+    "10": 718
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 239.42923498153687,
+   "monotonic": false,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/standstill-3.csv",
+   "bytes": 32472163,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 810295,
+   "labels": {
+    "0": 809782,
+    "1": 513
+   },
+   "n_ids": 54,
+   "hexlen_counts": {
+    "16": 722955,
+    "14": 25609,
+    "8": 25093,
+    "4": 25093,
+    "2": 10039,
+    "10": 1506
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 501.8628990650177,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/standstill-4.csv",
+   "bytes": 14179466,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 352661,
+   "labels": {
+    "0": 352589,
+    "1": 72
+   },
+   "n_ids": 50,
+   "hexlen_counts": {
+    "16": 314634,
+    "14": 11147,
+    "8": 10926,
+    "4": 10926,
+    "2": 4372,
+    "10": 656
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 218.52398300170898,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/systematic-3.csv",
+   "bytes": 40594450,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1012913,
+   "labels": {
+    "0": 1003139,
+    "1": 9774
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 899873,
+    "14": 32308,
+    "8": 31700,
+    "4": 31665,
+    "2": 13019,
+    "10": 2508,
+    "12": 626,
+    "6": 609
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 621.7078950405121,
+   "monotonic": true,
+   "nan_ts": 0
+  },
+  {
+   "path": "set_04/train_01/systematic-4.csv",
+   "bytes": 49950983,
+   "cols": [
+    "timestamp",
+    "arbitration_id",
+    "data_field",
+    "attack"
+   ],
+   "rows": 1235881,
+   "labels": {
+    "0": 1233676,
+    "1": 2205
+   },
+   "n_ids": 2048,
+   "hexlen_counts": {
+    "16": 1101754,
+    "14": 39137,
+    "4": 38367,
+    "8": 38353,
+    "2": 15432,
+    "10": 2435,
+    "6": 148,
+    "12": 124
+   },
+   "t_first": 1672531200.0,
+   "duration_s": 764.5858981609344,
+   "monotonic": true,
+   "nan_ts": 0
+  }
+ ]
+}
