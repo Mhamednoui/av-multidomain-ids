@@ -1,7 +1,7 @@
 # Datasets v3
 
-Status on 20 Oct 2026. Disk free: 51.9 GB. Download only after the user approves the size
-(RULES 3.4); put new data in `../data_extra/<id>_<name>/`; update this file (status, size on
+Status on 20 Oct 2026. Disk free: 51.9 GB. Downloads pre-approved within
+RULES 3.4 (user, 2026-10-19); put new data in `../data_extra/<id>_<name>/`; update this file (status, size on
 disk, date, licence checked).
 
 Sizes marked "(to confirm)" come from web searches on 20 Oct 2026 and must be checked on the
@@ -49,4 +49,4 @@ train / val / test splits), MisbehaviorX (IEEE DataPort, Veins, 68 attacks), V2X
 ## 4. Rough disk plan
 
 Batch A: ~8 GB without D13; ~28 GB with the full V2AIX JSON (prefer a subset of drives).
-Batch B items one at a time. Keep at least 10 GB free at all times.
+Batch B items one at a time. Keep at least 15 GB free at all times.

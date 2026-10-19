@@ -46,3 +46,5 @@ Open questions for the user at the start of the next session:
 | Date | WP | Step | Model | Decision | Comment |
 |---|---|---|---|---|---|
 | 2026-10-19 | WP0 | S1 | sonnet | ASSIGNED | first step |
+| 2026-10-19 | WP0 | S1 | sonnet | APPROVED | env pins OK, commit 35966a3 clean. Doc fixes by orchestrator: S3 split + exact v2 B2 targets (threshold, FA, row-level AND run-level detection) pinned in WP0 file; download policy aligned (RULES 3.4, DATASETS, ORCHESTRATION: pre-approved, >= 15 GB free). Old "20 Oct" dates left as-is (system clock says 19 Oct). |
+| 2026-10-19 | WP0 | S2 | sonnet | ASSIGNED | common contracts + tests |

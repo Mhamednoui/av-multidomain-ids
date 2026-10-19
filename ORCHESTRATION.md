@@ -37,7 +37,7 @@ files written, problems / questions. Put everything else in your report and note
 ```
 
 Parallel workers: use several whenever the order allows (user decision 2026-10-19), at most 3 at a time; only one GPU-heavy step at a time (RULES 3.1). A step
-that needs a download (S0) is assigned only after the user approved the size.
+that needs a download (S0) is covered by the user's pre-approval (RULES 3.4, 2026-10-19).
 
 ## 3. Reviewing a finished step (cheap, in this order)
 

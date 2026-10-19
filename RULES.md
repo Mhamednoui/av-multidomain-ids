@@ -30,7 +30,9 @@
    when done. If it exists, wait or run on the CPU. Keep GPU jobs under ~30 min.
 2. CPU: at most 4 worker processes per model (`Pool(4)`, `n_jobs=4`).
 3. RAM: stay under ~8 GB per model; stream or subsample big files.
-4. Disk: no download without the user's approval of the size. Downloads go to
+4. Disk: downloads are pre-approved by the user (2026-10-19) as long as the step's WP file
+   lists the dataset, the licence allows research use, and >= 15 GB stays free; otherwise ask
+   the orchestrator. Log size and licence in your notes. Downloads go to
    `../data_extra/<dataset_id>_<name>/` and are recorded in DATASETS.md. Delete nothing you did
    not create.
 
@@ -84,6 +86,6 @@
 
 ## 8. Asking
 
-Stop and ask the user when: a step's goal is unclear; data is missing or needs a download;
+Stop and ask the user when: a step's goal is unclear; data is missing (a download not covered by 3.4);
 a result contradicts expectations and you cannot explain it; you need a change outside your
 folders; an acceptance rule seems wrong. Write the question in your step report too.

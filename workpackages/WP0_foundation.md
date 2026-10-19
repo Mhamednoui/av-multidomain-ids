@@ -39,6 +39,12 @@ Owns: `common/`, `tests/common/`, `tests/run_tests.py`, `tools/WP0_*`, `results/
   run the harness on the same KITTI tracks and split, and show the same false-alarm rate
   (1.58%) and detection per attack type as `../codes_v2/results/gps_kitti_external.json`
   (B2_dead_reckoning_rule), or explain any difference.
+- Split (same as v2 and WP1 S1): TEST drives 0001 0005 0095 0039 0079 0028 0052; VAL drives
+  0011 0035 0027; TRAIN = the other 13 KITTI raw drives used by v2.
+- Numbers to match (all from `B2_dead_reckoning_rule` in the v2 json; orchestrator decision
+  2026-10-19): threshold_m 6.658; false_alarm_rate_clean_runs 0.0158; row-level
+  detection_by_attack (drift 0.336, accel_drift 0.458, jump 0.719, freeze 0.866); run_level
+  detected (drift 0.386, accel_drift 0.429, jump 1.000, freeze 0.886); all_test_rows tp/fp/fn/tn.
 - Acceptance: numbers match v2 to 0.01 percentage points. This closes M0.
 
 ## Pitfalls from v2
