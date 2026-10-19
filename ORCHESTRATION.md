@@ -15,7 +15,7 @@ code; it assigns steps to worker agents, reviews their results cheaply, keeps ST
 ## 2. Assigning a step
 
 Launch one worker per step with the Agent tool: `subagent_type: "general-purpose"`,
-`model: "sonnet"` (user decision 2026-10-19: all workers run on Sonnet 5.5),
+`model: "sonnet"`, `effort: "medium"` (user decisions 2026-10-19: all workers run on Sonnet 5.5 at medium effort),
 `run_in_background: true`, a short `description` like "WP1 S3 GPS EKF". No worktree needed
 (folder ownership keeps workers apart, results stay in one place). Set the STATUS row to
 `IN PROGRESS` and log the assignment in notes/ORCHESTRATOR.md.
