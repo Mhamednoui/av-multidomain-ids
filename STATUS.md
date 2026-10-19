@@ -11,7 +11,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S0 | IN PROGRESS | worker sonnet | 2026-10-19 | download only, started before M0 (orchestrator) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
-| WP5 V2X | S1 | REVIEW | worker sonnet | 2026-10-19 | D12+D14 only; V2AIX adapter stub; class map data-consistent, primary source unreachable; see reports/WP5_S1.md |
+| WP5 V2X | S2 | IN PROGRESS | worker sonnet (medium) | 2026-10-19 | S1 APPROVED. D13 V2AIX still needs the user to fill the access form |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 
