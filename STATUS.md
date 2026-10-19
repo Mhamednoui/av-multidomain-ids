@@ -6,8 +6,8 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
-| WP0 Foundation | S3 | REVIEW | worker sonnet | 2026-10-19 | B2 reproduced exactly (alarm level); threshold differs 0.0009 m by interpolation |
-| WP1 GPS | S1 | BLOCKED | - | 2026-10-19 | S0 APPROVED; S1 waits for M0. S6 must filter OSM to drivable classes |
+| WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
+| WP1 GPS | S1 | IN PROGRESS | worker sonnet | 2026-10-19 | S0 APPROVED. S6 must filter OSM to drivable classes |
 | WP2 CAN | S0 | IN PROGRESS | worker sonnet | 2026-10-19 | download only, started before M0 (orchestrator) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
@@ -19,7 +19,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 
 | Id | State |
 |---|---|
-| M0 foundation | open |
+| M0 foundation | closed 2026-10-19 |
 | M1 GPS / CAN / LiDAR / NET / V2X | open |
 | M2 cross-domain + fusion | open |
 | M3 system | open |
