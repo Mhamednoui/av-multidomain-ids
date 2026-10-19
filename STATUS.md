@@ -7,7 +7,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
-| WP1 GPS | S4 | IN PROGRESS | worker sonnet (medium) | 2026-10-19 | S3 APPROVED with misses (FA did not transfer from 3 val drives). S6 must filter OSM to drivable classes |
+| WP1 GPS | S4 | REVIEW | worker sonnet (medium) | 2026-10-20 | S4 done: LODO fixes EKF NIS FA (2.59 -> 0.44%) not CUSUM-EKF (2.53%); DR-branch CUSUM beats B2 on drift / Doppler / meaconing at 1.64% FA; slow-drift target NOT MET (no test run has a 30 s window); see reports/WP1_S4.md |
 | WP2 CAN | S1 | IN PROGRESS | worker sonnet (medium) | 2026-10-19 | S0 APPROVED (D11 7.47 GB, 62 duplicate files) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |

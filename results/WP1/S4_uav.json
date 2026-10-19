@@ -1,0 +1,135 @@
+{
+ "calibration": "threshold at the 1% budget on the BENIGN flight (in-sample), noise from S3 (benign flight)",
+ "cusum_ekf_nis_k1.5": {
+  "flights": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 2
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 48
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 19,
+    "false_alarm_before_117s": 0.0,
+    "alarms_before_117s": 0,
+    "fixes_before_117s": 118,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_from_118s_flagged": 1.0
+   }
+  }
+ },
+ "cusum_ekf_nis_k0.5": {
+  "flights": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 2
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 48
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 19,
+    "false_alarm_before_117s": 0.0,
+    "alarms_before_117s": 0,
+    "fixes_before_117s": 118,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_from_118s_flagged": 1.0
+   }
+  }
+ },
+ "cusum_ekf_nis_k1.0": {
+  "flights": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 2
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 48
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 19,
+    "false_alarm_before_117s": 0.0,
+    "alarms_before_117s": 0,
+    "fixes_before_117s": 118,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_from_118s_flagged": 1.0
+   }
+  }
+ },
+ "cusum_ekf_axis_k1.5": {
+  "flights": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 1
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 14
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 19,
+    "false_alarm_before_117s": 0.0,
+    "alarms_before_117s": 0,
+    "fixes_before_117s": 118,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_from_118s_flagged": 1.0
+   }
+  }
+ },
+ "cusum_ekf_axis_k0.5": {
+  "flights": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 2
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 46
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 19,
+    "false_alarm_before_117s": 0.0,
+    "alarms_before_117s": 0,
+    "fixes_before_117s": 118,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_from_118s_flagged": 1.0
+   }
+  }
+ },
+ "cusum_ekf_axis_k1.0": {
+  "flights": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 2
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 36
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 19,
+    "false_alarm_before_117s": 0.0,
+    "alarms_before_117s": 0,
+    "fixes_before_117s": 118,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_from_118s_flagged": 1.0
+   }
+  }
+ }
+}

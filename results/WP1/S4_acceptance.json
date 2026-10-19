@@ -1,0 +1,197 @@
+{
+ "B2_scale_30s_le_0.7pct": {
+  "value": 0.002371815650504809,
+  "met": true,
+  "60s": "not evaluable: no test run reaches 60 s"
+ },
+ "B3_freeze_protects": {
+  "per_attack_freeze_vs_nofreeze": {
+   "drift": [
+    0.015953824122422897,
+    0.0763472396747644
+   ],
+   "accel_drift": [
+    0.0047893648637093375,
+    0.07726534804663397
+   ],
+   "doppler_spoof": [
+    0.0036302864105060206,
+    0.024329226657734012
+   ],
+   "meaconing": [
+    0.004739702694703447,
+    0.07085649255730626
+   ]
+  },
+  "met": false
+ },
+ "B4_fa_clean_runs_le_1.5pct_lodo": {
+  "gps.dr_resid_10": 0.01580278128950695,
+  "gps.ekf_nis": 0.004424778761061947,
+  "gps.cusum_ekf": 0.025284450063211124,
+  "gps.cusum_dr": 0.01643489254108723
+ },
+ "B4_met_lodo": {
+  "gps.cusum_ekf": false,
+  "gps.cusum_dr": false
+ },
+ "B4_fa_clean_runs_le_1.5pct_valonly": {
+  "gps.dr_resid_10": 0.0037926675094816687,
+  "gps.ekf_nis": 0.025916561314791402,
+  "gps.cusum_ekf": 0.02654867256637168,
+  "gps.cusum_dr": 0.01580278128950695
+ },
+ "B4_met_valonly": {
+  "gps.cusum_ekf": false,
+  "gps.cusum_dr": false
+ },
+ "B5_slow_drift_ge_60pct": {
+  "gps.dr_resid_10": {
+   "lodo": {
+    "runs": 14,
+    "detected": 2,
+    "runs_with_full_30s": 0,
+    "rate": 0.14285714285714285
+   },
+   "valonly": {
+    "runs": 14,
+    "detected": 1,
+    "runs_with_full_30s": 0,
+    "rate": 0.07142857142857142
+   }
+  },
+  "gps.ekf_nis": {
+   "lodo": {
+    "runs": 14,
+    "detected": 2,
+    "runs_with_full_30s": 0,
+    "rate": 0.14285714285714285
+   },
+   "valonly": {
+    "runs": 14,
+    "detected": 2,
+    "runs_with_full_30s": 0,
+    "rate": 0.14285714285714285
+   }
+  },
+  "gps.cusum_ekf": {
+   "lodo": {
+    "runs": 14,
+    "detected": 6,
+    "runs_with_full_30s": 0,
+    "rate": 0.42857142857142855
+   },
+   "valonly": {
+    "runs": 14,
+    "detected": 6,
+    "runs_with_full_30s": 0,
+    "rate": 0.42857142857142855
+   }
+  },
+  "gps.cusum_dr": {
+   "lodo": {
+    "runs": 14,
+    "detected": 2,
+    "runs_with_full_30s": 0,
+    "rate": 0.14285714285714285
+   },
+   "valonly": {
+    "runs": 14,
+    "detected": 2,
+    "runs_with_full_30s": 0,
+    "rate": 0.14285714285714285
+   }
+  }
+ },
+ "B5_met_lodo": {
+  "gps.cusum_ekf": false,
+  "gps.cusum_dr": false
+ },
+ "B6_verdicts_vs_B2_lodo": {
+  "gps.ekf_nis|drift": "worse",
+  "gps.cusum_ekf|drift": "more detection, higher FA",
+  "gps.cusum_dr|drift": "beats B2",
+  "gps.ekf_nis|accel_drift": "worse",
+  "gps.cusum_ekf|accel_drift": "more detection, higher FA",
+  "gps.cusum_dr|accel_drift": "beats B2",
+  "gps.ekf_nis|jump": "no difference",
+  "gps.cusum_ekf|jump": "no difference",
+  "gps.cusum_dr|jump": "no difference",
+  "gps.ekf_nis|freeze": "worse",
+  "gps.cusum_ekf|freeze": "no difference",
+  "gps.cusum_dr|freeze": "no difference",
+  "gps.ekf_nis|doppler_spoof": "beats B2",
+  "gps.cusum_ekf|doppler_spoof": "worse",
+  "gps.cusum_dr|doppler_spoof": "beats B2",
+  "gps.ekf_nis|meaconing": "beats B2",
+  "gps.cusum_ekf|meaconing": "worse",
+  "gps.cusum_dr|meaconing": "beats B2"
+ },
+ "B7_lodo": {
+  "auc_base": 0.8996433730704,
+  "auc_all": 0.9221352784038948,
+  "auc_gain": 0.022491905333494766,
+  "fa_base": 0.012876179068722862,
+  "fa_all": 0.011378948944452762,
+  "row_level_gain_points": {
+   "drift": 7.751937984496127,
+   "accel_drift": 4.308093994778073,
+   "jump": 28.055555555555557,
+   "freeze": 0.8860759493670933,
+   "doppler_spoof": -3.042328042328035,
+   "meaconing": 10.30640668523677
+  },
+  "adds": true
+ },
+ "B7_valonly": {
+  "auc_base": 0.8955869866003865,
+  "auc_all": 0.902991309081612,
+  "auc_gain": 0.007404322481225467,
+  "fa_base": 0.019014822578230273,
+  "fa_all": 0.022009282826770473,
+  "row_level_gain_points": {
+   "drift": 9.922480620155044,
+   "accel_drift": 3.2637075718015662,
+   "jump": 27.916666666666668,
+   "freeze": 0.6329113924050667,
+   "doppler_spoof": -2.645502645502651,
+   "meaconing": 12.952646239554323
+  },
+  "adds": false
+ },
+ "B8_absorption_dr_frozen": {
+  "drift": 0.05903597409370814,
+  "accel_drift": 0.022020553439135834,
+  "jump": 0.12037851287160953,
+  "freeze": 0.017143725203054128,
+  "doppler_spoof": 0.08882970412638994,
+  "meaconing": 0.20912022013651985
+ },
+ "B8_met": true,
+ "B9_uav": {
+  "cusum_ekf_nis_k1.5": {
+   "delay_s": 0.00034499999999582087,
+   "fa_before_117": 0.0
+  },
+  "cusum_ekf_nis_k0.5": {
+   "delay_s": 0.00034499999999582087,
+   "fa_before_117": 0.0
+  },
+  "cusum_ekf_nis_k1.0": {
+   "delay_s": 0.00034499999999582087,
+   "fa_before_117": 0.0
+  },
+  "cusum_ekf_axis_k1.5": {
+   "delay_s": 0.00034499999999582087,
+   "fa_before_117": 0.0
+  },
+  "cusum_ekf_axis_k0.5": {
+   "delay_s": 0.00034499999999582087,
+   "fa_before_117": 0.0
+  },
+  "cusum_ekf_axis_k1.0": {
+   "delay_s": 0.00034499999999582087,
+   "fa_before_117": 0.0
+  }
+ }
+}

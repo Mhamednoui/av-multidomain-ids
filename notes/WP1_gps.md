@@ -125,3 +125,39 @@ Done (S3): gps/ekf.py, tests/gps/test_ekf.py (6 tests; suite 72 pass), tools/WP1
 - Harness: all AUC 0.896 FA 1.90% vs all-but-L2a 0.860 / 1.39%: A9 NOT MET on FA (> 1.5%).
 - AV-GPS FA 3.97% (A7 NOT MET), AUC 0.30. UAV: alarm at 118.000 s, FA before 117 s 0.85% (A8 MET).
 Acceptance: A1, A2, A6, A8 MET; A3, A4 (as written), A7, A9 (FA clause), slow-drift target NOT MET. S3 -> REVIEW.
+
+## 2026-10-19 S4 (L2b CUSUM / SPRT on innovations, L2c online odometry-scale calibration; new LODO calibration policy)
+Acceptance rule (written before any S4 result; nothing of S4 computed yet; only gps/ekf.py got extra output columns nu_x, nu_y, s_x, s_y, behaviour unchanged).
+Policy (supervisor, binding): thresholds by leave-one-drive-out (LODO) over the 16 train+val KITTI drives: pooled clean (label 0) scores -> tie-safe 1% budget threshold;
+anything tuned on data is tuned on the 16 drives only (small pre-registered grid) or frozen beforehand; test drives untouched until the single final pass. Every table gives
+val-only calibration (3 val drives, as S2/S3) and LODO calibration (16 drives) side by side, for the new layers and also for B2 and L2a (so we see if LODO fixes the FA transfer).
+LODO helper (generic) lives in gps/lodo.py (own code; proposed for common/ in the report). The score functions have no fitted parameters apart from frozen ones, so the
+"out-of-fold" scores equal the plain scores; LODO therefore also reports, per held-out drive, the FA at the threshold computed from the other 15 drives (honest transfer estimate).
+Layers: SPRT note: Page's CUSUM with allowance kappa = delta/2 IS Wald's SPRT restarted at 0 for a Gaussian mean shift delta (in sigma units), so CUSUM covers SPRT; kappa grid.
+ - gps.cusum_nis: CUSUM on the standardised EKF (S3 ungated) NIS excess (NIS - m)/sqrt(2m).
+ - gps.cusum_axis: bank of 8 directional one-sided CUSUMs (0,45,90,135 deg and opposites) on the standardised EKF position innovation (nu/sqrt(S)); score = max over the bank.
+ - gps.cusum_dr_axis / gps.cusum_dr_nis: same two statistics on the innovation of a DEAD-RECKONING BRANCH (odometry + compass heading only; no Doppler, no IMU) whose state is [position, receiver error (Gauss-Markov), odometry scale s] and that does not take GPS updates while suspicious (frozen).
+ - L2c = the scale state s of that branch: prior N(1, 0.02^2), learned only through GPS position updates, which are skipped while frozen (frozen when its own freeze-CUSUM >= h_f, or the ungated EKF NIS is above chi2_m(0.999), the other layer).
+Frozen beforehand (not tuned): receiver GM phi 0.897 sigma 0.981 m, r_pos 0.3, heading 2 deg, odo 0.05 m/s, scale prior 2%, scale random-walk 2e-4/fix, EKF q_acc 0.1 (all S3 values from TRAIN), freeze-CUSUM allowance 0.5.
+Grid (16 drives, LODO pooled threshold): kappa in {0.25, 0.5, 1.0}; freeze in {never, self h_f=4, self h_f=4 + EKF NIS}; scale in {learn, none (2% as noise)}. Selection criterion J = mean of 7 numbers
+(run-level detection of drift, accel_drift, jump, freeze, doppler_spoof, meaconing, and slow drift <0.5 m/s within 30 s) at the LODO 1% threshold on the 16 drives. Choice is not nested per fold (disclosed).
+Test = ONE pass, KITTI test drives, thresholds from LODO (primary) and val-only (side by side).
+B1 unit tests pass.
+B2 L2c convergence on clean data: median |s_hat - s*|/s* (s* = sum odo / sum true distance of the run) at 30 s <= 0.7% and at 60 s <= 0.5% (runs long enough), better than the 2% prior.
+B3 L2c freeze protection: over drift, accel_drift, doppler_spoof, meaconing (test attack runs): median |s_hat - s*| at onset+30 s with freezing <= 0.5 x without freezing, and <= 1.0%.
+B4 LODO vs val-only: the new layers' clean-run FA on test with LODO calibration <= 1.5% (policy goal); also report |LODO-estimated FA - actual test FA|.
+B5 slow drift (0.2-0.5 m/s): detected within 30 s in >= 60% of test slow-drift runs at clean-run test FA <= 1.5%. Met/not met stated plainly.
+B6 beats B2 (both LODO-calibrated): per attack run-level detection >= 5 points higher AND clean-run FA <= B2 + 0.5 point.
+B7 harness on top of B2 + L1 + L2a: "L2b/L2c adds" iff AUC +0.01 or some attack +5 points row-level, combined FA <= 1.5% (LODO primary, val-only side by side).
+B8 absorption: the frozen DR branch's position-estimate error at +30 s as a fraction of the reported error <= 0.3 for doppler_spoof and meaconing (ungated EKF: 0.99 / 0.97).
+B9 UAV (EKF-based CUSUM only; the drone has no odometry): alarm within 5 s of 118.0 s, FA before 117 s <= 2% (threshold from the benign flight, in-sample). AV-GPS not run (S3: placeholder attacks, not meaningful).
+Edit before any real-data S4 result (made after a synthetic unit test showed that a false freeze at level 4 latches: while frozen the innovations are strongly autocorrelated and the CUSUM runs away): freeze levels in the grid are {never, self h_f=8, self h_f=8 + EKF NIS chi2(0.999)} instead of 4. Everything else as written above.
+First dev pass (16 drives, S4_dev.json, before the final selection): best kappa at the grid edge 1.0 for the axis/NIS CUSUMs, so the kappa grid was extended to {0.25, 0.5, 1.0, 1.5, 2.0} (dev data only; disclosed). Scale diagnostics: runs with < 50 m odometry path (stationary) excluded (s* undefined; they made the prior RMS 125%); clean convergence is reported at 10/20/30/60 s where runs are long enough (KITTI drives are short: 0 clean runs reach 60 s in dev).
+Done (S4, 2026-10-20): gps/cusum.py, gps/lodo.py, gps/ekf.py (extra output columns only), tests/gps/test_cusum.py (6 tests; suite 116 pass), tools/WP1_S4_{lib,dev,test,tables,report}.py, results/WP1/S4_*.{json,md}, reports/WP1_S4.md.
+- Dev (16 train+val drives): EKF NIS with val-only threshold gives 3.10% FA on the 13 train drives, LODO 1.11%; worst held-out drive 19.5% for NIS vs 1.8-2.0% for CUSUMs. Selected (criterion J): DR branch NIS-CUSUM kappa 2.0, scale learned, freeze self8+EKF-NIS (J 0.699); EKF axis CUSUM kappa 1.5 (J 0.624). Kappa grid extended once (1.5, 2.0), plateau.
+- Test (one pass; the dry run on val rows only found code bugs): clean-run FA LODO / val-only: B2 1.58 / 0.38, EKF NIS 0.44 / 2.59, cusum_ekf 2.53 / 2.65, cusum_dr 1.64 / 1.58 (%). LODO fixes EKF NIS, not cusum_ekf; B2 gets worse.
+- Run-level (LODO): cusum_dr drift 70, accel 61, jump 100, freeze 84, Doppler 70, meaconing 61 (B2 39/43/100/89/41/49); cusum_ekf 80/67/100/84/23/29. Slow drift <0.5 m/s: cusum_ekf 43% (6/14), cusum_dr 14%, B2 14%: target NOT MET; no test slow-drift run has a full 30 s window.
+- L2c: scale error 0.24% at 30 s (prior 1.33% median); without freezing the attacker drags it to 7-8% (87.6% under the freeze attack), with freezing it stays at the onset value. Absorption at +30 s: ungated EKF 0.99 / 0.97 (Doppler / meaconing), frozen DR 0.09 / 0.21.
+- Harness (B2 + L1 + L2a base): LODO AUC 0.900 -> 0.922, FA 1.29 -> 1.14% (adds); val-only 0.896 -> 0.903, FA 1.90 -> 2.20% (does not add).
+- UAV: alarm at 118.000 s, 0/118 false alarms before 117 s (all EKF-CUSUM variants).
+Acceptance: B1, B2(30 s), B7(LODO), B8, B9 MET; B3 factor met / absolute bound not on 1 run; B4, B5 NOT MET. LODO helper proposed for common/ (not edited). S4 -> REVIEW.

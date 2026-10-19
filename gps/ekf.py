@@ -75,6 +75,7 @@ def filter_run(df, cfg: EKFConfig) -> pd.DataFrame:
     head = np.radians(df["heading"].to_numpy(float)) if cfg.use_head and has("heading") else None
     acc = df[["acc_e", "acc_n"]].to_numpy(float) if cfg.acc_mode != "none" and has("acc_e") else None
     nis, dim, est, hold_out = np.full(n, np.nan), np.zeros(n, int), np.zeros((n, 2)), np.zeros(n, bool)
+    nu_pos, s_pos = np.full((n, 2), np.nan), np.full((n, 2), np.nan)     # position innovation and its std (S4: CUSUM input)
     s2, sg2 = cfg.gm_sigma ** 2, cfg.gm_sigma ** 2
     # ---- initial state (w = 0, so e0 = z0; errors of e and w are perfectly anti-correlated) ----
     x = np.zeros(6)
@@ -141,6 +142,7 @@ def filter_run(df, cfg: EKFConfig) -> pd.DataFrame:
         m = len(nu)
         nis[k] = float(nu @ np.linalg.solve(S, nu))
         dim[k] = m
+        nu_pos[k], s_pos[k] = nu[:2], np.sqrt(np.diag(S)[:2])
         # ---- gate ----
         if cfg.gate_level > 0:
             if nis[k] > chi2.ppf(cfg.gate_level, m):
@@ -159,7 +161,8 @@ def filter_run(df, cfg: EKFConfig) -> pd.DataFrame:
             IKH = np.eye(6) - K @ Hu
             P = IKH @ P @ IKH.T + K @ np.diag(Ru) @ K.T
         est[k] = x[:2]
-    return pd.DataFrame({"nis": nis, "dim": dim, "est_x": est[:, 0], "est_y": est[:, 1], "hold": hold_out}, index=df.index)
+    return pd.DataFrame({"nis": nis, "dim": dim, "est_x": est[:, 0], "est_y": est[:, 1], "hold": hold_out,
+                         "nu_x": nu_pos[:, 0], "nu_y": nu_pos[:, 1], "s_x": s_pos[:, 0], "s_y": s_pos[:, 1]}, index=df.index)
 
 
 def nis_score(nis, dim):
