@@ -1,0 +1,99 @@
+{
+ "name": "regression_b2_harness",
+ "budget": 0.01,
+ "layers": {
+  "gps.dr_resid_10": {
+   "threshold": 0.989952798381659,
+   "budget": 0.01,
+   "false_alarm_rate": 0.013429544998997796,
+   "detection": 0.6059568640876413,
+   "detection_by_attack": {
+    "accel_drift": 0.45822454308093996,
+    "drift": 0.3364341085271318,
+    "freeze": 0.8658227848101265,
+    "jump": 0.7194444444444444
+   },
+   "auc": 0.8617787273048292,
+   "delay": {
+    "n_segments": 280,
+    "detected_fraction": 0.675,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.1375661375661377
+   },
+   "n_test": 7910,
+   "n_test_attack": 2921
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.989952798381659,
+   "budget": 0.01,
+   "false_alarm_rate": 0.013429544998997796,
+   "detection": 0.6059568640876413,
+   "detection_by_attack": {
+    "accel_drift": 0.45822454308093996,
+    "drift": 0.3364341085271318,
+    "freeze": 0.8658227848101265,
+    "jump": 0.7194444444444444
+   },
+   "auc": 0.8617787273048292,
+   "delay": {
+    "n_segments": 280,
+    "detected_fraction": 0.675,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.1375661375661377
+   },
+   "n_test": 7910,
+   "n_test_attack": 2921,
+   "method": "max",
+   "method_selection": {}
+  },
+  "only_gps.dr_resid_10": {
+   "threshold": 0.989952798381659,
+   "budget": 0.01,
+   "false_alarm_rate": 0.013429544998997796,
+   "detection": 0.6059568640876413,
+   "detection_by_attack": {
+    "accel_drift": 0.45822454308093996,
+    "drift": 0.3364341085271318,
+    "freeze": 0.8658227848101265,
+    "jump": 0.7194444444444444
+   },
+   "auc": 0.8617787273048292,
+   "delay": {
+    "n_segments": 280,
+    "detected_fraction": 0.675,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.1375661375661377
+   },
+   "n_test": 7910,
+   "n_test_attack": 2921
+  }
+ },
+ "layer_names": [
+  "gps.dr_resid_10"
+ ],
+ "combined": {
+  "threshold": 0.989952798381659,
+  "budget": 0.01,
+  "false_alarm_rate": 0.013429544998997796,
+  "detection": 0.6059568640876413,
+  "detection_by_attack": {
+   "accel_drift": 0.45822454308093996,
+   "drift": 0.3364341085271318,
+   "freeze": 0.8658227848101265,
+   "jump": 0.7194444444444444
+  },
+  "auc": 0.8617787273048292,
+  "delay": {
+   "n_segments": 280,
+   "detected_fraction": 0.675,
+   "median_delay_s": 1.0,
+   "mean_delay_s": 2.1375661375661377
+  },
+  "n_test": 7910,
+  "n_test_attack": 2921,
+  "method": "max",
+  "method_selection": {}
+ }
+}

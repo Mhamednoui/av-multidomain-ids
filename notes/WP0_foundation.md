@@ -42,3 +42,25 @@ group halves; score_groups resets per group. Pitfall: ECDF scores saturate at 1.
 validation normal score (ties inside combiner); logged as open question.
 
 2026-10-19 S2b: ECDF tail fix in common/calibration.py (strictly increasing tail above the max validation normal, scale stored). 16 tests pass. Toy combined detection unchanged (51.5%, AUC 0.955). See reports/WP0_S2.md "S2b".
+
+## 2026-10-19 S3 start (worker sonnet)
+
+Acceptance rule (written before any code ran), from workpackages/WP0_foundation.md S3 + supervisor note:
+1. Data: same KITTI tracks as v2 (23 drives, same rng order: one default_rng(42) consumed in
+   sorted(SCENE) order, 10 phases, runs [none, drift, accel_drift, jump, freeze] x reps), same split
+   (TEST 0001 0005 0095 0039 0079 0028 0052; VAL 0011 0035 0027; TRAIN the other 13). Row/run counts must
+   equal v2 json (test 7910 rows / 350 runs; train 23859 / 1080; val 2850 / 150).
+2. The B2 rule (dr_resid_10 > thr or still_gps_moving_imu) is a v3 Layer (kind physics) calibrated through
+   Layer.calibrate (ECDF + tie-safe budget_threshold, 1%) on the same normal rows v2 used (train+val normal
+   rows: v2's choice, kept to reproduce; it differs from the v3 val-only protocol, so a val-only variant is
+   also reported as information, not as the acceptance number).
+3. MATCH = all of these within 0.01 percentage points (1e-4 absolute) of
+   ../codes_v2/results/gps_kitti_external.json key B2_dead_reckoning_rule: false_alarm_rate_clean_runs 0.0158;
+   row-level detection_by_attack (drift 0.336, accel 0.458, jump 0.719, freeze 0.866); run-level detected
+   (0.386, 0.429, 1.000, 0.886); all_test_rows tp/fp/fn/tn exactly (1770/67/1151/4922); raw-equivalent
+   threshold 6.658 m (to 3 decimals).
+4. If anything differs: find the exact cause (seed, ordering, tie handling, interpolation) and report it;
+   no tuning to match. The test set is scored once (the v3-protocol variant is computed in the same run,
+   fixed in advance).
+
+2026-10-19 S3 results: tools/WP0_regression.py (B2Layer + copied v2 data/attack code), results/WP0/regression_b2.json (+ harness and val-only variants), tests/common/test_regression_b2.py (19 tests pass in total). Data counts identical to v2 (test 7910/350 runs). Every alarm-level number identical to v2 B2: FA clean 0.015803, row detection 0.3364/0.4582/0.7194/0.8658, run detected 0.3857/0.4286/1.0/0.8857, tp/fp/fn/tn 1770/67/1151/4922, median delays 5/6/0/1. Threshold 6.658872 (v3, order statistic) vs 6.657975 (v2, np.quantile interpolation between 6.655780 and 6.658872): no test row in between, so no decision differs; v2 still-rule base was 0. Acceptance items 1,2,4 met; item 3 met except the 3-decimal threshold (explained, definition difference). Val-only variant (info): thr 6.789, FA 1.45%, AUC 0.862, detections within 1 pp of v2. Report: reports/WP0_S3.md.
