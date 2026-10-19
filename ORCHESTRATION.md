@@ -65,3 +65,25 @@ leak or artefact until proven otherwise).
 
 WP0 S1 -> S2 -> S3 (M0) -> wave 1: WP1, WP2, WP5 in parallel -> wave 2: WP3, WP4 ->
 WP6 -> WP7. Each WP's steps are sequential.
+
+## 6. Model / effort per task (user decision 2026-10-20: save usage WITHOUT lowering quality)
+
+Pick the cheapest tier that does the task correctly. When in doubt, go one tier up.
+
+| Tier | Model / effort | Use for |
+|---|---|---|
+| T1 | haiku / medium | downloads, inventory and integrity checks, doc fixes, rerunning an existing script unchanged |
+| T2 | sonnet / medium | data layers / adapters, rule and physics layers with a clear spec, unit tests |
+| T3 | sonnet / high | learned models, calibration-sensitive evaluation, combiners, ablations, milestone reports, any step with leakage risk |
+| T4 | opus / medium | a step that failed review twice; cross-domain / contract design (WP6, fusion) |
+
+Escalation: a step sent back with CHANGES goes one tier up. A step whose numbers look too good
+gets a T3 re-check before approval.
+
+Token savings that do not change quality:
+- Each WP keeps `notes/WP<n>_brief.md` (max ~60 lines): current state, binding decisions,
+  pitfalls, file map. The worker updates it at the end of each step. The next worker reads the
+  brief + the WP file + RULES.md + the previous report's summary section instead of the full
+  notes log, ARCHITECTURE and DATASETS (it opens those only for the sections it needs).
+- Reports: a summary section (<= 40 lines) first; long tables go to results/*.md.
+- Max 2 workers in parallel.
