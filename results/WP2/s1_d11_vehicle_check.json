@@ -1,0 +1,183 @@
+{
+ "method": "connected components of Jaccard(ID set) >= 0.8 over non-fuzzing files",
+ "clusters": [
+  {
+   "n_files": 71,
+   "readme_vehicle_counts": {
+    "Subaru": 71
+   },
+   "n_common_ids": 48,
+   "subsets": [
+    "set_02/test_02",
+    "set_02/test_04",
+    "set_03/test_02",
+    "set_03/test_04",
+    "set_04/test_01",
+    "set_04/test_03",
+    "set_04/train"
+   ],
+   "example": [
+    "set_02/test_02_unknown_vehicle_known_attack/double-3",
+    "set_02/test_02_unknown_vehicle_known_attack/double-4"
+   ]
+  },
+  {
+   "n_files": 56,
+   "readme_vehicle_counts": {
+    "Silverado": 8,
+    "Traverse": 48
+   },
+   "n_common_ids": 62,
+   "subsets": [
+    "set_01/test_04",
+    "set_02/test_01",
+    "set_02/test_03",
+    "set_02/train",
+    "set_04/test_02",
+    "set_04/test_04"
+   ],
+   "example": [
+    "set_01/test_04_unknown_vehicle_unknown_attack/double-3",
+    "set_01/test_04_unknown_vehicle_unknown_attack/double-4"
+   ]
+  },
+  {
+   "n_files": 40,
+   "readme_vehicle_counts": {
+    "Silverado": 40
+   },
+   "n_common_ids": 98,
+   "subsets": [
+    "set_01/test_02",
+    "set_03/test_01",
+    "set_03/test_03",
+    "set_03/train"
+   ],
+   "example": [
+    "set_01/test_02_unknown_vehicle_known_attack/DoS-3",
+    "set_01/test_02_unknown_vehicle_known_attack/DoS-4"
+   ]
+  },
+  {
+   "n_files": 28,
+   "readme_vehicle_counts": {
+    "Impala": 28
+   },
+   "n_common_ids": 51,
+   "subsets": [
+    "set_01/test_01",
+    "set_01/test_03",
+    "set_01/train"
+   ],
+   "example": [
+    "set_01/test_01_known_vehicle_known_attack/DoS-3",
+    "set_01/test_01_known_vehicle_known_attack/DoS-4"
+   ]
+  },
+  {
+   "n_files": 12,
+   "readme_vehicle_counts": {
+    "Subaru": 8,
+    "Traverse": 4
+   },
+   "n_common_ids": 2048,
+   "subsets": [
+    "set_02/test_02",
+    "set_02/train",
+    "set_03/test_04",
+    "set_04/test_01",
+    "set_04/test_02",
+    "set_04/train"
+   ],
+   "example": [
+    "set_02/test_02_unknown_vehicle_known_attack/systematic-3",
+    "set_02/test_02_unknown_vehicle_known_attack/systematic-4"
+   ]
+  },
+  {
+   "n_files": 3,
+   "readme_vehicle_counts": {
+    "Silverado": 2,
+    "Traverse": 1
+   },
+   "n_common_ids": 527,
+   "subsets": [
+    "set_01/test_04",
+    "set_02/test_01",
+    "set_03/test_03"
+   ],
+   "example": [
+    "set_01/test_04_unknown_vehicle_unknown_attack/systematic-4",
+    "set_02/test_01_known_vehicle_known_attack/systematic-4"
+   ]
+  },
+  {
+   "n_files": 2,
+   "readme_vehicle_counts": {
+    "Silverado": 1,
+    "Traverse": 1
+   },
+   "n_common_ids": 121,
+   "subsets": [
+    "set_01/test_04",
+    "set_02/test_01"
+   ],
+   "example": [
+    "set_01/test_04_unknown_vehicle_unknown_attack/systematic-3",
+    "set_02/test_01_known_vehicle_known_attack/systematic-3"
+   ]
+  },
+  {
+   "n_files": 1,
+   "readme_vehicle_counts": {
+    "Impala": 1
+   },
+   "n_common_ids": 940,
+   "subsets": [
+    "set_01/test_03"
+   ],
+   "example": [
+    "set_01/test_03_known_vehicle_unknown_attack/systematic-3"
+   ]
+  },
+  {
+   "n_files": 1,
+   "readme_vehicle_counts": {
+    "Impala": 1
+   },
+   "n_common_ids": 175,
+   "subsets": [
+    "set_01/test_03"
+   ],
+   "example": [
+    "set_01/test_03_known_vehicle_unknown_attack/systematic-4"
+   ]
+  },
+  {
+   "n_files": 1,
+   "readme_vehicle_counts": {
+    "Silverado": 1
+   },
+   "n_common_ids": 339,
+   "subsets": [
+    "set_03/test_03"
+   ],
+   "example": [
+    "set_03/test_03_known_vehicle_unknown_attack/systematic-2"
+   ]
+  },
+  {
+   "n_files": 1,
+   "readme_vehicle_counts": {
+    "Subaru": 1
+   },
+   "n_common_ids": 13,
+   "subsets": [
+    "set_04/train"
+   ],
+   "example": [
+    "set_04/train_01/accessory-3"
+   ]
+  }
+ ]
+}

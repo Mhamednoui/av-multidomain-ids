@@ -1,0 +1,883 @@
+{
+ "captures": {
+  "ambient_dyno_drive_basic_long": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "train",
+   "frames": 2991272,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 2991272,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_drive_basic_short": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "val",
+   "frames": 1063624,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 1063624,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_drive_benign_anomaly": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "test",
+   "frames": 771519,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 771519,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_drive_extended_long": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "train",
+   "frames": 1424208,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 1424208,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_drive_extended_short": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "test",
+   "frames": 790442,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 790442,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_drive_radio_infotainment": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "train",
+   "frames": 932852,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 932852,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_drive_winter": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "val",
+   "frames": 114148,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 114148,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_exercise_all_bits": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "train",
+   "frames": 4419422,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 4419422,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_idle_radio_infotainment": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "train",
+   "frames": 1572318,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 1572318,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_dyno_reverse": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "test",
+   "frames": 123047,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 123047,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_highway_street_driving_diagnostics": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "test",
+   "frames": 1124751,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 1124751,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "ambient_highway_street_driving_long": {
+   "family": "ambient",
+   "kind": "ambient",
+   "part": "train",
+   "frames": 8821916,
+   "injected": 0,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 8821916,
+    "injected": 0
+   },
+   "matches_v2": true
+  },
+  "correlated_signal_attack_1": {
+   "family": "correlated_signal",
+   "kind": "attack",
+   "part": "train",
+   "frames": 81262,
+   "injected": 2087,
+   "negative_dt": 0,
+   "attack_names": [
+    "correlated_signal",
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 81262,
+    "injected": 2087
+   },
+   "matches_v2": true
+  },
+  "correlated_signal_attack_1_masquerade": {
+   "family": "correlated_signal",
+   "kind": "masquerade",
+   "part": "train",
+   "frames": 79176,
+   "injected": 2087,
+   "negative_dt": 0,
+   "attack_names": [
+    "correlated_signal_masquerade",
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 79176,
+    "injected": 2087
+   },
+   "matches_v2": true
+  },
+  "correlated_signal_attack_2": {
+   "family": "correlated_signal",
+   "kind": "attack",
+   "part": "val",
+   "frames": 69657,
+   "injected": 2141,
+   "negative_dt": 0,
+   "attack_names": [
+    "correlated_signal",
+    "normal"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 69657,
+    "injected": 2141
+   },
+   "matches_v2": true
+  },
+  "correlated_signal_attack_2_masquerade": {
+   "family": "correlated_signal",
+   "kind": "masquerade",
+   "part": "val",
+   "frames": 67517,
+   "injected": 2141,
+   "negative_dt": 0,
+   "attack_names": [
+    "correlated_signal_masquerade",
+    "normal"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 67517,
+    "injected": 2141
+   },
+   "matches_v2": true
+  },
+  "correlated_signal_attack_3": {
+   "family": "correlated_signal",
+   "kind": "attack",
+   "part": "test",
+   "frames": 41829,
+   "injected": 1265,
+   "negative_dt": 0,
+   "attack_names": [
+    "correlated_signal",
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 41829,
+    "injected": 1265
+   },
+   "matches_v2": true
+  },
+  "correlated_signal_attack_3_masquerade": {
+   "family": "correlated_signal",
+   "kind": "masquerade",
+   "part": "test",
+   "frames": 40565,
+   "injected": 1265,
+   "negative_dt": 0,
+   "attack_names": [
+    "correlated_signal_masquerade",
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 40565,
+    "injected": 1265
+   },
+   "matches_v2": true
+  },
+  "fuzzing_attack_1": {
+   "family": "fuzzing",
+   "kind": "attack",
+   "part": "train",
+   "frames": 49342,
+   "injected": 592,
+   "negative_dt": 0,
+   "attack_names": [
+    "fuzzing",
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 49342,
+    "injected": 592
+   },
+   "matches_v2": true
+  },
+  "fuzzing_attack_2": {
+   "family": "fuzzing",
+   "kind": "attack",
+   "part": "val",
+   "frames": 32351,
+   "injected": 352,
+   "negative_dt": 0,
+   "attack_names": [
+    "fuzzing",
+    "normal"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 32351,
+    "injected": 352
+   },
+   "matches_v2": true
+  },
+  "fuzzing_attack_3": {
+   "family": "fuzzing",
+   "kind": "attack",
+   "part": "test",
+   "frames": 13238,
+   "injected": 115,
+   "negative_dt": 0,
+   "attack_names": [
+    "fuzzing",
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 13238,
+    "injected": 115
+   },
+   "matches_v2": true
+  },
+  "max_engine_coolant_temp_attack": {
+   "family": "max_engine_coolant_temp",
+   "kind": "attack",
+   "part": "test",
+   "frames": 61923,
+   "injected": 43,
+   "negative_dt": 0,
+   "attack_names": [
+    "max_engine_coolant_temp",
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 61923,
+    "injected": 43
+   },
+   "matches_v2": true
+  },
+  "max_engine_coolant_temp_attack_masquerade": {
+   "family": "max_engine_coolant_temp",
+   "kind": "masquerade",
+   "part": "test",
+   "frames": 61881,
+   "injected": 43,
+   "negative_dt": 0,
+   "attack_names": [
+    "max_engine_coolant_temp_masquerade",
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 61881,
+    "injected": 43
+   },
+   "matches_v2": true
+  },
+  "max_speedometer_attack_1": {
+   "family": "max_speedometer",
+   "kind": "attack",
+   "part": "train",
+   "frames": 213397,
+   "injected": 2445,
+   "negative_dt": 0,
+   "attack_names": [
+    "max_speedometer",
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 213397,
+    "injected": 2445
+   },
+   "matches_v2": true
+  },
+  "max_speedometer_attack_1_masquerade": {
+   "family": "max_speedometer",
+   "kind": "masquerade",
+   "part": "train",
+   "frames": 210953,
+   "injected": 2445,
+   "negative_dt": 0,
+   "attack_names": [
+    "max_speedometer_masquerade",
+    "normal"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 210953,
+    "injected": 2445
+   },
+   "matches_v2": true
+  },
+  "max_speedometer_attack_2": {
+   "family": "max_speedometer",
+   "kind": "attack",
+   "part": "val",
+   "frames": 145894,
+   "injected": 3141,
+   "negative_dt": 0,
+   "attack_names": [
+    "max_speedometer",
+    "normal"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 145894,
+    "injected": 3141
+   },
+   "matches_v2": true
+  },
+  "max_speedometer_attack_2_masquerade": {
+   "family": "max_speedometer",
+   "kind": "masquerade",
+   "part": "val",
+   "frames": 142754,
+   "injected": 3141,
+   "negative_dt": 0,
+   "attack_names": [
+    "max_speedometer_masquerade",
+    "normal"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 142754,
+    "injected": 3141
+   },
+   "matches_v2": true
+  },
+  "max_speedometer_attack_3": {
+   "family": "max_speedometer",
+   "kind": "attack",
+   "part": "test",
+   "frames": 213551,
+   "injected": 6108,
+   "negative_dt": 0,
+   "attack_names": [
+    "max_speedometer",
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 213551,
+    "injected": 6108
+   },
+   "matches_v2": true
+  },
+  "max_speedometer_attack_3_masquerade": {
+   "family": "max_speedometer",
+   "kind": "masquerade",
+   "part": "test",
+   "frames": 207444,
+   "injected": 6108,
+   "negative_dt": 0,
+   "attack_names": [
+    "max_speedometer_masquerade",
+    "normal"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 207444,
+    "injected": 6108
+   },
+   "matches_v2": true
+  },
+  "reverse_light_off_attack_1": {
+   "family": "reverse_light_off",
+   "kind": "attack",
+   "part": "train",
+   "frames": 67902,
+   "injected": 673,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_off"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 67902,
+    "injected": 673
+   },
+   "matches_v2": true
+  },
+  "reverse_light_off_attack_1_masquerade": {
+   "family": "reverse_light_off",
+   "kind": "masquerade",
+   "part": "train",
+   "frames": 67230,
+   "injected": 673,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_off_masquerade"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 67230,
+    "injected": 673
+   },
+   "matches_v2": true
+  },
+  "reverse_light_off_attack_2": {
+   "family": "reverse_light_off",
+   "kind": "attack",
+   "part": "val",
+   "frames": 99628,
+   "injected": 2372,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_off"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 99628,
+    "injected": 2372
+   },
+   "matches_v2": true
+  },
+  "reverse_light_off_attack_2_masquerade": {
+   "family": "reverse_light_off",
+   "kind": "masquerade",
+   "part": "val",
+   "frames": 97257,
+   "injected": 2372,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_off_masquerade"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 97257,
+    "injected": 2372
+   },
+   "matches_v2": true
+  },
+  "reverse_light_off_attack_3": {
+   "family": "reverse_light_off",
+   "kind": "attack",
+   "part": "test",
+   "frames": 140855,
+   "injected": 2435,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_off"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 140855,
+    "injected": 2435
+   },
+   "matches_v2": true
+  },
+  "reverse_light_off_attack_3_masquerade": {
+   "family": "reverse_light_off",
+   "kind": "masquerade",
+   "part": "test",
+   "frames": 138421,
+   "injected": 2435,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_off_masquerade"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 138421,
+    "injected": 2435
+   },
+   "matches_v2": true
+  },
+  "reverse_light_on_attack_1": {
+   "family": "reverse_light_on",
+   "kind": "attack",
+   "part": "train",
+   "frames": 133237,
+   "injected": 1992,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_on"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 133237,
+    "injected": 1992
+   },
+   "matches_v2": true
+  },
+  "reverse_light_on_attack_1_masquerade": {
+   "family": "reverse_light_on",
+   "kind": "masquerade",
+   "part": "train",
+   "frames": 131246,
+   "injected": 1992,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_on_masquerade"
+   ],
+   "v2": {
+    "part": "train",
+    "frames": 131246,
+    "injected": 1992
+   },
+   "matches_v2": true
+  },
+  "reverse_light_on_attack_2": {
+   "family": "reverse_light_on",
+   "kind": "attack",
+   "part": "val",
+   "frames": 175945,
+   "injected": 3690,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_on"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 175945,
+    "injected": 3690
+   },
+   "matches_v2": true
+  },
+  "reverse_light_on_attack_2_masquerade": {
+   "family": "reverse_light_on",
+   "kind": "masquerade",
+   "part": "val",
+   "frames": 172256,
+   "injected": 3690,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_on_masquerade"
+   ],
+   "v2": {
+    "part": "val",
+    "frames": 172256,
+    "injected": 3690
+   },
+   "matches_v2": true
+  },
+  "reverse_light_on_attack_3": {
+   "family": "reverse_light_on",
+   "kind": "attack",
+   "part": "test",
+   "frames": 156052,
+   "injected": 2352,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_on"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 156052,
+    "injected": 2352
+   },
+   "matches_v2": true
+  },
+  "reverse_light_on_attack_3_masquerade": {
+   "family": "reverse_light_on",
+   "kind": "masquerade",
+   "part": "test",
+   "frames": 153701,
+   "injected": 2352,
+   "negative_dt": 0,
+   "attack_names": [
+    "normal",
+    "reverse_light_on_masquerade"
+   ],
+   "v2": {
+    "part": "test",
+    "frames": 153701,
+    "injected": 2352
+   },
+   "matches_v2": true
+  }
+ },
+ "n_captures": 41,
+ "n_match_v2": 41,
+ "mismatching": [],
+ "label_check": {
+  "correlated_signal_attack_1_masquerade": {
+   "ours": 2087,
+   "road_signal_labels": 2086
+  },
+  "correlated_signal_attack_2_masquerade": {
+   "ours": 2141,
+   "road_signal_labels": 2139
+  },
+  "correlated_signal_attack_3_masquerade": {
+   "ours": 1265,
+   "road_signal_labels": 1263
+  },
+  "max_engine_coolant_temp_attack_masquerade": {
+   "ours": 43,
+   "road_signal_labels": 43
+  },
+  "max_speedometer_attack_1_masquerade": {
+   "ours": 2445,
+   "road_signal_labels": 2443
+  },
+  "max_speedometer_attack_2_masquerade": {
+   "ours": 3141,
+   "road_signal_labels": 3139
+  },
+  "max_speedometer_attack_3_masquerade": {
+   "ours": 6108,
+   "road_signal_labels": 6107
+  },
+  "reverse_light_off_attack_1_masquerade": {
+   "ours": 673,
+   "road_signal_labels": 672
+  },
+  "reverse_light_off_attack_2_masquerade": {
+   "ours": 2372,
+   "road_signal_labels": 2370
+  },
+  "reverse_light_off_attack_3_masquerade": {
+   "ours": 2435,
+   "road_signal_labels": 2434
+  },
+  "reverse_light_on_attack_1_masquerade": {
+   "ours": 1992,
+   "road_signal_labels": 1992
+  },
+  "reverse_light_on_attack_2_masquerade": {
+   "ours": 3690,
+   "road_signal_labels": 3690
+  },
+  "reverse_light_on_attack_3_masquerade": {
+   "ours": 2352,
+   "road_signal_labels": 2350
+  }
+ },
+ "label_check_v2": {
+  "correlated_signal_attack_1_masquerade": {
+   "ours": 2087,
+   "road_signal_labels": 2086
+  },
+  "correlated_signal_attack_2_masquerade": {
+   "ours": 2141,
+   "road_signal_labels": 2139
+  },
+  "correlated_signal_attack_3_masquerade": {
+   "ours": 1265,
+   "road_signal_labels": 1263
+  },
+  "max_engine_coolant_temp_attack_masquerade": {
+   "ours": 43,
+   "road_signal_labels": 43
+  },
+  "max_speedometer_attack_1_masquerade": {
+   "ours": 2445,
+   "road_signal_labels": 2443
+  },
+  "max_speedometer_attack_2_masquerade": {
+   "ours": 3141,
+   "road_signal_labels": 3139
+  },
+  "max_speedometer_attack_3_masquerade": {
+   "ours": 6108,
+   "road_signal_labels": 6107
+  },
+  "reverse_light_off_attack_1_masquerade": {
+   "ours": 673,
+   "road_signal_labels": 672
+  },
+  "reverse_light_off_attack_2_masquerade": {
+   "ours": 2372,
+   "road_signal_labels": 2370
+  },
+  "reverse_light_off_attack_3_masquerade": {
+   "ours": 2435,
+   "road_signal_labels": 2434
+  },
+  "reverse_light_on_attack_1_masquerade": {
+   "ours": 1992,
+   "road_signal_labels": 1992
+  },
+  "reverse_light_on_attack_2_masquerade": {
+   "ours": 3690,
+   "road_signal_labels": 3690
+  },
+  "reverse_light_on_attack_3_masquerade": {
+   "ours": 2352,
+   "road_signal_labels": 2350
+  }
+ },
+ "label_check_same_as_v2": true,
+ "label_check_max_abs_diff": 2,
+ "signals": {
+  "ambient_dyno_reverse": {
+   "frames_log": 123047,
+   "rows_signals": 115287,
+   "ids_log": 106,
+   "ids_signals": 105,
+   "signal_cols": "Signal_22_of_ID",
+   "label_sum": 0
+  },
+  "ambient_dyno_drive_winter": {
+   "frames_log": 114148,
+   "rows_signals": 106939,
+   "ids_log": 106,
+   "ids_signals": 105,
+   "signal_cols": "Signal_22_of_ID",
+   "label_sum": 0
+  },
+  "max_speedometer_attack_3_masquerade": {
+   "frames_log": 207444,
+   "rows_signals": 194342,
+   "ids_log": 106,
+   "ids_signals": 105,
+   "signal_cols": "Signal_22_of_ID",
+   "label_sum": 6107
+  },
+  "reverse_light_on_attack_1_masquerade": {
+   "frames_log": 131246,
+   "rows_signals": 122964,
+   "ids_log": 106,
+   "ids_signals": 105,
+   "signal_cols": "Signal_22_of_ID",
+   "label_sum": 1992
+  }
+ },
+ "accelerator_unused": [
+  "accelerator_attack_drive_1",
+  "accelerator_attack_drive_2",
+  "accelerator_attack_reverse_1",
+  "accelerator_attack_reverse_2"
+ ]
+}

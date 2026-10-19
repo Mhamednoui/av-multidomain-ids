@@ -1,0 +1,119 @@
+{
+ "files": 236,
+ "rows_total": 193240845,
+ "rows_label1_total": 1884401,
+ "rows_and_labels_match_s0_all_files": true,
+ "mismatching_files": [],
+ "roundtrip_ok_all": true,
+ "files_with_whitespace_in_data_field": [
+  "set_03/train_01/fuzzing-3"
+ ],
+ "dlc_hist_total": {
+  "0": 32378,
+  "1": 1820387,
+  "2": 10651739,
+  "3": 5367530,
+  "4": 19968357,
+  "5": 8039607,
+  "6": 8446357,
+  "7": 11024584,
+  "8": 127889906
+ },
+ "files_with_inversions": 100,
+ "s0_non_monotonic_files": 100,
+ "inversions_total": 12527,
+ "inv_pairs_involving_attack": 12394,
+ "inv_pairs_with_label_change": 12394,
+ "inv_pairs_same_id": 203,
+ "min_dt_all_s": -0.00789499282836914,
+ "sort_would_move_frames": 30641,
+ "sort_would_change_label_sequence_at": 24784,
+ "sort_would_change_id_sequence_at": 30224,
+ "max_displacement_if_sorted": 14,
+ "label1_per_attack_all_files": {
+  "DoS": 684739,
+  "accessory": 0,
+  "attack-free": 0,
+  "double": 72123,
+  "force-neutral": 22335,
+  "fuzzing": 385356,
+  "interval": 257890,
+  "rpm": 23555,
+  "rpm-accessory": 12050,
+  "speed": 43059,
+  "speed-accessory": 9044,
+  "standstill": 29938,
+  "systematic": 130149,
+  "triple": 214163
+ },
+ "label1_per_attack_distinct_files": {
+  "DoS": 483764,
+  "accessory": 0,
+  "attack-free": 0,
+  "double": 41376,
+  "force-neutral": 19148,
+  "fuzzing": 224403,
+  "interval": 135139,
+  "rpm": 16811,
+  "rpm-accessory": 10487,
+  "speed": 24902,
+  "speed-accessory": 7524,
+  "standstill": 19130,
+  "systematic": 65970,
+  "triple": 111650
+ },
+ "dedup": {
+  "distinct": 174,
+  "dup_groups": 62,
+  "same_as_s0": true
+ },
+ "vehicle_sources": {
+  "id-fingerprint": 195,
+  "byte-identical copy": 0,
+  "majority of its subset": 41,
+  "README set-level only": 0
+ },
+ "vehicle_files_disagreeing_with_readme": 12,
+ "vehicle_disagreeing_subsets": [
+  "set_01/test_04_unknown_vehicle_unknown_attack README=Silverado data=Traverse"
+ ],
+ "split_counts": {
+  "set_01": {
+   "train": 6,
+   "val": 6,
+   "test_01": 8,
+   "test_02": 8,
+   "test_03": 12,
+   "test_04": 12,
+   "excluded_duplicates": 0
+  },
+  "set_02": {
+   "train": 8,
+   "val": 8,
+   "test_01": 12,
+   "test_02": 12,
+   "test_03": 8,
+   "test_04": 8,
+   "excluded_duplicates": 0
+  },
+  "set_03": {
+   "train": 7,
+   "val": 7,
+   "test_01": 10,
+   "test_02": 10,
+   "test_03": 14,
+   "test_04": 14,
+   "excluded_duplicates": 0
+  },
+  "set_04": {
+   "train": 9,
+   "val": 9,
+   "test_01": 14,
+   "test_02": 14,
+   "test_03": 10,
+   "test_04": 10,
+   "excluded_duplicates": 0
+  }
+ },
+ "t_first_all_equal_epoch_offset_0": true
+}

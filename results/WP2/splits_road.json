@@ -1,0 +1,57 @@
+{
+ "rule": "v2: attack instance 1 train, 2 val, 3 test; coolant capture test; masquerade with its original; ambient test / val lists from v2; accelerator captures unused (no injected frames)",
+ "splits": {
+  "train": [
+   "ambient_dyno_drive_basic_long",
+   "ambient_dyno_drive_extended_long",
+   "ambient_dyno_drive_radio_infotainment",
+   "ambient_dyno_exercise_all_bits",
+   "ambient_dyno_idle_radio_infotainment",
+   "ambient_highway_street_driving_long",
+   "correlated_signal_attack_1",
+   "correlated_signal_attack_1_masquerade",
+   "fuzzing_attack_1",
+   "max_speedometer_attack_1",
+   "max_speedometer_attack_1_masquerade",
+   "reverse_light_off_attack_1",
+   "reverse_light_off_attack_1_masquerade",
+   "reverse_light_on_attack_1",
+   "reverse_light_on_attack_1_masquerade"
+  ],
+  "val": [
+   "ambient_dyno_drive_basic_short",
+   "ambient_dyno_drive_winter",
+   "correlated_signal_attack_2",
+   "correlated_signal_attack_2_masquerade",
+   "fuzzing_attack_2",
+   "max_speedometer_attack_2",
+   "max_speedometer_attack_2_masquerade",
+   "reverse_light_off_attack_2",
+   "reverse_light_off_attack_2_masquerade",
+   "reverse_light_on_attack_2",
+   "reverse_light_on_attack_2_masquerade"
+  ],
+  "test": [
+   "ambient_dyno_drive_benign_anomaly",
+   "ambient_dyno_drive_extended_short",
+   "ambient_dyno_reverse",
+   "ambient_highway_street_driving_diagnostics",
+   "correlated_signal_attack_3",
+   "correlated_signal_attack_3_masquerade",
+   "fuzzing_attack_3",
+   "max_engine_coolant_temp_attack",
+   "max_engine_coolant_temp_attack_masquerade",
+   "max_speedometer_attack_3",
+   "max_speedometer_attack_3_masquerade",
+   "reverse_light_off_attack_3",
+   "reverse_light_off_attack_3_masquerade",
+   "reverse_light_on_attack_3",
+   "reverse_light_on_attack_3_masquerade"
+  ]
+ },
+ "counts": {
+  "train": 15,
+  "val": 11,
+  "test": 15
+ }
+}
