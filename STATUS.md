@@ -7,7 +7,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
-| WP1 GPS | S3 | REVIEW | worker sonnet | 2026-10-19 | L2a EKF done: strong on Doppler spoof / meaconing (equal-FA), val-to-test FA gap (2.6% vs 1% budget), slow-drift target not met. See reports/WP1_S3.md |
+| WP1 GPS | S4 | IN PROGRESS | worker sonnet (medium) | 2026-10-19 | S3 APPROVED with misses (FA did not transfer from 3 val drives). S6 must filter OSM to drivable classes |
 | WP2 CAN | S0 | IN PROGRESS | worker sonnet | 2026-10-19 | download only, started before M0 (orchestrator) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
