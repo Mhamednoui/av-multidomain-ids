@@ -1,0 +1,62 @@
+{
+ "avgps": {
+  "rows": 69568,
+  "sessions": 15,
+  "by_part": {
+   "test": 6,
+   "train": 6,
+   "val": 3
+  },
+  "label_rate": 0.25681347746090155
+ },
+ "uav": {
+  "benign": {
+   "fixes": 248,
+   "label_1": 0,
+   "duration_s": 246.010952
+  },
+  "jamming": {
+   "fixes": 224,
+   "label_1": 0,
+   "duration_s": 222.010923
+  },
+  "spoofing": {
+   "fixes": 138,
+   "label_1": 20,
+   "duration_s": 136.003008
+  }
+ },
+ "kitti_columns": [
+  "t",
+  "lat",
+  "lon",
+  "x",
+  "y",
+  "x_true",
+  "y_true",
+  "vel_n",
+  "vel_e",
+  "speed_gps",
+  "course",
+  "odo_speed",
+  "heading",
+  "yaw_rate",
+  "acc_n",
+  "acc_e",
+  "numsats",
+  "hdop",
+  "fix_type",
+  "clock_offset",
+  "label",
+  "attack",
+  "onset",
+  "onset_t",
+  "severity",
+  "k",
+  "run",
+  "drive",
+  "part",
+  "dr_resid_10",
+  "still"
+ ]
+}

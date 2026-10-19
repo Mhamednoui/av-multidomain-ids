@@ -1,0 +1,107 @@
+{
+ "name": "S1_b2_extended_val_only",
+ "budget": 0.01,
+ "layers": {
+  "gps.dr_resid_10": {
+   "threshold": 0.9898767605633804,
+   "budget": 0.01,
+   "false_alarm_rate": 0.007036981584069471,
+   "detection": 0.5139931740614334,
+   "detection_by_attack": {
+    "accel_drift": 0.43733681462140994,
+    "doppler_spoof": 0.44312169312169314,
+    "drift": 0.29767441860465116,
+    "freeze": 0.8620253164556962,
+    "jump": 0.7083333333333334,
+    "meaconing": 0.28690807799442897
+   },
+   "auc": 0.8472097949850796,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.5714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 3.029166666666667
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.9898767605633804,
+   "budget": 0.01,
+   "false_alarm_rate": 0.007036981584069471,
+   "detection": 0.5139931740614334,
+   "detection_by_attack": {
+    "accel_drift": 0.43733681462140994,
+    "doppler_spoof": 0.44312169312169314,
+    "drift": 0.29767441860465116,
+    "freeze": 0.8620253164556962,
+    "jump": 0.7083333333333334,
+    "meaconing": 0.28690807799442897
+   },
+   "auc": 0.8472097949850796,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.5714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 3.029166666666667
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "max",
+   "method_selection": {}
+  },
+  "only_gps.dr_resid_10": {
+   "threshold": 0.9898767605633804,
+   "budget": 0.01,
+   "false_alarm_rate": 0.007036981584069471,
+   "detection": 0.5139931740614334,
+   "detection_by_attack": {
+    "accel_drift": 0.43733681462140994,
+    "doppler_spoof": 0.44312169312169314,
+    "drift": 0.29767441860465116,
+    "freeze": 0.8620253164556962,
+    "jump": 0.7083333333333334,
+    "meaconing": 0.28690807799442897
+   },
+   "auc": 0.8472097949850796,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.5714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 3.029166666666667
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  }
+ },
+ "layer_names": [
+  "gps.dr_resid_10"
+ ],
+ "combined": {
+  "threshold": 0.9898767605633804,
+  "budget": 0.01,
+  "false_alarm_rate": 0.007036981584069471,
+  "detection": 0.5139931740614334,
+  "detection_by_attack": {
+   "accel_drift": 0.43733681462140994,
+   "doppler_spoof": 0.44312169312169314,
+   "drift": 0.29767441860465116,
+   "freeze": 0.8620253164556962,
+   "jump": 0.7083333333333334,
+   "meaconing": 0.28690807799442897
+  },
+  "auc": 0.8472097949850796,
+  "delay": {
+   "n_segments": 420,
+   "detected_fraction": 0.5714285714285714,
+   "median_delay_s": 1.0,
+   "mean_delay_s": 3.029166666666667
+  },
+  "n_test": 11074,
+  "n_test_attack": 4395,
+  "method": "max",
+  "method_selection": {}
+ }
+}

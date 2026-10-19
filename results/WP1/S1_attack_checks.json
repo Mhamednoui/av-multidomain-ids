@@ -1,0 +1,45 @@
+{
+ "median_vel_vs_track_clean_rows": 0.38405517904794023,
+ "median_vel_vs_track_accel_drift_attacked_rows": 1.5156048055560833,
+ "ratio_to_clean_accel_drift": 3.9463204462265455,
+ "median_vel_vs_track_doppler_spoof_attacked_rows": 0.39432246798629333,
+ "ratio_to_clean_doppler_spoof": 1.0267338900722687,
+ "median_vel_vs_track_drift_attacked_rows": 0.9717345032266184,
+ "ratio_to_clean_drift": 2.530195024672015,
+ "median_vel_vs_track_freeze_attacked_rows": 7.4408079518463515,
+ "ratio_to_clean_freeze": 19.374320039875162,
+ "median_vel_vs_track_jump_attacked_rows": 0.4276918264623095,
+ "ratio_to_clean_jump": 1.113620775854509,
+ "median_vel_vs_track_meaconing_attacked_rows": 0.3942111449622151,
+ "ratio_to_clean_meaconing": 1.0264440280155867,
+ "clean_test_dspeed_p999": 1.881905841689685,
+ "meaconing_max_dspeed_attacked_rows": 2.5867861109801282,
+ "severity_ranges": {
+  "drift": [
+   0.2,
+   2.0
+  ],
+  "accel_drift": [
+   0.05,
+   0.5
+  ],
+  "jump": [
+   5.0,
+   50.0
+  ],
+  "freeze": [
+   0.0,
+   0.0
+  ],
+  "doppler_spoof": [
+   0.2,
+   3.0
+  ],
+  "meaconing": [
+   0.5,
+   3.0
+  ]
+ },
+ "doppler_accel_m_s2": 0.4,
+ "tau_rate_s_per_s": 0.2
+}
