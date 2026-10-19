@@ -1,0 +1,3420 @@
+{
+ "candidates": {
+  "lid_resid_1": {
+   "name": "lid_resid_1",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 1.5533833597248337,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 1.5551148835761262,
+      "n": 559,
+      "false_alarms": 1,
+      "fa": 0.0017889087656529517
+     },
+     "0011": {
+      "threshold_from_others": 1.5533833597248337,
+      "n": 937,
+      "false_alarms": 9,
+      "fa": 0.0096051227321238
+     },
+     "0013": {
+      "threshold_from_others": 1.5540291063123248,
+      "n": 1012,
+      "false_alarms": 8,
+      "fa": 0.007905138339920948
+     },
+     "0015": {
+      "threshold_from_others": 1.554234402999651,
+      "n": 2162,
+      "false_alarms": 19,
+      "fa": 0.008788159111933395
+     },
+     "0017": {
+      "threshold_from_others": 1.5551148835761262,
+      "n": 829,
+      "false_alarms": 3,
+      "fa": 0.0036188178528347406
+     },
+     "0019": {
+      "threshold_from_others": 1.545644732724769,
+      "n": 3461,
+      "false_alarms": 39,
+      "fa": 0.011268419531927188
+     },
+     "0020": {
+      "threshold_from_others": 1.554234402999651,
+      "n": 620,
+      "false_alarms": 3,
+      "fa": 0.004838709677419355
+     },
+     "0027": {
+      "threshold_from_others": 1.5409169750282883,
+      "n": 797,
+      "false_alarms": 20,
+      "fa": 0.025094102885821833
+     },
+     "0029": {
+      "threshold_from_others": 1.54491924314836,
+      "n": 3068,
+      "false_alarms": 38,
+      "fa": 0.012385919165580182
+     },
+     "0035": {
+      "threshold_from_others": 1.5540291063123248,
+      "n": 538,
+      "false_alarms": 3,
+      "fa": 0.0055762081784386614
+     },
+     "0046": {
+      "threshold_from_others": 1.559018738887289,
+      "n": 907,
+      "false_alarms": 1,
+      "fa": 0.0011025358324145535
+     },
+     "0060": {
+      "threshold_from_others": 1.554516215017453,
+      "n": 560,
+      "false_alarms": 2,
+      "fa": 0.0035714285714285713
+     },
+     "0070": {
+      "threshold_from_others": 1.5270257486864944,
+      "n": 3012,
+      "false_alarms": 57,
+      "fa": 0.018924302788844622
+     },
+     "0106": {
+      "threshold_from_others": 1.554516215017453,
+      "n": 1674,
+      "false_alarms": 13,
+      "fa": 0.007765830346475508
+     },
+     "0113": {
+      "threshold_from_others": 1.5551148835761262,
+      "n": 605,
+      "false_alarms": 1,
+      "fa": 0.001652892561983471
+     }
+    },
+    "heldout_fa_pooled": 0.010462369220384746,
+    "heldout_fa_worst_drive": 0.025094102885821833,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 1.6110208663304724,
+    "fa_on_train_drives_at_val_only_threshold": 0.00698467702636851,
+    "fa_on_train_drives_at_lodo_threshold": 0.009529481834425254
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.01055572803477181,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.6777777777777778,
+     "accel_drift": 0.5407407407407407,
+     "jump": 1.0,
+     "freeze": 0.7888888888888889,
+     "doppler_spoof": 0.5851851851851851,
+     "meaconing": 0.5333333333333333
+    },
+    "row_detection": {
+     "drift": 0.2577884286203355,
+     "accel_drift": 0.4876830892143808,
+     "jump": 0.10271186440677967,
+     "freeze": 0.7043941411451398,
+     "doppler_spoof": 0.3511326860841424,
+     "meaconing": 0.3127962085308057
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 10,
+     "runs_with_full_30s": 6,
+     "rate": 0.29411764705882354
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 183,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       2.0,
+       3.0,
+       6.800000000000011
+      ],
+      "within_10s": 0.6518518518518519,
+      "within_30s": 0.6777777777777778
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 146,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       5.0,
+       7.0,
+       9.0
+      ],
+      "within_10s": 0.5148148148148148,
+      "within_30s": 0.5407407407407407
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 213,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "within_10s": 0.7851851851851852,
+      "within_30s": 0.7888888888888889
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 158,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       3.0,
+       4.0,
+       5.0,
+       6.0
+      ],
+      "within_10s": 0.5777777777777777,
+      "within_30s": 0.5851851851851851
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 144,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       2.0,
+       3.0,
+       5.0,
+       7.0
+      ],
+      "within_10s": 0.5148148148148148,
+      "within_30s": 0.5333333333333333
+     }
+    }
+   },
+   "J": 0.6314347961406784
+  },
+  "lid_resid_3": {
+   "name": "lid_resid_3",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 2.8091793185141483,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 2.8208972038856364,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 2.821448823613343,
+      "n": 937,
+      "false_alarms": 2,
+      "fa": 0.0021344717182497333
+     },
+     "0013": {
+      "threshold_from_others": 2.7994004054937314,
+      "n": 1012,
+      "false_alarms": 13,
+      "fa": 0.012845849802371542
+     },
+     "0015": {
+      "threshold_from_others": 2.822974910353221,
+      "n": 2162,
+      "false_alarms": 13,
+      "fa": 0.006012950971322849
+     },
+     "0017": {
+      "threshold_from_others": 2.8227478683346927,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 2.815465549501964,
+      "n": 3461,
+      "false_alarms": 30,
+      "fa": 0.008668015024559377
+     },
+     "0020": {
+      "threshold_from_others": 2.815465549501964,
+      "n": 620,
+      "false_alarms": 1,
+      "fa": 0.0016129032258064516
+     },
+     "0027": {
+      "threshold_from_others": 2.7727977181089365,
+      "n": 797,
+      "false_alarms": 28,
+      "fa": 0.03513174404015056
+     },
+     "0029": {
+      "threshold_from_others": 2.776728745447135,
+      "n": 3068,
+      "false_alarms": 47,
+      "fa": 0.015319426336375489
+     },
+     "0035": {
+      "threshold_from_others": 2.815465549501964,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 2.8227478683346927,
+      "n": 907,
+      "false_alarms": 1,
+      "fa": 0.0011025358324145535
+     },
+     "0060": {
+      "threshold_from_others": 2.8208972038856364,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 2.7136498181494413,
+      "n": 3012,
+      "false_alarms": 88,
+      "fa": 0.029216467463479414
+     },
+     "0106": {
+      "threshold_from_others": 2.825962300494858,
+      "n": 1674,
+      "false_alarms": 7,
+      "fa": 0.004181600955794504
+     },
+     "0113": {
+      "threshold_from_others": 2.815465549501964,
+      "n": 605,
+      "false_alarms": 1,
+      "fa": 0.001652892561983471
+     }
+    },
+    "heldout_fa_pooled": 0.011137360782990213,
+    "heldout_fa_worst_drive": 0.03513174404015056,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 3.058080623406534,
+    "fa_on_train_drives_at_val_only_threshold": 0.005414478315014348,
+    "fa_on_train_drives_at_lodo_threshold": 0.009583626617575397
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.01055572803477181,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.7333333333333333,
+     "accel_drift": 0.5740740740740741,
+     "jump": 1.0,
+     "freeze": 0.7814814814814814,
+     "doppler_spoof": 0.6333333333333333,
+     "meaconing": 0.5074074074074074
+    },
+    "row_detection": {
+     "drift": 0.44608010955152344,
+     "accel_drift": 0.5432756324900133,
+     "jump": 0.28677966101694913,
+     "freeze": 0.7243675099866844,
+     "doppler_spoof": 0.4980582524271845,
+     "meaconing": 0.3893547211082756
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 198,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       2.0,
+       2.5,
+       3.0,
+       5.0
+      ],
+      "within_10s": 0.7037037037037037,
+      "within_30s": 0.7296296296296296
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 155,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       5.0,
+       6.0,
+       8.0
+      ],
+      "within_10s": 0.5481481481481482,
+      "within_30s": 0.5740740740740741
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 211,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       2.0
+      ],
+      "within_10s": 0.7777777777777778,
+      "within_30s": 0.7814814814814814
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 171,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       4.0,
+       5.0,
+       6.0
+      ],
+      "within_10s": 0.6296296296296297,
+      "within_30s": 0.6333333333333333
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 137,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       3.0,
+       4.0,
+       5.0,
+       7.0
+      ],
+      "within_10s": 0.4962962962962963,
+      "within_30s": 0.5074074074074074
+     }
+    }
+   },
+   "J": 0.6378462496109555
+  },
+  "lid_resid_10": {
+   "name": "lid_resid_10",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 4.949056220035134,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 4.9708929877451835,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 4.97672852646116,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 4.976887557702634,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 4.975793002822632,
+      "n": 2162,
+      "false_alarms": 14,
+      "fa": 0.0064754856614246065
+     },
+     "0017": {
+      "threshold_from_others": 4.975793002822632,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 4.78032170200889,
+      "n": 3461,
+      "false_alarms": 95,
+      "fa": 0.027448714244438024
+     },
+     "0020": {
+      "threshold_from_others": 4.9708929877451835,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 4.850508281148306,
+      "n": 797,
+      "false_alarms": 34,
+      "fa": 0.04265997490589712
+     },
+     "0029": {
+      "threshold_from_others": 4.947863365972192,
+      "n": 3068,
+      "false_alarms": 32,
+      "fa": 0.010430247718383311
+     },
+     "0035": {
+      "threshold_from_others": 4.9638163196658125,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 4.97672852646116,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 4.9708929877451835,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 4.805008171317028,
+      "n": 3012,
+      "false_alarms": 75,
+      "fa": 0.0249003984063745
+     },
+     "0106": {
+      "threshold_from_others": 4.992226102194195,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 4.9708929877451835,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.012053420760811919,
+    "heldout_fa_worst_drive": 0.04265997490589712,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 5.213098491722227,
+    "fa_on_train_drives_at_val_only_threshold": 0.006280794845416644,
+    "fa_on_train_drives_at_lodo_threshold": 0.00963777140072554
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.013039428748835765,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.6259259259259259,
+     "accel_drift": 0.46296296296296297,
+     "jump": 1.0,
+     "freeze": 0.7407407407407407,
+     "doppler_spoof": 0.5148148148148148,
+     "meaconing": 0.43333333333333335
+    },
+    "row_detection": {
+     "drift": 0.5018829168093119,
+     "accel_drift": 0.5029960053262317,
+     "jump": 0.6430508474576271,
+     "freeze": 0.758988015978695,
+     "doppler_spoof": 0.5148867313915858,
+     "meaconing": 0.4298213634706526
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 13,
+     "runs_with_full_30s": 6,
+     "rate": 0.38235294117647056
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 169,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       3.0,
+       4.0,
+       5.0,
+       8.0
+      ],
+      "within_10s": 0.6037037037037037,
+      "within_30s": 0.6259259259259259
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 125,
+      "delays_q10_25_50_75_90_s": [
+       4.0,
+       5.0,
+       6.0,
+       8.0,
+       9.0
+      ],
+      "within_10s": 0.43333333333333335,
+      "within_30s": 0.46296296296296297
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 200,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       2.0,
+       3.0
+      ],
+      "within_10s": 0.7333333333333333,
+      "within_30s": 0.7407407407407407
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 139,
+      "delays_q10_25_50_75_90_s": [
+       4.0,
+       5.0,
+       6.0,
+       6.0,
+       8.0
+      ],
+      "within_10s": 0.5,
+      "within_30s": 0.5148148148148148
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 117,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       3.0,
+       5.0,
+       6.0,
+       8.0
+      ],
+      "within_10s": 0.4148148148148148,
+      "within_30s": 0.43333333333333335
+     }
+    }
+   },
+   "J": 0.5943043884220354
+  },
+  "lid_z_1": {
+   "name": "lid_z_1",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 2.849550816120139,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 2.863084061315362,
+      "n": 559,
+      "false_alarms": 1,
+      "fa": 0.0017889087656529517
+     },
+     "0011": {
+      "threshold_from_others": 2.8383755324062983,
+      "n": 937,
+      "false_alarms": 13,
+      "fa": 0.013874066168623266
+     },
+     "0013": {
+      "threshold_from_others": 2.8646276315008556,
+      "n": 1012,
+      "false_alarms": 4,
+      "fa": 0.003952569169960474
+     },
+     "0015": {
+      "threshold_from_others": 2.8670913763993244,
+      "n": 2162,
+      "false_alarms": 14,
+      "fa": 0.0064754856614246065
+     },
+     "0017": {
+      "threshold_from_others": 2.8455896678038815,
+      "n": 829,
+      "false_alarms": 11,
+      "fa": 0.013268998793727383
+     },
+     "0019": {
+      "threshold_from_others": 2.8646276315008556,
+      "n": 3461,
+      "false_alarms": 29,
+      "fa": 0.008379081190407396
+     },
+     "0020": {
+      "threshold_from_others": 2.8474855653536535,
+      "n": 620,
+      "false_alarms": 7,
+      "fa": 0.01129032258064516
+     },
+     "0027": {
+      "threshold_from_others": 2.8601280890218836,
+      "n": 797,
+      "false_alarms": 4,
+      "fa": 0.005018820577164366
+     },
+     "0029": {
+      "threshold_from_others": 2.8383755324062983,
+      "n": 3068,
+      "false_alarms": 35,
+      "fa": 0.011408083441981747
+     },
+     "0035": {
+      "threshold_from_others": 2.8455896678038815,
+      "n": 538,
+      "false_alarms": 8,
+      "fa": 0.01486988847583643
+     },
+     "0046": {
+      "threshold_from_others": 2.8474855653536535,
+      "n": 907,
+      "false_alarms": 10,
+      "fa": 0.011025358324145534
+     },
+     "0060": {
+      "threshold_from_others": 2.857144326787715,
+      "n": 560,
+      "false_alarms": 4,
+      "fa": 0.007142857142857143
+     },
+     "0070": {
+      "threshold_from_others": 2.846033147145636,
+      "n": 3012,
+      "false_alarms": 32,
+      "fa": 0.010624169986719787
+     },
+     "0106": {
+      "threshold_from_others": 2.8298406861286347,
+      "n": 1674,
+      "false_alarms": 27,
+      "fa": 0.016129032258064516
+     },
+     "0113": {
+      "threshold_from_others": 2.8383755324062983,
+      "n": 605,
+      "false_alarms": 10,
+      "fa": 0.01652892561983471
+     }
+    },
+    "heldout_fa_pooled": 0.010076659756038765,
+    "heldout_fa_worst_drive": 0.01652892561983471,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 2.9016870988460735,
+    "fa_on_train_drives_at_val_only_threshold": 0.008609020520872814,
+    "fa_on_train_drives_at_lodo_threshold": 0.009854350533326114
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.01272896615957777,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.7296296296296296,
+     "accel_drift": 0.5777777777777777,
+     "jump": 1.0,
+     "freeze": 0.8,
+     "doppler_spoof": 0.6444444444444445,
+     "meaconing": 0.5851851851851851
+    },
+    "row_detection": {
+     "drift": 0.27387880862718245,
+     "accel_drift": 0.4940079893475366,
+     "jump": 0.10203389830508475,
+     "freeze": 0.7223701731025299,
+     "doppler_spoof": 0.35080906148867314,
+     "meaconing": 0.3171709806780897
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 16,
+     "runs_with_full_30s": 6,
+     "rate": 0.47058823529411764
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 197,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       3.0,
+       7.0
+      ],
+      "within_10s": 0.6925925925925925,
+      "within_30s": 0.7296296296296296
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 156,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       3.0,
+       4.0,
+       6.0,
+       9.0
+      ],
+      "within_10s": 0.5370370370370371,
+      "within_30s": 0.5777777777777777
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 216,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "within_10s": 0.8,
+      "within_30s": 0.8
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 174,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       3.0,
+       4.0,
+       5.0,
+       6.0
+      ],
+      "within_10s": 0.6185185185185185,
+      "within_30s": 0.6407407407407407
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 158,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       2.0,
+       3.5,
+       5.0,
+       7.0
+      ],
+      "within_10s": 0.5703703703703704,
+      "within_30s": 0.5851851851851851
+     }
+    }
+   },
+   "J": 0.6868036103330221
+  },
+  "lid_z_3": {
+   "name": "lid_z_3",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 2.8548091338711283,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 2.870807270655238,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 2.8615606581323156,
+      "n": 937,
+      "false_alarms": 7,
+      "fa": 0.007470651013874066
+     },
+     "0013": {
+      "threshold_from_others": 2.870807270655238,
+      "n": 1012,
+      "false_alarms": 4,
+      "fa": 0.003952569169960474
+     },
+     "0015": {
+      "threshold_from_others": 2.8879851277761683,
+      "n": 2162,
+      "false_alarms": 3,
+      "fa": 0.0013876040703052729
+     },
+     "0017": {
+      "threshold_from_others": 2.8536345456746477,
+      "n": 829,
+      "false_alarms": 9,
+      "fa": 0.010856453558504222
+     },
+     "0019": {
+      "threshold_from_others": 2.883505665008758,
+      "n": 3461,
+      "false_alarms": 18,
+      "fa": 0.005200809014735626
+     },
+     "0020": {
+      "threshold_from_others": 2.8455487088583116,
+      "n": 620,
+      "false_alarms": 16,
+      "fa": 0.025806451612903226
+     },
+     "0027": {
+      "threshold_from_others": 2.8681745923763278,
+      "n": 797,
+      "false_alarms": 3,
+      "fa": 0.0037641154328732747
+     },
+     "0029": {
+      "threshold_from_others": 2.8517219367324618,
+      "n": 3068,
+      "false_alarms": 34,
+      "fa": 0.01108213820078227
+     },
+     "0035": {
+      "threshold_from_others": 2.865551175217576,
+      "n": 538,
+      "false_alarms": 2,
+      "fa": 0.0037174721189591076
+     },
+     "0046": {
+      "threshold_from_others": 2.8533639572788236,
+      "n": 907,
+      "false_alarms": 11,
+      "fa": 0.012127894156560088
+     },
+     "0060": {
+      "threshold_from_others": 2.850215076139691,
+      "n": 560,
+      "false_alarms": 11,
+      "fa": 0.019642857142857142
+     },
+     "0070": {
+      "threshold_from_others": 2.8158187981019394,
+      "n": 3012,
+      "false_alarms": 54,
+      "fa": 0.017928286852589643
+     },
+     "0106": {
+      "threshold_from_others": 2.850215076139691,
+      "n": 1674,
+      "false_alarms": 22,
+      "fa": 0.013142174432497013
+     },
+     "0113": {
+      "threshold_from_others": 2.842191947419398,
+      "n": 605,
+      "false_alarms": 19,
+      "fa": 0.03140495867768595
+     }
+    },
+    "heldout_fa_pooled": 0.010269514488211754,
+    "heldout_fa_worst_drive": 0.03140495867768595,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 2.6830101969719617,
+    "fa_on_train_drives_at_val_only_threshold": 0.016893172342844768,
+    "fa_on_train_drives_at_lodo_threshold": 0.01055823271427798
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.012418503570319777,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.7444444444444445,
+     "accel_drift": 0.5851851851851851,
+     "jump": 1.0,
+     "freeze": 0.7925925925925926,
+     "doppler_spoof": 0.6814814814814815,
+     "meaconing": 0.5666666666666667
+    },
+    "row_detection": {
+     "drift": 0.40397124272509416,
+     "accel_drift": 0.5376165113182424,
+     "jump": 0.28338983050847455,
+     "freeze": 0.7380159786950732,
+     "doppler_spoof": 0.47993527508090617,
+     "meaconing": 0.3798760481224936
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 12,
+     "runs_with_full_30s": 6,
+     "rate": 0.35294117647058826
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 201,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       2.0,
+       2.0,
+       3.0,
+       5.0
+      ],
+      "within_10s": 0.7185185185185186,
+      "within_30s": 0.7407407407407407
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 158,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       5.0,
+       6.0,
+       9.300000000000011
+      ],
+      "within_10s": 0.5444444444444444,
+      "within_30s": 0.5851851851851851
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 214,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       2.0
+      ],
+      "within_10s": 0.7888888888888889,
+      "within_30s": 0.7925925925925926
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 184,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       3.0,
+       4.0,
+       5.0,
+       6.700000000000017
+      ],
+      "within_10s": 0.662962962962963,
+      "within_30s": 0.6814814814814815
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 153,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       3.0,
+       4.0,
+       5.0,
+       6.0
+      ],
+      "within_10s": 0.5555555555555556,
+      "within_30s": 0.5666666666666667
+     }
+    }
+   },
+   "J": 0.6747587924058511
+  },
+  "lid_z_10": {
+   "name": "lid_z_10",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 2.883493278218324,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 2.8896745553980936,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 2.8896745553980936,
+      "n": 937,
+      "false_alarms": 3,
+      "fa": 0.0032017075773745998
+     },
+     "0013": {
+      "threshold_from_others": 2.8883976808353804,
+      "n": 1012,
+      "false_alarms": 6,
+      "fa": 0.005928853754940711
+     },
+     "0015": {
+      "threshold_from_others": 2.9098703102087744,
+      "n": 2162,
+      "false_alarms": 1,
+      "fa": 0.00046253469010175765
+     },
+     "0017": {
+      "threshold_from_others": 2.885639476189441,
+      "n": 829,
+      "false_alarms": 7,
+      "fa": 0.008443908323281062
+     },
+     "0019": {
+      "threshold_from_others": 2.952970108826886,
+      "n": 3461,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0020": {
+      "threshold_from_others": 2.850215076139691,
+      "n": 620,
+      "false_alarms": 20,
+      "fa": 0.03225806451612903
+     },
+     "0027": {
+      "threshold_from_others": 2.889244541427229,
+      "n": 797,
+      "false_alarms": 3,
+      "fa": 0.0037641154328732747
+     },
+     "0029": {
+      "threshold_from_others": 2.8681745923763278,
+      "n": 3068,
+      "false_alarms": 40,
+      "fa": 0.01303780964797914
+     },
+     "0035": {
+      "threshold_from_others": 2.889244541427229,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 2.886493243347688,
+      "n": 907,
+      "false_alarms": 7,
+      "fa": 0.007717750826901874
+     },
+     "0060": {
+      "threshold_from_others": 2.8754275112111705,
+      "n": 560,
+      "false_alarms": 12,
+      "fa": 0.02142857142857143
+     },
+     "0070": {
+      "threshold_from_others": 2.79369564585607,
+      "n": 3012,
+      "false_alarms": 81,
+      "fa": 0.026892430278884463
+     },
+     "0106": {
+      "threshold_from_others": 2.8466765423173364,
+      "n": 1674,
+      "false_alarms": 35,
+      "fa": 0.02090800477897252
+     },
+     "0113": {
+      "threshold_from_others": 2.8754275112111705,
+      "n": 605,
+      "false_alarms": 12,
+      "fa": 0.019834710743801654
+     }
+    },
+    "heldout_fa_pooled": 0.010944506050817222,
+    "heldout_fa_worst_drive": 0.03225806451612903,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 2.4850141381315667,
+    "fa_on_train_drives_at_val_only_threshold": 0.026693378093020737,
+    "fa_on_train_drives_at_lodo_threshold": 0.010883101413178841
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.009624340266997827,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.6444444444444445,
+     "accel_drift": 0.4925925925925926,
+     "jump": 0.9888888888888889,
+     "freeze": 0.7888888888888889,
+     "doppler_spoof": 0.5481481481481482,
+     "meaconing": 0.45555555555555555
+    },
+    "row_detection": {
+     "drift": 0.42245806230742894,
+     "accel_drift": 0.4780292942743009,
+     "jump": 0.6186440677966102,
+     "freeze": 0.7859520639147803,
+     "doppler_spoof": 0.4563106796116505,
+     "meaconing": 0.3714910681735326
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 12,
+     "runs_with_full_30s": 6,
+     "rate": 0.35294117647058826
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 174,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       2.0,
+       4.0,
+       6.0,
+       9.0
+      ],
+      "within_10s": 0.6074074074074074,
+      "within_30s": 0.6407407407407407
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 133,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       6.0,
+       8.0,
+       10.0
+      ],
+      "within_10s": 0.4444444444444444,
+      "within_30s": 0.4925925925925926
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 267,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 0.9888888888888889,
+      "within_30s": 0.9888888888888889
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 213,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       2.0,
+       3.0
+      ],
+      "within_10s": 0.7814814814814814,
+      "within_30s": 0.7888888888888889
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 148,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       5.0,
+       7.0,
+       9.300000000000011
+      ],
+      "within_10s": 0.5296296296296297,
+      "within_30s": 0.5481481481481482
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 123,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       5.0,
+       6.0,
+       7.0,
+       8.799999999999997
+      ],
+      "within_10s": 0.43333333333333335,
+      "within_30s": 0.45555555555555555
+     }
+    }
+   },
+   "J": 0.6102085278555867
+  },
+  "lid_course": {
+   "name": "lid_course",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 1.6765402746367677,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 1.682022120312067,
+      "n": 559,
+      "false_alarms": 1,
+      "fa": 0.0017889087656529517
+     },
+     "0011": {
+      "threshold_from_others": 1.6803440308329298,
+      "n": 937,
+      "false_alarms": 5,
+      "fa": 0.005336179295624333
+     },
+     "0013": {
+      "threshold_from_others": 1.6799860935288906,
+      "n": 1012,
+      "false_alarms": 7,
+      "fa": 0.00691699604743083
+     },
+     "0015": {
+      "threshold_from_others": 1.6765402746367677,
+      "n": 2162,
+      "false_alarms": 22,
+      "fa": 0.010175763182238668
+     },
+     "0017": {
+      "threshold_from_others": 1.6856447708878288,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 1.6760901154974686,
+      "n": 3461,
+      "false_alarms": 36,
+      "fa": 0.010401618029471251
+     },
+     "0020": {
+      "threshold_from_others": 1.682022120312067,
+      "n": 620,
+      "false_alarms": 1,
+      "fa": 0.0016129032258064516
+     },
+     "0027": {
+      "threshold_from_others": 1.6686570122654905,
+      "n": 797,
+      "false_alarms": 11,
+      "fa": 0.013801756587202008
+     },
+     "0029": {
+      "threshold_from_others": 1.6799444570127255,
+      "n": 3068,
+      "false_alarms": 29,
+      "fa": 0.009452411994784877
+     },
+     "0035": {
+      "threshold_from_others": 1.6766997985189762,
+      "n": 538,
+      "false_alarms": 4,
+      "fa": 0.007434944237918215
+     },
+     "0046": {
+      "threshold_from_others": 1.6765402746367677,
+      "n": 907,
+      "false_alarms": 9,
+      "fa": 0.009922822491730982
+     },
+     "0060": {
+      "threshold_from_others": 1.683992529565593,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 1.6319124940669323,
+      "n": 3012,
+      "false_alarms": 67,
+      "fa": 0.022244355909694556
+     },
+     "0106": {
+      "threshold_from_others": 1.6686570122654905,
+      "n": 1674,
+      "false_alarms": 20,
+      "fa": 0.011947431302270013
+     },
+     "0113": {
+      "threshold_from_others": 1.682022120312067,
+      "n": 605,
+      "false_alarms": 1,
+      "fa": 0.001652892561983471
+     }
+    },
+    "heldout_fa_pooled": 0.010269514488211754,
+    "heldout_fa_worst_drive": 0.022244355909694556,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 1.6534089748002931,
+    "fa_on_train_drives_at_val_only_threshold": 0.010991390979479126,
+    "fa_on_train_drives_at_lodo_threshold": 0.01012507444907683
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.010245265445513815,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.1814814814814815,
+     "accel_drift": 0.2,
+     "jump": 0.5925925925925926,
+     "freeze": 0.6925925925925925,
+     "doppler_spoof": 0.1259259259259259,
+     "meaconing": 0.18518518518518517
+    },
+    "row_detection": {
+     "drift": 0.021910304690174597,
+     "accel_drift": 0.042942743009320904,
+     "jump": 0.11254237288135593,
+     "freeze": 0.1940745672436751,
+     "doppler_spoof": 0.013915857605177993,
+     "meaconing": 0.03609187021509296
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 3,
+     "runs_with_full_30s": 6,
+     "rate": 0.08823529411764706
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 49,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       2.0,
+       7.0,
+       13.400000000000006
+      ],
+      "within_10s": 0.14814814814814814,
+      "within_30s": 0.17777777777777778
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 54,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       4.0,
+       9.0,
+       16.75,
+       22.700000000000003
+      ],
+      "within_10s": 0.10740740740740742,
+      "within_30s": 0.2
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 160,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 0.5851851851851851,
+      "within_30s": 0.5925925925925926
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 187,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       1.0,
+       1.0
+      ],
+      "within_10s": 0.6814814814814815,
+      "within_30s": 0.6925925925925925
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 34,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       3.0,
+       5.5,
+       10.0,
+       22.4
+      ],
+      "within_10s": 0.1,
+      "within_30s": 0.12222222222222222
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 50,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       5.0,
+       8.0,
+       14.5,
+       19.500000000000007
+      ],
+      "within_10s": 0.1259259259259259,
+      "within_30s": 0.1814814814814815
+     }
+    }
+   },
+   "J": 0.2951447245564892
+  },
+  "cusum_lidar_nis|k=0.5": {
+   "name": "cusum_lidar_nis|k=0.5",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 45.69022145960194,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 48.31736467122992,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 49.0836831184231,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 49.546594565937106,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 54.2630659896556,
+      "n": 2162,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0017": {
+      "threshold_from_others": 48.93149942470956,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 40.90190404926408,
+      "n": 3461,
+      "false_alarms": 60,
+      "fa": 0.017336030049118753
+     },
+     "0020": {
+      "threshold_from_others": 48.31736467122992,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 48.93149942470956,
+      "n": 797,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0029": {
+      "threshold_from_others": 55.572460581867325,
+      "n": 3068,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0035": {
+      "threshold_from_others": 47.611260946183016,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 49.0836831184231,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 48.31736467122992,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 10.437147422106017,
+      "n": 3012,
+      "false_alarms": 315,
+      "fa": 0.10458167330677291
+     },
+     "0106": {
+      "threshold_from_others": 52.578615921335135,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 48.31736467122992,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.018080131141217877,
+    "heldout_fa_worst_drive": 0.10458167330677291,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 6.6128370494089035,
+    "fa_on_train_drives_at_val_only_threshold": 0.03194542205858465,
+    "fa_on_train_drives_at_lodo_threshold": 0.0112079701120797
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.027010245265445515,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.4074074074074074,
+     "accel_drift": 0.3888888888888889,
+     "jump": 1.0,
+     "freeze": 0.7,
+     "doppler_spoof": 0.45925925925925926,
+     "meaconing": 0.37407407407407406
+    },
+    "row_detection": {
+     "drift": 0.406710030811366,
+     "accel_drift": 0.4324234354194407,
+     "jump": 0.9979661016949153,
+     "freeze": 0.7503328894806924,
+     "doppler_spoof": 0.4598705501618123,
+     "meaconing": 0.4312796208530806
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 110,
+      "delays_q10_25_50_75_90_s": [
+       4.0,
+       5.0,
+       6.0,
+       9.0,
+       12.100000000000009
+      ],
+      "within_10s": 0.34074074074074073,
+      "within_30s": 0.4074074074074074
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 105,
+      "delays_q10_25_50_75_90_s": [
+       6.0,
+       6.0,
+       8.0,
+       10.0,
+       13.0
+      ],
+      "within_10s": 0.3037037037037037,
+      "within_30s": 0.3888888888888889
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 189,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       2.0,
+       4.0
+      ],
+      "within_10s": 0.6925925925925925,
+      "within_30s": 0.7
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 124,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       6.0,
+       7.0,
+       8.0,
+       10.0
+      ],
+      "within_10s": 0.4148148148148148,
+      "within_30s": 0.45925925925925926
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 101,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       5.0,
+       6.0,
+       7.0,
+       9.0
+      ],
+      "within_10s": 0.35555555555555557,
+      "within_30s": 0.37407407407407406
+     }
+    }
+   },
+   "J": 0.5092748210395269
+  },
+  "cusum_lidar_nis|k=1.0": {
+   "name": "cusum_lidar_nis|k=1.0",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 39.70196313443187,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 41.5652179494899,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 42.43149942470956,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 42.81736467122992,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 48.21706438833501,
+      "n": 2162,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0017": {
+      "threshold_from_others": 42.3482348687479,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 34.5506951729647,
+      "n": 3461,
+      "false_alarms": 60,
+      "fa": 0.017336030049118753
+     },
+     "0020": {
+      "threshold_from_others": 41.5652179494899,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 42.3482348687479,
+      "n": 797,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0029": {
+      "threshold_from_others": 49.62157394535249,
+      "n": 3068,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0035": {
+      "threshold_from_others": 41.12366494600615,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 42.43149942470956,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 41.5652179494899,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 6.384978577580929,
+      "n": 3012,
+      "false_alarms": 332,
+      "fa": 0.1102257636122178
+     },
+     "0106": {
+      "threshold_from_others": 46.479997205701295,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 41.5652179494899,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.01889976375295309,
+    "heldout_fa_worst_drive": 0.1102257636122178,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 4.350639704125398,
+    "fa_on_train_drives_at_val_only_threshold": 0.030970815961882073,
+    "fa_on_train_drives_at_lodo_threshold": 0.0112079701120797
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.02732070785470351,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.4185185185185185,
+     "accel_drift": 0.3925925925925926,
+     "jump": 1.0,
+     "freeze": 0.7037037037037037,
+     "doppler_spoof": 0.45925925925925926,
+     "meaconing": 0.37407407407407406
+    },
+    "row_detection": {
+     "drift": 0.4128723040054776,
+     "accel_drift": 0.4367509986684421,
+     "jump": 0.9986440677966102,
+     "freeze": 0.7529960053262317,
+     "doppler_spoof": 0.4656957928802589,
+     "meaconing": 0.43492526430915057
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 113,
+      "delays_q10_25_50_75_90_s": [
+       4.0,
+       5.0,
+       6.0,
+       9.0,
+       12.0
+      ],
+      "within_10s": 0.35185185185185186,
+      "within_30s": 0.4185185185185185
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 106,
+      "delays_q10_25_50_75_90_s": [
+       6.0,
+       6.0,
+       8.0,
+       10.0,
+       12.0
+      ],
+      "within_10s": 0.3148148148148148,
+      "within_30s": 0.3925925925925926
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 190,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       2.0,
+       4.0
+      ],
+      "within_10s": 0.6962962962962963,
+      "within_30s": 0.7037037037037037
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 124,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       6.0,
+       7.0,
+       7.0,
+       10.0
+      ],
+      "within_10s": 0.4185185185185185,
+      "within_30s": 0.45925925925925926
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 101,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       5.0,
+       7.0,
+       9.0
+      ],
+      "within_10s": 0.35555555555555557,
+      "within_30s": 0.37407407407407406
+     }
+    }
+   },
+   "J": 0.5119203236850296
+  },
+  "cusum_lidar_nis|k=1.5": {
+   "name": "cusum_lidar_nis|k=1.5",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 35.04998492707591,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 35.37747603821531,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 36.84425939649592,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 37.342597356397,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 42.35418688861956,
+      "n": 2162,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0017": {
+      "threshold_from_others": 36.26268508607105,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 29.77069704887566,
+      "n": 3461,
+      "false_alarms": 57,
+      "fa": 0.016469228546662815
+     },
+     "0020": {
+      "threshold_from_others": 35.37747603821531,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 36.26268508607105,
+      "n": 797,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0029": {
+      "threshold_from_others": 44.62157394535249,
+      "n": 3068,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0035": {
+      "threshold_from_others": 35.21623075321298,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 36.84425939649592,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 35.37747603821531,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 3.8964916501392346,
+      "n": 3012,
+      "false_alarms": 338,
+      "fa": 0.11221779548472775
+     },
+     "0106": {
+      "threshold_from_others": 40.22133636723793,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 35.37747603821531,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.01904440480208283,
+    "heldout_fa_worst_drive": 0.11221779548472775,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 3.1225230170179885,
+    "fa_on_train_drives_at_val_only_threshold": 0.02891331420217662,
+    "fa_on_train_drives_at_lodo_threshold": 0.0112079701120797
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.027010245265445515,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.42962962962962964,
+     "accel_drift": 0.3925925925925926,
+     "jump": 1.0,
+     "freeze": 0.7111111111111111,
+     "doppler_spoof": 0.45925925925925926,
+     "meaconing": 0.37777777777777777
+    },
+    "row_detection": {
+     "drift": 0.41389934953782953,
+     "accel_drift": 0.4394141145139814,
+     "jump": 0.9996610169491525,
+     "freeze": 0.757323568575233,
+     "doppler_spoof": 0.46990291262135925,
+     "meaconing": 0.43857090776522056
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 116,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       6.0,
+       9.0,
+       12.0
+      ],
+      "within_10s": 0.362962962962963,
+      "within_30s": 0.42962962962962964
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 106,
+      "delays_q10_25_50_75_90_s": [
+       5.5,
+       6.0,
+       8.0,
+       10.0,
+       12.0
+      ],
+      "within_10s": 0.3148148148148148,
+      "within_30s": 0.3925925925925926
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 192,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       2.0,
+       4.0
+      ],
+      "within_10s": 0.7037037037037037,
+      "within_30s": 0.7111111111111111
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 124,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       6.0,
+       6.0,
+       7.0,
+       10.0
+      ],
+      "within_10s": 0.4185185185185185,
+      "within_30s": 0.45925925925925926
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 102,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       5.0,
+       7.0,
+       8.900000000000006
+      ],
+      "within_10s": 0.3592592592592593,
+      "within_30s": 0.37777777777777777
+     }
+    }
+   },
+   "J": 0.5150949268596328
+  },
+  "cusum_lidar_nis|k=2.0": {
+   "name": "cusum_lidar_nis|k=2.0",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 29.69118134081521,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 31.87747603821531,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 32.19450471548736,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 32.22133636723793,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 35.82662617399053,
+      "n": 2162,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0017": {
+      "threshold_from_others": 32.129184806012475,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 25.687505457024624,
+      "n": 3461,
+      "false_alarms": 55,
+      "fa": 0.015891360878358855
+     },
+     "0020": {
+      "threshold_from_others": 31.87747603821531,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 32.129184806012475,
+      "n": 797,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0029": {
+      "threshold_from_others": 39.430434225817386,
+      "n": 3068,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0035": {
+      "threshold_from_others": 31.62152930308208,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 32.19450471548736,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 31.87747603821531,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 2.4195665729673945,
+      "n": 3012,
+      "false_alarms": 344,
+      "fa": 0.11420982735723771
+     },
+     "0106": {
+      "threshold_from_others": 34.83217735429942,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 31.87747603821531,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.019237259534255823,
+    "heldout_fa_worst_drive": 0.11420982735723771,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 2.294661537694537,
+    "fa_on_train_drives_at_val_only_threshold": 0.0273972602739726,
+    "fa_on_train_drives_at_lodo_threshold": 0.0112079701120797
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.02669978267618752,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.44074074074074077,
+     "accel_drift": 0.3925925925925926,
+     "jump": 1.0,
+     "freeze": 0.7148148148148148,
+     "doppler_spoof": 0.45925925925925926,
+     "meaconing": 0.3814814814814815
+    },
+    "row_detection": {
+     "drift": 0.41937692571037316,
+     "accel_drift": 0.4437416777629827,
+     "jump": 1.0,
+     "freeze": 0.7593209054593875,
+     "doppler_spoof": 0.47572815533980584,
+     "meaconing": 0.44331024425811155
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 119,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       6.0,
+       9.0,
+       12.0
+      ],
+      "within_10s": 0.37037037037037035,
+      "within_30s": 0.44074074074074077
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 106,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       6.0,
+       8.0,
+       9.75,
+       12.0
+      ],
+      "within_10s": 0.32222222222222224,
+      "within_30s": 0.3925925925925926
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 270,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 1.0,
+      "within_30s": 1.0
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 193,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       2.0,
+       4.0
+      ],
+      "within_10s": 0.7074074074074074,
+      "within_30s": 0.7148148148148148
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 124,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       6.0,
+       6.0,
+       7.0,
+       10.0
+      ],
+      "within_10s": 0.4185185185185185,
+      "within_30s": 0.45925925925925926
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 103,
+      "delays_q10_25_50_75_90_s": [
+       3.0,
+       4.0,
+       5.0,
+       7.0,
+       8.0
+      ],
+      "within_10s": 0.362962962962963,
+      "within_30s": 0.3814814814814815
+     }
+    }
+   },
+   "J": 0.5177404295051354
+  },
+  "cusum_lidar_axis|k=0.5": {
+   "name": "cusum_lidar_axis|k=0.5",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 38.14558347988949,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 38.901406831599296,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 39.13993630016255,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 39.18336805743132,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 41.26704099940341,
+      "n": 2162,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0017": {
+      "threshold_from_others": 39.09905101594991,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 33.7571912441368,
+      "n": 3461,
+      "false_alarms": 73,
+      "fa": 0.02109216989309448
+     },
+     "0020": {
+      "threshold_from_others": 38.901406831599296,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 39.09905101594991,
+      "n": 797,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0029": {
+      "threshold_from_others": 41.09861620610814,
+      "n": 3068,
+      "false_alarms": 11,
+      "fa": 0.003585397653194263
+     },
+     "0035": {
+      "threshold_from_others": 38.886400029822276,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 39.13993630016255,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 38.901406831599296,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 22.076962715530232,
+      "n": 3012,
+      "false_alarms": 238,
+      "fa": 0.07901726427622842
+     },
+     "0106": {
+      "threshold_from_others": 40.69947283163395,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 38.901406831599296,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.015524805939925751,
+    "heldout_fa_worst_drive": 0.07901726427622842,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 10.810579219918937,
+    "fa_on_train_drives_at_val_only_threshold": 0.039525691699604744,
+    "fa_on_train_drives_at_lodo_threshold": 0.0112079701120797
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.02390561937286557,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.32592592592592595,
+     "accel_drift": 0.32592592592592595,
+     "jump": 0.9703703703703703,
+     "freeze": 0.6111111111111112,
+     "doppler_spoof": 0.337037037037037,
+     "meaconing": 0.3296296296296296
+    },
+    "row_detection": {
+     "drift": 0.3375556316330024,
+     "accel_drift": 0.3705059920106525,
+     "jump": 0.9196610169491526,
+     "freeze": 0.666444740346205,
+     "doppler_spoof": 0.3796116504854369,
+     "meaconing": 0.35107546481954066
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 88,
+      "delays_q10_25_50_75_90_s": [
+       6.0,
+       7.0,
+       9.0,
+       11.0,
+       14.299999999999997
+      ],
+      "within_10s": 0.24074074074074073,
+      "within_30s": 0.32592592592592595
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 88,
+      "delays_q10_25_50_75_90_s": [
+       6.0,
+       8.0,
+       10.0,
+       11.25,
+       14.0
+      ],
+      "within_10s": 0.1925925925925926,
+      "within_30s": 0.32592592592592595
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 262,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       1.0,
+       2.0
+      ],
+      "within_10s": 0.9703703703703703,
+      "within_30s": 0.9703703703703703
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 165,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       2.0,
+       2.0,
+       3.0,
+       5.599999999999994
+      ],
+      "within_10s": 0.6,
+      "within_30s": 0.6111111111111112
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 91,
+      "delays_q10_25_50_75_90_s": [
+       7.0,
+       8.0,
+       9.0,
+       10.5,
+       13.0
+      ],
+      "within_10s": 0.2518518518518518,
+      "within_30s": 0.337037037037037
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 89,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       7.0,
+       8.0,
+       9.0,
+       11.200000000000003
+      ],
+      "within_10s": 0.2777777777777778,
+      "within_30s": 0.3296296296296296
+     }
+    }
+   },
+   "J": 0.44789915966386556
+  },
+  "cusum_lidar_axis|k=1.0": {
+   "name": "cusum_lidar_axis|k=1.0",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 26.48674804676187,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 27.18142119213617,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 27.500002911090522,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 27.608678920534793,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 28.87808570383883,
+      "n": 2162,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0017": {
+      "threshold_from_others": 27.40741673694934,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 23.609258530685906,
+      "n": 3461,
+      "false_alarms": 69,
+      "fa": 0.019936434556486565
+     },
+     "0020": {
+      "threshold_from_others": 27.18142119213617,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 27.40741673694934,
+      "n": 797,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0029": {
+      "threshold_from_others": 28.937355590237832,
+      "n": 3068,
+      "false_alarms": 8,
+      "fa": 0.002607561929595828
+     },
+     "0035": {
+      "threshold_from_others": 26.85335215291321,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 27.500002911090522,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 27.18142119213617,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 11.419059952819365,
+      "n": 3012,
+      "false_alarms": 275,
+      "fa": 0.09130146082337318
+     },
+     "0106": {
+      "threshold_from_others": 28.570888791583567,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 27.18142119213617,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.01697121643122318,
+    "heldout_fa_worst_drive": 0.09130146082337318,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 6.140809952007075,
+    "fa_on_train_drives_at_val_only_threshold": 0.035681412095944554,
+    "fa_on_train_drives_at_lodo_threshold": 0.0112079701120797
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.025768394908413535,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.34444444444444444,
+     "accel_drift": 0.35555555555555557,
+     "jump": 0.9814814814814815,
+     "freeze": 0.6222222222222222,
+     "doppler_spoof": 0.362962962962963,
+     "meaconing": 0.34074074074074073
+    },
+    "row_detection": {
+     "drift": 0.3611776788770969,
+     "accel_drift": 0.38948069241011984,
+     "jump": 0.951864406779661,
+     "freeze": 0.6857523302263648,
+     "doppler_spoof": 0.40550161812297736,
+     "meaconing": 0.3773240977032446
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 93,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       6.0,
+       8.0,
+       10.0,
+       13.0
+      ],
+      "within_10s": 0.2777777777777778,
+      "within_30s": 0.34444444444444444
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 96,
+      "delays_q10_25_50_75_90_s": [
+       7.0,
+       8.0,
+       9.0,
+       11.0,
+       13.5
+      ],
+      "within_10s": 0.24444444444444444,
+      "within_30s": 0.35555555555555557
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 265,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       1.0,
+       1.0
+      ],
+      "within_10s": 0.9814814814814815,
+      "within_30s": 0.9814814814814815
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 168,
+      "delays_q10_25_50_75_90_s": [
+       2.0,
+       2.0,
+       2.0,
+       3.0,
+       5.0
+      ],
+      "within_10s": 0.6111111111111112,
+      "within_30s": 0.6222222222222222
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 98,
+      "delays_q10_25_50_75_90_s": [
+       7.0,
+       8.0,
+       8.0,
+       9.75,
+       12.299999999999997
+      ],
+      "within_10s": 0.2962962962962963,
+      "within_30s": 0.362962962962963
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 92,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       6.0,
+       7.0,
+       8.25,
+       10.0
+      ],
+      "within_10s": 0.3111111111111111,
+      "within_30s": 0.34074074074074073
+     }
+    }
+   },
+   "J": 0.4632430750077809
+  },
+  "cusum_lidar_axis|k=1.5": {
+   "name": "cusum_lidar_axis|k=1.5",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 18.532377578271134,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 18.955487364801478,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 19.44313619031041,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 19.51161604728013,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 20.382962924425744,
+      "n": 2162,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0017": {
+      "threshold_from_others": 19.397802105967795,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 16.212321516294455,
+      "n": 3461,
+      "false_alarms": 64,
+      "fa": 0.01849176538572667
+     },
+     "0020": {
+      "threshold_from_others": 18.955487364801478,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 19.397802105967795,
+      "n": 797,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0029": {
+      "threshold_from_others": 21.318269600977665,
+      "n": 3068,
+      "false_alarms": 3,
+      "fa": 0.0009778357235984355
+     },
+     "0035": {
+      "threshold_from_others": 18.902472196870253,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 19.44313619031041,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 18.955487364801478,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 5.12252675579316,
+      "n": 3012,
+      "false_alarms": 313,
+      "fa": 0.10391766268260293
+     },
+     "0106": {
+      "threshold_from_others": 19.986772173656032,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 18.955487364801478,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.018321199556434117,
+    "heldout_fa_worst_drive": 0.10391766268260293,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 2.705317469654745,
+    "fa_on_train_drives_at_val_only_threshold": 0.034436082083491255,
+    "fa_on_train_drives_at_lodo_threshold": 0.0112079701120797
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.02545793231915554,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.35555555555555557,
+     "accel_drift": 0.37407407407407406,
+     "jump": 0.9925925925925926,
+     "freeze": 0.6518518518518519,
+     "doppler_spoof": 0.4185185185185185,
+     "meaconing": 0.34814814814814815
+    },
+    "row_detection": {
+     "drift": 0.37521396781924,
+     "accel_drift": 0.40579227696404796,
+     "jump": 0.9715254237288136,
+     "freeze": 0.7073901464713716,
+     "doppler_spoof": 0.4249190938511327,
+     "meaconing": 0.3955523149835946
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 96,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       6.0,
+       7.0,
+       9.25,
+       13.0
+      ],
+      "within_10s": 0.28888888888888886,
+      "within_30s": 0.35555555555555557
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 101,
+      "delays_q10_25_50_75_90_s": [
+       6.0,
+       7.0,
+       9.0,
+       11.0,
+       13.0
+      ],
+      "within_10s": 0.2740740740740741,
+      "within_30s": 0.37407407407407406
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 268,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       1.0
+      ],
+      "within_10s": 0.9925925925925926,
+      "within_30s": 0.9925925925925926
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 176,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       2.0,
+       3.0,
+       4.5
+      ],
+      "within_10s": 0.6444444444444445,
+      "within_30s": 0.6518518518518519
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 113,
+      "delays_q10_25_50_75_90_s": [
+       6.0,
+       7.0,
+       8.0,
+       9.0,
+       11.0
+      ],
+      "within_10s": 0.3592592592592593,
+      "within_30s": 0.4185185185185185
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 94,
+      "delays_q10_25_50_75_90_s": [
+       5.0,
+       5.0,
+       6.0,
+       8.0,
+       10.0
+      ],
+      "within_10s": 0.31851851851851853,
+      "within_30s": 0.34814814814814815
+     }
+    }
+   },
+   "J": 0.4822906940554
+  },
+  "cusum_lidar_axis|k=2.0": {
+   "name": "cusum_lidar_axis|k=2.0",
+   "lodo": {
+    "budget": 0.01,
+    "n": 20741,
+    "pooled_threshold": 12.372361211267494,
+    "per_drive": {
+     "0002": {
+      "threshold_from_others": 12.714663237412298,
+      "n": 559,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0011": {
+      "threshold_from_others": 12.89133379558689,
+      "n": 937,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0013": {
+      "threshold_from_others": 13.032377578271133,
+      "n": 1012,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0015": {
+      "threshold_from_others": 14.123611652874255,
+      "n": 2162,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0017": {
+      "threshold_from_others": 12.852589734702432,
+      "n": 829,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0019": {
+      "threshold_from_others": 10.750197400456855,
+      "n": 3461,
+      "false_alarms": 63,
+      "fa": 0.018202831551574688
+     },
+     "0020": {
+      "threshold_from_others": 12.714663237412298,
+      "n": 620,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0027": {
+      "threshold_from_others": 12.852589734702432,
+      "n": 797,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0029": {
+      "threshold_from_others": 15.013003486391808,
+      "n": 3068,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0035": {
+      "threshold_from_others": 12.660420832667686,
+      "n": 538,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0046": {
+      "threshold_from_others": 12.89133379558689,
+      "n": 907,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0060": {
+      "threshold_from_others": 12.714663237412298,
+      "n": 560,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0070": {
+      "threshold_from_others": 1.9564465354601157,
+      "n": 3012,
+      "false_alarms": 333,
+      "fa": 0.11055776892430279
+     },
+     "0106": {
+      "threshold_from_others": 13.795432232000612,
+      "n": 1674,
+      "false_alarms": 0,
+      "fa": 0.0
+     },
+     "0113": {
+      "threshold_from_others": 12.714663237412298,
+      "n": 605,
+      "false_alarms": 0,
+      "fa": 0.0
+     }
+    },
+    "heldout_fa_pooled": 0.01909261848512608,
+    "heldout_fa_worst_drive": 0.11055776892430279,
+    "in_sample_fa": 0.009980232389952269,
+    "val_only_threshold": 1.3351394625433362,
+    "fa_on_train_drives_at_val_only_threshold": 0.030645947262981213,
+    "fa_on_train_drives_at_lodo_threshold": 0.0112079701120797
+   },
+   "summary": {
+    "false_alarm_clean_runs": 0.02545793231915554,
+    "false_alarm_all_normal_rows": 0.009980232389952269,
+    "run_detected": {
+     "drift": 0.3851851851851852,
+     "accel_drift": 0.3814814814814815,
+     "jump": 0.9925925925925926,
+     "freeze": 0.674074074074074,
+     "doppler_spoof": 0.44814814814814813,
+     "meaconing": 0.3592592592592593
+    },
+    "row_detection": {
+     "drift": 0.3933584388907908,
+     "accel_drift": 0.4207723035952064,
+     "jump": 0.9840677966101695,
+     "freeze": 0.7346870838881492,
+     "doppler_spoof": 0.44724919093851134,
+     "meaconing": 0.41560335399197956
+    },
+    "slow_drift_lt_0.5_within_30s": {
+     "runs": 34,
+     "detected": 8,
+     "runs_with_full_30s": 6,
+     "rate": 0.23529411764705882
+    },
+    "delays": {
+     "drift": {
+      "runs": 270,
+      "detected": 104,
+      "delays_q10_25_50_75_90_s": [
+       4.0,
+       5.0,
+       6.0,
+       9.0,
+       12.0
+      ],
+      "within_10s": 0.32222222222222224,
+      "within_30s": 0.3851851851851852
+     },
+     "accel_drift": {
+      "runs": 270,
+      "detected": 103,
+      "delays_q10_25_50_75_90_s": [
+       6.0,
+       7.0,
+       8.0,
+       10.0,
+       12.799999999999997
+      ],
+      "within_10s": 0.28888888888888886,
+      "within_30s": 0.3814814814814815
+     },
+     "jump": {
+      "runs": 270,
+      "detected": 268,
+      "delays_q10_25_50_75_90_s": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "within_10s": 0.9925925925925926,
+      "within_30s": 0.9925925925925926
+     },
+     "freeze": {
+      "runs": 270,
+      "detected": 182,
+      "delays_q10_25_50_75_90_s": [
+       1.0,
+       1.0,
+       1.0,
+       2.0,
+       4.0
+      ],
+      "within_10s": 0.6666666666666666,
+      "within_30s": 0.674074074074074
+     },
+     "doppler_spoof": {
+      "runs": 270,
+      "detected": 121,
+      "delays_q10_25_50_75_90_s": [
+       6.0,
+       6.0,
+       7.0,
+       8.0,
+       10.0
+      ],
+      "within_10s": 0.40370370370370373,
+      "within_30s": 0.44814814814814813
+     },
+     "meaconing": {
+      "runs": 270,
+      "detected": 97,
+      "delays_q10_25_50_75_90_s": [
+       4.0,
+       5.0,
+       6.0,
+       7.0,
+       9.0
+      ],
+      "within_10s": 0.337037037037037,
+      "within_30s": 0.3592592592592593
+     }
+    }
+   },
+   "J": 0.4965764083411142
+  }
+ },
+ "nested": {
+  "choices": {
+   "0002": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6917922077922077,
+    "threshold": 2.863084061315362,
+    "heldout_fa": 0.0017889087656529517
+   },
+   "0011": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6928571428571428,
+    "threshold": 2.8383755324062983,
+    "heldout_fa": 0.013874066168623266
+   },
+   "0013": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6839815668202763,
+    "threshold": 2.8646276315008556,
+    "heldout_fa": 0.003952569169960474
+   },
+   "0015": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6782672811059908,
+    "threshold": 2.8670913763993244,
+    "heldout_fa": 0.0064754856614246065
+   },
+   "0017": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6962142857142857,
+    "threshold": 2.8455896678038815,
+    "heldout_fa": 0.013268998793727383
+   },
+   "0019": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6731836734693878,
+    "threshold": 2.8646276315008556,
+    "heldout_fa": 0.008379081190407396
+   },
+   "0020": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6994101382488479,
+    "threshold": 2.8474855653536535,
+    "heldout_fa": 0.01129032258064516
+   },
+   "0027": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6883551931939029,
+    "threshold": 2.8601280890218836,
+    "heldout_fa": 0.005018820577164366
+   },
+   "0029": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.675822660098522,
+    "threshold": 2.8383755324062983,
+    "heldout_fa": 0.011408083441981747
+   },
+   "0035": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6862970362970362,
+    "threshold": 2.8455896678038815,
+    "heldout_fa": 0.01486988847583643
+   },
+   "0046": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6823928571428571,
+    "threshold": 2.8474855653536535,
+    "heldout_fa": 0.011025358324145534
+   },
+   "0060": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.7092640692640693,
+    "threshold": 2.857144326787715,
+    "heldout_fa": 0.007142857142857143
+   },
+   "0070": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6789642857142857,
+    "threshold": 2.846033147145636,
+    "heldout_fa": 0.010624169986719787
+   },
+   "0106": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.6812640692640693,
+    "threshold": 2.8298406861286347,
+    "heldout_fa": 0.016129032258064516
+   },
+   "0113": {
+    "choice": "lid_z_1",
+    "J_on_other_15": 0.699878787878788,
+    "threshold": 2.8383755324062983,
+    "heldout_fa": 0.01652892561983471
+   }
+  },
+  "heldout_fa_pooled": 0.010076659756038765,
+  "summary": {
+   "false_alarm_clean_runs": 0.01272896615957777,
+   "false_alarm_all_normal_rows": 0.010076659756038765,
+   "run_detected": {
+    "drift": 0.725925925925926,
+    "accel_drift": 0.5777777777777777,
+    "jump": 1.0,
+    "freeze": 0.7962962962962963,
+    "doppler_spoof": 0.6444444444444445,
+    "meaconing": 0.5851851851851851
+   },
+   "row_detection": {
+    "drift": 0.2749058541595344,
+    "accel_drift": 0.4940079893475366,
+    "jump": 0.1023728813559322,
+    "freeze": 0.7223701731025299,
+    "doppler_spoof": 0.3498381877022654,
+    "meaconing": 0.3179001093693037
+   },
+   "slow_drift_lt_0.5_within_30s": {
+    "runs": 34,
+    "detected": 16,
+    "runs_with_full_30s": 6,
+    "rate": 0.47058823529411764
+   },
+   "delays": {
+    "drift": {
+     "runs": 270,
+     "detected": 196,
+     "delays_q10_25_50_75_90_s": [
+      1.0,
+      1.0,
+      1.0,
+      3.0,
+      7.0
+     ],
+     "within_10s": 0.6888888888888889,
+     "within_30s": 0.725925925925926
+    },
+    "accel_drift": {
+     "runs": 270,
+     "detected": 156,
+     "delays_q10_25_50_75_90_s": [
+      2.0,
+      3.0,
+      4.0,
+      6.0,
+      9.0
+     ],
+     "within_10s": 0.5370370370370371,
+     "within_30s": 0.5777777777777777
+    },
+    "jump": {
+     "runs": 270,
+     "detected": 270,
+     "delays_q10_25_50_75_90_s": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+     ],
+     "within_10s": 1.0,
+     "within_30s": 1.0
+    },
+    "freeze": {
+     "runs": 270,
+     "detected": 215,
+     "delays_q10_25_50_75_90_s": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+     ],
+     "within_10s": 0.7962962962962963,
+     "within_30s": 0.7962962962962963
+    },
+    "doppler_spoof": {
+     "runs": 270,
+     "detected": 174,
+     "delays_q10_25_50_75_90_s": [
+      2.0,
+      3.0,
+      4.0,
+      5.0,
+      6.0
+     ],
+     "within_10s": 0.6185185185185185,
+     "within_30s": 0.6407407407407407
+    },
+    "meaconing": {
+     "runs": 270,
+     "detected": 158,
+     "delays_q10_25_50_75_90_s": [
+      2.0,
+      2.0,
+      3.0,
+      5.0,
+      7.0
+     ],
+     "within_10s": 0.5703703703703704,
+     "within_30s": 0.5851851851851851
+    }
+   }
+  },
+  "J": 0.6857454092748211,
+  "choice_counts": {
+   "lid_resid_1": 0,
+   "lid_resid_3": 0,
+   "lid_resid_10": 0,
+   "lid_z_1": 15,
+   "lid_z_3": 0,
+   "lid_z_10": 0,
+   "lid_course": 0,
+   "cusum_lidar_nis|k=0.5": 0,
+   "cusum_lidar_nis|k=1.0": 0,
+   "cusum_lidar_nis|k=1.5": 0,
+   "cusum_lidar_nis|k=2.0": 0,
+   "cusum_lidar_axis|k=0.5": 0,
+   "cusum_lidar_axis|k=1.0": 0,
+   "cusum_lidar_axis|k=1.5": 0,
+   "cusum_lidar_axis|k=2.0": 0
+  }
+ },
+ "n_drives": 15,
+ "selected_all16": "lid_z_1"
+}

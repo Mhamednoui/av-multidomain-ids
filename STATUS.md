@@ -7,7 +7,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
-| WP1 GPS | S5 | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S4 APPROVED with misses. S6 must filter OSM to drivable classes |
+| WP1 GPS | S5 | REVIEW | worker sonnet (medium) | 2026-10-20 | L2d LiDAR odometry: 1.7% / 0.008 deg/m; lid_z_1 test FA 1.64%, Doppler/meaconing 60/61% (misses documented) |
 | WP2 CAN | S2 | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S1 APPROVED |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |

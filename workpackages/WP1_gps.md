@@ -48,3 +48,4 @@ Each step: acceptance rule written before results; ablation row for the new laye
 ## Progress
 (worker updates this section)
 - S4 (2026-10-20): L2b CUSUM (EKF and dead-reckoning branch), L2c scale + freeze, LODO helper: REVIEW. See reports/WP1_S4.md.
+- S5 (2026-10-20): L2d LiDAR odometry (point-to-plane ICP, 23/23 drives), lid_z_W layers, sequential variant, MotionEstimate: REVIEW. See reports/WP1_S5.md.

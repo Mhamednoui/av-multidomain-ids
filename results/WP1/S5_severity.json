@@ -1,0 +1,123 @@
+{
+ "layer": "gps.lidar_z_1",
+ "threshold_raw_equivalent": 2.8495508161201384,
+ "note": "post-hoc diagnostic on the test runs, nothing chosen from it",
+ "bins": {
+  "doppler_spoof": [
+   {
+    "severity_range": [
+     0.2,
+     1.0
+    ],
+    "runs": 18,
+    "detected": 0.2777777777777778,
+    "median_attacked_fixes": 6.0
+   },
+   {
+    "severity_range": [
+     1.0,
+     2.0
+    ],
+    "runs": 29,
+    "detected": 0.7241379310344828,
+    "median_attacked_fixes": 7.0
+   },
+   {
+    "severity_range": [
+     2.0,
+     3.01
+    ],
+    "runs": 23,
+    "detected": 0.6956521739130435,
+    "median_attacked_fixes": 7.0
+   }
+  ],
+  "meaconing": [
+   {
+    "severity_range": [
+     0.5,
+     1.0
+    ],
+    "runs": 17,
+    "detected": 0.8235294117647058,
+    "median_attacked_fixes": 10.0
+   },
+   {
+    "severity_range": [
+     1.0,
+     2.0
+    ],
+    "runs": 27,
+    "detected": 0.5185185185185185,
+    "median_attacked_fixes": 7.0
+   },
+   {
+    "severity_range": [
+     2.0,
+     3.01
+    ],
+    "runs": 26,
+    "detected": 0.5769230769230769,
+    "median_attacked_fixes": 7.0
+   }
+  ],
+  "drift": [
+   {
+    "severity_range": [
+     0.2,
+     0.5
+    ],
+    "runs": 14,
+    "detected": 0.07142857142857142,
+    "median_attacked_fixes": 8.0
+   },
+   {
+    "severity_range": [
+     0.5,
+     1.0
+    ],
+    "runs": 18,
+    "detected": 0.5,
+    "median_attacked_fixes": 9.0
+   },
+   {
+    "severity_range": [
+     1.0,
+     2.01
+    ],
+    "runs": 38,
+    "detected": 0.868421052631579,
+    "median_attacked_fixes": 5.5
+   }
+  ],
+  "accel_drift": [
+   {
+    "severity_range": [
+     0.05,
+     0.15
+    ],
+    "runs": 18,
+    "detected": 0.3333333333333333,
+    "median_attacked_fixes": 7.5
+   },
+   {
+    "severity_range": [
+     0.15,
+     0.3
+    ],
+    "runs": 25,
+    "detected": 0.56,
+    "median_attacked_fixes": 6.0
+   },
+   {
+    "severity_range": [
+     0.3,
+     0.51
+    ],
+    "runs": 27,
+    "detected": 0.7777777777777778,
+    "median_attacked_fixes": 9.0
+   }
+  ]
+ }
+}

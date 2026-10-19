@@ -1,0 +1,155 @@
+{
+ "C2": {
+  "translation_dev_pct": 1.7307473181205117,
+  "rotation_dev_deg_per_m": 0.0077858450806053,
+  "median_1s_disp_err_dev_m": 0.12876349398411568,
+  "C2_translation_le_2pct_dev": true,
+  "C2_rotation_le_0.02_deg_per_m_dev": true,
+  "C2_median_1s_disp_err_le_0.10m_dev": false,
+  "C3_coverage_ge_90pct_test": false
+ },
+ "C3": {
+  "coverage_test": 0.8941761363636364,
+  "coverage_dev": 0.9260450160771704,
+  "met": false
+ },
+ "C4": {
+  "fa_clean_runs_test_lodo": 0.01643489254108723,
+  "fa_clean_runs_test_valonly": 0.01327433628318584,
+  "nested_heldout_fa_dev": 0.010076659756038765,
+  "met": false
+ },
+ "C5": {
+  "doppler_spoof_run_lodo": 0.6,
+  "meaconing_run_lodo": 0.6142857142857143,
+  "doppler_spoof_run_valonly": 0.6,
+  "meaconing_run_valonly": 0.6,
+  "met": false,
+  "reference_cusum_dr": {
+   "doppler_spoof": 0.7,
+   "meaconing": 0.6142857142857143
+  }
+ },
+ "beat_verdicts_lodo": {
+  "gps.dr_resid_10|drift": "beats",
+  "gps.cusum_dr|drift": "worse",
+  "gps.dr_resid_10|accel_drift": "beats",
+  "gps.cusum_dr|accel_drift": "no difference",
+  "gps.dr_resid_10|jump": "no difference",
+  "gps.cusum_dr|jump": "no difference",
+  "gps.dr_resid_10|freeze": "no difference",
+  "gps.cusum_dr|freeze": "no difference",
+  "gps.dr_resid_10|doppler_spoof": "beats",
+  "gps.cusum_dr|doppler_spoof": "worse",
+  "gps.dr_resid_10|meaconing": "beats",
+  "gps.cusum_dr|meaconing": "no difference"
+ },
+ "C6_lodo_primary": {
+  "auc_base": 0.9221352784038948,
+  "auc_with": 0.9221806892743305,
+  "auc_gain": 4.5410870435746986e-05,
+  "fa_base": 0.011378948944452762,
+  "fa_with": 0.011528671956879772,
+  "det_base": 0.7064846416382252,
+  "det_with": 0.70580204778157,
+  "row_level_gain_points": {
+   "drift": -0.15503875968991832,
+   "accel_drift": -0.13054830287206887,
+   "jump": 0.0,
+   "freeze": 0.0,
+   "doppler_spoof": 0.6613756613756516,
+   "meaconing": -0.835654596100277
+  },
+  "adds": false
+ },
+ "C6_lodo_all_L2d": {
+  "auc_base": 0.9221352784038948,
+  "auc_with": 0.9270901732818178,
+  "auc_gain": 0.0049548948779229995,
+  "fa_base": 0.011378948944452762,
+  "fa_with": 0.012277287019014822,
+  "det_base": 0.7064846416382252,
+  "det_with": 0.7340159271899886,
+  "row_level_gain_points": {
+   "drift": 7.131782945736431,
+   "accel_drift": 2.3498694516971286,
+   "jump": 0.1388888888888884,
+   "freeze": -0.12658227848101333,
+   "doppler_spoof": 4.232804232804233,
+   "meaconing": 3.4818941504178302
+  },
+  "adds": true
+ },
+ "C6_lodo_seq": {
+  "auc_base": 0.9221352784038948,
+  "auc_with": 0.9247645098887877,
+  "auc_gain": 0.0026292314848929133,
+  "fa_base": 0.011378948944452762,
+  "fa_with": 0.013325348106003892,
+  "det_base": 0.7064846416382252,
+  "det_with": 0.7381114903299204,
+  "row_level_gain_points": {
+   "drift": 9.147286821705425,
+   "accel_drift": 2.2193211488250597,
+   "jump": 0.1388888888888884,
+   "freeze": -0.12658227848101333,
+   "doppler_spoof": 4.629629629629628,
+   "meaconing": 3.8997214484679743
+  },
+  "adds": true
+ },
+ "C6_valonly_primary": {
+  "auc_base": 0.902991309081612,
+  "auc_with": 0.903709485574554,
+  "auc_gain": 0.0007181764929420353,
+  "fa_base": 0.022009282826770473,
+  "fa_with": 0.022308728851624493,
+  "det_base": 0.7303754266211604,
+  "det_with": 0.7310580204778157,
+  "row_level_gain_points": {
+   "drift": 0.31007751937983663,
+   "accel_drift": 0.0,
+   "jump": 0.0,
+   "freeze": 0.0,
+   "doppler_spoof": 0.0,
+   "meaconing": 0.139275766016711
+  },
+  "adds": false
+ },
+ "C6_valonly_all_L2d": {
+  "auc_base": 0.902991309081612,
+  "auc_with": 0.887599136137395,
+  "auc_gain": -0.015392172944216909,
+  "fa_base": 0.022009282826770473,
+  "fa_with": 0.08758796226980087,
+  "det_base": 0.7303754266211604,
+  "det_with": 0.7676905574516496,
+  "row_level_gain_points": {
+   "drift": 13.023255813953483,
+   "accel_drift": 5.744125326370753,
+   "jump": 0.0,
+   "freeze": 0.75949367088608,
+   "doppler_spoof": 3.835978835978837,
+   "meaconing": 0.139275766016711
+  },
+  "adds": false
+ },
+ "C6_valonly_seq": {
+  "auc_base": 0.902991309081612,
+  "auc_with": 0.88309124706324,
+  "auc_gain": -0.01990006201837191,
+  "fa_base": 0.022009282826770473,
+  "fa_with": 0.089534361431352,
+  "det_base": 0.7303754266211604,
+  "det_with": 0.7656427758816837,
+  "row_level_gain_points": {
+   "drift": 11.472868217054256,
+   "accel_drift": 4.308093994778062,
+   "jump": 0.0,
+   "freeze": 0.6329113924050667,
+   "doppler_spoof": 5.158730158730163,
+   "meaconing": 0.5571030640668551
+  },
+  "adds": false
+ }
+}

@@ -1,0 +1,565 @@
+{
+ "name": "S5_l2d_alone_all_lodo",
+ "budget": 0.01,
+ "layers": {
+  "gps.cusum_lidar": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.0537505614612966,
+   "detection": 0.6282138794084187,
+   "detection_by_attack": {
+    "accel_drift": 0.4725848563968668,
+    "doppler_spoof": 0.49074074074074076,
+    "drift": 0.4263565891472868,
+    "freeze": 0.8367088607594937,
+    "jump": 1.0,
+    "meaconing": 0.5181058495821727
+   },
+   "auc": 0.852067821288296,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.580952380952381,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.75
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "gps.lidar_course": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.010330887857463692,
+   "detection": 0.07281001137656427,
+   "detection_by_attack": {
+    "accel_drift": 0.033942558746736295,
+    "doppler_spoof": 0.021164021164021163,
+    "drift": 0.03255813953488372,
+    "freeze": 0.15443037974683543,
+    "jump": 0.15555555555555556,
+    "meaconing": 0.03203342618384401
+   },
+   "auc": 0.5580410029840699,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.38571428571428573,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.808641975308642
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "gps.lidar_resid_1": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.010330887857463692,
+   "detection": 0.3881683731513083,
+   "detection_by_attack": {
+    "accel_drift": 0.49216710182767626,
+    "doppler_spoof": 0.34523809523809523,
+    "drift": 0.2186046511627907,
+    "freeze": 0.8405063291139241,
+    "jump": 0.10833333333333334,
+    "meaconing": 0.2576601671309192
+   },
+   "auc": 0.7688283501460864,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.6714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.234042553191489
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "gps.lidar_resid_3": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009582272795328643,
+   "detection": 0.49351535836177474,
+   "detection_by_attack": {
+    "accel_drift": 0.5378590078328982,
+    "doppler_spoof": 0.48148148148148145,
+    "drift": 0.3736434108527132,
+    "freeze": 0.8556962025316456,
+    "jump": 0.30277777777777776,
+    "meaconing": 0.3593314763231198
+   },
+   "auc": 0.8233094543013515,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7071428571428572,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.420875420875421
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "gps.lidar_z_1": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.010630333882317712,
+   "detection": 0.391353811149033,
+   "detection_by_attack": {
+    "accel_drift": 0.49738903394255873,
+    "doppler_spoof": 0.31216931216931215,
+    "drift": 0.25426356589147286,
+    "freeze": 0.8455696202531645,
+    "jump": 0.1125,
+    "meaconing": 0.2646239554317549
+   },
+   "auc": 0.7757857519902174,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7095238095238096,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.1308724832214767
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "gps.lidar_z_10": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.004791136397664321,
+   "detection": 0.5130830489192264,
+   "detection_by_attack": {
+    "accel_drift": 0.4281984334203655,
+    "doppler_spoof": 0.41798941798941797,
+    "drift": 0.30077519379844964,
+    "freeze": 0.8556962025316456,
+    "jump": 0.7055555555555556,
+    "meaconing": 0.3245125348189415
+   },
+   "auc": 0.8436195427537554,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.6095238095238096,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 3.0703125
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "gps.lidar_z_3": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009432549782901633,
+   "detection": 0.489419795221843,
+   "detection_by_attack": {
+    "accel_drift": 0.5274151436031331,
+    "doppler_spoof": 0.47354497354497355,
+    "drift": 0.3705426356589147,
+    "freeze": 0.8645569620253165,
+    "jump": 0.30416666666666664,
+    "meaconing": 0.34540389972144847
+   },
+   "auc": 0.8194958269181536,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7452380952380953,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.4696485623003195
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.8681492315748418,
+   "budget": 0.01,
+   "false_alarm_rate": 0.028447372361131908,
+   "detection": 0.70967007963595,
+   "detection_by_attack": {
+    "accel_drift": 0.5900783289817232,
+    "doppler_spoof": 0.5992063492063492,
+    "drift": 0.5720930232558139,
+    "freeze": 0.8721518987341772,
+    "jump": 0.9833333333333333,
+    "meaconing": 0.6239554317548747
+   },
+   "auc": 0.9055630019617291,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7761904761904762,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.208588957055215
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "logistic",
+   "method_selection": {
+    "noisy_or": 0.6548229209021735,
+    "logistic": 0.6842594095645341,
+    "max": 0.6623875141104199
+   }
+  },
+  "only_gps.cusum_lidar": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.0537505614612966,
+   "detection": 0.6282138794084187,
+   "detection_by_attack": {
+    "accel_drift": 0.4725848563968668,
+    "doppler_spoof": 0.49074074074074076,
+    "drift": 0.4263565891472868,
+    "freeze": 0.8367088607594937,
+    "jump": 1.0,
+    "meaconing": 0.5181058495821727
+   },
+   "auc": 0.852067821288296,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.580952380952381,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.75
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "only_gps.lidar_course": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.010330887857463692,
+   "detection": 0.07281001137656427,
+   "detection_by_attack": {
+    "accel_drift": 0.033942558746736295,
+    "doppler_spoof": 0.021164021164021163,
+    "drift": 0.03255813953488372,
+    "freeze": 0.15443037974683543,
+    "jump": 0.15555555555555556,
+    "meaconing": 0.03203342618384401
+   },
+   "auc": 0.5580410029840699,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.38571428571428573,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.808641975308642
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "only_gps.lidar_resid_1": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.010330887857463692,
+   "detection": 0.3881683731513083,
+   "detection_by_attack": {
+    "accel_drift": 0.49216710182767626,
+    "doppler_spoof": 0.34523809523809523,
+    "drift": 0.2186046511627907,
+    "freeze": 0.8405063291139241,
+    "jump": 0.10833333333333334,
+    "meaconing": 0.2576601671309192
+   },
+   "auc": 0.7688283501460864,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.6714285714285714,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.234042553191489
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "only_gps.lidar_resid_3": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009582272795328643,
+   "detection": 0.49351535836177474,
+   "detection_by_attack": {
+    "accel_drift": 0.5378590078328982,
+    "doppler_spoof": 0.48148148148148145,
+    "drift": 0.3736434108527132,
+    "freeze": 0.8556962025316456,
+    "jump": 0.30277777777777776,
+    "meaconing": 0.3593314763231198
+   },
+   "auc": 0.8233094543013515,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7071428571428572,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.420875420875421
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "only_gps.lidar_z_1": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.010630333882317712,
+   "detection": 0.391353811149033,
+   "detection_by_attack": {
+    "accel_drift": 0.49738903394255873,
+    "doppler_spoof": 0.31216931216931215,
+    "drift": 0.25426356589147286,
+    "freeze": 0.8455696202531645,
+    "jump": 0.1125,
+    "meaconing": 0.2646239554317549
+   },
+   "auc": 0.7757857519902174,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7095238095238096,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.1308724832214767
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "only_gps.lidar_z_10": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.004791136397664321,
+   "detection": 0.5130830489192264,
+   "detection_by_attack": {
+    "accel_drift": 0.4281984334203655,
+    "doppler_spoof": 0.41798941798941797,
+    "drift": 0.30077519379844964,
+    "freeze": 0.8556962025316456,
+    "jump": 0.7055555555555556,
+    "meaconing": 0.3245125348189415
+   },
+   "auc": 0.8436195427537554,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.6095238095238096,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 3.0703125
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "only_gps.lidar_z_3": {
+   "threshold": 0.9899715539270046,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009432549782901633,
+   "detection": 0.489419795221843,
+   "detection_by_attack": {
+    "accel_drift": 0.5274151436031331,
+    "doppler_spoof": 0.47354497354497355,
+    "drift": 0.3705426356589147,
+    "freeze": 0.8645569620253165,
+    "jump": 0.30416666666666664,
+    "meaconing": 0.34540389972144847
+   },
+   "auc": 0.8194958269181536,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7452380952380953,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.4696485623003195
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395
+  },
+  "all_but_gps.cusum_lidar": {
+   "threshold": 0.9978303842630539,
+   "budget": 0.01,
+   "false_alarm_rate": 0.008384488695912561,
+   "detection": 0.5756541524459613,
+   "detection_by_attack": {
+    "accel_drift": 0.5352480417754569,
+    "doppler_spoof": 0.48148148148148145,
+    "drift": 0.40930232558139534,
+    "freeze": 0.8658227848101265,
+    "jump": 0.7125,
+    "meaconing": 0.41086350974930363
+   },
+   "auc": 0.8635566011751978,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7238095238095238,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.4375
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "max"
+  },
+  "all_but_gps.lidar_course": {
+   "threshold": 0.870903709107834,
+   "budget": 0.01,
+   "false_alarm_rate": 0.027698757298996856,
+   "detection": 0.70967007963595,
+   "detection_by_attack": {
+    "accel_drift": 0.5822454308093995,
+    "doppler_spoof": 0.5978835978835979,
+    "drift": 0.5705426356589147,
+    "freeze": 0.8721518987341772,
+    "jump": 0.9875,
+    "meaconing": 0.6309192200557103
+   },
+   "auc": 0.9051250067920422,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7785714285714286,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.253822629969419
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "logistic"
+  },
+  "all_but_gps.lidar_resid_1": {
+   "threshold": 0.8617708986564834,
+   "budget": 0.01,
+   "false_alarm_rate": 0.028896541398412936,
+   "detection": 0.7130830489192264,
+   "detection_by_attack": {
+    "accel_drift": 0.5783289817232375,
+    "doppler_spoof": 0.6031746031746031,
+    "drift": 0.5829457364341085,
+    "freeze": 0.8721518987341772,
+    "jump": 0.9958333333333333,
+    "meaconing": 0.6309192200557103
+   },
+   "auc": 0.9011573980627308,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7714285714285715,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.212962962962963
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "logistic"
+  },
+  "all_but_gps.lidar_resid_3": {
+   "threshold": 0.8599502571532721,
+   "budget": 0.01,
+   "false_alarm_rate": 0.029944602485402008,
+   "detection": 0.7167235494880546,
+   "detection_by_attack": {
+    "accel_drift": 0.5809399477806788,
+    "doppler_spoof": 0.6005291005291006,
+    "drift": 0.5891472868217055,
+    "freeze": 0.8734177215189873,
+    "jump": 1.0,
+    "meaconing": 0.6420612813370473
+   },
+   "auc": 0.906624757849855,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7761904761904762,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.285276073619632
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "logistic"
+  },
+  "all_but_gps.lidar_z_1": {
+   "threshold": 0.8558560145446916,
+   "budget": 0.01,
+   "false_alarm_rate": 0.030094325497829016,
+   "detection": 0.7176336746302616,
+   "detection_by_attack": {
+    "accel_drift": 0.5913838120104439,
+    "doppler_spoof": 0.6084656084656085,
+    "drift": 0.5829457364341085,
+    "freeze": 0.8721518987341772,
+    "jump": 0.9986111111111111,
+    "meaconing": 0.6364902506963789
+   },
+   "auc": 0.8994839751238366,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7666666666666667,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.1801242236024843
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "logistic"
+  },
+  "all_but_gps.lidar_z_10": {
+   "threshold": 0.8901936381886321,
+   "budget": 0.01,
+   "false_alarm_rate": 0.031591555622099116,
+   "detection": 0.7078498293515358,
+   "detection_by_attack": {
+    "accel_drift": 0.5848563968668408,
+    "doppler_spoof": 0.6005291005291006,
+    "drift": 0.5736434108527132,
+    "freeze": 0.8708860759493671,
+    "jump": 0.9833333333333333,
+    "meaconing": 0.616991643454039
+   },
+   "auc": 0.9027266451263115,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7785714285714286,
+    "median_delay_s": 1.0,
+    "mean_delay_s": 2.18348623853211
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "logistic"
+  },
+  "all_but_gps.lidar_z_3": {
+   "threshold": 0.8646185798205245,
+   "budget": 0.01,
+   "false_alarm_rate": 0.028896541398412936,
+   "detection": 0.7139931740614335,
+   "detection_by_attack": {
+    "accel_drift": 0.5861618798955613,
+    "doppler_spoof": 0.6031746031746031,
+    "drift": 0.5813953488372093,
+    "freeze": 0.8721518987341772,
+    "jump": 0.9888888888888889,
+    "meaconing": 0.6364902506963789
+   },
+   "auc": 0.9059666238618964,
+   "delay": {
+    "n_segments": 420,
+    "detected_fraction": 0.7785714285714286,
+    "median_delay_s": 2.0,
+    "mean_delay_s": 2.2446483180428136
+   },
+   "n_test": 11074,
+   "n_test_attack": 4395,
+   "method": "logistic"
+  }
+ },
+ "layer_names": [
+  "gps.cusum_lidar",
+  "gps.lidar_course",
+  "gps.lidar_resid_1",
+  "gps.lidar_resid_3",
+  "gps.lidar_z_1",
+  "gps.lidar_z_10",
+  "gps.lidar_z_3"
+ ],
+ "combined": {
+  "threshold": 0.8681492315748418,
+  "budget": 0.01,
+  "false_alarm_rate": 0.028447372361131908,
+  "detection": 0.70967007963595,
+  "detection_by_attack": {
+   "accel_drift": 0.5900783289817232,
+   "doppler_spoof": 0.5992063492063492,
+   "drift": 0.5720930232558139,
+   "freeze": 0.8721518987341772,
+   "jump": 0.9833333333333333,
+   "meaconing": 0.6239554317548747
+  },
+  "auc": 0.9055630019617291,
+  "delay": {
+   "n_segments": 420,
+   "detected_fraction": 0.7761904761904762,
+   "median_delay_s": 2.0,
+   "mean_delay_s": 2.208588957055215
+  },
+  "n_test": 11074,
+  "n_test_attack": 4395,
+  "method": "logistic",
+  "method_selection": {
+   "noisy_or": 0.6548229209021735,
+   "logistic": 0.6842594095645341,
+   "max": 0.6623875141104199
+  }
+ }
+}
