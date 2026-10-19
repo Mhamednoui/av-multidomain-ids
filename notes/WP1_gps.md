@@ -92,3 +92,36 @@ Done (S2): gps/l1.py, tests/gps/test_l1.py (12 tests, suite 41 pass), tools/WP1_
 - AV-GPS kinematic union FA 0.61%, detection 13.7% (placeholder coordinates); sat/HDOP rules = artefact.
 - UAV spoofing: sat_jump, hdop_jump, noise_jump, vel_pos fire at 118.0 s; union FA before 117 s 2.54% (3/118) -> A6 FA part NOT MET (not retuned); benign flight used as calibration set (decision flagged).
 Acceptance: A1-A5, A7 MET; A6 detection MET, A6 FA NOT MET. S2 -> REVIEW.
+
+## 2026-10-19 S3 (L2a error-state/standard EKF, NIS chi-square per fix)
+Acceptance rule (written before any S3 result; nothing of S3 computed yet):
+Model: state [e, n, ve, vn, we, wn] (position, velocity, Gauss-Markov receiver error). Process driven by IMU acceleration;
+measurements per fix: GPS position (pos + w + white), GPS Doppler velocity, odometry speed, compass heading. Layer score =
+-log chi2-survival of the per-fix NIS (dimension varies with active measurements). Noise: physical/sensor specs, plus ONE
+process-noise scale q_scale and the Gauss-Markov (phi, sigma) tuned on KITTI TRAIN clean runs only (UAV: on the benign flight;
+AV-GPS: train sessions). Two variants: ungated, and gated (once NIS exceeds a chi2 level the GPS block is excluded from the update,
+dead-reckoning prediction held; release after n consecutive consistent fixes). Gate level chosen on VAL (grid 0.99/0.999/0.9999).
+A1 unit tests pass, suite passes.
+A2 Consistency on clean KITTI VAL runs (ungated, params tuned on TRAIN only): mean NIS / mean dim in [0.8, 1.25] and fraction
+above chi2 95% in [2%, 10%]. Reported as met/not met, no retuning on val.
+A3 False alarms on KITTI clean TEST runs at the val 1% tie-safe budget <= 1.5% (both variants).
+A4 Beat-or-not vs B2 (same protocol: B2 calibrated on val 1%): per attack, L2a "beats" B2 iff run-level detection is >= 5 points
+higher with clean-run FA not more than 0.5 point above B2's; within 5 points = "no difference"; lower = "worse". Stated plainly per attack.
+Target: drift 0.2-0.5 m/s detected within 30 s in >= 60% of runs at <= 1% FA (KITTI test).
+A5 Absorption: for every attack, position-estimate error vs truth (and ratio to the reported-position error) 30 s after onset,
+ungated vs gated; gated "helps" iff it lowers the absorption and does not raise val-calibrated FA.
+A6 Primary variant chosen on VAL: the one with higher mean run-level detection over the 6 attacks at the val 1% budget.
+A7 AV-GPS (position, speed, heading only; no Doppler, no IMU accel): FA on test normal rows <= 2%; detection reported incl. artefact caveat.
+A8 UAV spoofing flight: noise and threshold from the benign flight; alarm within 5 s of 118.0 s and FA before 117 s <= 2%.
+A9 Harness: "L2a adds on top of B2 + L1" iff AUC(all) - AUC(all-but-L2a) >= 0.01, or some attack row-level detection +5 points, with
+combined FA <= 1.5%. Otherwise "adds nothing".
+Deviation (before any test number): AV-GPS tuning criterion switched from mean NIS/dim to fraction above chi2 95% closest to 5% (train sessions; glitches dominate the mean). Parse bug in the tuning script fixed and re-run (train/val only).
+Done (S3): gps/ekf.py, tests/gps/test_ekf.py (6 tests; suite 72 pass), tools/WP1_S3_{tune,ekf,isofa,tables}.py, results/WP1/S3_*.{json,md}, reports/WP1_S3.md.
+- Tuning (train): GM phi 0.897 sigma 0.981 m, q_acc 0.1; gate level 0.99; primary = ungated (val 0.833 vs 0.828).
+- Consistency: val clean ratio 0.85, 5.4% above chi2 95% (A2 MET); test clean 1.12 / 10.6%.
+- KITTI test at val 1% budget: EKF clean-run FA 2.59% (gated 6.32%) vs B2 0.38% -> A3 NOT MET. Run-level: drift 54%, accel 56%, jump 100%, freeze 81%, Doppler 97%, meaconing 79% (B2 34/41/100/89/39/40).
+- Equal-FA diagnostic (oracle, not an operating point): EKF beats B2 on Doppler spoof 87 vs 40% and meaconing 71 vs 46%; same on drift/accel/jump; worse on freeze 79 vs 89. Slow drift <0.5 m/s within 30 s: 14% (B2 14% at equal FA, 7% at its val point): target 60% NOT MET.
+- Absorption at +30 s: ungated 99% (Doppler spoof), 97% (meaconing), 43% drift; gated 5-18%.
+- Harness: all AUC 0.896 FA 1.90% vs all-but-L2a 0.860 / 1.39%: A9 NOT MET on FA (> 1.5%).
+- AV-GPS FA 3.97% (A7 NOT MET), AUC 0.30. UAV: alarm at 118.000 s, FA before 117 s 0.85% (A8 MET).
+Acceptance: A1, A2, A6, A8 MET; A3, A4 (as written), A7, A9 (FA clause), slow-drift target NOT MET. S3 -> REVIEW.

@@ -1,0 +1,98 @@
+{
+ "gps.dr_resid_10": {
+  "false_alarm_clean_runs": 0.009481668773704172,
+  "false_alarm_all_normal_rows": 0.010780056894744722,
+  "detection_by_attack": {
+   "drift": 0.3178294573643411,
+   "accel_drift": 0.45039164490861616,
+   "jump": 0.7125,
+   "freeze": 0.8632911392405064,
+   "doppler_spoof": 0.45634920634920634,
+   "meaconing": 0.3147632311977716
+  },
+  "run_detected": {
+   "drift": 0.35714285714285715,
+   "accel_drift": 0.42857142857142855,
+   "jump": 1.0,
+   "freeze": 0.8857142857142857,
+   "doppler_spoof": 0.4,
+   "meaconing": 0.45714285714285713
+  },
+  "median_delay_s": {
+   "drift": 5.0,
+   "accel_drift": 6.0,
+   "jump": 0.0,
+   "freeze": 1.0,
+   "doppler_spoof": 6.0,
+   "meaconing": 5.0
+  },
+  "slow_drift_lt_0.5_within_30s": {
+   "runs": 14,
+   "detected_within_30s": 0.14285714285714285
+  }
+ },
+ "gps.ekf_nis": {
+  "false_alarm_clean_runs": 0.009481668773704172,
+  "false_alarm_all_normal_rows": 0.009881718820182663,
+  "detection_by_attack": {
+   "drift": 0.2,
+   "accel_drift": 0.45430809399477806,
+   "jump": 0.48194444444444445,
+   "freeze": 0.830379746835443,
+   "doppler_spoof": 0.5317460317460317,
+   "meaconing": 0.5445682451253482
+  },
+  "run_detected": {
+   "drift": 0.38571428571428573,
+   "accel_drift": 0.44285714285714284,
+   "jump": 1.0,
+   "freeze": 0.7857142857142857,
+   "doppler_spoof": 0.8714285714285714,
+   "meaconing": 0.7142857142857143
+  },
+  "median_delay_s": {
+   "drift": 3.0,
+   "accel_drift": 6.0,
+   "jump": 0.0,
+   "freeze": 1.0,
+   "doppler_spoof": 2.0,
+   "meaconing": 1.0
+  },
+  "slow_drift_lt_0.5_within_30s": {
+   "runs": 14,
+   "detected_within_30s": 0.14285714285714285
+  }
+ },
+ "gps.ekf_nis_gated": {
+  "false_alarm_clean_runs": 0.009481668773704172,
+  "false_alarm_all_normal_rows": 0.007635873633777512,
+  "detection_by_attack": {
+   "drift": 0.26356589147286824,
+   "accel_drift": 0.4386422976501306,
+   "jump": 0.9708333333333333,
+   "freeze": 0.8379746835443038,
+   "doppler_spoof": 0.6428571428571429,
+   "meaconing": 0.6768802228412256
+  },
+  "run_detected": {
+   "drift": 0.32857142857142857,
+   "accel_drift": 0.4,
+   "jump": 1.0,
+   "freeze": 0.7714285714285715,
+   "doppler_spoof": 0.7714285714285715,
+   "meaconing": 0.6428571428571429
+  },
+  "median_delay_s": {
+   "drift": 4.0,
+   "accel_drift": 6.0,
+   "jump": 0.0,
+   "freeze": 1.0,
+   "doppler_spoof": 2.0,
+   "meaconing": 2.0
+  },
+  "slow_drift_lt_0.5_within_30s": {
+   "runs": 14,
+   "detected_within_30s": 0.0
+  }
+ }
+}

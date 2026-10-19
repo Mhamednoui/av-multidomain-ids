@@ -1,0 +1,84 @@
+{
+ "config": {
+  "r_pos": 6.0,
+  "gm_phi": 0.0,
+  "gm_sigma": 0.001,
+  "q_acc": 1.0,
+  "sd_dop": 0.05,
+  "sd_odo": 0.2,
+  "k_scale": 0.02,
+  "sd_head_deg": 2.0,
+  "use_dop": false,
+  "use_odo": true,
+  "use_head": true,
+  "acc_mode": "none",
+  "gate_level": 0.0,
+  "release_n": 3,
+  "v0_sd": 3.0
+ },
+ "tuning_train": {
+  "rows": 38356,
+  "mean_nis": 10.890696042942123,
+  "mean_dim": 3.2996141412034623,
+  "ratio": 3.300596850688117,
+  "frac_above_chi2_95": 0.049666284284075504,
+  "frac_above_chi2_99": 0.032459067681718634
+ },
+ "consistency_val": {
+  "rows": 7926,
+  "mean_nis": 2.128794140164893,
+  "mean_dim": 3.066111531667928,
+  "ratio": 0.6942976855792504,
+  "frac_above_chi2_95": 0.03393893515013879,
+  "frac_above_chi2_99": 0.023088569265707796
+ },
+ "sensors": "position, odometry speed, heading only (no Doppler, no IMU acceleration in AV-GPS)",
+ "ungated": {
+  "threshold_raw_equivalent": 10.375936545404844,
+  "false_alarm_normal_rows": 0.03970452446906741,
+  "normal_rows_flagged": 215,
+  "normal_rows": 5415,
+  "detection_attack_rows": 0.26243486499289437,
+  "auc": 0.303618298032598,
+  "attack_rows_flagged_with_step_over_100km": 25,
+  "attack_rows_flagged": 554,
+  "attack_rows": 2111,
+  "attack_rows_with_step_over_100km": 25,
+  "detected_by_session": {
+   "f2:0-1706": 0.19871043376318875,
+   "f3:142-323": 0.19337016574585636,
+   "f3:412-636": 0.8035714285714286
+  },
+  "false_alarm_by_session": {
+   "f2:1706-6890": 0.039544753086419755,
+   "f3:0-142": 0.056338028169014086,
+   "f3:323-412": 0.02247191011235955
+  },
+  "detection_attack_rows_excluding_step_over_100km": 0.2535953978906999,
+  "attack_rows_excluding_step_over_100km": 2086
+ },
+ "gated": {
+  "threshold_raw_equivalent": 24.80954619600445,
+  "false_alarm_normal_rows": 0.08421052631578947,
+  "normal_rows_flagged": 456,
+  "normal_rows": 5415,
+  "detection_attack_rows": 0.2444339175746092,
+  "auc": 0.3185022130483905,
+  "attack_rows_flagged_with_step_over_100km": 24,
+  "attack_rows_flagged": 516,
+  "attack_rows": 2111,
+  "attack_rows_with_step_over_100km": 25,
+  "detected_by_session": {
+   "f2:0-1706": 0.18053927315357562,
+   "f3:142-323": 0.16574585635359115,
+   "f3:412-636": 0.7946428571428571
+  },
+  "false_alarm_by_session": {
+   "f2:1706-6890": 0.08545524691358025,
+   "f3:0-142": 0.06338028169014084,
+   "f3:323-412": 0.0449438202247191
+  },
+  "detection_attack_rows_excluding_step_over_100km": 0.23585810162991372,
+  "attack_rows_excluding_step_over_100km": 2086
+ }
+}

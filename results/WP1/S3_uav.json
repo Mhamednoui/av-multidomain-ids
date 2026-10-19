@@ -1,0 +1,192 @@
+{
+ "config": {
+  "r_pos": 0.5,
+  "gm_phi": 0.9,
+  "gm_sigma": 1.0,
+  "q_acc": 0.1,
+  "sd_dop": 0.15,
+  "sd_odo": 0.05,
+  "k_scale": 0.02,
+  "sd_head_deg": 2.0,
+  "use_dop": true,
+  "use_odo": false,
+  "use_head": false,
+  "acc_mode": "window",
+  "gate_level": 0.0,
+  "release_n": 3,
+  "v0_sd": 3.0
+ },
+ "calibration": "noise (grid) and threshold (1% budget, tie-safe) on the BENIGN flight (documented calibration flight)",
+ "consistency_benign": {
+  "rows": 247,
+  "mean_nis": 3.0111950617000325,
+  "mean_dim": 4.0,
+  "ratio": 0.7527987654250081,
+  "frac_above_chi2_95": 0.06072874493927125,
+  "frac_above_chi2_99": 0.048582995951417005
+ },
+ "first_spoofed_fix_s": 118.0,
+ "ungated": {
+  "threshold_raw_equivalent": 11.853291146273335,
+  "flights": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 2,
+    "alarm_times_s": [
+     94.0,
+     162.0
+    ],
+    "mean_nis_over_dim": 0.7527987654250081,
+    "false_alarm_in_sample": 0.008064516129032258
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 18,
+    "alarm_times_s": [
+     25.0,
+     173.0,
+     175.0,
+     176.0,
+     177.0,
+     178.0,
+     181.0,
+     182.0,
+     185.0,
+     188.0,
+     191.0,
+     193.0,
+     197.0,
+     200.0,
+     203.0,
+     210.0,
+     213.0,
+     214.0
+    ],
+    "mean_nis_over_dim": 2.2636502374881786
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 13,
+    "alarm_times_s": [
+     10.0,
+     118.0,
+     119.0,
+     120.0,
+     121.0,
+     125.0,
+     126.0,
+     127.0,
+     128.0,
+     129.0,
+     130.0,
+     132.0,
+     136.0
+    ],
+    "mean_nis_over_dim": 3.9488955723611467,
+    "false_alarm_before_117s": 0.00847457627118644,
+    "alarms_before_117s": 1,
+    "fixes_before_117s": 118,
+    "first_alarm_after_onset_s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_of_fixes_from_118s_flagged": 0.631578947368421,
+    "fraction_118_to_138s_flagged": 0.631578947368421,
+    "fraction_of_fixes_after_138s_flagged": null,
+    "flight_duration_s": 136.003008,
+    "nis_around_onset": {
+     "112.0": 0.15,
+     "113.0": 0.03,
+     "114.0": 0.02,
+     "115.0": 0.13,
+     "116.0": 0.07,
+     "117.0": 0.14,
+     "118.0": 265.43,
+     "119.0": 613.3,
+     "120.0": 278.84,
+     "121.0": 198.15,
+     "122.0": 24.69,
+     "123.0": 1.32,
+     "124.0": 2.86,
+     "125.0": 45.1
+    },
+    "hold_fraction_from_118s": 0.0
+   }
+  }
+ },
+ "gated": {
+  "threshold_raw_equivalent": 13.783516847113004,
+  "flights": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 2,
+    "alarm_times_s": [
+     75.0,
+     162.0
+    ],
+    "mean_nis_over_dim": 4.082036909122678,
+    "false_alarm_in_sample": 0.008064516129032258
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 11,
+    "alarm_times_s": [
+     25.0,
+     173.0,
+     175.0,
+     177.0,
+     185.0,
+     191.0,
+     192.0,
+     197.0,
+     200.0,
+     202.0,
+     203.0
+    ],
+    "mean_nis_over_dim": 1.7881264663780903
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 11,
+    "alarm_times_s": [
+     118.0,
+     119.0,
+     120.0,
+     121.0,
+     122.0,
+     125.0,
+     126.0,
+     127.0,
+     128.0,
+     129.0,
+     133.0
+    ],
+    "mean_nis_over_dim": 3.5862781738190415,
+    "false_alarm_before_117s": 0.0,
+    "alarms_before_117s": 0,
+    "fixes_before_117s": 118,
+    "first_alarm_after_onset_s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_of_fixes_from_118s_flagged": 0.5789473684210527,
+    "fraction_118_to_138s_flagged": 0.5789473684210527,
+    "fraction_of_fixes_after_138s_flagged": null,
+    "flight_duration_s": 136.003008,
+    "nis_around_onset": {
+     "112.0": 0.15,
+     "113.0": 0.03,
+     "114.0": 0.02,
+     "115.0": 0.13,
+     "116.0": 0.07,
+     "117.0": 0.14,
+     "118.0": 265.43,
+     "119.0": 851.46,
+     "120.0": 57.73,
+     "121.0": 43.4,
+     "122.0": 34.63,
+     "123.0": 27.68,
+     "124.0": 29.44,
+     "125.0": 43.23
+    },
+    "hold_fraction_from_118s": 1.0
+   }
+  }
+ }
+}
