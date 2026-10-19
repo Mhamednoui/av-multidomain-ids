@@ -1,0 +1,464 @@
+{
+ "train": {
+  "1": {
+   "name": "ConstPos",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 10352,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "2": {
+   "name": "ConstPosOffset",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 11298,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "3": {
+   "name": "RandomPos",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 9709,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "4": {
+   "name": "RandomPosOffset",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 10670,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "5": {
+   "name": "ConstSpeed",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 10523,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "6": {
+   "name": "ConstSpeedOffset",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 7992,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "7": {
+   "name": "RandomSpeed",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 9507,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "8": {
+   "name": "RandomSpeedOffset",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 12859,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "9": {
+   "name": "EventualStop",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 5362,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "10": {
+   "name": "Disruptive",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 9562,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "11": {
+   "name": "DataReplay",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 8776,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "12": {
+   "name": "DelayedMessages",
+   "n_attackers": 37,
+   "n_messages": 20521,
+   "n_labelled_attack": 9515,
+   "attacker_msgs_vs_genuine_ratio": 0.9433868728931192,
+   "n_pseudonyms_attackers": 37
+  },
+  "13": {
+   "name": "DoS",
+   "n_attackers": 37,
+   "n_messages": 29279,
+   "n_labelled_attack": 16374,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "14": {
+   "name": "DoSRandom",
+   "n_attackers": 37,
+   "n_messages": 48848,
+   "n_labelled_attack": 37008,
+   "attacker_msgs_vs_genuine_ratio": 4.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "15": {
+   "name": "DoSDisruptive",
+   "n_attackers": 37,
+   "n_messages": 55391,
+   "n_labelled_attack": 45732,
+   "attacker_msgs_vs_genuine_ratio": 4.0,
+   "n_pseudonyms_attackers": 37
+  },
+  "16": {
+   "name": "GridSybil",
+   "n_attackers": 37,
+   "n_messages": 61762,
+   "n_labelled_attack": 48804,
+   "attacker_msgs_vs_genuine_ratio": 6.0,
+   "n_pseudonyms_attackers": 222
+  },
+  "17": {
+   "name": "DataReplaySybil",
+   "n_attackers": 37,
+   "n_messages": 21092,
+   "n_labelled_attack": 10935,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 238
+  },
+  "18": {
+   "name": "DoSRandomSybil",
+   "n_attackers": 37,
+   "n_messages": 32383,
+   "n_labelled_attack": 22582,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 3245
+  },
+  "19": {
+   "name": "DoSDisruptiveSybil",
+   "n_attackers": 37,
+   "n_messages": 30205,
+   "n_labelled_attack": 18226,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 3194
+  }
+ },
+ "val": {
+  "1": {
+   "name": "ConstPos",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1568,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "2": {
+   "name": "ConstPosOffset",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1750,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "3": {
+   "name": "RandomPos",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1374,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "4": {
+   "name": "RandomPosOffset",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1810,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "5": {
+   "name": "ConstSpeed",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 2176,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "6": {
+   "name": "ConstSpeedOffset",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1437,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "7": {
+   "name": "RandomSpeed",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 2588,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "8": {
+   "name": "RandomSpeedOffset",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1926,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "9": {
+   "name": "EventualStop",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1073,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "10": {
+   "name": "Disruptive",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1494,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "11": {
+   "name": "DataReplay",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 2491,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "12": {
+   "name": "DelayedMessages",
+   "n_attackers": 10,
+   "n_messages": 4371,
+   "n_labelled_attack": 2295,
+   "attacker_msgs_vs_genuine_ratio": 0.9503105590062112,
+   "n_pseudonyms_attackers": 10
+  },
+  "13": {
+   "name": "DoS",
+   "n_attackers": 10,
+   "n_messages": 7178,
+   "n_labelled_attack": 5374,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "14": {
+   "name": "DoSRandom",
+   "n_attackers": 10,
+   "n_messages": 9369,
+   "n_labelled_attack": 6504,
+   "attacker_msgs_vs_genuine_ratio": 4.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "15": {
+   "name": "DoSDisruptive",
+   "n_attackers": 10,
+   "n_messages": 9021,
+   "n_labelled_attack": 6040,
+   "attacker_msgs_vs_genuine_ratio": 4.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "16": {
+   "name": "GridSybil",
+   "n_attackers": 10,
+   "n_messages": 14726,
+   "n_labelled_attack": 12282,
+   "attacker_msgs_vs_genuine_ratio": 6.0,
+   "n_pseudonyms_attackers": 60
+  },
+  "17": {
+   "name": "DataReplaySybil",
+   "n_attackers": 10,
+   "n_messages": 4491,
+   "n_labelled_attack": 1616,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 36
+  },
+  "18": {
+   "name": "DoSRandomSybil",
+   "n_attackers": 10,
+   "n_messages": 6617,
+   "n_labelled_attack": 4252,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 919
+  },
+  "19": {
+   "name": "DoSDisruptiveSybil",
+   "n_attackers": 10,
+   "n_messages": 5716,
+   "n_labelled_attack": 2450,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 872
+  }
+ },
+ "test": {
+  "1": {
+   "name": "ConstPos",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 2768,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "2": {
+   "name": "ConstPosOffset",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 5370,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "3": {
+   "name": "RandomPos",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 4922,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "4": {
+   "name": "RandomPosOffset",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 3796,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "5": {
+   "name": "ConstSpeed",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 3141,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "6": {
+   "name": "ConstSpeedOffset",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 2595,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "7": {
+   "name": "RandomSpeed",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 5059,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "8": {
+   "name": "RandomSpeedOffset",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 2907,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "9": {
+   "name": "EventualStop",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 2910,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "10": {
+   "name": "Disruptive",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 2200,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "11": {
+   "name": "DataReplay",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 5590,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "12": {
+   "name": "DelayedMessages",
+   "n_attackers": 10,
+   "n_messages": 8715,
+   "n_labelled_attack": 5598,
+   "attacker_msgs_vs_genuine_ratio": 0.9730575351990266,
+   "n_pseudonyms_attackers": 10
+  },
+  "13": {
+   "name": "DoS",
+   "n_attackers": 10,
+   "n_messages": 12371,
+   "n_labelled_attack": 7002,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "14": {
+   "name": "DoSRandom",
+   "n_attackers": 10,
+   "n_messages": 17810,
+   "n_labelled_attack": 11920,
+   "attacker_msgs_vs_genuine_ratio": 4.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "15": {
+   "name": "DoSDisruptive",
+   "n_attackers": 10,
+   "n_messages": 14183,
+   "n_labelled_attack": 7084,
+   "attacker_msgs_vs_genuine_ratio": 4.0,
+   "n_pseudonyms_attackers": 10
+  },
+  "16": {
+   "name": "GridSybil",
+   "n_attackers": 10,
+   "n_messages": 21990,
+   "n_labelled_attack": 15744,
+   "attacker_msgs_vs_genuine_ratio": 6.0,
+   "n_pseudonyms_attackers": 60
+  },
+  "17": {
+   "name": "DataReplaySybil",
+   "n_attackers": 10,
+   "n_messages": 8870,
+   "n_labelled_attack": 4426,
+   "attacker_msgs_vs_genuine_ratio": 1.0,
+   "n_pseudonyms_attackers": 93
+  },
+  "18": {
+   "name": "DoSRandomSybil",
+   "n_attackers": 10,
+   "n_messages": 13552,
+   "n_labelled_attack": 9364,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 955
+  },
+  "19": {
+   "name": "DoSDisruptiveSybil",
+   "n_attackers": 10,
+   "n_messages": 13524,
+   "n_labelled_attack": 9308,
+   "attacker_msgs_vs_genuine_ratio": 2.0,
+   "n_pseudonyms_attackers": 949
+  }
+ }
+}

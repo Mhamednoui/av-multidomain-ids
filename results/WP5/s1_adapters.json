@@ -1,0 +1,25 @@
+{
+ "veremi": {
+  "rows": 3194808,
+  "senders": 24663,
+  "tracks": 119285
+ },
+ "tampa": {
+  "rows": 34453,
+  "vehicles": 226,
+  "tracks": 353,
+  "t_range_utc_s": [
+   1035.8,
+   25183.232
+  ],
+  "x_range_m": [
+   -1027.8988431564542,
+   631.8141066839142
+  ],
+  "y_range_m": [
+   -736.593308000103,
+   744.7085360000211
+  ]
+ },
+ "v2aix": "not available (adapter stub raises DataNotAvailableError)"
+}
