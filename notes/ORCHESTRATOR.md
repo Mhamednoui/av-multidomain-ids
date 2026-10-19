@@ -59,3 +59,5 @@ Open questions for the user at the start of the next session:
 | 2026-10-19 | WP1 | S1 | sonnet | ASSIGNED | GPS data layer |
 | 2026-10-19 | WP1 | S1 | sonnet | APPROVED | commit 8ecdf70, 29/29 tests, B2 bit-identical on new stream; Doppler spoof / meaconing velocity-consistency 1.03x clean (physically consistent). B2 baseline run-level: Doppler 0.414, meaconing 0.471. Caveat: attack generator KITTI only; UAV onset 117 s is v2 estimate. |
 | 2026-10-19 | WP1 | S2 | sonnet | ASSIGNED | L1 receiver sanity rules |
+| 2026-10-19 | WP5 | S0 | sonnet | APPROVED (partial) | commit e3d6d5e. D12 VeReMi Ext 1.21 GB CC BY 4.0, 3.19 M msgs, 24,663 senders, class 0..19. D14 Tampa sample 1 day, 226 vehicles. D13 V2AIX: manual request form (user action needed: v2aix.ika.rwth-aachen.de -> Download -> form). S1 proceeds on D12+D14; V2AIX adapter added when access arrives. |
+| 2026-10-19 | WP5 | S1 | sonnet | ASSIGNED | V2X data layer on D12+D14 |
