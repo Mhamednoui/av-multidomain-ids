@@ -64,7 +64,8 @@ def load_veremi(path=VEREMI_CSV, nrows=None) -> pd.DataFrame:
     return _finish(out)
 
 
-def load_tampa(path=TAMPA_CSV) -> pd.DataFrame:
+def load_tampa(path=TAMPA_CSV, with_age=False) -> pd.DataFrame:
+    """with_age=True adds the extra column age_s = RSU log time - generation time (s; 1 s log resolution)."""
     cols = ["metadata_recordGeneratedAt", "metadata_RSUID", "coreData_id",
             "coreData_secMark", "coreData_lat", "coreData_long", "coreData_accelset_yaw",
             "coreData_accelset_long", "coreData_speed", "coreData_heading"]
@@ -77,6 +78,7 @@ def load_tampa(path=TAMPA_CSV) -> pd.DataFrame:
     gen = np.where(sm - rec_s > 30, gen - 60, gen)       # made just before the minute turned
     gen = np.where(rec_s - sm > 30, gen + 60, gen)
     r["t"] = gen % 86400.0
+    r["age_s"] = ((rec.to_numpy(dtype=float) % 86400.0 - r["t"].to_numpy() + 43200.0) % 86400.0) - 43200.0
     r["sender"] = r["coreData_id"].astype(np.int64).astype(str)
     r = r.sort_values(["sender", "t", "metadata_RSUID"], kind="stable")
     r = r.drop_duplicates(["sender", "t"]).reset_index(drop=True)
@@ -103,8 +105,11 @@ def load_tampa(path=TAMPA_CSV) -> pd.DataFrame:
         "rx_id": r["metadata_RSUID"], "lat": lat, "lon": lon,
         "label": 0, "attack": "Genuine", "injected": False,
     })
-    out = out[np.isfinite(out["speed"])]
-    return _finish(out)
+    age = pd.Series(r["age_s"].to_numpy(), index=out["msg_id"].to_numpy())
+    out = _finish(out[np.isfinite(out["speed"])])
+    if with_age:
+        out["age_s"] = age.loc[out["msg_id"].to_numpy()].to_numpy()
+    return out
 
 
 def load_v2aix(path=V2AIX_DIR) -> pd.DataFrame:

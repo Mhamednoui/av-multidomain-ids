@@ -1,0 +1,240 @@
+{
+ "name": "s2_veremi",
+ "budget": 0.01,
+ "layers": {
+  "v2x.beacon_rate": {
+   "threshold": 0.009205456370101473,
+   "budget": 0.01,
+   "false_alarm_rate": 0.0,
+   "detection": 0.32846618640527403,
+   "detection_by_attack": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.0,
+    "03_RandomPos": 0.0,
+    "04_RandomPosOffset": 0.0,
+    "05_ConstSpeed": 0.0,
+    "06_ConstSpeedOffset": 0.0,
+    "07_RandomSpeed": 0.0,
+    "08_RandomSpeedOffset": 0.0,
+    "09_EventualStop": 0.0,
+    "10_Disruptive": 0.0,
+    "11_DataReplay": 0.0,
+    "12_DelayedMessages": 0.0,
+    "13_DoS": 0.9971509971509972,
+    "14_DoSRandom": 0.9971112660623568,
+    "15_DoSDisruptive": 0.996772757622969,
+    "16_GridSybil": 0.2203001968503937,
+    "17_DataReplaySybil": 0.0,
+    "18_DoSRandomSybil": 0.0,
+    "19_DoSDisruptiveSybil": 0.0029901987928456727
+   },
+   "auc": 0.6283836408785317,
+   "delay": {
+    "n_segments": 178245,
+    "detected_fraction": 0.4612134982748464,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.008280078303011036
+   },
+   "n_test": 718851,
+   "n_test_attack": 294423
+  },
+  "v2x.field_ranges": {
+   "threshold": 0.9899954158561819,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009912164136202136,
+   "detection": 0.20830913345764426,
+   "detection_by_attack": {
+    "01_ConstPos": 0.010252904989747095,
+    "02_ConstPosOffset": 0.009075325199152969,
+    "03_RandomPos": 0.013623424156161041,
+    "04_RandomPosOffset": 0.011059998042478222,
+    "05_ConstSpeed": 0.7129018522461146,
+    "06_ConstSpeedOffset": 0.09486812512778572,
+    "07_RandomSpeed": 0.7048723897911833,
+    "08_RandomSpeedOffset": 0.05293367346938776,
+    "09_EventualStop": 0.001562662777372643,
+    "10_Disruptive": 0.15186474390850324,
+    "11_DataReplay": 0.059533898305084744,
+    "12_DelayedMessages": 0.0005307292219509606,
+    "13_DoS": 0.00938875938875939,
+    "14_DoSRandom": 0.7068765149251254,
+    "15_DoSDisruptive": 0.13650864307441204,
+    "16_GridSybil": 0.016486220472440943,
+    "17_DataReplaySybil": 0.07935700478176824,
+    "18_DoSRandomSybil": 0.7023227691842596,
+    "19_DoSDisruptiveSybil": 0.13367296085054545
+   },
+   "auc": 0.5744494782745388,
+   "delay": {
+    "n_segments": 178245,
+    "detected_fraction": 0.3093382703582148,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.011871236353429597
+   },
+   "n_test": 718851,
+   "n_test_attack": 294423
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.9900875126190188,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009912164136202136,
+   "detection": 0.45101435689467195,
+   "detection_by_attack": {
+    "01_ConstPos": 0.010252904989747095,
+    "02_ConstPosOffset": 0.009075325199152969,
+    "03_RandomPos": 0.013623424156161041,
+    "04_RandomPosOffset": 0.011059998042478222,
+    "05_ConstSpeed": 0.7129018522461146,
+    "06_ConstSpeedOffset": 0.09486812512778572,
+    "07_RandomSpeed": 0.7048723897911833,
+    "08_RandomSpeedOffset": 0.05293367346938776,
+    "09_EventualStop": 0.001562662777372643,
+    "10_Disruptive": 0.15186474390850324,
+    "11_DataReplay": 0.059533898305084744,
+    "12_DelayedMessages": 0.0005307292219509606,
+    "13_DoS": 0.9971509971509972,
+    "14_DoSRandom": 0.999302719394362,
+    "15_DoSDisruptive": 0.9969211365828325,
+    "16_GridSybil": 0.23528543307086613,
+    "17_DataReplaySybil": 0.07935700478176824,
+    "18_DoSRandomSybil": 0.7023227691842596,
+    "19_DoSDisruptiveSybil": 0.1366631596433911
+   },
+   "auc": 0.6954984738874936,
+   "delay": {
+    "n_segments": 178245,
+    "detected_fraction": 0.5895200426379421,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.006929551716376478
+   },
+   "n_test": 718851,
+   "n_test_attack": 294423,
+   "method": "noisy_or",
+   "method_selection": {
+    "noisy_or": 0.4898579516410394,
+    "logistic": 0.4898579516410394,
+    "max": 0.4898579516410394
+   }
+  },
+  "only_v2x.beacon_rate": {
+   "threshold": 0.009205456370101473,
+   "budget": 0.01,
+   "false_alarm_rate": 0.0,
+   "detection": 0.32846618640527403,
+   "detection_by_attack": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.0,
+    "03_RandomPos": 0.0,
+    "04_RandomPosOffset": 0.0,
+    "05_ConstSpeed": 0.0,
+    "06_ConstSpeedOffset": 0.0,
+    "07_RandomSpeed": 0.0,
+    "08_RandomSpeedOffset": 0.0,
+    "09_EventualStop": 0.0,
+    "10_Disruptive": 0.0,
+    "11_DataReplay": 0.0,
+    "12_DelayedMessages": 0.0,
+    "13_DoS": 0.9971509971509972,
+    "14_DoSRandom": 0.9971112660623568,
+    "15_DoSDisruptive": 0.996772757622969,
+    "16_GridSybil": 0.2203001968503937,
+    "17_DataReplaySybil": 0.0,
+    "18_DoSRandomSybil": 0.0,
+    "19_DoSDisruptiveSybil": 0.0029901987928456727
+   },
+   "auc": 0.6283836408785317,
+   "delay": {
+    "n_segments": 178245,
+    "detected_fraction": 0.4612134982748464,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.008280078303011036
+   },
+   "n_test": 718851,
+   "n_test_attack": 294423
+  },
+  "only_v2x.field_ranges": {
+   "threshold": 0.9899954158561819,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009912164136202136,
+   "detection": 0.20830913345764426,
+   "detection_by_attack": {
+    "01_ConstPos": 0.010252904989747095,
+    "02_ConstPosOffset": 0.009075325199152969,
+    "03_RandomPos": 0.013623424156161041,
+    "04_RandomPosOffset": 0.011059998042478222,
+    "05_ConstSpeed": 0.7129018522461146,
+    "06_ConstSpeedOffset": 0.09486812512778572,
+    "07_RandomSpeed": 0.7048723897911833,
+    "08_RandomSpeedOffset": 0.05293367346938776,
+    "09_EventualStop": 0.001562662777372643,
+    "10_Disruptive": 0.15186474390850324,
+    "11_DataReplay": 0.059533898305084744,
+    "12_DelayedMessages": 0.0005307292219509606,
+    "13_DoS": 0.00938875938875939,
+    "14_DoSRandom": 0.7068765149251254,
+    "15_DoSDisruptive": 0.13650864307441204,
+    "16_GridSybil": 0.016486220472440943,
+    "17_DataReplaySybil": 0.07935700478176824,
+    "18_DoSRandomSybil": 0.7023227691842596,
+    "19_DoSDisruptiveSybil": 0.13367296085054545
+   },
+   "auc": 0.5744494782745388,
+   "delay": {
+    "n_segments": 178245,
+    "detected_fraction": 0.3093382703582148,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.011871236353429597
+   },
+   "n_test": 718851,
+   "n_test_attack": 294423
+  }
+ },
+ "layer_names": [
+  "v2x.beacon_rate",
+  "v2x.field_ranges"
+ ],
+ "combined": {
+  "threshold": 0.9900875126190188,
+  "budget": 0.01,
+  "false_alarm_rate": 0.009912164136202136,
+  "detection": 0.45101435689467195,
+  "detection_by_attack": {
+   "01_ConstPos": 0.010252904989747095,
+   "02_ConstPosOffset": 0.009075325199152969,
+   "03_RandomPos": 0.013623424156161041,
+   "04_RandomPosOffset": 0.011059998042478222,
+   "05_ConstSpeed": 0.7129018522461146,
+   "06_ConstSpeedOffset": 0.09486812512778572,
+   "07_RandomSpeed": 0.7048723897911833,
+   "08_RandomSpeedOffset": 0.05293367346938776,
+   "09_EventualStop": 0.001562662777372643,
+   "10_Disruptive": 0.15186474390850324,
+   "11_DataReplay": 0.059533898305084744,
+   "12_DelayedMessages": 0.0005307292219509606,
+   "13_DoS": 0.9971509971509972,
+   "14_DoSRandom": 0.999302719394362,
+   "15_DoSDisruptive": 0.9969211365828325,
+   "16_GridSybil": 0.23528543307086613,
+   "17_DataReplaySybil": 0.07935700478176824,
+   "18_DoSRandomSybil": 0.7023227691842596,
+   "19_DoSDisruptiveSybil": 0.1366631596433911
+  },
+  "auc": 0.6954984738874936,
+  "delay": {
+   "n_segments": 178245,
+   "detected_fraction": 0.5895200426379421,
+   "median_delay_s": 0.0,
+   "mean_delay_s": 0.006929551716376478
+  },
+  "n_test": 718851,
+  "n_test_attack": 294423,
+  "method": "noisy_or",
+  "method_selection": {
+   "noisy_or": 0.4898579516410394,
+   "logistic": 0.4898579516410394,
+   "max": 0.4898579516410394
+  }
+ }
+}

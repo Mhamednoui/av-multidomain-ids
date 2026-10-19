@@ -34,3 +34,38 @@ No re-splitting after seeing results.
 - Held-out attack types for supervised training (fixed now): 6, 12, 17.
 - Pitfall fixed: epoch-seconds float64 modulo lost 1e-7 s; use integer modulo first.
 - Acceptance: S1 MET for D12+D14 (class map PARTIALLY verified: names consistent with data, not confirmed by primary source).
+
+## 2026-10-19 S2 L1 message checks: acceptance rule (written before any S2 result)
+Supervisor instructions: S1 approved; held-out attack types 6, 12, 17 stay out of any calibration / training (also out of the
+combiner fit on validation); physical limits cited; data-driven thresholds on validation genuine messages only (1% budget, tie-safe);
+sudden appearance implemented + unit-tested on synthetic data, reported "not evaluated on real data" (no receiver positions invented).
+Design (fixed now): four Layers (domain v2x, layer L1, kind rule): v2x.beacon_rate (1/dt per track, dt rounded to 1 ms, data-driven),
+v2x.freshness (age = receive - generation time where a receive time exists, plus timestamps going backwards in arrival order; data-driven),
+v2x.field_ranges (speed / acceleration / yaw rate against cited physical limits; physical operating point raw >= 1, plus budget operating point
+for the harness), v2x.sudden_appearance (first message of a track closer than R_EDGE to the receiver). Causal per track.
+Data: VeReMi (no receive time -> freshness not evaluable; no receiver -> sudden appearance not evaluable). Tampa: age from RSU log time (1 s
+resolution); injected attacks stamp the current time, so freshness is blind to them by construction; one supplemental, documented attack
+(S20 StaleReplay: verbatim old message, original timestamp, delivered 10-60 s later) is added for Tampa only, to show what freshness is for.
+S2 is MET if all hold:
+1. 4 Layers implemented, unit tests pass (incl. sudden appearance on synthetic data, stale age, rate, ranges), python tests/run_tests.py passes.
+2. No threshold is fitted on test or on attack data; data-driven thresholds from validation genuine only; physical limits cited in the module docstring.
+3. False alarms at each layer's operating point on genuine test messages <= 1.5x the budget on VeReMi (<= 1.5%); on Tampa (small val) <= 2%.
+   The physical operating point of field_ranges must give <= 0.1% false alarms on genuine val and test (a physical limit that fires on genuine
+   traffic is reported as a failure of that limit, not retuned).
+4. Per-layer detection for all 19 VeReMi classes and the Tampa injected types (+ S20), false alarms on genuine test messages AND senders,
+   harness ablation (only_X / all / all-but) written to results/WP5/s2_*.json, with attacker-level bootstrap CIs for Tampa.
+Pre-registered expectations (stated, not tuned to): rate layer detects >= 90% of the messages of classes 13, 14, 15 on VeReMi test and the
+doubled-rate Tampa types; ranges (physical) detects < 5% of every position / speed falsification class (VeReMi speeds in the data reach 56 m/s < 70 m/s limit);
+freshness detects only S20; L1 union detects < 30% of classes 1-12 and 17 (position/speed falsification with plausible per-message values).
+Misses are reported plainly; they are the reason for L2-L4. No re-splitting, no re-tuning after seeing results.
+
+## 2026-10-19 S2 results (numbers in results/WP5/s2_veremi.json, s2_tampa.json, s2_summary.json, s2_tables.md; scripts tools/WP5_S2_l1.py, WP5_S2_report.py)
+- Code: v2x/l1.py (4 Layers), v2x/adapters.py load_tampa(with_age=True) adds age_s, tests/v2x/test_l1.py (11 tests); full suite 83 passed.
+- Evaluable: VeReMi = rate + ranges (no receive time -> freshness not evaluable; no receiver -> sudden appearance not evaluable). Tampa = rate + freshness + ranges. Sudden appearance: synthetic unit test only.
+- Held-out 6, 12, 17 removed from the validation set the combiner sees. Test scored once per dataset (one run; log results/WP5/logs/s2_run1.log). No re-tuning.
+- Checks 3a-3c MET (max FA 1.0% VeReMi, 1.3% Tampa, physical ranges 0.0% on genuine). Expectations E1, E2, E3, E4 as expected; E1b NOT: Tampa DoS x2 detected only 5.7% (x4 types 93-94%).
+- Why: genuine Tampa val has 20 Hz bursts (6.1% of val inter-arrivals > 10.5 Hz; test 1.5%; one val vehicle gives half), so the 1% budget threshold is 20.4 Hz; the literal 10 Hz standard limit would give 1.5% FA on genuine test messages. Data-driven threshold kept.
+- VeReMi rate: classes 13/14/15 99.7% of messages, every attacker within ~0.5 s. Physical field limit never fires on any attack (max attack speed in data 56 m/s < 70). The 1% budget point of the ranges layer catches ~70% of classes 5, 7, 14, 18 (high speeds) but is a quantile of genuine speed (max 19 m/s) and flags 49% of genuine senders: ablation device only.
+- DoS factor (S1 note): class 13 per-sender rate is bimodal (2 or 4 Hz, mean 2.97, 390 senders), not a clean 2x. Tampa injection kept at x2 as approved.
+- Freshness: S20 supplemental stale replay 100% detected, 1.1% FA; the 19 injected types are blind by construction (fresh timestamps).
+- Acceptance: S2 MET (1-4); E1b reported as not as expected.
