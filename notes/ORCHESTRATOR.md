@@ -51,3 +51,5 @@ Open questions for the user at the start of the next session:
 | 2026-10-19 | WP0 | S2 | sonnet | APPROVED + S2b | 14/14 tests, commit 9ad97f7, toy AUC combined 0.955 vs best layer 0.746. Follow-up S2b sent to same worker: ECDF tail above max validation normal made strictly increasing and < 1 (saturation kills rank info in combiners). Then S3. |
 | 2026-10-19 | WP0 | S2b | sonnet | APPROVED | 16/16 tests, commit 095a2c4, toy unchanged (51.5% @1%). |
 | 2026-10-19 | WP0 | S3 | sonnet | ASSIGNED | v2 B2 regression, closes M0 |
+| 2026-10-19 | WP1 | S0 | sonnet | ASSIGNED | download D15 OSM; S0 is data-only, does not need common/, so started in parallel with WP0 S3 to save time. S1 still waits for M0. |
+| 2026-10-19 | WP2 | S0 | sonnet | ASSIGNED | download D11 (7.5 GB); same reasoning. |
