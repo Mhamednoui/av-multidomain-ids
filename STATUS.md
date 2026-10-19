@@ -6,7 +6,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
-| WP0 Foundation | S2 | REVIEW | worker sonnet | 2026-10-19 | S1 APPROVED 2026-10-19; S2 report reports/WP0_S2.md |
+| WP0 Foundation | S3 | IN PROGRESS | worker sonnet | 2026-10-19 | S2+S2b APPROVED 2026-10-19 |
 | WP1 GPS | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
 | WP2 CAN | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
