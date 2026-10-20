@@ -8,10 +8,10 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
 | WP1 GPS | S6 | TODO | - | 2026-10-20 | S5 APPROVED with misses. Paused for usage limits. S6 must filter OSM to drivable classes |
-| WP2 CAN | S2 | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S1 APPROVED |
+| WP2 CAN | S2 | IN PROGRESS (interrupted) | worker sonnet (medium) | 2026-10-20 | stopped by usage limit 2026-10-20 night; uncommitted work on disk, resume |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
-| WP5 V2X | S4 | IN PROGRESS | worker sonnet (medium) | 2026-10-20 | S0b closed NOT MET (full Tampa needs user request to ITS DataHub). Tampa = illustration only. S3b waits for receiver positions |
+| WP5 V2X | S4 | IN PROGRESS (interrupted) | worker sonnet (medium) | 2026-10-20 | stopped by usage limit while writing the report; uncommitted work on disk, resume |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 

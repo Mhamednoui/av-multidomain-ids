@@ -88,3 +88,21 @@ Open questions for the user at the start of the next session:
 | 2026-10-20 | WP1 | S5 | sonnet medium | APPROVED with documented misses | commit f42e77d, 144/144 tests. LiDAR ICP odometry 23/23 drives (0001, 0015 from ../codes/data/Depth, read-only): test 1.58% transl, 0.0069 deg/m. Misses: C2c 1 s disp err 0.129 vs 0.10 m; C3 2-sigma coverage 89.4 vs 90%; C4 FA 1.64 vs 1.5%; C5 Doppler spoof 60% / meaconing 61% vs 75% (limited by simulated receiver noise, not LiDAR). Primary L2d layer adds ~0 over S4 stack; all 7 L2d layers add AUC 0.922 -> 0.927 under LODO. cusum_lidar 10.1% FA: rejected. MotionEstimate published (C8 met). Decisions: (1) MotionEstimate displacement = body frame (ARCHITECTURE.md clarified, not a contract change). (2) 75% target for Doppler/meaconing is KEPT for S8; S8 reports it honestly plus delay; targets are not lowered after seeing results. |
 | 2026-10-20 | - | usage | - | PAUSE | User at ~85% of usage limit. No new worker assignments until the user says go. Running: WP2 S2, WP5 S4 (let them finish). Cost: each worker starts at ~30K tokens (system prompt + tools + doc reading list) and ends at 60-280K. Next time: 1 worker at a time, trimmed reading list (only WP file, own notes tail, previous report). |
 - 2026-10-20 user: do not reduce quality; choose model/effort per task instead. ORCHESTRATION.md section 6 written (tiers T1-T4, per-WP brief files, 2 workers max). First worker of each WP after this date also writes notes/WP<n>_brief.md.
+
+## HANDOFF 2026-10-20 night (user shut down; usage limit hit, resets 04:20 Africa/Tunis)
+
+State:
+- Approved: WP0 S1-S3 (M0 closed); WP1 S0-S5; WP2 S0-S1; WP5 S0, S1, S1b, S2, S3 (S0b closed not met).
+- Interrupted mid-step (work on disk, NOT committed; do not delete):
+  - WP5 S4 (per-sender Kalman, v2x/l3.py, tests/v2x/test_l3.py, tools/WP5_S4_*, results/WP5/s4_*,
+    reports/WP5_S4.md draft): was writing the report.
+  - WP2 S2 (CAN spec rules, can/l1.py, can/l1_exp.py, tools/WP2_S2_*, results/WP2/s2_*): mid-run.
+  Resume: if this same session is alive, SendMessage the two workers. If a new session: launch a
+  fresh worker per step (WP5 S4: T2 sonnet/medium; WP2 S2: T2 sonnet/medium) telling it to
+  continue from the files on disk (read its notes file tail + draft), not restart.
+- Next after those: WP1 S6 (T2), WP1 S7 (T3), WP1 S8 (T3, M1-GPS); WP5 S5 (T3), S6 (T3, M1-V2X);
+  WP2 S3+; wave 2 downloads WP3 / WP4 S0 (T1). Max 2 workers. New workers write notes/WP<n>_brief.md.
+- User actions pending: (1) V2AIX access form v2aix.ika.rwth-aachen.de; (2) optional ITS DataHub
+  request for full Tampa BSM (text in reports/WP5_S0b.md).
+- Approval mode: orchestrator approves routine steps; downloads pre-approved (>= 15 GB free);
+  no GitHub push. Model/effort per task: ORCHESTRATION.md section 6.
