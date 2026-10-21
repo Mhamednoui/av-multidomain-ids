@@ -11,7 +11,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S3 | TODO | - | 2026-10-21 | S2 APPROVED with miss (ROAD FA 3.4% vs 1%) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
-| WP5 V2X | S5 | REVIEW | worker sonnet (high, T3) | 2026-10-21 | PARTIAL: L4 headline 78.1 -> 91.5% (unseen 17: 46 -> 92%), shuffled control 4.1% > 2% bound, zero-residual shortcut found (reports/WP5_S5.md) |
+| WP5 V2X | S6 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-21 | S5 APPROVED partial (L4 shortcut on first/repeated messages found). S6 -> M1-V2X |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 
