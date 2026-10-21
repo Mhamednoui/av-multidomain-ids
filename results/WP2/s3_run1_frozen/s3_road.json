@@ -1,0 +1,5394 @@
+{
+ "experiment": "road",
+ "l1_variant_selection": {
+  "chosen": 3,
+  "variants": {
+   "0": {
+    "variant": [
+     0.99,
+     0.05
+    ],
+    "mean_recall": 0.14166666666666666,
+    "recall": {
+     "correlated_signal": 0.0,
+     "fuzzing": 0.6666666666666666,
+     "max_speedometer": 0.0,
+     "reverse_light_off": 0.041666666666666664,
+     "reverse_light_on": 0.0
+    },
+    "val_fa_rate_clean_windows": 0.009917355371900827
+   },
+   "1": {
+    "variant": [
+     0.999,
+     0.05
+    ],
+    "mean_recall": 0.2253623188405797,
+    "recall": {
+     "correlated_signal": 0.043478260869565216,
+     "fuzzing": 1.0,
+     "max_speedometer": 0.0,
+     "reverse_light_off": 0.08333333333333333,
+     "reverse_light_on": 0.0
+    },
+    "val_fa_rate_clean_windows": 0.009917355371900827
+   },
+   "2": {
+    "variant": [
+     0.99,
+     0.25
+    ],
+    "mean_recall": 0.14166666666666666,
+    "recall": {
+     "correlated_signal": 0.0,
+     "fuzzing": 0.6666666666666666,
+     "max_speedometer": 0.0,
+     "reverse_light_off": 0.041666666666666664,
+     "reverse_light_on": 0.0
+    },
+    "val_fa_rate_clean_windows": 0.009917355371900827
+   },
+   "3": {
+    "variant": [
+     0.999,
+     0.25
+    ],
+    "mean_recall": 0.575219298245614,
+    "recall": {
+     "correlated_signal": 0.0,
+     "fuzzing": 1.0,
+     "max_speedometer": 0.6875,
+     "reverse_light_off": 0.5833333333333334,
+     "reverse_light_on": 0.6052631578947368
+    },
+    "val_fa_rate_clean_windows": 0.009917355371900827
+   }
+  }
+ },
+ "skew_variant_selection": {
+  "chosen": 0,
+  "selected_on": [
+   "correlated_signal_masquerade",
+   "max_speedometer_masquerade",
+   "reverse_light_off_masquerade",
+   "reverse_light_on_masquerade"
+  ],
+  "variants": {
+   "0": {
+    "variant": "drift_N20_acc",
+    "mean_recall": 0.0,
+    "recall": {
+     "correlated_signal_masquerade": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    },
+    "val_fa_clean_windows": 0.009917355371900827,
+    "recall_all_types": {
+     "correlated_signal": 0.6956521739130435,
+     "correlated_signal_masquerade": 0.0,
+     "fuzzing": 0.0,
+     "max_speedometer": 0.8125,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off": 0.75,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on": 0.8421052631578947,
+     "reverse_light_on_masquerade": 0.0
+    }
+   },
+   "1": {
+    "variant": "drift_N50_acc",
+    "mean_recall": 0.0,
+    "recall": {
+     "correlated_signal_masquerade": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    },
+    "val_fa_clean_windows": 0.009917355371900827,
+    "recall_all_types": {
+     "correlated_signal": 0.9130434782608695,
+     "correlated_signal_masquerade": 0.0,
+     "fuzzing": 0.0,
+     "max_speedometer": 0.9375,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off": 0.9166666666666666,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on": 0.9473684210526315,
+     "reverse_light_on_masquerade": 0.0
+    }
+   },
+   "2": {
+    "variant": "paper_N20_acc",
+    "mean_recall": 0.0,
+    "recall": {
+     "correlated_signal_masquerade": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    },
+    "val_fa_clean_windows": 0.009917355371900827,
+    "recall_all_types": {
+     "correlated_signal": 0.0,
+     "correlated_signal_masquerade": 0.0,
+     "fuzzing": 0.0,
+     "max_speedometer": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    }
+   },
+   "3": {
+    "variant": "paper_N50_acc",
+    "mean_recall": 0.0,
+    "recall": {
+     "correlated_signal_masquerade": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    },
+    "val_fa_clean_windows": 0.009917355371900827,
+    "recall_all_types": {
+     "correlated_signal": 0.0,
+     "correlated_signal_masquerade": 0.0,
+     "fuzzing": 0.0,
+     "max_speedometer": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    }
+   },
+   "4": {
+    "variant": "drift_N20_inc",
+    "mean_recall": 0.0,
+    "recall": {
+     "correlated_signal_masquerade": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    },
+    "val_fa_clean_windows": 0.009917355371900827,
+    "recall_all_types": {
+     "correlated_signal": 0.7391304347826086,
+     "correlated_signal_masquerade": 0.0,
+     "fuzzing": 0.0,
+     "max_speedometer": 0.84375,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off": 0.75,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on": 0.8421052631578947,
+     "reverse_light_on_masquerade": 0.0
+    }
+   },
+   "5": {
+    "variant": "drift_N50_inc",
+    "mean_recall": 0.0,
+    "recall": {
+     "correlated_signal_masquerade": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    },
+    "val_fa_clean_windows": 0.009917355371900827,
+    "recall_all_types": {
+     "correlated_signal": 0.8695652173913043,
+     "correlated_signal_masquerade": 0.0,
+     "fuzzing": 0.0,
+     "max_speedometer": 0.90625,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off": 0.875,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on": 0.9210526315789473,
+     "reverse_light_on_masquerade": 0.0
+    }
+   },
+   "6": {
+    "variant": "paper_N20_inc",
+    "mean_recall": 0.0,
+    "recall": {
+     "correlated_signal_masquerade": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    },
+    "val_fa_clean_windows": 0.009917355371900827,
+    "recall_all_types": {
+     "correlated_signal": 0.0,
+     "correlated_signal_masquerade": 0.0,
+     "fuzzing": 0.0,
+     "max_speedometer": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    }
+   },
+   "7": {
+    "variant": "paper_N50_inc",
+    "mean_recall": 0.0,
+    "recall": {
+     "correlated_signal_masquerade": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    },
+    "val_fa_clean_windows": 0.009917355371900827,
+    "recall_all_types": {
+     "correlated_signal": 0.0,
+     "correlated_signal_masquerade": 0.0,
+     "fuzzing": 0.0,
+     "max_speedometer": 0.0,
+     "max_speedometer_masquerade": 0.0,
+     "reverse_light_off": 0.0,
+     "reverse_light_off_masquerade": 0.0,
+     "reverse_light_on": 0.0,
+     "reverse_light_on_masquerade": 0.0
+    }
+   }
+  }
+ },
+ "l1_profile": {
+  "n_ids": 106,
+  "n_periodic": 103,
+  "floor_id": 6,
+  "variant": [
+   0.999,
+   0.25
+  ]
+ },
+ "skew_profile": {
+  "summary": {
+   "variant": "drift_N20_acc",
+   "periodic_ids": 103,
+   "scored_ids": 103
+  },
+  "n_batches": [
+   372,
+   42369,
+   430,
+   42012,
+   769,
+   4349,
+   4116,
+   377,
+   769,
+   42307,
+   11042,
+   20921,
+   375,
+   42016,
+   4119,
+   816,
+   4037,
+   373,
+   375,
+   22228,
+   41539,
+   372,
+   4123,
+   20938,
+   21078,
+   22076,
+   20930,
+   379,
+   373,
+   1695,
+   4117,
+   4358,
+   376,
+   4360,
+   22075,
+   382,
+   22073,
+   4118,
+   4287,
+   376,
+   20923,
+   214,
+   1989,
+   21081,
+   13908,
+   871,
+   4119,
+   1694,
+   372,
+   4691,
+   373,
+   3846,
+   4119,
+   4087,
+   21086,
+   4125,
+   8803,
+   4125,
+   42326,
+   22074,
+   379,
+   214,
+   372,
+   16528,
+   4084,
+   4118,
+   801,
+   4125,
+   22073,
+   4319,
+   4117,
+   22074,
+   4352,
+   1980,
+   4090,
+   352,
+   8348,
+   2133,
+   22074,
+   757,
+   2717,
+   374,
+   8279,
+   22073,
+   4333,
+   417,
+   4314,
+   42323,
+   353,
+   424,
+   354,
+   4087,
+   376,
+   4083,
+   20934,
+   4127,
+   451,
+   4088,
+   353,
+   20693,
+   372,
+   44300,
+   4119
+  ],
+  "scored": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true
+  ],
+  "ids": [
+   6,
+   14,
+   37,
+   51,
+   58,
+   60,
+   61,
+   65,
+   117,
+   167,
+   186,
+   192,
+   204,
+   208,
+   215,
+   241,
+   244,
+   248,
+   253,
+   263,
+   293,
+   300,
+   304,
+   339,
+   354,
+   403,
+   412,
+   420,
+   426,
+   452,
+   458,
+   470,
+   485,
+   519,
+   526,
+   541,
+   560,
+   569,
+   622,
+   627,
+   628,
+   631,
+   640,
+   651,
+   661,
+   663,
+   675,
+   676,
+   683,
+   692,
+   695,
+   705,
+   722,
+   727,
+   737,
+   738,
+   813,
+   837,
+   852,
+   870,
+   881,
+   930,
+   953,
+   961,
+   996,
+   1031,
+   1049,
+   1072,
+   1076,
+   1124,
+   1175,
+   1176,
+   1225,
+   1227,
+   1255,
+   1262,
+   1277,
+   1307,
+   1314,
+   1331,
+   1372,
+   1398,
+   1399,
+   1408,
+   1413,
+   1455,
+   1459,
+   1505,
+   1512,
+   1533,
+   1560,
+   1590,
+   1621,
+   1628,
+   1634,
+   1644,
+   1661,
+   1668,
+   1693,
+   1694,
+   1751,
+   1760,
+   1788
+  ],
+  "T": [
+   1.0067728566360645,
+   0.010022074013475284,
+   0.8900598870861087,
+   0.010021655166142255,
+   0.5024734948390208,
+   0.10027057641351651,
+   0.10032792816294021,
+   1.0036467893293088,
+   0.5023256565781633,
+   0.01002320583387291,
+   0.04009576362156755,
+   0.020050143120721103,
+   1.0061183114893233,
+   0.010021563735303614,
+   0.10031783648164809,
+   0.5020408216714459,
+   0.10041326347190993,
+   1.0057647165421524,
+   1.005161301308297,
+   0.020043558196206828,
+   0.01002155726499539,
+   1.0068355434168146,
+   0.1003283902105991,
+   0.020043240014508162,
+   0.020050015366671003,
+   0.02004351070873325,
+   0.020047174874524707,
+   0.9975707272388583,
+   1.0057598705043886,
+   0.2508863124039764,
+   0.10031851728134747,
+   0.10006922218198029,
+   1.0056469247800073,
+   0.1000258510044306,
+   0.02004354156761088,
+   0.985876377600815,
+   0.020043865404162534,
+   0.1003137393741408,
+   0.10078978385867801,
+   1.005667906792308,
+   0.020049399520382843,
+   1.5101687569351723,
+   0.1997480651851779,
+   0.02004731294178353,
+   0.030071912288969306,
+   0.47343413015813796,
+   0.10033733212633399,
+   0.2509773061782377,
+   1.0067218016836008,
+   0.09224232486052682,
+   1.0015001199508458,
+   0.10531241291508356,
+   0.10032074821522567,
+   0.10033429496297605,
+   0.020046989911525703,
+   0.10031183635830325,
+   0.05012902459594393,
+   0.10031771343707421,
+   0.01002206561937885,
+   0.020044283077453907,
+   0.9997416946873392,
+   1.5099012047078735,
+   1.0067630416974518,
+   0.025057465579164138,
+   0.1003653779866508,
+   0.10033260567310968,
+   0.5066308216966035,
+   0.10031647873429543,
+   0.02004403072574426,
+   0.10028967786334782,
+   0.10033505431905847,
+   0.02004325779459437,
+   0.10021342107614162,
+   0.20060268544727564,
+   0.10031034226098143,
+   1.005899130854882,
+   0.050133711121448585,
+   0.2006392511543843,
+   0.020043689521588106,
+   0.5334977939806018,
+   0.15053790325820376,
+   1.0051764973878754,
+   0.05014695282842582,
+   0.020044369414528144,
+   0.1000109412742578,
+   0.9189541496228304,
+   0.10017486816456075,
+   0.010022251069879837,
+   1.0056550128922157,
+   0.9067897023648168,
+   1.005395585726793,
+   0.10032600353333776,
+   1.0053199019912478,
+   0.10037264565798772,
+   0.020045115956665964,
+   0.10028694758362931,
+   0.8600317365041011,
+   0.10032347111400301,
+   1.0055401264651433,
+   0.02004545461895486,
+   1.0067225677307547,
+   0.010020626963198847,
+   0.10029602700023445
+  ]
+ },
+ "regimes": {
+  "A": {
+   "harness": {
+    "name": "road_A",
+    "budget": 0.01,
+    "layers": {
+     "can.l1_bus_load": {
+      "threshold": 0.9768595041322315,
+      "budget": 0.01,
+      "false_alarm_rate": 0.013783597518952447,
+      "detection": 0.48854961832061067,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.3333333333333333,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.6768351387040262,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.6667518218358358
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l1_dlc": {
+      "threshold": 5e-324,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.0,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.0,
+       "median_delay_s": NaN,
+       "mean_delay_s": NaN
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l1_flood": {
+      "threshold": 0.6512396694214877,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.003816793893129771,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.5,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.494474723933481,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.09090909090909091,
+       "median_delay_s": 0.48348796367645264,
+       "mean_delay_s": 0.48348796367645264
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l1_id_allow": {
+      "threshold": 5e-324,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.007633587786259542,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5038167938931297,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.09090909090909091,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l1_period": {
+      "threshold": 0.9884297520661158,
+      "budget": 0.01,
+      "false_alarm_rate": 0.043418332184700204,
+      "detection": 0.2824427480916031,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.5,
+       "max_engine_coolant_temp": 1.0,
+       "max_engine_coolant_temp_masquerade": 0.16666666666666666,
+       "max_speedometer": 0.6290322580645161,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.8,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.2916666666666667,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.8246458088919988,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.2472501794497172
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l2a_skew": {
+      "threshold": 0.9884297520661158,
+      "budget": 0.01,
+      "false_alarm_rate": 0.039283252929014474,
+      "detection": 0.37786259541984735,
+      "detection_by_attack": {
+       "correlated_signal": 0.5384615384615384,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.8870967741935484,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.76,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.75,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5360004419168671,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.36363636363636365,
+       "median_delay_s": 6.000011563301086,
+       "mean_delay_s": 6.2505402863025665
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     }
+    },
+    "ablation": {
+     "all": {
+      "threshold": 0.9997159221968509,
+      "budget": 0.01,
+      "false_alarm_rate": 0.06616126809097174,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.7134589990582962,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or",
+      "method_selection": {
+       "noisy_or": 0.48232032262710645,
+       "logistic": 0.4288852081232897,
+       "max": 0.48232032262710645
+      }
+     },
+     "only_can.l1_bus_load": {
+      "threshold": 0.9768595041322315,
+      "budget": 0.01,
+      "false_alarm_rate": 0.013783597518952447,
+      "detection": 0.48854961832061067,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.3333333333333333,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.6768351387040262,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.6667518218358358
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l1_dlc": {
+      "threshold": 5e-324,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.0,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.0,
+       "median_delay_s": NaN,
+       "mean_delay_s": NaN
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l1_flood": {
+      "threshold": 0.6512396694214877,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.003816793893129771,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.5,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.494474723933481,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.09090909090909091,
+       "median_delay_s": 0.48348796367645264,
+       "mean_delay_s": 0.48348796367645264
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l1_id_allow": {
+      "threshold": 5e-324,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.007633587786259542,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5038167938931297,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.09090909090909091,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l1_period": {
+      "threshold": 0.9884297520661158,
+      "budget": 0.01,
+      "false_alarm_rate": 0.043418332184700204,
+      "detection": 0.2824427480916031,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.5,
+       "max_engine_coolant_temp": 1.0,
+       "max_engine_coolant_temp_masquerade": 0.16666666666666666,
+       "max_speedometer": 0.6290322580645161,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.8,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.2916666666666667,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.8246458088919988,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.2472501794497172
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l2a_skew": {
+      "threshold": 0.9884297520661158,
+      "budget": 0.01,
+      "false_alarm_rate": 0.039283252929014474,
+      "detection": 0.37786259541984735,
+      "detection_by_attack": {
+       "correlated_signal": 0.5384615384615384,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.8870967741935484,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.76,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.75,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5360004419168671,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.36363636363636365,
+       "median_delay_s": 6.000011563301086,
+       "mean_delay_s": 6.2505402863025665
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "all_but_can.l1_bus_load": {
+      "threshold": 0.7094190195365156,
+      "budget": 0.01,
+      "false_alarm_rate": 0.04755341144038594,
+      "detection": 0.48091603053435117,
+      "detection_by_attack": {
+       "correlated_signal": 0.6153846153846154,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.5,
+       "max_engine_coolant_temp": 1.0,
+       "max_engine_coolant_temp_masquerade": 0.16666666666666666,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.9583333333333334,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.8009059295773907,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.6363636363636364,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.9260980061122349
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "logistic"
+     },
+     "all_but_can.l1_dlc": {
+      "threshold": 0.9997159221968509,
+      "budget": 0.01,
+      "false_alarm_rate": 0.06616126809097174,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.7134589990582962,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     },
+     "all_but_can.l1_flood": {
+      "threshold": 0.9993894740288368,
+      "budget": 0.01,
+      "false_alarm_rate": 0.07443142660234321,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.713827263114146,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     },
+     "all_but_can.l1_id_allow": {
+      "threshold": 0.9997159221968509,
+      "budget": 0.01,
+      "false_alarm_rate": 0.06616126809097174,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.7132998563770182,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     },
+     "all_but_can.l1_period": {
+      "threshold": 0.9983471074380167,
+      "budget": 0.01,
+      "false_alarm_rate": 0.04962095106822881,
+      "detection": 0.48091603053435117,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.6173591784555006,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.45454545454545453,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     },
+     "all_but_can.l2a_skew": {
+      "threshold": 0.9992240967147054,
+      "budget": 0.01,
+      "false_alarm_rate": 0.03514817367332874,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.7528066981970845,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     }
+    },
+    "layer_names": [
+     "can.l1_bus_load",
+     "can.l1_dlc",
+     "can.l1_flood",
+     "can.l1_id_allow",
+     "can.l1_period",
+     "can.l2a_skew"
+    ],
+    "combined": {
+     "threshold": 0.9997159221968509,
+     "budget": 0.01,
+     "false_alarm_rate": 0.06616126809097174,
+     "detection": 0.5,
+     "detection_by_attack": {
+      "correlated_signal": 1.0,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 1.0,
+      "max_engine_coolant_temp": 0.8333333333333334,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "auc": 0.7134589990582962,
+     "delay": {
+      "n_segments": 11,
+      "detected_fraction": 0.5454545454545454,
+      "median_delay_s": 0.0,
+      "mean_delay_s": 0.16664183139801025
+     },
+     "n_test": 1713,
+     "n_test_attack": 262,
+     "method": "noisy_or",
+     "method_selection": {
+      "noisy_or": 0.48232032262710645,
+      "logistic": 0.4288852081232897,
+      "max": 0.48232032262710645
+     }
+    }
+   },
+   "per_capture": {
+    "ambient_dyno_drive_benign_anomaly": {
+     "attack_windows": 0,
+     "clean_windows": 434,
+     "other_normal_windows": 0,
+     "attack": [],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 40,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 4,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 57,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 79,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 30,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "ambient_dyno_drive_extended_short": {
+     "attack_windows": 0,
+     "clean_windows": 360,
+     "other_normal_windows": 0,
+     "attack": [],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 23,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 15,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 17,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 21,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "ambient_dyno_reverse": {
+     "attack_windows": 0,
+     "clean_windows": 52,
+     "other_normal_windows": 0,
+     "attack": [],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "attack_windows": 0,
+     "clean_windows": 470,
+     "other_normal_windows": 0,
+     "attack": [],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 1,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "correlated_signal_attack_3": {
+     "attack_windows": 13,
+     "clean_windows": 3,
+     "other_normal_windows": 1,
+     "attack": [
+      "correlated_signal"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.6810259819030762,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.5384615384615384,
+       "detected": true,
+       "delay_s": 6.6808940172195435,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.6810259819030762,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.6810259819030762,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "attack_windows": 13,
+     "clean_windows": 3,
+     "other_normal_windows": 1,
+     "attack": [
+      "correlated_signal_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "fuzzing_attack_3": {
+     "attack_windows": 2,
+     "clean_windows": 3,
+     "other_normal_windows": 1,
+     "attack": [
+      "fuzzing"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.17490196228027344,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.5,
+       "detected": true,
+       "delay_s": 0.6583899259567261,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.17490196228027344,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.5,
+       "detected": true,
+       "delay_s": 0.6583899259567261,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.17490196228027344,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.17490196228027344,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "max_engine_coolant_temp_attack": {
+     "attack_windows": 6,
+     "clean_windows": 18,
+     "other_normal_windows": 2,
+     "attack": [
+      "max_engine_coolant_temp"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.0203399658203125,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.3333333333333333,
+       "detected": true,
+       "delay_s": 4.020850896835327,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.8333333333333334,
+       "detected": true,
+       "delay_s": 1.020190954208374,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.8333333333333334,
+       "detected": true,
+       "delay_s": 1.020190954208374,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "attack_windows": 6,
+     "clean_windows": 18,
+     "other_normal_windows": 2,
+     "attack": [
+      "max_engine_coolant_temp_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.16666666666666666,
+       "detected": true,
+       "delay_s": 0.0203399658203125,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "max_speedometer_attack_3": {
+     "attack_windows": 62,
+     "clean_windows": 8,
+     "other_normal_windows": 17,
+     "attack": [
+      "max_speedometer"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.6290322580645161,
+       "detected": true,
+       "delay_s": 0.481065034866333,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.481065034866333,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.8870967741935484,
+       "detected": true,
+       "delay_s": 7.483335018157959,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 16
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.481065034866333,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 16
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.481065034866333,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      }
+     }
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "attack_windows": 62,
+     "clean_windows": 8,
+     "other_normal_windows": 17,
+     "attack": [
+      "max_speedometer_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "reverse_light_off_attack_3": {
+     "attack_windows": 25,
+     "clean_windows": 15,
+     "other_normal_windows": 18,
+     "attack": [
+      "reverse_light_off"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.8,
+       "detected": true,
+       "delay_s": 0.4758939743041992,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.4758939743041992,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.76,
+       "detected": true,
+       "delay_s": 6.475841999053955,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 17
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.4758939743041992,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 17
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.4758939743041992,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 2
+      }
+     }
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "attack_windows": 25,
+     "clean_windows": 15,
+     "other_normal_windows": 18,
+     "attack": [
+      "reverse_light_off_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      }
+     }
+    },
+    "reverse_light_on_attack_3": {
+     "attack_windows": 24,
+     "clean_windows": 22,
+     "other_normal_windows": 19,
+     "attack": [
+      "reverse_light_on"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.2916666666666667,
+       "detected": true,
+       "delay_s": 1.9292101860046387,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.9291970729827881,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.75,
+       "detected": true,
+       "delay_s": 6.929272174835205,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 18
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.9291970729827881,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 18
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.9291970729827881,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      }
+     }
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "attack_windows": 24,
+     "clean_windows": 22,
+     "other_normal_windows": 19,
+     "attack": [
+      "reverse_light_on_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    }
+   },
+   "summary": {
+    "can.l1_id_allow": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.007633587786259542
+    },
+    "can.l1_dlc": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.0
+    },
+    "can.l1_period": {
+     "fa_clean_rate": 0.043418332184700204,
+     "false_alerts_per_hour_clean": 156.30599586492073,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.2824427480916031
+    },
+    "can.l1_bus_load": {
+     "fa_clean_rate": 0.013783597518952447,
+     "false_alerts_per_hour_clean": 49.620951068228806,
+     "fa_other_normal_rate": 0.02608695652173913,
+     "attack_window_recall": 0.48854961832061067
+    },
+    "can.l1_flood": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.003816793893129771
+    },
+    "can.l2a_skew": {
+     "fa_clean_rate": 0.039283252929014474,
+     "false_alerts_per_hour_clean": 141.4197105444521,
+     "fa_other_normal_rate": 0.4434782608695652,
+     "attack_window_recall": 0.37786259541984735
+    },
+    "combined_l1_l2a": {
+     "fa_clean_rate": 0.06616126809097174,
+     "false_alerts_per_hour_clean": 238.18056512749828,
+     "fa_other_normal_rate": 0.4434782608695652,
+     "attack_window_recall": 0.5
+    },
+    "combined_l1": {
+     "fa_clean_rate": 0.03514817367332874,
+     "false_alerts_per_hour_clean": 126.53342522398346,
+     "fa_other_normal_rate": 0.043478260869565216,
+     "attack_window_recall": 0.5
+    }
+   },
+   "combined_method": "noisy_or",
+   "combined_l1_method": "noisy_or",
+   "n_windows": {
+    "clean": 1451,
+    "attack": 262,
+    "other_normal": 115
+   },
+   "frame": {
+    "can.l1_id_allow": {
+     "recall_by_attack": {
+      "correlated_signal": 0.0,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.9739130434782609,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.0,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.0,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.0,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "fa_clean": 0.0,
+     "fa_all_normal": 0.0
+    },
+    "can.l1_dlc": {
+     "recall_by_attack": {
+      "correlated_signal": 0.0,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.0,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.0,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.0,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.0,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "fa_clean": 0.0,
+     "fa_all_normal": 0.0
+    },
+    "can.l1_period": {
+     "recall_by_attack": {
+      "correlated_signal": 1.0,
+      "correlated_signal_masquerade": 0.11383399209486166,
+      "fuzzing": 0.02608695652173913,
+      "max_engine_coolant_temp": 1.0,
+      "max_engine_coolant_temp_masquerade": 0.3023255813953488,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.04535036018336608,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 0.04353182751540041,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 0.007653061224489796
+     },
+     "fa_clean": 0.00939791311467698,
+     "fa_all_normal": 0.01305602563380857
+    },
+    "can.l1_bus_load": {
+     "recall_by_attack": {
+      "correlated_signal": 0.9936758893280633,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.9217391304347826,
+      "max_engine_coolant_temp": 0.4883720930232558,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.9981990831696136,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.995482546201232,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.9948979591836735,
+      "reverse_light_on_masquerade": 0.00042517006802721087
+     },
+     "fa_clean": 0.0169128743813022,
+     "fa_all_normal": 0.0886452729445652
+    },
+    "can.l1_flood": {
+     "recall_by_attack": {
+      "correlated_signal": 0.0,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.3130434782608696,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.0,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.0,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.00042517006802721087,
+      "reverse_light_on_masquerade": 0.00042517006802721087
+     },
+     "fa_clean": 0.001697644466651664,
+     "fa_all_normal": 0.0015099516825424976
+    },
+    "can.l2a_skew": {
+     "recall_by_attack": {
+      "correlated_signal": 0.6173913043478261,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.0,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.9207596594629993,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.8094455852156057,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.8014455782312925,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "fa_clean": 0.006705393684419305,
+     "fa_all_normal": 0.009077644196400328
+    },
+    "combined": {
+     "recall_by_attack": {
+      "correlated_signal": 1.0,
+      "correlated_signal_masquerade": 0.034782608695652174,
+      "fuzzing": 1.0,
+      "max_engine_coolant_temp": 1.0,
+      "max_engine_coolant_temp_masquerade": 0.3023255813953488,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.002128356254092993,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 0.0012320328542094457,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 0.002551020408163265
+     },
+     "fa_clean": 0.0356019025314959,
+     "fa_all_normal": 0.10432640263352312
+    }
+   },
+   "frame_tally": {
+    "inj": {
+     "can.l1_id_allow": {
+      "correlated_signal": [
+       1265,
+       0
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       112
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       0
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       0
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       0
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       0
+      ]
+     },
+     "can.l1_dlc": {
+      "correlated_signal": [
+       1265,
+       0
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       0
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       0
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       0
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       0
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       0
+      ]
+     },
+     "can.l1_period": {
+      "correlated_signal": [
+       1265,
+       1265
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       144
+      ],
+      "fuzzing": [
+       115,
+       3
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       43
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       13
+      ],
+      "max_speedometer": [
+       6108,
+       6108
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       277
+      ],
+      "reverse_light_off": [
+       2435,
+       2435
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       106
+      ],
+      "reverse_light_on": [
+       2352,
+       2352
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       18
+      ]
+     },
+     "can.l1_bus_load": {
+      "correlated_signal": [
+       1265,
+       1257
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       106
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       21
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       6097
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       2424
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       2340
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       1
+      ]
+     },
+     "can.l1_flood": {
+      "correlated_signal": [
+       1265,
+       0
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       36
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       0
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       0
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       1
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       1
+      ]
+     },
+     "can.l2a_skew": {
+      "correlated_signal": [
+       1265,
+       781
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       0
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       5624
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       1971
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       1885
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       0
+      ]
+     },
+     "combined": {
+      "correlated_signal": [
+       1265,
+       1265
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       44
+      ],
+      "fuzzing": [
+       115,
+       115
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       43
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       13
+      ],
+      "max_speedometer": [
+       6108,
+       6108
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       13
+      ],
+      "reverse_light_off": [
+       2435,
+       2435
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       3
+      ],
+      "reverse_light_on": [
+       2352,
+       2352
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       6
+      ]
+     }
+    },
+    "clean": {
+     "can.l1_id_allow": [
+      3146124,
+      0
+     ],
+     "can.l1_dlc": [
+      3146124,
+      0
+     ],
+     "can.l1_period": [
+      3146124,
+      29567
+     ],
+     "can.l1_bus_load": [
+      3146124,
+      53210
+     ],
+     "can.l1_flood": [
+      3146124,
+      5341
+     ],
+     "can.l2a_skew": [
+      3146124,
+      21096
+     ],
+     "combined": [
+      3146124,
+      112008
+     ]
+    },
+    "normal": {
+     "can.l1_id_allow": [
+      4014698,
+      0
+     ],
+     "can.l1_dlc": [
+      4014698,
+      0
+     ],
+     "can.l1_period": [
+      4014698,
+      52416
+     ],
+     "can.l1_bus_load": [
+      4014698,
+      355884
+     ],
+     "can.l1_flood": [
+      4014698,
+      6062
+     ],
+     "can.l2a_skew": [
+      4014698,
+      36444
+     ],
+     "combined": [
+      4014698,
+      418839
+     ]
+    },
+    "files": {
+     "ambient_dyno_drive_benign_anomaly": {
+      "n_frames": 771519,
+      "n_injected": 0,
+      "first_inj_t": null,
+      "frame_delay": {}
+     },
+     "ambient_dyno_drive_extended_short": {
+      "n_frames": 790442,
+      "n_injected": 0,
+      "first_inj_t": null,
+      "frame_delay": {}
+     },
+     "ambient_dyno_reverse": {
+      "n_frames": 123047,
+      "n_injected": 0,
+      "first_inj_t": null,
+      "frame_delay": {}
+     },
+     "ambient_highway_street_driving_diagnostics": {
+      "n_frames": 1124751,
+      "n_injected": 0,
+      "first_inj_t": null,
+      "frame_delay": {}
+     },
+     "correlated_signal_attack_3": {
+      "n_frames": 41829,
+      "n_injected": 1265,
+      "first_inj_t": 4.318482041358948,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.08010196685791016,
+       "can.l1_flood": null,
+       "can.l2a_skew": 4.839489936828613,
+       "combined": 0.0
+      }
+     },
+     "correlated_signal_attack_3_masquerade": {
+      "n_frames": 40565,
+      "n_injected": 1265,
+      "first_inj_t": 4.318481922149658,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "fuzzing_attack_3": {
+      "n_frames": 13238,
+      "n_injected": 115,
+      "first_inj_t": 4.82444703578949,
+      "frame_delay": {
+       "can.l1_id_allow": 0.0,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.3624759912490845,
+       "can.l1_bus_load": 0.04916799068450928,
+       "can.l1_flood": 0.4557989835739136,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "max_engine_coolant_temp_attack": {
+      "n_frames": 61923,
+      "n_injected": 43,
+      "first_inj_t": 19.9790780544281,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.6976268291473389,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "max_engine_coolant_temp_attack_masquerade": {
+      "n_frames": 61881,
+      "n_injected": 43,
+      "first_inj_t": 19.9790780544281,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "max_speedometer_attack_3": {
+      "n_frames": 213551,
+      "n_injected": 6108,
+      "first_inj_t": 9.516489028930664,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.09995102882385254,
+       "can.l1_flood": null,
+       "can.l2a_skew": 4.840235948562622,
+       "combined": 0.0
+      }
+     },
+     "max_speedometer_attack_3_masquerade": {
+      "n_frames": 207444,
+      "n_injected": 6108,
+      "first_inj_t": 9.516489028930664,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "reverse_light_off_attack_3": {
+      "n_frames": 140855,
+      "n_injected": 2435,
+      "first_inj_t": 16.52408504486084,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.10672783851623535,
+       "can.l1_flood": null,
+       "can.l2a_skew": 4.638967990875244,
+       "combined": 0.0
+      }
+     },
+     "reverse_light_off_attack_3_masquerade": {
+      "n_frames": 138421,
+      "n_injected": 2435,
+      "first_inj_t": 16.52408504486084,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "reverse_light_on_attack_3": {
+      "n_frames": 156052,
+      "n_injected": 2352,
+      "first_inj_t": 23.07027792930603,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.12196803092956543,
+       "can.l1_flood": 10.980584144592285,
+       "can.l2a_skew": 4.670340061187744,
+       "combined": 0.0
+      }
+     },
+     "reverse_light_on_attack_3_masquerade": {
+      "n_frames": 153701,
+      "n_injected": 2352,
+      "first_inj_t": 23.07027792930603,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 1.2102441787719727,
+       "can.l1_flood": 10.980584144592285,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     }
+    }
+   },
+   "thresholds": {
+    "window": {
+     "can.l1_id_allow": 5e-324,
+     "can.l1_dlc": 5e-324,
+     "can.l1_period": 0.9884297520661158,
+     "can.l1_bus_load": 0.9768595041322315,
+     "can.l1_flood": 0.6512396694214877,
+     "can.l2a_skew": 0.9884297520661158
+    },
+    "frame": {
+     "can.l1_id_allow": 5e-324,
+     "can.l1_dlc": 5e-324,
+     "can.l1_period": 0.9899996490863517,
+     "can.l1_bus_load": 0.9865895941029995,
+     "can.l1_flood": 0.010350576496079058,
+     "can.l2a_skew": 0.9899955206904881
+    },
+    "frame_combined": 0.999529936223343
+   }
+  },
+  "Ab0.001": {
+   "harness": {
+    "name": "road_Ab0.001",
+    "budget": 0.001,
+    "layers": {
+     "can.l1_bus_load": {
+      "threshold": 0.9983471074380167,
+      "budget": 0.001,
+      "false_alarm_rate": 0.010337698139214336,
+      "detection": 0.48091603053435117,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.6768351387040262,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.45454545454545453,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l1_dlc": {
+      "threshold": 5e-324,
+      "budget": 0.001,
+      "false_alarm_rate": 0.0,
+      "detection": 0.0,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.0,
+       "median_delay_s": NaN,
+       "mean_delay_s": NaN
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l1_flood": {
+      "threshold": 0.6512396694214877,
+      "budget": 0.001,
+      "false_alarm_rate": 0.0,
+      "detection": 0.003816793893129771,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.5,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.494474723933481,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.09090909090909091,
+       "median_delay_s": 0.48348796367645264,
+       "mean_delay_s": 0.48348796367645264
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l1_id_allow": {
+      "threshold": 5e-324,
+      "budget": 0.001,
+      "false_alarm_rate": 0.0,
+      "detection": 0.007633587786259542,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5038167938931297,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.09090909090909091,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l1_period": {
+      "threshold": 0.9983471074380167,
+      "budget": 0.001,
+      "false_alarm_rate": 0.019297036526533425,
+      "detection": 0.0,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.8246458088919988,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.0,
+       "median_delay_s": NaN,
+       "mean_delay_s": NaN
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "can.l2a_skew": {
+      "threshold": 0.9983471074380167,
+      "budget": 0.001,
+      "false_alarm_rate": 0.039283252929014474,
+      "detection": 0.37786259541984735,
+      "detection_by_attack": {
+       "correlated_signal": 0.5384615384615384,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.8870967741935484,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.76,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.75,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5360004419168671,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.36363636363636365,
+       "median_delay_s": 6.000011563301086,
+       "mean_delay_s": 6.2505402863025665
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     }
+    },
+    "ablation": {
+     "all": {
+      "threshold": 0.9999244790086398,
+      "budget": 0.001,
+      "false_alarm_rate": 0.04066161268090972,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.7134589990582962,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or",
+      "method_selection": {
+       "noisy_or": 0.48232032262710645,
+       "logistic": 0.32982860434970473,
+       "max": 0.48232032262710645
+      }
+     },
+     "only_can.l1_bus_load": {
+      "threshold": 0.9983471074380167,
+      "budget": 0.001,
+      "false_alarm_rate": 0.010337698139214336,
+      "detection": 0.48091603053435117,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.6768351387040262,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.45454545454545453,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l1_dlc": {
+      "threshold": 5e-324,
+      "budget": 0.001,
+      "false_alarm_rate": 0.0,
+      "detection": 0.0,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.0,
+       "median_delay_s": NaN,
+       "mean_delay_s": NaN
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l1_flood": {
+      "threshold": 0.6512396694214877,
+      "budget": 0.001,
+      "false_alarm_rate": 0.0,
+      "detection": 0.003816793893129771,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.5,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.494474723933481,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.09090909090909091,
+       "median_delay_s": 0.48348796367645264,
+       "mean_delay_s": 0.48348796367645264
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l1_id_allow": {
+      "threshold": 5e-324,
+      "budget": 0.001,
+      "false_alarm_rate": 0.0,
+      "detection": 0.007633587786259542,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5038167938931297,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.09090909090909091,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l1_period": {
+      "threshold": 0.9983471074380167,
+      "budget": 0.001,
+      "false_alarm_rate": 0.019297036526533425,
+      "detection": 0.0,
+      "detection_by_attack": {
+       "correlated_signal": 0.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.8246458088919988,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.0,
+       "median_delay_s": NaN,
+       "mean_delay_s": NaN
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "only_can.l2a_skew": {
+      "threshold": 0.9983471074380167,
+      "budget": 0.001,
+      "false_alarm_rate": 0.039283252929014474,
+      "detection": 0.37786259541984735,
+      "detection_by_attack": {
+       "correlated_signal": 0.5384615384615384,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.8870967741935484,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.76,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.75,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.5360004419168671,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.36363636363636365,
+       "median_delay_s": 6.000011563301086,
+       "mean_delay_s": 6.2505402863025665
+      },
+      "n_test": 1713,
+      "n_test_attack": 262
+     },
+     "all_but_can.l1_bus_load": {
+      "threshold": 0.8673054278919963,
+      "budget": 0.001,
+      "false_alarm_rate": 0.01791867677463818,
+      "detection": 0.366412213740458,
+      "detection_by_attack": {
+       "correlated_signal": 0.23076923076923078,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 0.5,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 0.8870967741935484,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 0.76,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 0.75,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.8009059295773907,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.45454545454545453,
+       "median_delay_s": 6.000075101852417,
+       "mean_delay_s": 5.897100019454956
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "logistic"
+     },
+     "all_but_can.l1_dlc": {
+      "threshold": 0.9999244790086398,
+      "budget": 0.001,
+      "false_alarm_rate": 0.04066161268090972,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.7134589990582962,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     },
+     "all_but_can.l1_flood": {
+      "threshold": 0.9998088465483267,
+      "budget": 0.001,
+      "false_alarm_rate": 0.04755341144038594,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.713827263114146,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     },
+     "all_but_can.l1_id_allow": {
+      "threshold": 0.9999244790086398,
+      "budget": 0.001,
+      "false_alarm_rate": 0.04066161268090972,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.7132998563770182,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     },
+     "all_but_can.l1_period": {
+      "threshold": 0.9994473574435203,
+      "budget": 0.001,
+      "false_alarm_rate": 0.03997243280496209,
+      "detection": 0.48091603053435117,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.0,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.6173591784555006,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.45454545454545453,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     },
+     "all_but_can.l2a_skew": {
+      "threshold": 0.9997884712973475,
+      "budget": 0.001,
+      "false_alarm_rate": 0.028256374913852515,
+      "detection": 0.5,
+      "detection_by_attack": {
+       "correlated_signal": 1.0,
+       "correlated_signal_masquerade": 0.0,
+       "fuzzing": 1.0,
+       "max_engine_coolant_temp": 0.8333333333333334,
+       "max_engine_coolant_temp_masquerade": 0.0,
+       "max_speedometer": 1.0,
+       "max_speedometer_masquerade": 0.0,
+       "reverse_light_off": 1.0,
+       "reverse_light_off_masquerade": 0.0,
+       "reverse_light_on": 1.0,
+       "reverse_light_on_masquerade": 0.0
+      },
+      "auc": 0.7528066981970845,
+      "delay": {
+       "n_segments": 11,
+       "detected_fraction": 0.5454545454545454,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.16664183139801025
+      },
+      "n_test": 1713,
+      "n_test_attack": 262,
+      "method": "noisy_or"
+     }
+    },
+    "layer_names": [
+     "can.l1_bus_load",
+     "can.l1_dlc",
+     "can.l1_flood",
+     "can.l1_id_allow",
+     "can.l1_period",
+     "can.l2a_skew"
+    ],
+    "combined": {
+     "threshold": 0.9999244790086398,
+     "budget": 0.001,
+     "false_alarm_rate": 0.04066161268090972,
+     "detection": 0.5,
+     "detection_by_attack": {
+      "correlated_signal": 1.0,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 1.0,
+      "max_engine_coolant_temp": 0.8333333333333334,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "auc": 0.7134589990582962,
+     "delay": {
+      "n_segments": 11,
+      "detected_fraction": 0.5454545454545454,
+      "median_delay_s": 0.0,
+      "mean_delay_s": 0.16664183139801025
+     },
+     "n_test": 1713,
+     "n_test_attack": 262,
+     "method": "noisy_or",
+     "method_selection": {
+      "noisy_or": 0.48232032262710645,
+      "logistic": 0.32982860434970473,
+      "max": 0.48232032262710645
+     }
+    }
+   },
+   "per_capture": {
+    "ambient_dyno_drive_benign_anomaly": {
+     "attack_windows": 0,
+     "clean_windows": 434,
+     "other_normal_windows": 0,
+     "attack": [],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 26,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 4,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 57,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 49,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 27,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "ambient_dyno_drive_extended_short": {
+     "attack_windows": 0,
+     "clean_windows": 360,
+     "other_normal_windows": 0,
+     "attack": [],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 2,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 11,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 10,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 14,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "ambient_dyno_reverse": {
+     "attack_windows": 0,
+     "clean_windows": 52,
+     "other_normal_windows": 0,
+     "attack": [],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "attack_windows": 0,
+     "clean_windows": 470,
+     "other_normal_windows": 0,
+     "attack": [],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": null,
+       "detected": null,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "correlated_signal_attack_3": {
+     "attack_windows": 13,
+     "clean_windows": 3,
+     "other_normal_windows": 1,
+     "attack": [
+      "correlated_signal"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.6810259819030762,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.5384615384615384,
+       "detected": true,
+       "delay_s": 6.6808940172195435,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.6810259819030762,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.6810259819030762,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "attack_windows": 13,
+     "clean_windows": 3,
+     "other_normal_windows": 1,
+     "attack": [
+      "correlated_signal_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "fuzzing_attack_3": {
+     "attack_windows": 2,
+     "clean_windows": 3,
+     "other_normal_windows": 1,
+     "attack": [
+      "fuzzing"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.17490196228027344,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.17490196228027344,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.5,
+       "detected": true,
+       "delay_s": 0.6583899259567261,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.17490196228027344,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.17490196228027344,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "max_engine_coolant_temp_attack": {
+     "attack_windows": 6,
+     "clean_windows": 18,
+     "other_normal_windows": 2,
+     "attack": [
+      "max_engine_coolant_temp"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.8333333333333334,
+       "detected": true,
+       "delay_s": 1.020190954208374,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.8333333333333334,
+       "detected": true,
+       "delay_s": 1.020190954208374,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "attack_windows": 6,
+     "clean_windows": 18,
+     "other_normal_windows": 2,
+     "attack": [
+      "max_engine_coolant_temp_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "max_speedometer_attack_3": {
+     "attack_windows": 62,
+     "clean_windows": 8,
+     "other_normal_windows": 17,
+     "attack": [
+      "max_speedometer"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.481065034866333,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.8870967741935484,
+       "detected": true,
+       "delay_s": 7.483335018157959,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 16
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.481065034866333,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 16
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.481065034866333,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      }
+     }
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "attack_windows": 62,
+     "clean_windows": 8,
+     "other_normal_windows": 17,
+     "attack": [
+      "max_speedometer_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "reverse_light_off_attack_3": {
+     "attack_windows": 25,
+     "clean_windows": 15,
+     "other_normal_windows": 18,
+     "attack": [
+      "reverse_light_off"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.4758939743041992,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.76,
+       "detected": true,
+       "delay_s": 6.475841999053955,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 17
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.4758939743041992,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 17
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.4758939743041992,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      }
+     }
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "attack_windows": 25,
+     "clean_windows": 15,
+     "other_normal_windows": 18,
+     "attack": [
+      "reverse_light_off_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    },
+    "reverse_light_on_attack_3": {
+     "attack_windows": 24,
+     "clean_windows": 22,
+     "other_normal_windows": 19,
+     "attack": [
+      "reverse_light_on"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.9291970729827881,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.75,
+       "detected": true,
+       "delay_s": 6.929272174835205,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 18
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.9291970729827881,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 18
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.9291970729827881,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 1
+      }
+     }
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "attack_windows": 24,
+     "clean_windows": 22,
+     "other_normal_windows": 19,
+     "attack": [
+      "reverse_light_on_masquerade"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_bus_load": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      }
+     }
+    }
+   },
+   "summary": {
+    "can.l1_id_allow": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.007633587786259542
+    },
+    "can.l1_dlc": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.0
+    },
+    "can.l1_period": {
+     "fa_clean_rate": 0.019297036526533425,
+     "false_alerts_per_hour_clean": 69.46933149552034,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.0
+    },
+    "can.l1_bus_load": {
+     "fa_clean_rate": 0.010337698139214336,
+     "false_alerts_per_hour_clean": 37.215713301171604,
+     "fa_other_normal_rate": 0.02608695652173913,
+     "attack_window_recall": 0.48091603053435117
+    },
+    "can.l1_flood": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.003816793893129771
+    },
+    "can.l2a_skew": {
+     "fa_clean_rate": 0.039283252929014474,
+     "false_alerts_per_hour_clean": 141.4197105444521,
+     "fa_other_normal_rate": 0.4434782608695652,
+     "attack_window_recall": 0.37786259541984735
+    },
+    "combined_l1_l2a": {
+     "fa_clean_rate": 0.04066161268090972,
+     "false_alerts_per_hour_clean": 146.381805651275,
+     "fa_other_normal_rate": 0.4434782608695652,
+     "attack_window_recall": 0.5
+    },
+    "combined_l1": {
+     "fa_clean_rate": 0.028256374913852515,
+     "false_alerts_per_hour_clean": 101.72294968986905,
+     "fa_other_normal_rate": 0.02608695652173913,
+     "attack_window_recall": 0.5
+    }
+   },
+   "combined_method": "noisy_or",
+   "combined_l1_method": "noisy_or",
+   "n_windows": {
+    "clean": 1451,
+    "attack": 262,
+    "other_normal": 115
+   },
+   "frame": {
+    "can.l1_id_allow": {
+     "recall_by_attack": {
+      "correlated_signal": 0.0,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.9739130434782609,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.0,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.0,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.0,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "fa_clean": 0.0,
+     "fa_all_normal": 0.0
+    },
+    "can.l1_dlc": {
+     "recall_by_attack": {
+      "correlated_signal": 0.0,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.0,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.0,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.0,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.0,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "fa_clean": 0.0,
+     "fa_all_normal": 0.0
+    },
+    "can.l1_period": {
+     "recall_by_attack": {
+      "correlated_signal": 1.0,
+      "correlated_signal_masquerade": 0.026877470355731226,
+      "fuzzing": 0.017391304347826087,
+      "max_engine_coolant_temp": 1.0,
+      "max_engine_coolant_temp_masquerade": 0.3023255813953488,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.0014734774066797642,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 0.0004106776180698152,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 0.0008503401360544217
+     },
+     "fa_clean": 0.002267234222173061,
+     "fa_all_normal": 0.0032169293929456212
+    },
+    "can.l1_bus_load": {
+     "recall_by_attack": {
+      "correlated_signal": 0.9889328063241106,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.8869565217391304,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.9973804846103471,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.9942505133470226,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.9936224489795918,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "fa_clean": 0.004325957908842754,
+     "fa_all_normal": 0.07740806406858
+    },
+    "can.l1_flood": {
+     "recall_by_attack": {
+      "correlated_signal": 0.0,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.3130434782608696,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.0,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.0,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.00042517006802721087,
+      "reverse_light_on_masquerade": 0.00042517006802721087
+     },
+     "fa_clean": 0.001697644466651664,
+     "fa_all_normal": 0.0015099516825424976
+    },
+    "can.l2a_skew": {
+     "recall_by_attack": {
+      "correlated_signal": 0.4909090909090909,
+      "correlated_signal_masquerade": 0.0,
+      "fuzzing": 0.0,
+      "max_engine_coolant_temp": 0.0,
+      "max_engine_coolant_temp_masquerade": 0.0,
+      "max_speedometer": 0.8945645055664702,
+      "max_speedometer_masquerade": 0.0,
+      "reverse_light_off": 0.7437371663244353,
+      "reverse_light_off_masquerade": 0.0,
+      "reverse_light_on": 0.7334183673469388,
+      "reverse_light_on_masquerade": 0.0
+     },
+     "fa_clean": 0.004429577473742293,
+     "fa_all_normal": 0.007134783238988337
+    },
+    "combined": {
+     "recall_by_attack": {
+      "correlated_signal": 0.9992094861660079,
+      "correlated_signal_masquerade": 0.0023715415019762848,
+      "fuzzing": 1.0,
+      "max_engine_coolant_temp": 1.0,
+      "max_engine_coolant_temp_masquerade": 0.3023255813953488,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.00016371971185330714,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 0.0004106776180698152,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 0.0008503401360544217
+     },
+     "fa_clean": 0.011948035106054307,
+     "fa_all_normal": 0.08459714778048062
+    }
+   },
+   "frame_tally": {
+    "inj": {
+     "can.l1_id_allow": {
+      "correlated_signal": [
+       1265,
+       0
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       112
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       0
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       0
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       0
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       0
+      ]
+     },
+     "can.l1_dlc": {
+      "correlated_signal": [
+       1265,
+       0
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       0
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       0
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       0
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       0
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       0
+      ]
+     },
+     "can.l1_period": {
+      "correlated_signal": [
+       1265,
+       1265
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       34
+      ],
+      "fuzzing": [
+       115,
+       2
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       43
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       13
+      ],
+      "max_speedometer": [
+       6108,
+       6108
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       9
+      ],
+      "reverse_light_off": [
+       2435,
+       2435
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       1
+      ],
+      "reverse_light_on": [
+       2352,
+       2352
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       2
+      ]
+     },
+     "can.l1_bus_load": {
+      "correlated_signal": [
+       1265,
+       1251
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       102
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       6092
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       2421
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       2337
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       0
+      ]
+     },
+     "can.l1_flood": {
+      "correlated_signal": [
+       1265,
+       0
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       36
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       0
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       0
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       1
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       1
+      ]
+     },
+     "can.l2a_skew": {
+      "correlated_signal": [
+       1265,
+       621
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       0
+      ],
+      "fuzzing": [
+       115,
+       0
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       0
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       0
+      ],
+      "max_speedometer": [
+       6108,
+       5464
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       0
+      ],
+      "reverse_light_off": [
+       2435,
+       1811
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       0
+      ],
+      "reverse_light_on": [
+       2352,
+       1725
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       0
+      ]
+     },
+     "combined": {
+      "correlated_signal": [
+       1265,
+       1264
+      ],
+      "correlated_signal_masquerade": [
+       1265,
+       3
+      ],
+      "fuzzing": [
+       115,
+       115
+      ],
+      "max_engine_coolant_temp": [
+       43,
+       43
+      ],
+      "max_engine_coolant_temp_masquerade": [
+       43,
+       13
+      ],
+      "max_speedometer": [
+       6108,
+       6108
+      ],
+      "max_speedometer_masquerade": [
+       6108,
+       1
+      ],
+      "reverse_light_off": [
+       2435,
+       2435
+      ],
+      "reverse_light_off_masquerade": [
+       2435,
+       1
+      ],
+      "reverse_light_on": [
+       2352,
+       2352
+      ],
+      "reverse_light_on_masquerade": [
+       2352,
+       2
+      ]
+     }
+    },
+    "clean": {
+     "can.l1_id_allow": [
+      3146124,
+      0
+     ],
+     "can.l1_dlc": [
+      3146124,
+      0
+     ],
+     "can.l1_period": [
+      3146124,
+      7133
+     ],
+     "can.l1_bus_load": [
+      3146124,
+      13610
+     ],
+     "can.l1_flood": [
+      3146124,
+      5341
+     ],
+     "can.l2a_skew": [
+      3146124,
+      13936
+     ],
+     "combined": [
+      3146124,
+      37590
+     ]
+    },
+    "normal": {
+     "can.l1_id_allow": [
+      4014698,
+      0
+     ],
+     "can.l1_dlc": [
+      4014698,
+      0
+     ],
+     "can.l1_period": [
+      4014698,
+      12915
+     ],
+     "can.l1_bus_load": [
+      4014698,
+      310770
+     ],
+     "can.l1_flood": [
+      4014698,
+      6062
+     ],
+     "can.l2a_skew": [
+      4014698,
+      28644
+     ],
+     "combined": [
+      4014698,
+      339632
+     ]
+    },
+    "files": {
+     "ambient_dyno_drive_benign_anomaly": {
+      "n_frames": 771519,
+      "n_injected": 0,
+      "first_inj_t": null,
+      "frame_delay": {}
+     },
+     "ambient_dyno_drive_extended_short": {
+      "n_frames": 790442,
+      "n_injected": 0,
+      "first_inj_t": null,
+      "frame_delay": {}
+     },
+     "ambient_dyno_reverse": {
+      "n_frames": 123047,
+      "n_injected": 0,
+      "first_inj_t": null,
+      "frame_delay": {}
+     },
+     "ambient_highway_street_driving_diagnostics": {
+      "n_frames": 1124751,
+      "n_injected": 0,
+      "first_inj_t": null,
+      "frame_delay": {}
+     },
+     "correlated_signal_attack_3": {
+      "n_frames": 41829,
+      "n_injected": 1265,
+      "first_inj_t": 4.318482041358948,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.14015090465545654,
+       "can.l1_flood": null,
+       "can.l2a_skew": 6.440405011177063,
+       "combined": 0.0
+      }
+     },
+     "correlated_signal_attack_3_masquerade": {
+      "n_frames": 40565,
+      "n_injected": 1265,
+      "first_inj_t": 4.318481922149658,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "fuzzing_attack_3": {
+      "n_frames": 13238,
+      "n_injected": 115,
+      "first_inj_t": 4.82444703578949,
+      "frame_delay": {
+       "can.l1_id_allow": 0.0,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.3624759912490845,
+       "can.l1_bus_load": 0.07179296016693115,
+       "can.l1_flood": 0.4557989835739136,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "max_engine_coolant_temp_attack": {
+      "n_frames": 61923,
+      "n_injected": 43,
+      "first_inj_t": 19.9790780544281,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "max_engine_coolant_temp_attack_masquerade": {
+      "n_frames": 61881,
+      "n_injected": 43,
+      "first_inj_t": 19.9790780544281,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "max_speedometer_attack_3": {
+      "n_frames": 213551,
+      "n_injected": 6108,
+      "first_inj_t": 9.516489028930664,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.16022586822509766,
+       "can.l1_flood": null,
+       "can.l2a_skew": 6.439228057861328,
+       "combined": 0.0
+      }
+     },
+     "max_speedometer_attack_3_masquerade": {
+      "n_frames": 207444,
+      "n_injected": 6108,
+      "first_inj_t": 9.516489028930664,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "reverse_light_off_attack_3": {
+      "n_frames": 140855,
+      "n_injected": 2435,
+      "first_inj_t": 16.52408504486084,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.137923002243042,
+       "can.l1_flood": null,
+       "can.l2a_skew": 6.237936019897461,
+       "combined": 0.0
+      }
+     },
+     "reverse_light_off_attack_3_masquerade": {
+      "n_frames": 138421,
+      "n_injected": 2435,
+      "first_inj_t": 16.52408504486084,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "reverse_light_on_attack_3": {
+      "n_frames": 156052,
+      "n_injected": 2352,
+      "first_inj_t": 23.07027792930603,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.13993597030639648,
+       "can.l1_flood": 10.980584144592285,
+       "can.l2a_skew": 6.270298957824707,
+       "combined": 0.0
+      }
+     },
+     "reverse_light_on_attack_3_masquerade": {
+      "n_frames": 153701,
+      "n_injected": 2352,
+      "first_inj_t": 23.07027792930603,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": null,
+       "can.l1_flood": 10.980584144592285,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     }
+    }
+   },
+   "thresholds": {
+    "window": {
+     "can.l1_id_allow": 5e-324,
+     "can.l1_dlc": 5e-324,
+     "can.l1_period": 0.9983471074380167,
+     "can.l1_bus_load": 0.9983471074380167,
+     "can.l1_flood": 0.6512396694214877,
+     "can.l2a_skew": 0.9983471074380167
+    },
+    "frame": {
+     "can.l1_id_allow": 5e-324,
+     "can.l1_dlc": 5e-324,
+     "can.l1_period": 0.9989995520690489,
+     "can.l1_bus_load": 0.9989809742876626,
+     "can.l1_flood": 0.010350576496079058,
+     "can.l2a_skew": 0.9989954236731853
+    },
+    "frame_combined": 0.9999721645997636
+   }
+  }
+ },
+ "attack_names": [
+  "normal",
+  "correlated_signal",
+  "correlated_signal_masquerade",
+  "fuzzing",
+  "max_speedometer",
+  "max_speedometer_masquerade",
+  "reverse_light_off",
+  "reverse_light_off_masquerade",
+  "reverse_light_on",
+  "reverse_light_on_masquerade",
+  "max_engine_coolant_temp",
+  "max_engine_coolant_temp_masquerade"
+ ],
+ "seconds": 71.73946356773376
+}

@@ -171,3 +171,80 @@ If 2 or 3 fails the step is reported NOT MET with the reason (no re-tuning on te
   brings FA to 1.2-5.9% (one cell 20%), recall 0.78-1.0, all attack files detected.
 - Lesson: per-rule 1% budgets compound under noisy-or and the test ambient drives shift vs val: expect 3-4% FA.
 - Unit tests tests/can/test_l1.py (causal prefix, calibration on clean); whole suite 154 passed.
+
+## 2026-10-21 S3 start: L2a ECU clock-skew fingerprinting (CIDS). Design + acceptance rule, written BEFORE any skew result
+Data caveat check (label/timestamp structure only, no skew number seen yet; script output in results/WP2/s3_road_masq_timestamps.json):
+- ROAD masquerade logs = the attack log with the legitimate frames of the injected ID REMOVED post hoc (readme: "identical
+  log with the conflicting non-injected messages removed"). The injected frames keep their ORIGINAL logger timestamps (100%
+  identical to the same frames in the non-masquerade capture). So timestamps are NOT copied from the legit ECU: they are the
+  receive times of the real attacker transmitter (laptop / injector via OBD) with its own clock and jitter. Skew can see them
+  in principle; but the "ECU silenced" part is an edit (a real attacker would have to suppress the ECU, e.g. bus-off).
+  Injected gap statistics vs pre-attack: median gaps equal to 0.1-1% (10.00-10.09 ms vs 9.8-10.4 ms), jitter std sometimes
+  larger (correlated_signal 3.7 vs 2.0 ms), coolant 113.9 ms vs 100.0 ms (only 43 frames).
+- Car-Hacking injected frames are software timed (known); D11 timestamps have a synthetic epoch and inversions: only dt_clipped.
+Method (Cho & Shin 2016), per periodic ID i (periodic = L1 definition: IQR(gap) <= 0.5 median, n >= 30; scored only if >= 20
+calibration batches after warm-up), per capture, streaming and causal, gaps g = dt_clipped to the previous frame of the same ID,
+clipped to <= 3 T_i. Batch k = N consecutive gaps. Offset O_k = (1/N) sum_j c_j, c_j = sum_{i<=j}(g_i - mu_T) (mu_T = T_i, the
+calibrated mean period ("drift" form) or the batch mean gap ("paper" form, accumulate |O|)). A_k = sum_m O_m (accumulated offset),
+x_k = elapsed time. Skew S_k by scalar RLS without intercept, forgetting lambda = 0.99, A_k = S x_k:
+K = P x/(lambda + x^2 P); S <- S + K (A_k - S x_k); P <- (P - K x P)/lambda. Identification error e_k = A_k - S_{k-1} x_k ("acc",
+paper) or the increment form (A_k - A_{k-1}) - S_{k-1}(x_k - x_{k-1}) ("inc"). z_k = (e_k - median_i)/(1.4826 MAD_i) with median / MAD of
+the clean calibration traffic; two-sided CUSUM on clip(z,+-10): C+ = max(0, C+ + z - kappa), C- = max(0, C- - z - kappa), kappa = 1,
+score = max(C+, C-); first W = 10 batches of every ID in every capture are not scored (RLS warm-up). Frame score = CUSUM
+state after the last closed batch of its ID (causal); window score = max over the window's frames. Fixed: lambda, kappa, clip, W.
+Selected on VALIDATION (8 variants: form {drift, paper} x N {20, 50} x error {acc, inc}), by mean window recall at the 1% window
+budget over the validation MASQUERADE captures (ROAD), over all attack types (Car-Hacking, D11 training vehicle); ties -> first.
+Calibration: ECDF + tie-safe 1% budget at each unit on clean validation frames / windows (extra points: 0.1%; 1 FA/h from the ROAD test).
+Statistics (median, MAD, T_i) from clean TRAIN frames (ROAD: lead of train captures; Car-Hacking: batches wholly inside fit-role clean blocks;
+D11 regime A: train files; regime B: first 30 s). The filter runs continuously over each capture (as in deployment);
+Car-Hacking block roles only select which batches/windows are used for stats / calibration / test.
+ACCEPTANCE RULE S3. MET if all hold (ROAD test, window level, thresholds from validation, run once):
+ 1. Layer L2a implemented as a Layer (CanRule subclass), calibrated on attack-free data only, causal, dt_clipped only, tie-safe
+    1% budget, unit tests pass with the whole suite, own files committed, caches <= 3 GB.
+ 2. Masquerade: L2a alone detects (>= 1 alarmed attack window) at least 3 of the 5 ROAD test masquerade captures
+    (correlated_signal_3, max_speedometer_3, reverse_light_off_3, reverse_light_on_3, coolant), with false alarms on clean
+    test windows <= 2% (limit 2x the budget because S2 showed test-ambient shift) for L2a alone. If detection is < 3/5 the plain
+    statement is "skew does not catch ROAD masquerade".
+ 3. Combination L1 + L2a (harness, ablation vs L1 alone): keeps the 5 v2-detected captures (delay <= 2 s) and does not raise
+    clean-window FA above 4.5% (L1 alone was 3.4%); the gain on masquerade is reported either way.
+ 4. Car-Hacking and D11 (both regimes, 4 sets x 4 subsets): reported (per-attack window recall, FA clean, delay, coverage of
+    periodic IDs); no numeric gate.
+If 2 or 3 fails the step is reported NOT MET with the reason; nothing re-tuned on test.
+
+## 2026-10-21 S3 RUN 1 (design exactly as pre-registered above) - frozen as the verdict run
+Run 1 executed end to end on ROAD (this also scored the test set; per RULES 5.2 this is the single test use of the
+pre-registered design). Files: results/WP2/s3_run1_frozen/ (s3_road.json, harness/, windows, log).
+Result run 1: validation selected drift_N20_acc but ALL 8 variants had validation masquerade recall 0.0. Test: L2a alone detects
+0 of 5 masquerade captures; clean test windows FA 3.9% (limit 2%): acceptance item 2 NOT MET in run 1; L1+L2a FA 6.6% (L1 3.5%).
+It does detect the non-masquerade attacks late (delay 6.5-7.5 s). Validation-only diagnosis (no test labels): (i) the accumulated
+error e_acc is a random walk whose scale grows with capture length, so the pooled sigma is set by the long ambient captures and
+the 60 s attack captures never exceed kappa (CUSUM identically 0 on 3 val masquerade captures); (ii) in the long clean val capture a few IDs
+(0xA7 ...) drift and reach CUSUM 400-700, so the window max over ~100 IDs is dominated by them and the 1% window threshold is above any
+masquerade score. The raw signal exists: in val masquerade captures the identification error of the injected ID is shifted by 5-20 x its
+pre-attack std (e.g. max_speedometer_2 masquerade: +0.025 s vs pre-attack sd 0.0014 s; reverse_light_on_2: -0.020 s).
+## 2026-10-21 S3 RUN 2 (revised design, validation-driven; NOT independent: test labels of ROAD were seen in run 1)
+Changes decided from validation / training diagnostics only: (1) per-ID scale c_i = 0.99-quantile of the CUSUM state of ID i over the
+clean calibration batches (floor 2), score = CUSUM / c_i, so no single unstable ID sets the window maximum; (2) otherwise identical
+(8 variants, same selection rule, same budget). Run 1 remains the verdict for acceptance items 2 and 3; run 2 is reported as
+"revised design". Car-Hacking and D11 are run once, with the revised design.
+
+## 2026-10-21 S3 RUN 2a / 2b log (all after the test set was seen in run 1)
+- Run 2a (per-ID CUSUM scale c_i only) was started by me before looking at its validation numbers; it wrote s3_road.json with
+  test results, which I did NOT inspect (overwritten by run 2b). Its validation selection again gave recall 0.0 for all 8 variants.
+- Validation / train diagnosis (scripts in the scratchpad, no test labels): the clean TRAIN CUSUM state is huge (per-ID 0.99-quantile
+  median 320-780): the pooled-normalised identification error is autocorrelated and drifts (long ambient captures, logger bursts), so a CUSUM
+  with a fixed pooled sigma integrates the drift. Per-ID scaling therefore makes all scores tiny.
+- Run 2b design (final revised design, decided on validation/train only): add a LOCAL baseline option (norm = 1): the mean and variance of
+  the identification error of each ID come from the same capture (Welford over 10 batches after warm-up, then EWMA beta = 0.98 with the error
+  winsorised at 4 sd; sd floor 0.5 x the burn-in sd), so slow drifts are absorbed and a CUSUM fires on abrupt changes (the masquerade onset). 16 variants
+  now (8 pooled + 8 local), same selection rule (validation masquerade recall at 1% window budget), per-ID scale kept.
+- Diagnostic tools/WP2_S3_masq_shift.py (results/WP2/s3_road_masq_shift.json): the masquerade streams differ from the legitimate
+  stream in mean period by -2131 .. +210 ppm (median |.| ~ 60 ppm, coolant -2131) while the per-gap jitter of the logged timestamps is
+  12-28% of the period (115,000-277,000 ppm) and 10 s segment means of clean ambient traffic spread by 1.6-2.8%: the clock-rate signal is far below what the
+  receive timestamps of ROAD can resolve (resolution of a skew estimate over a 20 s attack ~ 100 ppm at best, with iid jitter).
+  Expectation written before run 2b: skew will not catch ROAD masquerade at a 1% budget, except possibly coolant (2131 ppm, 43 frames).
+
+## 2026-10-21 S3 results (report reports/WP2_S3.md, tables results/WP2/s3_tables.md)
+Verdict NOT MET. Run 1 (frozen): 0/5 ROAD test masquerade, FA 3.9%. Run 2b (revised): AUC 0.458, FA 35%, 1/5 partly. Car-Hacking: L2a useless (recall <= 3%).
+D11: weaker than L1, FA higher in regime B. ID-known upper bound AUC about 1.0 on 8/12 masquerade captures (onset transient): a change signal exists, not deployable.
+Full suite 190 passed. No new cache.

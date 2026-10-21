@@ -1,8 +1,14 @@
-# WP2 CAN brief (state at 2026-10-21, after S2)
+# WP2 CAN brief (state at 2026-10-21, after S3)
 
 ## State
 - S0 data inventory, S1 adapters/splits/frames: APPROVED. S2 (L1 rules): done, verdict NOT MET (ROAD false alerts 3.4% > 1%).
 - Next (see notes/WP2_can.md): L2 timing/statistical layer, payload/signal layer, combination + bench.
+
+## S3 (L2a clock skew) outcome
+- NOT MET: skew does not catch ROAD masquerade (run 1: 0/5, FA 3.9%; revised run 2b: FA 35%). Rate difference attacker vs ECU about 60 ppm median, logger jitter 12-28% of period.
+- ROAD masquerade logs = attack log minus legit frames of the injected ID; injected timestamps are real attacker times (identical to the non-masquerade log).
+- Car-Hacking: no gain; D11: weaker than L1. Keep L2a out of the default stack. Code: can/l2a_skew.py, can/l2a_exp.py, tools/WP2_S3_*.py, report reports/WP2_S3.md.
+- Next: S4 signal physics on decoded signals; masquerade must come from payload/signal layers.
 
 ## Binding decisions
 - Domain "can", layers L1.. ; Layer API from common/layer.py; evaluation only through common/evaluate.py.

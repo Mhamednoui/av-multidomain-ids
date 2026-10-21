@@ -8,7 +8,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
 | WP1 GPS | S8 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-21 | S7 APPROVED (negative: learned layers add nothing). S8 -> M1-GPS |
-| WP2 CAN | S3 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | S2 APPROVED with miss (ROAD FA 3.4% vs 1%) |
+| WP2 CAN | S3 | REVIEW | worker sonnet (medium, T2) | 2026-10-21 | S3 NOT MET: clock skew does not catch ROAD masquerade (negative result, reports/WP2_S3.md) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | IN PROGRESS | worker haiku (medium, T1) | 2026-10-21 | downloads D10 + D23 (size-checked) |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |

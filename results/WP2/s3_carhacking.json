@@ -1,0 +1,1595 @@
+{
+ "experiment": "carhacking",
+ "l1_variant_selection": {
+  "chosen": 1,
+  "variants": {
+   "0": {
+    "variant": [
+     0.99,
+     0.05
+    ],
+    "mean_recall": 0.7439354450555424,
+    "recall": {
+     "DoS": 0.9681274900398407,
+     "Fuzzy": 0.9612676056338029,
+     "RPM": 0.5123152709359606,
+     "Gear": 0.5340314136125655
+    },
+    "val_fa_rate_clean_windows": 0.006172839506172839
+   },
+   "1": {
+    "variant": [
+     0.999,
+     0.05
+    ],
+    "mean_recall": 0.8868322362236939,
+    "recall": {
+     "DoS": 0.9641434262948207,
+     "Fuzzy": 0.9788732394366197,
+     "RPM": 0.7980295566502463,
+     "Gear": 0.806282722513089
+    },
+    "val_fa_rate_clean_windows": 0.006172839506172839
+   },
+   "2": {
+    "variant": [
+     0.99,
+     0.25
+    ],
+    "mean_recall": 0.7581626353642643,
+    "recall": {
+     "DoS": 0.9721115537848606,
+     "Fuzzy": 0.9683098591549296,
+     "RPM": 0.5320197044334976,
+     "Gear": 0.5602094240837696
+    },
+    "val_fa_rate_clean_windows": 0.006172839506172839
+   },
+   "3": {
+    "variant": [
+     0.999,
+     0.25
+    ],
+    "mean_recall": 0.781535867049503,
+    "recall": {
+     "DoS": 0.9681274900398407,
+     "Fuzzy": 0.9647887323943662,
+     "RPM": 0.5911330049261084,
+     "Gear": 0.6020942408376964
+    },
+    "val_fa_rate_clean_windows": 0.006172839506172839
+   }
+  }
+ },
+ "skew_variant_selection": {
+  "chosen": 3,
+  "selected_on": [
+   "DoS",
+   "Fuzzy",
+   "RPM",
+   "Gear"
+  ],
+  "variants": {
+   "0": {
+    "variant": "drift_N20_acc",
+    "mean_recall": 0.0,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.0,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "1": {
+    "variant": "drift_N50_acc",
+    "mean_recall": 0.0,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.006172839506172839,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "2": {
+    "variant": "paper_N20_acc",
+    "mean_recall": 0.0,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.0,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "3": {
+    "variant": "paper_N50_acc",
+    "mean_recall": 0.09330985915492958,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.3732394366197183,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.0,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.3732394366197183,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "4": {
+    "variant": "drift_N20_inc",
+    "mean_recall": 0.013204225352112676,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0528169014084507,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.0,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0528169014084507,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "5": {
+    "variant": "drift_N50_inc",
+    "mean_recall": 0.0,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "6": {
+    "variant": "paper_N20_inc",
+    "mean_recall": 0.03697183098591549,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.14788732394366197,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.0030864197530864196,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.14788732394366197,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "7": {
+    "variant": "paper_N50_inc",
+    "mean_recall": 0.0,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "8": {
+    "variant": "drift_N20_acc_loc",
+    "mean_recall": 0.0,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "9": {
+    "variant": "drift_N50_acc_loc",
+    "mean_recall": 0.010471204188481676,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.041884816753926704
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.041884816753926704
+    }
+   },
+   "10": {
+    "variant": "paper_N20_acc_loc",
+    "mean_recall": 0.0,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "11": {
+    "variant": "paper_N50_acc_loc",
+    "mean_recall": 0.04231566052752696,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.045774647887323945,
+     "RPM": 0.034482758620689655,
+     "Gear": 0.08900523560209424
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.045774647887323945,
+     "RPM": 0.034482758620689655,
+     "Gear": 0.08900523560209424
+    }
+   },
+   "12": {
+    "variant": "drift_N20_inc_loc",
+    "mean_recall": 0.015667279539304795,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0528169014084507,
+     "RPM": 0.009852216748768473,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0528169014084507,
+     "RPM": 0.009852216748768473,
+     "Gear": 0.0
+    }
+   },
+   "13": {
+    "variant": "drift_N50_inc_loc",
+    "mean_recall": 0.0024630541871921183,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.009852216748768473,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.009852216748768473,
+     "Gear": 0.0
+    }
+   },
+   "14": {
+    "variant": "paper_N20_inc_loc",
+    "mean_recall": 0.014084507042253521,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.056338028169014086,
+     "RPM": 0.0,
+     "Gear": 0.0
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.056338028169014086,
+     "RPM": 0.0,
+     "Gear": 0.0
+    }
+   },
+   "15": {
+    "variant": "paper_N50_inc_loc",
+    "mean_recall": 0.0344704987462235,
+    "recall": {
+     "DoS": 0.0,
+     "Fuzzy": 0.014084507042253521,
+     "RPM": 0.029556650246305417,
+     "Gear": 0.09424083769633508
+    },
+    "val_fa_clean_windows": 0.009259259259259259,
+    "recall_all_types": {
+     "DoS": 0.0,
+     "Fuzzy": 0.014084507042253521,
+     "RPM": 0.029556650246305417,
+     "Gear": 0.09424083769633508
+    }
+   }
+  }
+ },
+ "skew_profile": {
+  "summary": {
+   "variant": "paper_N50_acc",
+   "periodic_ids": 26,
+   "scored_ids": 24
+  },
+  "n_batches": [
+   2709,
+   249,
+   249,
+   2712,
+   2713,
+   2712,
+   2714,
+   2715,
+   1345,
+   2712,
+   2714,
+   2710,
+   2714,
+   2710,
+   2708,
+   2709,
+   1342,
+   2708,
+   2709,
+   1345,
+   1345,
+   2708,
+   8,
+   7,
+   522,
+   247
+  ],
+  "scored": [
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   true,
+   false,
+   false,
+   true,
+   true
+  ],
+  "ids": [
+   2,
+   160,
+   161,
+   304,
+   305,
+   320,
+   339,
+   399,
+   497,
+   608,
+   672,
+   704,
+   790,
+   809,
+   848,
+   880,
+   1072,
+   1087,
+   1088,
+   1201,
+   1264,
+   1349,
+   1440,
+   1442,
+   1520,
+   1680
+  ],
+  "T": [
+   0.010008409486317376,
+   0.10001903763210306,
+   0.100004441587125,
+   0.010008728689390003,
+   0.010010123974662376,
+   0.01001185982584813,
+   0.0100073657077727,
+   0.00999842915196303,
+   0.020014368310692275,
+   0.009998792735437344,
+   0.0099990853753915,
+   0.010006174594927475,
+   0.009997983775870993,
+   0.010001353400563953,
+   0.010010390231362005,
+   0.010014036647147857,
+   0.02001142195840041,
+   0.010012965508461884,
+   0.01001512788792524,
+   0.020010857644612995,
+   0.020025212339554205,
+   0.0100048401030883,
+   1.004974613091813,
+   1.0049735409073817,
+   0.05005520320849786,
+   0.10014500780554937
+  ]
+ },
+ "regimes": {
+  "A": {
+   "harness": {
+    "name": "carhacking_A",
+    "budget": 0.01,
+    "layers": {
+     "can.l1_bus_load": {
+      "threshold": 0.9783950617283952,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.4426229508196721,
+      "detection_by_attack": {
+       "DoS": 0.19784172661870503,
+       "Fuzzy": 0.22336769759450173,
+       "Gear": 0.6985645933014354,
+       "RPM": 0.8383838383838383
+      },
+      "auc": 0.4466803278688524,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.2500007748603821
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "can.l1_dlc": {
+      "threshold": 5e-324,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.020491803278688523,
+      "detection_by_attack": {
+       "DoS": 0.0,
+       "Fuzzy": 0.06872852233676977,
+       "Gear": 0.0,
+       "RPM": 0.0
+      },
+      "auc": 0.5102459016393442,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 0.25,
+       "median_delay_s": 16.00319504737854,
+       "mean_delay_s": 16.00319504737854
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "can.l1_flood": {
+      "threshold": 0.00925925925925926,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.28688524590163933,
+      "detection_by_attack": {
+       "DoS": 0.9964028776978417,
+       "Fuzzy": 0.010309278350515464,
+       "Gear": 0.0,
+       "RPM": 0.0
+      },
+      "auc": 0.38315232240437164,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 0.5,
+       "median_delay_s": 184.5005155801773,
+       "mean_delay_s": 184.5005155801773
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "can.l1_id_allow": {
+      "threshold": 5e-324,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.5829918032786885,
+      "detection_by_attack": {
+       "DoS": 1.0,
+       "Fuzzy": 1.0,
+       "Gear": 0.0,
+       "RPM": 0.0
+      },
+      "auc": 0.7914959016393442,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 0.5,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "can.l1_period": {
+      "threshold": 0.9876543209876544,
+      "budget": 0.01,
+      "false_alarm_rate": 0.006666666666666667,
+      "detection": 0.9221311475409836,
+      "detection_by_attack": {
+       "DoS": 0.9712230215827338,
+       "Fuzzy": 0.9862542955326461,
+       "Gear": 0.8755980861244019,
+       "RPM": 0.8080808080808081
+      },
+      "auc": 0.9958367486338799,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.49992579221725464
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "can.l2a_skew": {
+      "threshold": 0.9814814814814816,
+      "budget": 0.01,
+      "false_alarm_rate": 0.08333333333333333,
+      "detection": 0.00819672131147541,
+      "detection_by_attack": {
+       "DoS": 0.0,
+       "Fuzzy": 0.027491408934707903,
+       "Gear": 0.0,
+       "RPM": 0.0
+      },
+      "auc": 0.15579234972677597,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 0.25,
+       "median_delay_s": 2404.003266096115,
+       "mean_delay_s": 2404.003266096115
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     }
+    },
+    "ablation": {
+     "all": {
+      "threshold": 0.08081479328130337,
+      "budget": 0.01,
+      "false_alarm_rate": 0.013333333333333334,
+      "detection": 0.9969262295081968,
+      "detection_by_attack": {
+       "DoS": 0.9964028776978417,
+       "Fuzzy": 1.0,
+       "Gear": 0.9952153110047847,
+       "RPM": 0.9949494949494949
+      },
+      "auc": 0.9999112021857923,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1276,
+      "n_test_attack": 976,
+      "method": "logistic",
+      "method_selection": {
+       "noisy_or": 0.9989733059548255,
+       "logistic": 1.0,
+       "max": 1.0
+      }
+     },
+     "only_can.l1_bus_load": {
+      "threshold": 0.9783950617283952,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.4426229508196721,
+      "detection_by_attack": {
+       "DoS": 0.19784172661870503,
+       "Fuzzy": 0.22336769759450173,
+       "Gear": 0.6985645933014354,
+       "RPM": 0.8383838383838383
+      },
+      "auc": 0.4466803278688524,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.2500007748603821
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "only_can.l1_dlc": {
+      "threshold": 5e-324,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.020491803278688523,
+      "detection_by_attack": {
+       "DoS": 0.0,
+       "Fuzzy": 0.06872852233676977,
+       "Gear": 0.0,
+       "RPM": 0.0
+      },
+      "auc": 0.5102459016393442,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 0.25,
+       "median_delay_s": 16.00319504737854,
+       "mean_delay_s": 16.00319504737854
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "only_can.l1_flood": {
+      "threshold": 0.00925925925925926,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.28688524590163933,
+      "detection_by_attack": {
+       "DoS": 0.9964028776978417,
+       "Fuzzy": 0.010309278350515464,
+       "Gear": 0.0,
+       "RPM": 0.0
+      },
+      "auc": 0.38315232240437164,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 0.5,
+       "median_delay_s": 184.5005155801773,
+       "mean_delay_s": 184.5005155801773
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "only_can.l1_id_allow": {
+      "threshold": 5e-324,
+      "budget": 0.01,
+      "false_alarm_rate": 0.0,
+      "detection": 0.5829918032786885,
+      "detection_by_attack": {
+       "DoS": 1.0,
+       "Fuzzy": 1.0,
+       "Gear": 0.0,
+       "RPM": 0.0
+      },
+      "auc": 0.7914959016393442,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 0.5,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "only_can.l1_period": {
+      "threshold": 0.9876543209876544,
+      "budget": 0.01,
+      "false_alarm_rate": 0.006666666666666667,
+      "detection": 0.9221311475409836,
+      "detection_by_attack": {
+       "DoS": 0.9712230215827338,
+       "Fuzzy": 0.9862542955326461,
+       "Gear": 0.8755980861244019,
+       "RPM": 0.8080808080808081
+      },
+      "auc": 0.9958367486338799,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.49992579221725464
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "only_can.l2a_skew": {
+      "threshold": 0.9814814814814816,
+      "budget": 0.01,
+      "false_alarm_rate": 0.08333333333333333,
+      "detection": 0.00819672131147541,
+      "detection_by_attack": {
+       "DoS": 0.0,
+       "Fuzzy": 0.027491408934707903,
+       "Gear": 0.0,
+       "RPM": 0.0
+      },
+      "auc": 0.15579234972677597,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 0.25,
+       "median_delay_s": 2404.003266096115,
+       "mean_delay_s": 2404.003266096115
+      },
+      "n_test": 1276,
+      "n_test_attack": 976
+     },
+     "all_but_can.l1_bus_load": {
+      "threshold": 0.9876543209876544,
+      "budget": 0.01,
+      "false_alarm_rate": 0.09,
+      "detection": 0.9344262295081968,
+      "detection_by_attack": {
+       "DoS": 1.0,
+       "Fuzzy": 1.0,
+       "Gear": 0.8755980861244019,
+       "RPM": 0.8080808080808081
+      },
+      "auc": 0.9904200819672131,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.49992579221725464
+      },
+      "n_test": 1276,
+      "n_test_attack": 976,
+      "method": "max"
+     },
+     "all_but_can.l1_dlc": {
+      "threshold": 0.07907840441218202,
+      "budget": 0.01,
+      "false_alarm_rate": 0.013333333333333334,
+      "detection": 0.9969262295081968,
+      "detection_by_attack": {
+       "DoS": 0.9964028776978417,
+       "Fuzzy": 1.0,
+       "Gear": 0.9952153110047847,
+       "RPM": 0.9949494949494949
+      },
+      "auc": 0.9999077868852457,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1276,
+      "n_test_attack": 976,
+      "method": "logistic"
+     },
+     "all_but_can.l1_flood": {
+      "threshold": 0.0807894856804925,
+      "budget": 0.01,
+      "false_alarm_rate": 0.013333333333333334,
+      "detection": 0.9969262295081968,
+      "detection_by_attack": {
+       "DoS": 0.9964028776978417,
+       "Fuzzy": 1.0,
+       "Gear": 0.9952153110047847,
+       "RPM": 0.9949494949494949
+      },
+      "auc": 0.9999112021857922,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1276,
+      "n_test_attack": 976,
+      "method": "logistic"
+     },
+     "all_but_can.l1_id_allow": {
+      "threshold": 0.9876543209876544,
+      "budget": 0.01,
+      "false_alarm_rate": 0.09,
+      "detection": 0.9979508196721312,
+      "detection_by_attack": {
+       "DoS": 1.0,
+       "Fuzzy": 1.0,
+       "Gear": 0.9952153110047847,
+       "RPM": 0.9949494949494949
+      },
+      "auc": 0.9997079918032787,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1276,
+      "n_test_attack": 976,
+      "method": "max"
+     },
+     "all_but_can.l1_period": {
+      "threshold": 0.9934596161662349,
+      "budget": 0.01,
+      "false_alarm_rate": 0.08333333333333333,
+      "detection": 0.9026639344262295,
+      "detection_by_attack": {
+       "DoS": 1.0,
+       "Fuzzy": 1.0,
+       "Gear": 0.6985645933014354,
+       "RPM": 0.8383838383838383
+      },
+      "auc": 0.9110314207650274,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1276,
+      "n_test_attack": 976,
+      "method": "noisy_or"
+     },
+     "all_but_can.l2a_skew": {
+      "threshold": 0.9970270982573796,
+      "budget": 0.01,
+      "false_alarm_rate": 0.01,
+      "detection": 0.9979508196721312,
+      "detection_by_attack": {
+       "DoS": 1.0,
+       "Fuzzy": 1.0,
+       "Gear": 0.9952153110047847,
+       "RPM": 0.9949494949494949
+      },
+      "auc": 0.999931693989071,
+      "delay": {
+       "n_segments": 4,
+       "detected_fraction": 1.0,
+       "median_delay_s": 0.0,
+       "mean_delay_s": 0.0
+      },
+      "n_test": 1276,
+      "n_test_attack": 976,
+      "method": "noisy_or"
+     }
+    },
+    "layer_names": [
+     "can.l1_bus_load",
+     "can.l1_dlc",
+     "can.l1_flood",
+     "can.l1_id_allow",
+     "can.l1_period",
+     "can.l2a_skew"
+    ],
+    "combined": {
+     "threshold": 0.08081479328130337,
+     "budget": 0.01,
+     "false_alarm_rate": 0.013333333333333334,
+     "detection": 0.9969262295081968,
+     "detection_by_attack": {
+      "DoS": 0.9964028776978417,
+      "Fuzzy": 1.0,
+      "Gear": 0.9952153110047847,
+      "RPM": 0.9949494949494949
+     },
+     "auc": 0.9999112021857923,
+     "delay": {
+      "n_segments": 4,
+      "detected_fraction": 1.0,
+      "median_delay_s": 0.0,
+      "mean_delay_s": 0.0
+     },
+     "n_test": 1276,
+     "n_test_attack": 976,
+     "method": "logistic",
+     "method_selection": {
+      "noisy_or": 0.9989733059548255,
+      "logistic": 1.0,
+      "max": 1.0
+     }
+    }
+   },
+   "per_capture": {
+    "DoS": {
+     "attack_windows": 278,
+     "clean_windows": 81,
+     "other_normal_windows": 96,
+     "attack": [
+      "DoS"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.20424294471740723,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.9712230215827338,
+       "detected": true,
+       "delay_s": 0.20424294471740723,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 24
+      },
+      "can.l1_bus_load": {
+       "recall": 0.19784172661870503,
+       "detected": true,
+       "delay_s": 1.2042460441589355,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_flood": {
+       "recall": 0.9964028776978417,
+       "detected": true,
+       "delay_s": 0.20424294471740723,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 39
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.9964028776978417,
+       "detected": true,
+       "delay_s": 0.20424294471740723,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 25
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.20424294471740723,
+       "false_alerts_clean": 1,
+       "false_alerts_other_normal": 51
+      }
+     }
+    },
+    "Fuzzy": {
+     "attack_windows": 291,
+     "clean_windows": 65,
+     "other_normal_windows": 115,
+     "attack": [
+      "Fuzzy"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.7112548351287842,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 38
+      },
+      "can.l1_dlc": {
+       "recall": 0.06872852233676977,
+       "detected": true,
+       "delay_s": 16.714449882507324,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.9862542955326461,
+       "detected": true,
+       "delay_s": 0.7112548351287842,
+       "false_alerts_clean": 2,
+       "false_alerts_other_normal": 22
+      },
+      "can.l1_bus_load": {
+       "recall": 0.22336769759450173,
+       "detected": true,
+       "delay_s": 0.7112548351287842,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 33
+      },
+      "can.l1_flood": {
+       "recall": 0.010309278350515464,
+       "detected": true,
+       "delay_s": 369.7122859954834,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.027491408934707903,
+       "detected": true,
+       "delay_s": 2404.714520931244,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 18
+      },
+      "combined_l1_l2a": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.7112548351287842,
+       "false_alerts_clean": 2,
+       "false_alerts_other_normal": 53
+      },
+      "combined_l1": {
+       "recall": 1.0,
+       "detected": true,
+       "delay_s": 0.7112548351287842,
+       "false_alerts_clean": 2,
+       "false_alerts_other_normal": 53
+      }
+     }
+    },
+    "RPM": {
+     "attack_windows": 198,
+     "clean_windows": 79,
+     "other_normal_windows": 98,
+     "attack": [
+      "RPM"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.8080808080808081,
+       "detected": true,
+       "delay_s": 2.517824172973633,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 5
+      },
+      "can.l1_bus_load": {
+       "recall": 0.8383838383838383,
+       "detected": true,
+       "delay_s": 0.5181210041046143,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 36
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.9949494949494949,
+       "detected": true,
+       "delay_s": 0.5181210041046143,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 17
+      },
+      "combined_l1": {
+       "recall": 0.9949494949494949,
+       "detected": true,
+       "delay_s": 0.5181210041046143,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 41
+      }
+     }
+    },
+    "Gear": {
+     "attack_windows": 209,
+     "clean_windows": 75,
+     "other_normal_windows": 94,
+     "attack": [
+      "Gear"
+     ],
+     "layers": {
+      "can.l1_id_allow": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_dlc": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l1_period": {
+       "recall": 0.8755980861244019,
+       "detected": true,
+       "delay_s": 0.6123800277709961,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 10
+      },
+      "can.l1_bus_load": {
+       "recall": 0.6985645933014354,
+       "detected": true,
+       "delay_s": 0.6123800277709961,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 21
+      },
+      "can.l1_flood": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 0
+      },
+      "can.l2a_skew": {
+       "recall": 0.0,
+       "detected": false,
+       "delay_s": null,
+       "false_alerts_clean": 25,
+       "false_alerts_other_normal": 0
+      },
+      "combined_l1_l2a": {
+       "recall": 0.9952153110047847,
+       "detected": true,
+       "delay_s": 0.6123800277709961,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 20
+      },
+      "combined_l1": {
+       "recall": 0.9952153110047847,
+       "detected": true,
+       "delay_s": 0.6123800277709961,
+       "false_alerts_clean": 0,
+       "false_alerts_other_normal": 29
+      }
+     }
+    }
+   },
+   "summary": {
+    "can.l1_id_allow": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.09429280397022333,
+     "attack_window_recall": 0.5829918032786885
+    },
+    "can.l1_dlc": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.0,
+     "attack_window_recall": 0.020491803278688523
+    },
+    "can.l1_period": {
+     "fa_clean_rate": 0.006666666666666667,
+     "false_alerts_per_hour_clean": 24.0,
+     "fa_other_normal_rate": 0.1513647642679901,
+     "attack_window_recall": 0.9221311475409836
+    },
+    "can.l1_bus_load": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.22332506203473945,
+     "attack_window_recall": 0.4426229508196721
+    },
+    "can.l1_flood": {
+     "fa_clean_rate": 0.0,
+     "false_alerts_per_hour_clean": 0.0,
+     "fa_other_normal_rate": 0.0967741935483871,
+     "attack_window_recall": 0.28688524590163933
+    },
+    "can.l2a_skew": {
+     "fa_clean_rate": 0.08333333333333333,
+     "false_alerts_per_hour_clean": 300.0,
+     "fa_other_normal_rate": 0.04466501240694789,
+     "attack_window_recall": 0.00819672131147541
+    },
+    "combined_l1_l2a": {
+     "fa_clean_rate": 0.006666666666666667,
+     "false_alerts_per_hour_clean": 24.0,
+     "fa_other_normal_rate": 0.2853598014888337,
+     "attack_window_recall": 0.9969262295081968
+    },
+    "combined_l1": {
+     "fa_clean_rate": 0.01,
+     "false_alerts_per_hour_clean": 36.0,
+     "fa_other_normal_rate": 0.4317617866004963,
+     "attack_window_recall": 0.9979508196721312
+    }
+   },
+   "combined_method": "logistic",
+   "combined_l1_method": "noisy_or",
+   "n_windows": {
+    "clean": 300,
+    "attack": 976,
+    "other_normal": 403
+   },
+   "frame": {
+    "can.l1_id_allow": {
+     "recall_by_attack": {
+      "DoS": 1.0,
+      "Fuzzy": 0.9863888493813113,
+      "RPM": 0.0,
+      "Gear": 0.0
+     },
+     "fa_clean": 0.0,
+     "fa_all_normal": 0.0037496821215847027
+    },
+    "can.l1_dlc": {
+     "recall_by_attack": {
+      "DoS": 0.0,
+      "Fuzzy": 0.00034134547006115776,
+      "RPM": 0.0,
+      "Gear": 0.0
+     },
+     "fa_clean": 0.0,
+     "fa_all_normal": 0.0
+    },
+    "can.l1_period": {
+     "recall_by_attack": {
+      "DoS": 0.0,
+      "Fuzzy": 0.012075096003413454,
+      "RPM": 0.991317081219321,
+      "Gear": 0.9829133036841816
+     },
+     "fa_clean": 0.015797835666536766,
+     "fa_all_normal": 0.13070040571784527
+    },
+    "can.l1_bus_load": {
+     "recall_by_attack": {
+      "DoS": 0.20716021151922254,
+      "Fuzzy": 0.20113781823353719,
+      "RPM": 0.8183702512065338,
+      "Gear": 0.70091692746939
+     },
+     "fa_clean": 0.00885817920201445,
+     "fa_all_normal": 0.23363141968583115
+    },
+    "can.l1_flood": {
+     "recall_by_attack": {
+      "DoS": 0.9972130913248535,
+      "Fuzzy": 0.0,
+      "RPM": 0.0,
+      "Gear": 0.0
+     },
+     "fa_clean": 0.0,
+     "fa_all_normal": 0.06560263914908906
+    },
+    "can.l2a_skew": {
+     "recall_by_attack": {
+      "DoS": 0.0,
+      "Fuzzy": 0.0002844545583842981,
+      "RPM": 0.0,
+      "Gear": 0.0
+     },
+     "fa_clean": 0.01808170208939117,
+     "fa_all_normal": 0.018838933048389843
+    },
+    "combined": {
+     "recall_by_attack": {
+      "DoS": 1.0,
+      "Fuzzy": 0.9948655952211635,
+      "RPM": 0.9598131419378789,
+      "Gear": 0.9723274584088288
+     },
+     "fa_clean": 0.014072289337210348,
+     "fa_all_normal": 0.34682133249965585
+    }
+   },
+   "frame_tally": {
+    "inj": {
+     "can.l1_id_allow": {
+      "DoS": [
+       83964,
+       83964
+      ],
+      "Fuzzy": [
+       70310,
+       69353
+      ],
+      "RPM": [
+       96972,
+       0
+      ],
+      "Gear": [
+       91065,
+       0
+      ]
+     },
+     "can.l1_dlc": {
+      "DoS": [
+       83964,
+       0
+      ],
+      "Fuzzy": [
+       70310,
+       24
+      ],
+      "RPM": [
+       96972,
+       0
+      ],
+      "Gear": [
+       91065,
+       0
+      ]
+     },
+     "can.l1_period": {
+      "DoS": [
+       83964,
+       0
+      ],
+      "Fuzzy": [
+       70310,
+       849
+      ],
+      "RPM": [
+       96972,
+       96130
+      ],
+      "Gear": [
+       91065,
+       89509
+      ]
+     },
+     "can.l1_bus_load": {
+      "DoS": [
+       83964,
+       17394
+      ],
+      "Fuzzy": [
+       70310,
+       14142
+      ],
+      "RPM": [
+       96972,
+       79359
+      ],
+      "Gear": [
+       91065,
+       63829
+      ]
+     },
+     "can.l1_flood": {
+      "DoS": [
+       83964,
+       83730
+      ],
+      "Fuzzy": [
+       70310,
+       0
+      ],
+      "RPM": [
+       96972,
+       0
+      ],
+      "Gear": [
+       91065,
+       0
+      ]
+     },
+     "can.l2a_skew": {
+      "DoS": [
+       83964,
+       0
+      ],
+      "Fuzzy": [
+       70310,
+       20
+      ],
+      "RPM": [
+       96972,
+       0
+      ],
+      "Gear": [
+       91065,
+       0
+      ]
+     },
+     "combined": {
+      "DoS": [
+       83964,
+       83964
+      ],
+      "Fuzzy": [
+       70310,
+       69949
+      ],
+      "RPM": [
+       96972,
+       93075
+      ],
+      "Gear": [
+       91065,
+       88545
+      ]
+     }
+    },
+    "clean": {
+     "can.l1_id_allow": [
+      533744,
+      0
+     ],
+     "can.l1_dlc": [
+      533744,
+      0
+     ],
+     "can.l1_period": [
+      533744,
+      8432
+     ],
+     "can.l1_bus_load": [
+      533744,
+      4728
+     ],
+     "can.l1_flood": [
+      533744,
+      0
+     ],
+     "can.l2a_skew": [
+      533744,
+      9651
+     ],
+     "combined": [
+      533744,
+      7511
+     ]
+    },
+    "normal": {
+     "can.l1_id_allow": [
+      2143115,
+      8036
+     ],
+     "can.l1_dlc": [
+      2143115,
+      0
+     ],
+     "can.l1_period": [
+      2143115,
+      280106
+     ],
+     "can.l1_bus_load": [
+      2143115,
+      500699
+     ],
+     "can.l1_flood": [
+      2143115,
+      140594
+     ],
+     "can.l2a_skew": [
+      2143115,
+      40374
+     ],
+     "combined": [
+      2143115,
+      743278
+     ]
+    },
+    "files": {
+     "DoS": {
+      "n_frames": 549868,
+      "n_injected": 83964,
+      "first_inj_t": 0.7957100868225098,
+      "frame_delay": {
+       "can.l1_id_allow": 0.0,
+       "can.l1_dlc": null,
+       "can.l1_period": null,
+       "can.l1_bus_load": 0.20743894577026367,
+       "can.l1_flood": 0.008874893188476562,
+       "can.l2a_skew": null,
+       "combined": 0.0
+      }
+     },
+     "Fuzzy": {
+      "n_frames": 575829,
+      "n_injected": 70310,
+      "first_inj_t": 42.28545904159546,
+      "frame_delay": {
+       "can.l1_id_allow": 0.0,
+       "can.l1_dlc": 16.697391033172607,
+       "can.l1_period": 0.06945085525512695,
+       "can.l1_bus_load": 0.0,
+       "can.l1_flood": null,
+       "can.l2a_skew": 2404.607841014862,
+       "combined": 0.0
+      }
+     },
+     "RPM": {
+      "n_frames": 693255,
+      "n_injected": 96972,
+      "first_inj_t": 188.48178386688232,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0009920597076416016,
+       "can.l1_bus_load": 0.0021681785583496094,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0009920597076416016
+      }
+     },
+     "Gear": {
+      "n_frames": 666474,
+      "n_injected": 91065,
+      "first_inj_t": 65.38760995864868,
+      "frame_delay": {
+       "can.l1_id_allow": null,
+       "can.l1_dlc": null,
+       "can.l1_period": 0.0,
+       "can.l1_bus_load": 0.004431009292602539,
+       "can.l1_flood": null,
+       "can.l2a_skew": null,
+       "combined": 0.0010759830474853516
+      }
+     }
+    }
+   },
+   "thresholds": {
+    "window": {
+     "can.l1_id_allow": 5e-324,
+     "can.l1_dlc": 5e-324,
+     "can.l1_period": 0.9876543209876544,
+     "can.l1_bus_load": 0.9783950617283952,
+     "can.l1_flood": 0.00925925925925926,
+     "can.l2a_skew": 0.9814814814814816
+    },
+    "frame": {
+     "can.l1_id_allow": 5e-324,
+     "can.l1_dlc": 5e-324,
+     "can.l1_period": 0.98999875902113,
+     "can.l1_bus_load": 0.9899935154484392,
+     "can.l1_flood": 0.948609491915285,
+     "can.l2a_skew": 0.9899480711517858
+    },
+    "frame_combined": 0.9997287689103453
+   }
+  }
+ },
+ "attack_names": [
+  "normal",
+  "DoS",
+  "Fuzzy",
+  "RPM",
+  "Gear"
+ ],
+ "seconds": 174.13118720054626,
+ "note": "test frames are interleaved time blocks; the skew filter runs continuously over each file"
+}
