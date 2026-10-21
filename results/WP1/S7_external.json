@@ -1,0 +1,308 @@
+{
+ "note": "KITTI-trained C2 variants (final models, train drives) applied unchanged. kitti_threshold = LODO 1% raw-score threshold; own_1pct_threshold = 1% of the target's normal rows (in-sample).",
+ "avgps": {
+  "features_available": "pos_step, speed_gap (Velocity), heading_gap (Heading vs GPS course), dr_resid from Velocity + Heading: all present",
+  "test": {
+   "l4_c2": {
+    "auc": 0.5922387809009921,
+    "rows": 7526,
+    "normal_rows": 5415,
+    "kitti_threshold": {
+     "threshold": 0.7803800106048584,
+     "fa": 0.6075715604801477,
+     "detection": 0.8877309332070109
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.9990465044975282,
+     "fa": 0.02566943674976916,
+     "detection": 0.008053055423969682
+    }
+   },
+   "l4_nopos": {
+    "auc": 0.5758540870863739,
+    "rows": 7526,
+    "normal_rows": 5415,
+    "kitti_threshold": {
+     "threshold": 0.8029020428657532,
+     "fa": 0.5763619575253924,
+     "detection": 0.8261487446707722
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.9995645880699159,
+     "fa": 0.011265004616805172,
+     "detection": 0.008053055423969682
+    }
+   },
+   "l4_all": {
+    "auc": 0.5230297876881987,
+    "rows": 7526,
+    "normal_rows": 5415,
+    "kitti_threshold": {
+     "threshold": 0.8422107100486755,
+     "fa": 0.6140350877192983,
+     "detection": 0.7674088109900521
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.9924117922782899,
+     "fa": 0.11634349030470914,
+     "detection": 0.21032685930838466
+    }
+   },
+   "sessions": 6,
+   "spoof_rows": 2111,
+   "median_speed_m_s": 0.9
+  },
+  "val": {
+   "l4_c2": {
+    "auc": 0.7199300056440165,
+    "rows": 8518,
+    "normal_rows": 7928,
+    "kitti_threshold": {
+     "threshold": 0.7803800106048584,
+     "fa": 0.23007063572149344,
+     "detection": 0.0
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.998927414417267,
+     "fa": 0.010973763874873865,
+     "detection": 0.0
+    }
+   },
+   "l4_nopos": {
+    "auc": 0.0882846038071457,
+    "rows": 8518,
+    "normal_rows": 7928,
+    "kitti_threshold": {
+     "threshold": 0.8029020428657532,
+     "fa": 0.20938446014127143,
+     "detection": 0.0
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.9995487332344056,
+     "fa": 0.010090817356205853,
+     "detection": 0.0
+    }
+   },
+   "l4_all": {
+    "auc": 0.3406044228565565,
+    "rows": 8518,
+    "normal_rows": 7928,
+    "kitti_threshold": {
+     "threshold": 0.8422107100486755,
+     "fa": 0.22666498486377396,
+     "detection": 0.0
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.9924117922782899,
+     "fa": 0.043264379414732594,
+     "detection": 0.0
+    }
+   },
+   "sessions": 3,
+   "spoof_rows": 590,
+   "median_speed_m_s": 1.0
+  },
+  "train": {
+   "l4_c2": {
+    "auc": 0.6084871320021935,
+    "rows": 53524,
+    "normal_rows": 38359,
+    "kitti_threshold": {
+     "threshold": 0.7803800106048584,
+     "fa": 0.4678172006569514,
+     "detection": 0.8051434223541049
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.9988633394241334,
+     "fa": 0.011444511066503299,
+     "detection": 0.09119683481701286
+    }
+   },
+   "l4_nopos": {
+    "auc": 0.6057696516572264,
+    "rows": 53524,
+    "normal_rows": 38359,
+    "kitti_threshold": {
+     "threshold": 0.8029020428657532,
+     "fa": 0.44557991605620584,
+     "detection": 0.7266073194856577
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.9995444416999818,
+     "fa": 0.010062827498109961,
+     "detection": 0.061655126937026045
+    }
+   },
+   "l4_all": {
+    "auc": 0.5944411176391446,
+    "rows": 53524,
+    "normal_rows": 38359,
+    "kitti_threshold": {
+     "threshold": 0.8422107100486755,
+     "fa": 0.47073698480148074,
+     "detection": 0.7796241345202769
+    },
+    "own_1pct_threshold": {
+     "threshold": 0.9924117922782899,
+     "fa": 0.017153731849109725,
+     "detection": 0.10886910649521926
+    }
+   },
+   "sessions": 6,
+   "spoof_rows": 15165,
+   "median_speed_m_s": 1.0
+  },
+  "val_calibrated_on_test": {
+   "l4_c2": {
+    "threshold": 0.998927414417267,
+    "fa": 0.03748845798707295,
+    "detection": 0.07058266224538133
+   },
+   "l4_nopos": {
+    "threshold": 0.9995487332344056,
+    "fa": 0.031948291782086795,
+    "detection": 0.20274751302700142
+   },
+   "l4_all": {
+    "threshold": 0.9924117922782899,
+    "fa": 0.11634349030470914,
+    "detection": 0.21032685930838466
+   }
+  }
+ },
+ "uav": {
+  "features_available": "pos_step, heading_gap and still need only the GPS and the attitude; speed_gap, speed_gap_mean5 and dr_resid need an independent speed: a drone has no wheel odometry (odo_speed NaN), so L4 (C2) is NOT applicable to the UAV as trained. Proxy (diagnostic only): the receiver's own Doppler speed replaces the odometry (not independent: a Doppler-consistent spoofer controls it).",
+  "l4_c2": {
+   "benign": {
+    "kitti_threshold": {
+     "fixes": 248,
+     "alarm_rate": 0.6330645161290323,
+     "threshold": 0.7803800106048584
+    },
+    "benign_1pct_threshold": {
+     "fixes": 248,
+     "alarm_rate": 0.012096774193548387,
+     "threshold": 0.9692448973655702
+    }
+   },
+   "jamming": {
+    "kitti_threshold": {
+     "fixes": 224,
+     "alarm_rate": 0.75,
+     "threshold": 0.7803800106048584
+    },
+    "benign_1pct_threshold": {
+     "fixes": 224,
+     "alarm_rate": 0.06696428571428571,
+     "threshold": 0.9692448973655702
+    }
+   },
+   "spoofing": {
+    "kitti_threshold": {
+     "fixes": 138,
+     "alarm_rate": 0.7898550724637681,
+     "threshold": 0.7803800106048584,
+     "alarm_rate_before_117s": 0.7796610169491526,
+     "alarm_rate_from_118s": 0.8421052631578947,
+     "first_alarm_after_118s": 118.000345
+    },
+    "benign_1pct_threshold": {
+     "fixes": 138,
+     "alarm_rate": 0.11594202898550725,
+     "threshold": 0.9692448973655702,
+     "alarm_rate_before_117s": 0.01694915254237288,
+     "alarm_rate_from_118s": 0.7368421052631579,
+     "first_alarm_after_118s": 119.006003
+    }
+   }
+  },
+  "l4_nopos": {
+   "benign": {
+    "kitti_threshold": {
+     "fixes": 248,
+     "alarm_rate": 0.4798387096774194,
+     "threshold": 0.8029020428657532
+    },
+    "benign_1pct_threshold": {
+     "fixes": 248,
+     "alarm_rate": 0.012096774193548387,
+     "threshold": 0.9866659045219422
+    }
+   },
+   "jamming": {
+    "kitti_threshold": {
+     "fixes": 224,
+     "alarm_rate": 0.5491071428571429,
+     "threshold": 0.8029020428657532
+    },
+    "benign_1pct_threshold": {
+     "fixes": 224,
+     "alarm_rate": 0.05803571428571429,
+     "threshold": 0.9866659045219422
+    }
+   },
+   "spoofing": {
+    "kitti_threshold": {
+     "fixes": 138,
+     "alarm_rate": 0.6159420289855072,
+     "threshold": 0.8029020428657532,
+     "alarm_rate_before_117s": 0.576271186440678,
+     "alarm_rate_from_118s": 0.8421052631578947,
+     "first_alarm_after_118s": 118.000345
+    },
+    "benign_1pct_threshold": {
+     "fixes": 138,
+     "alarm_rate": 0.07971014492753623,
+     "threshold": 0.9866659045219422,
+     "alarm_rate_before_117s": 0.0,
+     "alarm_rate_from_118s": 0.5789473684210527,
+     "first_alarm_after_118s": 119.006003
+    }
+   }
+  },
+  "l4_all": {
+   "benign": {
+    "kitti_threshold": {
+     "fixes": 248,
+     "alarm_rate": 0.5604838709677419,
+     "threshold": 0.8422107100486755
+    },
+    "benign_1pct_threshold": {
+     "fixes": 248,
+     "alarm_rate": 0.012096774193548387,
+     "threshold": 0.9636498093605043
+    }
+   },
+   "jamming": {
+    "kitti_threshold": {
+     "fixes": 224,
+     "alarm_rate": 0.625,
+     "threshold": 0.8422107100486755
+    },
+    "benign_1pct_threshold": {
+     "fixes": 224,
+     "alarm_rate": 0.08928571428571429,
+     "threshold": 0.9636498093605043
+    }
+   },
+   "spoofing": {
+    "kitti_threshold": {
+     "fixes": 138,
+     "alarm_rate": 0.7101449275362319,
+     "threshold": 0.8422107100486755,
+     "alarm_rate_before_117s": 0.6864406779661016,
+     "alarm_rate_from_118s": 0.8421052631578947,
+     "first_alarm_after_118s": 118.000345
+    },
+    "benign_1pct_threshold": {
+     "fixes": 138,
+     "alarm_rate": 0.12318840579710146,
+     "threshold": 0.9636498093605043,
+     "alarm_rate_before_117s": 0.03389830508474576,
+     "alarm_rate_from_118s": 0.6842105263157895,
+     "first_alarm_after_118s": 119.006003
+    }
+   }
+  }
+ }
+}

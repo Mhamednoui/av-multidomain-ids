@@ -1,0 +1,312 @@
+{
+ "E2": {
+  "gps.l3_residual_normal": {
+   "test_fa_clean_runs_lodo": 0.0050568900126422255,
+   "test_fa_clean_runs_valonly": 0.012642225031605562,
+   "nested_dev_heldout_fa": 0.010462369220384746,
+   "met": true
+  },
+  "gps.l4_c2": {
+   "test_fa_clean_runs_lodo": 0.008217446270543615,
+   "test_fa_clean_runs_valonly": 0.004424778761061947,
+   "nested_dev_heldout_fa": 0.01137842919820645,
+   "met": true
+  },
+  "gps.l4_c2_nopos": {
+   "test_fa_clean_runs_lodo": 0.008217446270543615,
+   "test_fa_clean_runs_valonly": 0.0025284450063211127
+  }
+ },
+ "E3": {
+  "l3_auc": 0.8753926907575934,
+  "best_input": "gps.ekf_nis",
+  "best_input_auc": 0.86529751018636,
+  "l4_auc": 0.8884381300736981,
+  "met": true
+ },
+ "E4": {
+  "lodo": {
+   "L3": {
+    "d_auc": 0.0010689439553889235,
+    "max_gain": 0.006201550387596955,
+    "gain_by_attack": {
+     "drift": 0.006201550387596955,
+     "accel_drift": 0.0013054830287205776,
+     "jump": -0.005555555555555536,
+     "freeze": 0.0,
+     "doppler_spoof": 0.002645502645502673,
+     "meaconing": -0.02785515320334253
+    },
+    "fa": 0.010480610869890702,
+    "fa_base": 0.011079502919598742,
+    "fa_ok": true,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L4": {
+    "d_auc": 0.005348092377225,
+    "max_gain": 0.003968253968254065,
+    "gain_by_attack": {
+     "drift": -0.0015503875968991832,
+     "accel_drift": 0.0026109660574412663,
+     "jump": 0.0,
+     "freeze": 0.0012658227848101333,
+     "doppler_spoof": 0.003968253968254065,
+     "meaconing": -0.01114206128133699
+    },
+    "fa": 0.011977840994160802,
+    "fa_base": 0.011079502919598742,
+    "fa_ok": true,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L3+L4": {
+    "d_auc": 0.0052976737063735735,
+    "max_gain": 0.0012658227848101333,
+    "gain_by_attack": {
+     "drift": -0.0046511627906976605,
+     "accel_drift": -0.0013054830287206887,
+     "jump": -0.005555555555555536,
+     "freeze": 0.0012658227848101333,
+     "doppler_spoof": -0.001322751322751281,
+     "meaconing": -0.02785515320334253
+    },
+    "fa": 0.010929779907171732,
+    "fa_base": 0.011079502919598742,
+    "fa_ok": true,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L4_nopos": {
+    "d_auc": 0.0026034089494161305,
+    "max_gain": 0.002645502645502673,
+    "gain_by_attack": {
+     "drift": -0.009302325581395321,
+     "accel_drift": 0.0013054830287205776,
+     "jump": 0.0,
+     "freeze": 0.0012658227848101333,
+     "doppler_spoof": 0.002645502645502673,
+     "meaconing": -0.0069637883008355494
+    },
+    "fa": 0.011528671956879772,
+    "fa_base": 0.011079502919598742,
+    "fa_ok": true,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L4_all_attacks": {
+    "d_auc": 0.0052944373727715766,
+    "max_gain": 0.005291005291005346,
+    "gain_by_attack": {
+     "drift": 0.0031007751937984773,
+     "accel_drift": 0.0026109660574412663,
+     "jump": 0.0,
+     "freeze": 0.0012658227848101333,
+     "doppler_spoof": 0.005291005291005346,
+     "meaconing": -0.01532033426183843
+    },
+    "fa": 0.012576733043868842,
+    "fa_base": 0.011079502919598742,
+    "fa_ok": true,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L3+L4_all_attacks": {
+    "d_auc": 0.005173432562728286,
+    "max_gain": 0.010852713178294615,
+    "gain_by_attack": {
+     "drift": 0.010852713178294615,
+     "accel_drift": 0.00652741514360311,
+     "jump": -0.005555555555555536,
+     "freeze": 0.0012658227848101333,
+     "doppler_spoof": 0.003968253968254065,
+     "meaconing": -0.03760445682451252
+    },
+    "fa": 0.012726456056295852,
+    "fa_base": 0.011079502919598742,
+    "fa_ok": true,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "stack_AUC": 0.9239159772850262,
+   "stack_FA": 0.011079502919598742
+  },
+  "valonly": {
+   "L3": {
+    "d_auc": 0.001557357795927361,
+    "max_gain": 0.005291005291005346,
+    "gain_by_attack": {
+     "drift": 0.0015503875968992942,
+     "accel_drift": 0.003916449086161844,
+     "jump": 0.0,
+     "freeze": 0.0,
+     "doppler_spoof": 0.005291005291005346,
+     "meaconing": 0.0
+    },
+    "fa": 0.021110944752208413,
+    "fa_base": 0.020961221739781405,
+    "fa_ok": false,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L4": {
+    "d_auc": 0.0026838914560961546,
+    "max_gain": 0.0,
+    "gain_by_attack": {
+     "drift": 0.0,
+     "accel_drift": 0.0,
+     "jump": 0.0,
+     "freeze": 0.0,
+     "doppler_spoof": 0.0,
+     "meaconing": 0.0
+    },
+    "fa": 0.020961221739781405,
+    "fa_base": 0.020961221739781405,
+    "fa_ok": false,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L3+L4": {
+    "d_auc": 0.002734310126947581,
+    "max_gain": 0.005291005291005346,
+    "gain_by_attack": {
+     "drift": 0.0015503875968992942,
+     "accel_drift": 0.003916449086161844,
+     "jump": 0.0,
+     "freeze": 0.0,
+     "doppler_spoof": 0.005291005291005346,
+     "meaconing": 0.0
+    },
+    "fa": 0.021110944752208413,
+    "fa_base": 0.020961221739781405,
+    "fa_ok": false,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L4_nopos": {
+    "d_auc": 0.002416280733884557,
+    "max_gain": 0.0,
+    "gain_by_attack": {
+     "drift": 0.0,
+     "accel_drift": 0.0,
+     "jump": 0.0,
+     "freeze": 0.0,
+     "doppler_spoof": 0.0,
+     "meaconing": 0.0
+    },
+    "fa": 0.020961221739781405,
+    "fa_base": 0.020961221739781405,
+    "fa_ok": false,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L4_all_attacks": {
+    "d_auc": 0.002966678879567697,
+    "max_gain": 0.0,
+    "gain_by_attack": {
+     "drift": 0.0,
+     "accel_drift": 0.0,
+     "jump": 0.0,
+     "freeze": 0.0,
+     "doppler_spoof": 0.0,
+     "meaconing": 0.0
+    },
+    "fa": 0.020961221739781405,
+    "fa_base": 0.020961221739781405,
+    "fa_ok": false,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "L3+L4_all_attacks": {
+    "d_auc": 0.003180532397317415,
+    "max_gain": 0.005291005291005346,
+    "gain_by_attack": {
+     "drift": 0.0015503875968992942,
+     "accel_drift": 0.003916449086161844,
+     "jump": 0.0,
+     "freeze": 0.0,
+     "doppler_spoof": 0.005291005291005346,
+     "meaconing": 0.0
+    },
+    "fa": 0.021110944752208413,
+    "fa_base": 0.020961221739781405,
+    "fa_ok": false,
+    "adds": false,
+    "adds_unseen_attacks": false
+   },
+   "stack_AUC": 0.9075260767579978,
+   "stack_FA": 0.020961221739781405
+  }
+ },
+ "E5": {
+  "shuffled_label": {
+   "test_auc": 0.5532992121571679,
+   "fa_clean_runs": 0.004424778761061947,
+   "row_detection": {
+    "drift": 0.0,
+    "accel_drift": 0.0,
+    "jump": 0.002777777777777778,
+    "freeze": 0.0,
+    "doppler_spoof": 0.0026455026455026454,
+    "meaconing": 0.0
+   },
+   "met": false
+  },
+  "pos_step_share_final": 0.15750577300786972,
+  "pos_step_share_dev_folds": 0.15605660900473595,
+  "mean_run_level_l4": 0.7261904761904763,
+  "mean_run_level_l4_nopos": 0.7000000000000001,
+  "mean_run_level_l4_all": 0.719047619047619,
+  "red_flag_speed_features": false,
+  "worst_drive_fa_dev_l4": 0.09535759096612297,
+  "worst_drive_fa_test_l4": 0.03215434083601286,
+  "drives_gt_3pct_test_l4": 1,
+  "worst_drive_fa_dev_l3": 0.035842293906810034,
+  "worst_drive_fa_test_l3": 0.024115755627009645,
+  "drives_gt_3pct_test_l3": 0
+ },
+ "E7": {
+  "gps.cusum_dr": {
+   "doppler_spoof": 0.7,
+   "meaconing": 0.6142857142857143
+  },
+  "gps.l3_residual_normal": {
+   "doppler_spoof": 0.7571428571428571,
+   "meaconing": 0.6428571428571429
+  },
+  "gps.l4_c2": {
+   "doppler_spoof": 0.6285714285714286,
+   "meaconing": 0.5571428571428572
+  },
+  "stack_combined_row_level": {
+   "doppler_spoof": 0.6283068783068783,
+   "meaconing": 0.6504178272980501
+  }
+ },
+ "E6": {
+  "avgps_test": {
+   "l4_c2": {
+    "auc": 0.5922387809009921,
+    "fa_kitti_threshold": 0.6075715604801477,
+    "detection_kitti_threshold": 0.8877309332070109,
+    "fa_own": 0.02566943674976916,
+    "detection_own": 0.008053055423969682
+   },
+   "l4_nopos": {
+    "auc": 0.5758540870863739,
+    "fa_kitti_threshold": 0.5763619575253924,
+    "detection_kitti_threshold": 0.8261487446707722,
+    "fa_own": 0.011265004616805172,
+    "detection_own": 0.008053055423969682
+   },
+   "l4_all": {
+    "auc": 0.5230297876881987,
+    "fa_kitti_threshold": 0.6140350877192983,
+    "detection_kitti_threshold": 0.7674088109900521,
+    "fa_own": 0.11634349030470914,
+    "detection_own": 0.21032685930838466
+   }
+  },
+  "uav": "features not available (no odometry); proxy diagnostic in S7_external.json"
+ }
+}

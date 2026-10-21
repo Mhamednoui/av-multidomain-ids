@@ -50,3 +50,4 @@ Each step: acceptance rule written before results; ablation row for the new laye
 - S4 (2026-10-20): L2b CUSUM (EKF and dead-reckoning branch), L2c scale + freeze, LODO helper: REVIEW. See reports/WP1_S4.md.
 - S5 (2026-10-20): L2d LiDAR odometry (point-to-plane ICP, 23/23 drives), lid_z_W layers, sequential variant, MotionEstimate: REVIEW. See reports/WP1_S5.md.
 - S6 (2026-10-21): L2e map matching on drivable OSM roads (map_dist, map_heading, map_comb): REVIEW. Adds nothing on the S5 stack; test FA 4.11% (per-road OSM offset). See reports/WP1_S6.md.
+- S7 (2026-10-21): L3 normal-only residual model (isolation forest) and L4 retrained v2 C2 in the harness: REVIEW. Neither adds to the physics stack (AUC +0.001 / +0.005); L4 fails transfer to AV-GPS; shuffled-label AUC 0.553. See reports/WP1_S7.md.

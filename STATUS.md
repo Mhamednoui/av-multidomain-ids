@@ -7,7 +7,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
-| WP1 GPS | S7 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-21 | S6 APPROVED (negative result: map layer out of default stack) |
+| WP1 GPS | S7 | REVIEW | worker sonnet (high, T3) | 2026-10-21 | L3 + L4 built: neither adds to the physics stack (AUC +0.001/+0.005); L4 transfer fails; shuffled-label AUC 0.553 (bound 0.55). Report reports/WP1_S7.md |
 | WP2 CAN | S3 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | S2 APPROVED with miss (ROAD FA 3.4% vs 1%) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | IN PROGRESS | worker haiku (medium, T1) | 2026-10-21 | downloads D10 + D23 (size-checked) |
