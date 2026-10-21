@@ -106,3 +106,5 @@ State:
   request for full Tampa BSM (text in reports/WP5_S0b.md).
 - Approval mode: orchestrator approves routine steps; downloads pre-approved (>= 15 GB free);
   no GitHub push. Model/effort per task: ORCHESTRATION.md section 6.
+| 2026-10-21 | WP5 | S4 | sonnet medium | APPROVED (partial) | commit f79b65c, 144/144 tests. L3 per-sender CV Kalman + NIS + CUSUMs + track_birth. VeReMi: mean detection 19 classes 68.0 -> 78.4% at ~1% FA, AUC 0.845 -> 0.907; DataReplay 98%, GridSybil 73%, EventualStop only 11%, ConstPosOffset ~1%. Class 12 (48%) is an ARTEFACT of the zero placeholder jump, not delay detection: must be reported as such in S6/M1. Per-message Sybil 18/19: sender-level 98/100% at 2.9% genuine senders flagged (birth check). Tampa: kf_cusum_lo FA 13.5% (real standing vehicles repeat exact positions = simulation artefact in VeReMi). Decisions: (1) kf_cusum_lo DROPPED from the deployable L3 union, kept as diagnostic (reason: real-data FA, disclosed). (2) road-occupancy prior: not now; WP5 S5 supervised model may use plausibility features instead. |
+| 2026-10-21 | WP1 | S6 | sonnet medium (T2) | ASSIGNED | OSM map matching |
