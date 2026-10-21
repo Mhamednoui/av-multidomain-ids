@@ -1,4 +1,4 @@
-# WP4 S1: data layer (BLOCKED at the gate)
+# WP4 S1: data layer (BLOCKED at the gate, v2 gate G1 fails)
 
 Date: 2026-10-21    Worker: sonnet medium (WP4 S1)
 
@@ -30,3 +30,10 @@ Question: (a) accept D10 and drop the 99% gate; (b) download MachineLearningCVE 
 
 ## Proposed next step
 On answer, build the data layer (flows, cleaning counts, time split, per-host labels, brief).
+
+## Update: gate v2 (supervisor option b), results/WP4/s1_gate2.json
+MachineLearningCVE downloaded (sha256 = HF LFS oid). G1 (D01 clean rows in MLCVE, features + label): 17,065 / 44,039 = 38.7% FAIL.
+G2 (per-file rows and per-label counts D10 = MLCVE): PASS, all 8 files, total 2,830,743. G3 (5 key columns + label, MLCVE rows in D10): 100.0% PASS.
+Gate not met as defined (all three required) -> stopped, data layer not built.
+Interpretation: D10 = MLCVE flows (same rows, same labels); D01 is not a verbatim subset of either file set, so G1 cannot be met by any official copy.
+Question: accept D10 on the evidence of G2+G3 (and treat D01-based v2 numbers as not directly comparable), or investigate D01 provenance first?

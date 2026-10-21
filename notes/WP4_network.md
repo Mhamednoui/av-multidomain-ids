@@ -110,3 +110,22 @@ Source: results/WP4/s1_gate_d10_vs_d01.json, s1_gate_diag.json (tools/WP4_s1_gat
 - Decision needed from supervisor: (a) accept D10 anyway (the gate as defined cannot be met by any copy of GeneratedLabelledFlows if D01 comes
   from MachineLearningCVE), or (b) fetch MachineLearningCVE (also mirrored) and run the gate against it, or (c) wait for UNB.
   Per instructions the data layer was NOT built.
+
+## 2026-10-21 S1 gate v2 (supervisor decision (b); written BEFORE downloading / comparing MachineLearningCVE)
+Download MachineLearningCVE (CICIDS2017) to ../data_extra/D10_cicids2017_generated_flows/MachineLearningCVE/ (source + sha256 recorded).
+All three must hold: G1 >= 99% of v2-clean D01 rows found in MLCVE with identical features and mapped label.
+G2 per-day file row counts and per-label counts of D10 (labelled rows) equal those of MLCVE.
+G3 on the 5 key columns (Flow Duration, Total Fwd/Bwd Packets, Total Length Fwd/Bwd), >= 99% of MLCVE rows are found in D10 with the same label.
+All pass -> D10 accepted as source of IPs/timestamps/labels, with the caveat that timing/header features come from a different CICFlowMeter run
+(list the differing features). Any fail -> stop and report.
+
+## 2026-10-21 S1 gate v2 RESULT: G1 FAILS, G2 and G3 pass -> STOP, asking
+MLCVE downloaded: bencorn/CICIDS2017 csvs/MachineLearningCSV.zip, 235,102,953 B, sha256 c3f26274...f728 = HF LFS oid;
+extracted to ../data_extra/D10_cicids2017_generated_flows/MachineLearningCVE/ (8 CSV). Result file results/WP4/s1_gate2.json (tools/WP4_s1_gate2.py).
+- G1: 17,065 of 44,039 clean D01 rows found in MLCVE with identical 77 features + mapped label = 38.7% (< 99%) -> FAIL. All D01 feature names exist in MLCVE.
+  So D01 does NOT reproduce from MLCVE either; D01 is not a verbatim subset of either published file set (it likely went through
+  the MTH-IDS preprocessing or a different CICFlowMeter run; unknown).
+- G2: PASS. All 8 files have identical row counts (labelled rows) and identical per-label counts in D10 and MLCVE (total 2,830,743).
+- G3: PASS. 100.0% of MLCVE rows found in D10 on the 5 key columns with the same label (all 8 files 1.0).
+- Reading: D10 and MLCVE are the same flows (G2, G3) from the same official CIC family; the mirror is consistent with the other official file
+  set (strong evidence the mirror is genuine). D01's own provenance is the unresolved part; G1 as written cannot be passed by any official file set.
