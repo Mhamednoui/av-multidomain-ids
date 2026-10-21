@@ -1,5 +1,5 @@
 """DomainCombiner: merges the calibrated Evidence of all layers of one domain into one
-Evidence(layer="combined"). Methods: "noisy_or" (1 - prod(1 - s)), "max", "logistic" (fitted on
+Evidence(layer="combined"). Methods: "noisy_or" (rank-equal to 1 - prod(1 - s), computed in log space, see noisy_or_score),"max", "logistic" (fitted on
 validation). method="auto" picks the best on group-aware validation halves.
 
 Inputs: dict layer_name -> list[Evidence], aligned by sample (same order). Outputs: list[Evidence].
@@ -19,9 +19,23 @@ from common.splits import group_halves, mask
 METHODS = ("noisy_or", "logistic", "max")
 
 
+def noisy_or_stat(X):
+    """S = -log prod(1 - s_i) = -sum log1p(-s_i), s_i clipped at 1 - 1e-16. Unbounded, monotone in 1 - prod(1 - s_i)."""
+    return -np.log1p(-np.clip(np.asarray(X, float), 0.0, 1.0 - 1e-16)).sum(axis=1)
+
+
+def noisy_or_score(X):
+    """Noisy-or in log space, mapped to [0, 1): S / (S + n_layers). Strictly increasing in S, hence the same ranking as
+    1 - prod(1 - s_i), but it does not saturate at exactly 1.0 in float64 with many correlated layers (the direct product
+    ties at 1.0 on > 1% of normal rows with 16 ECDF-calibrated GPS layers, leaving no valid threshold). Values differ from
+    the old 1 - prod(1 - s_i); thresholds are fitted on this score by budget_threshold as before."""
+    S = noisy_or_stat(X)
+    return S / (S + np.asarray(X).shape[1])
+
+
 def _combine(method, X, model=None):
     if method == "noisy_or":
-        return 1.0 - np.prod(1.0 - X, axis=1)
+        return noisy_or_score(X)
     if method == "max":
         return X.max(axis=1)
     if method == "logistic":

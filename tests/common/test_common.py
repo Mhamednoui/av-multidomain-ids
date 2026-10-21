@@ -197,3 +197,35 @@ def test_calibration_tail_roundtrip_and_constant_normals():
     k = ECDFCalibrator().fit(np.full(50, 2.0))
     r = k.transform(np.array([2.0, 2.0 + 1e-9, 2.0 + 2e-9]))
     assert r[1] < r[2] < 1.0 and k.scale_ > 0
+
+
+# ---- WP0 S4: noisy_or in log space -----------------------------------------------------------------------------------
+def test_noisy_or_log_same_ranking_as_product_on_unsaturated_inputs():
+    from scipy.stats import spearmanr
+    from common.combiner import noisy_or_score, noisy_or_stat
+    from common.metrics import budget_threshold
+    X = np.random.default_rng(0).uniform(0.0, 0.9, size=(3000, 4))
+    old = 1.0 - np.prod(1.0 - X, axis=1); new = noisy_or_score(X)
+    assert spearmanr(old, new).correlation > 1 - 1e-12      # 1.0 up to float rounding of the correlation itself
+    assert np.all(np.argsort(old, kind="stable") == np.argsort(new, kind="stable"))
+    S = noisy_or_stat(X)
+    for q in (0.5, 0.9, 0.99):                       # same alarm set at a threshold mapped through the transform
+        t_old = np.quantile(old, q); t_new = (lambda s: s / (s + 4))(-np.log1p(-t_old))
+        assert np.array_equal(old >= t_old, new >= t_new - 1e-15)
+    t_o = budget_threshold(old, 0.01); t_n = budget_threshold(new, 0.01)
+    assert np.array_equal(old >= t_o, new >= t_n) and 0.0 <= new.min() and new.max() < 1.0 and S.min() >= 0
+
+
+def test_noisy_or_log_no_saturation_with_16_correlated_layers():
+    from common.combiner import noisy_or_score
+    from common.metrics import budget_threshold
+    rng = np.random.default_rng(1)
+    e = rng.uniform(1.0, 6.0, size=(5000, 1))                         # shared severity: 1 - s = 10**-e
+    X = 1.0 - 10.0 ** -(e * rng.uniform(0.8, 1.2, (5000, 16)))        # 16 correlated layers
+    X[:200] = 1.0 - 10.0 ** -(rng.uniform(4.0, 8.0, (200, 1)) * rng.uniform(0.95, 1.05, (200, 16)))   # 4% extreme rows: prod(1 - s) < 1e-60
+    old = 1.0 - np.prod(1.0 - X, axis=1); new = noisy_or_score(X)
+    assert (old == old.max()).mean() > 0.01                      # old form ties at the top above the budget
+    assert (new == new.max()).mean() <= 0.01                     # new form: ties at the top within the budget
+    assert budget_threshold(old, 0.01) > old.max()               # old: threshold above every score -> 0 alarms
+    t = budget_threshold(new, 0.01)
+    assert 0 < (new >= t).mean() <= 0.01
