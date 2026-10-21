@@ -1,0 +1,391 @@
+{
+ "run": "0001/p0/r5",
+ "onset_index": 3,
+ "note": "combined Evidence of one test run (as Evidence.to_dict) + the per-layer scores in details",
+ "evidence": [
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 0.0,
+   "score": 0.06692059206402777,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "statistic": 1.1379467925872966,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.0,
+     "gps.cusum_ekf": 0.0,
+     "gps.dr_resid_10": 0.0,
+     "gps.ekf_nis": 0.0,
+     "gps.jerk": 0.0,
+     "gps.lat_accel": 0.0,
+     "gps.lidar_course": 0.0,
+     "gps.lidar_resid_1": 0.0,
+     "gps.lidar_resid_3": 0.0,
+     "gps.lidar_z_1": 0.0,
+     "gps.lidar_z_10": 0.0,
+     "gps.lidar_z_3": 0.0,
+     "gps.long_accel": 0.0,
+     "gps.max_speed": 0.6795236488115327,
+     "gps.vel_pos_consistency": 0.0,
+     "gps.yaw_rate": 0.0
+    }
+   },
+   "sample_id": "0001/p0/r5/0"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 1.0,
+   "score": 0.09864519550648473,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "statistic": 3.705511098480402,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.0,
+     "gps.cusum_ekf": 0.0,
+     "gps.dr_resid_10": 0.09686128923388458,
+     "gps.ekf_nis": 0.17168892531700497,
+     "gps.jerk": 0.0,
+     "gps.lat_accel": 0.3306012246275493,
+     "gps.lidar_course": 0.0,
+     "gps.lidar_resid_1": 0.14439998071452678,
+     "gps.lidar_resid_3": 0.11031290680295068,
+     "gps.lidar_z_1": 0.13374475676196904,
+     "gps.lidar_z_10": 0.16532471915529628,
+     "gps.lidar_z_3": 0.14464104912974302,
+     "gps.long_accel": 0.39771467142375005,
+     "gps.max_speed": 0.6743165710428619,
+     "gps.vel_pos_consistency": 0.11556819825466468,
+     "gps.yaw_rate": 0.39882358613374475
+    }
+   },
+   "sample_id": "0001/p0/r5/1"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 2.0,
+   "score": 0.45894604888867463,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "statistic": 12.653723217976761,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.0,
+     "gps.cusum_ekf": 0.0,
+     "gps.dr_resid_10": 0.24439515934622247,
+     "gps.ekf_nis": 0.37563280458994264,
+     "gps.jerk": 0.2278578660623885,
+     "gps.lat_accel": 0.807868473072658,
+     "gps.lidar_course": 0.6882021117593173,
+     "gps.lidar_resid_1": 0.5870015910515404,
+     "gps.lidar_resid_3": 0.35528663034569213,
+     "gps.lidar_z_1": 0.5355575912443952,
+     "gps.lidar_z_10": 0.430596403259245,
+     "gps.lidar_z_3": 0.36512222168651465,
+     "gps.long_accel": 0.7970686080709706,
+     "gps.max_speed": 0.6341063593847934,
+     "gps.vel_pos_consistency": 0.8250807579190974,
+     "gps.yaw_rate": 0.7477942240007714
+    }
+   },
+   "sample_id": "0001/p0/r5/2"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 3.0,
+   "score": 0.15539270044838724,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "statistic": 6.741815685943212,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.0,
+     "gps.cusum_ekf": 0.0,
+     "gps.dr_resid_10": 0.2550503832987802,
+     "gps.ekf_nis": 0.0982112723590955,
+     "gps.jerk": 0.6850682223615062,
+     "gps.lat_accel": 0.4197483245745142,
+     "gps.lidar_course": 0.6440865917747457,
+     "gps.lidar_resid_1": 0.14160358709801843,
+     "gps.lidar_resid_3": 0.3715346415312666,
+     "gps.lidar_z_1": 0.1364447230123909,
+     "gps.lidar_z_10": 0.3300708741140736,
+     "gps.lidar_z_3": 0.2792536521864905,
+     "gps.long_accel": 0.2772768911817174,
+     "gps.max_speed": 0.6056602863892773,
+     "gps.vel_pos_consistency": 0.16884431801745337,
+     "gps.yaw_rate": 0.49293669543416424
+    }
+   },
+   "sample_id": "0001/p0/r5/3"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 4.0,
+   "score": 0.6469311990742973,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "statistic": 16.292242661454665,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.0,
+     "gps.cusum_ekf": 0.0,
+     "gps.dr_resid_10": 0.21160985487681405,
+     "gps.ekf_nis": 0.9690950291692783,
+     "gps.jerk": 0.4380213104479051,
+     "gps.lat_accel": 0.7020876524757727,
+     "gps.lidar_course": 0.4855600019285473,
+     "gps.lidar_resid_1": 0.8597946097102358,
+     "gps.lidar_resid_3": 0.507111518248879,
+     "gps.lidar_z_1": 0.8340967166481847,
+     "gps.lidar_z_10": 0.3779952750590618,
+     "gps.lidar_z_3": 0.40243961236198833,
+     "gps.long_accel": 0.4356106262957427,
+     "gps.max_speed": 0.6466901306590811,
+     "gps.vel_pos_consistency": 0.8245504074056217,
+     "gps.yaw_rate": 0.7314497854491104
+    }
+   },
+   "sample_id": "0001/p0/r5/4"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 5.0,
+   "score": 0.9985053758256593,
+   "alarm": true,
+   "reason": "GPS domain alarm (statistic 54.4); strongest: gps.lidar_resid_1 (0.999): GPS displacement disagrees with the vehicle's LiDAR odometry by 2.1 m; gps.lidar_z_1 (0.999): GPS displacement disagrees with the vehicle's LiDAR odometry by 3.7 m; gps.cusum_dr (0.998): Sustained small GPS-vs-dead-reckoning branch (odometry + heading) disagreement accumulated by the CUSUM test (slow drift or spoof)",
+   "details": {
+    "statistic": 54.38441526906526,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.9979268116291403,
+     "gps.cusum_ekf": 0.9671182681645051,
+     "gps.dr_resid_10": 0.7527120196711827,
+     "gps.ekf_nis": 0.9899233402439612,
+     "gps.jerk": 0.8659177474567282,
+     "gps.lat_accel": 0.9515934622245793,
+     "gps.lidar_course": 0.9653825755749482,
+     "gps.lidar_resid_1": 0.9994696494865243,
+     "gps.lidar_resid_3": 0.9773877826527169,
+     "gps.lidar_z_1": 0.9991803673882648,
+     "gps.lidar_z_10": 0.9279205438503447,
+     "gps.lidar_z_3": 0.9452292560628707,
+     "gps.long_accel": 0.7366568632177812,
+     "gps.max_speed": 0.565112578949906,
+     "gps.vel_pos_consistency": 0.8998601803191746,
+     "gps.yaw_rate": 0.8583964129019815
+    }
+   },
+   "sample_id": "0001/p0/r5/5"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 6.0,
+   "score": 0.9926715201774263,
+   "alarm": true,
+   "reason": "GPS domain alarm (statistic 43.4); strongest: gps.cusum_dr (1.000): Sustained small GPS-vs-dead-reckoning branch (odometry + heading) disagreement accumulated by the CUSUM test (slow drift or spoof); gps.lidar_resid_3 (0.996): GPS displacement disagrees with the vehicle's LiDAR odometry by 3.2 m; gps.ekf_nis (0.994): GPS fix is inconsistent with the vehicle's own motion (IMU, odometry, heading): innovation chi-square test failed",
+   "details": {
+    "statistic": 43.360441482472396,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.9998553589508703,
+     "gps.cusum_ekf": 0.0,
+     "gps.dr_resid_10": 0.8658213200906417,
+     "gps.ekf_nis": 0.9942625717178535,
+     "gps.jerk": 0.9344776047442264,
+     "gps.lat_accel": 0.8017935490092089,
+     "gps.lidar_course": 0.9204474229786413,
+     "gps.lidar_resid_1": 0.8243093389904055,
+     "gps.lidar_resid_3": 0.9956607685261077,
+     "gps.lidar_z_1": 0.8162094402391399,
+     "gps.lidar_z_10": 0.9399257509281134,
+     "gps.lidar_z_3": 0.9904054770743937,
+     "gps.long_accel": 0.5604840653777542,
+     "gps.max_speed": 0.5348825996817896,
+     "gps.vel_pos_consistency": 0.6110120052070778,
+     "gps.yaw_rate": 0.8003471385179114
+    }
+   },
+   "sample_id": "0001/p0/r5/6"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 7.0,
+   "score": 0.9999679925665266,
+   "alarm": true,
+   "reason": "GPS domain alarm (statistic 83.0); strongest: gps.cusum_dr (1.000): Sustained small GPS-vs-dead-reckoning branch (odometry + heading) disagreement accumulated by the CUSUM test (slow drift or spoof); gps.lidar_resid_3 (1.000): GPS displacement disagrees with the vehicle's LiDAR odometry by 4.3 m; gps.lidar_z_3 (0.999): GPS displacement disagrees with the vehicle's LiDAR odometry by 4.0 m",
+   "details": {
+    "statistic": 82.96421509579918,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.9999999999999982,
+     "gps.cusum_ekf": 0.0,
+     "gps.dr_resid_10": 0.954245214791958,
+     "gps.ekf_nis": 0.9968178969191457,
+     "gps.jerk": 0.7600887131767996,
+     "gps.lat_accel": 0.7736849717949954,
+     "gps.lidar_course": 0.8137987560869775,
+     "gps.lidar_resid_1": 0.9878501518731015,
+     "gps.lidar_resid_3": 0.9999517863169568,
+     "gps.lidar_z_1": 0.9894412034135288,
+     "gps.lidar_z_10": 0.9807145267827009,
+     "gps.lidar_z_3": 0.9993732221204378,
+     "gps.long_accel": 0.6516079263294923,
+     "gps.max_speed": 0.5297719492792055,
+     "gps.vel_pos_consistency": 0.8531411214502675,
+     "gps.yaw_rate": 0.8019864037413819
+    }
+   },
+   "sample_id": "0001/p0/r5/7"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 8.0,
+   "score": 0.9999709621466034,
+   "alarm": true,
+   "reason": "GPS domain alarm (statistic 84.5); strongest: gps.cusum_dr (1.000): Sustained small GPS-vs-dead-reckoning branch (odometry + heading) disagreement accumulated by the CUSUM test (slow drift or spoof); gps.lidar_resid_3 (1.000): GPS displacement disagrees with the vehicle's LiDAR odometry by 3.9 m; gps.lidar_z_3 (0.999): GPS displacement disagrees with the vehicle's LiDAR odometry by 3.8 m",
+   "details": {
+    "statistic": 84.53031376079694,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.9999999999999999,
+     "gps.cusum_ekf": 0.0,
+     "gps.dr_resid_10": 0.9870305192613664,
+     "gps.ekf_nis": 0.9953714864278482,
+     "gps.jerk": 0.5491056361795478,
+     "gps.lat_accel": 0.6147244588014078,
+     "gps.lidar_course": 0.7392121884190733,
+     "gps.lidar_resid_1": 0.9915143917843884,
+     "gps.lidar_resid_3": 0.9998553589508703,
+     "gps.lidar_z_1": 0.9941179306687238,
+     "gps.lidar_z_10": 0.9921893833469939,
+     "gps.lidar_z_3": 0.9991803673882648,
+     "gps.long_accel": 0.7980328817318355,
+     "gps.max_speed": 0.4752904874403356,
+     "gps.vel_pos_consistency": 0.43773202834964564,
+     "gps.yaw_rate": 0.7660672098741623
+    }
+   },
+   "sample_id": "0001/p0/r5/8"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 9.0,
+   "score": 0.9999950046601409,
+   "alarm": true,
+   "reason": "GPS domain alarm (statistic 112.8); strongest: gps.cusum_dr (1.000): Sustained small GPS-vs-dead-reckoning branch (odometry + heading) disagreement accumulated by the CUSUM test (slow drift or spoof); gps.lidar_resid_3 (1.000): GPS displacement disagrees with the vehicle's LiDAR odometry by 5.2 m; gps.lidar_z_3 (1.000): GPS displacement disagrees with the vehicle's LiDAR odometry by 5.3 m",
+   "details": {
+    "statistic": 112.84028087534367,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.9999999999999999,
+     "gps.cusum_ekf": 0.855744660334603,
+     "gps.dr_resid_10": 0.9979268116291403,
+     "gps.ekf_nis": 0.9983125210934863,
+     "gps.jerk": 0.4021503302637289,
+     "gps.lat_accel": 0.9491345643893737,
+     "gps.lidar_course": 0.9838966298635553,
+     "gps.lidar_resid_1": 0.9999537550981192,
+     "gps.lidar_resid_3": 0.9999753531142894,
+     "gps.lidar_z_1": 0.9999653131546278,
+     "gps.lidar_z_10": 0.9986018031917459,
+     "gps.lidar_z_3": 0.9999713090346557,
+     "gps.long_accel": 0.8075309772913553,
+     "gps.max_speed": 0.4124198447519406,
+     "gps.vel_pos_consistency": 0.7520852417916205,
+     "gps.yaw_rate": 0.9191456535364737
+    }
+   },
+   "sample_id": "0001/p0/r5/9"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 10.0,
+   "score": 0.9999983845020978,
+   "alarm": true,
+   "reason": "GPS domain alarm (statistic 131.0); strongest: gps.cusum_dr (1.000): Sustained small GPS-vs-dead-reckoning branch (odometry + heading) disagreement accumulated by the CUSUM test (slow drift or spoof); gps.lidar_z_3 (1.000): GPS displacement disagrees with the vehicle's LiDAR odometry by 8.0 m; gps.lidar_resid_3 (1.000): GPS displacement disagrees with the vehicle's LiDAR odometry by 7.5 m",
+   "details": {
+    "statistic": 130.99728730757624,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.9999999999999999,
+     "gps.cusum_ekf": 0.9901161949761342,
+     "gps.dr_resid_10": 0.9999035726339135,
+     "gps.ekf_nis": 0.9997107179017405,
+     "gps.jerk": 0.4046574417819777,
+     "gps.lat_accel": 0.8570464297767707,
+     "gps.lidar_course": 0.9066583096282725,
+     "gps.lidar_resid_1": 0.9999893345979353,
+     "gps.lidar_resid_3": 0.9999977503606231,
+     "gps.lidar_z_1": 0.9999942416834974,
+     "gps.lidar_z_10": 0.9999679045431934,
+     "gps.lidar_z_3": 0.9999983824994597,
+     "gps.long_accel": 0.6340581457017501,
+     "gps.max_speed": 0.38426305385468396,
+     "gps.vel_pos_consistency": 0.9642736608649535,
+     "gps.yaw_rate": 0.9085386432669592
+    }
+   },
+   "sample_id": "0001/p0/r5/10"
+  },
+  {
+   "domain": "gps",
+   "layer": "combined",
+   "name": "gps.combined",
+   "t": 11.0,
+   "score": 0.9999986870765906,
+   "alarm": true,
+   "reason": "GPS domain alarm (statistic 134.3); strongest: gps.cusum_dr (1.000): Sustained small GPS-vs-dead-reckoning branch (odometry + heading) disagreement accumulated by the CUSUM test (slow drift or spoof); gps.lidar_z_3 (1.000): GPS displacement disagrees with the vehicle's LiDAR odometry by 9.0 m; gps.ekf_nis (1.000): GPS fix is inconsistent with the vehicle's own motion (IMU, odometry, heading): innovation chi-square test failed",
+   "details": {
+    "statistic": 134.33296989556115,
+    "method": "noisy_or_log",
+    "layer_scores": {
+     "gps.cusum_dr": 0.9999999999999999,
+     "gps.cusum_ekf": 0.9378525625572538,
+     "gps.dr_resid_10": 0.9999674797887569,
+     "gps.ekf_nis": 0.9999987427790711,
+     "gps.jerk": 0.8922424183983414,
+     "gps.lat_accel": 0.6759076225832892,
+     "gps.lidar_course": 0.8053613615544092,
+     "gps.lidar_resid_1": 0.9996625042186973,
+     "gps.lidar_resid_3": 0.9999986683793639,
+     "gps.lidar_z_1": 0.9999517863169568,
+     "gps.lidar_z_10": 0.9999882257382333,
+     "gps.lidar_z_3": 0.9999994476324605,
+     "gps.long_accel": 0.9620076177619208,
+     "gps.max_speed": 0.30432476736897934,
+     "gps.vel_pos_consistency": 0.927197338604696,
+     "gps.yaw_rate": 0.9121064558121595
+    }
+   },
+   "sample_id": "0001/p0/r5/11"
+  }
+ ]
+}

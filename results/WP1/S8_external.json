@@ -1,0 +1,892 @@
+{
+ "uav": {
+  "layers_available": [
+   "gps.cusum_ekf",
+   "gps.ekf_nis",
+   "gps.fix_invalid",
+   "gps.hdop_high",
+   "gps.hdop_jump",
+   "gps.jam_ind_jump",
+   "gps.noise_jump",
+   "gps.sat_jump",
+   "gps.sat_low",
+   "gps.vel_pos_consistency"
+  ],
+  "layers_not_available": {
+   "gps.dr_resid_10 (B2)": "needs wheel odometry",
+   "gps.cusum_dr": "needs wheel odometry and compass heading",
+   "gps.lidar_*": "no LiDAR in the dataset",
+   "kinematic L1 rules": "car limits do not describe a multirotor"
+  },
+  "calibration": "benign flight, 1% budget, tie-safe (in-sample for the benign flight)",
+  "first_spoofed_fix_s": 118.0,
+  "v2_reference": "GPS-vs-IMU residual alarm at 118.0 s, 0 false alarms; PX4 EKF never alarms",
+  "layers": {
+   "benign": {
+    "gps.cusum_ekf": {
+     "fixes": 248,
+     "alarms": 1,
+     "alarm_times_s": [
+      162.0
+     ]
+    },
+    "gps.ekf_nis": {
+     "fixes": 248,
+     "alarms": 2,
+     "alarm_times_s": [
+      94.0,
+      162.0
+     ]
+    },
+    "gps.fix_invalid": {
+     "fixes": 248,
+     "alarms": 0,
+     "alarm_times_s": []
+    },
+    "gps.hdop_high": {
+     "fixes": 248,
+     "alarms": 0,
+     "alarm_times_s": []
+    },
+    "gps.hdop_jump": {
+     "fixes": 248,
+     "alarms": 0,
+     "alarm_times_s": []
+    },
+    "gps.jam_ind_jump": {
+     "fixes": 248,
+     "alarms": 1,
+     "alarm_times_s": [
+      227.0
+     ]
+    },
+    "gps.noise_jump": {
+     "fixes": 248,
+     "alarms": 1,
+     "alarm_times_s": [
+      129.0
+     ]
+    },
+    "gps.sat_jump": {
+     "fixes": 248,
+     "alarms": 0,
+     "alarm_times_s": []
+    },
+    "gps.sat_low": {
+     "fixes": 248,
+     "alarms": 0,
+     "alarm_times_s": []
+    },
+    "gps.vel_pos_consistency": {
+     "fixes": 248,
+     "alarms": 2,
+     "alarm_times_s": [
+      163.0,
+      245.0
+     ]
+    }
+   },
+   "jamming": {
+    "gps.cusum_ekf": {
+     "fixes": 224,
+     "alarms": 14,
+     "alarm_times_s": [
+      173.0,
+      176.0,
+      177.0,
+      178.0,
+      188.0,
+      189.0,
+      191.0,
+      192.0,
+      193.0,
+      197.0,
+      203.0,
+      204.0,
+      210.0,
+      213.0
+     ]
+    },
+    "gps.ekf_nis": {
+     "fixes": 224,
+     "alarms": 18,
+     "alarm_times_s": [
+      25.0,
+      173.0,
+      175.0,
+      176.0,
+      177.0,
+      178.0,
+      181.0,
+      182.0,
+      185.0,
+      188.0,
+      191.0,
+      193.0,
+      197.0,
+      200.0,
+      203.0
+     ]
+    },
+    "gps.fix_invalid": {
+     "fixes": 224,
+     "alarms": 1,
+     "alarm_times_s": [
+      175.0
+     ]
+    },
+    "gps.hdop_high": {
+     "fixes": 224,
+     "alarms": 3,
+     "alarm_times_s": [
+      173.0,
+      174.0,
+      175.0
+     ]
+    },
+    "gps.hdop_jump": {
+     "fixes": 224,
+     "alarms": 4,
+     "alarm_times_s": [
+      172.0,
+      173.0,
+      175.0,
+      176.0
+     ]
+    },
+    "gps.jam_ind_jump": {
+     "fixes": 224,
+     "alarms": 1,
+     "alarm_times_s": [
+      151.0
+     ]
+    },
+    "gps.noise_jump": {
+     "fixes": 224,
+     "alarms": 17,
+     "alarm_times_s": [
+      173.0,
+      174.0,
+      176.0,
+      177.0,
+      179.0,
+      185.0,
+      186.0,
+      188.0,
+      189.0,
+      190.0,
+      194.0,
+      195.0,
+      202.0,
+      209.0,
+      215.0
+     ]
+    },
+    "gps.sat_jump": {
+     "fixes": 224,
+     "alarms": 6,
+     "alarm_times_s": [
+      39.0,
+      172.0,
+      173.0,
+      176.0,
+      191.0,
+      209.0
+     ]
+    },
+    "gps.sat_low": {
+     "fixes": 224,
+     "alarms": 0,
+     "alarm_times_s": []
+    },
+    "gps.vel_pos_consistency": {
+     "fixes": 224,
+     "alarms": 20,
+     "alarm_times_s": [
+      26.0,
+      167.0,
+      173.0,
+      174.0,
+      176.0,
+      177.0,
+      178.0,
+      179.0,
+      188.0,
+      189.0,
+      193.0,
+      197.0,
+      202.0,
+      203.0,
+      209.0
+     ]
+    }
+   },
+   "spoofing": {
+    "gps.cusum_ekf": {
+     "fixes": 138,
+     "alarms": 19,
+     "alarm_times_s": [
+      118.0,
+      119.0,
+      120.0,
+      121.0,
+      122.0,
+      123.0,
+      124.0,
+      125.0,
+      126.0,
+      127.0,
+      128.0,
+      129.0,
+      130.0,
+      131.0,
+      132.0
+     ],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 0,
+     "pre_onset_fa": 0.0,
+     "pre_onset_fa_wilson95": [
+      0.0,
+      0.03152946120208532
+     ],
+     "first_alarm_after_118s": 118.000345,
+     "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+     "fraction_flagged_from_118s": 1.0,
+     "fraction_flagged_118_to_138s": 1.0,
+     "fixes_from_118s": 19
+    },
+    "gps.ekf_nis": {
+     "fixes": 138,
+     "alarms": 13,
+     "alarm_times_s": [
+      10.0,
+      118.0,
+      119.0,
+      120.0,
+      121.0,
+      125.0,
+      126.0,
+      127.0,
+      128.0,
+      129.0,
+      130.0,
+      132.0,
+      136.0
+     ],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 1,
+     "pre_onset_fa": 0.00847457627118644,
+     "pre_onset_fa_wilson95": [
+      0.0014975019757751395,
+      0.04644671412119009
+     ],
+     "first_alarm_after_118s": 118.000345,
+     "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+     "fraction_flagged_from_118s": 0.631578947368421,
+     "fraction_flagged_118_to_138s": 0.631578947368421,
+     "fixes_from_118s": 19
+    },
+    "gps.fix_invalid": {
+     "fixes": 138,
+     "alarms": 0,
+     "alarm_times_s": [],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 0,
+     "pre_onset_fa": 0.0,
+     "pre_onset_fa_wilson95": [
+      0.0,
+      0.03152946120208532
+     ],
+     "first_alarm_after_118s": null,
+     "delay_from_first_spoofed_fix_s": null,
+     "fraction_flagged_from_118s": 0.0,
+     "fraction_flagged_118_to_138s": 0.0,
+     "fixes_from_118s": 19
+    },
+    "gps.hdop_high": {
+     "fixes": 138,
+     "alarms": 15,
+     "alarm_times_s": [
+      118.0,
+      119.0,
+      120.0,
+      121.0,
+      122.0,
+      123.0,
+      124.0,
+      125.0,
+      126.0,
+      127.0,
+      128.0,
+      129.0,
+      130.0,
+      131.0,
+      132.0
+     ],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 0,
+     "pre_onset_fa": 0.0,
+     "pre_onset_fa_wilson95": [
+      0.0,
+      0.03152946120208532
+     ],
+     "first_alarm_after_118s": 118.000345,
+     "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+     "fraction_flagged_from_118s": 0.7894736842105263,
+     "fraction_flagged_118_to_138s": 0.7894736842105263,
+     "fixes_from_118s": 19
+    },
+    "gps.hdop_jump": {
+     "fixes": 138,
+     "alarms": 5,
+     "alarm_times_s": [
+      118.0,
+      119.0,
+      120.0,
+      121.0,
+      122.0
+     ],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 0,
+     "pre_onset_fa": 0.0,
+     "pre_onset_fa_wilson95": [
+      0.0,
+      0.03152946120208532
+     ],
+     "first_alarm_after_118s": 118.000345,
+     "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+     "fraction_flagged_from_118s": 0.2631578947368421,
+     "fraction_flagged_118_to_138s": 0.2631578947368421,
+     "fixes_from_118s": 19
+    },
+    "gps.jam_ind_jump": {
+     "fixes": 138,
+     "alarms": 2,
+     "alarm_times_s": [
+      67.0,
+      68.0
+     ],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 2,
+     "pre_onset_fa": 0.01694915254237288,
+     "pre_onset_fa_wilson95": [
+      0.004660344845762193,
+      0.059698626146082956
+     ],
+     "first_alarm_after_118s": null,
+     "delay_from_first_spoofed_fix_s": null,
+     "fraction_flagged_from_118s": 0.0,
+     "fraction_flagged_118_to_138s": 0.0,
+     "fixes_from_118s": 19
+    },
+    "gps.noise_jump": {
+     "fixes": 138,
+     "alarms": 4,
+     "alarm_times_s": [
+      83.0,
+      119.0,
+      120.0,
+      121.0
+     ],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 1,
+     "pre_onset_fa": 0.00847457627118644,
+     "pre_onset_fa_wilson95": [
+      0.0014975019757751395,
+      0.04644671412119009
+     ],
+     "first_alarm_after_118s": 119.006003,
+     "delay_from_first_spoofed_fix_s": 1.0060030000000069,
+     "fraction_flagged_from_118s": 0.15789473684210525,
+     "fraction_flagged_118_to_138s": 0.15789473684210525,
+     "fixes_from_118s": 19
+    },
+    "gps.sat_jump": {
+     "fixes": 138,
+     "alarms": 2,
+     "alarm_times_s": [
+      118.0,
+      122.0
+     ],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 0,
+     "pre_onset_fa": 0.0,
+     "pre_onset_fa_wilson95": [
+      0.0,
+      0.03152946120208532
+     ],
+     "first_alarm_after_118s": 118.000345,
+     "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+     "fraction_flagged_from_118s": 0.10526315789473684,
+     "fraction_flagged_118_to_138s": 0.10526315789473684,
+     "fixes_from_118s": 19
+    },
+    "gps.sat_low": {
+     "fixes": 138,
+     "alarms": 0,
+     "alarm_times_s": [],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 0,
+     "pre_onset_fa": 0.0,
+     "pre_onset_fa_wilson95": [
+      0.0,
+      0.03152946120208532
+     ],
+     "first_alarm_after_118s": null,
+     "delay_from_first_spoofed_fix_s": null,
+     "fraction_flagged_from_118s": 0.0,
+     "fraction_flagged_118_to_138s": 0.0,
+     "fixes_from_118s": 19
+    },
+    "gps.vel_pos_consistency": {
+     "fixes": 138,
+     "alarms": 12,
+     "alarm_times_s": [
+      119.0,
+      120.0,
+      121.0,
+      122.0,
+      128.0,
+      130.0,
+      131.0,
+      132.0,
+      133.0,
+      134.0,
+      135.0,
+      136.0
+     ],
+     "pre_onset_fixes": 118,
+     "pre_onset_alarms": 0,
+     "pre_onset_fa": 0.0,
+     "pre_onset_fa_wilson95": [
+      0.0,
+      0.03152946120208532
+     ],
+     "first_alarm_after_118s": 119.006003,
+     "delay_from_first_spoofed_fix_s": 1.0060030000000069,
+     "fraction_flagged_from_118s": 0.631578947368421,
+     "fraction_flagged_118_to_138s": 0.631578947368421,
+     "fixes_from_118s": 19
+    }
+   }
+  },
+  "combined": {
+   "benign": {
+    "fixes": 248,
+    "alarms": 2,
+    "alarm_times_s": [
+     8.0,
+     71.0
+    ],
+    "statistic_threshold": 14.115825007644988
+   },
+   "jamming": {
+    "fixes": 224,
+    "alarms": 28,
+    "alarm_times_s": [
+     81.0,
+     172.0,
+     173.0,
+     174.0,
+     175.0,
+     176.0,
+     177.0,
+     178.0,
+     179.0,
+     185.0,
+     186.0,
+     188.0,
+     189.0,
+     190.0,
+     191.0
+    ],
+    "statistic_threshold": 14.115825007644988
+   },
+   "spoofing": {
+    "fixes": 138,
+    "alarms": 22,
+    "alarm_times_s": [
+     27.0,
+     29.0,
+     68.0,
+     118.0,
+     119.0,
+     120.0,
+     121.0,
+     122.0,
+     123.0,
+     124.0,
+     125.0,
+     126.0,
+     127.0,
+     128.0,
+     129.0
+    ],
+    "pre_onset_fixes": 118,
+    "pre_onset_alarms": 3,
+    "pre_onset_fa": 0.025423728813559324,
+    "pre_onset_fa_wilson95": [
+     0.00868335709742743,
+     0.07209036878929763
+    ],
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0,
+    "fraction_flagged_118_to_138s": 1.0,
+    "fixes_from_118s": 19,
+    "statistic_threshold": 14.115825007644988
+   }
+  },
+  "ablation": {
+   "all_but_gps.cusum_ekf": {
+    "pre_onset_alarms": 3,
+    "pre_onset_fa": 0.025423728813559324,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 0.8421052631578947
+   },
+   "all_but_gps.ekf_nis": {
+    "pre_onset_alarms": 2,
+    "pre_onset_fa": 0.01694915254237288,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   },
+   "all_but_gps.fix_invalid": {
+    "pre_onset_alarms": 3,
+    "pre_onset_fa": 0.025423728813559324,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   },
+   "all_but_gps.hdop_high": {
+    "pre_onset_alarms": 1,
+    "pre_onset_fa": 0.00847457627118644,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   },
+   "all_but_gps.hdop_jump": {
+    "pre_onset_alarms": 3,
+    "pre_onset_fa": 0.025423728813559324,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   },
+   "all_but_gps.jam_ind_jump": {
+    "pre_onset_alarms": 2,
+    "pre_onset_fa": 0.01694915254237288,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   },
+   "all_but_gps.noise_jump": {
+    "pre_onset_alarms": 3,
+    "pre_onset_fa": 0.025423728813559324,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   },
+   "all_but_gps.sat_jump": {
+    "pre_onset_alarms": 3,
+    "pre_onset_fa": 0.025423728813559324,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   },
+   "all_but_gps.sat_low": {
+    "pre_onset_alarms": 3,
+    "pre_onset_fa": 0.025423728813559324,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   },
+   "all_but_gps.vel_pos_consistency": {
+    "pre_onset_alarms": 1,
+    "pre_onset_fa": 0.00847457627118644,
+    "first_alarm_after_118s": 118.000345,
+    "delay_from_first_spoofed_fix_s": 0.00034499999999582087,
+    "fraction_flagged_from_118s": 1.0
+   }
+  },
+  "layers_firing_within_2s_of_118s": [
+   "gps.cusum_ekf",
+   "gps.ekf_nis",
+   "gps.hdop_high",
+   "gps.hdop_jump",
+   "gps.noise_jump",
+   "gps.sat_jump",
+   "gps.vel_pos_consistency"
+  ]
+ },
+ "avgps": {
+  "layers_run": [
+   "gps.cusum_dr",
+   "gps.cusum_ekf",
+   "gps.dr_resid_10",
+   "gps.ekf_nis",
+   "gps.jerk",
+   "gps.lat_accel",
+   "gps.long_accel",
+   "gps.max_speed",
+   "gps.yaw_rate"
+  ],
+  "not_available": {
+   "gps.vel_pos_consistency": "no Doppler velocity in AV-GPS",
+   "gps.lidar_*": "no LiDAR",
+   "IMU acceleration": "absent (EKF runs without it)"
+  },
+  "test_rows": 7526,
+  "test_normal_rows": 5415,
+  "test_attack_rows": 2111,
+  "test_sessions": {
+   "f2:0-1706": {
+    "label": 1,
+    "rows": 1706,
+    "mean_numsats": 0.014654161781946073,
+    "mean_hdop": 99.68780773739742
+   },
+   "f2:1706-6890": {
+    "label": 0,
+    "rows": 5184,
+    "mean_numsats": 8.38966049382716,
+    "mean_hdop": 1.5112461419753087
+   },
+   "f3:0-142": {
+    "label": 0,
+    "rows": 142,
+    "mean_numsats": 7.436619718309859,
+    "mean_hdop": 1.379577464788732
+   },
+   "f3:142-323": {
+    "label": 1,
+    "rows": 181,
+    "mean_numsats": 0.287292817679558,
+    "mean_hdop": 95.33149171270718
+   },
+   "f3:323-412": {
+    "label": 0,
+    "rows": 89,
+    "mean_numsats": 7.415730337078652,
+    "mean_hdop": 1.3280898876404492
+   },
+   "f3:412-636": {
+    "label": 1,
+    "rows": 224,
+    "mean_numsats": 0.25,
+    "mean_hdop": 94.62142857142858
+   }
+  },
+  "attack_rows_with_step_over_100km": 0.011842728564661297,
+  "calibration": "own: val sessions' normal rows, 1% budget tie-safe; kitti: raw thresholds fitted on the KITTI dev drives, unchanged",
+  "ekf_config": {
+   "r_pos": 6.0,
+   "gm_phi": 0.0,
+   "gm_sigma": 0.001,
+   "q_acc": 1.0,
+   "sd_dop": 0.05,
+   "sd_odo": 0.2,
+   "k_scale": 0.02,
+   "sd_head_deg": 2.0,
+   "use_dop": false,
+   "use_odo": true,
+   "use_head": true,
+   "acc_mode": "none",
+   "gate_level": 0.0,
+   "release_n": 3,
+   "v0_sd": 3.0
+  },
+  "dr_config": {
+   "r_pos": 6.0,
+   "gm_phi": 0.0,
+   "gm_sigma": 0.001,
+   "sd_odo": 0.2
+  },
+  "layers": {
+   "gps.max_speed": {
+    "threshold_own": 0.062435675244430194,
+    "fa_own": 0.033425669436749766,
+    "detection_own": 0.06158218853623875,
+    "auc": 0.10138066750560865,
+    "detected_by_session": {
+     "f2:0-1706": 0.04220398593200469,
+     "f3:142-323": 0.08287292817679558,
+     "f3:412-636": 0.19196428571428573
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.03356481481481482,
+     "f3:0-142": 0.035211267605633804,
+     "f3:323-412": 0.02247191011235955
+    },
+    "threshold_kitti": 0.2821297573203847,
+    "fa_kitti_threshold": 0.002031394275161588,
+    "detection_kitti_threshold": 0.05542396968261488
+   },
+   "gps.long_accel": {
+    "threshold_own": 0.32472244380112336,
+    "fa_own": 0.03804247460757156,
+    "detection_own": 0.10090004737091426,
+    "auc": 0.11838511984666346,
+    "detected_by_session": {
+     "f2:0-1706": 0.06623681125439625,
+     "f3:142-323": 0.07734806629834254,
+     "f3:412-636": 0.38392857142857145
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.03722993827160494,
+     "f3:0-142": 0.09154929577464789,
+     "f3:323-412": 0.0
+    },
+    "threshold_kitti": 0.2073758255479533,
+    "fa_kitti_threshold": 0.09658356417359187,
+    "detection_kitti_threshold": 0.10516342965419233
+   },
+   "gps.lat_accel": {
+    "threshold_own": 0.14250287223931407,
+    "fa_own": 0.042843951985226225,
+    "detection_own": 0.007579346281383231,
+    "auc": 0.1228937111284032,
+    "detected_by_session": {
+     "f2:0-1706": 0.004103165298944901,
+     "f3:142-323": 0.03314917127071823,
+     "f3:412-636": 0.013392857142857142
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.04398148148148148,
+     "f3:0-142": 0.007042253521126761,
+     "f3:323-412": 0.033707865168539325
+    },
+    "threshold_kitti": 0.23027073252370941,
+    "fa_kitti_threshold": 0.010710987996306556,
+    "detection_kitti_threshold": 0.0033159639981051635
+   },
+   "gps.jerk": {
+    "threshold_own": 0.13683321172173554,
+    "fa_own": 0.04579870729455217,
+    "detection_own": 0.147797252486973,
+    "auc": 0.15958701135895914,
+    "detected_by_session": {
+     "f2:0-1706": 0.09671746776084408,
+     "f3:142-323": 0.09392265193370165,
+     "f3:412-636": 0.5803571428571429
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.045717592592592594,
+     "f3:0-142": 0.07746478873239436,
+     "f3:323-412": 0.0
+    },
+    "threshold_kitti": 0.07020532930361038,
+    "fa_kitti_threshold": 0.19298245614035087,
+    "detection_kitti_threshold": 0.15253434391283752
+   },
+   "gps.yaw_rate": {
+    "threshold_own": 5e-324,
+    "fa_own": 0.021052631578947368,
+    "detection_own": 0.01989578398863098,
+    "auc": 0.4992425902573382,
+    "detected_by_session": {
+     "f2:0-1706": 0.014654161781946073,
+     "f3:142-323": 0.07734806629834254,
+     "f3:412-636": 0.013392857142857142
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.021604938271604937,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.02247191011235955
+    },
+    "threshold_kitti": 0.540223724781803,
+    "fa_kitti_threshold": 0.003878116343490305,
+    "detection_kitti_threshold": 0.0
+   },
+   "gps.dr_resid_10": {
+    "threshold_own": 1000000.0000000001,
+    "fa_own": 0.0,
+    "detection_own": 0.0,
+    "auc": 0.2211873521845952,
+    "detected_by_session": {
+     "f2:0-1706": 0.0,
+     "f3:142-323": 0.0,
+     "f3:412-636": 0.0
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.0,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    },
+    "threshold_kitti": 6.633008957038041,
+    "fa_kitti_threshold": 0.3562326869806094,
+    "detection_kitti_threshold": 0.2288015158692563
+   },
+   "gps.ekf_nis": {
+    "threshold_own": 10.375936545404846,
+    "fa_own": 0.03970452446906741,
+    "detection_own": 0.26243486499289437,
+    "auc": 0.3036167671166248,
+    "detected_by_session": {
+     "f2:0-1706": 0.19871043376318875,
+     "f3:142-323": 0.19337016574585636,
+     "f3:412-636": 0.8035714285714286
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.039544753086419755,
+     "f3:0-142": 0.056338028169014086,
+     "f3:323-412": 0.02247191011235955
+    }
+   },
+   "gps.cusum_ekf": {
+    "threshold_own": 57.427597078023354,
+    "fa_own": 0.07183748845798707,
+    "detection_own": 0.969682614874467,
+    "auc": 0.9840268601394534,
+    "detected_by_session": {
+     "f2:0-1706": 0.9958968347010551,
+     "f3:142-323": 0.9392265193370166,
+     "f3:412-636": 0.7946428571428571
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.07503858024691358,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    }
+   },
+   "gps.cusum_dr": {
+    "threshold_own": 847925.0665758979,
+    "fa_own": 0.5373961218836565,
+    "detection_own": 0.7929891046897205,
+    "auc": 0.8172570972171008,
+    "detected_by_session": {
+     "f2:0-1706": 0.876905041031653,
+     "f3:142-323": 0.0,
+     "f3:412-636": 0.7946428571428571
+    },
+    "fa_by_session": {
+     "f2:1706-6890": 0.5613425925925926,
+     "f3:0-142": 0.0,
+     "f3:323-412": 0.0
+    }
+   }
+  },
+  "combined": {
+   "fa_own": 0.17488457987072945,
+   "detection_own": 0.8195168166745618,
+   "auc": 0.8831004372733424,
+   "detected_by_session": {
+    "f2:0-1706": 0.8962485345838218,
+    "f3:142-323": 0.11602209944751381,
+    "f3:412-636": 0.8035714285714286
+   },
+   "fa_by_session": {
+    "f2:1706-6890": 0.18113425925925927,
+    "f3:0-142": 0.04929577464788732,
+    "f3:323-412": 0.011235955056179775
+   },
+   "detection_attack_rows_excluding_step_over_100km": 0.8173537871524449,
+   "attack_rows_flagged_total": 1730,
+   "attack_rows_flagged_with_step_over_100km": 25,
+   "auc_session_label_permutation_null_q05_q95": [
+    0.11689956272665758,
+    0.8831004372733424
+   ]
+  }
+ }
+}

@@ -1,0 +1,204 @@
+{
+ "G1_tests": {
+  "verdict": "MET",
+  "value": "194 passed, 0 failed"
+ },
+ "G2_false_alarms": {
+  "test_fa_clean_runs": 0.018331226295828066,
+  "nested_dev_fa": 0.012418503570319777,
+  "bound": 0.015,
+  "worst_test_drive_fa": 0.04983922829581994,
+  "test_drives_above_3pct": 1,
+  "verdict": "NOT MET (test)"
+ },
+ "G3_targets": {
+  "doppler": 0.6857142857142857,
+  "meaconing": 0.6142857142857143,
+  "ci_drives_doppler": [
+   0.5142857142857142,
+   0.8571428571428571
+  ],
+  "ci_drives_meaconing": [
+   0.2857142857142857,
+   0.8860714285714266
+  ],
+  "verdict": "NOT MET"
+ },
+ "G4_beats_B2": {
+  "mean_gain": 0.16190476190476188,
+  "mean_gain_ci_drives": [
+   0.10238095238095235,
+   0.21666666666666656
+  ],
+  "worst_attack_difference": 0.0,
+  "fa_dep": 0.018331226295828066,
+  "fa_b2": 0.01580278128950695,
+  "verdict": "MET"
+ },
+ "G5_combining_helps": {
+  "auc_combined": 0.8952701665740905,
+  "best_single_auc": [
+   0.8652993668198474,
+   "gps.ekf_nis"
+  ],
+  "mean_combined": 0.7619047619047619,
+  "best_single_mean": [
+   0.7452380952380953,
+   "gps.lidar_z_3"
+  ],
+  "vs_cusum_dr_diff_ci": [
+   -0.0071428571428571175,
+   0.042857142857142816
+  ],
+  "verdict": "MET"
+ },
+ "G5_ablation": {
+  "layers_earning_their_place_test": [
+   [
+    "gps.dr_resid_10",
+    1.2,
+    0.0017
+   ],
+   [
+    "gps.ekf_nis",
+    1.2,
+    0.0082
+   ],
+   [
+    "gps.cusum_dr",
+    1.2,
+    0.0087
+   ]
+  ],
+  "layers_not_earning": [
+   [
+    "gps.max_speed",
+    -1.0,
+    -0.0044
+   ],
+   [
+    "gps.long_accel",
+    -1.0,
+    0.0013
+   ],
+   [
+    "gps.lat_accel",
+    -0.2,
+    -0.0018
+   ],
+   [
+    "gps.jerk",
+    -0.5,
+    0.0011
+   ],
+   [
+    "gps.yaw_rate",
+    -0.2,
+    -0.0024
+   ],
+   [
+    "gps.vel_pos_consistency",
+    -0.2,
+    -0.001
+   ],
+   [
+    "gps.cusum_ekf",
+    1.0,
+    0.0024
+   ],
+   [
+    "gps.lidar_z_1",
+    0.5,
+    0.0002
+   ],
+   [
+    "gps.lidar_z_3",
+    0.2,
+    0.0017
+   ],
+   [
+    "gps.lidar_z_10",
+    0.2,
+    0.0022
+   ],
+   [
+    "gps.lidar_resid_1",
+    -0.7,
+    -0.0012
+   ],
+   [
+    "gps.lidar_resid_3",
+    0.0,
+    0.0004
+   ],
+   [
+    "gps.lidar_course",
+    0.2,
+    -0.0028
+   ]
+  ],
+  "max_single_drop_cost_points": 1.1904761904761862,
+  "preregistered_expectation_no_drop_costs_2_points": true
+ },
+ "G6_shuffled_label_control": {
+  "auc_mean": 0.4399166899597519,
+  "auc_max": 0.5185155074034536,
+  "verdict": "MET"
+ },
+ "G7_intervals": {
+  "verdict": "MET",
+  "note": "bootstrap over 7 test drives and over runs in S8_kitti.json deployed.bootstrap"
+ },
+ "G8_uav": {
+  "first_alarm_s": 118.000345,
+  "delay_s": 0.00034499999999582087,
+  "pre_onset_fa": 0.025423728813559324,
+  "pre_onset_alarms": 3,
+  "wilson95": [
+   0.00868335709742743,
+   0.07209036878929763
+  ],
+  "verdict": "NOT MET (FA 2.54% > 2%; alarm time met)"
+ },
+ "G9_avgps": {
+  "combined_fa_own": 0.17488457987072945,
+  "combined_detection_own": 0.8195168166745618,
+  "combined_auc": 0.8831004372733424,
+  "auc_null_q05_q95": [
+   0.11689956272665758,
+   0.8831004372733424
+  ],
+  "verdict": "as pre-registered: nothing usable (signal = placeholder artefact; FA far above budget)"
+ },
+ "G10_frozen": {
+  "max_abs_diff_statistic": 0.0,
+  "alarm_disagreements": 0,
+  "evidence_path_alarm_disagreements": 0,
+  "verdict": "MET"
+ },
+ "G11_v2_comparison": {
+  "verdict": "reported (S8_tables.md section 8)"
+ },
+ "regression_vs_S7": {
+  "gps.dr_resid_10": {
+   "max_abs_diff_run_level": 0.0,
+   "fa_diff": 0.0
+  },
+  "gps.ekf_nis": {
+   "max_abs_diff_run_level": 0.0,
+   "fa_diff": 0.0
+  },
+  "gps.cusum_dr": {
+   "max_abs_diff_run_level": 0.0,
+   "fa_diff": 0.0
+  },
+  "gps.cusum_ekf": {
+   "max_abs_diff_run_level": 0.0,
+   "fa_diff": 0.0
+  },
+  "gps.lidar_z_1": {
+   "max_abs_diff_run_level": 0.0,
+   "fa_diff": 0.0
+  }
+ }
+}

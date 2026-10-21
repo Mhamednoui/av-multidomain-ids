@@ -1,0 +1,64 @@
+{
+ "max_abs_diff_statistic": 0.0,
+ "alarm_disagreements": 0,
+ "n_test_rows": 11074,
+ "alarm_rate_test_normal_rows": 0.011977840994160802,
+ "threshold_statistic_matrix": 41.21670634495628,
+ "comb_threshold_calibrated": 0.9899715539270046,
+ "evidence_path_max_abs_score_diff": 0.0,
+ "evidence_path_alarm_disagreements": 0,
+ "config": {
+  "ekf": {
+   "r_pos": 0.3,
+   "gm_phi": 0.8966871517350136,
+   "gm_sigma": 0.9811485967286343,
+   "q_acc": 0.1,
+   "sd_dop": 0.05,
+   "sd_odo": 0.05,
+   "k_scale": 0.02,
+   "sd_head_deg": 2.0,
+   "use_dop": true,
+   "use_odo": true,
+   "use_head": true,
+   "acc_mode": "mid",
+   "gate_level": 0.0,
+   "release_n": 3,
+   "v0_sd": 3.0
+  },
+  "dr": {
+   "r_pos": 0.3,
+   "gm_phi": 0.8966871517350136,
+   "gm_sigma": 0.9811485967286343,
+   "sd_head_deg": 2.0,
+   "sd_odo": 0.05,
+   "scale_sd0": 0.02,
+   "scale_rw": 0.0002,
+   "learn_scale": true,
+   "freeze_h": 8.0,
+   "freeze_nis_level": 0.999,
+   "kappa_freeze": 0.5,
+   "warm": 3,
+   "release_after": 0
+  },
+  "cusum_ekf": {
+   "stat": "axis",
+   "kappa": 1.5
+  },
+  "cusum_dr": {
+   "stat": "nis",
+   "kappa": 2.0
+  }
+ },
+ "files": [
+  "calibrators.npz",
+  "domain.json",
+  "example_evidence_doppler_spoof_run.json",
+  "example_gps_motion_estimates.json"
+ ],
+ "size_bytes": {
+  "calibrators.npz": 1908780,
+  "domain.json": 2011,
+  "example_evidence_doppler_spoof_run.json": 14909,
+  "example_gps_motion_estimates.json": 2599
+ }
+}
