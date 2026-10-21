@@ -1,0 +1,188 @@
+{
+ "D2": {
+  "frac_within_10m": 1.0,
+  "median_dist_m": 1.7059888678365818,
+  "p95": 4.968322964774224,
+  "p99": 5.615727584774979,
+  "median_heading_dev_deg": 1.5422288306385497,
+  "p95_heading_deg": 10.199199104529235,
+  "p99_heading_deg": 30.296161973751147,
+  "n_rows": 20741,
+  "met": true
+ },
+ "D3": {
+  "fa_clean_runs_test_lodo": 0.04108723135271808,
+  "fa_clean_runs_test_valonly": 0.005689001264222503,
+  "nested_heldout_fa_dev": 0.02627645725856998,
+  "lodo_heldout_fa_dev_primary": 0.014753387011233788,
+  "met": false
+ },
+ "D5_run_level_lodo": {
+  "drift": 0.32857142857142857,
+  "accel_drift": 0.38571428571428573,
+  "jump": 0.8714285714285714,
+  "freeze": 0.08571428571428572,
+  "doppler_spoof": 0.4,
+  "meaconing": 0.11428571428571428
+ },
+ "D5_row_level_lodo": {
+  "drift": 0.22635658914728682,
+  "accel_drift": 0.3877284595300261,
+  "jump": 0.5986111111111111,
+  "freeze": 0.17974683544303796,
+  "doppler_spoof": 0.4087301587301587,
+  "meaconing": 0.08356545961002786
+ },
+ "D5_on_road_fraction": {
+  "drift": 0.7736434108527132,
+  "accel_drift": 0.6122715404699739,
+  "jump": 0.4013888888888889,
+  "freeze": 0.8202531645569621,
+  "doppler_spoof": 0.5912698412698413,
+  "meaconing": 0.9164345403899722
+ },
+ "D4_lodo_s5stack+primary": {
+  "auc_base": 0.9221806892743305,
+  "auc_with": 0.9197632843403526,
+  "auc_gain": -0.002417404933977907,
+  "fa_base": 0.011528671956879772,
+  "fa_with": 0.012726456056295852,
+  "det_base": 0.70580204778157,
+  "det_with": 0.7160409556313994,
+  "row_level_gain_points": {
+   "drift": 1.8604651162790642,
+   "accel_drift": 0.3916449086161955,
+   "jump": 0.1388888888888884,
+   "freeze": 0.12658227848101333,
+   "doppler_spoof": 1.85185185185186,
+   "meaconing": 1.9498607242339872
+  },
+  "adds": false
+ },
+ "D4_lodo_s5stack+all3": {
+  "auc_base": 0.9221806892743305,
+  "auc_with": 0.9210328128457235,
+  "auc_gain": -0.0011478764286070309,
+  "fa_base": 0.011528671956879772,
+  "fa_with": 0.012726456056295852,
+  "det_base": 0.70580204778157,
+  "det_with": 0.7158134243458476,
+  "row_level_gain_points": {
+   "drift": 1.8604651162790642,
+   "accel_drift": 0.26109660574412663,
+   "jump": 0.1388888888888884,
+   "freeze": 0.0,
+   "doppler_spoof": 1.4550264550264647,
+   "meaconing": 2.506963788300842
+  },
+  "adds": false
+ },
+ "D4_lodo_base+primary": {
+  "auc_base": 0.9221352784038948,
+  "auc_with": 0.9196605392651582,
+  "auc_gain": -0.002474739138736526,
+  "fa_base": 0.011378948944452762,
+  "fa_with": 0.012427010031441832,
+  "det_base": 0.7064846416382252,
+  "det_with": 0.7160409556313994,
+  "row_level_gain_points": {
+   "drift": 1.7054263565891459,
+   "accel_drift": 0.13054830287205776,
+   "jump": 0.1388888888888884,
+   "freeze": 0.0,
+   "doppler_spoof": 2.2486772486772444,
+   "meaconing": 1.6713091922005652
+  },
+  "adds": false
+ },
+ "D4_lodo_allL2d+primary": {
+  "auc_base": 0.9239159772850262,
+  "auc_with": 0.9215020471513364,
+  "auc_gain": -0.0024139301336897345,
+  "fa_base": 0.011079502919598742,
+  "fa_with": 0.012726456056295852,
+  "det_base": 0.7060295790671217,
+  "det_with": 0.7171786120591581,
+  "row_level_gain_points": {
+   "drift": 1.5503875968992276,
+   "accel_drift": 0.5221932114882533,
+   "jump": 0.4166666666666652,
+   "freeze": 0.12658227848101333,
+   "doppler_spoof": 2.3809523809523836,
+   "meaconing": 1.8105849582172762
+  },
+  "adds": false
+ },
+ "D4_valonly_s5stack+primary": {
+  "auc_base": 0.903709485574554,
+  "auc_with": 0.9020970930740587,
+  "auc_gain": -0.0016123925004952744,
+  "fa_base": 0.022308728851624493,
+  "fa_with": 0.025602635125018716,
+  "det_base": 0.7310580204778157,
+  "det_with": 0.7337883959044369,
+  "row_level_gain_points": {
+   "drift": 0.15503875968992942,
+   "accel_drift": 0.3916449086161844,
+   "jump": 0.0,
+   "freeze": 0.0,
+   "doppler_spoof": 1.0582010582010581,
+   "meaconing": 0.0
+  },
+  "adds": false
+ },
+ "D4_valonly_s5stack+all3": {
+  "auc_base": 0.903709485574554,
+  "auc_with": 0.8998073700173451,
+  "auc_gain": -0.003902115557208874,
+  "fa_base": 0.022308728851624493,
+  "fa_with": 0.019913160652792333,
+  "det_base": 0.7310580204778157,
+  "det_with": 0.7210466439135381,
+  "row_level_gain_points": {
+   "drift": -2.3255813953488302,
+   "accel_drift": -1.3054830287206332,
+   "jump": 0.0,
+   "freeze": 0.0,
+   "doppler_spoof": -1.0582010582010581,
+   "meaconing": -1.532033426183843
+  },
+  "adds": false
+ },
+ "D4_valonly_base+primary": {
+  "auc_base": 0.902991309081612,
+  "auc_with": 0.9013807561812694,
+  "auc_gain": -0.00161055290034251,
+  "fa_base": 0.022009282826770473,
+  "fa_with": 0.025303189100164696,
+  "det_base": 0.7303754266211604,
+  "det_with": 0.7331058020477815,
+  "row_level_gain_points": {
+   "drift": 0.15503875968991832,
+   "accel_drift": 0.3916449086161844,
+   "jump": 0.0,
+   "freeze": 0.0,
+   "doppler_spoof": 1.0582010582010581,
+   "meaconing": 0.0
+  },
+  "adds": false
+ },
+ "D4_valonly_allL2d+primary": {
+  "auc_base": 0.9075260767579978,
+  "auc_with": 0.9059598616280018,
+  "auc_gain": -0.0015662151299959959,
+  "fa_base": 0.020961221739781405,
+  "fa_with": 0.024105405000748616,
+  "det_base": 0.731740614334471,
+  "det_with": 0.7344709897610922,
+  "row_level_gain_points": {
+   "drift": 0.15503875968992942,
+   "accel_drift": 0.3916449086161844,
+   "jump": 0.0,
+   "freeze": 0.0,
+   "doppler_spoof": 1.0582010582010581,
+   "meaconing": 0.0
+  },
+  "adds": false
+ }
+}
