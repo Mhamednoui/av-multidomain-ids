@@ -39,3 +39,11 @@ Status after S1 (2026-10-21). Details: notes/WP4_network.md, reports/WP4_S1.md, 
 - Rare-flow duplicates: the v2-style dedup collapses PortScan to 1,851 flows (from 158,930); window/host logic must use the stage files.
 - Features IAT/Header/Init_Win/min_seg/URG differ between D10 and D01 (s1_gate_diag.json); never mix D01-trained models with D10 features.
 - Test splits untouched so far (no model trained in S1).
+
+## After S2 (2026-10-22): L1 rules (network/l1.py; report reports/WP4_S2.md, tables results/WP4/s2_tables.md)
+- 5 layers (allow_pair, allow_service, proto_port, tcp_flags, flow_rate); fit benign train, 1% budget on benign val; frozen: known host = >= 10,000 benign train flows, port/proto pooled if < 1,000.
+- D10 test FA ~1% per layer. Detection comes mostly from "flow to the rarely used web server 192.168.10.50" (99.75% of attack flows; 0.83% of benign): topology artefact, say so in M1-NET.
+  allow_pair uses the single attacker address 172.16.0.1 (lab-specific). tcp_flags is the only behaviour-like L1 signal (Hulk 33%, SlowHTTP 76%, Slowloris 29%; PortScan 99% pre-dedup / 10% post-dedup).
+- Blind: SSH-Patator (0%), FTP-Patator (allow_service 0%), Bot (flags 0%); D23 in-dataset ~0 detection; transfer D10 -> D23: allow-list FA 66-97%, tcp_flags FA 30.6% (flag semantics differ, RST = ECE column in D23).
+- proto_port and flow_rate have AUC < 0.5 (attacks look ordinary / slower than benign): negative results.
+- Compact tables for later steps: tools/WP4_S2_lib.py load_d10() / load_d23() (cache .../cache_v3/WP4/S2/; ids, 17 features, t in seconds).

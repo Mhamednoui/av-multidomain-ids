@@ -154,3 +154,46 @@ for D23 as well (applied in stage 2; the first D23 split, made without the fix, 
 D10: 3,119,345 lines -> 288,602 empty -> 2,830,743; 596,376 duplicates; 542 conflicts; 2,233,825 clean; split 1,259,486 / 410,760 / 470,829 / gap 92,750.
 D23: 16,233,002 lines -> 59 repeated headers -> 16,232,943; 5,410,812 duplicates; 43,572 conflicts; 10,778,559 clean; split 6,620,892 / 1,897,210 / 2,019,464 / gap 240,993 (+14 bad ts).
 Evaluable families, held-out list, host labels: notes/WP4_brief.md, results/WP4/s1_tables.md, s1_heldout.json, s1_hosts_*.json. Acceptance MET (G1 recorded failed). 8 tests pass.
+
+## 2026-10-22 S2 start (sonnet medium): L1 allow-list / protocol / TCP-state rules. ACCEPTANCE RULE (written before any score of these layers)
+Looked at so far (benign TRAIN descriptives only, no scores): D10 flag columns are 0/1 presence flags (not counts) and several are known CICFlowMeter
+artefacts (Fwd PSH Flags == SYN Flag Cnt; URG on ~10% benign TCP flows), so "impossible flag combination" is learned as rare-combination frequency, not
+asserted from RFC per-packet logic. 224 benign-train flows already have 172.16.0.1 as source (so even the attacker IP is not perfectly novel).
+Layers (all Layer subclasses, fit on BENIGN TRAIN only, threshold = tie-safe 1% budget on BENIGN VALIDATION, ECDF calibration via common/):
+ net.allow_pair (src,dst,port/proto novelty, Witten-Bell backoff), net.allow_service (dst,port/proto only, no source identity), net.proto_port
+ (protocol given port; RFC 768/791/9293/6335 limits), net.tcp_flags (flag-combination rarity), net.flow_rate (packet/byte rate vs physical limit).
+Data: D10 main (stage = final, cleaned; flow level, dedup removed 99% of PortScan - the final cache has 1,851 PortScan flows: stated). D23: flag/protocol layers
+on all 10 files, allow-list only on Tue-20-02 (only file with IPs).
+Acceptance (A1-A4), fixed now:
+ A1 False alarms: each layer and the combination <= 2.0% on D10 BENIGN TEST (budget 1% on val; 2x allowed for the time drift test vs val). Else reported as NOT MET.
+ A2 Value: the combination WITHOUT source identity (all layers except net.allow_pair) detects >= 50% of test flows at the 1% budget in >= 3 of the 11 evaluable
+    D10 families. net.allow_pair is reported separately because the lab has ONE external attacker IP (172.16.0.1): perfect detection by it would be an artefact
+    (a real attacker is not a never-seen address), so it cannot count for A2.
+ A3 Honesty: the report lists which families the rules cannot see (expected: Bot, Web-*, Infiltration, Slowloris-type application-layer attacks to allowed services),
+    harness ablation (each layer alone, all, all-but-one) on a fixed subsample, and the exact FA.
+ A4 Transfer D10 -> D23 (rules + thresholds from D10, no refit): flag/protocol/rate layers FA on D23 benign test <= 5% (different CICFlowMeter version/network);
+    allow-list expected to FAIL (FA >> 5%) - reported, not a criterion.
+One verdict run on test (D10 and D23 test splits, in-dataset and transfer); revisions afterwards are judged on validation only.
+
+## 2026-10-22 S2 development on VALIDATION (D10), before the verdict run
+Files: tools/WP4_S2_dev.py, results/WP4/s2_dev_val.json (first grid: rare-port pool 1/5/50 x host support 50/200/1000), s2_dev_val_grid2.json (50/200/1000 x 1000/3000/10000).
+- First version (no pooling of rare ports): allow-list FA 0 and detection 0 on val: >1% of benign val flows go to a destination port never seen in train
+  (random high ports, 1.9%), they tie at the top raw score, so the tie-safe threshold sits above them. Fix = pool port/proto keys seen < N times into their class bucket.
+- Grid on val (mean detection over the 11 evaluable families at 1% FA): service layer 0.785 at support >= 3000 (rare >= 50, flat), pair layer 0.948 at support 10000.
+  Chosen (val only, grid edge, no further search): rare_port = 1000, min_support = 10000 for both allow layers -> 15 known hosts. Frozen in network/l1.py.
+- Other layers unchanged from the first version: proto_port (val AUC 0.08: attacks look MORE ordinary than benign in port/protocol terms), tcp_flags (DoS Hulk 35%, SlowHTTP 49%,
+  Slowloris 32%, PortScan 16% on val), flow_rate (0% everywhere on val, AUC 0.23: attacks have LOWER rates than benign).
+- Smoke run (pipeline check with the validation split in the test slot, results/WP4/smoke/) passed D10 and D23; it reads no test data.
+- Open caveat decided now: net.allow_pair uses the attacker address 172.16.0.1 (a known host, since it appears in benign flows) as source in a (src,dst,port) combination never seen
+  in benign: detection by it is lab-specific and must not count for A2.
+Next: ONE verdict run: python tools/WP4_S2_run.py verdict.
+
+## 2026-10-22 S2 VERDICT (one test run, results/WP4/logs/s2_verdict.log; tables results/WP4/s2_tables.md; report reports/WP4_S2.md)
+D10 test FA on benign: allow_pair 1.17%, allow_service 0.93%, proto_port 0.69%, tcp_flags 1.14%, flow_rate 0.96%; harness combinations FA 1.07% (5 layers, max) and 1.20% (4 layers without allow_pair, logistic).
+Source-agnostic stack detection: Bot 98.1, DDoS-LOIC-HTTP 100, GoldenEye 100, Hulk 99.8, SlowHTTP 99.3, Slowloris 100, FTP 74.4, PortScan 64.6, SSH 0, Web-BF 100, XSS 100 (%).
+Diagnostic (train/val only, s2_diag_val.json): 99.75% of attack val flows go to 192.168.10.50 which gets 0.83% of benign flows -> detection is the rarity of the victim server.
+PortScan pre-dedup (154,913 flows in test window): tcp_flags 99.1%, allow_service 20.9%, allow_pair 100%, proto_port 14.9%, flow_rate 0.9%.
+D23 in-dataset: flag layers FA ~1%, detection ~0 (except tiny families, DDoS-LOIC-UDP via proto_port); allow-list on Tue 20-02: DDoS-LOIC-HTTP 0.0 / 0.1%.
+Transfer D10 -> D23: allow-list FA 96.9% / 66.5%; tcp_flags FA 30.6% (RST/ECE flag semantics differ), proto_port 0.3%, flow_rate 0.1%.
+Acceptance: A1 MET, A2 MET numerically (topology caveat), A3 MET, A4 NOT MET. No layer removed or inverted after the verdict; proto_port and flow_rate stay as reported negatives.
+Cache S2: ../data_extra/cache_v3/WP4/S2/ (compact D10 / D23 tables, ~1.7 GB; WP4 cache total 4.9 GB). Smoke outputs deleted.

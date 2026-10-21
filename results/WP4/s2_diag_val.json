@@ -1,0 +1,77 @@
+{
+ "benign_train_share_dst_web_server": 0.008299807201524557,
+ "benign_train_flows_dst_web_server": 8937,
+ "benign_train_flows_dst_web_server_port80": 141,
+ "benign_val_share_dst_web_server": 0.008568670381611855,
+ "attack_val_share_dst_web_server": 0.9975443861939934,
+ "val_allow_service_detection_by_family_dst_web_server": {
+  "Bot": {
+   "share_to_web_server": 0.0,
+   "det_web_server": null,
+   "det_other_dst": 1.0
+  },
+  "DDoS-LOIC-HTTP": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 1.0,
+   "det_other_dst": null
+  },
+  "DoS-GoldenEye": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 1.0,
+   "det_other_dst": null
+  },
+  "DoS-Hulk": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 1.0,
+   "det_other_dst": null
+  },
+  "DoS-SlowHTTPTest": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 1.0,
+   "det_other_dst": null
+  },
+  "DoS-Slowloris": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 1.0,
+   "det_other_dst": null
+  },
+  "FTP-Patator": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 0.0,
+   "det_other_dst": null
+  },
+  "Heartbleed": {
+   "share_to_web_server": 0.0,
+   "det_web_server": null,
+   "det_other_dst": 1.0
+  },
+  "Infiltration": {
+   "share_to_web_server": 0.0,
+   "det_web_server": null,
+   "det_other_dst": 1.0
+  },
+  "PortScan": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 0.631578947368421,
+   "det_other_dst": null
+  },
+  "SSH-Patator": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 0.0,
+   "det_other_dst": null
+  },
+  "Web-BruteForce": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 1.0,
+   "det_other_dst": null
+  },
+  "Web-XSS": {
+   "share_to_web_server": 1.0,
+   "det_web_server": 1.0,
+   "det_other_dst": null
+  }
+ },
+ "val_benign_alarms_to_web_server_share": 0.18831980012492192,
+ "attacker_as_src_benign_train": 222,
+ "attacker_as_dst_benign_train": 20910
+}
