@@ -337,3 +337,59 @@ Misses are reported plainly. No re-splitting, no re-tuning after seeing the test
 - Tampa: VeReMi scale does not transfer (FA 100% at VeReMi threshold: 10 Hz beacons); at the Tampa-val 1% threshold mean detection 77.6% at 0.3% FA (baseline 71.3% at 3.0%), unseen 6 and 17 55.1% (baseline 64.2%), StaleReplay 0%.
 - Pitfalls: (1) per-message 1% budget lets the model spend the whole budget on genuine first messages (~0.9% of messages); report FA per genuine first message and scored-row FA next to the message FA. (2) Zero residuals encode "first message" and "exact repeat"; do not give them a class meaning (the same reason cusum_lo was dropped). (3) Class 12 gain = frozen placeholder rows + CUSUM memory, not delay detection. (4) xgboost wrapper refits are deterministic (test AUC reproduced to 1e-16 from the saved model).
 - Acceptance S5: PARTIAL (see report). Not done: a pre-registered scored-rows-only L4 test evaluation (needs the supervisor's go, test already used).
+
+## 2026-10-21 S6 (M1-V2X) acceptance rule (written BEFORE any S6 result; no dev result seen yet)
+Supervisor decisions (binding, ORCHESTRATOR 2026-10-21): (1) deployable L4 = xgboost trained and scored ONLY on "scored rows" (message has a predecessor in its track within DT_MAX AND moved;
+kinds from l2.Pairs: 0 scored / 1 first-or-gap / 2 exact repeat); L4 raw score = 0 on kinds 1 and 2 (never alarms); new identities are left to the sender-level birth rule (L3 track_birth, >= 3 alarms);
+exact repeats and class 12 are never claimed as detections of L4. (2) Tampa-bound features must be beacon-rate invariant; decided on VeReMi VALIDATION only. (3) shuffled-label control re-run on scored rows,
+bound NOT lowered: detection of a null model within 1 point of its FA (pooled scored attack rows vs scored genuine test rows); pass/fail reported. (4) VeReMi test was seen in S5: the S6 run is a SECOND
+exposure; to be said in reports/M1_V2X.md. Headline claims: unseen-type generalisation (6, 17; 12 excluded as an artefact) and the scored-row analysis.
+Design (fixed now). Row kinds: as tools/WP5_S5_diag.py (moved to v2x/l4.row_kinds). Candidate feature sets for the scored-row L4 (all trained on scored TRAIN rows only, types 6, 12, 17 removed from train,
+validation and neighbour features):
+  S0_full27   : the 27 S5 features (count windows of 10 messages, rate, birth, track_pos, dt_prev). REFERENCE ONLY (not rate invariant).
+  S1_noT_noRate: S0 minus T, N groups, rate, w_rate_max (count windows). REFERENCE ONLY (windows are 10 messages = 10 s at 1 Hz but 1 s at 10 Hz: not invariant).
+  S2_resid    : 10 per-message features (L2 residuals, nis, cusum_hi, field_violation); no rate, no windows, no T, no N. ELIGIBLE (no time scale in the features).
+  S3_timewin  : S2 + the 10 window aggregates computed over a TIME window of 10 s: window length in messages = clip(round(10 s / nominal_dt), 3, 100), nominal_dt = median of the first <= 5 positive
+                intervals of the track (the sender's own nominal beacon interval; it only sizes the window), w_rate_max dropped. ELIGIBLE.
+Selection on VeReMi VALIDATION (fixed criterion): mean detection over the seen classes (16) with >= 50 scored validation rows, on scored attack rows, at the 1% budget of scored genuine validation rows.
+Among ELIGIBLE sets the one with the best criterion wins, but S2 wins if S3 is better by < 1.0 point (simplicity). Hyperparameters: grid of 4 (d3_mcw1, d5_mcw1, d5_mcw50, d8_mcw50) for the eligible sets;
+references with d5_mcw1 only. S0 / S1 are reported to show the price of invariance, never selected. Combiner method per configuration by group-split validation halves (common/combiner.py, "auto").
+Deployable stack: L1 (beacon_rate, field_ranges), L2 (7 checks, no map_road, no yaw/freshness), L3 (kf_nis, kf_cusum_hi, track_birth; no kf_cusum_lo), L4-scored. Each layer calibrated on genuine validation
+rows (1%, tie-safe), as in S5. Ablation (test, once): each group alone, all four, all-but-one; message level (all rows and scored rows) and sender level (>= 3 alarms), delay per attacker
+(first falsified message to the 3rd alarm, and to the 1st alarm), FA on genuine test messages / scored genuine messages / genuine senders. 95% CIs: block bootstrap over the VeReMi TEST time blocks (1000
+resamples, seed SEED), no CIs for Tampa. Tampa (illustration, 3 vehicles): VeReMi-trained L4 frozen, S4 Tampa tracker and Tampa L1-L3 calibrations, stack = parameter-free combiner (the VeReMi-chosen method if
+noisy_or / max, else max), thresholds on Tampa genuine validation only.
+S6 / M1-V2X is MET if all hold:
+ 1. Scored-row L4 + invariant features implemented, selection logged from validation only, tests pass (python tests/run_tests.py), held-out types absent from every fit and validation frame.
+ 2. FA of the full stack on genuine VeReMi TEST: <= 1.5% of messages and <= 1.5% of scored genuine messages; genuine senders with >= 3 alarms <= 5% (reported plainly if not).
+ 3. Value on SCORED test rows: mean detection of the full stack over the seen classes (>= 50 scored rows) is >= that of L1+L2+L3 minus 1 point (no loss), AND on the unseen class 17 the stack beats L1+L2+L3
+    by >= 10 points; unseen class 6 >= 95%.
+ 4. Shuffled-label control on scored rows: detection within 1 point of FA. Pass / fail reported (bound not changed).
+ 5. Block-bootstrap CIs for every headline number; Tampa labelled as illustration, no CIs.
+Pre-registered expectations (not tuned to): E1 class 2 ConstPosOffset <= 5% and class 9 EventualStop <= 10% on scored rows for every group; E2 sender-level (>= 3 alarms) 18 and 19 >= 90% via track_birth;
+E3 the stack's scored-row mean over seen classes is within +-3 points of 83% (S5 diagnostic); E4 removing L2 costs the most, removing L1 costs only the DoS classes 13-15 (message level), removing L4-scored
+changes the seen-class mean by < 2 points and class 17 by >= 10 points; E5 shuffled control does NOT pass at 1 point (outlier tail seen in S5: 3.4% on seen classes), reported plainly; E6 Tampa FA of the stack
+<= 3% at its 1% val budget (3 vehicles, wide uncertainty), Tampa detection below VeReMi's on scored rows; E7 S2 vs S3 differ by < 1 point on validation (S2 chosen).
+Misses are reported plainly. No re-splitting, no re-seeding, no re-tuning after the test.
+
+## 2026-10-21 S6 dev result and plumbing addendum (still before the test run)
+Dev (validation only; results/WP5/s6_dev.json, logs/s6_dev1.log): criterion (mean detection, 16 seen classes with >= 50 scored val rows, 1% of scored genuine val rows): S0_full27 0.8410, S1_noT_noRate 0.8399,
+S2_resid best 0.8388 (d5_mcw1, 139 trees), S3_timewin best 0.8399 (d5_mcw1). S3 - S2 = +0.12 points < 1.0 -> S2_resid chosen (E7 right). Price of rate invariance on the seen classes: 0.2 point.
+Smoke run on the VALIDATION split as stand-in test (plumbing only, results/WP5/s6_*_smoke.*): pipeline works; sender-level FA with the supervisor's k = 3 rule is 9-13% for the combined stack / L4 (message FA 1%,
+alarms spread over long genuine tracks), so acceptance item 2 (<= 5% genuine senders at k = 3) will very likely be missed: reported plainly. Additions fixed now (nothing about the test is known):
+ (a) a second sender-level rule chosen on VALIDATION: k_val = smallest k >= 1 such that <= 1% of genuine VALIDATION senders have >= k alarms of that configuration (the domain budget at sender level); reported next to k = 3;
+ (b) reference rows (never selected, never deployable for Tampa): L4-scored with feature sets S0_full27 and S1_noT_noRate (count windows, d5_mcw1, trees from s6_dev.json) alone and S0 inside the full stack,
+     to show the price of beacon-rate invariance (S5 diagnostic: class 17 scored rows 96% with the unrestricted model).
+ (c) stackeval.sender_table keys senders by (sender, attack type) (Tampa re-uses vehicle ids across scenarios).
+Expectation E8: class 17 on scored rows is clearly lower with the invariant L4 than with S0 (rate / dt features carry it); the acceptance item 3b (class 17: stack beats L1+L2+L3 by >= 10 points) is at risk.
+
+## 2026-10-21 S6 final results (VeReMi test, SECOND exposure, scored once; files: results/WP5/s6_dev.json, s6_veremi.json, s6_tampa.json, s6_acceptance.json, s6_tables_*.md; reports/M1_V2X.md, reports/WP5_S6.md; logs s6_dev1, s6_smoke2, s6_run1)
+- Code: v2x/l4.py (row_kinds, window_lengths, time_window_s option, SCORED_SETS, L4Scored), v2x/stackeval.py (block bootstrap, sender table, delays), tools/WP5_S6_{dev,run,report}.py. Suite 185 pass.
+- Dev: S2_resid chosen (val criterion 0.8388; S3 +0.12 pt; S0_full27 0.8410). Final stack combiner: max (val-half detection 82.8 vs logistic 79.5, noisy_or 73.5).
+- Test (full stack = L1+L2+L3+L4-scored): FA msgs 1.1%, scored msgs 0.9%, genuine senders k=3 11.7% (k val = 9: 1.0%). Scored-row mean over 13 seen classes 83.0% [82.7, 83.1] vs L1+L2+L3 82.7% [82.4, 82.9]; class 6 100%; class 17 27.8% [24.7, 31.8] vs 19.9% [16.6, 24.2] (+8.0, rule +10: NOT met);
+  L4 alone on 17: 48.9%; unrestricted S0 L4: 96.5% (S1 52.9%): the extra points come from track-position / interval / rate / birth features. Sender level (k val): seen mean 86.6%, 17: 95.3% [87.2, 100], 18/19: 97.8/100%.
+- Acceptance: 1 met, 2a met, 2b (k=3 senders <= 5%) NOT met (11.7%), 3a met, 3b NOT met, 3c met, 4 shuffled NOT met (+2.3 points: null model 3.3% at 1.1% FA, AUC 0.511; excess on classes 11, 12, 14, 15, 17), 5 met. Overall PARTIAL.
+- Expectations: E1, E2, E3, E5, E6, E7, E8 as expected; E4 wrong (L2 / L3 removal changes nothing on scored rows; on all rows L3 matters most: 78.4 -> 74.2%; L4 removal -0.3 points seen, -8.0 points class 17).
+- Tampa (illustration): stack FA 2.8%, scored seen 81.8% (physics 81.7%), class 17 29.0% (29.1%), L4 alone FA 0.1%, 80.2%.
+- Pitfalls: (1) sender-level k=3 at a 1% message budget flags 11.7% of genuine senders; use a validation-chosen k. (2) Max combiner chosen on validation without class 17 dilutes the only L4 gain (class 17). (3) bash heredoc turned a double backslash-n into a real newline in a generated file: use chr(92) in edit scripts. (4) tests/run_tests.py filters on the Windows path string: use "test_l4", not "v2x/test_l4".
+- Feature cache (0.5 GB) deleted after the run. Smoke result files deleted.

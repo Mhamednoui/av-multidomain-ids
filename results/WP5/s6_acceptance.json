@@ -1,0 +1,57 @@
+{
+ "1_implemented_tests": {
+  "met": true,
+  "note": "v2x/l4.py (L4Scored, row_kinds, time windows), v2x/stackeval.py, tools/WP5_S6_*.py; tests in tests/v2x (run python tests/run_tests.py)"
+ },
+ "2a_FA_messages_le_1.5pct": {
+  "met": true,
+  "FA_msg": 0.011033673555938817,
+  "FA_scored_msg": 0.00908323524865951
+ },
+ "2b_FA_genuine_senders_k3_le_5pct": {
+  "met": false,
+  "FA_sender_k3": 0.11747998967208882,
+  "FA_sender_kval": 0.009811515620965659,
+  "k_val": 9
+ },
+ "3a_no_loss_seen_scored": {
+  "met": true,
+  "full": 0.8297794554611587,
+  "base": 0.8269606705367697,
+  "classes": 13
+ },
+ "3b_class17_gain_ge_10pts": {
+  "met": false,
+  "full": 0.27844882390336934,
+  "base": 0.19866497139224412,
+  "gain_points": 7.978385251112521
+ },
+ "3c_class6_ge_95": {
+  "met": true,
+  "full": 1.0
+ },
+ "4_shuffled_control": {
+  "met": false,
+  "detection_pooled": 0.03337431585627033,
+  "FA": 0.01080952550795972,
+  "gap_points": 2.256479034831061,
+  "auc": 0.5111171008050392
+ },
+ "5_block_bootstrap_CIs": {
+  "met": true,
+  "blocks": 10,
+  "B": 1000
+ },
+ "overall": "PARTIAL",
+ "expectations": {
+  "E1_class2_le5_class9_le10_scored": true,
+  "E2_sender_18_19_ge90_k3_and_kval": true,
+  "E3_seen_scored_within_3pts_of_83": true,
+  "E4_L2_removal_costs_most": false,
+  "E4_L4_removal_lt2pts_seen_and_ge10_class17": false,
+  "E5_shuffled_does_not_pass_1pt": true,
+  "E6_tampa_FA_le_3pct": true,
+  "E7_S2_chosen_S3_gain_lt_1pt": true,
+  "E8_class17_lower_with_invariant_L4": true
+ }
+}

@@ -28,6 +28,8 @@ from common.layer import Layer
 from v2x import l1, l2, l3
 
 WINDOW = 10
+WINDOW_S = 10.0          # time window of the rate-invariant variant (seconds)
+W_MAX = 100
 POS_CAP = 30
 NIS_BOUND = float(chi2.ppf(0.95, l3.DIM))
 
@@ -48,12 +50,30 @@ assert not (set(FEATURES) & FORBIDDEN)
 XGB_DEFAULT = dict(max_depth=5, min_child_weight=1, learning_rate=0.1, subsample=0.8, colsample_bytree=0.8, reg_lambda=1.0)
 
 
+SCORED_SETS = {                                     # S6: candidate feature sets of the scored-row L4 (eligible = no time scale in the features)
+    "S0_full27": dict(features=list(FEATURES), time_window_s=None, eligible=False),
+    "S1_noT_noRate": dict(features=[f for f in FEATURES if f not in T_FEATURES + N_FEATURES + ["rate", "w_rate_max"]], time_window_s=None, eligible=False),
+    "S2_resid": dict(features=[f for f in M_FEATURES if f != "rate"], time_window_s=None, eligible=True),
+    "S3_timewin": dict(features=[f for f in M_FEATURES if f != "rate"] + [f for f in W_FEATURES if f != "w_rate_max"], time_window_s=WINDOW_S, eligible=True),
+}
+
+
 def feature_sets():
     """Named feature subsets used by the leakage ablation."""
     a1 = [f for f in FEATURES if f not in T_FEATURES]
     a2 = [f for f in a1 if f not in RATE_BIRTH_FEATURES]
     nomem = [f for f in FEATURES if f not in MEMORY_FEATURES]
     return {"full": list(FEATURES), "A1_no_time_track": a1, "A2_residuals_only": a2, "no_memory": nomem}
+
+
+def row_kinds(df) -> np.ndarray:
+    """Table-order row kind: 0 scored (predecessor in the track within DT_MAX and the claimed position moved), 1 unscored (first message
+    of a track, or after a gap / non-positive dt: every residual is 0 by construction), 2 frozen (exact repeat of the previous position)."""
+    p = l2.Pairs(df)
+    k = np.where(~p.valid, 1, np.where(p.d == 0, 2, 0))
+    out = np.empty(len(df), int)
+    out[p.order] = k
+    return out
 
 
 def message_scores(df, tracker: "l3.Tracker") -> dict:
@@ -73,15 +93,16 @@ def message_scores(df, tracker: "l3.Tracker") -> dict:
 
 
 def _window_agg(v, pos, w, how):
-    """Trailing aggregate over the last w rows of the same track; v and pos in track/time order."""
+    """Trailing aggregate over the last w rows of the same track; v and pos in track/time order. w: int or per-row int array."""
     n = len(v)
     acc = v.astype(float).copy()
+    w = np.broadcast_to(np.asarray(w), (n,))
     if how == "mean":
         cnt = np.ones(n)
-    for k in range(1, w):
+    for k in range(1, int(w.max()) if n else 1):
         sh = np.zeros(n)
         sh[k:] = v[:n - k]
-        ok = pos >= k
+        ok = (pos >= k) & (k < w)
         if how == "max":
             acc = np.where(ok, np.maximum(acc, sh), acc)
         elif how == "mean":
@@ -92,8 +113,21 @@ def _window_agg(v, pos, w, how):
     return acc / cnt if how == "mean" else acc
 
 
-def feature_table(df, tracker: "l3.Tracker", raw: dict = None) -> pd.DataFrame:
-    """All feature columns (FEATURES) plus the raw columns needed by the baseline layers (field_raw, birth), float32, table order."""
+def window_lengths(codes_sorted, ts, pos, window_s=WINDOW_S, w_min=3, w_max=W_MAX):
+    """Per-row window length (messages) = clip(round(window_s / nominal_dt), w_min, w_max); nominal_dt = median of the first
+    <= 5 positive intervals of the row's track (the sender's own beacon interval); tracks with no interval get window_s / 1 s."""
+    n = len(ts)
+    dt = np.zeros(n)
+    dt[1:] = np.round(np.diff(ts), 3)
+    use = (pos >= 1) & (pos <= 5) & (dt > 0)
+    nom = pd.Series(np.where(use, dt, np.nan)).groupby(codes_sorted).transform("median").to_numpy()
+    nom = np.where(np.isfinite(nom) & (nom > 0), nom, 1.0)
+    return np.clip(np.round(window_s / nom), w_min, w_max).astype(int)
+
+
+def feature_table(df, tracker: "l3.Tracker", raw: dict = None, time_window_s: float = None) -> pd.DataFrame:
+    """All feature columns (FEATURES) plus the raw columns needed by the baseline layers (field_raw, birth), float32, table order.
+    time_window_s=None: windows of WINDOW messages (S5). Otherwise windows span about time_window_s seconds at the track's own nominal beacon rate."""
     raw = raw if raw is not None else message_scores(df, tracker)
     n = len(df)
     codes = pd.factorize(df["track"])[0]
@@ -109,17 +143,20 @@ def feature_table(df, tracker: "l3.Tracker", raw: dict = None) -> pd.DataFrame:
     f = {k: S[k] for k in RAW_NAMES}
     f["field_violation"] = (S["field_raw"] >= 1.0).astype(float)
     nis_high = (S["nis"] > NIS_BOUND).astype(float)
-    f["w_nis_max"] = _window_agg(S["nis"], pos, WINDOW, "max")
-    f["w_nis_mean"] = _window_agg(S["nis"], pos, WINDOW, "mean")
-    f["w_pos_speed_max"] = _window_agg(S["pos_speed"], pos, WINDOW, "max")
-    f["w_pos_speed_mean"] = _window_agg(S["pos_speed"], pos, WINDOW, "mean")
-    f["w_pos_heading_max"] = _window_agg(S["pos_heading"], pos, WINDOW, "max")
-    f["w_implied_speed_max"] = _window_agg(S["implied_speed"], pos, WINDOW, "max")
-    f["w_speed_change_max"] = _window_agg(S["speed_change"], pos, WINDOW, "max")
-    f["w_heading_rate_max"] = _window_agg(S["heading_rate"], pos, WINDOW, "max")
-    f["w_rate_max"] = _window_agg(S["rate"], pos, WINDOW, "max")
-    f["w_accel_consistency_mean"] = _window_agg(S["accel_consistency"], pos, WINDOW, "mean")
-    f["w_n_nis_high"] = _window_agg(nis_high, pos, WINDOW, "count")
+    W = WINDOW if time_window_s is None else window_lengths(c, ts, pos, time_window_s)
+    f["w_nis_max"] = _window_agg(S["nis"], pos, W, "max")
+    f["w_nis_mean"] = _window_agg(S["nis"], pos, W, "mean")
+    f["w_pos_speed_max"] = _window_agg(S["pos_speed"], pos, W, "max")
+    f["w_pos_speed_mean"] = _window_agg(S["pos_speed"], pos, W, "mean")
+    f["w_pos_heading_max"] = _window_agg(S["pos_heading"], pos, W, "max")
+    f["w_implied_speed_max"] = _window_agg(S["implied_speed"], pos, W, "max")
+    f["w_speed_change_max"] = _window_agg(S["speed_change"], pos, W, "max")
+    f["w_heading_rate_max"] = _window_agg(S["heading_rate"], pos, W, "max")
+    f["w_rate_max"] = _window_agg(S["rate"], pos, W, "max")
+    f["w_accel_consistency_mean"] = _window_agg(S["accel_consistency"], pos, W, "mean")
+    f["w_n_nis_high"] = _window_agg(nis_high, pos, W, "count")
+    if time_window_s is not None:                       # a count over a window of unknown size is not rate invariant: use the fraction
+        f["w_n_nis_high"] = f["w_n_nis_high"] / np.minimum(pos + 1, W)
     f["birth_density"] = S["birth"]
     f["track_birth_density"] = S["birth"][start]
     f["is_first"] = first.astype(float)
@@ -193,3 +230,17 @@ class L4(Layer):
 
     def reasons(self, df, raw, alarm):
         return [f"plausibility evidence of the beacon stream looks like a learned attack pattern (score {r:.2f})" for r in raw]
+
+
+class L4Scored(L4):
+    """Deployable L4 (S6): the model is trained and applied on scored rows only. Raw score = P(attack) on kind 0, exactly 0 on first
+    messages / gaps and exact repeats (never an alarm: new identities belong to the sender-level birth rule, repeats are not claimed)."""
+    name, layer_id = "v2x.l4_scored", "L4"
+
+    def __init__(self, model: GBModel, tracker: "l3.Tracker", time_window_s=None):
+        super().__init__(model, tracker)
+        self.time_window_s = time_window_s
+
+    def raw_scores(self, df):
+        p = self.gb.predict(feature_table(df, self.tracker, time_window_s=self.time_window_s))
+        return np.where(row_kinds(df) == 0, p, 0.0)

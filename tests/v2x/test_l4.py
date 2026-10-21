@@ -112,3 +112,75 @@ def test_l4_layer_detects_an_unseen_jump_size_from_plausibility_features():
     al = np.array([e.alarm for e in ev])
     y = test["label"].to_numpy().astype(bool)
     assert al[y].mean() > 0.8 and al[~y].mean() <= 0.02
+
+
+# ---------------------------------------------------------------- S6: scored-row L4, time windows, row kinds
+def test_row_kinds_scored_first_gap_and_frozen():
+    a = straight("a", n=6)
+    b = straight("b", n=4)
+    b.loc[2:, "x"] = b.loc[1, "x"]                       # b repeats its position exactly from message 2 on
+    c = straight("c", n=4)
+    c.loc[2:, "t"] += 20.0                               # gap > DT_MAX after message 1
+    d = pd.concat([a, b, c], ignore_index=True)
+    k = l4.row_kinds(d)
+    assert (k[:6] == [1, 0, 0, 0, 0, 0]).all()
+    assert (k[6:10] == [1, 0, 2, 2]).all()
+    assert (k[10:] == [1, 0, 1, 0]).all()
+
+
+def test_window_agg_accepts_a_per_row_window():
+    v = np.array([5.0, 1.0, 1.0, 1.0, 1.0])
+    pos = np.arange(5)
+    assert np.array_equal(l4._window_agg(v, pos, np.array([2, 2, 2, 2, 5]), "max"), [5, 5, 1, 1, 5])
+    assert np.allclose(l4._window_agg(v, pos, 5, "mean"), np.cumsum(v) / np.arange(1, 6))
+
+
+def test_time_window_lengths_follow_the_senders_own_beacon_rate():
+    d = pd.concat([straight("slow", n=30, dt=1.0), straight("fast", n=300, dt=0.1)], ignore_index=True)
+    codes = pd.factorize(d["track"])[0]
+    pos = np.concatenate([np.arange(30), np.arange(300)])
+    w = l4.window_lengths(codes, d["t"].to_numpy(), pos)
+    assert (w[:30] == 10).all() and (w[30:] == 100).all()
+
+
+def test_time_window_features_are_rate_invariant_for_a_persistent_fault():
+    # a track whose last 10 s are inconsistent; the window max/fraction after 10 s must not depend on the beacon rate
+    outs = []
+    for dt in (1.0, 0.1):
+        n = int(40 / dt)
+        d = straight("a", n=n, dt=dt)
+        late = (d["t"] >= 25).to_numpy()
+        d.loc[late, "x"] += 300.0 * (np.arange(late.sum()) % 2)       # alternating jumps
+        f = l4.feature_table(d, tracker(), time_window_s=10.0)
+        outs.append(f.loc[(d["t"] > 38).to_numpy(), "w_n_nis_high"].mean())
+    assert abs(outs[0] - outs[1]) < 0.15 and outs[0] > 0.3
+
+
+def test_l4_scored_never_alarms_on_first_or_repeated_messages():
+    tr = tracker()
+    train = _jump_tracks(200.0, 21, "a")
+    ftr = l4.feature_table(train, tr)
+    kinds = l4.row_kinds(train)
+    s = kinds == 0
+    m = l4.GBModel(l4.FEATURES, {"max_depth": 4}, n_estimators=30).fit(ftr[s], train["label"].to_numpy()[s])
+    test = _jump_tracks(900.0, 22, "b")
+    rep = test[test["track"] == "b1"].copy()
+    rep["track"] = rep["sender"] = "rep"
+    rep.loc[:, ["x", "y"]] = rep[["x", "y"]].iloc[10].to_numpy()
+    rep["label"] = 1
+    test = pd.concat([test, rep], ignore_index=True)
+    layer = l4.L4Scored(m, tr)
+    raw = layer.raw_scores(test)
+    k = l4.row_kinds(test)
+    assert (raw[k != 0] == 0).all() and (raw[k == 0] > 0).all()
+    layer.calibrate(test[test["label"] == 0], budget=0.01)
+    al = np.array([e.alarm for e in layer.score(test)])
+    assert not al[k != 0].any() and al[(k == 0) & (test["label"] == 1).to_numpy()].mean() > 0.8
+
+
+def test_scored_feature_sets_are_rate_free_when_eligible():
+    for n, s in l4.SCORED_SETS.items():
+        if s["eligible"]:
+            assert not set(s["features"]) & set(["rate", "w_rate_max", "dt_prev", "track_pos"] + l4.N_FEATURES), n
+            assert not set(s["features"]) & l4.FORBIDDEN
+    assert l4.SCORED_SETS["S3_timewin"]["time_window_s"] == l4.WINDOW_S and l4.SCORED_SETS["S2_resid"]["time_window_s"] is None

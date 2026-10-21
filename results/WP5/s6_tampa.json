@@ -1,0 +1,5644 @@
+{
+ "smoke": false,
+ "illustration_only": true,
+ "note": "3 test vehicles, 2 attackers per type: no confidence intervals are claimed",
+ "combiner_method_used": "max",
+ "n_test_genuine": 4225,
+ "n_test_attack": 72586,
+ "n_val_genuine": 2094,
+ "layers": [
+  "v2x.beacon_rate",
+  "v2x.field_ranges",
+  "v2x.freshness",
+  "v2x.pos_speed",
+  "v2x.pos_heading",
+  "v2x.speed_change",
+  "v2x.implied_speed",
+  "v2x.heading_rate",
+  "v2x.accel_consistency",
+  "v2x.overlap",
+  "v2x.kf_nis",
+  "v2x.kf_cusum_hi",
+  "v2x.track_birth",
+  "v2x.l4_scored"
+ ],
+ "groups": {
+  "L1": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.006102522375915379,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.006102522375915379,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.006102522375915379,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.0028296547821165816,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.0,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.1169715014887282,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.09560618388934093,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.02774813233724653,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.011205976520811099,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.012033694344163659,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.0023405500292568754,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.05756117127958283,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9678860059549128,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9637917005695688,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.006102522375915379,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.0,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.10103926096997691,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.002886836027713626,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.004733727810650888,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.14168741913619345
+    },
+    "unseen": {
+     "p": 0.0584857507443641
+    },
+    "all": {
+     "p": 0.169315537884854
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.0071633237822349575,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 0.006112469437652812,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 0.0028376844494892167,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.0,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.12574575493345572,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 0.09598853868194843,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.03439153439153439,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 0.01122394441475147,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.012057877813504822,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.002435064935064935,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.02546916890080429,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 0.9679661200999022,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9635006221484861,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.0071633237822349575,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.0,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.1035,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.004092071611253197,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.00541858574911948,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.1601047628224141,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.06287287746672786,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.13939102937543046,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      77.88500000000204,
+      77.88500000000204,
+      77.88500000000204
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      78.09100000000035,
+      78.09100000000035,
+      78.09100000000035
+     ],
+     "detected_k": 1
+    },
+    "02_ConstPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      77.88500000000204,
+      77.88500000000204,
+      77.88500000000204
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      78.09100000000035,
+      78.09100000000035,
+      78.09100000000035
+     ],
+     "detected_k": 1
+    },
+    "03_RandomPos": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      77.88500000000204,
+      77.88500000000204,
+      77.88500000000204
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      78.09100000000035,
+      78.09100000000035,
+      78.09100000000035
+     ],
+     "detected_k": 1
+    },
+    "04_RandomPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      126.79899999999998,
+      126.79899999999998,
+      126.79899999999998
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      127.0,
+      127.0,
+      127.0
+     ],
+     "detected_k": 1
+    },
+    "05_ConstSpeed": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.20700000000215368,
+      0.20700000000215368,
+      0.20700000000215368
+     ],
+     "detected_k": 1
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.7517500000006976,
+      0.7845000000004347,
+      0.8172500000001719
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      2.114000000000374,
+      2.5780000000006567,
+      3.0420000000009395
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      150.45000000000027,
+      150.45000000000027,
+      150.45000000000027
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      155.6500000000001,
+      155.6500000000001,
+      155.6500000000001
+     ],
+     "detected_k": 1
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      8.475000000000023,
+      11.950000000000045,
+      15.425000000000068
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      21.749999999999886,
+      29.049999999999955,
+      36.35000000000002
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      86.14974999999993,
+      93.19949999999994,
+      100.24924999999996
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      86.35000000000014,
+      93.40000000000009,
+      100.45000000000005
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      126.84899999999993,
+      126.84899999999993,
+      126.84899999999993
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      127.04999999999995,
+      127.04999999999995,
+      127.04999999999995
+     ],
+     "detected_k": 1
+    },
+    "13_DoS": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6000000000001933,
+      1.1500000000002046,
+      1.700000000000216
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.5749999999999886,
+      3.6000000000000227,
+      3.625000000000057
+     ],
+     "detected_k": 2
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0568124999997508,
+      0.0636249999993197,
+      0.0704374999988886
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      77.88500000000204,
+      77.88500000000204,
+      77.88500000000204
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      77.88500000000204,
+      77.88500000000204,
+      77.88500000000204
+     ],
+     "detected_k": 1
+    },
+    "17_DataReplaySybil": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6545000000004393,
+      1.1590000000007876,
+      1.663500000001136
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      2.9518750000003138,
+      3.1537500000010823,
+      3.355625000001851
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4527500000018563,
+      1.7685000000012678,
+      2.0842500000006794
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      30.614125000000968,
+      39.47925000000214,
+      48.34437500000331
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.2250000000000227,
+      3.4500000000000455,
+      3.675000000000068
+     ],
+     "detected_k": 2
+    }
+   },
+   "fa_sender": {
+    "p": 0.5,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.6875
+    },
+    "unseen": {
+     "p": 0.25
+    },
+    "all": {
+     "p": 0.65
+    }
+   },
+   "val_FA_msg": 0.009551098376313277,
+   "auc_all_rows": 0.6705495232180819,
+   "auc_scored_rows": 0.693646405606733
+  },
+  "L2": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.10537021969080554,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.009764035801464606,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.9971703452178834,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.03175519630484989,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.033602722245852826,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.9601301871440195,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.8676627534685165,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.0008896797153024911,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.9770544290288153,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.08303249097472924,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.052077238150965474,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.04632972322503008,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9792641429179073,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9589096826688365,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.02285055600759425,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.050808314087759814,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.5773672055427251,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.7387413394919169,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 0.455,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.019171597633136094,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.5221665404937595
+    },
+    "unseen": {
+     "p": 0.042205518166806316
+    },
+    "all": {
+     "p": 0.44730764611923657
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.011461318051575931,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.031828703703703706,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.03625516291877008,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 0.9622731614135626,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.8703703703703703,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 1.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 0.9786210582576162,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.08319935691318328,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.0633116883116883,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.06193029490616622,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9774989630858565,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.02682266794014645,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.05194805194805195,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.9938618925831202,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.021945272283933892,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.6427048419446645,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.044101607433411016,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.5381989817884595,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.20150000000194268,
+      0.3010000000012951,
+      0.40050000000064756
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      1.623000000000502,
+      2.8320000000003347,
+      4.041000000000167
+     ],
+     "detected_k": 2
+    },
+    "02_ConstPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      23.187250000002336,
+      45.34150000000159,
+      67.49575000000084
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      94.85900000000186,
+      112.45600000000127,
+      130.05300000000068
+     ],
+     "detected_k": 2
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0999999999999659,
+      0.10000000000002274,
+      0.10000000000007958
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.31249999999982947,
+      0.3249999999999318,
+      0.3375000000000341
+     ],
+     "detected_k": 2
+    },
+    "05_ConstSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5070000000004029,
+      0.6150000000009186,
+      0.7230000000014343
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.0417500000010023,
+      4.8445000000006075,
+      6.647250000000213
+     ],
+     "detected_k": 2
+    },
+    "06_ConstSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      3.324750000002325,
+      5.616500000001565,
+      7.908250000000805
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      22.03150000000062,
+      23.36400000000117,
+      24.69650000000172
+     ],
+     "detected_k": 2
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5622500000000059,
+      0.6245000000000118,
+      0.6867500000000177
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      1.499750000000006,
+      1.7495000000000118,
+      1.9992500000000177
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      16.786749999999984,
+      16.874499999999898,
+      16.962249999999813
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      27.137499999999932,
+      36.774999999999864,
+      46.412499999999795
+     ],
+     "detected_k": 2
+    },
+    "13_DoS": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      6.975000000000193,
+      8.70000000000016,
+      10.425000000000125
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      8.62500000000017,
+      10.000000000000114,
+      11.375000000000057
+     ],
+     "detected_k": 2
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999947795,
+      0.0761249999991378,
+      0.07668749999879765
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      23.187250000002336,
+      45.34150000000159,
+      67.49575000000084
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      23.187250000002336,
+      45.34150000000159,
+      67.49575000000084
+     ],
+     "detected_k": 2
+    },
+    "17_DataReplaySybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4802500000004102,
+      2.8105000000007294,
+      4.140750000001049
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      5.34025000000031,
+      6.830500000000711,
+      8.320750000001112
+     ],
+     "detected_k": 2
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.7271250000027294,
+      0.7847500000018499,
+      0.8423750000009704
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.9107500000014852,
+      0.9905000000010205,
+      1.0702500000005557
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.2026250000002392,
+      0.25175000000012915,
+      0.3008750000000191
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.7551249999993388,
+      0.7602499999991323,
+      0.7653749999989259
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.9750000000000227,
+      1.9500000000000455,
+      2.925000000000068
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      4.674750000000017,
+      6.349500000000035,
+      8.024250000000052
+     ],
+     "detected_k": 2
+    }
+   },
+   "fa_sender": {
+    "p": 1.0,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.9375
+    },
+    "unseen": {
+     "p": 1.0
+    },
+    "all": {
+     "p": 0.95
+    }
+   },
+   "val_FA_msg": 0.009073543457497613,
+   "auc_all_rows": 0.7611965255823046,
+   "auc_scored_rows": 0.8232572335557192
+  },
+  "L3": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.9971521562245729,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.030512611879576892,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.9971703452178834,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.9907621247113164,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9906422798809017,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.9979658258746948,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.9983991462113126,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.005338078291814947,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.9989327641408752,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.9935820296831127,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.5383265067290813,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.00020056157240272763,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9792641429179073,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9814890154597233,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.3397070789259561,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.33545034642032334,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.6304849884526559,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.5955542725173211,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 0.97,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.01775147928994083,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.7209304876738052
+    },
+    "unseen": {
+     "p": 0.6630463131506126
+    },
+    "all": {
+     "p": 0.7184653467905594
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.03581661891117478,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.9930555555555556,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9931161083065626,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 0.9995224450811844,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.9993386243386243,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 1.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.9955787781350482,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.4586038961038961,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.00026809651474530834,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9995852343425964,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.3939828080229226,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.33412042502951594,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.9544757033248081,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.02031969655919805,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.8122588474447615,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.6636182666680392,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.7739684878627432,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.28025000000161526,
+      0.35350000000107684,
+      0.4267500000005384
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.5745000000024447,
+      0.6330000000016298,
+      0.6915000000008149
+     ],
+     "detected_k": 2
+    },
+    "02_ConstPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.83100000000195,
+      0.83100000000195,
+      0.83100000000195
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      78.51300000000265,
+      78.51300000000265,
+      78.51300000000265
+     ],
+     "detected_k": 1
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0999999999999659,
+      0.10000000000002274,
+      0.10000000000007958
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.31249999999982947,
+      0.3249999999999318,
+      0.3375000000000341
+     ],
+     "detected_k": 2
+    },
+    "05_ConstSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.37950000000034834,
+      0.4590000000009695,
+      0.5385000000015907
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.6202500000002829,
+      0.6905000000008386,
+      0.7607500000013943
+     ],
+     "detected_k": 2
+    },
+    "06_ConstSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.4230000000005134,
+      0.43200000000035743,
+      0.44100000000020145
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.6260000000016817,
+      0.6340000000011514,
+      0.6420000000006212
+     ],
+     "detected_k": 2
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.07500000000015916,
+      0.10000000000013642,
+      0.1250000000001137
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.44899999999995543,
+      0.49900000000002365,
+      0.5490000000000919
+     ],
+     "detected_k": 2
+    },
+    "09_EventualStop": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.2510000000002037,
+      0.2510000000002037,
+      0.2510000000002037
+     ],
+     "detected_k": 1
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5622500000000059,
+      0.6245000000000118,
+      0.6867500000000177
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8500000000000227,
+      0.9500000000000455,
+      1.0500000000000682
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      29.248999999999967,
+      31.74899999999991,
+      34.24899999999985
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      37.28750000000008,
+      44.97500000000002,
+      52.662499999999966
+     ],
+     "detected_k": 2
+    },
+    "13_DoS": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      127.15000000000032,
+      127.15000000000032,
+      127.15000000000032
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999947795,
+      0.0761249999991378,
+      0.07668749999879765
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "detected_k": 2
+    },
+    "17_DataReplaySybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4802500000004102,
+      2.8105000000007294,
+      4.140750000001049
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      1.718250000000694,
+      3.0375000000015007,
+      4.356750000002307
+     ],
+     "detected_k": 2
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.11400000000196542,
+      0.1260000000013406,
+      0.13800000000071577
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3788749999995389,
+      0.4077499999991687,
+      0.43662499999879856
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000044292,
+      0.0760000000011587,
+      0.08900000000187447
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.16425000000060663,
+      0.17850000000112232,
+      0.192750000001638
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6374999999999886,
+      1.2749999999999773,
+      1.912499999999966
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.5500000000000114,
+      4.100000000000023,
+      4.650000000000034
+     ],
+     "detected_k": 2
+    }
+   },
+   "fa_sender": {
+    "p": 0.25,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.875
+    },
+    "unseen": {
+     "p": 1.0
+    },
+    "all": {
+     "p": 0.9
+    }
+   },
+   "val_FA_msg": 0.009073543457497613,
+   "auc_all_rows": 0.7891046344210018,
+   "auc_scored_rows": 0.857445833682301
+  },
+  "L4-scored": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.0,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.0020341741253051262,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.9971703452178834,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.983256351039261,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9072735006380264,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.8519121236777868,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.8068303094983992,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.0008896797153024911,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.9983991462113126,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.9622944243882872,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.33001755412521944,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.0,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9792641429179073,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.980573637103336,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.24830485489557907,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.16166281755196305,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.5773672055427251,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.5554272517321016,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 0.0,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.001183431952662722,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.621381019172809
+    },
+    "unseen": {
+     "p": 0.5344681590949947
+    },
+    "all": {
+     "p": 0.5670525089540076
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.002387774594078319,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.9855324074074074,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9788893988067922,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 1.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.9642282958199357,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.4577922077922078,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.0,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9996889257569473,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.29146768545049345,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.1652892561983471,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.9841432225063939,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.00135464643727987,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.8019605936810896,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.5720893275025696,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.754671716137212,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "02_ConstPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.033000000003085,
+      1.033000000003085,
+      1.033000000003085
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      61.24600000000282,
+      61.24600000000282,
+      61.24600000000282
+     ],
+     "detected_k": 1
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0999999999999659,
+      0.10000000000002274,
+      0.10000000000007958
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.31249999999982947,
+      0.3249999999999318,
+      0.3375000000000341
+     ],
+     "detected_k": 2
+    },
+    "05_ConstSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6202500000002829,
+      0.6905000000008386,
+      0.7607500000013943
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8575000000007549,
+      0.9160000000015316,
+      0.9745000000023083
+     ],
+     "detected_k": 2
+    },
+    "06_ConstSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.0372500000023024,
+      1.0415000000015198,
+      1.0457500000007371
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      1.351250000000789,
+      1.4535000000015543,
+      1.5557500000023197
+     ],
+     "detected_k": 2
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5622500000000059,
+      0.6245000000000118,
+      0.6867500000000177
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8000000000000114,
+      0.8500000000000227,
+      0.9000000000000341
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      34.07424999999995,
+      41.399499999999875,
+      48.7247499999998
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      37.43724999999995,
+      45.3744999999999,
+      53.31174999999985
+     ],
+     "detected_k": 2
+    },
+    "13_DoS": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999947795,
+      0.0761249999991378,
+      0.07668749999879765
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      23.61225000000229,
+      46.1915000000015,
+      68.7707500000007
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      23.61225000000229,
+      46.1915000000015,
+      68.7707500000007
+     ],
+     "detected_k": 2
+    },
+    "17_DataReplaySybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4802500000004102,
+      2.8105000000007294,
+      4.140750000001049
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      5.147999999999911,
+      6.496999999999844,
+      7.845999999999776
+     ],
+     "detected_k": 2
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.7271250000027294,
+      0.7847500000018499,
+      0.8423750000009704
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.9107500000014852,
+      0.9905000000010205,
+      1.0702500000005557
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5480000000005703,
+      0.6820000000004711,
+      0.816000000000372
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      1.1247500000023365,
+      1.216500000001588,
+      1.3082500000008395
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    }
+   },
+   "fa_sender": {
+    "p": 0.25,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.78125
+    },
+    "unseen": {
+     "p": 1.0
+    },
+    "all": {
+     "p": 0.775
+    }
+   },
+   "val_FA_msg": 0.009073543457497613,
+   "auc_all_rows": 0.746888579586557,
+   "auc_scored_rows": 0.8711165202875621
+  },
+  "L1+L2+L3+L4": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.9967453213995118,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.03295362082994304,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.9971703452178834,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.9884526558891455,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9923436835389197,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.9989327641408752,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.0008896797153024911,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.9989327641408752,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.9895707982350581,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.5494441193680515,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.08403529883674288,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9992556358996172,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.999593165174939,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.33658801193382154,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.2921478060046189,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.6683025404157044,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.6391454965357968,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.027928994082840237,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.7329570887352955
+    },
+    "unseen": {
+     "p": 0.6422457447717693
+    },
+    "all": {
+     "p": 0.7280624514338159
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.03868194842406877,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.9907407407407407,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9944928866452502,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 1.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.9915594855305466,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.47483766233766234,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.060857908847184984,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.3903215536453359,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.2898465171192444,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.9785166240409208,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.03196965591980493,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.8179055900877713,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.6421697018822473,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.7770503133724092,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.28025000000161526,
+      0.35350000000107684,
+      0.4267500000005384
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.5745000000024447,
+      0.6330000000016298,
+      0.6915000000008149
+     ],
+     "detected_k": 2
+    },
+    "02_ConstPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      49.4320000000007,
+      49.4320000000007,
+      49.4320000000007
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      77.46500000000015,
+      77.46500000000015,
+      77.46500000000015
+     ],
+     "detected_k": 1
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0999999999999659,
+      0.10000000000002274,
+      0.10000000000007958
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.31249999999982947,
+      0.3249999999999318,
+      0.3375000000000341
+     ],
+     "detected_k": 2
+    },
+    "05_ConstSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.40475000000003547,
+      0.5095000000003438,
+      0.6142500000006521
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.6460000000000719,
+      0.7420000000004165,
+      0.8380000000007612
+     ],
+     "detected_k": 2
+    },
+    "06_ConstSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.11250000000001137,
+      0.22500000000002274,
+      0.3375000000000341
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.317750000001638,
+      0.4285000000011223,
+      0.5392500000006066
+     ],
+     "detected_k": 2
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5622500000000059,
+      0.6245000000000118,
+      0.6867500000000177
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8000000000000114,
+      0.8500000000000227,
+      0.9000000000000341
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      21.761750000000006,
+      26.824499999999944,
+      31.88724999999988
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      27.286749999999984,
+      36.8744999999999,
+      46.46224999999981
+     ],
+     "detected_k": 2
+    },
+    "13_DoS": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6000000000001933,
+      1.1500000000002046,
+      1.700000000000216
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.5749999999999886,
+      3.6000000000000227,
+      3.625000000000057
+     ],
+     "detected_k": 2
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0568124999997508,
+      0.0636249999993197,
+      0.0704374999988886
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "detected_k": 2
+    },
+    "17_DataReplaySybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4802500000004102,
+      2.8105000000007294,
+      4.140750000001049
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      4.533250000000294,
+      5.666500000000497,
+      6.799750000000699
+     ],
+     "detected_k": 2
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.11400000000196542,
+      0.1260000000013406,
+      0.13800000000071577
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3788749999995389,
+      0.4077499999991687,
+      0.43662499999879856
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000044292,
+      0.0760000000011587,
+      0.08900000000187447
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.16425000000060663,
+      0.17850000000112232,
+      0.192750000001638
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.2250000000000227,
+      3.4500000000000455,
+      3.675000000000068
+     ],
+     "detected_k": 2
+    }
+   },
+   "fa_sender": {
+    "p": 0.5,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.90625
+    },
+    "unseen": {
+     "p": 1.0
+    },
+    "all": {
+     "p": 0.925
+    }
+   },
+   "val_FA_msg": 0.0052531041069723014,
+   "auc_all_rows": 0.8509198425634101,
+   "auc_scored_rows": 0.8901416094302993
+  },
+  "all but L1": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.9971521562245729,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.03336045565500407,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.9971703452178834,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.9890300230946882,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9897915780518928,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.9989327641408752,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.0008896797153024911,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.9989327641408752,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.9895707982350581,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.5500292568753657,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.04312073806658644,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9792641429179073,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9816924328722538,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.33753729319229725,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.2938799076212471,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.6304849884526559,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.6518475750577367,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 0.97,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.030059171597633137,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.7266082173989505
+    },
+    "unseen": {
+     "p": 0.64183574283657
+    },
+    "all": {
+     "p": 0.7214716110465857
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.039159503342884434,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.9913194444444444,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.992198256080771,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 1.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.9915594855305466,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.47564935064935066,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.057640750670241284,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 0.9997926171712982,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.3914358484559058,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.29161747343565525,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.9800511508951406,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.034408019506908694,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.8179256286078902,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.641907864758213,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.7770837576868377,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.20150000000194268,
+      0.3010000000012951,
+      0.40050000000064756
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.49800000000050204,
+      0.5820000000003347,
+      0.6660000000001673
+     ],
+     "detected_k": 2
+    },
+    "02_ConstPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      59.48650000000055,
+      69.5410000000004,
+      79.59550000000024
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      77.46500000000015,
+      77.46500000000015,
+      77.46500000000015
+     ],
+     "detected_k": 1
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0999999999999659,
+      0.10000000000002274,
+      0.10000000000007958
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.31249999999982947,
+      0.3249999999999318,
+      0.3375000000000341
+     ],
+     "detected_k": 2
+    },
+    "05_ConstSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.40475000000003547,
+      0.5095000000003438,
+      0.6142500000006521
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.6460000000000719,
+      0.7420000000004165,
+      0.8380000000007612
+     ],
+     "detected_k": 2
+    },
+    "06_ConstSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.466500000000849,
+      0.48300000000165255,
+      0.4995000000024561
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.6672500000003083,
+      0.6845000000005257,
+      0.7017500000007431
+     ],
+     "detected_k": 2
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5622500000000059,
+      0.6245000000000118,
+      0.6867500000000177
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8000000000000114,
+      0.8500000000000227,
+      0.9000000000000341
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      21.761750000000006,
+      26.824499999999944,
+      31.88724999999988
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      27.286749999999984,
+      36.8744999999999,
+      46.46224999999981
+     ],
+     "detected_k": 2
+    },
+    "13_DoS": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      6.975000000000193,
+      8.70000000000016,
+      10.425000000000125
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      8.62500000000017,
+      10.000000000000114,
+      11.375000000000057
+     ],
+     "detected_k": 2
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999947795,
+      0.0761249999991378,
+      0.07668749999879765
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "detected_k": 2
+    },
+    "17_DataReplaySybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4802500000004102,
+      2.8105000000007294,
+      4.140750000001049
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      4.533250000000294,
+      5.666500000000497,
+      6.799750000000699
+     ],
+     "detected_k": 2
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.11400000000196542,
+      0.1260000000013406,
+      0.13800000000071577
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3788749999995389,
+      0.4077499999991687,
+      0.43662499999879856
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000044292,
+      0.0760000000011587,
+      0.08900000000187447
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.16425000000060663,
+      0.17850000000112232,
+      0.192750000001638
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6374999999999886,
+      1.2749999999999773,
+      1.912499999999966
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.5500000000000114,
+      4.100000000000023,
+      4.650000000000034
+     ],
+     "detected_k": 2
+    }
+   },
+   "fa_sender": {
+    "p": 0.5,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.90625
+    },
+    "unseen": {
+     "p": 1.0
+    },
+    "all": {
+     "p": 0.925
+    }
+   },
+   "val_FA_msg": 0.008595988538681949,
+   "auc_all_rows": 0.8175671494837301,
+   "auc_scored_rows": 0.87923413292713
+  },
+  "all but L2": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.9967453213995118,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.03173311635475997,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.9971703452178834,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.9901847575057737,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9923436835389197,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.9983991462113126,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.0017793594306049821,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.9989327641408752,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.9907741676694746,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.5389116442363956,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.05756117127958283,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9992556358996172,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.999593165174939,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.33713045836723626,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.31351039260969976,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.6685912240184757,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.6076789838337182,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.019644970414201185,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.7295171836189548
+    },
+    "unseen": {
+     "p": 0.6529270380743097
+    },
+    "all": {
+     "p": 0.7258520329144147
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.03724928366762178,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.9924768518518519,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9944928866452502,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.9993386243386243,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 1.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.9927652733118971,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.4594155844155844,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.02546916890080429,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.3909582935370901,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.3116883116883117,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.9754475703324809,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.022487130858845843,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.8152646475671693,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.6530905991667809,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.7752530499229127,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.28025000000161526,
+      0.35350000000107684,
+      0.4267500000005384
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.5745000000024447,
+      0.6330000000016298,
+      0.6915000000008149
+     ],
+     "detected_k": 2
+    },
+    "02_ConstPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.83100000000195,
+      0.83100000000195,
+      0.83100000000195
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      77.88500000000204,
+      77.88500000000204,
+      77.88500000000204
+     ],
+     "detected_k": 1
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0999999999999659,
+      0.10000000000002274,
+      0.10000000000007958
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.31249999999982947,
+      0.3249999999999318,
+      0.3375000000000341
+     ],
+     "detected_k": 2
+    },
+    "05_ConstSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.37950000000034834,
+      0.4590000000009695,
+      0.5385000000015907
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.6202500000002829,
+      0.6905000000008386,
+      0.7607500000013943
+     ],
+     "detected_k": 2
+    },
+    "06_ConstSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.11250000000001137,
+      0.22500000000002274,
+      0.3375000000000341
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.317750000001638,
+      0.4285000000011223,
+      0.5392500000006066
+     ],
+     "detected_k": 2
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.07500000000015916,
+      0.10000000000013642,
+      0.1250000000001137
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.44899999999995543,
+      0.49900000000002365,
+      0.5490000000000919
+     ],
+     "detected_k": 2
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5622500000000059,
+      0.6245000000000118,
+      0.6867500000000177
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8000000000000114,
+      0.8500000000000227,
+      0.9000000000000341
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      29.248999999999967,
+      31.74899999999991,
+      34.24899999999985
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      37.21249999999998,
+      44.924999999999955,
+      52.63749999999993
+     ],
+     "detected_k": 2
+    },
+    "13_DoS": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6000000000001933,
+      1.1500000000002046,
+      1.700000000000216
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.5749999999999886,
+      3.6000000000000227,
+      3.625000000000057
+     ],
+     "detected_k": 2
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0568124999997508,
+      0.0636249999993197,
+      0.0704374999988886
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "detected_k": 2
+    },
+    "17_DataReplaySybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4802500000004102,
+      2.8105000000007294,
+      4.140750000001049
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.143250000000762,
+      3.987500000001546,
+      4.83175000000233
+     ],
+     "detected_k": 2
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.11400000000196542,
+      0.1260000000013406,
+      0.13800000000071577
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3788749999995389,
+      0.4077499999991687,
+      0.43662499999879856
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000044292,
+      0.0760000000011587,
+      0.08900000000187447
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.16425000000060663,
+      0.17850000000112232,
+      0.192750000001638
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.2250000000000227,
+      3.4500000000000455,
+      3.675000000000068
+     ],
+     "detected_k": 2
+    }
+   },
+   "fa_sender": {
+    "p": 0.5,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.90625
+    },
+    "unseen": {
+     "p": 1.0
+    },
+    "all": {
+     "p": 0.925
+    }
+   },
+   "val_FA_msg": 0.008595988538681949,
+   "auc_all_rows": 0.8553140180421771,
+   "auc_scored_rows": 0.897220368822994
+  },
+  "all but L3": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.08787632221318145,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.008950366151342554,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.9971703452178834,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.9803695150115473,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9111016588685665,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.9922701383238405,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.971718249733191,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.0008896797153024911,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.9983991462113126,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.9574809466506218,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.3481568168519602,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.08624147613317289,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9992556358996172,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.999593165174939,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.2507458638459452,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.14434180138568128,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.6183602771362586,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.6007505773672055,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.016094674556213016,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.6592777728428199
+    },
+    "unseen": {
+     "p": 0.5277217301271239
+    },
+    "all": {
+     "p": 0.6476022321295664
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.010506208213944603,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.9826388888888888,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9825608077099587,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 1.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.9594051446945338,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.4732142857142857,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.06380697050938337,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.29433301496338743,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.14757969303423848,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.979539641943734,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.01842319154700623,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.8064449906581338,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.5650702503720986,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.7584461562160209,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.20150000000194268,
+      0.3010000000012951,
+      0.40050000000064756
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      1.623000000000502,
+      2.8320000000003347,
+      4.041000000000167
+     ],
+     "detected_k": 2
+    },
+    "02_ConstPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      59.48650000000055,
+      69.5410000000004,
+      79.59550000000024
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      77.46500000000015,
+      77.46500000000015,
+      77.46500000000015
+     ],
+     "detected_k": 1
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0999999999999659,
+      0.10000000000002274,
+      0.10000000000007958
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.31249999999982947,
+      0.3249999999999318,
+      0.3375000000000341
+     ],
+     "detected_k": 2
+    },
+    "05_ConstSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5070000000004029,
+      0.6150000000009186,
+      0.7230000000014343
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8575000000007549,
+      0.9160000000015316,
+      0.9745000000023083
+     ],
+     "detected_k": 2
+    },
+    "06_ConstSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.28750000000002274,
+      0.5750000000000455,
+      0.8625000000000682
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.49275000000164937,
+      0.778500000001145,
+      1.0642500000006407
+     ],
+     "detected_k": 2
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5875000000000341,
+      0.6750000000000682,
+      0.7625000000001023
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      2.386750000000063,
+      2.5245000000001028,
+      2.6622500000001423
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      21.761750000000006,
+      26.824499999999944,
+      31.88724999999988
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      28.36175000000003,
+      39.02449999999999,
+      49.68724999999995
+     ],
+     "detected_k": 2
+    },
+    "13_DoS": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6000000000001933,
+      1.1500000000002046,
+      1.700000000000216
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.5749999999999886,
+      3.6000000000000227,
+      3.625000000000057
+     ],
+     "detected_k": 2
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0568124999997508,
+      0.0636249999993197,
+      0.0704374999988886
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      39.621249999999804,
+      56.2974999999999,
+      72.97375
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      42.08950000000061,
+      57.94300000000044,
+      73.79650000000026
+     ],
+     "detected_k": 2
+    },
+    "17_DataReplaySybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4802500000004102,
+      2.8105000000007294,
+      4.140750000001049
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      5.173500000000558,
+      6.548000000001139,
+      7.922500000001719
+     ],
+     "detected_k": 2
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.27987500000097043,
+      0.4097500000018499,
+      0.5396250000027294
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8857500000013943,
+      0.9405000000008386,
+      0.9952500000002829
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5480000000005703,
+      0.6820000000004711,
+      0.816000000000372
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      1.0505000000008522,
+      1.1670000000005984,
+      1.2835000000003447
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.2250000000000227,
+      3.4500000000000455,
+      3.675000000000068
+     ],
+     "detected_k": 2
+    }
+   },
+   "fa_sender": {
+    "p": 0.5,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.90625
+    },
+    "unseen": {
+     "p": 1.0
+    },
+    "all": {
+     "p": 0.925
+    }
+   },
+   "val_FA_msg": 0.007640878701050621,
+   "auc_all_rows": 0.829726298957026,
+   "auc_scored_rows": 0.8794443189963035
+  },
+  "all but L4 (= L1+L2+L3)": {
+   "n_blocks": 4,
+   "bootstrap_B": 20,
+   "classes": [
+    "01_ConstPos",
+    "02_ConstPosOffset",
+    "03_RandomPos",
+    "04_RandomPosOffset",
+    "05_ConstSpeed",
+    "06_ConstSpeedOffset",
+    "07_RandomSpeed",
+    "08_RandomSpeedOffset",
+    "09_EventualStop",
+    "10_Disruptive",
+    "11_DataReplay",
+    "12_DelayedMessages",
+    "13_DoS",
+    "14_DoSRandom",
+    "15_DoSDisruptive",
+    "16_GridSybil",
+    "17_DataReplaySybil",
+    "18_DoSRandomSybil",
+    "19_DoSDisruptiveSybil",
+    "S20_StaleReplay"
+   ],
+   "k": 3,
+   "msg_all": {
+    "01_ConstPos": {
+     "p": 0.9971521562245729,
+     "n": 2458
+    },
+    "02_ConstPosOffset": {
+     "p": 0.03295362082994304,
+     "n": 2458
+    },
+    "03_RandomPos": {
+     "p": 0.9983726606997559,
+     "n": 2458
+    },
+    "04_RandomPosOffset": {
+     "p": 0.9971703452178834,
+     "n": 1767
+    },
+    "05_ConstSpeed": {
+     "p": 0.9890300230946882,
+     "n": 1732
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9923436835389197,
+     "n": 2351
+    },
+    "07_RandomSpeed": {
+     "p": 0.9979658258746948,
+     "n": 2458
+    },
+    "08_RandomSpeedOffset": {
+     "p": 0.9989327641408752,
+     "n": 1874
+    },
+    "09_EventualStop": {
+     "p": 0.0008896797153024911,
+     "n": 1124
+    },
+    "10_Disruptive": {
+     "p": 0.9989327641408752,
+     "n": 1874
+    },
+    "11_DataReplay": {
+     "p": 0.9891696750902527,
+     "n": 2493
+    },
+    "12_DelayedMessages": {
+     "p": 0.5500292568753657,
+     "n": 1709
+    },
+    "13_DoS": {
+     "p": 0.08624147613317289,
+     "n": 4986
+    },
+    "14_DoSRandom": {
+     "p": 0.9992556358996172,
+     "n": 9404
+    },
+    "15_DoSDisruptive": {
+     "p": 0.999593165174939,
+     "n": 9832
+    },
+    "16_GridSybil": {
+     "p": 0.33713045836723626,
+     "n": 14748
+    },
+    "17_DataReplaySybil": {
+     "p": 0.29330254041570436,
+     "n": 1732
+    },
+    "18_DoSRandomSybil": {
+     "p": 0.6683025404157044,
+     "n": 3464
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.6437644341801386,
+     "n": 3464
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n": 200
+    }
+   },
+   "fa_msg": {
+    "p": 0.030059171597633137,
+    "n": 4225
+   },
+   "mean_msg_all": {
+    "seen": {
+     "p": 0.7334285765749782
+    },
+    "unseen": {
+     "p": 0.642823111977312
+    },
+    "all": {
+     "p": 0.7285266353014821
+    }
+   },
+   "msg_scored": {
+    "01_ConstPos": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    },
+    "02_ConstPosOffset": {
+     "p": 0.03868194842406877,
+     "n": 2094,
+     "claimed": true
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n": 2454,
+     "claimed": true
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n": 1762,
+     "claimed": true
+    },
+    "05_ConstSpeed": {
+     "p": 0.9913194444444444,
+     "n": 1728,
+     "claimed": true
+    },
+    "06_ConstSpeedOffset": {
+     "p": 0.9944928866452502,
+     "n": 2179,
+     "claimed": true
+    },
+    "07_RandomSpeed": {
+     "p": 0.9995224450811844,
+     "n": 2094,
+     "claimed": true
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n": 1512,
+     "claimed": true
+    },
+    "09_EventualStop": {
+     "p": 1.0,
+     "n": 1,
+     "claimed": false
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n": 1871,
+     "claimed": true
+    },
+    "11_DataReplay": {
+     "p": 0.9911575562700965,
+     "n": 2488,
+     "claimed": true
+    },
+    "12_DelayedMessages": {
+     "p": 0.47564935064935066,
+     "n": 1232,
+     "claimed": true
+    },
+    "13_DoS": {
+     "p": 0.06380697050938337,
+     "n": 3730,
+     "claimed": true
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n": 9209,
+     "claimed": true
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n": 9644,
+     "claimed": true
+    },
+    "16_GridSybil": {
+     "p": 0.3909582935370901,
+     "n": 12564,
+     "claimed": true
+    },
+    "17_DataReplaySybil": {
+     "p": 0.2910271546635183,
+     "n": 1694,
+     "claimed": true
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n": 2000,
+     "claimed": true
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 0.9652173913043478,
+     "n": 1955,
+     "claimed": true
+    },
+    "S20_StaleReplay": {
+     "p": null,
+     "n": 0,
+     "claimed": false
+    }
+   },
+   "fa_scored_msg": {
+    "p": 0.034408019506908694,
+    "n": 3691
+   },
+   "mean_msg_scored": {
+    "seen": {
+     "p": 0.817190289255044,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    },
+    "unseen": {
+     "p": 0.6427600206543842,
+     "classes": [
+      "06_ConstSpeedOffset",
+      "17_DataReplaySybil"
+     ]
+    },
+    "all": {
+     "p": 0.7765784377369844,
+     "classes": [
+      "02_ConstPosOffset",
+      "03_RandomPos",
+      "04_RandomPosOffset",
+      "05_ConstSpeed",
+      "06_ConstSpeedOffset",
+      "07_RandomSpeed",
+      "08_RandomSpeedOffset",
+      "10_Disruptive",
+      "11_DataReplay",
+      "12_DelayedMessages",
+      "13_DoS",
+      "14_DoSRandom",
+      "15_DoSDisruptive",
+      "16_GridSybil",
+      "17_DataReplaySybil",
+      "18_DoSRandomSybil",
+      "19_DoSDisruptiveSybil"
+     ]
+    }
+   },
+   "scored_share": {
+    "01_ConstPos": 0.0,
+    "02_ConstPosOffset": 0.8519121236777868,
+    "03_RandomPos": 0.9983726606997559,
+    "04_RandomPosOffset": 0.9971703452178834,
+    "05_ConstSpeed": 0.9976905311778291,
+    "06_ConstSpeedOffset": 0.9268396427052318,
+    "07_RandomSpeed": 0.8519121236777868,
+    "08_RandomSpeedOffset": 0.8068303094983992,
+    "09_EventualStop": 0.0008896797153024911,
+    "10_Disruptive": 0.9983991462113126,
+    "11_DataReplay": 0.9979943842759728,
+    "12_DelayedMessages": 0.7208894090111176,
+    "13_DoS": 0.748094665062174,
+    "14_DoSRandom": 0.9792641429179073,
+    "15_DoSDisruptive": 0.9808787632221319,
+    "16_GridSybil": 0.8519121236777868,
+    "17_DataReplaySybil": 0.9780600461893765,
+    "18_DoSRandomSybil": 0.5773672055427251,
+    "19_DoSDisruptiveSybil": 0.5643764434180139,
+    "S20_StaleReplay": 0.0
+   },
+   "sender": {
+    "01_ConstPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.20150000000194268,
+      0.3010000000012951,
+      0.40050000000064756
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.49800000000050204,
+      0.5820000000003347,
+      0.6660000000001673
+     ],
+     "detected_k": 2
+    },
+    "02_ConstPosOffset": {
+     "p": 0.5,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      80.35900000000186,
+      83.45600000000127,
+      86.55300000000068
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      77.56900000000314,
+      77.56900000000314,
+      77.56900000000314
+     ],
+     "detected_k": 1
+    },
+    "03_RandomPos": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "04_RandomPosOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0999999999999659,
+      0.10000000000002274,
+      0.10000000000007958
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.31249999999982947,
+      0.3249999999999318,
+      0.3375000000000341
+     ],
+     "detected_k": 2
+    },
+    "05_ConstSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.40475000000003547,
+      0.5095000000003438,
+      0.6142500000006521
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.6460000000000719,
+      0.7420000000004165,
+      0.8380000000007612
+     ],
+     "detected_k": 2
+    },
+    "06_ConstSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.11250000000001137,
+      0.22500000000002274,
+      0.3375000000000341
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.317750000001638,
+      0.4285000000011223,
+      0.5392500000006066
+     ],
+     "detected_k": 2
+    },
+    "07_RandomSpeed": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000078398,
+      0.07600000000138607,
+      0.08900000000198816
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.46025000000054206,
+      0.5065000000004147,
+      0.5527500000002874
+     ],
+     "detected_k": 2
+    },
+    "08_RandomSpeedOffset": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "09_EventualStop": {
+     "p": 0.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      null,
+      null,
+      null
+     ],
+     "detected_k": 0
+    },
+    "10_Disruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06250000000011369,
+      0.07500000000004547,
+      0.08749999999997726
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3747499999998354,
+      0.4494999999999436,
+      0.5242500000000518
+     ],
+     "detected_k": 2
+    },
+    "11_DataReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.5622500000000059,
+      0.6245000000000118,
+      0.6867500000000177
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.8500000000000227,
+      0.9500000000000455,
+      1.0500000000000682
+     ],
+     "detected_k": 2
+    },
+    "12_DelayedMessages": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      21.761750000000006,
+      26.824499999999944,
+      31.88724999999988
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      27.286749999999984,
+      36.8744999999999,
+      46.46224999999981
+     ],
+     "detected_k": 2
+    },
+    "13_DoS": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.6000000000001933,
+      1.1500000000002046,
+      1.700000000000216
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.5749999999999886,
+      3.6000000000000227,
+      3.625000000000057
+     ],
+     "detected_k": 2
+    },
+    "14_DoSRandom": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.07556249999964848,
+      0.07612499999925149,
+      0.07668749999885449
+     ],
+     "detected_k": 2
+    },
+    "15_DoSDisruptive": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.025187500000242835,
+      0.02537500000039472,
+      0.025562500000546606
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0568124999997508,
+      0.0636249999993197,
+      0.0704374999988886
+     ],
+     "detected_k": 2
+    },
+    "16_GridSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "detected_k": 2
+    },
+    "17_DataReplaySybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      1.4802500000004102,
+      2.8105000000007294,
+      4.140750000001049
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      4.533250000000294,
+      5.666500000000497,
+      6.799750000000699
+     ],
+     "detected_k": 2
+    },
+    "18_DoSRandomSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.11400000000196542,
+      0.1260000000013406,
+      0.13800000000071577
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.3788749999995389,
+      0.4077499999991687,
+      0.43662499999879856
+     ],
+     "detected_k": 2
+    },
+    "19_DoSDisruptiveSybil": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.06300000000044292,
+      0.0760000000011587,
+      0.08900000000187447
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      0.16425000000060663,
+      0.17850000000112232,
+      0.192750000001638
+     ],
+     "detected_k": 2
+    },
+    "S20_StaleReplay": {
+     "p": 1.0,
+     "n_senders": 2,
+     "delay_first_alarm_s_q25_med_q75": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "delay_kth_alarm_s_q25_med_q75": [
+      3.2250000000000227,
+      3.4500000000000455,
+      3.675000000000068
+     ],
+     "detected_k": 2
+    }
+   },
+   "fa_sender": {
+    "p": 0.5,
+    "n_senders": 4
+   },
+   "mean_sender": {
+    "seen": {
+     "p": 0.90625
+    },
+    "unseen": {
+     "p": 1.0
+    },
+    "all": {
+     "p": 0.925
+    }
+   },
+   "val_FA_msg": 0.009551098376313277,
+   "auc_all_rows": 0.8534699243517219,
+   "auc_scored_rows": 0.8911791127778808
+  }
+ },
+ "row_kinds": {
+  "genuine_test_share": {
+   "scored": 0.8736094674556213,
+   "first / gap": 0.0021301775147928993,
+   "exact repeat": 0.1242603550295858
+  },
+  "genuine_val_share": {
+   "scored": 0.8887297039159503,
+   "first / gap": 0.004775549188156638,
+   "exact repeat": 0.10649474689589303
+  },
+  "stack_FA_by_kind": {
+   "scored": 0.03196965591980493,
+   "first / gap": 0.0,
+   "exact repeat": 0.0
+  }
+ },
+ "L4_scored_auc_scored_rows": 0.8711183224031163,
+ "feature_shift_note": "Tampa beacons are 10 Hz, VeReMi 1 Hz; features are rate-invariant by construction (time window / no rate), residual scales are not"
+}
