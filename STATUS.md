@@ -11,7 +11,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S3 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | S2 APPROVED with miss (ROAD FA 3.4% vs 1%) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
-| WP5 V2X | S6 | REVIEW | worker sonnet (high, T3) | 2026-10-21 | S6 PARTIAL: M1-V2X report written (reports/M1_V2X.md). FA + no-loss met; sender FA at k=3, class-17 gain, shuffled control NOT met |
+| WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 
@@ -20,7 +20,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | Id | State |
 |---|---|
 | M0 foundation | closed 2026-10-19 |
-| M1 GPS / CAN / LiDAR / NET / V2X | open |
+| M1 GPS / CAN / LiDAR / NET / V2X | V2X closed partial 2026-10-21; others open |
 | M2 cross-domain + fusion | open |
 | M3 system | open |
 | M4 publication | open (needs the user's approval) |
