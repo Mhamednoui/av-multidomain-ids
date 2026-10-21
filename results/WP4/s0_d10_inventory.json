@@ -1,0 +1,128 @@
+{
+ "zip_members": [
+  "TrafficLabelling /",
+  "TrafficLabelling /Wednesday-workingHours.pcap_ISCX.csv",
+  "TrafficLabelling /Tuesday-WorkingHours.pcap_ISCX.csv",
+  "TrafficLabelling /Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+  "TrafficLabelling /Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+  "TrafficLabelling /Monday-WorkingHours.pcap_ISCX.csv",
+  "TrafficLabelling /Friday-WorkingHours-Morning.pcap_ISCX.csv",
+  "TrafficLabelling /Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+  "TrafficLabelling /Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv"
+ ],
+ "zip_testzip_error": null,
+ "csv_files": [
+  {
+   "path": "TrafficLabelling /Wednesday-workingHours.pcap_ISCX.csv",
+   "bytes": 285642925,
+   "rows": 692703,
+   "columns": 85,
+   "missing_required": [],
+   "labels": {
+    "BENIGN": 440031,
+    "DoS slowloris": 5796,
+    "DoS Slowhttptest": 5499,
+    "DoS Hulk": 231073,
+    "DoS GoldenEye": 10293,
+    "Heartbleed": 11
+   },
+   "timestamp_first": "5/7/2017 8:42",
+   "timestamp_last": "5/7/2017 2:43"
+  },
+  {
+   "path": "TrafficLabelling /Tuesday-WorkingHours.pcap_ISCX.csv",
+   "bytes": 174696560,
+   "rows": 445909,
+   "columns": 85,
+   "missing_required": [],
+   "labels": {
+    "BENIGN": 432074,
+    "FTP-Patator": 7938,
+    "SSH-Patator": 5897
+   },
+   "timestamp_first": "4/7/2017 8:54",
+   "timestamp_last": "4/7/2017 10:38"
+  },
+  {
+   "path": "TrafficLabelling /Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+   "bytes": 92030223,
+   "rows": 458968,
+   "columns": 85,
+   "missing_required": [],
+   "labels": {
+    "BENIGN": 168186,
+    "Web Attack \ufffd Brute Force": 1507,
+    "Web Attack \ufffd XSS": 652,
+    "Web Attack \ufffd Sql Injection": 21,
+    "": 288602
+   },
+   "timestamp_first": "6/7/2017 8:59",
+   "timestamp_last": ""
+  },
+  {
+   "path": "TrafficLabelling /Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+   "bytes": 108723183,
+   "rows": 288602,
+   "columns": 85,
+   "missing_required": [],
+   "labels": {
+    "BENIGN": 288566,
+    "Infiltration": 36
+   },
+   "timestamp_first": "6/7/2017 1:00",
+   "timestamp_last": "6/7/2017 5:04"
+  },
+  {
+   "path": "TrafficLabelling /Monday-WorkingHours.pcap_ISCX.csv",
+   "bytes": 268649908,
+   "rows": 529918,
+   "columns": 85,
+   "missing_required": [],
+   "labels": {
+    "BENIGN": 529918
+   },
+   "timestamp_first": "03/07/2017 08:55:58",
+   "timestamp_last": "03/07/2017 10:34:39"
+  },
+  {
+   "path": "TrafficLabelling /Friday-WorkingHours-Morning.pcap_ISCX.csv",
+   "bytes": 75386737,
+   "rows": 191033,
+   "columns": 85,
+   "missing_required": [],
+   "labels": {
+    "BENIGN": 189067,
+    "Bot": 1966
+   },
+   "timestamp_first": "7/7/2017 8:59",
+   "timestamp_last": "7/7/2017 12:59"
+  },
+  {
+   "path": "TrafficLabelling /Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+   "bytes": 96101069,
+   "rows": 225745,
+   "columns": 85,
+   "missing_required": [],
+   "labels": {
+    "BENIGN": 97718,
+    "DDoS": 128027
+   },
+   "timestamp_first": "7/7/2017 3:30",
+   "timestamp_last": "7/7/2017 5:02"
+  },
+  {
+   "path": "TrafficLabelling /Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+   "bytes": 101874777,
+   "rows": 286467,
+   "columns": 85,
+   "missing_required": [],
+   "labels": {
+    "BENIGN": 127537,
+    "PortScan": 158930
+   },
+   "timestamp_first": "7/7/2017 1:00",
+   "timestamp_last": "7/7/2017 3:29"
+  }
+ ],
+ "total_rows": 3119345
+}

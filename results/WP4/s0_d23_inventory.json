@@ -1,0 +1,233 @@
+{
+ "files": [
+  {
+   "file": "Friday-02-03-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 352368373,
+   "local_bytes": 352368373,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "labels": {
+    "Benign": 762384,
+    "Bot": 286191
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  },
+  {
+   "file": "Friday-16-02-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 333723605,
+   "local_bytes": 333723605,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 1048574,
+   "empty_rows": 0,
+   "repeated_header_rows": 1,
+   "labels": {
+    "Benign": 446772,
+    "DoS attacks-SlowHTTPTest": 139890,
+    "DoS attacks-Hulk": 461912
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  },
+  {
+   "file": "Friday-23-02-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 382840456,
+   "local_bytes": 382840456,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "labels": {
+    "Benign": 1048009,
+    "Brute Force -Web": 362,
+    "Brute Force -XSS": 151,
+    "SQL Injection": 53
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  },
+  {
+   "file": "Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 4054925350,
+   "local_bytes": 4054925350,
+   "size_match": true,
+   "columns": 84,
+   "has_label": true,
+   "data_rows": 7948748,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "labels": {
+    "Benign": 7372557,
+    "DDoS attacks-LOIC-HTTP": 576191
+   },
+   "header_first5": [
+    "Flow ID",
+    "Src IP",
+    "Src Port",
+    "Dst IP",
+    "Dst Port"
+   ]
+  },
+  {
+   "file": "Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 107842858,
+   "local_bytes": 107842858,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 331100,
+   "empty_rows": 0,
+   "repeated_header_rows": 25,
+   "labels": {
+    "Benign": 238037,
+    "Infilteration": 93063
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  },
+  {
+   "file": "Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 375945899,
+   "local_bytes": 375945899,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "labels": {
+    "Benign": 996077,
+    "DoS attacks-GoldenEye": 41508,
+    "DoS attacks-Slowloris": 10990
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  },
+  {
+   "file": "Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 382636202,
+   "local_bytes": 382636202,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "labels": {
+    "Benign": 1048213,
+    "Brute Force -Web": 249,
+    "Brute Force -XSS": 79,
+    "SQL Injection": 34
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  },
+  {
+   "file": "Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 358223333,
+   "local_bytes": 358223333,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "labels": {
+    "Benign": 667626,
+    "FTP-BruteForce": 193360,
+    "SSH-Bruteforce": 187589
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  },
+  {
+   "file": "Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 328893673,
+   "local_bytes": 328893673,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "labels": {
+    "Benign": 360833,
+    "DDOS attack-LOIC-UDP": 1730,
+    "DDOS attack-HOIC": 686012
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  },
+  {
+   "file": "Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv",
+   "listing_bytes": 209249758,
+   "local_bytes": 209249758,
+   "size_match": true,
+   "columns": 80,
+   "has_label": true,
+   "data_rows": 613071,
+   "empty_rows": 0,
+   "repeated_header_rows": 33,
+   "labels": {
+    "Benign": 544200,
+    "Infilteration": 68871
+   },
+   "header_first5": [
+    "Dst Port",
+    "Protocol",
+    "Timestamp",
+    "Flow Duration",
+    "Tot Fwd Pkts"
+   ]
+  }
+ ],
+ "total_rows": 16232943
+}

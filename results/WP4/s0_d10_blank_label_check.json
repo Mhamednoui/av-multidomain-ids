@@ -1,0 +1,11 @@
+{
+ "file": "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+ "rows_total": 458968,
+ "rows_labelled": 170366,
+ "rows_blank_label": 288602,
+ "blank_label_block_contiguous": true,
+ "blank_label_first_index": 170366,
+ "blank_label_rows_with_empty_timestamp": 288602,
+ "blank_label_rows_identical_to_infiltration_file_row": 0,
+ "infiltration_file_rows": 288602
+}
