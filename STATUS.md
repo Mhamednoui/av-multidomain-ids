@@ -6,10 +6,10 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
-| WP0 Foundation | S4 | REVIEW | worker sonnet | 2026-10-21 | S3 APPROVED (M0 closed). S4: combiner noisy_or in log space, 196 tests pass, see reports/WP0_S4.md |
+| WP0 Foundation | S4 | APPROVED | worker sonnet | 2026-10-21 | combiner noisy_or log form (rank-equivalent, no saturation) |
 | WP1 GPS | done (M1-GPS partial) | APPROVED | - | 2026-10-21 | M1-GPS closed PARTIAL, see reports/M1_GPS.md; frozen output gps/domain.py |
 | WP2 CAN | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | S3 APPROVED (negative: clock skew out of default stack) |
-| WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
+| WP3 LiDAR | S1 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | data layer + ray-cast attack generator |
 | WP4 Network | S0 | IN PROGRESS | worker haiku (medium, T1) | 2026-10-21 | downloads D10 + D23 (size-checked) |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
