@@ -280,3 +280,60 @@ Misses are reported plainly. No re-splitting, no re-tuning after seeing results.
 - Per class: 2 nothing; 9 11% (cusum_lo 18.7%); 11 98%; 12* 48% (placeholder jump + CUSUM memory); 16 73%; 17* 53% (birth); 18/19 tracker blind, birth 38/43%, sender >=3 alarms 98/100%.
 - Expectations K2 not met, K3 right number wrong reason. Acceptance: PARTIAL. Decisions pending: drop cusum_lo? learned road-occupancy prior?
 - Pitfalls: CUSUM memory inflates message-level detection after one jump; cusum_lo FA does not transfer to real standing vehicles; sender >=1 alarm is useless at per-message 1% budget.
+
+## 2026-10-21 S5 L4 supervised model on L1-L3 plausibility features: acceptance rule (written before any S5 result)
+Supervisor (S4 APPROVED partial): kf_cusum_lo dropped from the deployable L3 (diagnostic only; NOT a feature of L4 either). L4 = gradient boosting (xgboost 2.1.4, CPU, n_jobs=4)
+on per-message and per-sender-window PLAUSIBILITY features computed by L1-L3 (residuals, NIS, CUSUM state, beacon rate, birth density), NOT on raw position / speed / sender id / time.
+Design (module v2x/l4.py, fixed now). Feature groups (all causal, track = claimed pseudonym stream):
+  M  per message : pos_speed, pos_heading, speed_change, implied_speed, heading_rate, accel_consistency, overlap (L2 raw scores), kf_nis, kf_cusum_hi (L3), beacon rate (L1, Hz/10),
+                   field_violation (L1 field_ranges raw >= 1, binary; the continuous raw is mostly speed/V_MAX and is not used).
+  W  window      : trailing 10 messages of the same track: max and mean of nis, pos_speed; max of pos_heading, implied_speed, speed_change, heading_rate, mean of accel_consistency;
+                   number of window messages with NIS > chi2(4) 95%; max beacon rate.
+  N  network     : birth_density of the track's first message (L3 track_birth) for the first message and carried forward along the track (causal), is_first.
+  T  time/id     : track_pos (index of the message in its track, capped at 30), dt_prev (s). These two are sender/time-derived; they are in the model but ablated (see below).
+Training: VeReMi TRAIN split (splits_veremi.json), rows of attack types 6, 12, 17 REMOVED from the frame (so also from neighbour features), genuine rows all. Hyperparameters:
+a fixed grid of 8 configs (depth {3,5,8} x min_child_weight {1,50}, plus 2 shrinkage/subsample variants), early stopping on validation aucpr, choice = mean detection over the 16 seen
+attack classes at the validation 1% genuine budget (VALIDATION, held-out types removed from the validation frame, grouped by the time-block split). Threshold: genuine validation, 1% budget,
+tie-safe (common.metrics.budget_threshold). Test is scored ONCE (final run); no choice after it. Tracker noise parameters are those of S4 (fit on genuine train only), no refit.
+Reported (test, VeReMi): per-class detection (16 seen + unseen 6, 12, 17 separately: the key result), FA on genuine messages and senders, harness ablation on top of the deployable
+L1+L2+L3 (groups L1+L2+L3, L4, L1+L2+L3+L4, plus max-union versions at one 1% budget), AUC.
+Leakage checks: (a) gain importance of the final model, red flag if one feature has > 50% of the gain and it is not a physical residual; (b) ablation A1 = no T group, A2 = no T group and no
+rate / birth features (residuals only), same hyperparameters, refit; (c) shuffled-label control (train labels permuted, same hyperparameters): test AUC must be in [0.45, 0.55]
+and detection at the 1% budget <= 2%; (d) class 12: reported with the full model, with a model without the memory features (kf_cusum_hi and all W features), and split into rows at the
+zero placeholder (x = y = 0, post-hoc diagnostic only, never a feature) vs rows after the jump; class 12 is NOT claimed as delay detection in the headline.
+Tampa (illustration, 3 test vehicles): the VeReMi-trained model is applied unchanged. The features come from the Tampa tracker of S4 (normal-model noise fit on Tampa TRAIN passages,
+no labels) and the S4 Tampa L1/L2/L3 calibration; yaw_consistency is not a feature. Two thresholds reported: (i) threshold transferred from VeReMi validation (no Tampa data at all),
+(ii) 1% of genuine Tampa validation messages. No retraining, no Tampa test choice. Expected: drop (sim-to-real).
+S5 is MET if all hold:
+ 1. v2x/l4.py, features from L1-L3 only (no x, y, speed, sender id, t), tests pass (python tests/run_tests.py); held-out types absent from training, validation frame and selection (asserted).
+ 2. FA on genuine VeReMi TEST messages <= 1.5% for the L4 operating point and for L1+L2+L3+L4.
+ 3. Value: L1+L2+L3+L4 (harness combiner) beats L1+L2+L3 (deployable, no cusum_lo) by >= 3 points of mean detection over the 19 classes at <= 1.5% FA.
+ 4. Unseen generalisation (reported plainly either way): L4 alone mean detection over the unseen types 6 and 17 >= the deployable L1+L2+L3 union on the same types, and >= 50%.
+    Class 12 reported separately, no pass/fail.
+ 5. Leakage checks (a)-(c) pass: no red-flag dominant feature, shuffled-label control at chance, A1 changes mean detection over seen classes by <= 5 points (a larger drop is reported as
+    dependence on sender / time structure, not hidden).
+Pre-registered expectations (not tuned to): E1 L4 alone seen-class mean detection 80-90%; E2 class 6 (sibling 5 ConstSpeed seen) >= 80%; E3 class 17 (siblings 11, 16 seen, 1-message tracks)
+only 40-70% (limited by the features, not by the model); E4 class 12 full model >= 40% (placeholder jump + memory), without memory features < 15%; E5 classes 2 (ConstPosOffset) and 9 (EventualStop)
+stay low (< 30%) because no plausibility feature exposes them; E6 A2 (residuals only) loses mainly the DoS classes 13-15 and Sybil 18/19; E7 Tampa mean detection < VeReMi's by >= 20 points.
+Misses are reported plainly. No re-splitting, no re-tuning after seeing the test.
+
+## 2026-10-21 S5 results, first look (numbers: results/WP5/s5_dev.json, s5_summary.json, s5_tables.md; scripts tools/WP5_S5_dev.py, tools/WP5_S5_l4.py; logs results/WP5/logs/s5_dev1.log, s5_run1.log)
+- Dev (validation only): 8 configs all within 0.91-0.911 mean detection of the seen classes (plateau, AUC 0.973-0.975); chosen d5_mcw1, 120 trees (criterion fixed in advance). Features train 1.9 M rows (held-out types removed), 27 features.
+- Test (scored once): L4 alone mean detection seen-16 91.3%, unseen 6 / 17 = 100.0% / 91.9% (deployable L1L2L3 union 99.1% / 46.4%), class 12 100.0% (union 48.2%), FA genuine msgs 1.1%,
+  genuine senders >= 3 alarms 1.8% (union 10.5%). Harness: L1+L2+L3 78.1% -> L1+L2+L3+L4 91.5% mean over 19, FA 1.1% -> 1.2%. AUC pooled 0.893 -> 0.968.
+- Leakage: A1 (no time/track) 91.2% seen, A2 (residuals only) 91.2%: unchanged. Shuffled labels: test AUC 0.475 but detection at 1% FA 4.1% pooled (my rule said <= 2%: NOT MET, the noise model's tail still picks outlier rows that attacks are more often).
+  Gain: cusum_hi 55.5% (a physical state, but dominant).
+- RED FLAG found while reading the tables: L4 detects class 9 EventualStop (79% vs 1%), class 12 zero-placeholder rows (100%, residual-only model too) and the one-message Sybil tracks 17/18/19 (92/100/100%).
+  Common cause suspected: these rows have an EXACTLY ZERO residual vector (unscored first message of a track; exactly repeated message) - genuine VeReMi senders always carry measurement noise, so "exact zero" separates them in the simulation
+  (same artefact the supervisor dropped cusum_lo for) and the 1% per-message budget lets the model flag all genuine first messages (~1% of genuine messages). Diagnostics (not model selection, post-hoc, labelled as such): tools/WP5_S5_diag.py.
+
+## 2026-10-21 S5 final results and diagnosis (files: results/WP5/s5_summary.json, s5_tables.md, s5_diag.json, s5_diag.md, s5_tampa_frozen.json; report reports/WP5_S5.md)
+- Final run (test once, 212 s): see the first-look entry above for the headline; harness L1+L2+L3 78.1% -> +L4 91.5% (mean over 19), unseen 6 / 17 / 12 = 100.0 / 91.9 / 100.0% (union 99.1 / 46.4 / 48.2%).
+- Post-hoc diagnostic (same saved model, same test rows; NOT used to select anything; one extra diagnostic model trained on scored train rows): row kinds from l2.Pairs: scored (predecessor and moved) / unscored (first message, gap) / frozen (exact repeat).
+  Genuine VeReMi rows: 99.1% scored, 0.9% unscored, 0.0% frozen. Attack rows (test): 68.5 / 15.5 / 16.0%. Headline L4 flags 100% of unscored and 100% of frozen rows, only 0.2% of scored genuine rows;
+  84.3% of its genuine false alarms are first messages. Genuine Tampa frozen share 10.6-20.6% (s5_tampa_frozen.json). Conclusion: part of the headline gain is the zero-residual-vector shortcut (simulation artefact: noise-free repeats; new identity alarms for every genuine birth).
+  Scored rows only: seen 83.0% (headline) / 83.5% (diagnostic model) / 82.7% (baseline); unseen 6 and 17: 87.4 / 98.2 / 59.9%; class 17 scored rows 74.8 / 96.3 / 19.9% (the real gain, replay-Sybil learned from classes 11 and 16).
+- Shuffled control: AUC 0.475 (pass) but detection 4.1% pooled at 1.1% FA (rule: <= 2%, not met): the score tail of a noise model selects outlier rows.
+- Tampa: VeReMi scale does not transfer (FA 100% at VeReMi threshold: 10 Hz beacons); at the Tampa-val 1% threshold mean detection 77.6% at 0.3% FA (baseline 71.3% at 3.0%), unseen 6 and 17 55.1% (baseline 64.2%), StaleReplay 0%.
+- Pitfalls: (1) per-message 1% budget lets the model spend the whole budget on genuine first messages (~0.9% of messages); report FA per genuine first message and scored-row FA next to the message FA. (2) Zero residuals encode "first message" and "exact repeat"; do not give them a class meaning (the same reason cusum_lo was dropped). (3) Class 12 gain = frozen placeholder rows + CUSUM memory, not delay detection. (4) xgboost wrapper refits are deterministic (test AUC reproduced to 1e-16 from the saved model).
+- Acceptance S5: PARTIAL (see report). Not done: a pre-registered scored-rows-only L4 test evaluation (needs the supervisor's go, test already used).

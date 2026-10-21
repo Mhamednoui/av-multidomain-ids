@@ -1,0 +1,510 @@
+{
+ "reproduced_test_auc": 0.9682960762664122,
+ "summary_test_auc": 0.9682960762664122,
+ "kinds": {
+  "0": "scored",
+  "1": "unscored (first / gap)",
+  "2": "frozen (exact repeat)"
+ },
+ "composition": {
+  "train": {
+   "genuine": {
+    "scored": 0.9907384517362218,
+    "unscored (first / gap)": 0.009261548263778273,
+    "frozen (exact repeat)": 0.0
+   },
+   "attack": {
+    "scored": 0.6976355534404213,
+    "unscored (first / gap)": 0.15395810650592875,
+    "frozen (exact repeat)": 0.14840634005365003
+   }
+  },
+  "val": {
+   "genuine": {
+    "scored": 0.9907945436298985,
+    "unscored (first / gap)": 0.009205456370101471,
+    "frozen (exact repeat)": 0.0
+   },
+   "attack": {
+    "scored": 0.6712904581757041,
+    "unscored (first / gap)": 0.15686212694409415,
+    "frozen (exact repeat)": 0.17184741488020178
+   }
+  },
+  "test": {
+   "genuine": {
+    "scored": 0.9908747773473946,
+    "unscored (first / gap)": 0.009125222652605389,
+    "frozen (exact repeat)": 0.0
+   },
+   "attack": {
+    "scored": 0.6851095192970658,
+    "unscored (first / gap)": 0.15529697068503479,
+    "frozen (exact repeat)": 0.15959351001789943
+   }
+  }
+ },
+ "L4_genuine_FA_by_kind": {
+  "scored": {
+   "n": 420555,
+   "FA": 0.0017144012079276195
+  },
+  "unscored (first / gap)": {
+   "n": 3873,
+   "FA": 1.0
+  },
+  "frozen (exact repeat)": {
+   "n": 0,
+   "FA": null
+  }
+ },
+ "by_class_kind": {
+  "01_ConstPos": {
+   "scored": {
+    "share": 0.0,
+    "L4_detection": null
+   },
+   "unscored (first / gap)": {
+    "share": 0.008690557562738014,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.9913094424372619,
+    "L4_detection": 1.0
+   }
+  },
+  "02_ConstPosOffset": {
+   "scored": {
+    "share": 0.990924674800847,
+    "L4_detection": 0.0005088022794342118
+   },
+   "unscored (first / gap)": {
+    "share": 0.009075325199152969,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "03_RandomPos": {
+   "scored": {
+    "share": 0.9908499389995933,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.009150061000406669,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "04_RandomPosOffset": {
+   "scored": {
+    "share": 0.9912890280904375,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.008710971909562494,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "05_ConstSpeed": {
+   "scored": {
+    "share": 0.990845220353417,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.009154779646582926,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "06_ConstSpeedOffset": {
+   "scored": {
+    "share": 0.9913105704354938,
+    "L4_detection": 0.9997937506445292
+   },
+   "unscored (first / gap)": {
+    "share": 0.008689429564506235,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "07_RandomSpeed": {
+   "scored": {
+    "share": 0.991647331786543,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.008352668213457077,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "08_RandomSpeedOffset": {
+   "scored": {
+    "share": 0.9908588435374149,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.009141156462585034,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "09_EventualStop": {
+   "scored": {
+    "share": 0.20741743931659548,
+    "L4_detection": 0.0025113008538422904
+   },
+   "unscored (first / gap)": {
+    "share": 0.00906344410876133,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.7835191165746432,
+    "L4_detection": 1.0
+   }
+  },
+  "10_Disruptive": {
+   "scored": {
+    "share": 0.9649925410243659,
+    "L4_detection": 0.9925796145522003
+   },
+   "unscored (first / gap)": {
+    "share": 0.008851317752362009,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.026156141223272002,
+    "L4_detection": 1.0
+   }
+  },
+  "11_DataReplay": {
+   "scored": {
+    "share": 0.8447033898305085,
+    "L4_detection": 0.9920993227990971
+   },
+   "unscored (first / gap)": {
+    "share": 0.008792372881355932,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.14650423728813558,
+    "L4_detection": 1.0
+   }
+  },
+  "12_DelayedMessages": {
+   "scored": {
+    "share": 0.4811591126207409,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.009234688461946715,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.5096061989173124,
+    "L4_detection": 1.0
+   }
+  },
+  "13_DoS": {
+   "scored": {
+    "share": 0.32854182854182856,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.002849002849002849,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.6686091686091686,
+    "L4_detection": 1.0
+   }
+  },
+  "14_DoSRandom": {
+   "scored": {
+    "share": 0.9971112660623568,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.0028887339376431915,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "15_DoSDisruptive": {
+   "scored": {
+    "share": 0.9669114919504415,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.003227242377030937,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.029861265672527636,
+    "L4_detection": 1.0
+   }
+  },
+  "16_GridSybil": {
+   "scored": {
+    "share": 0.968996062992126,
+    "L4_detection": 0.8054088369730827
+   },
+   "unscored (first / gap)": {
+    "share": 0.029872047244094486,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0011318897637795275,
+    "L4_detection": 1.0
+   }
+  },
+  "17_DataReplaySybil": {
+   "scored": {
+    "share": 0.3200732526197986,
+    "L4_detection": 0.7479338842975206
+   },
+   "unscored (first / gap)": {
+    "share": 0.5436972225048327,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.1362295248753688,
+    "L4_detection": 1.0
+   }
+  },
+  "18_DoSRandomSybil": {
+   "scored": {
+    "share": 0.0,
+    "L4_detection": null
+   },
+   "unscored (first / gap)": {
+    "share": 1.0,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.0,
+    "L4_detection": null
+   }
+  },
+  "19_DoSDisruptiveSybil": {
+   "scored": {
+    "share": 0.0015504734481422006,
+    "L4_detection": 1.0
+   },
+   "unscored (first / gap)": {
+    "share": 0.9970098012071543,
+    "L4_detection": 1.0
+   },
+   "frozen (exact repeat)": {
+    "share": 0.001439725344703472,
+    "L4_detection": 1.0
+   }
+  }
+ },
+ "diag_model_scored_rows_only": {
+  "n_train_rows": 1670497,
+  "threshold_p": 0.09477409720420839,
+  "val_FA_scored_genuine": 0.010003751406777542,
+  "test_FA_scored_genuine": 0.01631891191401838,
+  "baseline_threshold_score": 0.9987932974865575,
+  "baseline_test_FA_scored_genuine": 0.009525507959719895,
+  "test_auc_scored_rows": 0.9548114040780401,
+  "baseline_auc_scored_rows": 0.9448296665502459,
+  "headline_L4_auc_scored_rows": 0.9546243772618958,
+  "importance": {
+   "cusum_hi": 0.7611113930173969,
+   "w_pos_speed_mean": 0.1613719452832207,
+   "w_nis_mean": 0.04413249418393695,
+   "w_pos_speed_max": 0.0061720644432367204,
+   "track_birth_density": 0.004207930387009278,
+   "rate": 0.004027772693630101,
+   "w_implied_speed_max": 0.0037517954660611927,
+   "w_rate_max": 0.0031631820167519567,
+   "w_nis_max": 0.0021169584524754377,
+   "w_accel_consistency_mean": 0.0016893188682104289
+  }
+ },
+ "scored_rows_by_class": {
+  "01_ConstPos": {
+   "n_scored_rows": 0,
+   "share_of_class_rows": 0.0,
+   "diag_model_detection": null,
+   "headline_L4_detection": null,
+   "baseline_union_detection": null
+  },
+  "02_ConstPosOffset": {
+   "n_scored_rows": 9827,
+   "share_of_class_rows": 0.990924674800847,
+   "diag_model_detection": 0.03083341813371324,
+   "headline_L4_detection": 0.0005088022794342118,
+   "baseline_union_detection": 0.009769003765136867
+  },
+  "03_RandomPos": {
+   "n_scored_rows": 9746,
+   "share_of_class_rows": 0.9908499389995933,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 1.0
+  },
+  "04_RandomPosOffset": {
+   "n_scored_rows": 10128,
+   "share_of_class_rows": 0.9912890280904375,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 0.9999012638230648
+  },
+  "05_ConstSpeed": {
+   "n_scored_rows": 9308,
+   "share_of_class_rows": 0.990845220353417,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 0.9994628276751182
+  },
+  "06_ConstSpeedOffset": {
+   "n_scored_rows": 9697,
+   "share_of_class_rows": 0.9913105704354938,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 0.9997937506445292,
+   "baseline_union_detection": 0.9979375064452923
+  },
+  "07_RandomSpeed": {
+   "n_scored_rows": 10685,
+   "share_of_class_rows": 0.991647331786543,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 1.0
+  },
+  "08_RandomSpeedOffset": {
+   "n_scored_rows": 9322,
+   "share_of_class_rows": 0.9908588435374149,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 0.9987127225917185
+  },
+  "09_EventualStop": {
+   "n_scored_rows": 1991,
+   "share_of_class_rows": 0.20741743931659548,
+   "diag_model_detection": 0.019588146659969864,
+   "headline_L4_detection": 0.0025113008538422904,
+   "baseline_union_detection": 0.0065293822199899544
+  },
+  "10_Disruptive": {
+   "n_scored_rows": 9703,
+   "share_of_class_rows": 0.9649925410243659,
+   "diag_model_detection": 0.9926826754611976,
+   "headline_L4_detection": 0.9925796145522003,
+   "baseline_union_detection": 0.9920643100072143
+  },
+  "11_DataReplay": {
+   "n_scored_rows": 7974,
+   "share_of_class_rows": 0.8447033898305085,
+   "diag_model_detection": 0.9963631803360923,
+   "headline_L4_detection": 0.9920993227990971,
+   "baseline_union_detection": 0.9818159016804615
+  },
+  "12_DelayedMessages": {
+   "n_scored_rows": 4533,
+   "share_of_class_rows": 0.4811591126207409,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 1.0
+  },
+  "13_DoS": {
+   "n_scored_rows": 10148,
+   "share_of_class_rows": 0.32854182854182856,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 1.0
+  },
+  "14_DoSRandom": {
+   "n_scored_rows": 30030,
+   "share_of_class_rows": 0.9971112660623568,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 1.0
+  },
+  "15_DoSDisruptive": {
+   "n_scored_rows": 26066,
+   "share_of_class_rows": 0.9669114919504415,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 1.0
+  },
+  "16_GridSybil": {
+   "n_scored_rows": 39380,
+   "share_of_class_rows": 0.968996062992126,
+   "diag_model_detection": 0.8146013204672422,
+   "headline_L4_detection": 0.8054088369730827,
+   "baseline_union_detection": 0.7616810563737938
+  },
+  "17_DataReplaySybil": {
+   "n_scored_rows": 3146,
+   "share_of_class_rows": 0.3200732526197986,
+   "diag_model_detection": 0.963445645263827,
+   "headline_L4_detection": 0.7479338842975206,
+   "baseline_union_detection": 0.1993006993006993
+  },
+  "18_DoSRandomSybil": {
+   "n_scored_rows": 0,
+   "share_of_class_rows": 0.0,
+   "diag_model_detection": null,
+   "headline_L4_detection": null,
+   "baseline_union_detection": null
+  },
+  "19_DoSDisruptiveSybil": {
+   "n_scored_rows": 28,
+   "share_of_class_rows": 0.0015504734481422006,
+   "diag_model_detection": 1.0,
+   "headline_L4_detection": 1.0,
+   "baseline_union_detection": 1.0
+  }
+ },
+ "genuine_first_messages": {
+  "n": 3873,
+  "L4_FA_per_genuine_first_message": 1.0,
+  "share_of_L4_genuine_alarms_that_are_first_messages": 0.8430561602089682,
+  "share_of_L4_genuine_alarms_that_are_frozen": 0.0
+ },
+ "scored_rows_means": {
+  "diag_model_detection": {
+   "seen": 0.8349283646967858,
+   "unseen_6_17": 0.9817228226319135,
+   "unseen_6": 1.0
+  },
+  "headline_L4_detection": {
+   "seen": 0.8302390674967429,
+   "unseen_6_17": 0.8738638174710249,
+   "unseen_6": 0.9997937506445292
+  },
+  "baseline_union_detection": {
+   "seen": 0.8269181898566538,
+   "unseen_6_17": 0.5986191028729958,
+   "unseen_6": 0.9979375064452923
+  }
+ }
+}

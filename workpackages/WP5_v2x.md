@@ -41,3 +41,4 @@ literature; misbehaviour injected on real messages reported per attack type at 1
 - S0 PARTIAL, S1 APPROVED, S2 APPROVED, S3 REVIEW (2026-10-20): v2x/l2.py, reports/WP5_S3.md (PARTIAL: Tampa map false alarms do not transfer). S3b waits for receiver positions.
 - S1b REVIEW (2026-10-20): Tampa dedup (19,527 messages), 38 physical vehicles, new time-block split splits_tampa_v2.json, S2+S3 Tampa rerun, reports/WP5_S1b.md (PARTIAL: heading_rate FA 2.7%).
 - S4 REVIEW (2026-10-21): v2x/l3.py (Kalman tracker, NIS + CUSUM, track_birth), reports/WP5_S4.md (PARTIAL: Tampa FA of cusum_lo 13.5%). VeReMi L1+L2 68.0% -> L1+L2+L3 78.4% mean detection.
+- S5 REVIEW (2026-10-21): v2x/l4.py (xgboost on L1-L3 plausibility features), reports/WP5_S5.md (PARTIAL: headline 78.1% -> 91.5% mean detection, unseen 17 46% -> 92%, but a zero-residual shortcut inflates it; on scored rows L4 ~ baseline except class 17).
