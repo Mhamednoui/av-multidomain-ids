@@ -248,3 +248,64 @@ clean calibration batches (floor 2), score = CUSUM / c_i, so no single unstable 
 Verdict NOT MET. Run 1 (frozen): 0/5 ROAD test masquerade, FA 3.9%. Run 2b (revised): AUC 0.458, FA 35%, 1/5 partly. Car-Hacking: L2a useless (recall <= 3%).
 D11: weaker than L1, FA higher in regime B. ID-known upper bound AUC about 1.0 on 8/12 masquerade captures (onset transient): a change signal exists, not deployable.
 Full suite 190 passed. No new cache.
+
+## 2026-10-21 S4 start: L2b signal physics on decoded ROAD signals. Design + acceptance rule, written BEFORE any L2b score
+Findings before design (descriptive, train ambient only; tools/WP2_S4_*.py, results/WP2/s4_signal_stats.json, s4_decode_check.json):
+- anonymized.dbc: 105 IDs, 664 signals, ALL named Unknown_k (no physical names). Own decoder (can/signals.py, Motorola/Intel, signed) reproduces signal_extractions
+  CSV exactly (3 captures, 7.4 M values, 0 mismatches), so L2b runs causally on raw frames of ANY capture (also non-masquerade ones, which have no CSV).
+- Names are given by meaning from TRAIN attack metadata + train correlations: 0xd0 byte 5 (sig 5, 14 bit) = speedometer; 0xd0 sig 2 = reverse light bit (bit 0x08 of byte 2);
+  0x6e0 sig 0..3 = four wheel speeds; 0x4e7 sig 1 (byte 5) = coolant temperature byte; 0x498.3, 0x20e.1 also correlate 1.0 with speed; 0x274.14, 0x295.0, 0xc0.0
+  predict the reverse bit (conditional entropy < 0.002 bit) = gear / direction state candidates (learned, not asserted). No RPM/brake signal is named by the data: relations
+  with RPM x gear ratio and brake vs deceleration are learned only if they emerge from the generic search (conditional linear relations NOT implemented: reported as not done).
+- ambient_dyno_exercise_all_bits is clean vehicle data that exercises the full signal envelope: used in the FIT of every model, NOT as a held-out calibration fold (decision before results).
+Model (fold = fit on a set of clean ambient captures; everything below from sufficient statistics, summable over captures):
+ value check: cont (pooled > 32 distinct values): excess of v outside [min, max] / span; disc (<= 32): value count < ms (ms in {1, 10} frames) -> 1.
+ rate check: cont signals, not noise-like (change fraction > 0.9 and >= half of 2^len values): |v - v_prev(same ID)| / max training step - 1 (>= 0); disc: transition (a->b) count < ms.
+ linear relation: all pairs of cont signals (same or different ID) with |corr| >= rho on a 0.05 s sample-and-hold grid of the fold's captures (rho in {0.98, 0.995}), OLS y = a x + b,
+   residual |r| / max training residual - 1 (>= 0), held value of the other signal at frame time (causal).
+ joint support (state consistency): disc x disc pairs among slowly varying signals (<= 8 values, change fraction < 0.05) with normalised mutual information >= 0.7 in the fold;
+   combination count (on the grid) < 10*ms/ms... fixed: count < ms_joint (10 grid samples = 0.5 s when ms = 10, 1 when ms = 1) -> 1.
+ Component types: value, rate, linear, joint. Frame raw per type; per-type ECDF (fit on the LOCO clean frames) -> max over types = frame score; window score = max over frames (1 s windows, running-max t).
+LOCO: folds = clean ambient captures of train+val except exercise_all_bits (7: basic_long, extended_long, radio_infotainment, idle_radio, highway_long, basic_short, winter); each held-out
+ capture is scored by a model fit on the other 7 ambient + all_bits; LOCO scores are pooled; 1% tie-safe thresholds at frame and window level from the pool. Final model fit on all 8 ambient.
+Hyper-parameters (4 variants: rho x ms) chosen on train+val masquerade captures (attack 1 and 2; model fit on ambient only, threshold from the pool): mean window recall over those 10 captures at 1%;
+ ties -> first. Test sees: the chosen variant, once.
+Test (ROAD test split, window level, 1 s): ambient_dyno_drive_benign_anomaly, extended_short, reverse, highway diagnostics (clean windows) and the attack captures of the test split.
+ACCEPTANCE RULE S4. MET if all hold on the single test run:
+ 1 Layer implemented (Layer API, causal, decoded from raw frames), clean-only fit, LOCO calibration, tie-safe 1% budget at window and frame level, unit tests pass with the suite,
+   own files committed, caches <= 3 GB, temporary files deleted.
+ 2 L2b alone detects (>= 1 alarmed attack window) at least 3 of the 5 ROAD test masquerade captures (correlated_signal_3, max_speedometer_3, reverse_light_off_3,
+   reverse_light_on_3, coolant) with clean test window FA <= 2% for L2b alone. Fewer than 3 -> plain statement "signal physics does not catch ROAD masquerade".
+ 3 ambient_dyno_reverse (legitimate reverse driving) produces no L2b alert in more than 2% of its windows.
+ 4 L1 + L2b (OR of alarms; L1 = five S2 run-1 rules recomputed from stored windows) keeps the 5 v2-detected captures (delay <= 2 s) and clean-window FA <= 5.5% (L1 alone 3.4% + L2b 2%).
+ 5 Reported without gate: per-capture detection / delay / clean FA, ablation on top of L1, frame-level recall at 1% budget, which check fires per capture, physical explanation. Car-Hacking and D11:
+   no decoded signals / no DBC -> "not evaluable" (stated, not faked).
+If 2, 3 or 4 fails the step is NOT MET; revisions after the test run are evaluated on validation only and labelled second exposure.
+
+## 2026-10-21 S4 design change 1 (before any test score; decided from LOCO + train/val attack diagnostics only)
+First LOCO pass (per-type ECDF calibration, binary-ish scores): every held-out clean capture fired value / rate / joint checks in 100% of its windows
+(results of tools/WP2_S4_trace.py on basic_short: signals 0x55c.3-5, 0x655.8, 0x3a2.1, 0x277.1, 0x207.5 hold session-specific states that are absent from the other
+captures; 145 joint pairs built on them fire in every frame). Validation masquerade recall was 0.5 for all four variants (wheel-speed and speedometer captures 1.0,
+both reverse-light captures 0.0) because the 1% window threshold was set by these persistent violations (threshold 0.98 on ECDF scores; joint violations of the reverse-light bit
+had ECDF value below it). Cause: a check that fires on every held-out capture is not a physical relation, it is a session constant.
+Change: each check gets a surprise weight w_c = -log2((violations + 1) / (frames + 2)) from the pooled LOCO held-out violation counts of the same variant;
+frame score = max over violated checks of w_c * (1 + log1p(excess)/10); window = max; per-type ECDF removed; thresholds = tie-safe 1% on the LOCO pooled frames / windows.
+Checks absent from the folds (new pairs in the final model) get w = 6.6 bits. The weights come from the same LOCO pool as the threshold (plug-in, as every earlier calibration);
+reported as such. Old per-type ECDF cache (loco_b, attack) not used any more. Acceptance rule unchanged.
+
+## 2026-10-21 S4 design change 2 (before any test score; decided from train/val attack-capture leads only)
+Weighted LOCO scoring still alarmed on every clean window of the train/val ATTACK captures (final model fit on the 8 ambient captures): each ATTACK capture is another session with
+states that the 7 ambient LOCO folds never showed (event IDs 0x32d, 0x2b4, 0x1d6 ... and a wheel-speed/speed gain shift; checks that never fire in LOCO fire persistently there; diag:
+tools/WP2_S4_trace_attack.py on reverse_light_off_attack_2_masquerade and correlated_signal_attack_2_masquerade, train/val only). LOCO over ambient captures therefore under-estimates session shift.
+Change: IN-SITU BASELINE (like D11 regime B): a check that violates at least once during the first 3 s of a capture is muted for the rest of that capture; frames of the first 3 s are not
+scored and windows 0..3 are excluded from pools and from FA / recall. Causal (the decision uses only frames <= 3 s). Applied identically in LOCO (held-out captures), attack and test captures.
+Weights recomputed from the muted LOCO traces. Consequence: attacks in the first 3 s are invisible (ROAD attack onsets are >= 4.3 s; I knew the onset list from the public
+metadata when choosing 3 s; the value is not tuned). Acceptance rule unchanged. Variants and selection unchanged.
+
+## 2026-10-22 S4 results (report reports/WP2_S4.md; verdict results/WP2/s4_test.json, tables s4_tables.md)
+Verdict NOT MET. Variant 0 (rho 0.98, ms 1) chosen on validation (masq recall 0.75). TEST (single run): masquerade detected 4/5 (correlated_3 0.68 s, max_speedometer_3 0.48 s,
+reverse_light_on_3 0.93 s, coolant 0.02 s; reverse_light_off_3 missed); checks: linear for wheel speeds / speedometer / coolant, joint (reverse bit vs gear) for reverse_on.
+Clean-window FA 38.1% (benign_anomaly 64.2%, extended_short 71.1%, reverse 0, diagnostics 0); L1 5.2% (recomputed OR), L1+L2b 40.4%. Cause: single-value / rate checks on discrete signals flag
+rare legitimate states (0x5e1.2, 0x107.3, 0x153.6, 0xc0.2) plus 1500 generic joint pairs. Second exposure R1 (joint only with reverse bit): validation identical, test FA 32.3%, same detection.
+Ablation (validation): no joint -> reverse_on lost; linear only 0.5; joint only 0.25. Car-Hacking / D11 not evaluable (no decoded signals). 227 tests pass. Cache 673 MB.
+Pitfalls: ECDF-per-type calibration with persistent session states -> every window alarms; LOCO over ambient does not represent a new session (attack captures); the first LOCO process of the old design could not be killed (permission denied).

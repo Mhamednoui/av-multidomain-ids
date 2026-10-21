@@ -1,0 +1,395 @@
+{
+ "all": {
+  "types": [
+   "value",
+   "rate",
+   "linear",
+   "joint"
+  ],
+  "window_threshold": 15.95051956176758,
+  "loco_fa": 0.010048848569434752,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.75
+ },
+ "no_joint": {
+  "types": [
+   "value",
+   "rate",
+   "linear"
+  ],
+  "window_threshold": 15.764246940612795,
+  "loco_fa": 0.010048848569434752,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.5
+ },
+ "no_linear": {
+  "types": [
+   "value",
+   "rate",
+   "joint"
+  ],
+  "window_threshold": 15.824147224426271,
+  "loco_fa": 0.010188415910676901,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.75
+ },
+ "no_value": {
+  "types": [
+   "rate",
+   "linear",
+   "joint"
+  ],
+  "window_threshold": 15.919409751892092,
+  "loco_fa": 0.010048848569434752,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.75
+ },
+ "no_rate": {
+  "types": [
+   "value",
+   "linear",
+   "joint"
+  ],
+  "window_threshold": 14.71634101867676,
+  "loco_fa": 0.010188415910676901,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.75
+ },
+ "only_linear": {
+  "types": [
+   "linear"
+  ],
+  "window_threshold": 12.52759647369385,
+  "loco_fa": 0.010048848569434752,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.5
+ },
+ "only_joint": {
+  "types": [
+   "joint"
+  ],
+  "window_threshold": 9.979148864746096,
+  "loco_fa": 0.013817166782972784,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.25
+ },
+ "only_value_rate": {
+  "types": [
+   "value",
+   "rate"
+  ],
+  "window_threshold": 15.544796943664553,
+  "loco_fa": 0.010048848569434752,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.5
+ },
+ "R1_joint_reverse_bit_only": {
+  "types": [
+   "value",
+   "rate",
+   "linear",
+   "joint"
+  ],
+  "window_threshold": 15.764246940612795,
+  "loco_fa": 0.010048848569434752,
+  "attack": {
+   "correlated_signal_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "recall": 0.0,
+    "fa_clean": 0.0
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "recall": 1.0,
+    "fa_clean": 0.0
+   }
+  },
+  "mean_recall": 0.75
+ }
+}

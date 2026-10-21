@@ -1,0 +1,587 @@
+{
+ "variant": 0,
+ "rho_ms": [
+  0.98,
+  1
+ ],
+ "loco": {
+  "ambient_dyno_drive_basic_long": {
+   "window_fa_at_pool_thr": 0.0024057738572574178,
+   "windows": 1247,
+   "frame_fa_at_pool_thr": 0.004333308535186894
+  },
+  "ambient_dyno_drive_extended_long": {
+   "window_fa_at_pool_thr": 0.009174311926605505,
+   "windows": 654,
+   "frame_fa_at_pool_thr": 0.005904412183199091
+  },
+  "ambient_dyno_drive_radio_infotainment": {
+   "window_fa_at_pool_thr": 0.00516795865633075,
+   "windows": 387,
+   "frame_fa_at_pool_thr": 8.642136681873227e-05
+  },
+  "ambient_dyno_idle_radio_infotainment": {
+   "window_fa_at_pool_thr": 0.0015267175572519084,
+   "windows": 655,
+   "frame_fa_at_pool_thr": 3.767844575772632e-05
+  },
+  "ambient_highway_street_driving_long": {
+   "window_fa_at_pool_thr": 0.014717687985014717,
+   "windows": 3737,
+   "frame_fa_at_pool_thr": 0.015286779271223057
+  },
+  "ambient_dyno_drive_basic_short": {
+   "window_fa_at_pool_thr": 0.009070294784580499,
+   "windows": 441,
+   "frame_fa_at_pool_thr": 0.011872803961955534
+  },
+  "ambient_dyno_drive_winter": {
+   "window_fa_at_pool_thr": 0.0,
+   "windows": 44,
+   "frame_fa_at_pool_thr": 9.347891115764284e-06
+  }
+ },
+ "window_threshold": 0.9899511514305653,
+ "frame_threshold": 0.9899999472655437,
+ "captures": {
+  "correlated_signal_attack_3": {
+   "l2b": {
+    "attack_windows": 13,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.6810259819030762
+   },
+   "l1": {
+    "attack_windows": 13,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.6810259819030762
+   },
+   "l1_or_l2b": {
+    "attack_windows": 13,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.6810259819030762
+   },
+   "l1_matched_windows": 17,
+   "windows": 17,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 0.0,
+    "rate": 0.0,
+    "linear": 1.0,
+    "joint": 0.0
+   },
+   "frame_recall_1pct": 1.0,
+   "frame_fa_clean": 0.0
+  },
+  "max_speedometer_attack_3": {
+   "l2b": {
+    "attack_windows": 62,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.481065034866333
+   },
+   "l1": {
+    "attack_windows": 62,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.481065034866333
+   },
+   "l1_or_l2b": {
+    "attack_windows": 62,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.481065034866333
+   },
+   "l1_matched_windows": 87,
+   "windows": 87,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 0.0,
+    "rate": 0.0,
+    "linear": 1.0,
+    "joint": 0.0
+   },
+   "frame_recall_1pct": 1.0,
+   "frame_fa_clean": 0.0
+  },
+  "reverse_light_off_attack_3": {
+   "l2b": {
+    "attack_windows": 25,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "l1": {
+    "attack_windows": 25,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.4758939743041992
+   },
+   "l1_or_l2b": {
+    "attack_windows": 25,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.4758939743041992
+   },
+   "l1_matched_windows": 58,
+   "windows": 58,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": null,
+    "rate": null,
+    "linear": null,
+    "joint": null
+   },
+   "frame_recall_1pct": 0.0,
+   "frame_fa_clean": 0.0
+  },
+  "reverse_light_on_attack_3": {
+   "l2b": {
+    "attack_windows": 24,
+    "clean_windows": 18,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9291970729827881
+   },
+   "l1": {
+    "attack_windows": 24,
+    "clean_windows": 18,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9291970729827881
+   },
+   "l1_or_l2b": {
+    "attack_windows": 24,
+    "clean_windows": 18,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9291970729827881
+   },
+   "l1_matched_windows": 65,
+   "windows": 65,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 0.0,
+    "rate": 0.0,
+    "linear": 0.0,
+    "joint": 1.0
+   },
+   "frame_recall_1pct": 1.0,
+   "frame_fa_clean": 0.0
+  },
+  "fuzzing_attack_3": {
+   "l2b": {
+    "attack_windows": 2,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 0.5,
+    "delay_s": 0.6583899259567261
+   },
+   "l1": {
+    "attack_windows": 2,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.17490196228027344
+   },
+   "l1_or_l2b": {
+    "attack_windows": 2,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.17490196228027344
+   },
+   "l1_matched_windows": 6,
+   "windows": 6,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 1.0,
+    "rate": 1.0,
+    "linear": 0.0,
+    "joint": 0.0
+   },
+   "frame_recall_1pct": 0.017391304347826087,
+   "frame_fa_clean": 0.0
+  },
+  "correlated_signal_attack_3_masquerade": {
+   "l2b": {
+    "attack_windows": 13,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.6810259819030762
+   },
+   "l1": {
+    "attack_windows": 13,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "l1_or_l2b": {
+    "attack_windows": 13,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.6810259819030762
+   },
+   "l1_matched_windows": 17,
+   "windows": 17,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 0.0,
+    "rate": 0.0,
+    "linear": 1.0,
+    "joint": 0.0
+   },
+   "frame_recall_1pct": 1.0,
+   "frame_fa_clean": 0.0
+  },
+  "max_speedometer_attack_3_masquerade": {
+   "l2b": {
+    "attack_windows": 62,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.481065034866333
+   },
+   "l1": {
+    "attack_windows": 62,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "l1_or_l2b": {
+    "attack_windows": 62,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.481065034866333
+   },
+   "l1_matched_windows": 87,
+   "windows": 87,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 0.0,
+    "rate": 0.0,
+    "linear": 1.0,
+    "joint": 0.0
+   },
+   "frame_recall_1pct": 1.0,
+   "frame_fa_clean": 0.0
+  },
+  "reverse_light_off_attack_3_masquerade": {
+   "l2b": {
+    "attack_windows": 25,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "l1": {
+    "attack_windows": 25,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "l1_or_l2b": {
+    "attack_windows": 25,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "l1_matched_windows": 58,
+   "windows": 58,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": null,
+    "rate": null,
+    "linear": null,
+    "joint": null
+   },
+   "frame_recall_1pct": 0.0,
+   "frame_fa_clean": 0.0
+  },
+  "reverse_light_on_attack_3_masquerade": {
+   "l2b": {
+    "attack_windows": 24,
+    "clean_windows": 18,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9291970729827881
+   },
+   "l1": {
+    "attack_windows": 24,
+    "clean_windows": 18,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "l1_or_l2b": {
+    "attack_windows": 24,
+    "clean_windows": 18,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9291970729827881
+   },
+   "l1_matched_windows": 65,
+   "windows": 65,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 0.0,
+    "rate": 0.0,
+    "linear": 0.0,
+    "joint": 1.0
+   },
+   "frame_recall_1pct": 1.0,
+   "frame_fa_clean": 0.0
+  },
+  "max_engine_coolant_temp_attack": {
+   "l2b": {
+    "attack_windows": 6,
+    "clean_windows": 14,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.0203399658203125
+   },
+   "l1": {
+    "attack_windows": 6,
+    "clean_windows": 14,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.0203399658203125
+   },
+   "l1_or_l2b": {
+    "attack_windows": 6,
+    "clean_windows": 14,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.0203399658203125
+   },
+   "l1_matched_windows": 26,
+   "windows": 26,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 0.0,
+    "rate": 0.0,
+    "linear": 1.0,
+    "joint": 0.0
+   },
+   "frame_recall_1pct": 1.0,
+   "frame_fa_clean": 0.0
+  },
+  "max_engine_coolant_temp_attack_masquerade": {
+   "l2b": {
+    "attack_windows": 6,
+    "clean_windows": 14,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.0203399658203125
+   },
+   "l1": {
+    "attack_windows": 6,
+    "clean_windows": 14,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.16666666666666666,
+    "delay_s": 0.0203399658203125
+   },
+   "l1_or_l2b": {
+    "attack_windows": 6,
+    "clean_windows": 14,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.0203399658203125
+   },
+   "l1_matched_windows": 26,
+   "windows": 26,
+   "dominant_type_share_in_alarmed_attack_windows": {
+    "value": 0.0,
+    "rate": 0.0,
+    "linear": 1.0,
+    "joint": 0.0
+   },
+   "frame_recall_1pct": 1.0,
+   "frame_fa_clean": 0.0
+  },
+  "ambient_dyno_drive_benign_anomaly": {
+   "l2b": {
+    "attack_windows": 0,
+    "clean_windows": 430,
+    "false_alerts_clean": 213,
+    "fa_clean_rate": 0.49534883720930234
+   },
+   "l1": {
+    "attack_windows": 0,
+    "clean_windows": 430,
+    "false_alerts_clean": 40,
+    "fa_clean_rate": 0.09302325581395349
+   },
+   "l1_or_l2b": {
+    "attack_windows": 0,
+    "clean_windows": 430,
+    "false_alerts_clean": 234,
+    "fa_clean_rate": 0.5441860465116279
+   },
+   "l1_matched_windows": 434,
+   "windows": 434,
+   "frame_recall_1pct": null,
+   "frame_fa_clean": 0.023660242526967787
+  },
+  "ambient_dyno_drive_extended_short": {
+   "l2b": {
+    "attack_windows": 0,
+    "clean_windows": 356,
+    "false_alerts_clean": 237,
+    "fa_clean_rate": 0.6657303370786517
+   },
+   "l1": {
+    "attack_windows": 0,
+    "clean_windows": 356,
+    "false_alerts_clean": 32,
+    "fa_clean_rate": 0.0898876404494382
+   },
+   "l1_or_l2b": {
+    "attack_windows": 0,
+    "clean_windows": 356,
+    "false_alerts_clean": 256,
+    "fa_clean_rate": 0.7191011235955056
+   },
+   "l1_matched_windows": 360,
+   "windows": 360,
+   "frame_recall_1pct": null,
+   "frame_fa_clean": 0.007900098052663933
+  },
+  "ambient_dyno_reverse": {
+   "l2b": {
+    "attack_windows": 0,
+    "clean_windows": 48,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0
+   },
+   "l1": {
+    "attack_windows": 0,
+    "clean_windows": 48,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0
+   },
+   "l1_or_l2b": {
+    "attack_windows": 0,
+    "clean_windows": 48,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0
+   },
+   "l1_matched_windows": 52,
+   "windows": 52,
+   "frame_recall_1pct": null,
+   "frame_fa_clean": 0.0
+  },
+  "ambient_highway_street_driving_diagnostics": {
+   "l2b": {
+    "attack_windows": 0,
+    "clean_windows": 466,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0
+   },
+   "l1": {
+    "attack_windows": 0,
+    "clean_windows": 466,
+    "false_alerts_clean": 1,
+    "fa_clean_rate": 0.002145922746781116
+   },
+   "l1_or_l2b": {
+    "attack_windows": 0,
+    "clean_windows": 466,
+    "false_alerts_clean": 1,
+    "fa_clean_rate": 0.002145922746781116
+   },
+   "l1_matched_windows": 470,
+   "windows": 470,
+   "frame_recall_1pct": null,
+   "frame_fa_clean": 0.00033912834173399273
+  }
+ },
+ "clean_window_fa_test": {
+  "l1": 0.05236728837876614,
+  "l2b": 0.32281205164992827,
+  "l1_or_l2b": 0.3522238163558106,
+  "n": 1394
+ },
+ "auc_window_l2b_all_test": 0.8473597314554197,
+ "masquerade_detected": {
+  "correlated_signal_attack_3_masquerade": true,
+  "max_speedometer_attack_3_masquerade": true,
+  "reverse_light_off_attack_3_masquerade": false,
+  "reverse_light_on_attack_3_masquerade": true,
+  "max_engine_coolant_temp_attack_masquerade": true
+ }
+}

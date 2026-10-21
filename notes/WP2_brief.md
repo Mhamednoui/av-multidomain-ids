@@ -1,4 +1,4 @@
-# WP2 CAN brief (state at 2026-10-21, after S3)
+# WP2 CAN brief (state at 2026-10-22, after S4)
 
 ## State
 - S0 data inventory, S1 adapters/splits/frames: APPROVED. S2 (L1 rules): done, verdict NOT MET (ROAD false alerts 3.4% > 1%).
@@ -9,6 +9,12 @@
 - ROAD masquerade logs = attack log minus legit frames of the injected ID; injected timestamps are real attacker times (identical to the non-masquerade log).
 - Car-Hacking: no gain; D11: weaker than L1. Keep L2a out of the default stack. Code: can/l2a_skew.py, can/l2a_exp.py, tools/WP2_S3_*.py, report reports/WP2_S3.md.
 - Next: S4 signal physics on decoded signals; masquerade must come from payload/signal layers.
+
+## S4 (L2b signal physics) outcome
+- NOT MET: masquerade 4/5 detected on test (wheel speeds, speedometer, coolant via linear relations; reverse_light_on via joint reverse-bit vs gear; reverse_light_off missed) but clean-window FA 38% (limit 2%): rare legitimate discrete states (benign drives).
+- Decoder can/signals.py exact vs CSV; DBC anonymous (meaning from train metadata + correlation). Model/code: can/l2b_signals.py; tools/WP2_S4_run.py (stages stats|fold|final|weights|score), WP2_S4_eval.py (select|report).
+- Design needed: LOCO weights per check + in-situ 3 s baseline (mute checks violated in the first 3 s). Cache ../data_extra/WP2_S4_cache (673 MB: payload bytes, stats, models, sparse scores).
+- Next: S5 per-signal predictors on continuous signals; consider L2b "relations only" (linear/range/rate on continuous + named gear-reverse rule) in the default stack. R1 (second exposure) FA 32%.
 
 ## Binding decisions
 - Domain "can", layers L1.. ; Layer API from common/layer.py; evaluation only through common/evaluate.py.

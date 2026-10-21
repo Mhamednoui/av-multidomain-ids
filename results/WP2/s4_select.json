@@ -1,0 +1,325 @@
+{
+ "variants": {
+  "0": {
+   "rho_ms": [
+    0.98,
+    1
+   ],
+   "mean_masq_recall": 0.75,
+   "window_threshold": 0.9899511514305653,
+   "frame_threshold": 0.9897662565960289,
+   "loco_per_capture": {
+    "ambient_dyno_drive_basic_long": {
+     "window_fa_at_pool_thr": 0.0032076984763432237,
+     "windows": 1247,
+     "frame_fa_at_pool_thr": 0.003537422078527017
+    },
+    "ambient_dyno_drive_extended_long": {
+     "window_fa_at_pool_thr": 0.010703363914373088,
+     "windows": 654,
+     "frame_fa_at_pool_thr": 0.03161878422370295
+    },
+    "ambient_dyno_drive_radio_infotainment": {
+     "window_fa_at_pool_thr": 0.007751937984496124,
+     "windows": 387,
+     "frame_fa_at_pool_thr": 0.00021713368413206482
+    },
+    "ambient_dyno_idle_radio_infotainment": {
+     "window_fa_at_pool_thr": 0.0015267175572519084,
+     "windows": 655,
+     "frame_fa_at_pool_thr": 3.703982803301909e-05
+    },
+    "ambient_highway_street_driving_long": {
+     "window_fa_at_pool_thr": 0.013647310677013648,
+     "windows": 3737,
+     "frame_fa_at_pool_thr": 0.010366271680585964
+    },
+    "ambient_dyno_drive_basic_short": {
+     "window_fa_at_pool_thr": 0.011337868480725623,
+     "windows": 441,
+     "frame_fa_at_pool_thr": 0.018466597504089174
+    },
+    "ambient_dyno_drive_winter": {
+     "window_fa_at_pool_thr": 0.0,
+     "windows": 44,
+     "frame_fa_at_pool_thr": 9.347891115764284e-06
+    }
+   },
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    }
+   }
+  },
+  "1": {
+   "rho_ms": [
+    0.98,
+    10
+   ],
+   "mean_masq_recall": 0.5,
+   "window_threshold": 0.989672016748081,
+   "frame_threshold": 0.9899231564167377,
+   "loco_per_capture": {
+    "ambient_dyno_drive_basic_long": {
+     "window_fa_at_pool_thr": 0.00400962309542903,
+     "windows": 1247,
+     "frame_fa_at_pool_thr": 0.0041627375008964195
+    },
+    "ambient_dyno_drive_extended_long": {
+     "window_fa_at_pool_thr": 0.022935779816513763,
+     "windows": 654,
+     "frame_fa_at_pool_thr": 0.030324493227457238
+    },
+    "ambient_dyno_drive_radio_infotainment": {
+     "window_fa_at_pool_thr": 0.015503875968992248,
+     "windows": 387,
+     "frame_fa_at_pool_thr": 0.0005088057971452862
+    },
+    "ambient_dyno_idle_radio_infotainment": {
+     "window_fa_at_pool_thr": 0.0015267175572519084,
+     "windows": 655,
+     "frame_fa_at_pool_thr": 9.45154232566694e-05
+    },
+    "ambient_highway_street_driving_long": {
+     "window_fa_at_pool_thr": 0.010168584426010168,
+     "windows": 3737,
+     "frame_fa_at_pool_thr": 0.010336208403627515
+    },
+    "ambient_dyno_drive_basic_short": {
+     "window_fa_at_pool_thr": 0.0,
+     "windows": 441,
+     "frame_fa_at_pool_thr": 0.018758140485854485
+    },
+    "ambient_dyno_drive_winter": {
+     "window_fa_at_pool_thr": 0.0,
+     "windows": 44,
+     "frame_fa_at_pool_thr": 3.7391564463057135e-05
+    }
+   },
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    }
+   }
+  },
+  "2": {
+   "rho_ms": [
+    0.995,
+    1
+   ],
+   "mean_masq_recall": 0.75,
+   "window_threshold": 0.9899511514305653,
+   "frame_threshold": 0.9898204723573387,
+   "loco_per_capture": {
+    "ambient_dyno_drive_basic_long": {
+     "window_fa_at_pool_thr": 0.0032076984763432237,
+     "windows": 1247,
+     "frame_fa_at_pool_thr": 0.003537422078527017
+    },
+    "ambient_dyno_drive_extended_long": {
+     "window_fa_at_pool_thr": 0.010703363914373088,
+     "windows": 654,
+     "frame_fa_at_pool_thr": 0.03120773089427638
+    },
+    "ambient_dyno_drive_radio_infotainment": {
+     "window_fa_at_pool_thr": 0.007751937984496124,
+     "windows": 387,
+     "frame_fa_at_pool_thr": 0.00021713368413206482
+    },
+    "ambient_dyno_idle_radio_infotainment": {
+     "window_fa_at_pool_thr": 0.0015267175572519084,
+     "windows": 655,
+     "frame_fa_at_pool_thr": 3.703982803301909e-05
+    },
+    "ambient_highway_street_driving_long": {
+     "window_fa_at_pool_thr": 0.013647310677013648,
+     "windows": 3737,
+     "frame_fa_at_pool_thr": 0.010328834392298083
+    },
+    "ambient_dyno_drive_basic_short": {
+     "window_fa_at_pool_thr": 0.011337868480725623,
+     "windows": 441,
+     "frame_fa_at_pool_thr": 0.018466597504089174
+    },
+    "ambient_dyno_drive_winter": {
+     "window_fa_at_pool_thr": 0.0,
+     "windows": 44,
+     "frame_fa_at_pool_thr": 9.347891115764284e-06
+    }
+   },
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    }
+   }
+  },
+  "3": {
+   "rho_ms": [
+    0.995,
+    10
+   ],
+   "mean_masq_recall": 0.5,
+   "window_threshold": 0.9899511514305653,
+   "frame_threshold": 0.9899773721780475,
+   "loco_per_capture": {
+    "ambient_dyno_drive_basic_long": {
+     "window_fa_at_pool_thr": 0.007217321571772253,
+     "windows": 1247,
+     "frame_fa_at_pool_thr": 0.0041627375008964195
+    },
+    "ambient_dyno_drive_extended_long": {
+     "window_fa_at_pool_thr": 0.024464831804281346,
+     "windows": 654,
+     "frame_fa_at_pool_thr": 0.029913439898030667
+    },
+    "ambient_dyno_drive_radio_infotainment": {
+     "window_fa_at_pool_thr": 0.015503875968992248,
+     "windows": 387,
+     "frame_fa_at_pool_thr": 0.0005088057971452862
+    },
+    "ambient_dyno_idle_radio_infotainment": {
+     "window_fa_at_pool_thr": 0.0015267175572519084,
+     "windows": 655,
+     "frame_fa_at_pool_thr": 9.45154232566694e-05
+    },
+    "ambient_highway_street_driving_long": {
+     "window_fa_at_pool_thr": 0.010436178753010436,
+     "windows": 3737,
+     "frame_fa_at_pool_thr": 0.010298771115339634
+    },
+    "ambient_dyno_drive_basic_short": {
+     "window_fa_at_pool_thr": 0.0,
+     "windows": 441,
+     "frame_fa_at_pool_thr": 0.018758140485854485
+    },
+    "ambient_dyno_drive_winter": {
+     "window_fa_at_pool_thr": 0.0,
+     "windows": 44,
+     "frame_fa_at_pool_thr": 3.7391564463057135e-05
+    }
+   },
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "fa_clean_windows": 0.0
+    }
+   }
+  }
+ },
+ "chosen": 0
+}

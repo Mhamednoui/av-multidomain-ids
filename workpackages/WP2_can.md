@@ -45,3 +45,4 @@ reverse-driving false alarm; can-train-and-test unknown-vehicle results reported
 
 ## Progress
 (worker updates this section)
+- S0, S1 APPROVED. S2 done (NOT MET: FA 3.4%). S3 done (negative: skew out of default stack). S4 done 2026-10-22, REVIEW: L2b NOT MET (masq 4/5, FA 38%), see reports/WP2_S4.md.

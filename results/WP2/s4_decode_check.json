@@ -1,0 +1,33 @@
+{
+ "n_ids": 105,
+ "n_signals": 664,
+ "captures": {
+  "ambient_dyno_reverse": {
+   "frames": 123047,
+   "frames_in_dbc": 115287,
+   "csv_rows": 115287,
+   "id_equal": true,
+   "values_compared": 683215,
+   "ids_with_mismatch": {},
+   "aligned": true
+  },
+  "max_speedometer_attack_2_masquerade": {
+   "frames": 142754,
+   "frames_in_dbc": 133740,
+   "csv_rows": 133740,
+   "id_equal": true,
+   "values_compared": 792399,
+   "ids_with_mismatch": {},
+   "aligned": true
+  },
+  "ambient_dyno_drive_basic_short": {
+   "frames": 1063624,
+   "frames_in_dbc": 996482,
+   "csv_rows": 996482,
+   "id_equal": true,
+   "values_compared": 5904711,
+   "ids_with_mismatch": {},
+   "aligned": true
+  }
+ }
+}

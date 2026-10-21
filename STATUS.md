@@ -8,7 +8,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 |---|---|---|---|---|---|
 | WP0 Foundation | S4 | APPROVED | worker sonnet | 2026-10-21 | combiner noisy_or log form (rank-equivalent, no saturation) |
 | WP1 GPS | done (M1-GPS partial) | APPROVED | - | 2026-10-21 | M1-GPS closed PARTIAL, see reports/M1_GPS.md; frozen output gps/domain.py |
-| WP2 CAN | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | S3 APPROVED (negative: clock skew out of default stack) |
+| WP2 CAN | S4 | REVIEW | worker sonnet (medium, T2) | 2026-10-22 | L2b signal physics NOT MET: masquerade 4/5 detected, clean FA 38% (benign drives); report reports/WP2_S4.md |
 | WP3 LiDAR | S1 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | data layer + ray-cast attack generator |
 | WP4 Network | S2 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S1 APPROVED |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
