@@ -86,4 +86,4 @@ Token savings that do not change quality:
   brief + the WP file + RULES.md + the previous report's summary section instead of the full
   notes log, ARCHITECTURE and DATASETS (it opens those only for the sections it needs).
 - Reports: a summary section (<= 40 lines) first; long tables go to results/*.md.
-- Max 2 workers in parallel.
+- Max 3 workers in parallel (user 2026-10-21; was 2).
