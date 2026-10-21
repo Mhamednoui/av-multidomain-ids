@@ -11,7 +11,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S2 | IN PROGRESS (interrupted) | worker sonnet (medium) | 2026-10-20 | stopped by usage limit 2026-10-20 night; uncommitted work on disk, resume |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
-| WP5 V2X | S4 | IN PROGRESS (interrupted) | worker sonnet (medium) | 2026-10-20 | stopped by usage limit while writing the report; uncommitted work on disk, resume |
+| WP5 V2X | S4 | REVIEW | worker sonnet (medium) | 2026-10-21 | L3 Kalman tracker: VeReMi met (L1+L2 68.0% -> +L3 78.4%), Tampa FA of cusum_lo 13.5% not met; PARTIAL |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 

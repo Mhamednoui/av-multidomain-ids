@@ -1,0 +1,81 @@
+{
+ "cusum_hi_threshold_raw_approx_q99_genuine": 506.83907899192786,
+ "per_class": {
+  "00_Genuine": {
+   "n": 161426,
+   "frac_cusum_hi_alarm": 0.01000458414381822,
+   "frac_of_alarms_with_own_nis_below_K_HI": 0.8656346749226006,
+   "frac_nis_above_K_HI": 0.07037639114668001,
+   "median_nis": 0.1935556447148338
+  },
+  "02_ConstPosOffset": {
+   "n": 2989,
+   "frac_cusum_hi_alarm": 0.0,
+   "frac_of_alarms_with_own_nis_below_K_HI": null,
+   "frac_nis_above_K_HI": 0.06901217861975643,
+   "median_nis": 0.1880194236017546
+  },
+  "09_EventualStop": {
+   "n": 3761,
+   "frac_cusum_hi_alarm": 0.011167242754586547,
+   "frac_of_alarms_with_own_nis_below_K_HI": 0.9047619047619048,
+   "frac_nis_above_K_HI": 0.02200751476113795,
+   "median_nis": 1.047539050108017e-260,
+   "frac_messages_at_origin_00": 0.0,
+   "frac_speed0": 0.8117521935655411,
+   "frac_tracks_all_origin": 0.0,
+   "frac_tracks_origin_then_real": 0.0,
+   "frac_tracks_real_then_origin": 0.0
+  },
+  "11_DataReplay": {
+   "n": 4031,
+   "frac_cusum_hi_alarm": 0.9568345323741008,
+   "frac_of_alarms_with_own_nis_below_K_HI": 0.17422867513611615,
+   "frac_nis_above_K_HI": 0.8009502375593899,
+   "median_nis": 3544.8060158200083
+  },
+  "12_DelayedMessages": {
+   "n": 3840,
+   "frac_cusum_hi_alarm": 0.5059895833333333,
+   "frac_of_alarms_with_own_nis_below_K_HI": 0.8975810602161606,
+   "frac_nis_above_K_HI": 0.05225840336134454,
+   "median_nis": 0.0012559120535042875,
+   "frac_messages_at_origin_00": 0.4940104166666667,
+   "frac_speed0": 0.49453125,
+   "frac_tracks_all_origin": 0.0625,
+   "frac_tracks_origin_then_real": 0.9375,
+   "frac_tracks_real_then_origin": 0.0
+  },
+  "13_DoS": {
+   "n": 11119,
+   "frac_cusum_hi_alarm": 0.9821027070779746,
+   "frac_of_alarms_with_own_nis_below_K_HI": 0.09990842490842491,
+   "frac_nis_above_K_HI": 0.8987010644055565,
+   "median_nis": 843.5917865846773
+  },
+  "16_GridSybil": {
+   "n": 11409,
+   "frac_cusum_hi_alarm": 0.6573757559821194,
+   "frac_of_alarms_with_own_nis_below_K_HI": 0.17666666666666667,
+   "frac_nis_above_K_HI": 0.6022603978300181,
+   "median_nis": 95.81815307249732
+  },
+  "17_DataReplaySybil": {
+   "n": 3038,
+   "frac_cusum_hi_alarm": 0.17676102699144175,
+   "frac_of_alarms_with_own_nis_below_K_HI": 0.12476722532588454,
+   "frac_nis_above_K_HI": 0.3961325966850829,
+   "median_nis": 1.6101381571601532
+  }
+ },
+ "genuine_standstill_pairs": {
+  "n": 20437,
+  "frac_displacement_exactly_zero": 0.0,
+  "median_displacement_m": 0.10123139127963757,
+  "q90_displacement_m": 0.3023012591097942
+ },
+ "eventual_stop_standstill_pairs": {
+  "n": 3087,
+  "frac_displacement_exactly_zero": 0.9880142533203757
+ }
+}

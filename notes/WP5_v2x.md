@@ -225,3 +225,58 @@ Probes (all 2026-10-20, no login):
 - S3 bucket usdot-its-cvpilot-publicdata (and usdot-its-cvpilot-public-data, the name in older metadata): both listing requests (prefix TAMPA/, list-type=2, index.html) return AccessDenied (403); the other guessed names do not exist (404). The bucket is closed to anonymous listing; guessing object keys would be working around the access control, not done.
 - catalog.data.gov: only points back to the Socrata sample.
 Result: S0b NOT MET, nothing downloaded, D14 unchanged. User action needed (see reports/WP5_S0b.md).
+
+## 2026-10-20 S4 L3 per-sender Kalman tracker: acceptance rule (written before any S4 detection result)
+Supervisor: S3, S1b approved; S0b closed. VeReMi = primary benchmark; Tampa (splits_tampa_v2.json, 3 test vehicles) = illustration, no statistical claims.
+Pre-run look (TRAIN split only, no test, no calibration): VeReMi genuine consecutive-beacon displacement matches speed x dt to a median 0.14 m although
+the stated position noise is sigma ~4 m, so the position error is strongly time-correlated (not white). Class 9 EventualStop: position repeated EXACTLY and speed 0
+after the stop. Class 12 (as in the CSV): long runs of exactly (0, 0, speed 0). Class 17: median track length 1 message (pseudonym changes about every message,
+59 tracks per sender), class 18/19: 2 messages per track 50 s apart. Class 2: consistent track, only shifted. (Disclosure: this look included train rows of
+held-out types 12 and 17; they were NOT used in any fit or calibration, but the idea of the "too consistent" low-side test was motivated by seeing the exact repeats.)
+Design (module v2x/l3.py, fixed now). Per track (pseudonym), segment restarts when dt > 5 s or dt <= 0 (same gap rule as L2). State s = [x, y, vx, vy]; message
+measurement z = [x, y, vx, vy] (position, velocity = speed x heading unit vector), H = I.
+  predict: s- = F s, F = [[I, dt I],[0, I]];  P- = F P F^T + Q;  Q = sigma_a^2 * [[dt^3/3 I, dt^2/2 I],[dt^2/2 I, dt I]]  (white-noise acceleration, i.e. constant-velocity model)
+  innovation nu = z - s-,  S = P- + R,  R = diag(sp^2, sp^2, sv^2, sv^2);  NIS = nu^T S^-1 nu  ~ chi2(4) if the model is right.  update: K = P- S^-1, s = s- + K nu, P = (I-K) P-.
+  init at segment start: s = z, P = R (the first message of a segment is not scored, raw = 0). CTRA not implemented: no attack of the targeted classes is about turn dynamics;
+  the velocity measurement corrects the heading each beacon. Revisit only if val consistency is poor.
+Noise fit (genuine TRAIN senders only): maximum likelihood of the innovations, theta = (sp, sv, sigma_a), sum 0.5 (ln det S + NIS) over a fixed random subsample of train
+genuine tracks (seed common.config.SEED), floors sp >= 0.05 m, sv >= 0.02 m/s. Separate fit for Tampa (train passages). Nothing from val, test or any attack is used.
+Layers (domain v2x, layer L3, kind normal_model; all need no attack data):
+  v2x.kf_nis        raw = NIS of the message (two-sided in spirit; this layer is the upper tail).
+  v2x.kf_cusum_hi   raw = per-track CUSUM C_k = max(0, C_(k-1) + NIS_k - k_hi), k_hi = chi2(4).ppf(0.95) = 9.488 (fixed, not tuned): catches sustained inconsistency.
+  v2x.kf_cusum_lo   raw = per-track CUSUM C_k = max(0, C_(k-1) + k_lo - NIS_k), k_lo = chi2(4).ppf(0.25) = 1.923 (fixed): catches "too consistent" tracks (position and velocity
+                    repeated with no measurement noise: stuck / frozen / replayed-verbatim streams). Relies on genuine senders having fresh noise every beacon: true on VeReMi
+                    (zero displacement in 0.45% of genuine pairs), to be checked on Tampa val; the val threshold takes whatever the genuine data gives.
+  v2x.track_birth   optional: for the first message of a track, number of OTHER track births in the same 300 m claimed-position cell during the same or previous 5 s slot; 0 for
+                    other messages. No receiver position needed. Calibrated like the others (1% of genuine MESSAGES, which is lenient because births are ~1% of messages: the
+                    false-alarm rate per genuine BIRTH is reported next to it).
+Operating points: each layer at the 1% budget on genuine VALIDATION messages (held-out types 6, 12, 17 removed from the validation frame, tie-safe via common.metrics);
+L3 union = max of calibrated L3 scores at ONE 1% budget (kf_nis, cusum_hi, cusum_lo; birth separately and in the union only if it is reported as part of L3 - decision: reported
+alone and as "L3 + birth" union). Harness ablation: groups L1, L2, L3, L1+L2, L1+L2+L3 (map_road not in any union), plus all-but-one. L1, L2 calibrated exactly as in S3.
+Filter consistency on genuine VALIDATION (reported, no tuning): mean NIS vs 4, fraction above chi2(4) 95% (9.488) vs 5%, fraction below chi2 5% (0.711), for VeReMi and Tampa.
+Test used once per dataset. S4 is MET if all hold:
+ 1. Filter, equations, 4 layers + tests implemented; noise parameters fitted on genuine TRAIN senders only (checked by a unit test that fit() takes only the rows it is given and by the
+    log of the sender ids used); held-out types 6, 12, 17 absent from every calibration.
+ 2. Consistency on genuine val reported (VeReMi); stated plainly if NIS mean is outside [3.0, 5.0] or the fraction above 95% is outside [2%, 10%].
+ 3. False alarms on genuine TEST messages <= 1.5% (VeReMi) / <= 2% (Tampa) for every L3 check and the L3 union.
+ 4. Per-class detection (message and sender level), delay per attacker, FA on genuine messages and senders, harness ablation on top of L1+L2 (VeReMi and Tampa), all from the JSON.
+ 5. Value: L1+L2+L3 combined (harness) beats L1+L2 by >= 3 points of mean detection over the 19 VeReMi classes at <= 1.5% FA. If not, stated as "L3 does not add value".
+ 6. python tests/run_tests.py passes.
+Pre-registered expectations (stated, not tuned to), message level at the 1% budget, VeReMi test:
+ K1 ConstPosOffset (2): < 5% by every L3 check (consistent track, only shifted; the tracker has no absolute reference).
+ K2 EventualStop (9): cusum_lo catches the frozen stream: >= 30% of the falsified messages; < 10% would be reported as a failure of the idea.
+ K3 DelayedMessages (12, held out), as it appears in this CSV (zero placeholders): similar to K2 (>= 30%) if cusum_lo works; reported either way.
+ K4 DataReplay (11) and GridSybil (16): the tracker re-catches what L2 already caught (>= 50% each, as VeReMi's own attacks are kinematically inconsistent); no gain expected over L2.
+ K5 DataReplaySybil (17, held out): <= 30% from the tracker (tracks are 1-2 messages); the birth check may add some.
+ K6 DoSRandomSybil / DoSDisruptiveSybil (18/19): ~0% from the tracker (one message per pseudonym within 5 s), birth density: random claimed positions fall in different cells, so < 20% expected.
+ K7 Genuine val NIS mean in [3.0, 5.0] but the upper tail heavier than chi2 (stops, junctions): fraction above 95% in [5%, 10%].
+Misses are reported plainly. No re-splitting, no re-tuning after seeing results.
+
+## 2026-10-20 S4 results (numbers in results/WP5/s4_summary.json, s4_veremi.json, s4_tampa.json, s4_diag.json; scripts tools/WP5_S4_l3.py, WP5_S4_diag.py, WP5_S4_report.py; logs results/WP5/logs/s4_dev1.log, s4_run1.log)
+- Code v2x/l3.py (4 layers), tests/v2x/test_l3.py (11), suite 144 passed. Report reports/WP5_S4.md (summary) + results/WP5/s4_report_details.md (full).
+- Noise fit VeReMi (sp 0.05 floor, sv 0.02 floor, sa 1.94; 9.5 min); Tampa sp 0.37, sv 0.02 floor, sa 1.16. Consistency val: VeReMi NIS mean 4.15, 7.0% > chi2 95%, median 0.19 (poor shape); Tampa mean 2.10.
+- FA test: VeReMi all L3 <= 0.9%; Tampa cusum_lo 13.5%, L3 union 14.8% (NOT MET); kf_nis 0.6, cusum_hi 1.8, birth 0.0.
+- Value VeReMi: combined L1+L2 68.0% -> L1+L2+L3 78.4% mean detection, FA 0.98 -> 1.08%.
+- Per class: 2 nothing; 9 11% (cusum_lo 18.7%); 11 98%; 12* 48% (placeholder jump + CUSUM memory); 16 73%; 17* 53% (birth); 18/19 tracker blind, birth 38/43%, sender >=3 alarms 98/100%.
+- Expectations K2 not met, K3 right number wrong reason. Acceptance: PARTIAL. Decisions pending: drop cusum_lo? learned road-occupancy prior?
+- Pitfalls: CUSUM memory inflates message-level detection after one jump; cusum_lo FA does not transfer to real standing vehicles; sender >=1 alarm is useless at per-message 1% budget.
