@@ -1,0 +1,271 @@
+{
+ "dataset": "D10",
+ "files": {
+  "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+   "rows_after_header_empty": 225745,
+   "exact_duplicates_removed": 12594,
+   "conflicting_label_rows_removed": 6,
+   "rows_clean": 213145,
+   "lines_read": 225745,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "bad_timestamp": 0
+  },
+  "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+   "rows_after_header_empty": 286467,
+   "exact_duplicates_removed": 180617,
+   "conflicting_label_rows_removed": 116,
+   "rows_clean": 105734,
+   "lines_read": 286467,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "bad_timestamp": 0
+  },
+  "Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+   "rows_after_header_empty": 191033,
+   "exact_duplicates_removed": 32126,
+   "conflicting_label_rows_removed": 36,
+   "rows_clean": 158871,
+   "lines_read": 191033,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "bad_timestamp": 0
+  },
+  "Monday-WorkingHours.pcap_ISCX.csv": {
+   "rows_after_header_empty": 529918,
+   "exact_duplicates_removed": 70696,
+   "conflicting_label_rows_removed": 5,
+   "rows_clean": 459217,
+   "lines_read": 529918,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "bad_timestamp": 0
+  },
+  "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+   "rows_after_header_empty": 288602,
+   "exact_duplicates_removed": 97595,
+   "conflicting_label_rows_removed": 155,
+   "rows_clean": 190852,
+   "lines_read": 288602,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "bad_timestamp": 0
+  },
+  "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+   "rows_after_header_empty": 170366,
+   "exact_duplicates_removed": 27234,
+   "conflicting_label_rows_removed": 10,
+   "rows_clean": 143122,
+   "lines_read": 458968,
+   "empty_rows": 288602,
+   "repeated_header_rows": 0,
+   "bad_timestamp": 0
+  },
+  "Tuesday-WorkingHours.pcap_ISCX.csv": {
+   "rows_after_header_empty": 445909,
+   "exact_duplicates_removed": 56403,
+   "conflicting_label_rows_removed": 31,
+   "rows_clean": 389475,
+   "lines_read": 445909,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "bad_timestamp": 0
+  },
+  "Wednesday-workingHours.pcap_ISCX.csv": {
+   "rows_after_header_empty": 692703,
+   "exact_duplicates_removed": 119111,
+   "conflicting_label_rows_removed": 183,
+   "rows_clean": 573409,
+   "lines_read": 692703,
+   "empty_rows": 0,
+   "repeated_header_rows": 0,
+   "bad_timestamp": 0
+  }
+ },
+ "total": {
+  "lines_read": 3119345,
+  "empty_rows": 288602,
+  "repeated_header_rows": 0,
+  "rows_after_header_empty": 2830743,
+  "exact_duplicates_removed": 596376,
+  "conflicting_label_rows_removed": 542,
+  "rows_clean": 2233825,
+  "bad_timestamp": 0
+ },
+ "labels_clean": {
+  "BENIGN": 1897591,
+  "DoS-Hulk": 172715,
+  "DDoS-LOIC-HTTP": 128013,
+  "DoS-GoldenEye": 10286,
+  "FTP-Patator": 5933,
+  "DoS-Slowloris": 5383,
+  "DoS-SlowHTTPTest": 5228,
+  "SSH-Patator": 3219,
+  "PortScan": 1851,
+  "Web-BruteForce": 1470,
+  "Bot": 1416,
+  "Web-XSS": 652,
+  "Infiltration": 36,
+  "Web-SQLi": 21,
+  "Heartbleed": 11
+ },
+ "labels_before_dedup": {
+  "BENIGN": 2273097,
+  "DoS-Hulk": 231073,
+  "PortScan": 158930,
+  "DDoS-LOIC-HTTP": 128027,
+  "DoS-GoldenEye": 10293,
+  "FTP-Patator": 7938,
+  "SSH-Patator": 5897,
+  "DoS-Slowloris": 5796,
+  "DoS-SlowHTTPTest": 5499,
+  "Bot": 1966,
+  "Web-BruteForce": 1507,
+  "Web-XSS": 652,
+  "Infiltration": 36,
+  "Web-SQLi": 21,
+  "Heartbleed": 11
+ },
+ "labels_per_file_clean": {
+  "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+   "DDoS-LOIC-HTTP": 128013,
+   "BENIGN": 85132
+  },
+  "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+   "BENIGN": 103883,
+   "PortScan": 1851
+  },
+  "Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+   "BENIGN": 157455,
+   "Bot": 1416
+  },
+  "Monday-WorkingHours.pcap_ISCX.csv": {
+   "BENIGN": 459217
+  },
+  "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+   "BENIGN": 190816,
+   "Infiltration": 36
+  },
+  "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+   "BENIGN": 140979,
+   "Web-BruteForce": 1470,
+   "Web-XSS": 652,
+   "Web-SQLi": 21
+  },
+  "Tuesday-WorkingHours.pcap_ISCX.csv": {
+   "BENIGN": 380323,
+   "FTP-Patator": 5933,
+   "SSH-Patator": 3219
+  },
+  "Wednesday-workingHours.pcap_ISCX.csv": {
+   "BENIGN": 379786,
+   "DoS-Hulk": 172715,
+   "DoS-GoldenEye": 10286,
+   "DoS-Slowloris": 5383,
+   "DoS-SlowHTTPTest": 5228,
+   "Heartbleed": 11
+  }
+ },
+ "split_counts": {
+  "gap": {
+   "BENIGN": 59405,
+   "DoS-Hulk": 17942,
+   "DDoS-LOIC-HTTP": 12353,
+   "DoS-GoldenEye": 2045,
+   "DoS-Slowloris": 363,
+   "FTP-Patator": 185,
+   "DoS-SlowHTTPTest": 130,
+   "SSH-Patator": 107,
+   "Web-BruteForce": 74,
+   "PortScan": 68,
+   "Web-XSS": 67,
+   "Bot": 10,
+   "Infiltration": 1
+  },
+  "test": {
+   "BENIGN": 401965,
+   "DoS-Hulk": 34328,
+   "DDoS-LOIC-HTTP": 25647,
+   "DoS-GoldenEye": 3346,
+   "FTP-Patator": 1478,
+   "DoS-Slowloris": 1174,
+   "DoS-SlowHTTPTest": 1069,
+   "SSH-Patator": 872,
+   "Web-BruteForce": 312,
+   "Bot": 308,
+   "PortScan": 192,
+   "Web-XSS": 132,
+   "Infiltration": 6
+  },
+  "train": {
+   "BENIGN": 1076772,
+   "DoS-Hulk": 92710,
+   "DDoS-LOIC-HTTP": 70979,
+   "DoS-GoldenEye": 4583,
+   "FTP-Patator": 3202,
+   "DoS-Slowloris": 3196,
+   "DoS-SlowHTTPTest": 2622,
+   "SSH-Patator": 1702,
+   "PortScan": 1553,
+   "Bot": 989,
+   "Web-BruteForce": 778,
+   "Web-XSS": 356,
+   "Infiltration": 23,
+   "Web-SQLi": 21
+  },
+  "val": {
+   "BENIGN": 359449,
+   "DoS-Hulk": 27735,
+   "DDoS-LOIC-HTTP": 19034,
+   "DoS-SlowHTTPTest": 1407,
+   "FTP-Patator": 1068,
+   "DoS-Slowloris": 650,
+   "SSH-Patator": 538,
+   "DoS-GoldenEye": 312,
+   "Web-BruteForce": 306,
+   "Bot": 109,
+   "Web-XSS": 97,
+   "PortScan": 38,
+   "Heartbleed": 11,
+   "Infiltration": 6
+  }
+ },
+ "split_totals": {
+  "train": 1259486,
+  "test": 470829,
+  "val": 410760,
+  "gap": 92750
+ },
+ "days": {
+  "2017-07-03": {
+   "train": 274975,
+   "test": 91863,
+   "val": 91203,
+   "gap": 1176
+  },
+  "2017-07-04": {
+   "train": 220453,
+   "test": 83569,
+   "val": 70023,
+   "gap": 15430
+  },
+  "2017-07-05": {
+   "train": 312899,
+   "test": 123875,
+   "val": 102850,
+   "gap": 33785
+  },
+  "2017-07-06": {
+   "train": 189690,
+   "test": 69899,
+   "val": 60893,
+   "gap": 13492
+  },
+  "2017-07-07": {
+   "train": 261469,
+   "test": 101623,
+   "val": 85791,
+   "gap": 28867
+  }
+ }
+}

@@ -1,0 +1,337 @@
+{
+ "dataset": "D23",
+ "files": {
+  "Friday-02-03-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 1048575,
+   "exact_duplicates_removed": 305186,
+   "conflicting_label_rows_removed": 4451,
+   "rows_clean": 738938,
+   "bad_timestamp": 0,
+   "lines_read": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0
+  },
+  "Friday-16-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 1048574,
+   "exact_duplicates_removed": 456702,
+   "conflicting_label_rows_removed": 12,
+   "rows_clean": 591860,
+   "bad_timestamp": 0,
+   "lines_read": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 1
+  },
+  "Friday-23-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 1048575,
+   "exact_duplicates_removed": 314106,
+   "conflicting_label_rows_removed": 16,
+   "rows_clean": 734453,
+   "bad_timestamp": 0,
+   "lines_read": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0
+  },
+  "Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 7948748,
+   "exact_duplicates_removed": 2514489,
+   "conflicting_label_rows_removed": 237,
+   "rows_clean": 5434022,
+   "bad_timestamp": 0,
+   "lines_read": 7948748,
+   "empty_rows": 0,
+   "repeated_header_rows": 0
+  },
+  "Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 331100,
+   "exact_duplicates_removed": 101460,
+   "conflicting_label_rows_removed": 14165,
+   "rows_clean": 215475,
+   "bad_timestamp": 0,
+   "lines_read": 331125,
+   "empty_rows": 0,
+   "repeated_header_rows": 25
+  },
+  "Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 1048575,
+   "exact_duplicates_removed": 306963,
+   "conflicting_label_rows_removed": 243,
+   "rows_clean": 741369,
+   "bad_timestamp": 0,
+   "lines_read": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0
+  },
+  "Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 1048575,
+   "exact_duplicates_removed": 296700,
+   "conflicting_label_rows_removed": 20,
+   "rows_clean": 751855,
+   "bad_timestamp": 9,
+   "lines_read": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0
+  },
+  "Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 1048575,
+   "exact_duplicates_removed": 428770,
+   "conflicting_label_rows_removed": 556,
+   "rows_clean": 619249,
+   "bad_timestamp": 5,
+   "lines_read": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0
+  },
+  "Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 1048575,
+   "exact_duplicates_removed": 487204,
+   "conflicting_label_rows_removed": 5,
+   "rows_clean": 561366,
+   "bad_timestamp": 0,
+   "lines_read": 1048575,
+   "empty_rows": 0,
+   "repeated_header_rows": 0
+  },
+  "Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "rows_after_header_empty": 613071,
+   "exact_duplicates_removed": 199232,
+   "conflicting_label_rows_removed": 23867,
+   "rows_clean": 389972,
+   "bad_timestamp": 0,
+   "lines_read": 613104,
+   "empty_rows": 0,
+   "repeated_header_rows": 33
+  }
+ },
+ "total": {
+  "lines_read": 16233002,
+  "empty_rows": 0,
+  "repeated_header_rows": 59,
+  "rows_after_header_empty": 16232943,
+  "exact_duplicates_removed": 5410812,
+  "conflicting_label_rows_removed": 43572,
+  "rows_clean": 10778559,
+  "bad_timestamp": 14
+ },
+ "labels_clean": {
+  "BENIGN": 9474383,
+  "DDoS-LOIC-HTTP": 575364,
+  "DDoS-HOIC": 198860,
+  "DoS-Hulk": 145199,
+  "Bot": 144317,
+  "SSH-Patator": 94041,
+  "Infiltration": 92472,
+  "DoS-GoldenEye": 41406,
+  "DoS-Slowloris": 9856,
+  "DDoS-LOIC-UDP": 1730,
+  "Web-BruteForce": 547,
+  "Web-XSS": 224,
+  "Web-SQLi": 77,
+  "DoS-SlowHTTPTest": 43,
+  "FTP-Patator": 40
+ },
+ "labels_before_dedup": {
+  "BENIGN": 13484708,
+  "DDoS-HOIC": 686012,
+  "DDoS-LOIC-HTTP": 576191,
+  "DoS-Hulk": 461912,
+  "Bot": 286191,
+  "FTP-Patator": 193360,
+  "SSH-Patator": 187589,
+  "Infiltration": 161934,
+  "DoS-SlowHTTPTest": 139890,
+  "DoS-GoldenEye": 41508,
+  "DoS-Slowloris": 10990,
+  "DDoS-LOIC-UDP": 1730,
+  "Web-BruteForce": 611,
+  "Web-XSS": 230,
+  "Web-SQLi": 87
+ },
+ "labels_per_file_clean": {
+  "Friday-02-03-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 594621,
+   "Bot": 144317
+  },
+  "Friday-16-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 446618,
+   "DoS-Hulk": 145199,
+   "DoS-SlowHTTPTest": 43
+  },
+  "Friday-23-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 733937,
+   "Web-BruteForce": 323,
+   "Web-XSS": 146,
+   "Web-SQLi": 47
+  },
+  "Thuesday-20-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 4858658,
+   "DDoS-LOIC-HTTP": 575364
+  },
+  "Thursday-01-03-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 166856,
+   "Infiltration": 48619
+  },
+  "Thursday-15-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 690107,
+   "DoS-GoldenEye": 41406,
+   "DoS-Slowloris": 9856
+  },
+  "Thursday-22-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 751523,
+   "Web-BruteForce": 224,
+   "Web-XSS": 78,
+   "Web-SQLi": 30
+  },
+  "Wednesday-14-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 525168,
+   "SSH-Patator": 94041,
+   "FTP-Patator": 40
+  },
+  "Wednesday-21-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 360776,
+   "DDoS-HOIC": 198860,
+   "DDoS-LOIC-UDP": 1730
+  },
+  "Wednesday-28-02-2018_TrafficForML_CICFlowMeter.csv": {
+   "BENIGN": 346119,
+   "Infiltration": 43853
+  }
+ },
+ "split_counts": {
+  "gap": {
+   "BENIGN": 210846,
+   "DDoS-LOIC-HTTP": 18532,
+   "DoS-GoldenEye": 3217,
+   "Infiltration": 3094,
+   "DDoS-HOIC": 2214,
+   "SSH-Patator": 2081,
+   "Bot": 536,
+   "DoS-Slowloris": 336,
+   "DDoS-LOIC-UDP": 107,
+   "Web-BruteForce": 20,
+   "Web-XSS": 8,
+   "DoS-SlowHTTPTest": 1,
+   "Web-SQLi": 1
+  },
+  "test": {
+   "BENIGN": 1807799,
+   "DDoS-LOIC-HTTP": 120231,
+   "Bot": 35623,
+   "SSH-Patator": 20174,
+   "Infiltration": 18880,
+   "DoS-GoldenEye": 11570,
+   "DoS-Slowloris": 2326,
+   "DDoS-HOIC": 1444,
+   "DoS-Hulk": 878,
+   "DDoS-LOIC-UDP": 351,
+   "Web-BruteForce": 110,
+   "Web-XSS": 53,
+   "Web-SQLi": 20,
+   "DoS-SlowHTTPTest": 3,
+   "FTP-Patator": 2
+  },
+  "train": {
+   "BENIGN": 5730846,
+   "DDoS-LOIC-HTTP": 333745,
+   "DDoS-HOIC": 194643,
+   "DoS-Hulk": 144321,
+   "Bot": 84282,
+   "Infiltration": 53869,
+   "SSH-Patator": 53775,
+   "DoS-GoldenEye": 18426,
+   "DoS-Slowloris": 5415,
+   "DDoS-LOIC-UDP": 996,
+   "Web-BruteForce": 323,
+   "Web-XSS": 128,
+   "Web-SQLi": 48,
+   "DoS-SlowHTTPTest": 38,
+   "FTP-Patator": 37
+  },
+  "val": {
+   "BENIGN": 1724892,
+   "DDoS-LOIC-HTTP": 102856,
+   "Bot": 23876,
+   "SSH-Patator": 18011,
+   "Infiltration": 16629,
+   "DoS-GoldenEye": 8193,
+   "DoS-Slowloris": 1779,
+   "DDoS-HOIC": 559,
+   "DDoS-LOIC-UDP": 276,
+   "Web-BruteForce": 94,
+   "Web-XSS": 35,
+   "Web-SQLi": 8,
+   "DoS-SlowHTTPTest": 1,
+   "FTP-Patator": 1
+  }
+ },
+ "split_totals": {
+  "train": 6620892,
+  "test": 2019464,
+  "val": 1897210,
+  "gap": 240993
+ },
+ "days": {
+  "2018-02-14": {
+   "train": 363779,
+   "test": 123974,
+   "val": 117439,
+   "gap": 14052
+  },
+  "2018-02-15": {
+   "train": 437569,
+   "test": 148333,
+   "val": 136023,
+   "gap": 19444
+  },
+  "2018-02-16": {
+   "train": 590459,
+   "test": 1367,
+   "val": 26,
+   "gap": 8
+  },
+  "2018-02-20": {
+   "train": 3204238,
+   "test": 1087174,
+   "val": 1036094,
+   "gap": 106516
+  },
+  "2018-02-21": {
+   "train": 352319,
+   "test": 91814,
+   "val": 66940,
+   "gap": 50293
+  },
+  "2018-02-22": {
+   "train": 445151,
+   "test": 150449,
+   "val": 144338,
+   "gap": 11908
+  },
+  "2018-02-23": {
+   "train": 430759,
+   "test": 147071,
+   "val": 137545,
+   "gap": 19078
+  },
+  "2018-02-28": {
+   "train": 230065,
+   "test": 78187,
+   "val": 73821,
+   "gap": 7899
+  },
+  "2018-03-01": {
+   "train": 126937,
+   "test": 43251,
+   "val": 40246,
+   "gap": 5041
+  },
+  "2018-03-02": {
+   "train": 439616,
+   "test": 147844,
+   "val": 144738,
+   "gap": 6740
+  },
+  "NaT": {
+   "gap": 14
+  }
+ }
+}

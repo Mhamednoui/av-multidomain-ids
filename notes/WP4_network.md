@@ -129,3 +129,28 @@ extracted to ../data_extra/D10_cicids2017_generated_flows/MachineLearningCVE/ (8
 - G3: PASS. 100.0% of MLCVE rows found in D10 on the 5 key columns with the same label (all 8 files 1.0).
 - Reading: D10 and MLCVE are the same flows (G2, G3) from the same official CIC family; the mirror is consistent with the other official file
   set (strong evidence the mirror is genuine). D01's own provenance is the unresolved part; G1 as written cannot be passed by any official file set.
+
+## 2026-10-21 S1 supervisor decision on the gate
+D10 ACCEPTED on G2+G3 (two file sets agree on every flow and label; published total matches). G1 recorded as FAILED: D01 (v2 sample, MTH-IDS
+preprocessing) is not a verbatim subset of D10 nor MLCVE, so v2 numbers based on D01 are NOT directly comparable with v3. Differing features:
+results/WP4/s1_gate_diag.json (IAT stats, Fwd/Bwd Header Length, Init_Win_bytes_*, min_seg_size_forward, URG Flag Count, ...). Caveat kept:
+both file sets come from one unofficial mirror. D01 provenance is not investigated further. Continuing S1.
+Extra rules fixed before building (additions to the S1 acceptance rule above): split = per day, periods = contiguous attack windows (family
+timestamp clusters, gap > 30 min separates windows, 1st-99th percentile) and the benign stretches between them; each period is cut by TIME into
+first 60% train, 20% val, 20% test with 2-minute gaps dropped (rows kept, split="gap"); periods shorter than 10 min -> train. Held-out families for
+S7 leave-one-attack-out = every attack family with >= 100 test flows and >= 30 val flows after cleaning (decided from the counts, listed in the brief).
+D23 timestamps are 24 h; D10 timestamps have no AM/PM: hours 1-7 are afternoon (+12 h), documented CICIDS2017 behaviour.
+
+## 2026-10-21 S1 split design change BEFORE any model result (first D10 split showed GoldenEye 100% train (window < 10 min) and PortScan val = 2 flows)
+No model has been trained, so this is data-layer design, not tuning on results. Changes: cut points are flow-count quantiles (60/20/20) of each
+period instead of clock-time fractions, gap 1 minute (was 2), short-period limit 5 minutes (was 10). The first D10 stage-2 output is overwritten.
+
+## 2026-10-21 correction: D23 timestamps also lack AM/PM
+My earlier note ("D23 timestamps are 24 h") was wrong. Hour histograms of attack flows (tools/WP4_s1_hours_d23.py) show D23 attack flows at hours 1-5 (e.g. Fri 02-03
+Bot at 14:24-15:55 appears as 2-3 h; Fri 16-02 Hulk 13:45 appears as 1 h; Wed 21 HOIC 14:05 as 2 h) and nothing at 13-23. Same 12-hour fold as D10, so hours 1-7 get +12 h
+for D23 as well (applied in stage 2; the first D23 split, made without the fix, is overwritten). Also: 12 D23 rows have epoch-1970 timestamps: treated as NaT (split "gap").
+
+## 2026-10-21 S1 results (final)
+D10: 3,119,345 lines -> 288,602 empty -> 2,830,743; 596,376 duplicates; 542 conflicts; 2,233,825 clean; split 1,259,486 / 410,760 / 470,829 / gap 92,750.
+D23: 16,233,002 lines -> 59 repeated headers -> 16,232,943; 5,410,812 duplicates; 43,572 conflicts; 10,778,559 clean; split 6,620,892 / 1,897,210 / 2,019,464 / gap 240,993 (+14 bad ts).
+Evaluable families, held-out list, host labels: notes/WP4_brief.md, results/WP4/s1_tables.md, s1_heldout.json, s1_hosts_*.json. Acceptance MET (G1 recorded failed). 8 tests pass.

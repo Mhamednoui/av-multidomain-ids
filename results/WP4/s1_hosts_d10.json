@@ -1,0 +1,327 @@
+{
+ "attackers_documented": [
+  "172.16.0.1",
+  "205.174.165.73"
+ ],
+ "per_family": {
+  "Bot": {
+   "flows": 1416,
+   "share_with_documented_attacker_end": 0.9971751412429378,
+   "days": [
+    "2017-07-07"
+   ],
+   "top_victims": {
+    "192.168.10.15": 394,
+    "192.168.10.8": 306,
+    "192.168.10.9": 275,
+    "192.168.10.14": 235,
+    "192.168.10.5": 202
+   },
+   "top_src_ip_all": {
+    "192.168.10.15": 362,
+    "192.168.10.8": 266,
+    "192.168.10.9": 226
+   },
+   "top_dst_ip_all": {
+    "205.174.165.73": 1242,
+    "192.168.10.9": 49,
+    "192.168.10.8": 40
+   },
+   "no_documented_attacker_flows": 4,
+   "no_attacker_top_src": {
+    "192.168.10.12": 2,
+    "192.168.10.17": 2
+   }
+  },
+  "DDoS-LOIC-HTTP": {
+   "flows": 128013,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-07"
+   ],
+   "top_victims": {
+    "192.168.10.50": 128013
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 128010,
+    "192.168.10.50": 3
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 128010,
+    "172.16.0.1": 3
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "DoS-GoldenEye": {
+   "flows": 10286,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-05"
+   ],
+   "top_victims": {
+    "192.168.10.50": 10286
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 10286
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 10286
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "DoS-Hulk": {
+   "flows": 172715,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-05"
+   ],
+   "top_victims": {
+    "192.168.10.50": 172715
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 172715
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 172715
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "DoS-SlowHTTPTest": {
+   "flows": 5228,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-05"
+   ],
+   "top_victims": {
+    "192.168.10.50": 5228
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 5228
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 5228
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "DoS-Slowloris": {
+   "flows": 5383,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-05"
+   ],
+   "top_victims": {
+    "192.168.10.50": 5383
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 5383
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 5383
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "FTP-Patator": {
+   "flows": 5933,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-04"
+   ],
+   "top_victims": {
+    "192.168.10.50": 5933
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 5933
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 5933
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "Heartbleed": {
+   "flows": 11,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-05"
+   ],
+   "top_victims": {
+    "192.168.10.51": 11
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 11
+   },
+   "top_dst_ip_all": {
+    "192.168.10.51": 11
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "Infiltration": {
+   "flows": 36,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-06"
+   ],
+   "top_victims": {
+    "192.168.10.8": 36
+   },
+   "top_src_ip_all": {
+    "192.168.10.8": 36
+   },
+   "top_dst_ip_all": {
+    "205.174.165.73": 36
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "PortScan": {
+   "flows": 1851,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-07"
+   ],
+   "top_victims": {
+    "192.168.10.50": 1851
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 1851
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 1851
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "SSH-Patator": {
+   "flows": 3219,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-04"
+   ],
+   "top_victims": {
+    "192.168.10.50": 3219
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 3219
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 3219
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "Web-BruteForce": {
+   "flows": 1470,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-06"
+   ],
+   "top_victims": {
+    "192.168.10.50": 1470
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 1470
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 1470
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "Web-SQLi": {
+   "flows": 21,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-06"
+   ],
+   "top_victims": {
+    "192.168.10.50": 21
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 21
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 21
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  },
+  "Web-XSS": {
+   "flows": 652,
+   "share_with_documented_attacker_end": 1.0,
+   "days": [
+    "2017-07-06"
+   ],
+   "top_victims": {
+    "192.168.10.50": 652
+   },
+   "top_src_ip_all": {
+    "172.16.0.1": 652
+   },
+   "top_dst_ip_all": {
+    "192.168.10.50": 652
+   },
+   "no_documented_attacker_flows": 0,
+   "no_attacker_top_src": {}
+  }
+ },
+ "hosts_attacker_flows_by_day": {
+  "('2017-07-04', '172.16.0.1')": 9152,
+  "('2017-07-05', '172.16.0.1')": 193623,
+  "('2017-07-06', '172.16.0.1')": 2143,
+  "('2017-07-07', '172.16.0.1')": 129861,
+  "('2017-07-07', '205.174.165.73')": 170
+ },
+ "victim_hosts_by_family": {
+  "Bot": {
+   "192.168.10.9": 49,
+   "192.168.10.8": 40,
+   "192.168.10.15": 32,
+   "192.168.10.14": 26,
+   "192.168.10.5": 23
+  },
+  "DDoS-LOIC-HTTP": {
+   "192.168.10.50": 128010
+  },
+  "DoS-GoldenEye": {
+   "192.168.10.50": 10286
+  },
+  "DoS-Hulk": {
+   "192.168.10.50": 172715
+  },
+  "DoS-SlowHTTPTest": {
+   "192.168.10.50": 5228
+  },
+  "DoS-Slowloris": {
+   "192.168.10.50": 5383
+  },
+  "FTP-Patator": {
+   "192.168.10.50": 5933
+  },
+  "Heartbleed": {
+   "192.168.10.51": 11
+  },
+  "PortScan": {
+   "192.168.10.50": 1851
+  },
+  "SSH-Patator": {
+   "192.168.10.50": 3219
+  },
+  "Web-BruteForce": {
+   "192.168.10.50": 1470
+  },
+  "Web-SQLi": {
+   "192.168.10.50": 21
+  },
+  "Web-XSS": {
+   "192.168.10.50": 652
+  }
+ },
+ "attack_flows_total": 336234,
+ "attack_flows_with_roles": 336230
+}

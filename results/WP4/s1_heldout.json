@@ -1,0 +1,29 @@
+{
+ "rule": "test >= 100 and val >= 30 flows after cleaning",
+ "evaluable_families": {
+  "D10": [
+   "Bot",
+   "DDoS-LOIC-HTTP",
+   "DoS-GoldenEye",
+   "DoS-Hulk",
+   "DoS-SlowHTTPTest",
+   "DoS-Slowloris",
+   "FTP-Patator",
+   "PortScan",
+   "SSH-Patator",
+   "Web-BruteForce",
+   "Web-XSS"
+  ],
+  "D23": [
+   "Bot",
+   "DDoS-HOIC",
+   "DDoS-LOIC-HTTP",
+   "DDoS-LOIC-UDP",
+   "DoS-GoldenEye",
+   "DoS-Slowloris",
+   "Infiltration",
+   "SSH-Patator",
+   "Web-BruteForce"
+  ]
+ }
+}
