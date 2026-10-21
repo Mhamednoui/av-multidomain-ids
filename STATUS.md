@@ -7,7 +7,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP | Step | State | Worker / session | Updated | Note |
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
-| WP1 GPS | S8 | REVIEW | worker sonnet (high, T3) | 2026-10-21 | M1-GPS PARTIAL (reports/M1_GPS.md): test FA 1.83% (rule 1.5% missed), Doppler / meaconing 69 / 61% (75% missed), +16.2 pts over B2, UAV alarm 118.0 s (pre-onset FA 2.54%), AV-GPS nothing usable; GPS domain output frozen |
+| WP1 GPS | done (M1-GPS partial) | APPROVED | - | 2026-10-21 | M1-GPS closed PARTIAL, see reports/M1_GPS.md; frozen output gps/domain.py |
 | WP2 CAN | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | S3 APPROVED (negative: clock skew out of default stack) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | IN PROGRESS | worker haiku (medium, T1) | 2026-10-21 | downloads D10 + D23 (size-checked) |
@@ -20,7 +20,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | Id | State |
 |---|---|
 | M0 foundation | closed 2026-10-19 |
-| M1 GPS / CAN / LiDAR / NET / V2X | V2X closed partial 2026-10-21; others open |
+| M1 GPS / CAN / LiDAR / NET / V2X | V2X closed partial 2026-10-21; GPS closed partial 2026-10-21; others open |
 | M2 cross-domain + fusion | open |
 | M3 system | open |
 | M4 publication | open (needs the user's approval) |
