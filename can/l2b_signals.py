@@ -256,6 +256,7 @@ def check_weight(viol: int, n: int) -> float:
 
 
 JOINT_ONLY = None   # optional set of signal keys: joint checks must involve one of them (post-verdict revision R1, validation only)
+CONT_ONLY = False   # S5 "relations only" default (decision 2026-10-22): value / rate checks on continuous signals only, no generic discrete checks
 MUTE_T0 = None      # seconds: a check that violates during the first MUTE_T0 s of a capture is session-specific and muted for that
 _TM = None          # capture (in-situ baseline, causal: the decision uses only frames up to MUTE_T0); frames before it are not scored
 
@@ -282,7 +283,7 @@ def score_frames(M: Model, tm, dec: dict, n: int, only=None) -> dict:
         for k in range(V.shape[1]):
             j = cat.j[(i, k)]
             c = M.cls[j]
-            if c < 0:
+            if c < 0 or (CONT_ONLY and c != 2):
                 continue
             x = V[:, k]
             if c == 2:

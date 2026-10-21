@@ -1,4 +1,4 @@
-# WP2 CAN brief (state at 2026-10-22, after S4)
+# WP2 CAN brief (state at 2026-10-22, after S5)
 
 ## State
 - S0 data inventory, S1 adapters/splits/frames: APPROVED. S2 (L1 rules): done, verdict NOT MET (ROAD false alerts 3.4% > 1%).
@@ -15,6 +15,13 @@
 - Decoder can/signals.py exact vs CSV; DBC anonymous (meaning from train metadata + correlation). Model/code: can/l2b_signals.py; tools/WP2_S4_run.py (stages stats|fold|final|weights|score), WP2_S4_eval.py (select|report).
 - Design needed: LOCO weights per check + in-situ 3 s baseline (mute checks violated in the first 3 s). Cache ../data_extra/WP2_S4_cache (673 MB: payload bytes, stats, models, sparse scores).
 - Next: S5 per-signal predictors on continuous signals; consider L2b "relations only" (linear/range/rate on continuous + named gear-reverse rule) in the default stack. R1 (second exposure) FA 32%.
+
+## S5 (L3 per-signal predictors) outcome
+- NOT MET (FA): L3 detects 5/5 ROAD test masquerade (0.48-1.02 s), incl. reverse_light_off via the lag-aware gear-contradiction rule L3d (flag 0 while 2 of 3 gear copies say R, longer than the longest clean contradiction = one 0.05 s step); clean test FA 7.6% (highway diagnostics 20.4%, others 0-2.2%, reverse 0).
+- L3c = ridge per continuous signal (138) on a 0.05 s grid, cross + own lags, sigma = max per-capture OOF RMSE, sliding 1 s CUSUM; Gram-matrix ridge, nested LOCO; fit-only captures: exercise_all_bits + highway drive (6 dyno folds). Highway left out: 32% alarms (unseen regime).
+- Harness (test): L1 5.2%/1, L2b-rel 31.2%/4 (range checks on continuous signals fire on benign sessions; its test number was exposed here), L3 7.6%/5, L1+L2b+L3 40.6%/5.
+- Code: can/l3_predictors.py; tools/WP2_S5_{grids,run,eval,report,tables,l2b,highway,diag_test}.py; cache ../data_extra/WP2_S5_cache (165 MB, grids + models + scores; rebuild: grids, grams, fold, score loco/attack/test, WP2_S5_l2b.py).
+- Next: S6; S7 must decide L2b range checks and regime-aware calibration.
 
 ## Binding decisions
 - Domain "can", layers L1.. ; Layer API from common/layer.py; evaluation only through common/evaluate.py.

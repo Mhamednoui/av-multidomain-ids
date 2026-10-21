@@ -1,0 +1,56 @@
+{
+ "ambient_dyno_drive_benign_anomaly": {
+  "l3c_alarm_windows": 3,
+  "l3c_top_signals_in_alarmed_steps": {
+   "0x3b9.2": 20,
+   "0x1ca.2": 19,
+   "0x75.1": 11,
+   "0x2e2.4": 4,
+   "0x354.0": 2,
+   "0x464.2": 2
+  },
+  "l2b_rel_alarm_windows": 191,
+  "l2b_rel_dominant_type_share": {
+   "value": 0.9790575916230366,
+   "rate": 0.015706806282722512,
+   "linear": 0.005235602094240838,
+   "joint": 0.0
+  }
+ },
+ "ambient_dyno_drive_extended_short": {
+  "l3c_alarm_windows": 8,
+  "l3c_top_signals_in_alarmed_steps": {
+   "0x4ee.3": 48,
+   "0x430.0": 19,
+   "0x75.1": 15,
+   "0x1ca.2": 13,
+   "0x3d.0": 12,
+   "0x4ee.5": 12
+  },
+  "l2b_rel_alarm_windows": 233,
+  "l2b_rel_dominant_type_share": {
+   "value": 0.9570815450643777,
+   "rate": 0.030042918454935622,
+   "linear": 0.012875536480686695,
+   "joint": 0.0
+  }
+ },
+ "ambient_highway_street_driving_diagnostics": {
+  "l3c_alarm_windows": 95,
+  "l3c_top_signals_in_alarmed_steps": {
+   "0x193.1": 1229,
+   "0x3c1.2": 495,
+   "0x69e.1": 59,
+   "0x4c9.0": 46,
+   "0x125.5": 13,
+   "0x2ab.1": 13
+  },
+  "l2b_rel_alarm_windows": 11,
+  "l2b_rel_dominant_type_share": {
+   "value": 0.8181818181818182,
+   "rate": 0.09090909090909091,
+   "linear": 0.09090909090909091,
+   "joint": 0.0
+  }
+ }
+}

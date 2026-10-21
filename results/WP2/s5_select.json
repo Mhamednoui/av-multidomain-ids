@@ -1,0 +1,708 @@
+{
+ "variants": {
+  "0": {
+   "name": "cross_r0.0_max",
+   "window_threshold": 0.9898432965757401,
+   "frame_threshold": 0.9899943350160929,
+   "loco_fa_per_fold": {
+    "ambient_dyno_drive_basic_long": 0.0032,
+    "ambient_dyno_drive_extended_long": 0.0076103500761035,
+    "ambient_dyno_drive_radio_infotainment": 0.007692307692307693,
+    "ambient_dyno_idle_radio_infotainment": 0.0,
+    "ambient_dyno_drive_basic_short": 0.04954954954954955,
+    "ambient_dyno_drive_winter": 0.0
+   },
+   "loco_pooled_fa_union_nominal": 0.02,
+   "lead_fa_union": 0.019305019305019305,
+   "lead_windows": 259,
+   "mean_masq_recall_union": 0.9940476190476191,
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.025
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 0.9523809523809523,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    }
+   }
+  },
+  "1": {
+   "name": "cross_r0.0_cusum",
+   "window_threshold": 0.9898432965757401,
+   "frame_threshold": 0.98998580229639,
+   "loco_fa_per_fold": {
+    "ambient_dyno_drive_basic_long": 0.0168,
+    "ambient_dyno_drive_extended_long": 0.0197869101978691,
+    "ambient_dyno_drive_radio_infotainment": 0.0,
+    "ambient_dyno_idle_radio_infotainment": 0.0,
+    "ambient_dyno_drive_basic_short": 0.0,
+    "ambient_dyno_drive_winter": 0.0
+   },
+   "loco_pooled_fa_union_nominal": 0.02,
+   "lead_fa_union": 0.019305019305019305,
+   "lead_windows": 259,
+   "mean_masq_recall_union": 0.9940476190476191,
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 0.9523809523809523,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    }
+   }
+  },
+  "2": {
+   "name": "cross_r0.9_max",
+   "window_threshold": 0.9898432965757401,
+   "frame_threshold": 0.9899958189673457,
+   "loco_fa_per_fold": {
+    "ambient_dyno_drive_basic_long": 0.0032,
+    "ambient_dyno_drive_extended_long": 0.0076103500761035,
+    "ambient_dyno_drive_radio_infotainment": 0.007692307692307693,
+    "ambient_dyno_idle_radio_infotainment": 0.0,
+    "ambient_dyno_drive_basic_short": 0.04954954954954955,
+    "ambient_dyno_drive_winter": 0.0
+   },
+   "loco_pooled_fa_union_nominal": 0.02,
+   "lead_fa_union": 0.019305019305019305,
+   "lead_windows": 259,
+   "mean_masq_recall_union": 0.9940476190476191,
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.025
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 0.9523809523809523,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    }
+   }
+  },
+  "3": {
+   "name": "cross_r0.9_cusum",
+   "window_threshold": 0.9898432965757401,
+   "frame_threshold": 0.989985183983368,
+   "loco_fa_per_fold": {
+    "ambient_dyno_drive_basic_long": 0.004,
+    "ambient_dyno_drive_extended_long": 0.0243531202435312,
+    "ambient_dyno_drive_radio_infotainment": 0.017948717948717947,
+    "ambient_dyno_idle_radio_infotainment": 0.0,
+    "ambient_dyno_drive_basic_short": 0.013513513513513514,
+    "ambient_dyno_drive_winter": 0.0
+   },
+   "loco_pooled_fa_union_nominal": 0.02,
+   "lead_fa_union": 0.04247104247104247,
+   "lead_windows": 259,
+   "mean_masq_recall_union": 0.9940476190476191,
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 0.9523809523809523,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0625
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.1111111111111111
+    }
+   }
+  },
+  "4": {
+   "name": "own_r0.0_max",
+   "window_threshold": 0.9898432965757401,
+   "frame_threshold": 0.9899934693778623,
+   "loco_fa_per_fold": {
+    "ambient_dyno_drive_basic_long": 0.004,
+    "ambient_dyno_drive_extended_long": 0.0273972602739726,
+    "ambient_dyno_drive_radio_infotainment": 0.010256410256410256,
+    "ambient_dyno_idle_radio_infotainment": 0.0060790273556231,
+    "ambient_dyno_drive_basic_short": 0.0045045045045045045,
+    "ambient_dyno_drive_winter": 0.02127659574468085
+   },
+   "loco_pooled_fa_union_nominal": 0.02,
+   "lead_fa_union": 0.007722007722007722,
+   "lead_windows": 259,
+   "mean_masq_recall_union": 0.7618601190476191,
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "l3c_recall": 0.08,
+     "l3c_detected": true,
+     "union_recall": 0.08,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 0.9523809523809523,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "l3c_recall": 0.0625,
+     "l3c_detected": true,
+     "union_recall": 0.0625,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "l3c_recall": 0.041666666666666664,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "l3c_recall": 0.02631578947368421,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    }
+   }
+  },
+  "5": {
+   "name": "own_r0.0_cusum",
+   "window_threshold": 0.9898432965757401,
+   "frame_threshold": 0.9899956953047413,
+   "loco_fa_per_fold": {
+    "ambient_dyno_drive_basic_long": 0.0,
+    "ambient_dyno_drive_extended_long": 0.045662100456621,
+    "ambient_dyno_drive_radio_infotainment": 0.005128205128205128,
+    "ambient_dyno_idle_radio_infotainment": 0.0,
+    "ambient_dyno_drive_basic_short": 0.0045045045045045045,
+    "ambient_dyno_drive_winter": 0.0
+   },
+   "loco_pooled_fa_union_nominal": 0.02,
+   "lead_fa_union": 0.011583011583011582,
+   "lead_windows": 259,
+   "mean_masq_recall_union": 0.9940476190476191,
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 0.9523809523809523,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    }
+   }
+  },
+  "6": {
+   "name": "own_r0.9_max",
+   "window_threshold": 0.9898432965757401,
+   "frame_threshold": 0.9899911197883787,
+   "loco_fa_per_fold": {
+    "ambient_dyno_drive_basic_long": 0.004,
+    "ambient_dyno_drive_extended_long": 0.0273972602739726,
+    "ambient_dyno_drive_radio_infotainment": 0.010256410256410256,
+    "ambient_dyno_idle_radio_infotainment": 0.0060790273556231,
+    "ambient_dyno_drive_basic_short": 0.0045045045045045045,
+    "ambient_dyno_drive_winter": 0.02127659574468085
+   },
+   "loco_pooled_fa_union_nominal": 0.02,
+   "lead_fa_union": 0.007722007722007722,
+   "lead_windows": 259,
+   "mean_masq_recall_union": 0.7618601190476191,
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "l3c_recall": 0.08,
+     "l3c_detected": true,
+     "union_recall": 0.08,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 0.9523809523809523,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "l3c_recall": 0.0625,
+     "l3c_detected": true,
+     "union_recall": 0.0625,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "l3c_recall": 0.041666666666666664,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "l3c_recall": 0.02631578947368421,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    }
+   }
+  },
+  "7": {
+   "name": "own_r0.9_cusum",
+   "window_threshold": 0.9898432965757401,
+   "frame_threshold": 0.9899975502438071,
+   "loco_fa_per_fold": {
+    "ambient_dyno_drive_basic_long": 0.0,
+    "ambient_dyno_drive_extended_long": 0.045662100456621,
+    "ambient_dyno_drive_radio_infotainment": 0.005128205128205128,
+    "ambient_dyno_idle_radio_infotainment": 0.0,
+    "ambient_dyno_drive_basic_short": 0.0045045045045045045,
+    "ambient_dyno_drive_winter": 0.0
+   },
+   "loco_pooled_fa_union_nominal": 0.02,
+   "lead_fa_union": 0.011583011583011582,
+   "lead_windows": 259,
+   "mean_masq_recall_union": 0.9940476190476191,
+   "attack_val": {
+    "correlated_signal_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_1_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_1_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 0.9523809523809523,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "l3c_recall": 1.0,
+     "l3c_detected": true,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "l3c_recall": 0.0,
+     "l3c_detected": false,
+     "union_recall": 1.0,
+     "union_detected": true,
+     "l3c_lead_fa": 0.0
+    }
+   }
+  }
+ },
+ "l3d": {
+  "window_threshold": 5e-324,
+  "frame_threshold": 5e-324,
+  "loco_pool_windows": {
+   "ambient_dyno_drive_basic_long": 1250,
+   "ambient_dyno_drive_extended_long": 657,
+   "ambient_dyno_drive_radio_infotainment": 390,
+   "ambient_dyno_idle_radio_infotainment": 658,
+   "ambient_dyno_drive_basic_short": 444,
+   "ambient_dyno_drive_winter": 47
+  },
+  "loco_fa_per_fold": {
+   "ambient_dyno_drive_basic_long": 0.0,
+   "ambient_dyno_drive_extended_long": 0.0,
+   "ambient_dyno_drive_radio_infotainment": 0.0,
+   "ambient_dyno_idle_radio_infotainment": 0.0,
+   "ambient_dyno_drive_basic_short": 0.0,
+   "ambient_dyno_drive_winter": 0.0
+  },
+  "attack_val": {
+   "correlated_signal_attack_1_masquerade": {
+    "windows": 33,
+    "attack_windows": 22,
+    "clean_windows": 7,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "max_speedometer_attack_1_masquerade": {
+    "windows": 88,
+    "attack_windows": 25,
+    "clean_windows": 40,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "reverse_light_off_attack_1_masquerade": {
+    "windows": 28,
+    "attack_windows": 8,
+    "clean_windows": 14,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "reverse_light_on_attack_1_masquerade": {
+    "windows": 54,
+    "attack_windows": 21,
+    "clean_windows": 16,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.9523809523809523,
+    "delay_s": 1.0698840618133545
+   },
+   "correlated_signal_attack_2_masquerade": {
+    "windows": 28,
+    "attack_windows": 23,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "max_speedometer_attack_2_masquerade": {
+    "windows": 59,
+    "attack_windows": 32,
+    "clean_windows": 14,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "reverse_light_off_attack_2_masquerade": {
+    "windows": 40,
+    "attack_windows": 24,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "reverse_light_on_attack_2_masquerade": {
+    "windows": 72,
+    "attack_windows": 38,
+    "clean_windows": 18,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   }
+  }
+ },
+ "chosen": 5,
+ "chosen_rule": "lead FA <= 3% then max mean masquerade recall"
+}

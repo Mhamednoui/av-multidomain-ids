@@ -1,0 +1,2316 @@
+{
+ "variant": 5,
+ "variant_name": "own_r0.0_cusum",
+ "group": "attack",
+ "thresholds": {
+  "l3c_window": 0.9898432965757401,
+  "l3c_frame": 0.9899956953047413,
+  "l3d_window": 5e-324,
+  "l3d_frame": 5e-324,
+  "l2b_rel_window": 0.9897899649941658,
+  "l2b_rel_frame": 5e-324
+ },
+ "loco_fa_per_fold": {
+  "ambient_dyno_drive_basic_long": {
+   "l3c": 0.0,
+   "l3d": 0.0,
+   "windows": 1250
+  },
+  "ambient_dyno_drive_extended_long": {
+   "l3c": 0.045662100456621,
+   "l3d": 0.0,
+   "windows": 657
+  },
+  "ambient_dyno_drive_radio_infotainment": {
+   "l3c": 0.005128205128205128,
+   "l3d": 0.0,
+   "windows": 390
+  },
+  "ambient_dyno_idle_radio_infotainment": {
+   "l3c": 0.0,
+   "l3d": 0.0,
+   "windows": 658
+  },
+  "ambient_dyno_drive_basic_short": {
+   "l3c": 0.0045045045045045045,
+   "l3d": 0.0,
+   "windows": 444
+  },
+  "ambient_dyno_drive_winter": {
+   "l3c": 0.0,
+   "l3d": 0.0,
+   "windows": 47
+  }
+ },
+ "captures": {
+  "correlated_signal_attack_1": {
+   "L1": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L3c": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L3d": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L2b+L3": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L1+L2b": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L1+L3": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9990416866315285,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x6e0.3": 0.921,
+    "0x4c9.0": 0.073,
+    "0x6e0.0": 0.006
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x6e0.3": [
+     320.2,
+     1.0
+    ],
+    "0x6e0.2": [
+     96.4,
+     1.0
+    ],
+    "0x498.3": [
+     92.2,
+     1.0
+    ],
+    "0x6e0.1": [
+     88.8,
+     1.0
+    ],
+    "0x20e.1": [
+     86.1,
+     1.0
+    ],
+    "0x6e0.0": [
+     76.7,
+     1.0
+    ]
+   },
+   "windows_scored": 30
+  },
+  "correlated_signal_attack_1_masquerade": {
+   "L1": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L3c": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L3d": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L2b+L3": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L1+L2b": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "L1+L3": {
+    "attack_windows": 22,
+    "clean_windows": 4,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8076629638671875
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9990416866315285,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x6e0.3": 0.923,
+    "0x4c9.0": 0.069,
+    "0x6e0.0": 0.008
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x6e0.3": [
+     318.3,
+     1.0
+    ],
+    "0x6e0.1": [
+     106.3,
+     1.0
+    ],
+    "0x498.3": [
+     104.2,
+     1.0
+    ],
+    "0x20e.1": [
+     99.5,
+     1.0
+    ],
+    "0x6e0.2": [
+     96.9,
+     1.0
+    ],
+    "0x6e0.0": [
+     75.4,
+     1.0
+    ]
+   },
+   "windows_scored": 30
+  },
+  "max_speedometer_attack_1": {
+   "L1": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L3c": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L3d": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L2b+L3": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L1+L2b": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L1+L3": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9922290388548057,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0xd0.5": 0.555,
+    "0x4c9.0": 0.415,
+    "0x274.15": 0.018,
+    "0x580.0": 0.011
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0xd0.5": [
+     6.6,
+     1.0
+    ],
+    "0x4c9.0": [
+     5.1,
+     1.0
+    ],
+    "0x69e.2": [
+     2.5,
+     -0.3
+    ],
+    "0x193.1": [
+     1.0,
+     0.91
+    ],
+    "0x125.3": [
+     0.8,
+     0.82
+    ],
+    "0x125.5": [
+     0.8,
+     0.89
+    ]
+   },
+   "windows_scored": 85
+  },
+  "max_speedometer_attack_1_masquerade": {
+   "L1": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L3c": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L3d": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L2b+L3": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L1+L2b": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "L1+L3": {
+    "attack_windows": 25,
+    "clean_windows": 37,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9900970458984375
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.996319018404908,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0xba.0": 0.507,
+    "0x4c9.0": 0.409,
+    "0xd0.5": 0.055,
+    "0x274.15": 0.018
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0xba.0": [
+     18.5,
+     1.0
+    ],
+    "0xd0.5": [
+     12.3,
+     1.0
+    ],
+    "0xba.1": [
+     11.8,
+     1.0
+    ],
+    "0x498.3": [
+     10.2,
+     1.0
+    ],
+    "0x6e0.3": [
+     10.0,
+     1.0
+    ],
+    "0x6e0.2": [
+     9.6,
+     1.0
+    ]
+   },
+   "windows_scored": 85
+  },
+  "reverse_light_off_attack_1": {
+   "L1": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3c": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3d": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "L3": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "L2b+L3": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "L1+L2b": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "L1+L3": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9881129271916791,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x4c9.0": 1.0
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.0,
+     1.0
+    ],
+    "0x12c.5": [
+     2.2,
+     1.0
+    ],
+    "0x125.5": [
+     1.5,
+     0.89
+    ],
+    "0x125.3": [
+     1.2,
+     0.82
+    ],
+    "0x69e.2": [
+     1.1,
+     -0.3
+    ],
+    "0x193.1": [
+     1.0,
+     0.91
+    ]
+   },
+   "windows_scored": 25
+  },
+  "reverse_light_off_attack_1_masquerade": {
+   "L1": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3c": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3d": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "L3": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "L2b+L3": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "L1+L2b": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "L1+L3": {
+    "attack_windows": 8,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.3719820976257324
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9881129271916791,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x4c9.0": 1.0
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.0,
+     1.0
+    ],
+    "0x12c.5": [
+     2.2,
+     1.0
+    ],
+    "0x125.5": [
+     1.5,
+     0.89
+    ],
+    "0x125.3": [
+     1.2,
+     0.82
+    ],
+    "0x69e.2": [
+     1.1,
+     -0.3
+    ],
+    "0x193.1": [
+     1.0,
+     0.91
+    ]
+   },
+   "windows_scored": 25
+  },
+  "reverse_light_on_attack_1": {
+   "L1": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.07059502601623535
+   },
+   "L3c": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3d": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.9523809523809523,
+    "delay_s": 1.0698840618133545
+   },
+   "L3": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.9523809523809523,
+    "delay_s": 1.0698840618133545
+   },
+   "L2b+L3": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.07059502601623535
+   },
+   "L1+L2b": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.07059502601623535
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.07059502601623535
+   },
+   "L1+L3": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.9523809523809523,
+    "delay_s": 1.0698840618133545
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9959839357429718,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x4c9.0": 0.949,
+    "0x69e.1": 0.028,
+    "0x274.15": 0.024
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.4,
+     1.0
+    ],
+    "0x69e.2": [
+     1.8,
+     -0.3
+    ],
+    "0xe.0": [
+     0.8,
+     1.0
+    ],
+    "0x125.3": [
+     0.7,
+     0.82
+    ],
+    "0x430.4": [
+     0.7,
+     1.0
+    ],
+    "0x6e0.0": [
+     0.7,
+     1.0
+    ]
+   },
+   "windows_scored": 51
+  },
+  "reverse_light_on_attack_1_masquerade": {
+   "L1": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.07059502601623535
+   },
+   "L3c": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3d": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.9523809523809523,
+    "delay_s": 1.0698840618133545
+   },
+   "L3": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.9523809523809523,
+    "delay_s": 1.0698840618133545
+   },
+   "L2b+L3": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.07059502601623535
+   },
+   "L1+L2b": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.07059502601623535
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.07059502601623535
+   },
+   "L1+L3": {
+    "attack_windows": 21,
+    "clean_windows": 13,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.9523809523809523,
+    "delay_s": 1.0698840618133545
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9959839357429718,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x4c9.0": 0.949,
+    "0x69e.1": 0.028,
+    "0x274.15": 0.024
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.4,
+     1.0
+    ],
+    "0x69e.2": [
+     1.8,
+     -0.3
+    ],
+    "0xe.0": [
+     0.8,
+     1.0
+    ],
+    "0x125.3": [
+     0.7,
+     0.82
+    ],
+    "0x430.4": [
+     0.7,
+     1.0
+    ],
+    "0x6e0.0": [
+     0.7,
+     1.0
+    ]
+   },
+   "windows_scored": 51
+  },
+  "fuzzing_attack_1": {
+   "L1": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 0.75,
+    "delay_s": 1.3764259815216064
+   },
+   "L3c": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 0.75,
+    "delay_s": 1.3764259815216064
+   },
+   "L3d": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 0.75,
+    "delay_s": 1.3764259815216064
+   },
+   "L2b+L3": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 0.75,
+    "delay_s": 1.3764259815216064
+   },
+   "L1+L2b": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 0.75,
+    "delay_s": 1.3764259815216064
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 0.75,
+    "delay_s": 1.3764259815216064
+   },
+   "L1+L3": {
+    "attack_windows": 4,
+    "clean_windows": 0,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": null,
+    "detected": true,
+    "window_recall": 0.75,
+    "delay_s": 1.3764259815216064
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.7364864864864865,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x193.1": 0.389,
+    "0x354.1": 0.242,
+    "0x3b9.2": 0.156,
+    "0x69e.1": 0.067
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x193.1": [
+     6.3,
+     0.91
+    ],
+    "0xa7.4": [
+     5.4,
+     0.98
+    ],
+    "0x636.2": [
+     5.1,
+     1.0
+    ],
+    "0x4c9.0": [
+     4.9,
+     1.0
+    ],
+    "0xa7.6": [
+     4.5,
+     0.99
+    ],
+    "0x125.3": [
+     4.4,
+     0.82
+    ]
+   },
+   "windows_scored": 17
+  },
+  "correlated_signal_attack_2": {
+   "L1": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L3c": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L3d": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L2b+L3": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L1+L2b": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L1+L3": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9962634283045306,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x6e0.3": 0.998,
+    "0x4c9.0": 0.002
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x6e0.3": [
+     316.2,
+     1.0
+    ],
+    "0x6e0.1": [
+     112.0,
+     1.0
+    ],
+    "0x6e0.2": [
+     101.1,
+     1.0
+    ],
+    "0x498.3": [
+     92.2,
+     1.0
+    ],
+    "0x20e.1": [
+     86.6,
+     1.0
+    ],
+    "0x6e0.0": [
+     73.0,
+     1.0
+    ]
+   },
+   "windows_scored": 25
+  },
+  "correlated_signal_attack_2_masquerade": {
+   "L1": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L3c": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L3d": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L2b+L3": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L1+L2b": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "L1+L3": {
+    "attack_windows": 23,
+    "clean_windows": 1,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.1687990427017212
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9990658570761326,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x6e0.3": 1.0
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x6e0.3": [
+     313.0,
+     1.0
+    ],
+    "0x6e0.1": [
+     115.0,
+     1.0
+    ],
+    "0x6e0.2": [
+     103.3,
+     1.0
+    ],
+    "0x498.3": [
+     92.5,
+     1.0
+    ],
+    "0x20e.1": [
+     86.7,
+     1.0
+    ],
+    "0x6e0.0": [
+     69.9,
+     1.0
+    ]
+   },
+   "windows_scored": 25
+  },
+  "max_speedometer_attack_2": {
+   "L1": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L3c": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L3d": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L2b+L3": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L1+L2b": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L1+L3": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9968163005412289,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0xd0.5": 0.747,
+    "0x4c9.0": 0.223,
+    "0x274.15": 0.023,
+    "0x69e.1": 0.007
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0xd0.5": [
+     74.1,
+     1.0
+    ],
+    "0x4c9.0": [
+     5.0,
+     1.0
+    ],
+    "0x69e.2": [
+     2.7,
+     -0.3
+    ],
+    "0x193.1": [
+     1.2,
+     0.91
+    ],
+    "0xe.0": [
+     1.1,
+     1.0
+    ],
+    "0x230.1": [
+     1.1,
+     1.0
+    ]
+   },
+   "windows_scored": 56
+  },
+  "max_speedometer_attack_2_masquerade": {
+   "L1": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L3c": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L3d": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L2b+L3": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L1+L2b": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "L1+L3": {
+    "attack_windows": 32,
+    "clean_windows": 11,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.9901502132415771
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9968163005412289,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0xba.0": 0.693,
+    "0x4c9.0": 0.218,
+    "0xd0.5": 0.06,
+    "0x274.15": 0.023
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0xba.0": [
+     19.4,
+     1.0
+    ],
+    "0xd0.5": [
+     12.8,
+     1.0
+    ],
+    "0xba.1": [
+     12.5,
+     1.0
+    ],
+    "0x498.3": [
+     10.5,
+     1.0
+    ],
+    "0x6e0.3": [
+     10.4,
+     1.0
+    ],
+    "0x6e0.2": [
+     9.9,
+     1.0
+    ]
+   },
+   "windows_scored": 56
+  },
+  "reverse_light_off_attack_2": {
+   "L1": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3c": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3d": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "L3": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "L2b+L3": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "L1+L2b": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "L1+L3": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9962057335581788,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x4c9.0": 0.964,
+    "0x67d.6": 0.036
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.1,
+     1.0
+    ],
+    "0x12c.5": [
+     2.2,
+     1.0
+    ],
+    "0x125.5": [
+     1.5,
+     0.89
+    ],
+    "0x125.3": [
+     1.2,
+     0.82
+    ],
+    "0x69e.2": [
+     1.2,
+     -0.3
+    ],
+    "0x193.1": [
+     0.9,
+     0.91
+    ]
+   },
+   "windows_scored": 37
+  },
+  "reverse_light_off_attack_2_masquerade": {
+   "L1": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3c": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3d": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "L3": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "L2b+L3": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "L1+L2b": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "L1+L3": {
+    "attack_windows": 24,
+    "clean_windows": 8,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.8308529853820801
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.9962057335581788,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x4c9.0": 0.964,
+    "0x67d.6": 0.036
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.1,
+     1.0
+    ],
+    "0x12c.5": [
+     2.2,
+     1.0
+    ],
+    "0x125.5": [
+     1.5,
+     0.89
+    ],
+    "0x125.3": [
+     1.2,
+     0.82
+    ],
+    "0x69e.2": [
+     1.2,
+     -0.3
+    ],
+    "0x193.1": [
+     0.9,
+     0.91
+    ]
+   },
+   "windows_scored": 37
+  },
+  "reverse_light_on_attack_2": {
+   "L1": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L3c": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3d": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L3": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L2b+L3": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L1+L2b": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L1+L3": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.997289972899729,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x4c9.0": 0.892,
+    "0x580.0": 0.054,
+    "0x67d.6": 0.019,
+    "0xba.6": 0.017
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.3,
+     1.0
+    ],
+    "0x69e.2": [
+     1.8,
+     -0.3
+    ],
+    "0x69e.1": [
+     1.2,
+     0.93
+    ],
+    "0x193.1": [
+     0.9,
+     0.91
+    ],
+    "0x125.5": [
+     0.9,
+     0.89
+    ],
+    "0x125.3": [
+     0.9,
+     0.82
+    ]
+   },
+   "windows_scored": 69
+  },
+  "reverse_light_on_attack_2_masquerade": {
+   "L1": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L3c": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3d": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L3": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L2b+L3": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L1+L2b": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "L1+L3": {
+    "attack_windows": 38,
+    "clean_windows": 15,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 1.0,
+    "delay_s": 0.5911200046539307
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.997289972899729,
+    "fa_clean": 0.0
+   },
+   "top_signals_in_attack_steps": {
+    "0x4c9.0": 0.892,
+    "0x580.0": 0.054,
+    "0x67d.6": 0.019,
+    "0xba.6": 0.017
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.3,
+     1.0
+    ],
+    "0x69e.2": [
+     1.8,
+     -0.3
+    ],
+    "0x69e.1": [
+     1.2,
+     0.93
+    ],
+    "0x193.1": [
+     0.9,
+     0.91
+    ],
+    "0x125.5": [
+     0.9,
+     0.89
+    ],
+    "0x125.3": [
+     0.9,
+     0.82
+    ]
+   },
+   "windows_scored": 69
+  },
+  "fuzzing_attack_2": {
+   "L1": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L2b": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.6666666666666666,
+    "delay_s": 1.6316490173339844
+   },
+   "L3c": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 1,
+    "fa_clean_rate": 0.16666666666666666,
+    "detected": true,
+    "window_recall": 0.6666666666666666,
+    "delay_s": 1.6316490173339844
+   },
+   "L3d": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": false,
+    "window_recall": 0.0,
+    "delay_s": null
+   },
+   "L3": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 1,
+    "fa_clean_rate": 0.16666666666666666,
+    "detected": true,
+    "window_recall": 0.6666666666666666,
+    "delay_s": 1.6316490173339844
+   },
+   "L2b+L3": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 1,
+    "fa_clean_rate": 0.16666666666666666,
+    "detected": true,
+    "window_recall": 0.6666666666666666,
+    "delay_s": 1.6316490173339844
+   },
+   "L1+L2b": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 0,
+    "fa_clean_rate": 0.0,
+    "detected": true,
+    "window_recall": 0.6666666666666666,
+    "delay_s": 1.6316490173339844
+   },
+   "L1+L2b+L3": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 1,
+    "fa_clean_rate": 0.16666666666666666,
+    "detected": true,
+    "window_recall": 0.6666666666666666,
+    "delay_s": 1.6316490173339844
+   },
+   "L1+L3": {
+    "attack_windows": 3,
+    "clean_windows": 6,
+    "false_alerts_clean": 1,
+    "fa_clean_rate": 0.16666666666666666,
+    "detected": true,
+    "window_recall": 0.6666666666666666,
+    "delay_s": 1.6316490173339844
+   },
+   "frame_L3": {
+    "recall_1pct_each": 0.5539772727272727,
+    "fa_clean": 0.30505783624404625
+   },
+   "top_signals_in_attack_steps": {
+    "0x69e.1": 0.525,
+    "0x4c9.0": 0.425,
+    "0x4e7.1": 0.05
+   },
+   "median_z_top_signals_[z, r2]": {
+    "0x4c9.0": [
+     5.3,
+     1.0
+    ],
+    "0x69e.2": [
+     2.4,
+     -0.3
+    ],
+    "0xe.0": [
+     1.5,
+     1.0
+    ],
+    "0x4fd.2": [
+     1.4,
+     1.0
+    ],
+    "0x193.1": [
+     1.3,
+     0.91
+    ],
+    "0x125.5": [
+     1.1,
+     0.89
+    ]
+   },
+   "windows_scored": 10
+  }
+ },
+ "clean_window_fa_all": {
+  "L1": 0.0,
+  "n": 206,
+  "L2b": 0.0,
+  "L3c": 0.0048543689320388345,
+  "L3d": 0.0,
+  "L3": 0.0048543689320388345,
+  "L2b+L3": 0.0048543689320388345,
+  "L1+L2b": 0.0,
+  "L1+L2b+L3": 0.0048543689320388345,
+  "L1+L3": 0.0048543689320388345
+ },
+ "clean_window_fa_ambient_only": {
+  "L1": null,
+  "n": 0,
+  "L2b": null,
+  "L3c": null,
+  "L3d": null,
+  "L3": null,
+  "L2b+L3": null,
+  "L1+L2b": null,
+  "L1+L2b+L3": null,
+  "L1+L3": null
+ },
+ "clean_window_fa_leads_only": {
+  "L1": 0.0,
+  "n": 206,
+  "L2b": 0.0,
+  "L3c": 0.0048543689320388345,
+  "L3d": 0.0,
+  "L3": 0.0048543689320388345,
+  "L2b+L3": 0.0048543689320388345,
+  "L1+L2b": 0.0,
+  "L1+L2b+L3": 0.0048543689320388345,
+  "L1+L3": 0.0048543689320388345
+ },
+ "auc_window_l3_all": 0.9946206675066084,
+ "masquerade_detected": {
+  "L1": {
+   "correlated_signal_attack_1_masquerade": false,
+   "max_speedometer_attack_1_masquerade": false,
+   "reverse_light_off_attack_1_masquerade": false,
+   "reverse_light_on_attack_1_masquerade": false,
+   "correlated_signal_attack_2_masquerade": false,
+   "max_speedometer_attack_2_masquerade": false,
+   "reverse_light_off_attack_2_masquerade": false,
+   "reverse_light_on_attack_2_masquerade": false
+  },
+  "L2b": {
+   "correlated_signal_attack_1_masquerade": true,
+   "max_speedometer_attack_1_masquerade": true,
+   "reverse_light_off_attack_1_masquerade": false,
+   "reverse_light_on_attack_1_masquerade": true,
+   "correlated_signal_attack_2_masquerade": true,
+   "max_speedometer_attack_2_masquerade": true,
+   "reverse_light_off_attack_2_masquerade": false,
+   "reverse_light_on_attack_2_masquerade": true
+  },
+  "L3c": {
+   "correlated_signal_attack_1_masquerade": true,
+   "max_speedometer_attack_1_masquerade": true,
+   "reverse_light_off_attack_1_masquerade": false,
+   "reverse_light_on_attack_1_masquerade": false,
+   "correlated_signal_attack_2_masquerade": true,
+   "max_speedometer_attack_2_masquerade": true,
+   "reverse_light_off_attack_2_masquerade": false,
+   "reverse_light_on_attack_2_masquerade": false
+  },
+  "L3d": {
+   "correlated_signal_attack_1_masquerade": false,
+   "max_speedometer_attack_1_masquerade": false,
+   "reverse_light_off_attack_1_masquerade": true,
+   "reverse_light_on_attack_1_masquerade": true,
+   "correlated_signal_attack_2_masquerade": false,
+   "max_speedometer_attack_2_masquerade": false,
+   "reverse_light_off_attack_2_masquerade": true,
+   "reverse_light_on_attack_2_masquerade": true
+  },
+  "L3": {
+   "correlated_signal_attack_1_masquerade": true,
+   "max_speedometer_attack_1_masquerade": true,
+   "reverse_light_off_attack_1_masquerade": true,
+   "reverse_light_on_attack_1_masquerade": true,
+   "correlated_signal_attack_2_masquerade": true,
+   "max_speedometer_attack_2_masquerade": true,
+   "reverse_light_off_attack_2_masquerade": true,
+   "reverse_light_on_attack_2_masquerade": true
+  },
+  "L2b+L3": {
+   "correlated_signal_attack_1_masquerade": true,
+   "max_speedometer_attack_1_masquerade": true,
+   "reverse_light_off_attack_1_masquerade": true,
+   "reverse_light_on_attack_1_masquerade": true,
+   "correlated_signal_attack_2_masquerade": true,
+   "max_speedometer_attack_2_masquerade": true,
+   "reverse_light_off_attack_2_masquerade": true,
+   "reverse_light_on_attack_2_masquerade": true
+  },
+  "L1+L2b": {
+   "correlated_signal_attack_1_masquerade": true,
+   "max_speedometer_attack_1_masquerade": true,
+   "reverse_light_off_attack_1_masquerade": false,
+   "reverse_light_on_attack_1_masquerade": true,
+   "correlated_signal_attack_2_masquerade": true,
+   "max_speedometer_attack_2_masquerade": true,
+   "reverse_light_off_attack_2_masquerade": false,
+   "reverse_light_on_attack_2_masquerade": true
+  },
+  "L1+L2b+L3": {
+   "correlated_signal_attack_1_masquerade": true,
+   "max_speedometer_attack_1_masquerade": true,
+   "reverse_light_off_attack_1_masquerade": true,
+   "reverse_light_on_attack_1_masquerade": true,
+   "correlated_signal_attack_2_masquerade": true,
+   "max_speedometer_attack_2_masquerade": true,
+   "reverse_light_off_attack_2_masquerade": true,
+   "reverse_light_on_attack_2_masquerade": true
+  },
+  "L1+L3": {
+   "correlated_signal_attack_1_masquerade": true,
+   "max_speedometer_attack_1_masquerade": true,
+   "reverse_light_off_attack_1_masquerade": true,
+   "reverse_light_on_attack_1_masquerade": true,
+   "correlated_signal_attack_2_masquerade": true,
+   "max_speedometer_attack_2_masquerade": true,
+   "reverse_light_off_attack_2_masquerade": true,
+   "reverse_light_on_attack_2_masquerade": true
+  }
+ }
+}

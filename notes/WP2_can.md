@@ -309,3 +309,58 @@ Clean-window FA 38.1% (benign_anomaly 64.2%, extended_short 71.1%, reverse 0, di
 rare legitimate states (0x5e1.2, 0x107.3, 0x153.6, 0xc0.2) plus 1500 generic joint pairs. Second exposure R1 (joint only with reverse bit): validation identical, test FA 32.3%, same detection.
 Ablation (validation): no joint -> reverse_on lost; linear only 0.5; joint only 0.25. Car-Hacking / D11 not evaluable (no decoded signals). 227 tests pass. Cache 673 MB.
 Pitfalls: ECDF-per-type calibration with persistent session states -> every window alarms; LOCO over ambient does not represent a new session (attack captures); the first LOCO process of the old design could not be killed (permission denied).
+
+## 2026-10-22 S5 start: L3 per-signal predictors (residual alarms). Design + acceptance rule, written BEFORE any L3 score
+Context: S4 approved with a miss; supervisor decision 2026-10-22: L2b default = "relations only" (linear + range/rate on continuous signals + named gear-vs-reverse rule; generic
+discrete value / rate / joint checks dropped), judged on validation only. ROAD test has been exposed in S2, S3 and twice in S4: S5 evaluates the new layer on test ONCE, labelled
+"exposure 5"; every design choice is made on validation / LOCO. Descriptive looks at train data only so far (tools/WP2_S5_explore*.py): 138 continuous signals (catalog of S4),
+reverse bit = 0xd0.2, gear/direction state copies 0x295.0 / 0xc0.0 / 0x274.14 (code 1 = reverse: in clean basic_long reverse bit is 1 for 1170/1171 samples with gear code 1; in the
+reverse_light_off attack captures gear code 1 with flag 0 persists for seconds).
+Components (both fit on clean ambient only, causal, on the 0.05 s sample-and-hold grid of the S4 layer; frame score = score of the grid step containing the frame; window = 1 s, running-max t):
+ L3c continuous predictors: for each continuous signal j a ridge regression of x_j(t) on (a) the other 137 continuous signals at t ("cross") or (b) the same plus x_j at t-0.05, t-0.25, t-1.0 s
+   ("cross+own"). Residual standardised by the RMS of out-of-fold residuals (inner LOCO) -> z_j = |r|/sigma_j (winsorised at 30); signals with inner-OOF R2 < r_min are not used. Score per grid step =
+   max_j z_j ("max") or max_j CUSUM_j with S = max(0, S + z - 3) ("cusum"). Ridge lambda (on the correlation matrix, grid {1e-4,1e-3,1e-2,1e-1}) chosen by inner LOCO inside every outer fold (nested).
+   8 variants: features {cross, cross+own} x r_min {0, 0.9} x aggregator {max, cusum}.
+ L3d lag-aware state predictor (discrete, the reverse-light bit; this answers the S4 miss "light must follow gear within a lag"): map gear code -> expected reverse flag (majority over clean fit data) for the 3
+   gear copies; a grid step contradicts when >= 2 of the 3 copies contradict the held flag; score = seconds of contradiction in the last 1 s (so a legitimate lag of a few frames scores ~0.05-0.2 s and a
+   masquerade that holds the flag for seconds scores ~1). Not a variant (fixed now).
+Calibration: LOCO over the clean train+val ambient captures of ROAD (7 folds; exercise_all_bits is in every fit, never a fold, as in S4); each fold's model (and its nested lambda / sigma / R2) is fit WITHOUT the held-out
+ capture; pooled held-out scores give the tie-safe 1% threshold at window level and at frame level, separately for L3c and L3d. L3 = OR of the two sub-detectors (nominal LOCO FA <= 2%). Final model = fit on all 8 ambient.
+ No in-situ muting and no 3 s baseline (decision 2 of 2026-10-22 asks to remove it or re-derive it from clean statistics only).
+Variant choice (validation, before test): the 10 masquerade captures of attack instances 1 and 2 (models never saw attacks) scored with the final model and the LOCO thresholds. Criterion: among variants whose pooled clean-lead
+ window FA on the train+val attack captures (all instances, masquerade and not) is <= 3%, take the highest mean masquerade window recall (ties: lower lead FA, then lower index); if none qualifies take the lowest lead FA.
+ Test sees the chosen variant once. Harness: L1 (S2 run-1, recomputed as in S4) and L2b relations-only (S4 models + S4 LOCO weights, discrete value/rate dropped, joint only for pairs with the reverse bit, S4 3 s mute kept,
+ documented as the S4 default until S7), same 1% budgets, OR combination.
+ACCEPTANCE RULE S5 (single test run, window level, 1 s, ROAD test split). MET if all hold:
+ 1 Layers implemented (Layer API, causal, clean-only fit, nested LOCO, tie-safe 1% budget at window AND frame level, unit tests pass with the whole suite, own files committed, caches <= 3 GB, temporary files deleted).
+ 2 L3 alone (OR of L3c and L3d) detects (>= 1 alarmed attack window) at least 4 of the 5 ROAD test masquerade captures (correlated_signal_3, max_speedometer_3, reverse_light_off_3, reverse_light_on_3,
+   max_engine_coolant_temp) AND clean test window FA <= 2% pooled over the clean test windows (4 ambient captures + clean leads of attack captures, as in S4) AND no clean test ambient capture above 5% window FA.
+   (Stretch, reported: 5 of 5.) If fewer than 4: plain statement "residual predictors do not catch ROAD masquerade".
+ 3 ambient_dyno_reverse: L3 alert in no more than 2% of its windows.
+ 4 Harness: L1 + L2b_rel + L3 keeps the 5 v2-detected captures (delay <= 2 s); L3 adds >= 1 masquerade capture that L1 + L2b_rel misses, or documents none; the extra clean-window FA of L3 over L1 + L2b_rel is <= 2 points.
+ 5 Reported without gate: per-capture detection / delay / FA, frame recall at 1% frame budget, FA spread per clean test capture and per LOCO fold, which signals alarm per capture (which masquerades change one
+   signal against its relatives and which are consistent), ablation (L3c only, L3d only, L3, L1, L2b_rel, combinations), AUC. Car-Hacking and D11: no decoded signals -> not evaluable.
+If 2, 3 or 4 fails the step is NOT MET; changes after the test run are validation-only and labelled second exposure.
+
+## 2026-10-22 S5 design changes 1-3 (all before any test score; evidence = LOCO / train+val attack captures only; tools/WP2_S5_*.py, results/WP2/s5_select.json, s5_val.json, s5_highway_fold.json)
+Baseline of the pre-registered design (7 folds incl. highway, pooled-RMS sigma, z winsorised at 30, unbounded CUSUM): every variant tied at masquerade recall 0.5 because the pooled 1% window threshold
+sat on the winsor cap (>= 1% of held-out clean windows at z = 30) and the attack windows (z = 30 too) could not exceed a tied cap. Diagnosis (tools/WP2_S5_dbg*.py, descriptive): (a) the highway drive
+left out of the fit is another driving regime: z > 5 on 14.5% of its steps (wheel speeds / speedometer / speed copies 70%+), and its 3,760 windows were >50% of the pool; (b) pooled-RMS sigma from 5-6 inner
+captures varies by 4x between folds for some signals; (c) unbounded CUSUM of a persistent session offset grows without limit (pool q99 about 3000).
+Change 1: fit-only captures = exercise_all_bits and the highway drive (the only captures of their regime); 6 LOCO folds (all dyno drives); inner folds = the 5-6 dyno captures. The unseen-regime result is kept as a
+ separate diagnostic (s5_highway_fold.json: highway left out, chosen variant own_r0.0_cusum: 32.4% windows alarm at the pooled threshold; cross_r0.9_max 6.2%, others 16-74%): transfer to a NEW driving regime is NOT solved.
+Change 2: sigma_j = largest per-capture inner-OOF RMSE (conservative); z winsor 30 -> 1000 (no ties at the cap); "cusum" = sum over the last 1 s of max(z - 3, 0) (bounded, sliding).
+Change 3 (L3d, after seeing the LOCO clean scores of L3d: only two windows non-zero, both 0.05 s = one grid step): alarm only when the contradiction lasts longer than the longest one on any held-out
+ clean capture (lag tolerance, never below the 1% rule); removes the validation lead false alerts of the 1%-rule version (L3d lead FA 4/259 -> 0).
+Variant selection (rule unchanged; s5_select.json): 8 variants, mean masquerade recall (union L3c+L3d, 10 train+val masquerade captures) / pooled lead FA (259 clean lead windows): cross_r0.0_max 0.994/1.9%, cross_r0.0_cusum 0.994/1.9%,
+ cross_r0.9_max 0.994/1.9%, cross_r0.9_cusum 0.994/4.2%, own_r0.0_max 0.762/0.8%, own_r0.0_cusum 0.994/1.2%, own_r0.9_max 0.762/0.8%, own_r0.9_cusum 0.994/1.2%. Chosen by the rule: 5 = cross+own, r_min 0, windowed CUSUM.
+Validation (s5_val.json, train+val attacks): all 8 masquerade captures (instances 1, 2 of correlated_signal, max_speedometer, reverse_on, reverse_off) detected by L3 (L3c: wheel / speedometer; L3d: both reverse-light captures,
+ incl. reverse_light_off 0.37 s and 0.83 s); L2b relations-only detects 6/8 (misses reverse_off, both instances). LOCO window FA of L3c per fold: 0, 4.6% (extended_long), 0.5%, 0, 0.5%, 0; lead FA 0.5% (1/206 windows).
+Test run next: chosen variant 5 only, ONE run, labelled "ROAD test exposure 5".
+
+## 2026-10-22 S5 results (report reports/WP2_S5.md; verdict results/WP2/s5_test.json, s5_test_tables.md, s5_summary.md)
+Verdict NOT MET (items 2 and 4 on false alarms; detection 5/5). ROAD test exposure 5, variant 5 (cross+own, r_min 0, windowed CUSUM), ONE run. L3 alone: correlated_3 0.68 s, max_speedometer_3 0.48 s,
+reverse_light_off_3_masq 0.48 s (L3d), reverse_light_on_3_masq 0.93 s (L3d), coolant 1.02 s (L3c). Clean test windows 1394: L3 FA 7.6% (benign 0.7%, extended_short 2.2%, reverse 0.0%, highway diagnostics 20.4%, leads 0/94).
+Harness FA / masquerade detected: L1 5.2%/1, L2b-rel 31.2%/4, L1+L2b 33.9%/4, L3 7.6%/5, L1+L3 12.6%/5, L1+L2b+L3 40.6%/5. AUC 0.957. Unseen-regime fold (highway out of fit) 32% alarms.
+Pitfalls: (1) pooled thresholds dominated by one long capture of another regime (fold weights); (2) winsorising scores creates ties exactly at the quantile -> tie-safe threshold above the cap -> nothing alarms; (3) unbounded CUSUM of session offsets;
+(4) range checks on continuous signals (L2b value) still give 31% FA on benign sessions; (5) the L2b-rel test number was exposed here (harness), reserved for S7 by the 2026-10-22 decision: disclosed in the report.
