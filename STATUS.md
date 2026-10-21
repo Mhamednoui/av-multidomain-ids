@@ -10,7 +10,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP1 GPS | S7 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-21 | S6 APPROVED (negative result: map layer out of default stack) |
 | WP2 CAN | S3 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | S2 APPROVED with miss (ROAD FA 3.4% vs 1%) |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
-| WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
+| WP4 Network | S0 | IN PROGRESS | worker haiku (medium, T1) | 2026-10-21 | downloads D10 + D23 (size-checked) |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
