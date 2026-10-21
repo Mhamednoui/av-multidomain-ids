@@ -1,0 +1,508 @@
+{
+ "name": "road_Ab0.001",
+ "budget": 0.001,
+ "layers": {
+  "can.l1_bus_load": {
+   "threshold": 0.9983471074380167,
+   "budget": 0.001,
+   "false_alarm_rate": 0.010337698139214336,
+   "detection": 0.48091603053435117,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 1.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.6768351387040262,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.45454545454545453,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "can.l1_dlc": {
+   "threshold": 5e-324,
+   "budget": 0.001,
+   "false_alarm_rate": 0.0,
+   "detection": 0.0,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 0.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.5,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.0,
+    "median_delay_s": NaN,
+    "mean_delay_s": NaN
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "can.l1_flood": {
+   "threshold": 0.6512396694214877,
+   "budget": 0.001,
+   "false_alarm_rate": 0.0,
+   "detection": 0.003816793893129771,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 0.5,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.494474723933481,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.09090909090909091,
+    "median_delay_s": 0.48348796367645264,
+    "mean_delay_s": 0.48348796367645264
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "can.l1_id_allow": {
+   "threshold": 5e-324,
+   "budget": 0.001,
+   "false_alarm_rate": 0.0,
+   "detection": 0.007633587786259542,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.5038167938931297,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.09090909090909091,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "can.l1_period": {
+   "threshold": 0.9983471074380167,
+   "budget": 0.001,
+   "false_alarm_rate": 0.013094417643004824,
+   "detection": 0.0,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 0.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.6498492747828557,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.0,
+    "median_delay_s": NaN,
+    "mean_delay_s": NaN
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.9997332070416995,
+   "budget": 0.001,
+   "false_alarm_rate": 0.024810475534114404,
+   "detection": 0.5,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.8333333333333334,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 1.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.7215976346925784,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.5454545454545454,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.16664183139801025
+   },
+   "n_test": 1713,
+   "n_test_attack": 262,
+   "method": "noisy_or",
+   "method_selection": {
+    "noisy_or": 0.48232032262710645,
+    "logistic": 0.4445844735705026,
+    "max": 0.48232032262710645
+   }
+  },
+  "only_can.l1_bus_load": {
+   "threshold": 0.9983471074380167,
+   "budget": 0.001,
+   "false_alarm_rate": 0.010337698139214336,
+   "detection": 0.48091603053435117,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 1.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.6768351387040262,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.45454545454545453,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "only_can.l1_dlc": {
+   "threshold": 5e-324,
+   "budget": 0.001,
+   "false_alarm_rate": 0.0,
+   "detection": 0.0,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 0.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.5,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.0,
+    "median_delay_s": NaN,
+    "mean_delay_s": NaN
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "only_can.l1_flood": {
+   "threshold": 0.6512396694214877,
+   "budget": 0.001,
+   "false_alarm_rate": 0.0,
+   "detection": 0.003816793893129771,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 0.5,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.494474723933481,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.09090909090909091,
+    "median_delay_s": 0.48348796367645264,
+    "mean_delay_s": 0.48348796367645264
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "only_can.l1_id_allow": {
+   "threshold": 5e-324,
+   "budget": 0.001,
+   "false_alarm_rate": 0.0,
+   "detection": 0.007633587786259542,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.5038167938931297,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.09090909090909091,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "only_can.l1_period": {
+   "threshold": 0.9983471074380167,
+   "budget": 0.001,
+   "false_alarm_rate": 0.013094417643004824,
+   "detection": 0.0,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 0.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.6498492747828557,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.0,
+    "median_delay_s": NaN,
+    "mean_delay_s": NaN
+   },
+   "n_test": 1713,
+   "n_test_attack": 262
+  },
+  "all_but_can.l1_bus_load": {
+   "threshold": 0.999423536643672,
+   "budget": 0.001,
+   "false_alarm_rate": 0.013094417643004824,
+   "detection": 0.007633587786259542,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.6289752789600223,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.09090909090909091,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 1713,
+   "n_test_attack": 262,
+   "method": "noisy_or"
+  },
+  "all_but_can.l1_dlc": {
+   "threshold": 0.9997332070416995,
+   "budget": 0.001,
+   "false_alarm_rate": 0.024810475534114404,
+   "detection": 0.5,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.8333333333333334,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 1.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.7215976346925784,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.5454545454545454,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.16664183139801025
+   },
+   "n_test": 1713,
+   "n_test_attack": 262,
+   "method": "noisy_or"
+  },
+  "all_but_can.l1_flood": {
+   "threshold": 0.9992350249299913,
+   "budget": 0.001,
+   "false_alarm_rate": 0.027567195037904894,
+   "detection": 0.5,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.8333333333333334,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 1.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.7235231296131649,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.5454545454545454,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.16664183139801025
+   },
+   "n_test": 1713,
+   "n_test_attack": 262,
+   "method": "noisy_or"
+  },
+  "all_but_can.l1_id_allow": {
+   "threshold": 0.9997332070416995,
+   "budget": 0.001,
+   "false_alarm_rate": 0.024810475534114404,
+   "detection": 0.5,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.8333333333333334,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 1.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.7215095143649286,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.5454545454545454,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.16664183139801025
+   },
+   "n_test": 1713,
+   "n_test_attack": 262,
+   "method": "noisy_or"
+  },
+  "all_but_can.l1_period": {
+   "threshold": 0.9983471074380167,
+   "budget": 0.001,
+   "false_alarm_rate": 0.010337698139214336,
+   "detection": 0.48091603053435117,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 1.0,
+    "max_engine_coolant_temp": 0.0,
+    "max_engine_coolant_temp_masquerade": 0.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 1.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.6780911821802285,
+   "delay": {
+    "n_segments": 11,
+    "detected_fraction": 0.45454545454545453,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 1713,
+   "n_test_attack": 262,
+   "method": "noisy_or"
+  }
+ },
+ "layer_names": [
+  "can.l1_bus_load",
+  "can.l1_dlc",
+  "can.l1_flood",
+  "can.l1_id_allow",
+  "can.l1_period"
+ ],
+ "combined": {
+  "threshold": 0.9997332070416995,
+  "budget": 0.001,
+  "false_alarm_rate": 0.024810475534114404,
+  "detection": 0.5,
+  "detection_by_attack": {
+   "correlated_signal": 1.0,
+   "correlated_signal_masquerade": 0.0,
+   "fuzzing": 1.0,
+   "max_engine_coolant_temp": 0.8333333333333334,
+   "max_engine_coolant_temp_masquerade": 0.0,
+   "max_speedometer": 1.0,
+   "max_speedometer_masquerade": 0.0,
+   "reverse_light_off": 1.0,
+   "reverse_light_off_masquerade": 0.0,
+   "reverse_light_on": 1.0,
+   "reverse_light_on_masquerade": 0.0
+  },
+  "auc": 0.7215976346925784,
+  "delay": {
+   "n_segments": 11,
+   "detected_fraction": 0.5454545454545454,
+   "median_delay_s": 0.0,
+   "mean_delay_s": 0.16664183139801025
+  },
+  "n_test": 1713,
+  "n_test_attack": 262,
+  "method": "noisy_or",
+  "method_selection": {
+   "noisy_or": 0.48232032262710645,
+   "logistic": 0.4445844735705026,
+   "max": 0.48232032262710645
+  }
+ }
+}

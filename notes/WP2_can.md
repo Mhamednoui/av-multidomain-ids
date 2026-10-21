@@ -92,3 +92,82 @@ is trained, so no test-set use. Test data are only counted, never scored.
   scan is resumable (cache in ../data_extra/D11_can-train-and-test/s1_scan_cache/, not committed) and
   was finished in the foreground.
 - Acceptance rule 1-6: all MET (reports/WP2_S1.md).
+
+## 2026-10-20 S2 start: design and acceptance rule (written before any S2 result)
+Step: L1 specification rules as v3 Layers (domain "can", layer "L1", kind "rule"): id_allow (ID allow-list),
+dlc (allowed DLC set per ID), period (per periodic ID, early and late arrival vs the learned period, per-ID
+tolerance), bus_load (bits in the trailing 1 s), flood (frames with ID <= lowest legit ID in the trailing 1 s).
+Data prepared: per-capture compact cache (t, id, dlc, label) in ../data_extra/WP2_S2_cache (tools/WP2_S2_cache.py).
+Design decisions fixed before results:
+- Unit 1 = frame (causal, recorded order, dt_id = gap to the previous frame of the same ID with dt_clipped; the
+  sign of dt is never a feature; trailing-1 s sums use the running maximum of t). Unit 2 = 1 s window
+  (floor of the running max t, per capture); window raw score of a rule = max of its frame raw scores in the
+  window; window label = holds >= 1 injected frame (as v2 road_windows).
+- "Clean" frames (attack-free traffic, the only data rules may calibrate on): ROAD all frames of ambient captures +
+  attack captures before the first injected frame minus 1 s; D11 same rule (attack-free / accessory files fully);
+  Car-Hacking: blocks of the v2 block split that contain no injected frame.
+- Profile (allow-list, DLC sets, periods, tolerances) fitted on clean TRAIN frames; thresholds (ECDF calibration +
+  tie-safe 1% budget, Layer.calibrate) on clean VALIDATION frames / windows, separately for the frame unit and the
+  window unit. The only hyper-parameter choice, the tolerance variant (quantile q of the training early / late
+  deviation and its floor): grid [(0.99, 0.05), (0.999, 0.05), (0.99, 0.25), (0.999, 0.25)], chosen on the validation
+  captures of the experiment by the mean window recall of the period layer over the non-masquerade attack types at
+  the 1% window budget; ties -> first in grid order. Event-triggered IDs (n < 30 or (q95-q05)/median > 0.5) get no
+  timing rule.
+- Combined = noisy-or of the calibrated layer scores (frame level, arrays); window level through the common
+  harness (common/evaluate.evaluate_domain, method auto on ROAD / Car-Hacking / D11 regime a; noisy_or on regime b
+  because the clean calibration has no attack windows).
+- ROAD: v2 split (train 15 / val 11 / test 15 captures), profile = clean train frames, thresholds = clean val frames.
+- Car-Hacking: v2 block split (splits_carhacking.json), profile = clean train blocks, thresholds = clean val blocks.
+- D11, one experiment per set (splits_d11.json). Regime (a) ZERO-SHOT: profile from the set's train files (clean
+  parts), thresholds from the set's val hold-out files (clean parts); applied unchanged to all four test subsets
+  (known and unknown vehicle). Regime (b) ON-VEHICLE, fixed now: per (set, test subset), from every test file whose
+  first injected frame is at t >= 60 s: frames with t < 30 s fit the profile, frames with 30 <= t < 60 s set the
+  thresholds (pooled over those files); tolerance variant = the one chosen in regime (a) on the training vehicle's
+  validation (no labelled data of the target vehicle exists). Scored frames in BOTH regimes (so they are comparable):
+  files with first injection >= 60 s: t >= 60 s only; other files: whole file. A subset with < 3 eligible files is
+  reported as "no on-vehicle calibration".
+- Metrics: frame level (detection per attack = alarmed injected frames / injected frames; FA = alarmed clean normal
+  frames / clean normal frames, and FA on all label-0 frames) and window level (per attack window recall; per
+  capture detected? and delay = end of first alarmed attack window - first injected frame; FA windows on clean test
+  windows and false alerts per hour). Budgets: 1% at the unit (primary); extra operating points 0.1% and <= 1 false
+  alert per hour (~0.028% windows) on ROAD, thresholds still from validation.
+ACCEPTANCE RULE S2. MET if all hold:
+ 1. Five rules implemented as Layer subclasses; calibrated on attack-free data only; tie-safe 1% budget at each unit;
+    causal; dt_clipped only; unit tests pass with the whole suite; own files committed.
+ 2. ROAD test, window level, 1% budget from val: the L1 combination (a) detects the 5 captures that v2's timing model R1
+    detected (fuzzing_attack_3, correlated_signal_attack_3, max_speedometer_attack_3, reverse_light_off_attack_3,
+    reverse_light_on_attack_3) with delay <= 2 s each; (b) raises no alert in ambient_dyno_reverse (the reverse-driving
+    false alarm of v2's payload model) and at most 1% of windows over the test ambient captures. Masquerade captures and
+    the coolant capture: no requirement; they are reported, and if missed it is stated that specification rules cannot see
+    same-ID same-period masquerade (so the WP target "masquerade <= 1 false alert/hour" is NOT claimed by L1).
+ 3. Car-Hacking test, 1% window budget: window recall >= 95% for each of DoS, Fuzzy, RPM, Gear.
+ 4. D11: both regimes reported for all 4 sets x 4 test subsets with per-attack frame and window numbers, FA on clean
+    test, delay (no numeric gate; unknown-vehicle results are the deliverable).
+ 5. Per-layer and harness ablation tables produced for ROAD, Car-Hacking and D11.
+If 2 or 3 fails the step is reported NOT MET with the reason (no re-tuning on test).
+
+## 2026-10-20 S2 incident log (before the real run)
+- Cache blunder: my first cache stored the attack name as a 40-char string per frame: 39 GB, disk 100% full
+  (ENOSPC) for a few minutes (this may have hit other workers). Deleted the cache I had created, rebuilt with int8 attack
+  codes: 3.4 GB total (../data_extra/WP2_S2_cache, 236 D11 + 41 ROAD + 4 Car-Hacking files). Free disk afterwards 26 GB.
+- RUN 1 (design exactly as pre-registered above) was executed end to end on ROAD as a smoke test and it also scored
+  the test captures. Per RULES 5.2 this is the single test use of the pre-registered design; the numbers are kept in
+  results/WP2/s2_run1_frozen/ and reported as run 1. Run 1 result: the five captures v2's timing model catches are all
+  detected (delay 0.17-0.93 s, by bus_load), reverse driving 0 alerts, but combined false alerts on clean test windows
+  3.4% (period 4.4%, bus_load 1.4%): acceptance item 2(b) (<= 1%) fails under the frozen design.
+- A VALIDATION finding in run 1 (not a test finding): on the val attack captures the period rule had recall ~0 for
+  correlated_signal / max_speedometer / reverse_light although those attacks inject extra frames of an ID; the injected
+  ID (0x6E0, p = 10 ms) was classified event-triggered because my periodic test used q95-q05 > 0.5 x median (0.61 on ROAD
+  jitter). Change for RUN 2 (applies to ROAD, Car-Hacking and D11 alike, decided before looking at any Car-Hacking / D11
+  number): periodic if the INTERQUARTILE range of the gaps <= 0.5 x median (robust to bursts). Nothing else changes.
+  Run 2 on ROAD is NOT an independent test (test captures were seen in run 1): it is reported as "revised design",
+  run 1 stays the verdict for acceptance item 2. Car-Hacking and D11 are run once, with the revised design.
+
+## 2026-10-21 S2 results (numbers in reports/WP2_S2.md, results/WP2/s2_*.json, s2_d11_tables.md)
+- Verdict NOT MET (item 2b): run 1 (frozen) combined FA on clean ROAD test windows 3.4%, ambient 49/1316, > 1%.
+  Detection of the five captures with delay <= 1 s and zero alerts in reverse driving are met. Run 2 (IQR) 3.5% FA.
+- Car-Hacking window recall DoS 1.0, Fuzzy 1.0, RPM 0.995, Gear 0.995; FA 1.0% (item 3 met).
+- D11: regime A on an unknown vehicle alarms on ~100% of windows (ID/DLC allow-list is vehicle-specific); regime B
+  brings FA to 1.2-5.9% (one cell 20%), recall 0.78-1.0, all attack files detected.
+- Lesson: per-rule 1% budgets compound under noisy-or and the test ambient drives shift vs val: expect 3-4% FA.
+- Unit tests tests/can/test_l1.py (causal prefix, calibration on clean); whole suite 154 passed.

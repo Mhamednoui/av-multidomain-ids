@@ -8,7 +8,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 |---|---|---|---|---|---|
 | WP0 Foundation | S3 | APPROVED | worker sonnet | 2026-10-19 | M0 closed: v2 B2 reproduced exactly (19 tests) |
 | WP1 GPS | S6 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-21 | S5 APPROVED with misses. S6 must filter OSM to drivable classes |
-| WP2 CAN | S2 | IN PROGRESS (interrupted) | worker sonnet (medium) | 2026-10-20 | stopped by usage limit 2026-10-20 night; uncommitted work on disk, resume |
+| WP2 CAN | S2 | REVIEW | worker sonnet (medium) | 2026-10-21 | L1 rules: NOT MET on ROAD FA (3.4% > 1%); Car-Hacking recall met; D11 needs on-vehicle calibration. reports/WP2_S2.md |
 | WP3 LiDAR | S1 | BLOCKED | - | 2026-10-20 | waits for M0 (S0 optional, later) |
 | WP4 Network | S0 | BLOCKED | - | 2026-10-20 | waits for M0 |
 | WP5 V2X | S5 | TODO | - | 2026-10-21 | S4 APPROVED partial (kf_cusum_lo dropped from deployable L3). S5 = T3 sonnet/high |
