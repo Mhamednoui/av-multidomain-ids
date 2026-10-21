@@ -1,0 +1,32 @@
+{
+ "d10_labelled_rows": 2830743,
+ "d01_raw": 56661,
+ "d01_dup_removed": 12598,
+ "d01_conflict_removed": 24,
+ "d01_clean": 44039,
+ "d01_const_cols_removed": [
+  "Bwd PSH Flags",
+  "Bwd URG Flags",
+  "Fwd Avg Bytes/Bulk",
+  "Fwd Avg Packets/Bulk",
+  "Fwd Avg Bulk Rate",
+  "Bwd Avg Bytes/Bulk",
+  "Bwd Avg Packets/Bulk",
+  "Bwd Avg Bulk Rate"
+ ],
+ "clean_features_only_rate": 0.39224323894729674,
+ "clean_features_and_label_rate": 0.3327732237335089,
+ "clean_found": 14655,
+ "raw_features_only_rate": 0.5116570480577469,
+ "raw_features_and_label_rate": 0.46479942111858247,
+ "clean_missing_by_label": {
+  "DoS": 13981,
+  "BENIGN": 11726,
+  "WebAttack": 2143,
+  "BruteForce": 891,
+  "Bot": 555,
+  "PortScan": 62,
+  "Infiltration": 26
+ },
+ "gate_met": false
+}

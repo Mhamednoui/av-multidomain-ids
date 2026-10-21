@@ -70,3 +70,43 @@ Not a criterion: the content of the data (no modelling in S0).
 
 ### Disk
 - D10 folder 1.49 GB (zip + extracted), D23 folder 6.89 GB. Free after: 62 GB on C:.
+
+## 2026-10-21 S1 gate: D10 mirror vs D01 (acceptance rule, written BEFORE the comparison)
+
+D01 = ../codes/data/CICIDS2017_sample.csv (56,661 rows, 77 features + grouped Label, no ids). v2 cleaning of D01 = drop
+exact duplicates (features+Label) and conflicting-label feature rows -> 44,039 rows (results/network.json).
+Gate MET only if: of the v2-clean D01 rows, >= 99% have a D10 row (labelled rows, same 77 feature columns, exact
+float equality after inf->NaN in both) whose D10 label maps to the same D01 class (DoS = Hulk/GoldenEye/slowloris/Slowhttptest;
+BruteForce = FTP/SSH-Patator; WebAttack = the 3 web labels; others by name). Also report the match rate on all 56,661 raw
+rows, and the rate with features only (label ignored). If < 99%: stop, write why, ask; do not build the data layer.
+
+## 2026-10-21 S1 acceptance rule for the data layer (written BEFORE building it)
+1. D10 and D23 each reduced to one unified table (timestamp, src_ip, dst_ip, src_port, dst_port, protocol, 77 flow
+   features, label, family, day, file, attacker/victim flags). D23 Tue 20-02 mapped by an explicit 84->canonical map with a
+   test; after mapping, columns are the same set as the other D23 files.
+2. Row counts per file before / after each cleaning step (empty/header rows, unparseable, exact duplicates, conflicting
+   labels) are in results/WP4/s1_*.json. Cleaning rules as v2 (dup on features+label; conflicts = same features, different
+   labels) but computed on the feature columns only (ids/timestamps excluded, as in v2).
+3. Split by time only: every flow in exactly one of train/val/test, parts separated by time gaps; every family used for
+   evaluation has >= 100 flows in test (and >= 30 in val where it exists on more than one block). Counts per part x family reported.
+   Families with too few flows are listed as "not evaluable" rather than forced.
+4. v2 numbers reproduced where applicable: D01 raw rows 56,661 / dup 12,598 / conflicts 24 / clean 44,039 reproduced by the
+   same code on D01; D10 duplicate rate reported against D01's 22%.
+5. Held-out families for leave-one-attack-out in S7 fixed now (list in the brief).
+6. Derived caches (parquet) under ../data_extra/cache_v3/WP4/, <= 5 GB. Tests in tests/network/ pass.
+
+## 2026-10-21 S1 gate RESULT: NOT MET -> STOP, asking the supervisor
+Source: results/WP4/s1_gate_d10_vs_d01.json, s1_gate_diag.json (tools/WP4_s1_gate.py, WP4_s1_gate_diag.py).
+- v2 cleaning of D01 reproduced exactly: 56,661 raw, 12,598 duplicates, 24 conflicting, 44,039 clean (matches results/network.json).
+- Strict match (all 77 features equal, label mapped to the D01 class) of the 44,039 clean D01 rows in D10 (2,830,743 labelled rows):
+  14,655 = 33.3% (features only 39.2%). On all 56,661 raw rows: 46.5% (features only 51.2%). Required >= 99%.
+- Not a label problem: features-only is also low. Not a loading problem: every D01 row matches D10 on 5 key columns
+  (Flow Duration, Fwd/Bwd packets, Fwd/Bwd total length), but 25 further columns differ in 2-10% of the key-matched rows (IAT stats,
+  header lengths, Init_Win_bytes, min_seg_size_forward, URG count; diag json). Matching on the 55 columns that do not
+  involve IAT / header / window / URG still finds only 55.4% of raw D01 rows.
+- Interpretation (not verified): D01 (MTH-IDS) very probably comes from the "MachineLearningCVE" CSVs, i.e. a different
+  CICFlowMeter run / flow set than GeneratedLabelledFlows; D10 and D01 are the same pcaps but not the same flow records, so D01 cannot certify D10.
+  It does not show D10 is corrupt: all 5 key columns agree, label set and total (2,830,743) are the published ones.
+- Decision needed from supervisor: (a) accept D10 anyway (the gate as defined cannot be met by any copy of GeneratedLabelledFlows if D01 comes
+  from MachineLearningCVE), or (b) fetch MachineLearningCVE (also mirrored) and run the gate against it, or (c) wait for UNB.
+  Per instructions the data layer was NOT built.
