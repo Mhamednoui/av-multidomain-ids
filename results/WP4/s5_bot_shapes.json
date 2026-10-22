@@ -1,0 +1,63 @@
+{
+ "train": {
+  "n": 1539,
+  "port_8080": 840,
+  "top_shapes": {
+   "1/1": 731,
+   "4/3": 615,
+   "3/3": 77,
+   "5/4": 70,
+   "28/54": 3,
+   "21/28": 3
+  },
+  "median_duration_us": 62432.0,
+  "dur_p5_p95": [
+   6.0,
+   947108.9999999955
+  ],
+  "benign_beacon_shape": {
+   "benign_flows": 1151157,
+   "match": 459,
+   "match_port_8080": 441
+  }
+ },
+ "val": {
+  "n": 109,
+  "port_8080": 109,
+  "top_shapes": {
+   "3/3": 107,
+   "1/1": 1,
+   "10/10": 1
+  },
+  "median_duration_us": 1003379.0,
+  "dur_p5_p95": [
+   993520.8,
+   1039261.2
+  ],
+  "benign_beacon_shape": {
+   "benign_flows": 364077,
+   "match": 117,
+   "match_port_8080": 115
+  }
+ },
+ "test": {
+  "n": 308,
+  "port_8080": 302,
+  "top_shapes": {
+   "3/3": 296,
+   "1/1": 6,
+   "4/3": 5,
+   "5/4": 1
+  },
+  "median_duration_us": 1011437.0,
+  "dur_p5_p95": [
+   993747.7,
+   1045157.8
+  ],
+  "benign_beacon_shape": {
+   "benign_flows": 408781,
+   "match": 199,
+   "match_port_8080": 182
+  }
+ }
+}

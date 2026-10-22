@@ -10,7 +10,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP1 GPS | done (M1-GPS partial) | APPROVED | - | 2026-10-21 | M1-GPS closed PARTIAL, see reports/M1_GPS.md; frozen output gps/domain.py |
 | WP2 CAN | S7 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-22 | S6 APPROVED (negative: L4 adds nothing). S7 -> M1-CAN |
 | WP3 LiDAR | S3 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | resumed after user reset the limit; single-return fix + segmentation |
-| WP4 Network | S5 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-22 | S4 APPROVED with miss (Bot 36%) |
+| WP4 Network | S5 | REVIEW | worker sonnet (high, T3) | 2026-10-22 | S5 done: L3 harness +6.8 pts; Bot/Web-XSS/Web-BF not caught at 1% FA; D23 zero-shot not transferable |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |

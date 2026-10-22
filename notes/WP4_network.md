@@ -272,3 +272,57 @@ D10 test: net.beacon FA flow 1.75% (published 1.51%), window 1.10%; Bot 36.0% of
 Among testable flows (6.5% of benign flows): Bot 100%, benign FA 26.8% => low precision inside the testable subset. Harness: Bot 0 -> 17.5%, macro 54.2 -> 55.8%, FA 0.33 -> 0.57%; OR with L2a Bot 1 -> 36%, FA 2.77 -> 4.50%.
 D23 Tue-20-02 transfer FA 2.71% (refit 1.21%); D23 Bot (Fri-02-03) not evaluable (addresses 100% NaN).
 Acceptance: C1 MET, C2 NOT MET (36 < 50; 3/5 groups), C3 NOT MET (+17.5 < +20 Bot points; macro +1.6 met), C4 measured, C5 MET. Nothing changed after the verdict.
+
+## 2026-10-22 S5 plan, selection rule and acceptance rule (written BEFORE any L3 score was computed; test never read)
+Task (supervisor): L3 NORMAL-ONLY models fitted on BENIGN TRAIN flows only (no attack label in fit): (a) per-service profile (service = protocol + destination port, grouped by port semantics; robust z or Mahalanobis),
+(b) isolation forest, (c) small autoencoder (sklearn MLPRegressor, CPU; no GPU job, no lock needed) on the 76 flow features. Code network/l3.py (ServiceProfile, IsoForest, AutoEncoder; Layer contract, layer_id L3).
+Data: D10 PRE-DEDUP stage stream of S3/S4 (same rows, same split, same audit exclusion of the Thursday Infiltration file), 76 features aligned by (file,row) (tools/WP4_S5_prep.py ->
+../data_extra/cache_v3/WP4/S5/D10_X.npy 0.86 GB). D23: fixed-seed stratified sample of the cleaned final tables, all days (tools/WP4_S5_prep_d23.py -> S5/D23_eval.pkl, drawn once, before any scoring):
+benign train/val/test sampled at 8/20/30%, attack flows of val/test capped at 60k per (family, split). Layer scores are per flow (no window state): flow unit only.
+Feature hygiene (decided a priori from the tool semantics, not from any score): not features: IPs, Flow ID, timestamp, source port, destination port / protocol (used only to GROUP services).
+Set "clean" drops HOST_STACK (Init Fwd/Bwd Win Byts, Fwd Seg Size Min: TCP stack fingerprints of the sending machine), TOOL_FLAGS (RST/URG/CWE/ECE counts, Fwd/Bwd URG: meaning differs between CICFlowMeter versions,
+D23 RST = ECE column, S2), DUPLICATES (columns identical on benign train: Fwd PSH Flags = SYN count, Subflow Fwd/Bwd Pkts and Fwd Byts = Tot columns, Subflow Bwd Byts ~ TotLen Bwd, Fwd/Bwd Seg Size Avg = Pkt Len Mean;
+tools/WP4_S5_explore.py) and constant columns. "all" keeps the 76 columns (ablation only). Preprocessing: signed log1p, NaN -> benign-train median, global standardisation (benign train).
+Selection (validation only, tools/WP4_S5_dev.py, results/WP4/s5_dev_val.json; attack validation used ONLY for model selection and recorded): per layer the configuration with the highest mean detection over the four
+RULE-BLIND families (Bot, Web-XSS, Web-BruteForce, DoS-Slowloris) at the 1% tie-safe benign-validation budget; ties -> macro over the 11 evaluable families. Grid: service {rz_mean, rz_top3, maha} x floor {0.1, 0.3};
+iforest max_samples {256, 2048} x max_features {1.0, 0.5}; autoencoder hidden {(32,12,32), (48,16,6,16,48)}. Fit subsample 300k benign train flows (service: all benign train). Fixed: n_estimators 200, MIN_SVC 1000.
+Weak point stated up front: validation has Bot 109 flows (5 bot sources), Web-XSS 97, Web-BruteForce 317, Slowloris 708.
+Acceptance (fixed now; ONE verdict run on D10 test + D23 sample):
+ D1 FA <= 2% on benign test flows for every L3 layer (headline = without the audited Infiltration file; published-label FA also given).
+ D2 Rule-blind families: at least one L3 layer detects >= 50% of the test flows of >= 2 of the 4 rule-blind families at its 1% budget (Bot, Web-XSS, Web-BruteForce, Slowloris).
+ D3 Harness ablation on top of tcp_flags + L2a (logistic combiner, same subsample protocol as S3/S4): adding the three L3 layers raises the macro over the 11 evaluable families by >= 5 points at combined FA <= 2%
+    (S3/S4 reference without L3: macro 54.2%, FA 0.33%).
+ D4 Bot honesty (statement, no pass / fail): share of the alarmed Bot test flows with the fixed shape (4 fwd / 3 bwd packets, dst port 8080) and detection on Bot flows without it; "signature only" if >= 90% of the hits
+    match the shape and the detection of non-matching Bot flows is < 10%. Benign flows with that shape counted.
+ D5 Zero-shot D23: fit D10 benign, threshold from D10 benign validation, score the D23 sample: a layer counts as zero-shot transferable only if FA on D23 benign test <= 5%; AUC per family reported either way.
+    On-network regime: refit on D23 benign train, threshold on D23 benign val, FA on D23 benign test <= 2%, detection per family.
+ D6 Hygiene + explanation: "clean" vs "all" (76 columns) difference on test reported; feature attributions (score contribution) for the top alarms of each family and for the top benign false alarms.
+ D7 Honesty: per-family detection with n for every family (Infiltration included: D10 test has only 6 flows, not evaluable; D23 Infiltration has thousands); Infiltration file benign flows excluded as in S3/S4.
+
+## 2026-10-22 S5 development on VALIDATION, pass 1 (tools/WP4_S5_dev.py, results/WP4/s5_dev_val.json = union of both passes; pass-1 copy results/WP4/logs/s5_dev_val_pass1.json, log s5_dev_pass1.log)
+Machine saturated by other workers: the first autoencoder (sklearn MLPRegressor (32,12,32), 300k flows) needed 27 min for ONE fit (log s5_dev_pass1_sklearn_ae.log: blind4 0.225, macro 0.341, macro AUC 0.875);
+switched to Keras (CPU; TensorFlow 2.10 here has no GPU libraries: no GPU lock needed), same architecture, seconds per epoch. Also hbos (per-service histogram score) added to the service grid after the rz variants were blind.
+Benign train 1,151,157 (audit file excluded), benign val 364,077, attack val 64,340 (Bot 109, Web-XSS 97, Web-BruteForce 317, Slowloris 708, Infiltration 6, Heartbleed 11).
+Findings (1% tie-safe benign-val budget; detection of the four rule-blind families, blind4 mean | macro of the 11 evaluable families):
+ service rz_mean / rz_top3 (floor 0.1, 0.3): 0.00 | 0.00 (AUC 0.64-0.67: a robust z of independent features is dominated by benign outliers);  hbos: 0.00 | 0.00, macro AUC 0.48 (negative);
+ service maha floor 0.1 / 0.3: 0.093 | 0.124 / 0.181 (macro AUC 0.86-0.87);  iforest: 0.066 | 0.07-0.10 (macro AUC 0.83-0.87);  AE Keras (32,12,32): 0.225 | 0.373; (48,16,6,16,48): 0.157 | 0.290.
+ AE catches PortScan 99%, Slowloris 90%, SlowHTTPTest 90%, Hulk 71%; Bot / Web-XSS / Web-BruteForce 0 for every model.
+ BUT the AUC of Bot is 0.94-0.99 (maha 0.99, iforest 0.96, ae 0.94), Web-XSS 0.66-0.82, Web-BruteForce 0.66-0.78: Bot flows rank above 94-99% of the benign flows, below the 99% quantile.
+ The pooled benign tail (busy services with heavy-tailed flows) spends the 1% budget.  -> pass 2: same models + per-service normalisation of the score (-log10 of the share of the service's OWN
+ held-out benign train scores above it; each service then spends the same share of the budget). Selection rule unchanged, taken over the union of the two passes. Chosen so far (pass 1): service maha floor 0.3,
+ iforest (2048, 0.5), ae (32,12,32). Hygiene on validation: 76 columns vs clean: service blind4 0.093 | 0.194 vs 0.093 | 0.181, iforest 0.066 | 0.080 vs 0.066 | 0.104, ae 0.225 | 0.338 vs 0.225 | 0.373: no gain from the host-stack columns.
+
+## 2026-10-22 S5 development pass 2 and chosen configurations (validation only; log results/WP4/logs/s5_dev_pass2.log; smoke run on the validation side OK, results/WP4/smoke/)
+Pass 2 (per-service normalisation of the score): service maha floor 0.1: blind4 0.093 | macro 0.325 (was 0.124 pooled); floor 0.3: 0.093 | 0.324; rz_mean 0.3: 0.000 | 0.091; iforest: 0.066-0.000 | 0.04-0.07 (worse than pooled);
+AE (32,12,32): 0.225 | 0.383 (was 0.373). The normalisation helps FTP/SSH-type per-service structure (FTP 1.0, SSH 0.46 for the service profile) but NOT Bot (0.01), Web-XSS (0), Web-BruteForce (0).
+CHOSEN (rule: highest blind4, ties -> macro; blind4 is tied across models because only Slowloris is ever caught): net.l3_service = maha, floor 0.1, svc_norm; net.l3_iforest = max_samples 2048, max_features 0.5, pooled;
+net.l3_ae = (32,12,32), svc_norm. 76-column ablation on validation: service 0.328, iforest 0.080, ae 0.339 macro (clean: 0.325, 0.104, 0.383): host-stack columns do not help.
+Acceptance rule D1-D7 above stays unchanged; additions made BEFORE the test run (diagnostics, no pass/fail): detection at 5% FA, median benign-rank of each family, ports of the benign false alarms.
+Smoke findings that need no test data: Bot flows rank at the 91-98th benign percentile (median), so a 1% budget cannot catch them; D23 zero-shot FA on validation 34% (service), 6.5% (iforest), 13.7% (ae).
+
+## 2026-10-22 S5 VERDICT (one test run: results/WP4/logs/s5_verdict.log; tables s5_tables.md; acceptance s5_acceptance.json; report reports/WP4_S5.md)
+D10 test (clean features, flow unit): FA 0.92 / 1.12 / 1.02% (service / iforest / AE; published labels 1.01 / 1.06 / 5.90%); macro 11: 35.3 / 13.5 / 39.0; rule-blind: Bot 0 / 0 / 0, Web-XSS 0, Web-BruteForce 0, Slowloris 49.7 / 15.3 / 78.0.
+Harness tcp_flags + L2a 54.2 -> +svc 57.5, +iforest 54.2, +AE 59.2, +all three 61.0 (FA 0.33 -> 0.74%); L3 alone macro 29.5. D1 MET, D2 NOT MET, D3 MET, D5 zero-shot NOT MET (D23 FA 36.1 / 6.5 / 14.2%), refit FA met (~1%).
+Bot: 0 alarms. Bot test shape is the beacon phase 3 fwd / 3 bwd packets ~1.0 s on 8080 (296 of 308), NOT the train burst 4/3 ~80 ms (3 test flows match); the beacon shape occurs in benign too (441 / 115 / 182 benign flows
+train / val / test on port 8080): s5_bot_shapes.json. Bot rank among benign 0.92-0.98 (AUC 0.90-0.97); at the 5% FA diagnostic: service 98%, iforest 96%.
+Pitfalls: sklearn MLPRegressor 27 min per fit on the loaded machine (Keras CPU instead); hbos gives the open tail bin one quantile of mass (negative result, AUC 0.48). Nothing changed after the verdict.

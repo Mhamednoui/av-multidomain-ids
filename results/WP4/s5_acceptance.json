@@ -1,0 +1,80 @@
+{
+ "D1": {
+  "fa_benign": {
+   "net.l3_service": 0.009202971762386217,
+   "net.l3_iforest": 0.01123584511021794,
+   "net.l3_ae": 0.01015702784620616
+  },
+  "fa_published": {
+   "net.l3_service": 0.010081806427705432,
+   "net.l3_iforest": 0.010597376233037551,
+   "net.l3_ae": 0.05895822676210079
+  },
+  "met": true
+ },
+ "D2": {
+  "blind_families_at_least_50pct": {
+   "net.l3_service": [],
+   "net.l3_iforest": [],
+   "net.l3_ae": [
+    "DoS-Slowloris"
+   ]
+  },
+  "met": false
+ },
+ "D3": {
+  "macro11_base": 0.5424045816562765,
+  "macro11_base_l3": 0.6099131830246669,
+  "gain_points": 6.750860136839043,
+  "fa_base": 0.00326,
+  "fa_base_l3": 0.0074466666666666665,
+  "met": true
+ },
+ "D4": {
+  "bot_detection": {
+   "net.l3_service": 0.0,
+   "net.l3_iforest": 0.0,
+   "net.l3_ae": 0.0
+  },
+  "signature_only": {
+   "net.l3_service": false,
+   "net.l3_iforest": false,
+   "net.l3_ae": false
+  },
+  "statement_only": true
+ },
+ "D5": {
+  "zero_shot_fa": {
+   "net.l3_service": 0.36149,
+   "net.l3_iforest": 0.065358,
+   "net.l3_ae": 0.141528
+  },
+  "zero_shot_transferable": {
+   "net.l3_service": false,
+   "net.l3_iforest": false,
+   "net.l3_ae": false
+  },
+  "refit_fa": {
+   "net.l3_service": 0.009552,
+   "net.l3_iforest": 0.010012,
+   "net.l3_ae": 0.01029
+  },
+  "refit_fa_met": true
+ },
+ "D6": {
+  "clean_vs_all_macro": {
+   "net.l3_service": [
+    0.35326307492987846,
+    0.351361527015704
+   ],
+   "net.l3_iforest": [
+    0.13454099003445802,
+    0.09143327395250944
+   ],
+   "net.l3_ae": [
+    0.3901910826908707,
+    0.3533258227070543
+   ]
+  }
+ }
+}

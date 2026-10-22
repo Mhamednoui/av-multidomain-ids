@@ -62,3 +62,11 @@ Status after S1 (2026-10-21). Details: notes/WP4_network.md, reports/WP4_S1.md, 
 - Test: Bot 36% of flows (3 of 5 groups; 2 groups with 85 flows never testable), FA 1.75% flow / 1.10% window; among testable flows benign FA 26.8% (benign groups are very regular on the 1-min grid): low precision. Harness Bot 0 -> 17.5% (combiner dilutes; OR view 36%).
 - Resolvable period on the 1-min grid: 100 s .. 720 s (phase); below ~1.6 min and above ~12 min invisible. D23 Bot (Fri-02-03) has NO addresses (not evaluable). D23 Tue transfer FA 2.71%.
 - Next: S5 flow-shape models (Bot has a very fixed flow shape). Helper: tools/WP4_S4_run.py (beacon_layers, add_beacon, bot_pairs).
+
+## After S5 (2026-10-22): L3 normal-only flow models (network/l3.py; report reports/WP4_S5.md, tables results/WP4/s5_tables.md, acceptance s5_acceptance.json)
+- net.l3_service (per protocol+port Mahalanobis + per-service score normalisation), net.l3_iforest, net.l3_ae (Keras 32-12-32 + per-service normalisation); fit benign train only; 60 "clean" columns (no IP/ports/Init-Win/RST-URG-ECE/duplicates); 76 columns gave no gain.
+- D10 test FA 0.9-1.1% (AE published-label FA 5.9%: audited Infiltration file). Macro 11: service 35, iforest 13, AE 39. Rule-blind: Bot / Web-XSS / Web-BruteForce 0 for all (Bot AUC 0.90-0.97: in the benign tail, not above the 1% line; at 5% FA service 98%), Slowloris 78% (AE).
+- Harness: tcp_flags + L2a 54.2 -> 61.0 with the three L3 layers (FA 0.74%); AE +5.0, service +3.3, iforest 0. Zero-shot D23 NOT transferable (FA 36 / 6.5 / 14%); refit on D23 FA ~1%: Slowloris 77-79, Web-XSS 45, LOIC 42 (AE), Bot 1%, Infiltration 3%: ON-NETWORK layers.
+- Bot: test Bot flows are the beacon phase 3/3 packets ~1 s on 8080 (not the 4/3 ~80 ms burst of train); the same shape exists in benign (182 test flows): no flow-shape model should claim Bot. results/WP4/s5_bot_shapes.json.
+- Helpers: tools/WP4_S5_lib.py (load_d10 with the aligned 76-feature matrix, frame, det_at_budget), cache ../data_extra/cache_v3/WP4/S5 (D10_X.npy, D23_eval.pkl; WP4 cache 6.0 GB).
+- Next: S6 supervised XGBoost on the time split inside the harness.
