@@ -29,3 +29,4 @@ Fusion meta at a 2% validation budget: test 95.23% acc, 1.06% FA. Zero-day on de
 (worker updates this section)
 - 2026-10-22 S1 motion witnesses: REVIEW. A1/A2/A4/A5 met, A3 (sigma honesty on val) NOT MET, A6 ROAD unit plausible; report reports/WP6_S1.md.
 - 2026-10-22 S2 which domain lies: REVIEW. NOT MET (FA 4.4% KITTI / 5.4% comma; KITTI blame 49%); comma blame 97%; coordinated gps_can caught 81% vs GPS domain 50%; report reports/WP6_S2.md.
+- 2026-10-22 S2 APPROVED with misses. S2b (validation only) REVIEW: PARTIAL; held-out FA KITTI 1.24% / comma 1.10% (inst |z| chosen), detection 57.5% / 88.1%, wrong blame 3.4% / 1.4%; report reports/WP6_S2b.md.

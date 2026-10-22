@@ -1,0 +1,6 @@
+{
+ "kitti": "inst",
+ "kitti_rule_note": "FA <= 1.5% then max selection detection",
+ "comma": "inst",
+ "comma_rule_note": "FA <= 1.5% then max selection detection"
+}

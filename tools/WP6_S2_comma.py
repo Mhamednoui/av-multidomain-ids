@@ -9,6 +9,7 @@ Setup of a route (sample rates only): gyro_hz, gnss_hz.
 Attacks (crossdomain/attacks.py): gnss drift / accel_drift / doppler_spoof / meaconing, can_scale / can_offset / can_freeze on the
 vehicle-speed message, coordinated gnss_can, can_bus (both CAN speed messages scaled together).
 Episodes: consecutive 120 s blocks of the route grid; onset 30-90 s into the block; 2 draws per block and attack.
+Stage build_dev (S2b): episodes of the DEV routes (train + val) -> s2b_comma.pkl (routes table holds every route; S2b reads dev only).
 Output: ../data_extra/cache_v3/WP6/s2_comma.pkl = {"routes": DataFrame (clean full routes), "episodes": DataFrame, "setup": {route: ...}}.
 """
 import json
@@ -131,7 +132,7 @@ def rate(t):
     return float(len(np.unique(t)) / max(t[-1] - t[0], 1e-9))      # unique: old routes duplicate every gyro timestamp
 
 
-def build_all():
+def build_all(parts=("val", "test"), out_name="s2_comma.pkl"):
     sm = json.loads((OUT / "s1_sigma_models.json").read_text())["comma_R"]
     lags, gyro = sm["lags"], (sm["gyro"]["axis"], sm["gyro"]["sign"])
     c = pickle.load(open(CACHE / "s1_comma_routes.pkl", "rb"))
@@ -146,7 +147,7 @@ def build_all():
         grid = np.arange(np.ceil(t0) + 1.0, np.floor(t1) - 1.0, 1.0)
         sig = native(r)
         routes.append(frame_rows({"route": n, "part": part[n]}, grid, residuals(sig, grid, lags, gyro)))
-        if part[n] == "train":
+        if part[n] not in parts:
             continue
         for wi in range(len(grid) // WIN):
             g = grid[wi * WIN:(wi + 1) * WIN]
@@ -163,9 +164,9 @@ def build_all():
                                           g, residuals(s2, g, lags, gyro)))
         print(f"[{time.time() - T0:5.0f}s] {n} {part[n]} gyro {setup[n]['gyro_hz']:.0f} Hz gnss {setup[n]['gnss_hz']:.1f} Hz", flush=True)
     out = {"routes": pd.concat(routes, ignore_index=True), "episodes": pd.concat(eps, ignore_index=True), "setup": setup}
-    pickle.dump(out, open(CACHE / "s2_comma.pkl", "wb"))
+    pickle.dump(out, open(CACHE / out_name, "wb"))
     print(out["episodes"].groupby(["part", "attack"])["run"].nunique(), flush=True)
 
 
 if __name__ == "__main__":
-    {"build": build_all}[sys.argv[1]]()
+    {"build": build_all, "build_dev": lambda: build_all(("train", "val"), "s2b_comma.pkl")}[sys.argv[1]]()

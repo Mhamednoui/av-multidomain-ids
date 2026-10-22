@@ -270,3 +270,69 @@ Pitfalls: (1) comma old routes duplicate every gyro timestamp: count unique time
 (2) low-k CUSUM + real sensor bias drift = runaway alarms; val with 4 routes / 19 windows cannot see it.
 (3) KITTI val k choice by detection alone picked inst, which halves blame quality (val 56% vs 77% at k 0.5).
 Report: reports/WP6_S2.md.
+
+## 2026-10-22 S2b start (VALIDATION ONLY; no test scoring) - plan + acceptance rule, written before any S2b result
+Supervisor (2026-10-22): S2 APPROVED with misses; comma run 2 official; comma's two CAN speed messages = ONE domain.
+Data = DEV groups only: KITTI 16 drives (13 train + 3 val, WP1 split), comma 17 routes (13 train + 4 val). Test never read.
+1. Out-of-fold z: for each dev group g, SigmaModels (bias "linear") fitted on the clean rows of the OTHER dev groups
+   (KITTI: phase-0 clean runs; comma: clean whole routes of the same setup class A = gyro class from unique-timestamp
+   rates). Disclosed leak: the calibration groups' own z use a model that includes the held-out group's clean rows.
+2. Leave-one-group-out thresholds (like WP1 LODO): per-edge ECDF + tie-safe 1% tau fitted on the clean statistics of
+   the other dev groups; scored on the held-out group; pooled over folds.
+3. Domain-level blame (all data sets, one rule): nodes = witnesses, but blame is about DOMAINS (trust boundary: an
+   attacker of a domain can spoof all its witnesses). Intra-domain edges (comma can-wheel, KITTI compass-gyro) mark the
+   domain self-inconsistent. If exactly one domain D is self-inconsistent and every alarming cross-domain edge contains D:
+   blame D. If none is: unique 1-domain minimum vertex cover of the alarming cross-domain pairs, >= 2 alarming partner
+   domains, partners agree on an observed non-alarming edge -> blame D. Else "undecided".
+   Expected consequence (stated now): comma GNSS spoofs become mostly "undecided" (speed has only 2 domains), comma
+   single-message CAN spoofs are blamed on CAN, can_bus becomes undecided; KITTI lidar_yaw becomes undecided.
+4. Sequential statistics (candidates): plain two-sided CUSUM k in {0.5, 1.0}; "inst" |z|; drift-compensated CUSUM
+   (k in {0.5, 1.0}, bias time constant Tb in {60, 300} s): b <- b + (z - b) / Tb only while the edge's CUSUM stat < 2.0
+   (frozen while suspicious), CUSUM on z - b, b = 0 at start.
+5. Running mode: KITTI = each run (drives 5-90 s). comma = CONTINUOUS whole routes: clean FA on whole routes; an attack
+   episode (S2 120 s window draws) is spliced into its route and the statistic continues from the clean state at the
+   window start; detection counted from onset to the window end.
+6. Choice (per data set, on the pooled held-out folds): among candidates with held-out FA rows <= 1.5%, max mean
+   detection over the selection attacks (KITTI: drift, accel_drift, lidar_scale, lidar_bias, can_scale, can_offset;
+   comma: drift, accel_drift, can_scale, can_offset). Held-out types reported, never used. Same folds choose and report:
+   optimistic by the selection among 7 candidates (disclosed); the unbiased number comes from the S3 test.
+Acceptance S2b:
+ B1 chosen candidate: pooled held-out clean FA rows <= 1.5% on KITTI dev drives and on comma dev continuous routes;
+    also reported per group, plus the worst group.
+ B2 comma continuous: no dev route > 5% FA rows (the S2 test route had 85%).
+ B3 mean detection over all single-domain attack types (held-out folds) >= 70% per data set.
+ B4 blame among detected single-domain runs: wrong blame <= 5% per data set (correct and undecided reported; no
+    correct-blame floor because the one-domain rule makes comma GNSS undecided by design).
+ B5 unit tests pass (new tests for the drift-compensated statistic and domain-level blame).
+
+## 2026-10-22 S2b round 1 (pre-registered candidates) - results (s2b_dev.json, s2b_choice.json)
+Held-out-fold FA rows: KITTI plain/drift CUSUM 8.3-11.6% (drive 0070: 56-78%), inst 1.24%; comma 8.8-10.5%
+(worst routes 50-98%), inst 1.10%. Choice by the rule: inst for both. Round-1 verdict: B1 MET (1.24 / 1.10%),
+B2 NOT MET (comma worst route 12-02-42 11.6% with inst), B3 KITTI 57.5% NOT MET / comma 88.1% MET, B4 MET
+(wrong blame KITTI 3.4%, comma 1.4%).
+Why the drift compensation failed (dev diagnostics, scratch script, numbers in the round-2 json): the bias is frozen as
+soon as the edge statistic reaches 2, i.e. within seconds when a route STARTS with a bias; it never adapts. Per-route
+constant biases are real: comma speed edges -0.73..+0.55 sigma (route CAN scale), gnss-imu yaw -1.17..+0.89 (gyro
+bias); KITTI drive 0070 (highway) lidar-can mean +1.16, gyro-lidar std 1.58 (ICP degenerate on a featureless road; the
+LiDAR quality flag is not used by the SigmaModel); comma route 12-02-42 can-wheel glitches (z mean -31, std 119).
+
+## 2026-10-22 S2b round 2 (POST-HOC, labelled; written before running it) - robust bias tracking
+New statistic robust_cusum: warm-up of W samples (bias b = running mean of clip(z, +-3); no statistic emitted, edge
+unobserved), then b <- b + clip(z - b, -c, c) / tb ALWAYS (no freeze: the clip bounds the absorption rate to c / tb
+sigma per second, so a step or fast ramp is not absorbed, a constant route bias is), CUSUM on clip(z - b, +-6).
+Candidates (c = 0.5): R2_wu60_k0.5_tb300, R2_wu60_k1_tb300 (warm-up 60 s, for continuous routes), R2_k1_tb120 and
+R2_k0.5_tb120 (no warm-up, b = 0 at start). Same folds, same choice rule (round-1 + round-2 candidates together, FA <=
+1.5% then max selection detection), same acceptance B1-B4. Optimism of choosing among 11 candidates on the same folds
+is disclosed; the S3 test gives the unbiased number. Known limit: a bias present during the warm-up (an attack
+already active at start-up) is learned as normal.
+
+## 2026-10-22 S2b round 2 results and verdict (s2b_dev_r2.json, s2b_choice_r2.json, s2b_acceptance.json, s2b_tables.md)
+comma: R2_wu60_k1_tb300 FA 1.85% (worst 12-02-42 17.8%, 08-34-47 8.8%), mean det 90.2%; R2_k1_tb120 4.3%; others
+6-7%. KITTI: R2 no-warm-up 8.8-11.9% (0070); warm-up variants never emit (drives too short). comma VAL routes run
+continuously (S2's 35.7% case): plain CUSUM k0.5 28.8%, inst 0.95%, R2_wu60_k1_tb300 0.11%.
+Final choice over both rounds: inst for KITTI and comma (only candidates with FA <= 1.5%).
+Verdict: B1 MET (KITTI 1.24%, comma 1.10%), B2 NOT MET (12-02-42 11.6%), B3 KITTI 57.5% NOT MET / comma 88.1% MET,
+B4 MET (wrong blame 3.4% / 1.4%), B5 MET (328 tests pass). Report reports/WP6_S2b.md.
+Domain-level blame: comma GNSS attacks 96-98% undecided (by design), CAN single-message 100% CAN, gnss_can 126/126
+CAN, can_bus 67% undecided / 33% CAN; KITTI lidar_yaw undecided.
+Next ideas (for S3, validation): LiDAR ICP quality flag in the sigma model (KITTI 0070); glitch filter for |z| > 20.

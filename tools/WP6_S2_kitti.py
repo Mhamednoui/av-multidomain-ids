@@ -8,6 +8,7 @@ Stage build (python -u -W ignore tools/WP6_S2_kitti.py build):
   Witnesses: gps (claim), compass + gyro (imu), lidar (ICP odometry, WP1 cache), can (SIMULATED 0x6e0 decoded by the frozen
   CanDomain, design R2 scale). Output: ../data_extra/cache_v3/WP6/s2_kitti.pkl = {"rows": DataFrame (one row per run second:
   meta + r_<edge>, v_<edge>), "gps_can_runs": DataFrame of the modified coordinated GPS runs (stream columns, for the GPS domain)}.
+Stage build_dev (S2b): same for the DEV drives (train + val) -> s2b_kitti.pkl (test drives not touched).
 Seeds: common.config.SEED; per run generator [SEED, 6, 20, drive, phase, attack index].
 """
 import pickle
@@ -98,14 +99,14 @@ def coordinated(run, ox, k0, rng):
     return r, (t, w), w_max
 
 
-def build():
+def build(parts=("val", "test"), out_name="s2_kitti.pkl"):
     from can.domain import CanDomain
     dom = CanDomain.load(Path(__file__).resolve().parent.parent / "results" / "WP2" / "s7_domain")
     kx = S1.kitti_stream()
     print("attacks in WP1 stream:", sorted(kx["attack"].unique()), flush=True)
     T0 = time.time()
     rows, coord_runs = [], []
-    drives = sorted(d for d in GS.SCENE if GS.part_of(d) in ("val", "test"))
+    drives = sorted(d for d in GS.SCENE if GS.part_of(d) in parts)
     for d in drives:
         ox = GS.load_oxts(d)
         part = GS.part_of(d)
@@ -157,9 +158,9 @@ def build():
                                     grid, G))
         print(f"[{time.time() - T0:5.0f}s] drive {d} {part}", flush=True)
     out = {"rows": pd.concat(rows, ignore_index=True), "gps_can_runs": pd.concat(coord_runs, ignore_index=True)}
-    pickle.dump(out, open(CACHE / "s2_kitti.pkl", "wb"))
+    pickle.dump(out, open(CACHE / out_name, "wb"))
     print(out["rows"].groupby(["part", "attack"])["run"].nunique(), flush=True)
 
 
 if __name__ == "__main__":
-    {"build": build}[sys.argv[1]]()
+    {"build": build, "build_dev": lambda: build(("train", "val"), "s2b_kitti.pkl")}[sys.argv[1]]()

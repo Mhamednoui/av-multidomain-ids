@@ -92,3 +92,44 @@ def test_along_track_is_doppler_consistent():
     dE, dN, dve, dvn, w = A.along_track(t, ve, vn, 5.0, 2.0)
     assert np.allclose(np.hypot(ve + dve, vn + dvn)[-1], 7.0)
     assert np.allclose(np.hypot(dE, dN)[-1], A.ramp_integral(t, 5.0, 2.0)[-1], atol=1e-6)
+
+
+def test_drift_cusum_state_continuation_and_freeze():
+    rng = np.random.default_rng(5)
+    Z = rng.normal(0, 1, (80, 2))
+    full = CS.drift_cusum(Z, 0.5, 30)
+    a, st = CS.drift_cusum(Z[:40], 0.5, 30, return_state=True)
+    b = CS.drift_cusum(Z[40:], 0.5, 30, state=st)
+    assert np.allclose(np.vstack([a, b]), full)
+    assert np.allclose(CS.drift_cusum(Z, 0.5, None), CS.cusum(Z, 0.5))     # no tracking = plain CUSUM
+
+
+def test_robust_cusum_learns_constant_bias_but_not_a_step():
+    rng = np.random.default_rng(6)
+    T = 1200
+    z = rng.normal(0, 1, T) + 0.8                              # constant sensor bias of 0.8 sigma from the start
+    z[900:] += 4.0                                             # attack step at 900
+    s = CS.robust_cusum(z[:, None], 1.0, 300, c=0.5, warmup=60)[:, 0]
+    assert np.isnan(s[:60]).all()
+    assert np.nanmax(s[100:900]) < 8.0                         # bias learned in the warm-up: no runaway
+    assert s[905] > 12.0                                       # the step is not absorbed
+    full = CS.robust_cusum(z[:, None], 1.0, 300, 0.5, 60)
+    a, st = CS.robust_cusum(z[:500, None], 1.0, 300, 0.5, 60, return_state=True)
+    assert np.allclose(np.vstack([a, CS.robust_cusum(z[500:, None], 1.0, 300, 0.5, 60, state=st)]), full, equal_nan=True)
+
+
+def test_domain_level_blame():
+    E = [CS.Edge("gnss", "can", "speed"), CS.Edge("gnss", "wheel", "speed"), CS.Edge("can", "wheel", "speed"), CS.Edge("gnss", "imu", "yaw")]
+    D = {"gnss": "gps", "can": "can", "wheel": "can", "imu": "imu"}
+    obs = [True] * 4
+    assert CS.blame_domain_pattern(E, [True, False, True, False], obs, D) == "can"          # one CAN message spoofed: CAN self-inconsistent
+    assert CS.blame_domain_pattern(E, [True, True, False, False], obs, D) == CS.UNDECIDED  # GNSS vs whole CAN: only 2 domains on speed
+    assert CS.blame_domain_pattern(E, [True, True, False, True], obs, D) == CS.UNDECIDED   # partners can / imu never compared
+    assert CS.blame_domain_pattern(E, [False] * 4, obs, D) is None
+    K = [CS.Edge("gps", "lidar", "speed"), CS.Edge("gps", "can", "speed"), CS.Edge("lidar", "can", "speed"),
+         CS.Edge("compass", "gyro", "yaw"), CS.Edge("compass", "lidar", "yaw"), CS.Edge("gyro", "lidar", "yaw")]
+    DK = {"gps": "gps", "lidar": "lidar", "can": "can", "compass": "imu", "gyro": "imu"}
+    assert CS.blame_domain_pattern(K, [True, True, False, False, False, False], [True] * 6, DK) == "gps"
+    assert CS.blame_domain_pattern(K, [False, False, False, False, True, True], [True] * 6, DK) == CS.UNDECIDED   # LiDAR yaw vs IMU only
+    layer = CS.WhichDomainLies(E, D, k=1.0, tb=120, domain_level=True)
+    assert CS.WhichDomainLies.from_dict(layer.to_dict()).domain_level
