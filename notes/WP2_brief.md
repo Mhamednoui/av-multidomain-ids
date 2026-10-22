@@ -1,4 +1,4 @@
-# WP2 CAN brief (state at 2026-10-22, after S5)
+# WP2 CAN brief (state at 2026-10-22, after S6)
 
 ## State
 - S0 data inventory, S1 adapters/splits/frames: APPROVED. S2 (L1 rules): done, verdict NOT MET (ROAD false alerts 3.4% > 1%).
@@ -22,6 +22,14 @@
 - Harness (test): L1 5.2%/1, L2b-rel 31.2%/4 (range checks on continuous signals fire on benign sessions; its test number was exposed here), L3 7.6%/5, L1+L2b+L3 40.6%/5.
 - Code: can/l3_predictors.py; tools/WP2_S5_{grids,run,eval,report,tables,l2b,highway,diag_test}.py; cache ../data_extra/WP2_S5_cache (165 MB, grids + models + scores; rebuild: grids, grams, fold, score loco/attack/test, WP2_S5_l2b.py).
 - Next: S6; S7 must decide L2b range checks and regime-aware calibration.
+
+## S6 (L4 timing + payload retrained in the harness) outcome
+- NOT MET (leakage controls, reverse-driving, Car-Hacking FA): details reports/WP2_S6.md, results/WP2/s6_summary.md. ROAD test NOT scored; ROAD judged on validation + 13-fold out-of-fold (8 ambient captures, 5 attack families).
+- L4 does NOT add on top of L1 + L2b + L3 (ROAD val: base 9/9 captures, L4 only +0.7..1.4 points FA), nor on Car-Hacking (L1 ~100% already), D11 adds in 1 of 32 cells. L4 timing alone matches L1 on known D11 vehicles with lower FA (0.7% vs 2.5%); zero-shot to unknown vehicles = 100% FA for every layer.
+- Payload model: reverse-bit windows 5.9% alarms (exercise_all_bits, highway), unseen-family recall 0% on correlated/speedometer/fuzzing; Car-Hacking-trained models on ROAD val: 1.3% / 0% window recall at ROAD-calibrated 1%.
+- Controls: window shuffled-label AUC bound (0.55) failed in 11/12 cases (max-type window score of a noise model rises in sparse regions); frame bound met (but < 0.5); timing model dominated (>50% gain) by dt_id_ratio / n_id_win on Car-Hacking and D11 (timing relations, not identifiers).
+- Code: can/l4_features.py, can/l4_exp.py; tools/WP2_S6_*.py; tests/can/test_l4.py. Caches ../data_extra/WP2_S6_cache = 1.7 GB (raw features ROAD train+val and Car-Hacking, models, window tables, D11 run); rebuild: WP2_S6_cache.py road|carhacking, WP2_S6_road.py p1|oof|ctrl, WP2_S6_ch.py fit|test|ctrl, WP2_S6_d11.py fit|test <set>.
+- S7 hint: keep L4 timing as optional low-FA single-vehicle layer at most; L3/L3d carry the ROAD masquerade; ROAD test (single labelled run + fresh holdout) still to be done in S7.
 
 ## Binding decisions
 - Domain "can", layers L1.. ; Layer API from common/layer.py; evaluation only through common/evaluate.py.

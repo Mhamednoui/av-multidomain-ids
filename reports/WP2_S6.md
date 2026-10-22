@@ -1,0 +1,42 @@
+# WP2 S6: L4 timing + payload models retrained in the harness
+
+Date: 2026-10-22    Worker: sonnet (high)
+
+## Summary
+Verdict: **NOT MET** (acceptance items 2, 3, 4 fail; item 1 met). Rule: notes/WP2_can.md "S6 start" (written before any L4 score). Plain answer: **the learned L4 layers add nothing on top of L1 + L2b + L3 (ROAD validation / out-of-fold) and nothing on top of L1 on Car-Hacking; on D11 they add in 1 of 32 cells.** This is a valid v3 result.
+- ROAD test captures were NOT read (guard in tools/WP2_S6_cache.py). ROAD judged on validation (P1: v2 split, seen attack families) and a 13-fold out-of-fold protocol (8 ambient captures + 5 attack families held out as groups, unseen families). Car-Hacking test blocks and D11 test subsets scored once each.
+- Models (copy of v2 logic, vectorised in can/l4_features.py, unit-tested against the v2 loop): XGBoost on 17 causal features; timing = 9 behaviour features (no raw ID, no payload bytes), payload = all 17. Window alert = k-th largest frame score of a 1 s window (v2 "count >= k above t_f"), variant (rule all / maxid, k) chosen on validation, tie-safe 1% threshold. Frame score = log-odds margin.
+- Does L4 add? ROAD validation (11 captures): base L1+L2b+L3 detects 9/9 attack captures (masquerade 4/4) at 2.3% clean FA; base + L4 timing / payload / both: same detections, FA 3.0 / 3.0 / 3.7% (OOF thresholds), 3.6 / 2.9 / 4.1% (P1 thresholds). L4 alone, unseen families: timing 5/9 (masq 1/4), payload 4/9 (masq 2/4, window recall 3-8%); seen families (P1): timing 7/9 (2/4), payload 5/9 (2/4). Car-Hacking test: L1 100% window recall on all four attacks at 0.7% clean FA, L4 timing 100% at 2.3%, payload 100% at 4.0%: no gain possible. D11 (4 sets x 4 subsets x 2 regimes): recall gain >= 10 points on an attack type at <= +1.5 points FA only in set_02 test_03 regime A (force-neutral +23.5 points with timing, +0.15 FA), not reproduced in regime B.
+  Where L4 is useful: known D11 vehicles (regime A, 8 subsets): L4 timing alone 96.6% mean recall at 0.69% FA vs L1 99.3% at 2.51% FA; L1 OR L4 timing 100% at 2.96%. Zero-shot to an unknown vehicle: 100% false alarms for every layer including L1. Regime B (30 s profile + 30 s thresholds, 240-300 clean windows): L4 timing FA 0.1-5.9% (budget 1%; thresholds from few windows), L4 payload 0.4-100% (25-100% on four unknown-vehicle subsets: the ID/payload features do not transfer).
+- Leakage checks (all reported, several fail):
+  (a) Gain importance: timing model has > 50% of the gain in one feature on Car-Hacking (dt_id_ratio 62%) and D11 sets 01-04 (n_id_win 64%, dt_id_ratio 66 / 80 / 67%); payload set_04 99% dt_id_ratio. The dominant features are timing relations (gap relative to the ID's period, ID frequency), not timestamps, positions or identifiers; ROAD timing 45% (dt_id_ratio), ROAD payload top feature b1 27% (payload value of the attacked signal), raw ID 7%. By the numeric rule: flagged on 5 of 6 datasets/sets.
+  (b) Shuffled-label control, 5 seeds, mean AUC bound 0.55: frame level met everywhere (0.29-0.50) but systematically BELOW 0.5 on ROAD and D11 (shuffled models rank attack frames low: covariate shift); window level NOT met in 11 of 12 cases (0.54-0.92). The window excess is explained by the number of frames per window on D11 and ROAD (count AUC 0.74-1.0) but not on Car-Hacking (count AUC 0.39, shuffled window AUC 0.92): the max-type window score of a noise model is high where the clean data are sparse, i.e. where attacks live. So window-level detection by k-th largest score is partly a "rarity" detector; do not read window AUC as proof of learned labels.
+  (c) dt sign: never a feature (dt_clipped). D11 injected frames carry dt_prev == 0 380x more often than clean ones in set_01 (0.64% vs 0.0017%), but the timing model with exact-zero dt set to NaN has the same validation AP (0.99927 vs 0.99928).
+- v2 failure cases re-checked on validation: (i) payload L4 on reverse driving: ambient_dyno_reverse is a TEST capture and was not scored; out-of-fold windows with the reverse bit set (ID 0xD0): payload 27/459 alarms = 5.9% vs 0.8% elsewhere (gate: <= 5% and <= 3x: failed), timing 3/459 = 0.7%. By capture: 0/233 in the four real-driving captures (basic_long, basic_short, extended_long, radio), 15/143 in exercise_all_bits and 12/83 in the highway drive, so the v2 failure reappears in unusual regimes, not on plain dyno driving. (ii) Car-Hacking-trained models on ROAD validation: calibrated on ROAD validation (1%) window recall 1.3% (timing) / 0.0% (payload), frame recall 1.6% / 14.4% (v2: 0.5%); with its own Car-Hacking thresholds every window alarms (FA 100%). Transfer still fails.
+- Acceptance: 1 met (Layers, tests 275/275, tie-safe 1%, caches 1.7 GB, own files only); 2 NOT MET (window shuffle bound; timing > 50% gain on 5 sets; payload ID share 7% on ROAD); 3 NOT MET (5.9% > 5%); 4 NOT MET (Car-Hacking test clean FA 2.3% timing / 4.0% payload > 2%; ROAD OOF per ambient max 2.4% / 3.6% met); 5 reported.
+
+## Acceptance rule (written before the result, notes/WP2_can.md, 2026-10-22 "S6 start")
+1 implementation (Layers, vectorised features equal to v2, window logic tested, tie-safe 1%, tests, own files, caches <= 3 GB, ROAD test never read). 2 leakage: shuffled mean AUC <= 0.55 (frames and windows) for every dataset/set and both models; no timing feature > 50% gain; payload ID share reported. 3 payload L4 alarms on reverse-bit windows <= 5% and <= 3x other clean windows. 4 ROAD OOF no ambient capture > 5% FA; Car-Hacking test clean FA <= 2%. 5 reporting list. "Adds" = >= 1 more ROAD val capture, or >= 10 points recall for an attack type with <= +1.5 points FA.
+
+## What changed after seeing results (honest list)
+1. Design change 1: frame score = raw margin instead of probability, made after the first ROAD validation pass showed zero window recall of the payload model on some attacks. My hypothesis (float32 saturation ties) was WRONG: the margin tables are numerically identical to the probability tables. Kept (harmless); the real cause: clean lead windows of those validation captures carry frames the payload model scores above the injected frames. A Car-Hacking fit started with probabilities was discarded (test blocks never scored). Nothing else changed after a result.
+2. The step's controls and gates were fixed before the runs; no choice depends on a test score. ROAD P1 / OOF / ablation tables use validation captures that also informed S5 choices (L3 variant): ROAD validation is saturated by L3, so "adds" cannot be positive there.
+
+## Results (tables generated from results/WP2/s6_*.json)
+- results/WP2/s6_summary.md (importance, shuffled control, dt==0, reverse windows, Car-Hacking to ROAD, per-family detection, Car-Hacking and D11 summary), s6_road_tables.md (per-capture ROAD P1 / OOF and ablation), s6_ch_tables.md, s6_d11_tables.md (all subsets/regimes, window and frame level).
+- Key ROAD ablation (validation, OOF thresholds): base 2.3% FA / 9 of 9; L1 1.8% / 6 of 9; L2b 0.0% / 7 of 9; L3 0.5% / 9 of 9; L4 timing 0.7% / 5 of 9; L4 payload 0.7% / 4 of 9; base + both L4 3.7% / 9 of 9.
+
+## Ablation rows
+L4 timing / payload alone and OR-combined with L1 (+ L2b + L3 on ROAD) are in the tables above; the common DomainCombiner was not used (OR logic as in S4/S5).
+
+## Files
+can/l4_features.py, can/l4_exp.py, tests/can/test_l4.py, tools/WP2_S6_{cache,road,road_report,ch,ch2road,d11,report,summary}.py, results/WP2/s6_*.json|md, notes/WP2_can.md (S6 sections), notes/WP2_brief.md. Cache ../data_extra/WP2_S6_cache (1.7 GB).
+
+## Problems / open questions
+- The window-level shuffled-label control cannot be satisfied by a max-type window score; either drop the pre-registered window bound or replace the control (e.g. permute labels at window level, or compare with an equally-sparse random-forest baseline). Decision wanted.
+- Timing-model gain concentration in dt_id_ratio is physical, so the 50% rule may be too strict for timing detectors; it flagged 5 of 6 sets.
+- Supervised L4 FA on tiny regime-B pools (240-300 windows) is unstable (up to 6% at a 1% budget).
+- Stray processes: none left; I could not stop my own discarded Car-Hacking fit (kill denied), it finished by itself and its files were deleted.
+
+## Proposed next step
+S7 (combiner, ROAD single labelled test run + fresh holdout): keep L4 out of the default stack; if used, only L4 timing as an optional per-vehicle low-FA layer (known vehicle, same-vehicle calibration).

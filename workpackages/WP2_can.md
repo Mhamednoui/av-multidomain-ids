@@ -47,3 +47,4 @@ reverse-driving false alarm; can-train-and-test unknown-vehicle results reported
 (worker updates this section)
 - S0, S1 APPROVED. S2 done (NOT MET: FA 3.4%). S3 done (negative: skew out of default stack). S4 done 2026-10-22, REVIEW: L2b NOT MET (masq 4/5, FA 38%), see reports/WP2_S4.md.
 - S5 done 2026-10-22, REVIEW: L3 NOT MET (detects 5/5 ROAD test masquerade incl. reverse_light_off; clean FA 7.6%, highway 20.4%), see reports/WP2_S5.md.
+- S6 done 2026-10-22, REVIEW: L4 NOT MET (leakage controls, payload reverse windows 5.9%, Car-Hacking FA 2.3/4.0%); L4 adds nothing on top of L1+L2b+L3, see reports/WP2_S6.md.

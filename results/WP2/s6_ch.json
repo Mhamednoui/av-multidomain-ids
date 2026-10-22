@@ -1,0 +1,326 @@
+{
+ "variants": {
+  "t": [
+   [
+    "all",
+    1
+   ]
+  ],
+  "p": [
+   [
+    "all",
+    1
+   ]
+  ]
+ },
+ "thresholds": {
+  "t": -0.8161622285842894,
+  "p": -10.581843376159666
+ },
+ "test": {
+  "n_windows": {
+   "clean": 300,
+   "attack": 976,
+   "other_normal": 403
+  },
+  "cfg": {
+   "L1": {
+    "fa_clean": 0.006666666666666667,
+    "fa_other_normal": 0.4392059553349876,
+    "recall": {
+     "DoS": 1.0,
+     "Fuzzy": 1.0,
+     "RPM": 0.9949494949494949,
+     "Gear": 0.9952153110047847
+    },
+    "files_detected": "4/4",
+    "per_file_detected": {
+     "DoS": true,
+     "Fuzzy": true,
+     "RPM": true,
+     "Gear": true
+    }
+   },
+   "L4t": {
+    "fa_clean": 0.023333333333333334,
+    "fa_other_normal": 0.03225806451612903,
+    "recall": {
+     "DoS": 1.0,
+     "Fuzzy": 1.0,
+     "RPM": 1.0,
+     "Gear": 1.0
+    },
+    "files_detected": "4/4",
+    "per_file_detected": {
+     "DoS": true,
+     "Fuzzy": true,
+     "RPM": true,
+     "Gear": true
+    }
+   },
+   "L4p": {
+    "fa_clean": 0.04,
+    "fa_other_normal": 0.18610421836228289,
+    "recall": {
+     "DoS": 1.0,
+     "Fuzzy": 1.0,
+     "RPM": 1.0,
+     "Gear": 1.0
+    },
+    "files_detected": "4/4",
+    "per_file_detected": {
+     "DoS": true,
+     "Fuzzy": true,
+     "RPM": true,
+     "Gear": true
+    }
+   },
+   "L1+L4t": {
+    "fa_clean": 0.03,
+    "fa_other_normal": 0.456575682382134,
+    "recall": {
+     "DoS": 1.0,
+     "Fuzzy": 1.0,
+     "RPM": 1.0,
+     "Gear": 1.0
+    },
+    "files_detected": "4/4",
+    "per_file_detected": {
+     "DoS": true,
+     "Fuzzy": true,
+     "RPM": true,
+     "Gear": true
+    }
+   },
+   "L1+L4p": {
+    "fa_clean": 0.04666666666666667,
+    "fa_other_normal": 0.4913151364764268,
+    "recall": {
+     "DoS": 1.0,
+     "Fuzzy": 1.0,
+     "RPM": 1.0,
+     "Gear": 1.0
+    },
+    "files_detected": "4/4",
+    "per_file_detected": {
+     "DoS": true,
+     "Fuzzy": true,
+     "RPM": true,
+     "Gear": true
+    }
+   },
+   "L1+L4t+L4p": {
+    "fa_clean": 0.07,
+    "fa_other_normal": 0.5012406947890818,
+    "recall": {
+     "DoS": 1.0,
+     "Fuzzy": 1.0,
+     "RPM": 1.0,
+     "Gear": 1.0
+    },
+    "files_detected": "4/4",
+    "per_file_detected": {
+     "DoS": true,
+     "Fuzzy": true,
+     "RPM": true,
+     "Gear": true
+    }
+   }
+  },
+  "adds": {
+   "L1+L4t": {
+    "recall_gain": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.005050505050505083,
+     "Gear": 0.004784688995215336
+    },
+    "extra_fa_clean": 0.02333333333333333,
+    "adds": false
+   },
+   "L1+L4p": {
+    "recall_gain": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.005050505050505083,
+     "Gear": 0.004784688995215336
+    },
+    "extra_fa_clean": 0.04,
+    "adds": false
+   },
+   "L1+L4t+L4p": {
+    "recall_gain": {
+     "DoS": 0.0,
+     "Fuzzy": 0.0,
+     "RPM": 0.005050505050505083,
+     "Gear": 0.004784688995215336
+    },
+    "extra_fa_clean": 0.06333333333333334,
+    "adds": false
+   }
+  }
+ },
+ "frame": {
+  "t": {
+   "inj": {
+    "DoS": [
+     83964,
+     83964
+    ],
+    "Fuzzy": [
+     70310,
+     70310
+    ],
+    "RPM": [
+     96972,
+     96972
+    ],
+    "Gear": [
+     91065,
+     91064
+    ]
+   },
+   "clean": [
+    533744,
+    4843
+   ],
+   "normal": [
+    2143115,
+    44081
+   ]
+  },
+  "p": {
+   "inj": {
+    "DoS": [
+     83964,
+     83964
+    ],
+    "Fuzzy": [
+     70310,
+     70310
+    ],
+    "RPM": [
+     96972,
+     96972
+    ],
+    "Gear": [
+     91065,
+     91065
+    ]
+   },
+   "clean": [
+    533744,
+    6066
+   ],
+   "normal": [
+    2143115,
+    114737
+   ]
+  }
+ },
+ "importance": {
+  "t": {
+   "dlc": 0.004993071860230166,
+   "dt_prev": 0.01926411852412943,
+   "dt_id": 0.02829029839164989,
+   "id_known": 0.05047428276793685,
+   "dt_id_ratio": 0.6185869613299927,
+   "n_id_win": 0.18974394953357077,
+   "n_unique_win": 0.0014808326075447058,
+   "bytes_changed": 0.08512183984901713,
+   "same_payload": 0.0020446451359283683
+  },
+  "p": {
+   "id": 0.0005694295203500948,
+   "dlc": 0.005619952184178449,
+   "b0": 0.003984650324597102,
+   "b1": 0.001570556829705098,
+   "b2": 0.006065522686413075,
+   "b3": 0.006672244895670751,
+   "b4": 0.0058318924100197456,
+   "b5": 0.0005752617112597038,
+   "b6": 0.00897320663246257,
+   "b7": 0.002189738086277846,
+   "dt_prev": 0.0011996298464948842,
+   "dt_id": 0.1615200191001997,
+   "id_known": 0.09118260438722574,
+   "dt_id_ratio": 0.47565614009217366,
+   "n_id_win": 0.14778973541843088,
+   "n_unique_win": 0.000518626276563667,
+   "bytes_changed": 0.07885847557591212,
+   "same_payload": 0.0012223140220649058
+  }
+ },
+ "search": {
+  "t": {
+   "params": {
+    "max_depth": 10,
+    "learning_rate": 0.05,
+    "subsample": 0.9,
+    "colsample_bytree": 0.7,
+    "min_child_weight": 1,
+    "reg_lambda": 3.0
+   },
+   "n_trees": 389,
+   "val_ap": 0.9999776659032623
+  },
+  "p": {
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.2,
+    "subsample": 0.9,
+    "colsample_bytree": 0.7,
+    "min_child_weight": 3,
+    "reg_lambda": 3.0
+   },
+   "n_trees": 415,
+   "val_ap": 0.9999999998908471
+  }
+ },
+ "shuffle": {
+  "can.l4_timing": {
+   "variant": 0,
+   "frame_auc": [
+    0.49785663050770257,
+    0.5034145486726741,
+    0.4918168649390756,
+    0.5290003204844484,
+    0.4750696288841334
+   ],
+   "window_auc": [
+    0.8837276907334317,
+    0.9204225305319671,
+    0.9564313147018564,
+    0.9213660646653112,
+    0.8968989621124532
+   ],
+   "count_auc_reference": 0.3856247259099789,
+   "mean_frame_auc": 0.4994315986976069,
+   "mean_window_auc": 0.915769312549004,
+   "bound": 0.55,
+   "pass": false
+  },
+  "can.l4_payload": {
+   "variant": 0,
+   "frame_auc": [
+    0.50371596104297,
+    0.5040887829063915,
+    0.4973579514885754,
+    0.5476844616413351,
+    0.44846217228979096
+   ],
+   "window_auc": [
+    0.8576775106645935,
+    0.9393779319326503,
+    0.9677420962404817,
+    0.9321668726494705,
+    0.9012628074791691
+   ],
+   "count_auc_reference": 0.3856247259099789,
+   "mean_frame_auc": 0.5002618658738126,
+   "mean_window_auc": 0.919645443793273,
+   "bound": 0.55,
+   "pass": false
+  }
+ }
+}

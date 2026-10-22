@@ -1,0 +1,941 @@
+{
+ "set": "set_03",
+ "l1_variant": {
+  "chosen": 0,
+  "variants": {
+   "0": {
+    "variant": [
+     0.99,
+     0.05
+    ],
+    "mean_recall": 0.888888888888889,
+    "recall": {
+     "DoS": 1.0,
+     "double": 1.0,
+     "force-neutral": 1.0,
+     "fuzzing": 0.4444444444444444,
+     "triple": 1.0
+    },
+    "val_fa_rate_clean_windows": 0.009917355371900827
+   },
+   "1": {
+    "variant": [
+     0.999,
+     0.05
+    ],
+    "mean_recall": 0.8777777777777779,
+    "recall": {
+     "DoS": 1.0,
+     "double": 1.0,
+     "force-neutral": 1.0,
+     "fuzzing": 0.3888888888888889,
+     "triple": 1.0
+    },
+    "val_fa_rate_clean_windows": 0.009917355371900827
+   },
+   "2": {
+    "variant": [
+     0.99,
+     0.25
+    ],
+    "mean_recall": 0.888888888888889,
+    "recall": {
+     "DoS": 1.0,
+     "double": 1.0,
+     "force-neutral": 1.0,
+     "fuzzing": 0.4444444444444444,
+     "triple": 1.0
+    },
+    "val_fa_rate_clean_windows": 0.009917355371900827
+   },
+   "3": {
+    "variant": [
+     0.999,
+     0.25
+    ],
+    "mean_recall": 0.888888888888889,
+    "recall": {
+     "DoS": 1.0,
+     "double": 1.0,
+     "force-neutral": 1.0,
+     "fuzzing": 0.4444444444444444,
+     "triple": 1.0
+    },
+    "val_fa_rate_clean_windows": 0.009917355371900827
+   }
+  }
+ },
+ "subsets": {
+  "test_01": {
+   "vehicle": [
+    "Silverado"
+   ],
+   "n_files": 10,
+   "n_eligible": 7,
+   "cal_B": {
+    "clean_windows": 210,
+    "frames": 540280,
+    "n_ids_period": 98
+   },
+   "regimes": {
+    "A": {
+     "thresholds": {
+      "t": {
+       "win_thr": 2.9671473503112797,
+       "frame_thr": -7.060332775115966
+      },
+      "p": {
+       "win_thr": -0.5044673681259154,
+       "frame_thr": -5.605485439300536
+      }
+     },
+     "frame": {
+      "t": {
+       "inj": {
+        "DoS": [
+         98028,
+         98028
+        ],
+        "double": [
+         5033,
+         5032
+        ],
+        "force-neutral": [
+         3684,
+         3683
+        ],
+        "fuzzing": [
+         51075,
+         51072
+        ],
+        "triple": [
+         4685,
+         4685
+        ]
+       },
+       "clean": [
+        2880874,
+        13066
+       ],
+       "normal": [
+        7332743,
+        67025
+       ]
+      },
+      "p": {
+       "inj": {
+        "DoS": [
+         98028,
+         98028
+        ],
+        "double": [
+         5033,
+         5032
+        ],
+        "force-neutral": [
+         3684,
+         3683
+        ],
+        "fuzzing": [
+         51075,
+         51074
+        ],
+        "triple": [
+         4685,
+         4685
+        ]
+       },
+       "clean": [
+        2880874,
+        21461
+       ],
+       "normal": [
+        7332743,
+        119648
+       ]
+      }
+     },
+     "first_inj": {
+      "set_03/test_01_known_vehicle_known_attack/DoS-1": 5.262981176376343,
+      "set_03/test_01_known_vehicle_known_attack/DoS-2": 42.17345404624939,
+      "set_03/test_01_known_vehicle_known_attack/double-1": 259.7056851387024,
+      "set_03/test_01_known_vehicle_known_attack/double-2": 152.32119488716125,
+      "set_03/test_01_known_vehicle_known_attack/force-neutral-1": 356.34563302993774,
+      "set_03/test_01_known_vehicle_known_attack/force-neutral-2": 235.04211282730103,
+      "set_03/test_01_known_vehicle_known_attack/fuzzing-1": 93.27895402908325,
+      "set_03/test_01_known_vehicle_known_attack/fuzzing-2": 36.30679798126221,
+      "set_03/test_01_known_vehicle_known_attack/triple-1": 161.92369318008423,
+      "set_03/test_01_known_vehicle_known_attack/triple-2": 207.68382596969604
+     }
+    },
+    "B": {
+     "thresholds": {
+      "t": {
+       "win_thr": -0.7247862815856932,
+       "frame_thr": -7.710952281951903
+      },
+      "p": {
+       "win_thr": -0.6234512925148009,
+       "frame_thr": -5.459295749664306
+      }
+     },
+     "frame": {
+      "t": {
+       "inj": {
+        "DoS": [
+         98028,
+         98028
+        ],
+        "double": [
+         5033,
+         5033
+        ],
+        "force-neutral": [
+         3684,
+         3683
+        ],
+        "fuzzing": [
+         51075,
+         51073
+        ],
+        "triple": [
+         4685,
+         4685
+        ]
+       },
+       "clean": [
+        2880874,
+        24861
+       ],
+       "normal": [
+        7332743,
+        103686
+       ]
+      },
+      "p": {
+       "inj": {
+        "DoS": [
+         98028,
+         98028
+        ],
+        "double": [
+         5033,
+         5032
+        ],
+        "force-neutral": [
+         3684,
+         3683
+        ],
+        "fuzzing": [
+         51075,
+         51073
+        ],
+        "triple": [
+         4685,
+         4685
+        ]
+       },
+       "clean": [
+        2880874,
+        26240
+       ],
+       "normal": [
+        7332743,
+        131410
+       ]
+      }
+     },
+     "first_inj": {
+      "set_03/test_01_known_vehicle_known_attack/DoS-1": 5.262981176376343,
+      "set_03/test_01_known_vehicle_known_attack/DoS-2": 42.17345404624939,
+      "set_03/test_01_known_vehicle_known_attack/double-1": 259.7056851387024,
+      "set_03/test_01_known_vehicle_known_attack/double-2": 152.32119488716125,
+      "set_03/test_01_known_vehicle_known_attack/force-neutral-1": 356.34563302993774,
+      "set_03/test_01_known_vehicle_known_attack/force-neutral-2": 235.04211282730103,
+      "set_03/test_01_known_vehicle_known_attack/fuzzing-1": 93.27895402908325,
+      "set_03/test_01_known_vehicle_known_attack/fuzzing-2": 36.30679798126221,
+      "set_03/test_01_known_vehicle_known_attack/triple-1": 161.92369318008423,
+      "set_03/test_01_known_vehicle_known_attack/triple-2": 207.68382596969604
+     }
+    }
+   }
+  },
+  "test_02": {
+   "vehicle": [
+    "Subaru"
+   ],
+   "n_files": 10,
+   "n_eligible": 9,
+   "cal_B": {
+    "clean_windows": 240,
+    "frames": 387249,
+    "n_ids_period": 52
+   },
+   "regimes": {
+    "A": {
+     "thresholds": {
+      "t": {
+       "win_thr": 2.9671473503112797,
+       "frame_thr": -7.060332775115966
+      },
+      "p": {
+       "win_thr": -0.5044673681259154,
+       "frame_thr": -5.605485439300536
+      }
+     },
+     "frame": {
+      "t": {
+       "inj": {
+        "DoS": [
+         37399,
+         37399
+        ],
+        "double": [
+         15001,
+         15001
+        ],
+        "force-neutral": [
+         3099,
+         3099
+        ],
+        "fuzzing": [
+         35011,
+         34826
+        ],
+        "triple": [
+         65679,
+         65678
+        ]
+       },
+       "clean": [
+        1234746,
+        1135890
+       ],
+       "normal": [
+        5922750,
+        5447792
+       ]
+      },
+      "p": {
+       "inj": {
+        "DoS": [
+         37399,
+         37399
+        ],
+        "double": [
+         15001,
+         15001
+        ],
+        "force-neutral": [
+         3099,
+         3099
+        ],
+        "fuzzing": [
+         35011,
+         34368
+        ],
+        "triple": [
+         65679,
+         65676
+        ]
+       },
+       "clean": [
+        1234746,
+        1132746
+       ],
+       "normal": [
+        5922750,
+        5433007
+       ]
+      }
+     },
+     "first_inj": {
+      "set_03/test_02_unknown_vehicle_known_attack/DoS-1": 146.75389909744263,
+      "set_03/test_02_unknown_vehicle_known_attack/DoS-2": 42.953458070755005,
+      "set_03/test_02_unknown_vehicle_known_attack/double-1": 135.05733704566956,
+      "set_03/test_02_unknown_vehicle_known_attack/double-2": 171.54716897010803,
+      "set_03/test_02_unknown_vehicle_known_attack/force-neutral-1": 147.66269397735596,
+      "set_03/test_02_unknown_vehicle_known_attack/force-neutral-2": 182.69618892669678,
+      "set_03/test_02_unknown_vehicle_known_attack/fuzzing-1": 185.58484983444214,
+      "set_03/test_02_unknown_vehicle_known_attack/fuzzing-2": 460.9486131668091,
+      "set_03/test_02_unknown_vehicle_known_attack/triple-1": 103.56847190856934,
+      "set_03/test_02_unknown_vehicle_known_attack/triple-2": 133.2935609817505
+     }
+    },
+    "B": {
+     "thresholds": {
+      "t": {
+       "win_thr": 7.333157539367677,
+       "frame_thr": -3.483760833740234
+      },
+      "p": {
+       "win_thr": 2.129083156585694,
+       "frame_thr": -2.4015638828277583
+      }
+     },
+     "frame": {
+      "t": {
+       "inj": {
+        "DoS": [
+         37399,
+         37399
+        ],
+        "double": [
+         15001,
+         15001
+        ],
+        "force-neutral": [
+         3099,
+         3054
+        ],
+        "fuzzing": [
+         35011,
+         34933
+        ],
+        "triple": [
+         65679,
+         65679
+        ]
+       },
+       "clean": [
+        1234746,
+        21720
+       ],
+       "normal": [
+        5922750,
+        131327
+       ]
+      },
+      "p": {
+       "inj": {
+        "DoS": [
+         37399,
+         37399
+        ],
+        "double": [
+         15001,
+         15001
+        ],
+        "force-neutral": [
+         3099,
+         293
+        ],
+        "fuzzing": [
+         35011,
+         34839
+        ],
+        "triple": [
+         65679,
+         64351
+        ]
+       },
+       "clean": [
+        1234746,
+        19751
+       ],
+       "normal": [
+        5922750,
+        116828
+       ]
+      }
+     },
+     "first_inj": {
+      "set_03/test_02_unknown_vehicle_known_attack/DoS-1": 146.75389909744263,
+      "set_03/test_02_unknown_vehicle_known_attack/DoS-2": 42.953458070755005,
+      "set_03/test_02_unknown_vehicle_known_attack/double-1": 135.05733704566956,
+      "set_03/test_02_unknown_vehicle_known_attack/double-2": 171.54716897010803,
+      "set_03/test_02_unknown_vehicle_known_attack/force-neutral-1": 147.66269397735596,
+      "set_03/test_02_unknown_vehicle_known_attack/force-neutral-2": 182.69618892669678,
+      "set_03/test_02_unknown_vehicle_known_attack/fuzzing-1": 185.58484983444214,
+      "set_03/test_02_unknown_vehicle_known_attack/fuzzing-2": 460.9486131668091,
+      "set_03/test_02_unknown_vehicle_known_attack/triple-1": 103.56847190856934,
+      "set_03/test_02_unknown_vehicle_known_attack/triple-2": 133.2935609817505
+     }
+    }
+   }
+  },
+  "test_03": {
+   "vehicle": [
+    "Silverado"
+   ],
+   "n_files": 14,
+   "n_eligible": 7,
+   "cal_B": {
+    "clean_windows": 210,
+    "frames": 540259,
+    "n_ids_period": 98
+   },
+   "regimes": {
+    "A": {
+     "thresholds": {
+      "t": {
+       "win_thr": 2.9671473503112797,
+       "frame_thr": -7.060332775115966
+      },
+      "p": {
+       "win_thr": -0.5044673681259154,
+       "frame_thr": -5.605485439300536
+      }
+     },
+     "frame": {
+      "t": {
+       "inj": {
+        "interval": [
+         7970,
+         7970
+        ],
+        "rpm": [
+         1747,
+         1747
+        ],
+        "rpm-accessory": [
+         58,
+         56
+        ],
+        "speed": [
+         1424,
+         1424
+        ],
+        "speed-accessory": [
+         4102,
+         4077
+        ],
+        "standstill": [
+         2103,
+         2102
+        ],
+        "systematic": [
+         748,
+         747
+        ]
+       },
+       "clean": [
+        2945322,
+        14013
+       ],
+       "normal": [
+        8349250,
+        48960
+       ]
+      },
+      "p": {
+       "inj": {
+        "interval": [
+         7970,
+         7970
+        ],
+        "rpm": [
+         1747,
+         1746
+        ],
+        "rpm-accessory": [
+         58,
+         52
+        ],
+        "speed": [
+         1424,
+         1424
+        ],
+        "speed-accessory": [
+         4102,
+         4084
+        ],
+        "standstill": [
+         2103,
+         2100
+        ],
+        "systematic": [
+         748,
+         745
+        ]
+       },
+       "clean": [
+        2945322,
+        22073
+       ],
+       "normal": [
+        8349250,
+        71458
+       ]
+      }
+     },
+     "first_inj": {
+      "set_03/test_03_known_vehicle_unknown_attack/interval-1": 0.058389902114868164,
+      "set_03/test_03_known_vehicle_unknown_attack/interval-2": 16.159208059310913,
+      "set_03/test_03_known_vehicle_unknown_attack/rpm-1": 97.5874719619751,
+      "set_03/test_03_known_vehicle_unknown_attack/rpm-2": 287.65060901641846,
+      "set_03/test_03_known_vehicle_unknown_attack/rpm-accessory-1": 2.682187080383301,
+      "set_03/test_03_known_vehicle_unknown_attack/rpm-accessory-2": 6.685683012008667,
+      "set_03/test_03_known_vehicle_unknown_attack/speed-1": 287.3057789802551,
+      "set_03/test_03_known_vehicle_unknown_attack/speed-2": 304.9290180206299,
+      "set_03/test_03_known_vehicle_unknown_attack/speed-accessory-1": 50.61485409736633,
+      "set_03/test_03_known_vehicle_unknown_attack/speed-accessory-2": 36.74872398376465,
+      "set_03/test_03_known_vehicle_unknown_attack/standstill-1": 96.37662410736084,
+      "set_03/test_03_known_vehicle_unknown_attack/standstill-2": 277.6532919406891,
+      "set_03/test_03_known_vehicle_unknown_attack/systematic-1": 83.84482216835022,
+      "set_03/test_03_known_vehicle_unknown_attack/systematic-2": 29.870379209518433
+     }
+    },
+    "B": {
+     "thresholds": {
+      "t": {
+       "win_thr": -0.07623391598463057,
+       "frame_thr": -7.867111206054687
+      },
+      "p": {
+       "win_thr": -1.491547346115112,
+       "frame_thr": -5.791168689727782
+      }
+     },
+     "frame": {
+      "t": {
+       "inj": {
+        "interval": [
+         7970,
+         7970
+        ],
+        "rpm": [
+         1747,
+         1747
+        ],
+        "rpm-accessory": [
+         58,
+         56
+        ],
+        "speed": [
+         1424,
+         1424
+        ],
+        "speed-accessory": [
+         4102,
+         4084
+        ],
+        "standstill": [
+         2103,
+         2102
+        ],
+        "systematic": [
+         748,
+         748
+        ]
+       },
+       "clean": [
+        2945322,
+        26175
+       ],
+       "normal": [
+        8349250,
+        86084
+       ]
+      },
+      "p": {
+       "inj": {
+        "interval": [
+         7970,
+         7970
+        ],
+        "rpm": [
+         1747,
+         1746
+        ],
+        "rpm-accessory": [
+         58,
+         52
+        ],
+        "speed": [
+         1424,
+         1424
+        ],
+        "speed-accessory": [
+         4102,
+         4084
+        ],
+        "standstill": [
+         2103,
+         2101
+        ],
+        "systematic": [
+         748,
+         745
+        ]
+       },
+       "clean": [
+        2945322,
+        30456
+       ],
+       "normal": [
+        8349250,
+        93491
+       ]
+      }
+     },
+     "first_inj": {
+      "set_03/test_03_known_vehicle_unknown_attack/interval-1": 0.058389902114868164,
+      "set_03/test_03_known_vehicle_unknown_attack/interval-2": 16.159208059310913,
+      "set_03/test_03_known_vehicle_unknown_attack/rpm-1": 97.5874719619751,
+      "set_03/test_03_known_vehicle_unknown_attack/rpm-2": 287.65060901641846,
+      "set_03/test_03_known_vehicle_unknown_attack/rpm-accessory-1": 2.682187080383301,
+      "set_03/test_03_known_vehicle_unknown_attack/rpm-accessory-2": 6.685683012008667,
+      "set_03/test_03_known_vehicle_unknown_attack/speed-1": 287.3057789802551,
+      "set_03/test_03_known_vehicle_unknown_attack/speed-2": 304.9290180206299,
+      "set_03/test_03_known_vehicle_unknown_attack/speed-accessory-1": 50.61485409736633,
+      "set_03/test_03_known_vehicle_unknown_attack/speed-accessory-2": 36.74872398376465,
+      "set_03/test_03_known_vehicle_unknown_attack/standstill-1": 96.37662410736084,
+      "set_03/test_03_known_vehicle_unknown_attack/standstill-2": 277.6532919406891,
+      "set_03/test_03_known_vehicle_unknown_attack/systematic-1": 83.84482216835022,
+      "set_03/test_03_known_vehicle_unknown_attack/systematic-2": 29.870379209518433
+     }
+    }
+   }
+  },
+  "test_04": {
+   "vehicle": [
+    "Subaru"
+   ],
+   "n_files": 14,
+   "n_eligible": 3,
+   "cal_B": {
+    "clean_windows": 90,
+    "frames": 145216,
+    "n_ids_period": 50
+   },
+   "regimes": {
+    "A": {
+     "thresholds": {
+      "t": {
+       "win_thr": 2.9671473503112797,
+       "frame_thr": -7.060332775115966
+      },
+      "p": {
+       "win_thr": -0.5044673681259154,
+       "frame_thr": -5.605485439300536
+      }
+     },
+     "frame": {
+      "t": {
+       "inj": {
+        "interval": [
+         105276,
+         105276
+        ],
+        "rpm": [
+         5298,
+         5298
+        ],
+        "rpm-accessory": [
+         1563,
+         1563
+        ],
+        "speed": [
+         14233,
+         14233
+        ],
+        "speed-accessory": [
+         1520,
+         1520
+        ],
+        "standstill": [
+         10223,
+         10223
+        ],
+        "systematic": [
+         11835,
+         11811
+        ]
+       },
+       "clean": [
+        861150,
+        791806
+       ],
+       "normal": [
+        6455634,
+        5935403
+       ]
+      },
+      "p": {
+       "inj": {
+        "interval": [
+         105276,
+         105276
+        ],
+        "rpm": [
+         5298,
+         5298
+        ],
+        "rpm-accessory": [
+         1563,
+         1563
+        ],
+        "speed": [
+         14233,
+         14233
+        ],
+        "speed-accessory": [
+         1520,
+         1520
+        ],
+        "standstill": [
+         10223,
+         10223
+        ],
+        "systematic": [
+         11835,
+         11727
+        ]
+       },
+       "clean": [
+        861150,
+        789741
+       ],
+       "normal": [
+        6455634,
+        5920216
+       ]
+      }
+     },
+     "first_inj": {
+      "set_03/test_04_unknown_vehicle_unknown_attack/interval-1": 16.362910985946655,
+      "set_03/test_04_unknown_vehicle_unknown_attack/interval-2": 8.047567129135132,
+      "set_03/test_04_unknown_vehicle_unknown_attack/rpm-1": 57.52099084854126,
+      "set_03/test_04_unknown_vehicle_unknown_attack/rpm-2": 88.61054396629333,
+      "set_03/test_04_unknown_vehicle_unknown_attack/rpm-accessory-1": 25.708922863006592,
+      "set_03/test_04_unknown_vehicle_unknown_attack/rpm-accessory-2": 8.32410478591919,
+      "set_03/test_04_unknown_vehicle_unknown_attack/speed-1": 56.997519969940186,
+      "set_03/test_04_unknown_vehicle_unknown_attack/speed-2": 90.47705101966858,
+      "set_03/test_04_unknown_vehicle_unknown_attack/speed-accessory-1": 7.005242824554443,
+      "set_03/test_04_unknown_vehicle_unknown_attack/speed-accessory-2": 11.241307020187378,
+      "set_03/test_04_unknown_vehicle_unknown_attack/standstill-1": 16.4979031085968,
+      "set_03/test_04_unknown_vehicle_unknown_attack/standstill-2": 258.90474009513855,
+      "set_03/test_04_unknown_vehicle_unknown_attack/systematic-1": 35.92177081108093,
+      "set_03/test_04_unknown_vehicle_unknown_attack/systematic-2": 46.05506992340088
+     }
+    },
+    "B": {
+     "thresholds": {
+      "t": {
+       "win_thr": 5.2947168350219735,
+       "frame_thr": -3.7678005695343013
+      },
+      "p": {
+       "win_thr": 1.5433709621429446,
+       "frame_thr": -2.788112640380859
+      }
+     },
+     "frame": {
+      "t": {
+       "inj": {
+        "interval": [
+         105276,
+         105276
+        ],
+        "rpm": [
+         5298,
+         5295
+        ],
+        "rpm-accessory": [
+         1563,
+         1557
+        ],
+        "speed": [
+         14233,
+         14233
+        ],
+        "speed-accessory": [
+         1520,
+         1520
+        ],
+        "standstill": [
+         10223,
+         10223
+        ],
+        "systematic": [
+         11835,
+         11825
+        ]
+       },
+       "clean": [
+        861150,
+        17689
+       ],
+       "normal": [
+        6455634,
+        178210
+       ]
+      },
+      "p": {
+       "inj": {
+        "interval": [
+         105276,
+         105276
+        ],
+        "rpm": [
+         5298,
+         5247
+        ],
+        "rpm-accessory": [
+         1563,
+         1540
+        ],
+        "speed": [
+         14233,
+         14230
+        ],
+        "speed-accessory": [
+         1520,
+         1520
+        ],
+        "standstill": [
+         10223,
+         0
+        ],
+        "systematic": [
+         11835,
+         11786
+        ]
+       },
+       "clean": [
+        861150,
+        21968
+       ],
+       "normal": [
+        6455634,
+        164903
+       ]
+      }
+     },
+     "first_inj": {
+      "set_03/test_04_unknown_vehicle_unknown_attack/interval-1": 16.362910985946655,
+      "set_03/test_04_unknown_vehicle_unknown_attack/interval-2": 8.047567129135132,
+      "set_03/test_04_unknown_vehicle_unknown_attack/rpm-1": 57.52099084854126,
+      "set_03/test_04_unknown_vehicle_unknown_attack/rpm-2": 88.61054396629333,
+      "set_03/test_04_unknown_vehicle_unknown_attack/rpm-accessory-1": 25.708922863006592,
+      "set_03/test_04_unknown_vehicle_unknown_attack/rpm-accessory-2": 8.32410478591919,
+      "set_03/test_04_unknown_vehicle_unknown_attack/speed-1": 56.997519969940186,
+      "set_03/test_04_unknown_vehicle_unknown_attack/speed-2": 90.47705101966858,
+      "set_03/test_04_unknown_vehicle_unknown_attack/speed-accessory-1": 7.005242824554443,
+      "set_03/test_04_unknown_vehicle_unknown_attack/speed-accessory-2": 11.241307020187378,
+      "set_03/test_04_unknown_vehicle_unknown_attack/standstill-1": 16.4979031085968,
+      "set_03/test_04_unknown_vehicle_unknown_attack/standstill-2": 258.90474009513855,
+      "set_03/test_04_unknown_vehicle_unknown_attack/systematic-1": 35.92177081108093,
+      "set_03/test_04_unknown_vehicle_unknown_attack/systematic-2": 46.05506992340088
+     }
+    }
+   }
+  }
+ },
+ "attack_names": [
+  "normal",
+  "DoS",
+  "double",
+  "force-neutral",
+  "fuzzing",
+  "triple",
+  "rpm",
+  "speed",
+  "standstill",
+  "systematic",
+  "interval",
+  "rpm-accessory",
+  "speed-accessory"
+ ]
+}

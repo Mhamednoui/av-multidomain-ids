@@ -1,0 +1,246 @@
+{
+ "can.l4_timing": {
+  "variant": [
+   "all",
+   1
+  ],
+  "frame_auc_val": 0.8546311893773699,
+  "window_auc_val": 0.4412769815531611,
+  "T0_carhacking_thresholds": {
+   "window_threshold": -0.8161622285842894,
+   "frame_threshold": -8.677745819091795,
+   "fa_clean_windows": 1.0,
+   "window_recall_all_attack": 1.0,
+   "captures": {
+    "correlated_signal_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 0.15740308267164876
+    },
+    "fuzzing_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "max_speedometer_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 0.04297994269340974
+    },
+    "reverse_light_off_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 0.03330522765598651
+    },
+    "reverse_light_on_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 0.0013550135501355014
+    }
+   },
+   "frame_recall_all": 0.5317708333333333,
+   "frame_fa_clean": 0.09348201980391496,
+   "frame_recall_at_prob_0.5": 0.09088541666666666,
+   "frame_fa_at_prob_0.5": 0.025045053477980216
+  },
+  "T1_road_val_calibrated": {
+   "window_threshold": 7.61894702911377,
+   "frame_threshold": 3.4769546985626225,
+   "fa_clean_windows": 0.01652892561983471,
+   "window_recall_all_attack": 0.012658227848101266,
+   "captures": {
+    "correlated_signal_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.010275572162540868
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "fuzzing_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 0.9801136363636364
+    },
+    "max_speedometer_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "reverse_light_off_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "reverse_light_on_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    }
+   },
+   "frame_recall_all": 0.015928819444444443,
+   "frame_fa_clean": 0.010000350913648409,
+   "frame_recall_at_prob_0.5": 0.09088541666666666,
+   "frame_fa_at_prob_0.5": 0.025045053477980216
+  }
+ },
+ "can.l4_payload": {
+  "variant": [
+   "all",
+   1
+  ],
+  "frame_auc_val": 0.8297099866847767,
+  "window_auc_val": 0.4577605746765701,
+  "T0_carhacking_thresholds": {
+   "window_threshold": -10.581843376159666,
+   "frame_threshold": -13.663208961486815,
+   "fa_clean_windows": 1.0,
+   "window_recall_all_attack": 1.0,
+   "captures": {
+    "correlated_signal_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "fuzzing_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "max_speedometer_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "reverse_light_off_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "reverse_light_on_attack_2": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "window_recall": 1.0,
+     "detected": true,
+     "frame_recall": 1.0
+    }
+   },
+   "frame_recall_all": 1.0,
+   "frame_fa_clean": 0.7718737894339213,
+   "frame_recall_at_prob_0.5": 0.565234375,
+   "frame_fa_at_prob_0.5": 0.11399445132069597
+  },
+  "T1_road_val_calibrated": {
+   "window_threshold": 15.63741207122803,
+   "frame_threshold": 6.141876220703126,
+   "fa_clean_windows": 0.011570247933884297,
+   "window_recall_all_attack": 0.0,
+   "captures": {
+    "correlated_signal_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 1.0
+    },
+    "correlated_signal_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.006539000467071462
+    },
+    "fuzzing_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.05113636363636364
+    },
+    "max_speedometer_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.028334925183062718
+    },
+    "max_speedometer_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "reverse_light_off_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "reverse_light_off_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    },
+    "reverse_light_on_attack_2": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.2859078590785908
+    },
+    "reverse_light_on_attack_2_masquerade": {
+     "window_recall": 0.0,
+     "detected": false,
+     "frame_recall": 0.0
+    }
+   },
+   "frame_recall_all": 0.14396701388888888,
+   "frame_fa_clean": 0.010000350913648409,
+   "frame_recall_at_prob_0.5": 0.565234375,
+   "frame_fa_at_prob_0.5": 0.11399445132069597
+  }
+ }
+}
