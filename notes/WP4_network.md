@@ -244,3 +244,31 @@ B1 MET (layer FA 0.00-1.77%, window FA 0.07-0.90%, stack 0.33%). B2 MET (PortSca
 B5 NOT MET: transfer to D23 Tue-20-02 FA of OR 46.6% (dos_rate 39.7%, slow 7.7%; scan 2.5, trw 3.1, bruteforce 2.2); LOIC 99.7%. Refit: LOIC 100%, OR FA 5.5%. B6 done (report caveats).
 Surprises: the learned logistic combiner kills SSH (0.1%) when tcp_flags and slow are in the stack; PortScan on dedup survivors only 40.6% vs 97.4% pre-dedup (multiplicity matters).
 No layer, threshold or window changed after the verdict. S2/D23.pkl deleted (cache 4.7 GB).
+
+## 2026-10-22 S4 plan, development on VALIDATION, acceptance rule (written BEFORE any test score; test never read)
+Bot structure (train/val descriptive only, tools/WP4_S4_explore.py): Ares bots = 5 sources -> one C2 server on port 8080 (+ 1-2 stray pairs). D10 split counts (pre-dedup stage flows):
+Bot train 1539 / val 109 / test 308 / gap 10; 5 real pairs per split plus 1-2 incidental flows. Per pair: early BURST of 5-8 flows per minute for ~30 min (file / command transfer), then
+a BEACON: one flow per active minute with gaps of 1-2 minutes (mean ~1.75 min = about 100 s period, quantised to the 1-minute timestamp grid). D10 timestamps are whole minutes: a period P
+is visible as phase only if P >= 2 min (Nyquist); Ares (~100 s) sits just BELOW that limit, so its minute-gaps are 1/2/2/1/2... (quantisation noise), not a clean period.
+D23 Bot (Fri-02-03): src_ip / dst_ip / src_port are 100% NaN in the file (checked): pairs cannot be formed -> not evaluable (data limit), reported as such.
+Layer (network/l2b.py, net.beacon): per (src,dst,dst_port,protocol) group of service-directed flows, active-minute series; trailing WIN minutes; statistics cv, mad, tol (jitter-tolerant fraction of gaps near the median),
+acf (autocorrelation peak, +-1 min), rate (flows-per-minute metronome, separate diagnostic); benign tail probability of each statistic learned on benign TRAIN groups (no IP / port whitelist);
+min N_MIN active minutes before scoring; continuous activity (median gap < 2 min) is not a beacon for the phase statistics.
+Validation findings (results/WP4/s4_dev_val.json, logs/s4_dev.log): (1) benign groups are very regular at minute resolution: 30% of testable benign cells have tol = 1; only 2.6% of benign flows belong to a
+testable group at all. (2) Port-conditioned benign tables (own table per frequent port) do not help (Bot 0-3%): DROPPED (port_cond=False). (3) Adding 'rate' to the max hurt (benign continuous groups, 13.6% defined): rate
+kept as separate diagnostic, layer score = max(cv, mad, tol, acf). (4) Choice WIN=64, N_MIN=6 (val Bot flow detection 27.5% at FA 1%, = ceiling: only flows after the 6th active minute can be scored; N_MIN 4/5 hurt through
+noisy statistics, 8 gives 22%; WIN 32 not better). 5 Bot pairs in val: the choice rests on 109 flows; stated as a weak validation.
+Acceptance (fixed now, one verdict run on D10 test):
+ C1 FA <= 2% on benign test flows (headline = without the audited Infiltration file, published-label FA also given), flow unit AND pair-window unit (group x 64-min block).
+ C2 Bot: >= 50% of the test Bot flows alarmed by net.beacon at the 1% budget, and >= 4 of the 5 Bot pairs alarmed at least once. (The S7 target "unseen Bot > 70%" is a different test.) Expected from val: NOT MET (flow ceiling ~25-30%).
+ C3 Harness ablation (tcp_flags + L2a + beacon vs tcp_flags + L2a): Bot detection improves by >= 20 points and macro over 11 families improves by >= 1 point at combined FA <= 2%.
+ C4 Resolvable-period limit measured with synthetic periodic groups (jitter 0 / 10 / 30%, periods 5 s .. 30 min, injected as NEW groups, thresholds from validation): report the smallest period with pair-level detection >= 90% (jitter <= 10%).
+ C5 Transfer: D23 Tue-20-02 (only D23 file with addresses; no Bot there): FA of the D10-fitted layer <= 5% on benign test flows. D23 Bot: not evaluable (no addresses): statement only.
+ C6 Honesty: Bot flows / pairs per split, delay (minutes from first Bot flow of the segment), share of benign flows that are testable and FA among testable groups, FA with and without audit file.
+
+## 2026-10-22 S4 VERDICT (one test run: results/WP4/logs/s4_verdict.log; tables s4_tables.md; acceptance numbers s4_acceptance.json; report reports/WP4_S4.md)
+Limit test before the verdict (validation only, s4_limit.json): phase statistics detect synthetic periodic groups for periods 100 s .. 720 s (jitter 0 / 10 / 30%), not <= 60 s (looks continuous on the 1-min grid) and not >= 900 s (< N_MIN active minutes in 64 min); 90 s partial.
+D10 test: net.beacon FA flow 1.75% (published 1.51%), window 1.10%; Bot 36.0% of 308 flows, 3 of 5 groups (the two 85-flow groups are never testable: median gap < 2 min); delay 8 / 8 / 109 min.
+Among testable flows (6.5% of benign flows): Bot 100%, benign FA 26.8% => low precision inside the testable subset. Harness: Bot 0 -> 17.5%, macro 54.2 -> 55.8%, FA 0.33 -> 0.57%; OR with L2a Bot 1 -> 36%, FA 2.77 -> 4.50%.
+D23 Tue-20-02 transfer FA 2.71% (refit 1.21%); D23 Bot (Fri-02-03) not evaluable (addresses 100% NaN).
+Acceptance: C1 MET, C2 NOT MET (36 < 50; 3/5 groups), C3 NOT MET (+17.5 < +20 Bot points; macro +1.6 met), C4 measured, C5 MET. Nothing changed after the verdict.

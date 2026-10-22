@@ -1,0 +1,15 @@
+{
+ "C1_fa_flow": 0.01745678003625413,
+ "C1_fa_flow_published": 0.01507840286141242,
+ "C1_fa_window": 0.011021686927810295,
+ "C2_bot_flows": 0.36038961038961037,
+ "C2_pairs_alarmed": 3,
+ "C2_pairs": 5,
+ "C3_bot_harness_l1_l2a": 0.0,
+ "C3_bot_harness_with_beacon": 0.17532467532467533,
+ "C3_macro_l1_l2a": 0.5424045816562765,
+ "C3_macro_with_beacon": 0.5583431885039742,
+ "C3_fa_with_beacon": 0.005686666666666666,
+ "C5_transfer_fa": 0.02706316601558773,
+ "C5_refit_fa": 0.012060862477407607
+}

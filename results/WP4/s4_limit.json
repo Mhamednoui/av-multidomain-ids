@@ -1,0 +1,546 @@
+{
+ "0.0|5": {
+  "n_flows_per_group": 8639.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.993170505845584,
+  "testable_flows": 0.0
+ },
+ "0.0|10": {
+  "n_flows_per_group": 4319.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9932854827506368,
+  "testable_flows": 0.0
+ },
+ "0.0|20": {
+  "n_flows_per_group": 2159.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9935155164427976,
+  "testable_flows": 0.0
+ },
+ "0.0|30": {
+  "n_flows_per_group": 1439.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9117442668519805,
+  "testable_flows": 0.0
+ },
+ "0.0|45": {
+  "n_flows_per_group": 959.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.0|60": {
+  "n_flows_per_group": 719.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.0|90": {
+  "n_flows_per_group": 479.0,
+  "phase_pair": 0.6,
+  "phase_flow": 0.023799582463465554,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.023799582463465554
+ },
+ "0.0|100": {
+  "n_flows_per_group": 431.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.988399071925754,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.988399071925754
+ },
+ "0.0|120": {
+  "n_flows_per_group": 359.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9860724233983287,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9860724233983287
+ },
+ "0.0|150": {
+  "n_flows_per_group": 287.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9825783972125436,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9825783972125436
+ },
+ "0.0|180": {
+  "n_flows_per_group": 239.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9790794979079498,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9790794979079498
+ },
+ "0.0|300": {
+  "n_flows_per_group": 143.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.965034965034965,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.965034965034965
+ },
+ "0.0|600": {
+  "n_flows_per_group": 71.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9295774647887324,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9295774647887324
+ },
+ "0.0|720": {
+  "n_flows_per_group": 59.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9152542372881356,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9152542372881356
+ },
+ "0.0|900": {
+  "n_flows_per_group": 47.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.0|1200": {
+  "n_flows_per_group": 35.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.0|1800": {
+  "n_flows_per_group": 23.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.1|5": {
+  "n_flows_per_group": 8638.25,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9931699128874483,
+  "testable_flows": 0.0
+ },
+ "0.1|10": {
+  "n_flows_per_group": 4318.45,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9932498929013882,
+  "testable_flows": 0.0
+ },
+ "0.1|20": {
+  "n_flows_per_group": 2160.1,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9934725244201658,
+  "testable_flows": 0.0
+ },
+ "0.1|30": {
+  "n_flows_per_group": 1439.3,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.7263600361286736,
+  "testable_flows": 0.0
+ },
+ "0.1|45": {
+  "n_flows_per_group": 958.85,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.1|60": {
+  "n_flows_per_group": 719.05,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.1|90": {
+  "n_flows_per_group": 479.45,
+  "phase_pair": 1.0,
+  "phase_flow": 0.20179372197309417,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.20179372197309417
+ },
+ "0.1|100": {
+  "n_flows_per_group": 431.3,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9878274982610712,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9878274982610712
+ },
+ "0.1|120": {
+  "n_flows_per_group": 359.2,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9860801781737194,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9860801781737194
+ },
+ "0.1|150": {
+  "n_flows_per_group": 287.15,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9825874978234372,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9825874978234372
+ },
+ "0.1|180": {
+  "n_flows_per_group": 239.15,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9790926196947523,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9790926196947523
+ },
+ "0.1|300": {
+  "n_flows_per_group": 143.2,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9650837988826816,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9650837988826816
+ },
+ "0.1|600": {
+  "n_flows_per_group": 71.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9295774647887324,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9295774647887324
+ },
+ "0.1|720": {
+  "n_flows_per_group": 58.9,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9040747028862479,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9040747028862479
+ },
+ "0.1|900": {
+  "n_flows_per_group": 47.15,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.1|1200": {
+  "n_flows_per_group": 35.2,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.1|1800": {
+  "n_flows_per_group": 22.95,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.3|5": {
+  "n_flows_per_group": 8641.0,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9931836592986922,
+  "testable_flows": 0.0
+ },
+ "0.3|10": {
+  "n_flows_per_group": 4318.95,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9932854050174232,
+  "testable_flows": 0.0
+ },
+ "0.3|20": {
+  "n_flows_per_group": 2161.85,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9934778083585818,
+  "testable_flows": 0.0
+ },
+ "0.3|30": {
+  "n_flows_per_group": 1438.65,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.5777638758558371,
+  "testable_flows": 0.0
+ },
+ "0.3|45": {
+  "n_flows_per_group": 958.3,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.3|60": {
+  "n_flows_per_group": 717.95,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.3|90": {
+  "n_flows_per_group": 479.5,
+  "phase_pair": 1.0,
+  "phase_flow": 0.3662148070907195,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.3662148070907195
+ },
+ "0.3|100": {
+  "n_flows_per_group": 431.15,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9863156674011365,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9863156674011365
+ },
+ "0.3|120": {
+  "n_flows_per_group": 358.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9860335195530726,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9860335195530726
+ },
+ "0.3|150": {
+  "n_flows_per_group": 287.3,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9808562478245736,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9825965889314305
+ },
+ "0.3|180": {
+  "n_flows_per_group": 239.4,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9791144527986633,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9791144527986633
+ },
+ "0.3|300": {
+  "n_flows_per_group": 142.6,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9649368863955119,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9649368863955119
+ },
+ "0.3|600": {
+  "n_flows_per_group": 70.75,
+  "phase_pair": 1.0,
+  "phase_flow": 0.9293286219081273,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9293286219081273
+ },
+ "0.3|720": {
+  "n_flows_per_group": 59.0,
+  "phase_pair": 1.0,
+  "phase_flow": 0.688135593220339,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.688135593220339
+ },
+ "0.3|900": {
+  "n_flows_per_group": 46.55,
+  "phase_pair": 0.3,
+  "phase_flow": 0.011815252416756176,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.011815252416756176
+ },
+ "0.3|1200": {
+  "n_flows_per_group": 34.95,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "0.3|1800": {
+  "n_flows_per_group": 23.6,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.0
+ },
+ "poisson|5": {
+  "n_flows_per_group": 8653.05,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9927077735596119,
+  "testable_flows": 0.0
+ },
+ "poisson|10": {
+  "n_flows_per_group": 4332.8,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.9465588072378139,
+  "testable_flows": 0.0
+ },
+ "poisson|20": {
+  "n_flows_per_group": 2151.45,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.18238862162727462,
+  "testable_flows": 0.0
+ },
+ "poisson|30": {
+  "n_flows_per_group": 1452.15,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 1.0,
+  "rate_flow": 0.07192783114692008,
+  "testable_flows": 0.0
+ },
+ "poisson|45": {
+  "n_flows_per_group": 959.6,
+  "phase_pair": 0.1,
+  "phase_flow": 0.0004689453939141309,
+  "rate_pair": 0.2,
+  "rate_flow": 0.000885785744060025,
+  "testable_flows": 0.0004689453939141309
+ },
+ "poisson|60": {
+  "n_flows_per_group": 721.35,
+  "phase_pair": 0.85,
+  "phase_flow": 0.015041242115477924,
+  "rate_pair": 0.05,
+  "rate_flow": 0.0002079434393844874,
+  "testable_flows": 0.051015457128994246
+ },
+ "poisson|90": {
+  "n_flows_per_group": 477.7,
+  "phase_pair": 0.65,
+  "phase_flow": 0.022084990579861838,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.5058614193008164
+ },
+ "poisson|100": {
+  "n_flows_per_group": 437.2,
+  "phase_pair": 0.35,
+  "phase_flow": 0.004117108874656907,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.6051006404391582
+ },
+ "poisson|120": {
+  "n_flows_per_group": 364.6,
+  "phase_pair": 0.35,
+  "phase_flow": 0.005211190345584202,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.7959407569939659
+ },
+ "poisson|150": {
+  "n_flows_per_group": 288.75,
+  "phase_pair": 0.3,
+  "phase_flow": 0.0024242424242424242,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9232900432900433
+ },
+ "poisson|180": {
+  "n_flows_per_group": 238.0,
+  "phase_pair": 0.15,
+  "phase_flow": 0.0021008403361344537,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9411764705882353
+ },
+ "poisson|300": {
+  "n_flows_per_group": 141.0,
+  "phase_pair": 0.1,
+  "phase_flow": 0.0007092198581560284,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.9535460992907802
+ },
+ "poisson|600": {
+  "n_flows_per_group": 73.85,
+  "phase_pair": 0.3,
+  "phase_flow": 0.012186865267433988,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.7257955314827352
+ },
+ "poisson|720": {
+  "n_flows_per_group": 59.35,
+  "phase_pair": 0.25,
+  "phase_flow": 0.007582139848357203,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.5518112889637742
+ },
+ "poisson|900": {
+  "n_flows_per_group": 48.1,
+  "phase_pair": 0.2,
+  "phase_flow": 0.010395010395010396,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.38357588357588357
+ },
+ "poisson|1200": {
+  "n_flows_per_group": 36.05,
+  "phase_pair": 0.1,
+  "phase_flow": 0.0027739251040221915,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.1650485436893204
+ },
+ "poisson|1800": {
+  "n_flows_per_group": 23.25,
+  "phase_pair": 0.0,
+  "phase_flow": 0.0,
+  "rate_pair": 0.0,
+  "rate_flow": 0.0,
+  "testable_flows": 0.07526881720430108
+ }
+}

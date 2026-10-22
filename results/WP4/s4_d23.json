@@ -1,0 +1,94 @@
+{
+ "mode": "verdict",
+ "test_side": "test",
+ "families": [
+  "DDoS-LOIC-HTTP"
+ ],
+ "n_test": 1587833,
+ "note": "D23 Fri-02-03 (Bot) has no addresses (src_ip / dst_ip 100% NaN): not evaluable",
+ "transfer": {
+  "flow": {
+   "fa_benign": 0.02706316601558773,
+   "fa_benign_published_labels": 0.02706316601558773,
+   "fa_benign_audit_file": null,
+   "n_benign": 1467308,
+   "n_benign_audit": 0,
+   "fa_benign_in_attack_cells": 0.0,
+   "fa_benign_other": 0.02706316601558773,
+   "benign_in_attack_cells_share": 0.0,
+   "auc": 0.4550424995979031,
+   "threshold": 0.9898840080532416,
+   "detection": {
+    "DDoS-LOIC-HTTP": 0.0
+   },
+   "n": {
+    "DDoS-LOIC-HTTP": 120525
+   },
+   "delay_min": {
+    "DDoS-LOIC-HTTP": [
+     null,
+     null,
+     null,
+     null
+    ]
+   },
+   "fa_by_day": {
+    "2018-02-20": 0.02706316601558773
+   }
+  },
+  "window": {
+   "fa_benign_cells": 0.02980942512164354,
+   "n_benign_cells": 443920,
+   "fa_benign_cells_published_labels": 0.02980942512164354,
+   "detection": {
+    "DDoS-LOIC-HTTP": 0.0
+   },
+   "n": {
+    "DDoS-LOIC-HTTP": 30
+   }
+  },
+  "testable_share_benign": 0.0899150008041938
+ },
+ "refit": {
+  "flow": {
+   "fa_benign": 0.012060862477407607,
+   "fa_benign_published_labels": 0.012060862477407607,
+   "fa_benign_audit_file": null,
+   "n_benign": 1467308,
+   "n_benign_audit": 0,
+   "fa_benign_in_attack_cells": 0.0,
+   "fa_benign_other": 0.012060862477407607,
+   "benign_in_attack_cells_share": 0.0,
+   "auc": 0.4550424995979031,
+   "threshold": 0.989992692545839,
+   "detection": {
+    "DDoS-LOIC-HTTP": 0.0
+   },
+   "n": {
+    "DDoS-LOIC-HTTP": 120525
+   },
+   "delay_min": {
+    "DDoS-LOIC-HTTP": [
+     null,
+     null,
+     null,
+     null
+    ]
+   },
+   "fa_by_day": {
+    "2018-02-20": 0.012060862477407607
+   }
+  },
+  "window": {
+   "fa_benign_cells": 0.013639845017120202,
+   "n_benign_cells": 443920,
+   "fa_benign_cells_published_labels": 0.013639845017120202,
+   "detection": {
+    "DDoS-LOIC-HTTP": 0.0
+   },
+   "n": {
+    "DDoS-LOIC-HTTP": 30
+   }
+  }
+ }
+}

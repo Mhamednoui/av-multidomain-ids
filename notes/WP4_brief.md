@@ -55,3 +55,10 @@ Status after S1 (2026-10-21). Details: notes/WP4_network.md, reports/WP4_S1.md, 
 - Macro over 11 families: tcp_flags alone 21%, + L2a 54%, L2a alone 62%. Learned logistic combiner is hurt by correlated layers (SSH 0.1%): use per-layer/OR views or rethink the combiner in S7.
 - Transfer to D23 Tue: bruteforce/scan/trw FA 2-3% (bruteforce LOIC 99%); dos_rate needs refit (FA 40%).
 - Helpers: tools/WP4_S3_lib.py (load, stream, fit_calibrate, flow_eval, window_eval).
+
+## After S4 (2026-10-22): L2b beaconing (network/l2b.py net.beacon; report reports/WP4_S4.md, tables results/WP4/s4_tables.md, limit test s4_limit.json)
+- Per (src,dst,port,proto) group, active minutes in a trailing 64-min window; cv / mad / tol / acf statistics learned as benign tails (N_MIN 6 active minutes); "rate" (sub-minute metronome) is a separate diagnostic, not in the layer score.
+- Bot in D10 stage flows: train 1539 / val 109 / test 308; 5 real groups per split (5 bots -> one C2 :8080): burst of 5-8 flows/min then a beacon with 1-2 minute gaps (~100 s period, fixed shape 4 fwd / 3 bwd packets, ~80 ms).
+- Test: Bot 36% of flows (3 of 5 groups; 2 groups with 85 flows never testable), FA 1.75% flow / 1.10% window; among testable flows benign FA 26.8% (benign groups are very regular on the 1-min grid): low precision. Harness Bot 0 -> 17.5% (combiner dilutes; OR view 36%).
+- Resolvable period on the 1-min grid: 100 s .. 720 s (phase); below ~1.6 min and above ~12 min invisible. D23 Bot (Fri-02-03) has NO addresses (not evaluable). D23 Tue transfer FA 2.71%.
+- Next: S5 flow-shape models (Bot has a very fixed flow shape). Helper: tools/WP4_S4_run.py (beacon_layers, add_beacon, bot_pairs).
