@@ -70,3 +70,15 @@ Status after S1 (2026-10-21). Details: notes/WP4_network.md, reports/WP4_S1.md, 
 - Bot: test Bot flows are the beacon phase 3/3 packets ~1 s on 8080 (not the 4/3 ~80 ms burst of train); the same shape exists in benign (182 test flows): no flow-shape model should claim Bot. results/WP4/s5_bot_shapes.json.
 - Helpers: tools/WP4_S5_lib.py (load_d10 with the aligned 76-feature matrix, frame, det_at_budget), cache ../data_extra/cache_v3/WP4/S5 (D10_X.npy, D23_eval.pkl; WP4 cache 6.0 GB).
 - Next: S6 supervised XGBoost on the time split inside the harness.
+
+## After S6 (2026-10-22): L4 supervised XGBoost (network/l4.py net.l4_xgb; report reports/WP4_S6.md, tables results/WP4/s6_tables.md, acceptance s6_acceptance.json)
+- v2 model retrained on the v3 time split: binary XGBoost, 60 clean features (no IPs / ports / time / Flow ID), train = de-duplicated train flows (1.18 M, 183k attack), depth 3, lr 0.2, 616 trees (6 trials on validation), threshold 1% of benign validation. v2's 99.73% was D01 (different CICFlowMeter run): NOT comparable.
+- D10 test (dedup rows = no exact copy across the split; stream rows next to it): FA 1.00% (stream 1.23, published labels 1.30), macro11 98.0% (stream 92.9). IN-DISTRIBUTION ceiling (time cut inside the attack windows): do not quote as generalisation.
+- Null control (flow level, 5 seeds) mean AUC 0.477 (<= 0.55 met); top feature Bwd Pkt Len Std 24.7% (no dominant / capture-encoding feature).
+- Bot: detected 98% only through the Ares C2 beacon signature (3 fwd / 3 bwd packets, ~1 s, port 8080, identical byte lengths). The BENIGN-labelled flows with that shape (train 403 / val 101 / test 165) are the five Bot hosts beaconing to 205.174.165.73:8080 inside the Friday PortScan / DDoS files = label noise
+  (results/WP4/s6_bot_benign_shape.json). LOAO (validation): unseen Bot 0% (AUC 0.81); FTP 1, SSH 1, DoS group 2, SlowHTTP 29, PortScan 45, LOIC 63, GoldenEye 93, Web 80-99 (HTTP-like families stay in training), macro 55.9% vs base 61.5%; base OR L4-unseen 89.6% (FA 5.0 -> 5.9%).
+- Harness (dedup rows): tcp_flags + L2a 65.1% (FA 0.80) -> + L4 98.0% (0.56); stream rows 54.2 -> 93.8. L4 alone 98.0% (FA 1.02). Beacon and on-network L3 add nothing once L4 is in.
+- D23 zero-shot: FA 5.17% (> 5%, days 12-14% on 02-22 / 02-23), AUC 0.741 (LOIC-UDP 0.38, Infiltration 0.42), macro9 28.8%; re-calibrated 10.1%; on-network supervised refit (information) FA 1.0%, macro9 79.4%, AUC 0.968.
+- Scope proposal: L4 = optional supervised layer, seen families, refit per network, outside the zero-shot headline stack.
+- Helpers: tools/WP4_S6_lib.py (load_s6, sel, feat), cache ../data_extra/cache_v3/WP4/S6 (base_val.pkl / base_test.pkl = scores of tcp_flags, 5 L2a, beacon, L3 service + AE on the D10 stream rows with their calibrators in base_cal.pkl; l4_model.json; D10_in_final.npy). WP4 cache 6.1 GB.
+- Next: S7 combiner + ablation + leave-one-attack-out (test side) + cross-dataset -> M1-NET.

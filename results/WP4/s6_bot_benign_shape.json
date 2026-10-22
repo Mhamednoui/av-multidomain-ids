@@ -1,0 +1,77 @@
+{
+ "bot_sources": [
+  "192.168.10.12",
+  "192.168.10.14",
+  "192.168.10.15",
+  "192.168.10.17",
+  "192.168.10.5",
+  "192.168.10.8",
+  "192.168.10.9",
+  "205.174.165.73"
+ ],
+ "bot_c2_8080": [
+  "205.174.165.73",
+  "52.6.13.28",
+  "52.7.235.158"
+ ],
+ "train": {
+  "shape_flows_bot": 66,
+  "shape_flows_benign": 403,
+  "benign_src_in_bot_sources": 403,
+  "benign_dst_is_bot_c2": 403,
+  "benign_src_top": {
+   "192.168.10.15": 112,
+   "192.168.10.8": 110,
+   "192.168.10.9": 64,
+   "192.168.10.5": 62,
+   "192.168.10.14": 55
+  },
+  "benign_dst_top": {
+   "205.174.165.73": 403
+  },
+  "benign_files": {
+   "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 343,
+   "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 60
+  }
+ },
+ "val": {
+  "shape_flows_bot": 95,
+  "shape_flows_benign": 101,
+  "benign_src_in_bot_sources": 101,
+  "benign_dst_is_bot_c2": 101,
+  "benign_src_top": {
+   "192.168.10.15": 31,
+   "192.168.10.8": 21,
+   "192.168.10.14": 18,
+   "192.168.10.9": 18,
+   "192.168.10.5": 13
+  },
+  "benign_dst_top": {
+   "205.174.165.73": 101
+  },
+  "benign_files": {
+   "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 78,
+   "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 23
+  }
+ },
+ "test": {
+  "shape_flows_bot": 260,
+  "shape_flows_benign": 165,
+  "benign_src_in_bot_sources": 165,
+  "benign_dst_is_bot_c2": 165,
+  "benign_src_top": {
+   "192.168.10.8": 46,
+   "192.168.10.15": 45,
+   "192.168.10.5": 25,
+   "192.168.10.9": 25,
+   "192.168.10.14": 24
+  },
+  "benign_dst_top": {
+   "205.174.165.73": 165
+  },
+  "benign_files": {
+   "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 103,
+   "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 62
+  }
+ }
+}

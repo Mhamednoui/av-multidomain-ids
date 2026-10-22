@@ -1,0 +1,200 @@
+{
+ "rule": "max macro detection of 11 families at 1% benign-val budget, ties -> macro AUC",
+ "chosen": {
+  "params": {
+   "max_depth": 3,
+   "learning_rate": 0.2,
+   "subsample": 0.7,
+   "colsample_bytree": 0.5,
+   "min_child_weight": 3,
+   "reg_lambda": 3.0
+  },
+  "n_trees": 616
+ },
+ "val_macro": 0.9818181521595473,
+ "val_macro_auc": 0.9980067489710517,
+ "trials": [
+  {
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.2,
+    "subsample": 0.9,
+    "colsample_bytree": 0.7,
+    "min_child_weight": 3,
+    "reg_lambda": 3.0
+   },
+   "n_trees": 681,
+   "macro": 0.9772039121620413,
+   "macro_auc": 0.9973249942509081,
+   "fa_val": 0.009892118101612607,
+   "detection": {
+    "Bot": 0.981651376146789,
+    "DDoS-LOIC-HTTP": 0.9991593989702637,
+    "DoS-GoldenEye": 1.0,
+    "DoS-Hulk": 0.9987380566071751,
+    "DoS-SlowHTTPTest": 0.9289267945984364,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "Heartbleed": 0.0,
+    "Infiltration": 1.0,
+    "PortScan": 0.9210526315789473,
+    "SSH-Patator": 0.9888475836431226,
+    "Web-BruteForce": 0.9411764705882353,
+    "Web-XSS": 0.9896907216494846
+   },
+   "seconds": 639.3858885765076
+  },
+  {
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.2,
+    "subsample": 0.7,
+    "colsample_bytree": 0.5,
+    "min_child_weight": 3,
+    "reg_lambda": 3.0
+   },
+   "n_trees": 616,
+   "macro": 0.9818181521595473,
+   "macro_auc": 0.9980067489710517,
+   "fa_val": 0.00987605946833077,
+   "detection": {
+    "Bot": 0.981651376146789,
+    "DDoS-LOIC-HTTP": 0.9991593989702637,
+    "DoS-GoldenEye": 1.0,
+    "DoS-Hulk": 0.9984496124031008,
+    "DoS-SlowHTTPTest": 0.9438521677327647,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "Heartbleed": 0.0,
+    "Infiltration": 1.0,
+    "PortScan": 0.9473684210526315,
+    "SSH-Patator": 0.9888475836431226,
+    "Web-BruteForce": 0.9509803921568627,
+    "Web-XSS": 0.9896907216494846
+   },
+   "seconds": 966.5031101703644
+  },
+  {
+   "params": {
+    "max_depth": 6,
+    "learning_rate": 0.2,
+    "subsample": 0.9,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 3,
+    "reg_lambda": 0.5
+   },
+   "n_trees": 282,
+   "macro": 0.975424924351822,
+   "macro_auc": 0.9968846664702983,
+   "fa_val": 0.009956352634739962,
+   "detection": {
+    "Bot": 0.9541284403669725,
+    "DDoS-LOIC-HTTP": 0.9992119365346223,
+    "DoS-GoldenEye": 1.0,
+    "DoS-Hulk": 0.9981972237245358,
+    "DoS-SlowHTTPTest": 0.9424307036247335,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "Heartbleed": 0.0,
+    "Infiltration": 0.8333333333333334,
+    "PortScan": 0.9473684210526315,
+    "SSH-Patator": 0.9851301115241635,
+    "Web-BruteForce": 0.9444444444444444,
+    "Web-XSS": 0.9587628865979382
+   },
+   "seconds": 1165.4283175468445
+  },
+  {
+   "params": {
+    "max_depth": 8,
+    "learning_rate": 0.1,
+    "subsample": 0.9,
+    "colsample_bytree": 0.7,
+    "min_child_weight": 1,
+    "reg_lambda": 3.0
+   },
+   "n_trees": 473,
+   "macro": 0.9730038383391825,
+   "macro_auc": 0.9968948427888342,
+   "fa_val": 0.009991681627960007,
+   "detection": {
+    "Bot": 0.926605504587156,
+    "DDoS-LOIC-HTTP": 0.9992644740989808,
+    "DoS-GoldenEye": 1.0,
+    "DoS-Hulk": 0.9983053903010637,
+    "DoS-SlowHTTPTest": 0.923951670220327,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "Heartbleed": 0.0,
+    "Infiltration": 1.0,
+    "PortScan": 0.9473684210526315,
+    "SSH-Patator": 0.9869888475836431,
+    "Web-BruteForce": 0.9411764705882353,
+    "Web-XSS": 0.979381443298969
+   },
+   "seconds": 1371.973349571228
+  },
+  {
+   "params": {
+    "max_depth": 6,
+    "learning_rate": 0.2,
+    "subsample": 0.8,
+    "colsample_bytree": 1.0,
+    "min_child_weight": 3,
+    "reg_lambda": 1.0
+   },
+   "n_trees": 300,
+   "macro": 0.978830813409492,
+   "macro_auc": 0.9972359777767356,
+   "fa_val": 0.009898541554925344,
+   "detection": {
+    "Bot": 0.963302752293578,
+    "DDoS-LOIC-HTTP": 0.9994746243564149,
+    "DoS-GoldenEye": 1.0,
+    "DoS-Hulk": 0.9984135568775915,
+    "DoS-SlowHTTPTest": 0.937455579246624,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "Heartbleed": 0.0,
+    "Infiltration": 1.0,
+    "PortScan": 0.9473684210526315,
+    "SSH-Patator": 0.9869888475836431,
+    "Web-BruteForce": 0.9444444444444444,
+    "Web-XSS": 0.9896907216494846
+   },
+   "seconds": 1519.4348883628845
+  },
+  {
+   "params": {
+    "max_depth": 5,
+    "learning_rate": 0.1,
+    "subsample": 0.7,
+    "colsample_bytree": 0.9,
+    "min_child_weight": 5,
+    "reg_lambda": 0.5
+   },
+   "n_trees": 426,
+   "macro": 0.9803136804398792,
+   "macro_auc": 0.9977556625436873,
+   "fa_val": 0.009937082274801756,
+   "detection": {
+    "Bot": 0.981651376146789,
+    "DDoS-LOIC-HTTP": 0.9992119365346223,
+    "DoS-GoldenEye": 1.0,
+    "DoS-Hulk": 0.99848566792861,
+    "DoS-SlowHTTPTest": 0.9388770433546553,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "Heartbleed": 0.0,
+    "Infiltration": 1.0,
+    "PortScan": 0.9473684210526315,
+    "SSH-Patator": 0.9869888475836431,
+    "Web-BruteForce": 0.9411764705882353,
+    "Web-XSS": 0.9896907216494846
+   },
+   "seconds": 1652.8627483844757
+  }
+ ],
+ "n_train": 1178110,
+ "n_val": 362670
+}

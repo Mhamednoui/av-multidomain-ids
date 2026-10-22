@@ -1,0 +1,56 @@
+val check macro 0.9818 (dev 0.9818) FA 0.0099 thr -1.013
+D10 dedup FA 0.0099 macro 0.982 macroAUC 0.998 blind4 0.981 {'Bot': 0.982, 'DDoS-LOIC-HTTP': 0.999, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 0.998, 'DoS-SlowHTTPTest': 0.944, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'Infiltration': 1.0, 'PortScan': 0.947, 'SSH-Patator': 0.989, 'Web-BruteForce': 0.951, 'Web-XSS': 0.99}
+D10 stage FA 0.0123 macro 0.933 macroAUC 0.996 blind4 0.974 {'Bot': 0.982, 'DDoS-LOIC-HTTP': 0.999, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 0.787, 'DoS-SlowHTTPTest': 0.944, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'Infiltration': 1.0, 'PortScan': 0.999, 'SSH-Patator': 0.643, 'Web-BruteForce': 0.924, 'Web-XSS': 0.99}
+D10 published_labels_dedup FA 0.0137 macro 0.982 macroAUC 0.998 blind4 0.981 {'Bot': 0.982, 'DDoS-LOIC-HTTP': 0.999, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 0.998, 'DoS-SlowHTTPTest': 0.944, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'Infiltration': 1.0, 'PortScan': 0.947, 'SSH-Patator': 0.989, 'Web-BruteForce': 0.951, 'Web-XSS': 0.99}
+p=0.5 operating point (not comparable to v2): {'tp': 51062, 'fp': 667, 'fn': 249, 'tn': 310692, 'accuracy': 0.9974742879201478, 'precision': 0.9871058787140675, 'recall': 0.9951472393833681, 'f1': 0.991110248447205, 'fpr': 0.002142221679797276}
+importance top8 [('Bwd Pkt Len Std', 0.247), ('Pkt Len Var', 0.142), ('Bwd Pkt Len Mean', 0.091), ('Fwd Header Len', 0.066), ('Fwd IAT Mean', 0.057), ('Fwd Pkt Len Max', 0.051), ('Pkt Size Avg', 0.043), ('Fwd IAT Min', 0.041)]
+  attribution Bot [('PSH Flag Cnt', 0.1), ('Flow IAT Min', 0.07), ('Flow IAT Max', 0.06), ('Bwd Header Len', 0.05), ('Fwd IAT Min', 0.05)]
+  attribution DDoS-LOIC-HTTP [('Bwd Pkt Len Std', 0.22), ('Fwd Header Len', 0.05), ('Bwd Pkt Len Mean', 0.05), ('Pkt Len Var', 0.05), ('Active Min', 0.04)]
+  attribution DoS-GoldenEye [('Bwd Pkt Len Std', 0.25), ('Fwd Header Len', 0.06), ('Bwd IAT Tot', 0.05), ('Fwd Pkt Len Max', 0.04), ('TotLen Fwd Pkts', 0.04)]
+  attribution DoS-Hulk [('Bwd Pkt Len Std', 0.22), ('Fwd IAT Min', 0.09), ('Bwd Pkt Len Mean', 0.04), ('Idle Min', 0.04), ('Idle Max', 0.04)]
+  attribution DoS-SlowHTTPTest [('Fwd IAT Min', 0.09), ('Idle Min', 0.06), ('Idle Max', 0.06), ('Bwd IAT Max', 0.05), ('Bwd IAT Tot', 0.05)]
+  attribution DoS-Slowloris [('Fwd IAT Min', 0.07), ('Idle Min', 0.06), ('Idle Max', 0.06), ('SYN Flag Cnt', 0.06), ('Idle Mean', 0.05)]
+  attribution FTP-Patator [('Fwd Header Len', 0.13), ('Bwd IAT Tot', 0.08), ('PSH Flag Cnt', 0.07), ('Fwd Pkt Len Max', 0.06), ('Bwd Pkt Len Mean', 0.05)]
+  attribution PortScan [('PSH Flag Cnt', 0.12), ('Fwd Header Len', 0.07), ('Fwd IAT Min', 0.07), ('Bwd Pkts/s', 0.05), ('Fwd Pkt Len Max', 0.05)]
+  attribution SSH-Patator [('Bwd IAT Tot', 0.12), ('Fwd Header Len', 0.09), ('Fwd IAT Min', 0.08), ('Tot Bwd Pkts', 0.06), ('PSH Flag Cnt', 0.06)]
+  attribution Web-BruteForce [('Fwd IAT Min', 0.17), ('Fwd Header Len', 0.13), ('PSH Flag Cnt', 0.07), ('Flow IAT Min', 0.06), ('Flow IAT Max', 0.05)]
+  attribution Web-XSS [('Fwd IAT Min', 0.15), ('Fwd Header Len', 0.14), ('PSH Flag Cnt', 0.07), ('Flow IAT Min', 0.07), ('Flow IAT Max', 0.06)]
+  attribution BENIGN [('Fwd Header Len', 0.1), ('Fwd IAT Min', 0.07), ('PSH Flag Cnt', 0.06), ('Fwd Pkt Len Max', 0.05), ('Flow IAT Max', 0.05)]
+  null seed 0 {'seed': 0, 'auc_test_dedup': 0.5118382952940229, 'fa_test': 0.009998105081272742, 'detection_test': 0.027576932821422307, 'detection_at_real_threshold': 0.0019294108475765431, 'fa_at_real_threshold': 0.00041431273867143713}
+NULL mean AUC 0.5118 (bound 0.55) real AUC 0.9998
+  Bot train_shape {'bot_matched': 0, 'bot_unmatched': 109, 'benign_matched': 14, 'benign_matched_port8080': 0, 'detection_bot_matched': None, 'detection_bot_unmatched': 0.981651376146789, 'fa_benign_matched': 0.0, 'bot_matched_byte_signature_share': None, 'benign_matched_byte_signature_share': 0.0}
+  Bot val_shape {'bot_matched': 95, 'bot_unmatched': 14, 'benign_matched': 103, 'benign_matched_port8080': 101, 'detection_bot_matched': 1.0, 'detection_bot_unmatched': 0.8571428571428571, 'fa_benign_matched': 0.9902912621359223, 'bot_matched_byte_signature_share': 1.0, 'benign_matched_byte_signature_share': 0.9902912621359223, 'auc_bot_vs_benign_same_shape': 0.5015329586101176, 'reading': 'shape only'}
+  harness dedup base FA 0.0098 macro11 0.547 blind4 0.120 {'Bot': 0.0, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 0.01, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.97, 'DoS-Slowloris': 0.48, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 0.55, 'SSH-Patator': 1.0, 'Web-BruteForce': 0.0, 'Web-XSS': 0.0}
+  harness dedup base_l4 FA 0.0087 macro11 0.984 blind4 0.970 {'Bot': 0.97, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.96, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 1.0, 'SSH-Patator': 0.99, 'Web-BruteForce': 0.93, 'Web-XSS': 0.98}
+  harness dedup base_beacon FA 0.0094 macro11 0.546 blind4 0.120 {'Bot': 0.0, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 0.0, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.97, 'DoS-Slowloris': 0.48, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 0.55, 'SSH-Patator': 1.0, 'Web-BruteForce': 0.0, 'Web-XSS': 0.0}
+  harness dedup base_beacon_l4 FA 0.0100 macro11 0.984 blind4 0.970 {'Bot': 0.97, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.96, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 1.0, 'SSH-Patator': 0.99, 'Web-BruteForce': 0.93, 'Web-XSS': 0.98}
+  harness dedup base_l3 FA 0.0100 macro11 0.625 blind4 0.160 {'Bot': 0.06, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 0.5, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.97, 'DoS-Slowloris': 0.58, 'FTP-Patator': 1.0, 'Heartbleed': 0.09, 'PortScan': 0.76, 'SSH-Patator': 1.0, 'Web-BruteForce': 0.0, 'Web-XSS': 0.0}
+  harness dedup base_l3_l4 FA 0.0085 macro11 0.988 blind4 0.972 {'Bot': 0.98, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 1.0, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.73, 'PortScan': 1.0, 'SSH-Patator': 0.99, 'Web-BruteForce': 0.93, 'Web-XSS': 0.98}
+  harness dedup l4_only FA 0.0099 macro11 0.982 blind4 0.981 {'Bot': 0.98, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.94, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 0.95, 'SSH-Patator': 0.99, 'Web-BruteForce': 0.95, 'Web-XSS': 0.99}
+  OR dedup base FA 0.0503 macro11 0.615
+  OR dedup base_l4 FA 0.0593 macro11 0.993
+  OR dedup base_beacon FA 0.0580 macro11 0.640
+  OR dedup base_beacon_l4 FA 0.0670 macro11 0.993
+  OR dedup base_l3 FA 0.0637 macro11 0.643
+  OR dedup base_l3_l4 FA 0.0725 macro11 0.994
+  OR dedup l4_only FA 0.0099 macro11 0.982
+  harness stage base FA 0.0075 macro11 0.435 blind4 0.038 {'Bot': 0.06, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 0.01, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.63, 'DoS-Slowloris': 0.1, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 1.0, 'SSH-Patator': 0.0, 'Web-BruteForce': 0.0, 'Web-XSS': 0.0}
+  harness stage base_l4 FA 0.0100 macro11 0.937 blind4 0.962 {'Bot': 0.97, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.96, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 1.0, 'SSH-Patator': 0.5, 'Web-BruteForce': 0.9, 'Web-XSS': 0.98}
+  harness stage base_beacon FA 0.0100 macro11 0.435 blind4 0.038 {'Bot': 0.06, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 0.01, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.63, 'DoS-Slowloris': 0.1, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 1.0, 'SSH-Patator': 0.0, 'Web-BruteForce': 0.0, 'Web-XSS': 0.0}
+  harness stage base_beacon_l4 FA 0.0079 macro11 0.934 blind4 0.962 {'Bot': 0.97, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.93, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 1.0, 'SSH-Patator': 0.5, 'Web-BruteForce': 0.9, 'Web-XSS': 0.98}
+  harness stage base_l3 FA 0.0099 macro11 0.514 blind4 0.198 {'Bot': 0.06, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 0.01, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 0.85, 'DoS-Slowloris': 0.73, 'FTP-Patator': 1.0, 'Heartbleed': 0.73, 'PortScan': 1.0, 'SSH-Patator': 0.0, 'Web-BruteForce': 0.0, 'Web-XSS': 0.0}
+  harness stage base_l3_l4 FA 0.0089 macro11 0.942 blind4 0.964 {'Bot': 0.98, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 1.0, 'DoS-SlowHTTPTest': 1.0, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.73, 'PortScan': 1.0, 'SSH-Patator': 0.5, 'Web-BruteForce': 0.9, 'Web-XSS': 0.98}
+  harness stage l4_only FA 0.0099 macro11 0.927 blind4 0.971 {'Bot': 0.98, 'DDoS-LOIC-HTTP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-Hulk': 0.79, 'DoS-SlowHTTPTest': 0.94, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Heartbleed': 0.0, 'PortScan': 1.0, 'SSH-Patator': 0.58, 'Web-BruteForce': 0.91, 'Web-XSS': 0.99}
+  OR stage base FA 0.0487 macro11 0.617
+  OR stage base_l4 FA 0.0603 macro11 0.991
+  OR stage base_beacon FA 0.0585 macro11 0.642
+  OR stage base_beacon_l4 FA 0.0699 macro11 0.991
+  OR stage base_l3 FA 0.0608 macro11 0.643
+  OR stage base_l3_l4 FA 0.0719 macro11 0.991
+  OR stage l4_only FA 0.0123 macro11 0.933
+== D23 sample smoke
+  zero_shot FA 0.0494 macro9 0.272 macro9_auc 0.752 {'Bot': 0.004, 'DDoS-HOIC': 0.0, 'DDoS-LOIC-HTTP': 0.763, 'DDoS-LOIC-UDP': 0.0, 'DoS-GoldenEye': 0.371, 'DoS-SlowHTTPTest': 1.0, 'DoS-Slowloris': 1.0, 'FTP-Patator': 1.0, 'Infiltration': 0.031, 'SSH-Patator': 0.0, 'Web-BruteForce': 0.277, 'Web-SQLi': 0.625, 'Web-XSS': 0.514}
+   auc {'Bot': 0.894, 'DDoS-HOIC': 0.588, 'DDoS-LOIC-HTTP': 0.933, 'DDoS-LOIC-UDP': 0.396, 'DoS-GoldenEye': 0.916, 'DoS-SlowHTTPTest': 0.97, 'DoS-Slowloris': 1.0, 'FTP-Patator': 0.971, 'Infiltration': 0.421, 'SSH-Patator': 0.763, 'Web-BruteForce': 0.857, 'Web-SQLi': 0.916, 'Web-XSS': 0.876}
+  recalibrated_no_refit FA 0.0006 macro9 0.122 macro9_auc 0.752 {'Bot': 0.0, 'DDoS-HOIC': 0.0, 'DDoS-LOIC-HTTP': 0.0, 'DDoS-LOIC-UDP': 0.0, 'DoS-GoldenEye': 0.097, 'DoS-SlowHTTPTest': 0.0, 'DoS-Slowloris': 0.999, 'FTP-Patator': 0.0, 'Infiltration': 0.002, 'SSH-Patator': 0.0, 'Web-BruteForce': 0.0, 'Web-SQLi': 0.25, 'Web-XSS': 0.0}
+   auc {'Bot': 0.894, 'DDoS-HOIC': 0.588, 'DDoS-LOIC-HTTP': 0.933, 'DDoS-LOIC-UDP': 0.396, 'DoS-GoldenEye': 0.916, 'DoS-SlowHTTPTest': 0.97, 'DoS-Slowloris': 1.0, 'FTP-Patator': 0.971, 'Infiltration': 0.421, 'SSH-Patator': 0.763, 'Web-BruteForce': 0.857, 'Web-SQLi': 0.916, 'Web-XSS': 0.876}
+  on-network refit FA 0.0083 macro9 0.854 macro9_auc 0.982 {'Bot': 0.997, 'DDoS-HOIC': 0.812, 'DDoS-LOIC-HTTP': 0.985, 'DDoS-LOIC-UDP': 1.0, 'DoS-GoldenEye': 1.0, 'DoS-SlowHTTPTest': 0.0, 'DoS-Slowloris': 0.999, 'FTP-Patator': 0.0, 'Infiltration': 0.181, 'SSH-Patator': 1.0, 'Web-BruteForce': 0.713, 'Web-SQLi': 0.75, 'Web-XSS': 0.629}

@@ -1,0 +1,125 @@
+{
+ "E1_fa_dedup": 0.010000574910888812,
+ "E1_fa_stage": 0.012341571648388746,
+ "E1_fa_published": 0.013028497506001767,
+ "E1_met": true,
+ "E2_null_mean_auc": 0.4769131703003132,
+ "E2_met": true,
+ "E3_top5": [
+  [
+   "Bwd Pkt Len Std",
+   0.2468201733156481
+  ],
+  [
+   "Pkt Len Var",
+   0.14202853188271544
+  ],
+  [
+   "Bwd Pkt Len Mean",
+   0.09062400143324428
+  ],
+  [
+   "Fwd Header Len",
+   0.06589084553929585
+  ],
+  [
+   "Fwd IAT Mean",
+   0.056682755196334283
+  ]
+ ],
+ "E3_top_share": 0.2468201733156481,
+ "E3_flag_over_30pct": false,
+ "E4_reading_val_shape": "shape only",
+ "E4_auc_val_shape": 0.5478581298940581,
+ "E4_reading_train_shape": null,
+ "E4_auc_train_shape": null,
+ "E5_loao_bot_det": 0.0,
+ "E5_loao_bot_met_70": false,
+ "E5_summary": {
+  "macro_l4_unseen": 0.5594270208476612,
+  "macro_base": 0.6145379696755844,
+  "macro_union": 0.896355230307278,
+  "fa_base_val": 0.050260310445498606,
+  "fa_union_val": 0.05946979064505777,
+  "families_l4_unseen_ge50": [
+   "DDoS-LOIC-HTTP",
+   "DoS-GoldenEye",
+   "DoS-Hulk",
+   "DoS-Slowloris",
+   "Web-BruteForce",
+   "Web-XSS"
+  ]
+ },
+ "E5_loao_det": {
+  "Bot": {
+   "Bot": 0.0
+  },
+  "DDoS-LOIC-HTTP": {
+   "DDoS-LOIC-HTTP": 0.6329725753914048
+  },
+  "DoS-GoldenEye": {
+   "DoS-GoldenEye": 0.9262820512820513
+  },
+  "DoS-Hulk": {
+   "DoS-Hulk": 0.9633675860825671
+  },
+  "DoS-SlowHTTPTest": {
+   "DoS-SlowHTTPTest": 0.2935323383084577
+  },
+  "DoS-Slowloris": {
+   "DoS-Slowloris": 0.9938461538461538
+  },
+  "FTP-Patator": {
+   "FTP-Patator": 0.012172284644194757
+  },
+  "SSH-Patator": {
+   "SSH-Patator": 0.0055762081784386614
+  },
+  "PortScan": {
+   "PortScan": 0.4473684210526316
+  },
+  "Web-BruteForce": {
+   "Web-BruteForce": 0.8888888888888888
+  },
+  "Web-XSS": {
+   "Web-XSS": 0.9896907216494846
+  },
+  "DoS-4": {
+   "DoS-GoldenEye": 0.6923076923076923,
+   "DoS-Hulk": 0.006021272760050478,
+   "DoS-SlowHTTPTest": 0.019189765458422176,
+   "DoS-Slowloris": 0.3076923076923077
+  },
+  "WebAttack": {
+   "Web-BruteForce": 0.8006535947712419,
+   "Web-XSS": 0.8041237113402062
+  },
+  "BruteForce": {
+   "FTP-Patator": 0.0046816479400749065,
+   "SSH-Patator": 0.0037174721189591076
+  }
+ },
+ "E6_zero_shot_fa": 0.051708,
+ "E6_met": false,
+ "E7_macro_dedup": {
+  "base": 0.6512273008466057,
+  "base_l4": 0.9795674173882919,
+  "base_beacon": 0.6360982452963019,
+  "base_beacon_l4": 0.9795674173882919,
+  "base_l3": 0.663420087672972,
+  "base_l3_l4": 0.9840045612322386,
+  "l4_only": 0.9799084468750491
+ },
+ "E7_fa_dedup": {
+  "base": 0.00796,
+  "base_l4": 0.00556,
+  "base_beacon": 0.010533333333333334,
+  "base_beacon_l4": 0.006993333333333333,
+  "base_l3": 0.009333333333333334,
+  "base_l3_l4": 0.007693333333333333,
+  "l4_only": 0.01016
+ },
+ "E7_gain_base_to_base_l4": 0.32834011654168616,
+ "E7_gain_stack_with_l3_to_with_l4": 0.32058447355926656,
+ "E7_met": true
+}
