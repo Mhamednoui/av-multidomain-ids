@@ -161,3 +161,112 @@ Pitfalls: Windows forbids "|" in file names (comma route ids): replaced by "_"; 
 stream comes from the WP1 temp pickle (wp1_s4_kitti.pkl in the temp folder, rebuilt identically
 by gps.stream.build_kitti if missing); comma gyro has duplicated timestamps (harmless for the
 trapezoid); comma has two sensor regimes (old routes: GNSS 5 Hz and gyro 10 Hz; newer: gyro ~100 Hz).
+
+## 2026-10-22 S2 start: "which domain lies" (plan + acceptance rule, written BEFORE any S2 result)
+
+Binding (ORCHESTRATOR 2026-10-22): design R (R1 linear bias, R2 one-vehicle CAN scale, R4 forward speed)
++ per-sensor-setup sigma calibration fitted on TRAIN, judged on val; conservative sigmas OK, too narrow not.
+
+### Witness graph (nodes = independent witnesses; domain in brackets)
+KITTI: gps [gps, claim], lidar [lidar], can [can, SIMULATED 0x6e0 via frozen CanDomain], gyro [imu],
+compass [imu] (the WP1 "gps" yaw is the compass heading column, not the receiver).
+Edges (z from the S1 kitti_R SigmaModels, train-fitted; KITTI has one sensor setup):
+gps-lidar speed (R4 fwd), gps-can speed, lidar-can speed, gps-lidar lateral, compass-lidar yaw,
+compass-gyro yaw, gyro-lidar yaw.
+comma2k19: gnss [gps], can (vehicle-speed message) [can], wheel (0xAA wheel-speed message) [can,
+same bus], imu (gyro) [imu]. Edges: gnss-can speed (Doppler), gnss-wheel speed, can-wheel speed (new),
+gnss-can pspeed and gnss-wheel pspeed (pspeed = |GNSS position change over (t-1, t]|: needed because a
+position-only spoof leaves the Doppler speed true), gnss-imu yaw. Lags from S1 (train).
+comma per-setup calibration: setup = route sensor regime from sample rates only (no labels): gyro
+class g10 (<= 20 Hz) / g100, GNSS class n5 (<= 6.5 Hz) / n10. Two candidate definitions, chosen on
+VAL: A = gyro class; B = gyro x gnss class with fallback to the gyro class when the cell has < 3
+train routes. Models (SigmaModel bias="linear") fitted on TRAIN routes of the setup.
+Choice: candidates passing AC1 on val; among them std closest to 1 (mean |std - 1| over edges);
+if none passes, the one with fewest failing edges (reported as NOT MET).
+
+### Sequential test and calibration
+Per edge two-sided CUSUM on z: S+ = max(0, S+ + z - k), S- = max(0, S- - z - k), stat = max(S+, S-);
+z NaN -> state held. Candidates k in {0.25, 0.5, 1.0} and "inst" (stat = |z|), chosen per data set on
+VAL: max mean run-level detection over the SELECTION attacks (below) at the val 1% threshold.
+Calibration on VAL clean rows: per-edge ECDF (common.calibration) of stat; layer statistic
+L = max over observed edges of ECDF_e(stat_e); threshold tau = common.metrics.budget_threshold(L, 0.01)
+(tie-safe). Edge alarm: ECDF_e >= tau. Layer alarm = any edge alarm.
+
+### Blame logic (per second)
+A = alarming edges (collapsed to node pairs). If A empty: no alarm. Blame node D iff {D} is the
+UNIQUE minimum vertex cover of A, D has alarming edges to >= 2 distinct partners, and at least one
+observed, NON-alarming edge joins two of those partners ("the others agree"). Otherwise "undecided"
+(2 witnesses only, two liars, or no confirmed agreement). Blamed domain = domain of D. Emitted as
+Evidence(domain "cross", layer "L2", name "cross.which_domain_lies", reason names D and the edges).
+
+### Attacks (single-domain unless stated; onset index k0 ~ U{3..n-3} per run like WP1)
+KITTI (val + test drives, 10 phases): GPS = WP1 runs of drift, accel_drift, doppler_spoof, meaconing
+(the exact runs the frozen GPS domain was scored on). LiDAR odometry stream (what an attacker of the
+point cloud can cause in ICP): lidar_scale (dx, dy x (1+s), |s| ~ U(0.02, 0.2), random sign),
+lidar_bias (forward offset ramped at 0.4 m/s^2 to |b| ~ U(0.2, 2) m/s), lidar_yaw (yaw-rate bias
+|w| ~ U(0.005, 0.05) rad/s). CAN wheel speed (masquerade of the speed signal; applied to the decoded
+native CAN speed before gridding): can_scale (|s| ~ U(0.02, 0.2)), can_offset (ramped 0.4 m/s^2 to
+|b| ~ U(0.2, 2) m/s, clipped >= 0), can_freeze (held at the onset value).
+Coordinated: gps_can (along-track Doppler-consistent GPS spoof, w ramped at 0.4 m/s^2 to
+|w| ~ U(0.2, 3) m/s, AND the CAN speed raised by the same w: GPS and CAN agree).
+comma (val + test routes, 120 s windows, 2 draws per window and attack, onset 30-90 s into the
+window): gnss drift / accel_drift / doppler_spoof / meaconing (same equations and severity ranges as
+gps/stream.py, applied at native GNSS rate to position, Doppler velocity and bearing), can_scale /
+can_offset / can_freeze on the vehicle-speed message. Coordinated: gnss_can (along-track Doppler spoof
++ same offset on the can message); extra: can_bus (BOTH CAN speed messages scaled together: one domain,
+two messages on one bus).
+SELECTION attacks for the val choices: drift, accel_drift, lidar_scale, lidar_bias, can_scale,
+can_offset. HELD OUT of every choice: doppler_spoof, meaconing, lidar_yaw, can_freeze, coordinated.
+
+### Metrics
+Run level: detection = any layer alarm at t >= onset; blame of a detected run = first decided blame at
+or after onset, else undecided; delay = first alarm - onset. FA: clean rows (row level) and clean runs.
+Comparison: frozen GPSDomain (results/WP1/frozen_gps) on the same KITTI runs; union with cross.
+The CAN domain (ROAD-specific models) cannot run on simulated KITTI CAN or on the comma car: stated,
+M1-CAN numbers quoted as context only.
+
+### Acceptance rule (S2)
+AC1 sigma honesty, not too narrow, clean VAL, every edge of the chosen calibration:
+    |mean z| <= 0.25, std z <= 1.25, p99 |z| <= 4.0 (std < 0.8 allowed = conservative).
+AC2 FA on clean TEST rows <= 1.5% per data set (threshold from val at 1%).
+AC3 mean run-level detection over the single-domain attack types on TEST >= 70% per data set.
+AC4 among detected single-domain attack runs on TEST: correct blame >= 80% and wrong blame <= 5%,
+    per data set (undecided is not correct).
+AC5 KITTI test, doppler_spoof + meaconing pooled: GPS domain OR cross detects >= 10 points more runs
+    than the GPS domain alone (union FA reported).
+AC6 coordinated attacks (prediction, not pass/fail): KITTI gps_can -> LiDAR wrongly blamed in most
+    detected runs; comma gnss_can -> wheel wrongly blamed; comma can_bus -> gnss wrongly blamed.
+AC7 unit tests pass; Evidence contract emitted.
+Test is run ONCE after every choice is frozen (s2_choices.json written before the test stage).
+
+## 2026-10-22 S2 dev + test run 1 (verdict), then a bug in the comma setup classification
+
+Dev (val, results/WP6/s2_dev_run1.json): AC1 KITTI fails on lidar-can (mean -0.33, as in S1); comma A and B pass.
+Chosen (s2_choices_run1.json): comma setup B, KITTI k = inst (sel. 81.1% vs 80.0% for k = 1), comma k = 0.25.
+Test run 1 (s2_test_run1.json, s2_acceptance_run1.json, s2_tables_run1.md): KITTI FA rows 4.42%, comma 9.90%
+(full-route continuous CUSUM 49.5%): AC2 NOT MET on both. Details in the report.
+BUG found after the test, when generating the tables: the route sensor rate used len(t) / duration; the old comma
+routes have every gyro timestamp duplicated, so their 10 Hz gyro read as 20.0-20.1 Hz, above the 20 Hz class limit:
+6 of 7 old routes went into the "g100" class. The per-setup calibration (binding) was therefore NOT done as written.
+Decision (before re-running anything): fix rate() to count unique timestamps (S1 diag did this), rebuild the comma
+cache, re-run dev on VAL (choices may change; KITTI is unaffected and deterministic), then run the comma test ONCE
+more, labelled "SECOND EXPOSURE (bug fix)". Run 1 stays reported as the first verdict, side by side.
+
+## 2026-10-22 S2 run 2 (after the bug fix) and verdict
+Dev run 2 (s2_dev.json): comma setup A chosen (A and B both fail AC1 on 2 edges: gnss-can / gnss-wheel speed
+mean -0.32 (A) / -0.41 (B); A has std closer to 1). With true per-setup models the speed noise is ~0.08 m/s
+and a 0.1-0.2% route-to-route CAN scale shows as a bias. k: KITTI inst, comma 0.25 (unchanged).
+Test run 2 = SECOND EXPOSURE (s2_test.json, s2_acceptance.json, s2_tables.md): comma FA rows 5.36% (speed edges
+0.0%, gnss-imu yaw 4.69%), full-route continuous 35.7% (route 2018-08-17--12-07-08: 85%); detection 100% all
+attacks; blame 96.9% correct / 0% wrong / 3.1% undecided; inst ablation FA 2.29%. KITTI identical to run 1:
+FA 4.42% (drive 0039 9.8%; gyro-lidar yaw edge 2.4%), mean detection 74.4%, blame 48.9 / 6.1 / 44.9%.
+GPS domain on the same KITTI test runs: FA 1.83% (= M1-GPS), Doppler 68.6 / meaconing 61.4 / gps_can 50.0%;
+cross 62.9 / 64.3 / 81.4%; union Doppler+meaconing 70.7% (+5.7 pts, AC5 NOT MET; union FA 5.75%).
+Coordinated: KITTI gps_can -> lidar 30 / undecided 26 / gps 1 of 57; comma gnss_can -> wheel ("can") 31/32;
+can_bus -> gnss 32/32 (predicted).
+Verdict: AC1 NOT MET (KITTI lidar-can; comma run 2), AC2 NOT MET (both), AC3 nominal only (FA over budget),
+AC4 MET comma / NOT MET KITTI, AC5 NOT MET, AC6 confirmed, AC7 MET (18 crossdomain tests pass).
+Pitfalls: (1) comma old routes duplicate every gyro timestamp: count unique timestamps for sample rates.
+(2) low-k CUSUM + real sensor bias drift = runaway alarms; val with 4 routes / 19 windows cannot see it.
+(3) KITTI val k choice by detection alone picked inst, which halves blame quality (val 56% vs 77% at k 0.5).
+Report: reports/WP6_S2.md.

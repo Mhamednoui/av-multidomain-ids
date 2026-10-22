@@ -1,0 +1,6 @@
+{
+ "comma_setup_mode": "B",
+ "kitti_k": "inst",
+ "comma_k": 0.25,
+ "note": "frozen after the dev stage (validation only); the test stage reads this file"
+}

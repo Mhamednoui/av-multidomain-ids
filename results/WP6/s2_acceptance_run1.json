@@ -1,0 +1,66 @@
+{
+ "AC1_sigma_not_too_narrow_val": {
+  "kitti": false,
+  "kitti_failing": [
+   "lidar-can speed"
+  ],
+  "comma": true
+ },
+ "AC2_test_fa_rows_le_1.5pct": {
+  "kitti": 0.04424778761061947,
+  "comma": 0.09895833333333333,
+  "met": {
+   "kitti": false,
+   "comma": false
+  }
+ },
+ "AC3_mean_detection_ge_70pct": {
+  "kitti": 0.7442857142857144,
+  "comma": 1.0,
+  "met": {
+   "kitti": true,
+   "comma": true
+  },
+  "caveat": "obtained at the FA of AC2, which is above budget"
+ },
+ "AC4_blame_correct_ge_80_wrong_le_5": {
+  "kitti": {
+   "detected": 521,
+   "correct_blame": 0.4894433781190019,
+   "wrong_blame": 0.061420345489443376,
+   "undecided": 0.4491362763915547
+  },
+  "comma": {
+   "detected": 224,
+   "correct_blame": 0.9732142857142857,
+   "wrong_blame": 0.0,
+   "undecided": 0.026785714285714284
+  },
+  "met": {
+   "kitti": false,
+   "comma": true
+  }
+ },
+ "AC5_union_gain_ge_10pts_doppler_meaconing": {
+  "gps_domain": 0.65,
+  "union": 0.7071428571428571,
+  "gain_pts": 5.714285714285705,
+  "union_fa_rows": 0.05752212389380531,
+  "met": false
+ },
+ "AC6_coordinated_prediction": {
+  "kitti_gps_can": {
+   "lidar": 30,
+   "undecided": 26,
+   "gps": 1
+  },
+  "comma_gnss_can": {
+   "can": 31,
+   "undecided": 1
+  },
+  "comma_can_bus": {
+   "gps": 32
+  },
+  "note": "comma 'can' domain in gnss_can = the honest wheel message (same bus as the spoofed speed message)"
+ }
+}

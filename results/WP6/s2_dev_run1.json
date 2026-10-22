@@ -1,0 +1,1775 @@
+{
+ "kitti_honesty_val": {
+  "setup": "one KITTI setup, S1 kitti_R models (train)",
+  "edges": {
+   "gps-lidar speed": {
+    "n": 56,
+    "mean": -0.04504510465893589,
+    "std": 0.999326440508049,
+    "p99_abs": 2.417967943714467,
+    "p01": -1.9216509555883337,
+    "p99": 2.1808234635376786,
+    "honest": true
+   },
+   "gps-can speed": {
+    "n": 50,
+    "mean": -0.18140367516122147,
+    "std": 1.0460228286822675,
+    "p99_abs": 2.2504785010897663,
+    "p01": -2.250478501089767,
+    "p99": 1.6565914739890657,
+    "honest": true
+   },
+   "lidar-can speed": {
+    "n": 50,
+    "mean": -0.33381639568937166,
+    "std": 0.9314475129756988,
+    "p99_abs": 2.469677797167561,
+    "p01": -2.469677797167562,
+    "p99": 1.4111303357197937,
+    "honest": false
+   },
+   "gps-lidar lateral": {
+    "n": 56,
+    "mean": 0.1283798866196776,
+    "std": 0.8761905854218826,
+    "p99_abs": 2.118555472312776,
+    "p01": -1.763904632704898,
+    "p99": 1.9917103060684007,
+    "honest": true
+   },
+   "compass-lidar yaw": {
+    "n": 56,
+    "mean": -0.015699049142016745,
+    "std": 1.046402296278045,
+    "p99_abs": 2.4290120606600385,
+    "p01": -1.9909210129057908,
+    "p99": 2.4290120606600385,
+    "honest": true
+   },
+   "compass-gyro yaw": {
+    "n": 56,
+    "mean": 0.009447246843585515,
+    "std": 1.043777365002826,
+    "p99_abs": 2.2288749523774314,
+    "p01": -1.8830235007686251,
+    "p99": 2.2288749523774314,
+    "honest": true
+   },
+   "gyro-lidar yaw": {
+    "n": 56,
+    "mean": -0.1696612898517296,
+    "std": 0.7313267217170105,
+    "p99_abs": 2.2671059752838207,
+    "p01": -2.2671059752838194,
+    "p99": 1.4070133377413259,
+    "honest": false
+   }
+  },
+  "ac1": {
+   "gps-lidar speed": true,
+   "gps-can speed": true,
+   "lidar-can speed": false,
+   "gps-lidar lateral": true,
+   "compass-lidar yaw": true,
+   "compass-gyro yaw": true,
+   "gyro-lidar yaw": true
+  }
+ },
+ "comma_setups": {
+  "b0c9d2329ad1606b_2018-07-27--06-03-57": {
+   "part": "train",
+   "gyro_hz": 20.04529434487891,
+   "gnss_hz": 5.014653113367727
+  },
+  "b0c9d2329ad1606b_2018-07-27--06-50-48": {
+   "part": "train",
+   "gyro_hz": 20.04575664265301,
+   "gnss_hz": 5.143810175707333
+  },
+  "b0c9d2329ad1606b_2018-07-29--11-17-20": {
+   "part": "train",
+   "gyro_hz": 20.04825754134529,
+   "gnss_hz": 9.83295913380272
+  },
+  "b0c9d2329ad1606b_2018-07-29--12-02-42": {
+   "part": "train",
+   "gyro_hz": 20.049238169861,
+   "gnss_hz": 8.80157750409981
+  },
+  "b0c9d2329ad1606b_2018-07-29--16-37-17": {
+   "part": "train",
+   "gyro_hz": 20.058267521931676,
+   "gnss_hz": 9.482435788120755
+  },
+  "b0c9d2329ad1606b_2018-07-30--13-03-07": {
+   "part": "train",
+   "gyro_hz": 17.81515744895161,
+   "gnss_hz": 8.508929800010112
+  },
+  "b0c9d2329ad1606b_2018-07-30--13-44-30": {
+   "part": "train",
+   "gyro_hz": 20.044924144560294,
+   "gnss_hz": 9.316623726896998
+  },
+  "b0c9d2329ad1606b_2018-07-31--20-50-28": {
+   "part": "train",
+   "gyro_hz": 81.10397799407056,
+   "gnss_hz": 3.975547071379379
+  },
+  "b0c9d2329ad1606b_2018-08-01--21-13-49": {
+   "part": "train",
+   "gyro_hz": 104.27951188699416,
+   "gnss_hz": 5.128416920298637
+  },
+  "b0c9d2329ad1606b_2018-08-02--08-34-47": {
+   "part": "train",
+   "gyro_hz": 104.26440090786481,
+   "gnss_hz": 9.805242188249297
+  },
+  "b0c9d2329ad1606b_2018-08-02--16-41-38": {
+   "part": "train",
+   "gyro_hz": 88.2067925390653,
+   "gnss_hz": 7.5290742875517145
+  },
+  "b0c9d2329ad1606b_2018-08-03--10-35-16": {
+   "part": "train",
+   "gyro_hz": 96.23004581636982,
+   "gnss_hz": 9.130552969573863
+  },
+  "b0c9d2329ad1606b_2018-08-06--10-04-53": {
+   "part": "train",
+   "gyro_hz": 86.87054082306176,
+   "gnss_hz": 8.128965416023474
+  },
+  "b0c9d2329ad1606b_2018-08-10--22-42-26": {
+   "part": "val",
+   "gyro_hz": 93.85443531689508,
+   "gnss_hz": 4.557441603987834
+  },
+  "b0c9d2329ad1606b_2018-08-14--10-32-01": {
+   "part": "val",
+   "gyro_hz": 104.26965722948886,
+   "gnss_hz": 9.073001603853935
+  },
+  "b0c9d2329ad1606b_2018-08-14--20-41-07": {
+   "part": "val",
+   "gyro_hz": 104.27984259539991,
+   "gnss_hz": 5.169285419256057
+  },
+  "b0c9d2329ad1606b_2018-08-15--09-01-03": {
+   "part": "val",
+   "gyro_hz": 104.26402787333807,
+   "gnss_hz": 9.968972664978388
+  },
+  "b0c9d2329ad1606b_2018-08-16--21-52-30": {
+   "part": "test",
+   "gyro_hz": 78.21170714261886,
+   "gnss_hz": 3.78166323716108
+  },
+  "b0c9d2329ad1606b_2018-08-17--12-07-08": {
+   "part": "test",
+   "gyro_hz": 104.26500526358696,
+   "gnss_hz": 9.380967990817153
+  },
+  "b0c9d2329ad1606b_2018-08-17--14-17-47": {
+   "part": "test",
+   "gyro_hz": 104.24474099409275,
+   "gnss_hz": 7.563140961673067
+  },
+  "b0c9d2329ad1606b_2018-08-17--14-55-39": {
+   "part": "test",
+   "gyro_hz": 104.24854206582617,
+   "gnss_hz": 5.242764228750536
+  }
+ },
+ "comma_honesty_val": {
+  "A": {
+   "edges": {
+    "gnss-can speed": {
+     "n": 2566,
+     "mean": -0.11806978233378157,
+     "std": 0.7714976526768437,
+     "p99_abs": 2.501061311416314,
+     "p01": -2.1286185829374804,
+     "p99": 1.431092502255615,
+     "honest": false
+    },
+    "gnss-wheel speed": {
+     "n": 2566,
+     "mean": -0.11568019238723963,
+     "std": 0.8342868009923281,
+     "p99_abs": 2.64378525996961,
+     "p01": -2.218865496276388,
+     "p99": 1.5665960266641008,
+     "honest": true
+    },
+    "can-wheel speed": {
+     "n": 2566,
+     "mean": 0.030684953930933238,
+     "std": 0.08376431310716487,
+     "p99_abs": 0.3506847337762331,
+     "p01": -0.065903525774772,
+     "p99": 0.3506847337762331,
+     "honest": false
+    },
+    "gnss-can pspeed": {
+     "n": 2566,
+     "mean": -0.0616263660703153,
+     "std": 0.9470619596469806,
+     "p99_abs": 3.246222457091326,
+     "p01": -2.924327159887886,
+     "p99": 2.6847882625664443,
+     "honest": true
+    },
+    "gnss-wheel pspeed": {
+     "n": 2566,
+     "mean": -0.05700098612378166,
+     "std": 0.9526486330958536,
+     "p99_abs": 3.258941037797813,
+     "p01": -2.933585813497563,
+     "p99": 2.7180866323534825,
+     "honest": true
+    },
+    "gnss-imu yaw": {
+     "n": 2469,
+     "mean": -0.17687644139472594,
+     "std": 0.773886147901105,
+     "p99_abs": 2.6075907510589773,
+     "p01": -1.9258465934346274,
+     "p99": 1.5871483975057932,
+     "honest": false
+    }
+   },
+   "ac1": {
+    "gnss-can speed": true,
+    "gnss-wheel speed": true,
+    "can-wheel speed": true,
+    "gnss-can pspeed": true,
+    "gnss-wheel pspeed": true,
+    "gnss-imu yaw": true
+   },
+   "n_fail": 0,
+   "mean_abs_std_minus_1": 0.27280908209662075,
+   "cells": {
+    "g10": {
+     "train_routes": 1,
+     "fallback": null
+    },
+    "g100": {
+     "train_routes": 12,
+     "fallback": null
+    }
+   },
+   "models": {
+    "g10": {
+     "gnss-can speed": {
+      "bias_mode": "linear",
+      "bias": -0.016220765709437854,
+      "bias_per_mps": 0.009308132803108873,
+      "a": 0.13871270602879276,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -0.0162907675905801,
+      "bias_per_mps": 0.00930987961737247,
+      "a": 0.13862671695029496,
+      "b": 0.0,
+      "bins": 10
+     },
+     "can-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -6.970954714317009e-05,
+      "bias_per_mps": 1.7476462623424888e-06,
+      "a": 0.0010302904931481648,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-can pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.021347364143937987,
+      "bias_per_mps": 0.011595494583115293,
+      "a": 0.15657250130155562,
+      "b": 0.01094560664964863,
+      "bins": 10
+     },
+     "gnss-wheel pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.021417385703008357,
+      "bias_per_mps": 0.01159723891074029,
+      "a": 0.15580096529030765,
+      "b": 0.010958522586168508,
+      "bins": 10
+     },
+     "gnss-imu yaw": {
+      "bias_mode": "linear",
+      "bias": 0.0022098358212361037,
+      "bias_per_mps": -5.901789224652835e-05,
+      "a": 0.011644497872667338,
+      "b": 0.0,
+      "bins": 10
+     }
+    },
+    "g100": {
+     "gnss-can speed": {
+      "bias_mode": "linear",
+      "bias": -0.006319363953168254,
+      "bias_per_mps": 0.010368907976552499,
+      "a": 0.07351437673336453,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -0.014588239648891126,
+      "bias_per_mps": 0.010660974533011375,
+      "a": 0.06753984813464547,
+      "b": 0.0,
+      "bins": 10
+     },
+     "can-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -0.008227225893108824,
+      "bias_per_mps": 0.00029206594078694015,
+      "a": 0.028070921567693922,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-can pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.0039146483394228385,
+      "bias_per_mps": 0.012435956777597746,
+      "a": 0.14898926830504694,
+      "b": 0.009507036001786517,
+      "bins": 10
+     },
+     "gnss-wheel pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.012193055098747553,
+      "bias_per_mps": 0.012728037351764358,
+      "a": 0.13792788464536035,
+      "b": 0.00968772912001487,
+      "bins": 10
+     },
+     "gnss-imu yaw": {
+      "bias_mode": "linear",
+      "bias": 0.0003084281308947079,
+      "bias_per_mps": 3.996794586556042e-05,
+      "a": 0.007994055468272742,
+      "b": 0.0,
+      "bins": 10
+     }
+    }
+   }
+  },
+  "B": {
+   "edges": {
+    "gnss-can speed": {
+     "n": 2566,
+     "mean": -0.04906291744733813,
+     "std": 0.754414587666848,
+     "p99_abs": 2.6393336692970135,
+     "p01": -1.967763136381526,
+     "p99": 1.5142060795810668,
+     "honest": false
+    },
+    "gnss-wheel speed": {
+     "n": 2566,
+     "mean": -0.04502777784019518,
+     "std": 0.8660786349809844,
+     "p99_abs": 2.929958938739169,
+     "p01": -2.1961699600585796,
+     "p99": 1.8011198013209668,
+     "honest": true
+    },
+    "can-wheel speed": {
+     "n": 2566,
+     "mean": 0.0014779220962756092,
+     "std": 0.6463831199309423,
+     "p99_abs": 3.159357813368814,
+     "p01": -2.0123653404172734,
+     "p99": 2.8621325632692214,
+     "honest": false
+    },
+    "gnss-can pspeed": {
+     "n": 2566,
+     "mean": -0.04448929212877346,
+     "std": 0.9641769100012652,
+     "p99_abs": 3.3119701110124833,
+     "p01": -2.951862603438443,
+     "p99": 2.723186762715197,
+     "honest": true
+    },
+    "gnss-wheel pspeed": {
+     "n": 2566,
+     "mean": -0.042708792026312614,
+     "std": 0.9669895543151157,
+     "p99_abs": 3.3302496013028624,
+     "p01": -2.9953107029695736,
+     "p99": 2.7449947957735503,
+     "honest": true
+    },
+    "gnss-imu yaw": {
+     "n": 2469,
+     "mean": -0.16351150068003703,
+     "std": 0.7944603596986017,
+     "p99_abs": 2.4944047065138224,
+     "p01": -1.9317771581239396,
+     "p99": 1.627561598279571,
+     "honest": false
+    }
+   },
+   "ac1": {
+    "gnss-can speed": true,
+    "gnss-wheel speed": true,
+    "can-wheel speed": true,
+    "gnss-can pspeed": true,
+    "gnss-wheel pspeed": true,
+    "gnss-imu yaw": true
+   },
+   "n_fail": 0,
+   "mean_abs_std_minus_1": 0.16791613890104048,
+   "cells": {
+    "g100n10": {
+     "train_routes": 8,
+     "fallback": null
+    },
+    "g100n5": {
+     "train_routes": 4,
+     "fallback": null
+    },
+    "g10n10": {
+     "train_routes": 1,
+     "fallback": "g10"
+    }
+   },
+   "models": {
+    "g100n10": {
+     "gnss-can speed": {
+      "bias_mode": "linear",
+      "bias": -0.004921311089501393,
+      "bias_per_mps": 0.010794162872063466,
+      "a": 0.06339852348147464,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -0.016623789956464633,
+      "bias_per_mps": 0.011214962104905482,
+      "a": 0.05240481949822375,
+      "b": 0.0,
+      "bins": 10
+     },
+     "can-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -0.011640569043676257,
+      "bias_per_mps": 0.0004207768792094573,
+      "a": 0.03440506712186723,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-can pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.004458999290133116,
+      "bias_per_mps": 0.012914101652702287,
+      "a": 0.16734487917449475,
+      "b": 0.008914108515878979,
+      "bins": 10
+     },
+     "gnss-wheel pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.01617445883716479,
+      "bias_per_mps": 0.013334891014570908,
+      "a": 0.15382123406556494,
+      "b": 0.009180090195726845,
+      "bins": 10
+     },
+     "gnss-imu yaw": {
+      "bias_mode": "linear",
+      "bias": 0.0003147149045384773,
+      "bias_per_mps": 3.661251358837304e-05,
+      "a": 0.008440614820196824,
+      "b": 0.0,
+      "bins": 10
+     }
+    },
+    "g100n5": {
+     "gnss-can speed": {
+      "bias_mode": "linear",
+      "bias": -0.015678391636774015,
+      "bias_per_mps": 0.009882095751180703,
+      "a": 0.08572609067181076,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -0.015693435868158363,
+      "bias_per_mps": 0.009881471006939384,
+      "a": 0.08568572107822998,
+      "b": 0.0,
+      "bins": 10
+     },
+     "can-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -1.4969407656193612e-05,
+      "bias_per_mps": -6.245941042195753e-07,
+      "a": 0.0011660714065239164,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-can pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.008349385810823411,
+      "bias_per_mps": 0.011808161583724323,
+      "a": 0.08982355375458881,
+      "b": 0.010579366048052255,
+      "bins": 10
+     },
+     "gnss-wheel pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.008364398004238664,
+      "bias_per_mps": 0.011807535050085083,
+      "a": 0.08840798706309737,
+      "b": 0.010591486637755172,
+      "bins": 10
+     },
+     "gnss-imu yaw": {
+      "bias_mode": "linear",
+      "bias": 0.00040701013908787855,
+      "bias_per_mps": 4.192500197114352e-05,
+      "a": 0.007027163560357044,
+      "b": 0.0,
+      "bins": 10
+     }
+    },
+    "g10n10": {
+     "gnss-can speed": {
+      "bias_mode": "linear",
+      "bias": -0.016220765709437854,
+      "bias_per_mps": 0.009308132803108873,
+      "a": 0.13871270602879276,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -0.0162907675905801,
+      "bias_per_mps": 0.00930987961737247,
+      "a": 0.13862671695029496,
+      "b": 0.0,
+      "bins": 10
+     },
+     "can-wheel speed": {
+      "bias_mode": "linear",
+      "bias": -6.970954714317009e-05,
+      "bias_per_mps": 1.7476462623424888e-06,
+      "a": 0.0010302904931481648,
+      "b": 0.0,
+      "bins": 10
+     },
+     "gnss-can pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.021347364143937987,
+      "bias_per_mps": 0.011595494583115293,
+      "a": 0.15657250130155562,
+      "b": 0.01094560664964863,
+      "bins": 10
+     },
+     "gnss-wheel pspeed": {
+      "bias_mode": "linear",
+      "bias": -0.021417385703008357,
+      "bias_per_mps": 0.01159723891074029,
+      "a": 0.15580096529030765,
+      "b": 0.010958522586168508,
+      "bins": 10
+     },
+     "gnss-imu yaw": {
+      "bias_mode": "linear",
+      "bias": 0.0022098358212361037,
+      "bias_per_mps": -5.901789224652835e-05,
+      "a": 0.011644497872667338,
+      "b": 0.0,
+      "bins": 10
+     }
+    }
+   }
+  }
+ },
+ "kitti_k": {
+  "0.25": {
+   "fa_rows": 0.007017543859649123,
+   "clean_rows": 570,
+   "fa_runs": 0.13333333333333333,
+   "clean_runs": 30,
+   "clean_rows_with_decided_blame": 1,
+   "attacks": {
+    "drift": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 2.0,
+     "undecided": 0.2962962962962963,
+     "blame_counts": {
+      "gps": 18,
+      "undecided": 8,
+      "imu": 1
+     },
+     "correct_blame": 0.6666666666666666,
+     "wrong_blame": 0.037037037037037035
+    },
+    "accel_drift": {
+     "runs": 30,
+     "detection": 0.7666666666666667,
+     "detected": 23,
+     "median_delay_s": 4.0,
+     "undecided": 0.2608695652173913,
+     "blame_counts": {
+      "gps": 16,
+      "undecided": 6,
+      "imu": 1
+     },
+     "correct_blame": 0.6956521739130435,
+     "wrong_blame": 0.043478260869565216
+    },
+    "doppler_spoof": {
+     "runs": 30,
+     "detection": 0.8333333333333334,
+     "detected": 25,
+     "median_delay_s": 4.0,
+     "undecided": 0.4,
+     "blame_counts": {
+      "gps": 15,
+      "undecided": 10
+     },
+     "correct_blame": 0.6,
+     "wrong_blame": 0.0
+    },
+    "meaconing": {
+     "runs": 30,
+     "detection": 0.6,
+     "detected": 18,
+     "median_delay_s": 3.5,
+     "undecided": 0.2777777777777778,
+     "blame_counts": {
+      "gps": 13,
+      "undecided": 5
+     },
+     "correct_blame": 0.7222222222222222,
+     "wrong_blame": 0.0
+    },
+    "lidar_scale": {
+     "runs": 30,
+     "detection": 0.7666666666666667,
+     "detected": 23,
+     "median_delay_s": 1.0,
+     "undecided": 0.21739130434782608,
+     "blame_counts": {
+      "lidar": 18,
+      "undecided": 5
+     },
+     "correct_blame": 0.782608695652174,
+     "wrong_blame": 0.0
+    },
+    "lidar_bias": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 3.0,
+     "undecided": 0.25925925925925924,
+     "blame_counts": {
+      "lidar": 20,
+      "undecided": 7
+     },
+     "correct_blame": 0.7407407407407407,
+     "wrong_blame": 0.0
+    },
+    "lidar_yaw": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 1.0,
+     "undecided": 0.3333333333333333,
+     "blame_counts": {
+      "lidar": 18,
+      "undecided": 9
+     },
+     "correct_blame": 0.6666666666666666,
+     "wrong_blame": 0.0
+    },
+    "can_scale": {
+     "runs": 30,
+     "detection": 0.6,
+     "detected": 18,
+     "median_delay_s": 2.0,
+     "undecided": 0.2222222222222222,
+     "blame_counts": {
+      "can": 12,
+      "undecided": 4,
+      "imu": 1,
+      "lidar": 1
+     },
+     "correct_blame": 0.6666666666666666,
+     "wrong_blame": 0.1111111111111111
+    },
+    "can_offset": {
+     "runs": 30,
+     "detection": 0.8,
+     "detected": 24,
+     "median_delay_s": 3.0,
+     "undecided": 0.125,
+     "blame_counts": {
+      "can": 20,
+      "undecided": 3,
+      "imu": 1
+     },
+     "correct_blame": 0.8333333333333334,
+     "wrong_blame": 0.041666666666666664
+    },
+    "can_freeze": {
+     "runs": 30,
+     "detection": 0.7666666666666667,
+     "detected": 23,
+     "median_delay_s": 3.0,
+     "undecided": 0.13043478260869565,
+     "blame_counts": {
+      "can": 20,
+      "undecided": 3
+     },
+     "correct_blame": 0.8695652173913043,
+     "wrong_blame": 0.0
+    },
+    "gps_can": {
+     "runs": 30,
+     "detection": 0.8,
+     "detected": 24,
+     "median_delay_s": 3.0,
+     "undecided": 0.16666666666666666,
+     "blame_counts": {
+      "lidar": 16,
+      "can": 4,
+      "undecided": 4
+     }
+    }
+   },
+   "mean_detection_single": 0.7833333333333334,
+   "pooled_single": {
+    "detected": 235,
+    "correct_blame": 0.723404255319149,
+    "wrong_blame": 0.02127659574468085,
+    "undecided": 0.2553191489361702
+   },
+   "selection_mean_detection": 0.7888888888888889,
+   "tau": 0.9979166666666668
+  },
+  "0.5": {
+   "fa_rows": 0.007017543859649123,
+   "clean_rows": 570,
+   "fa_runs": 0.13333333333333333,
+   "clean_runs": 30,
+   "clean_rows_with_decided_blame": 1,
+   "attacks": {
+    "drift": {
+     "runs": 30,
+     "detection": 0.8666666666666667,
+     "detected": 26,
+     "median_delay_s": 2.0,
+     "undecided": 0.11538461538461539,
+     "blame_counts": {
+      "gps": 22,
+      "undecided": 3,
+      "imu": 1
+     },
+     "correct_blame": 0.8461538461538461,
+     "wrong_blame": 0.038461538461538464
+    },
+    "accel_drift": {
+     "runs": 30,
+     "detection": 0.8,
+     "detected": 24,
+     "median_delay_s": 4.0,
+     "undecided": 0.16666666666666666,
+     "blame_counts": {
+      "gps": 19,
+      "undecided": 4,
+      "imu": 1
+     },
+     "correct_blame": 0.7916666666666666,
+     "wrong_blame": 0.041666666666666664
+    },
+    "doppler_spoof": {
+     "runs": 30,
+     "detection": 0.8333333333333334,
+     "detected": 25,
+     "median_delay_s": 4.0,
+     "undecided": 0.24,
+     "blame_counts": {
+      "gps": 19,
+      "undecided": 6
+     },
+     "correct_blame": 0.76,
+     "wrong_blame": 0.0
+    },
+    "meaconing": {
+     "runs": 30,
+     "detection": 0.7,
+     "detected": 21,
+     "median_delay_s": 3.0,
+     "undecided": 0.19047619047619047,
+     "blame_counts": {
+      "gps": 17,
+      "undecided": 4
+     },
+     "correct_blame": 0.8095238095238095,
+     "wrong_blame": 0.0
+    },
+    "lidar_scale": {
+     "runs": 30,
+     "detection": 0.7333333333333333,
+     "detected": 22,
+     "median_delay_s": 0.0,
+     "undecided": 0.13636363636363635,
+     "blame_counts": {
+      "lidar": 19,
+      "undecided": 3
+     },
+     "correct_blame": 0.8636363636363636,
+     "wrong_blame": 0.0
+    },
+    "lidar_bias": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 3.0,
+     "undecided": 0.25925925925925924,
+     "blame_counts": {
+      "lidar": 20,
+      "undecided": 7
+     },
+     "correct_blame": 0.7407407407407407,
+     "wrong_blame": 0.0
+    },
+    "lidar_yaw": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 1.0,
+     "undecided": 0.5555555555555556,
+     "blame_counts": {
+      "undecided": 15,
+      "lidar": 12
+     },
+     "correct_blame": 0.4444444444444444,
+     "wrong_blame": 0.0
+    },
+    "can_scale": {
+     "runs": 30,
+     "detection": 0.6666666666666666,
+     "detected": 20,
+     "median_delay_s": 1.9999999999999998,
+     "undecided": 0.15,
+     "blame_counts": {
+      "can": 15,
+      "undecided": 3,
+      "imu": 1,
+      "lidar": 1
+     },
+     "correct_blame": 0.75,
+     "wrong_blame": 0.1
+    },
+    "can_offset": {
+     "runs": 30,
+     "detection": 0.8,
+     "detected": 24,
+     "median_delay_s": 3.0,
+     "undecided": 0.08333333333333333,
+     "blame_counts": {
+      "can": 21,
+      "undecided": 2,
+      "imu": 1
+     },
+     "correct_blame": 0.875,
+     "wrong_blame": 0.041666666666666664
+    },
+    "can_freeze": {
+     "runs": 30,
+     "detection": 0.8333333333333334,
+     "detected": 25,
+     "median_delay_s": 3.0,
+     "undecided": 0.08,
+     "blame_counts": {
+      "can": 22,
+      "undecided": 2,
+      "lidar": 1
+     },
+     "correct_blame": 0.88,
+     "wrong_blame": 0.04
+    },
+    "gps_can": {
+     "runs": 30,
+     "detection": 0.8666666666666667,
+     "detected": 26,
+     "median_delay_s": 3.0,
+     "undecided": 0.15384615384615385,
+     "blame_counts": {
+      "lidar": 17,
+      "can": 5,
+      "undecided": 4
+     }
+    }
+   },
+   "mean_detection_single": 0.8033333333333333,
+   "pooled_single": {
+    "detected": 241,
+    "correct_blame": 0.7717842323651453,
+    "wrong_blame": 0.024896265560165973,
+    "undecided": 0.2033195020746888
+   },
+   "selection_mean_detection": 0.7944444444444444,
+   "tau": 0.9979166666666668
+  },
+  "1.0": {
+   "fa_rows": 0.008771929824561403,
+   "clean_rows": 570,
+   "fa_runs": 0.16666666666666666,
+   "clean_runs": 30,
+   "clean_rows_with_decided_blame": 2,
+   "attacks": {
+    "drift": {
+     "runs": 30,
+     "detection": 0.8333333333333334,
+     "detected": 25,
+     "median_delay_s": 1.9999999999999991,
+     "undecided": 0.2,
+     "blame_counts": {
+      "gps": 18,
+      "undecided": 5,
+      "imu": 2
+     },
+     "correct_blame": 0.72,
+     "wrong_blame": 0.08
+    },
+    "accel_drift": {
+     "runs": 30,
+     "detection": 0.8,
+     "detected": 24,
+     "median_delay_s": 4.0,
+     "undecided": 0.20833333333333334,
+     "blame_counts": {
+      "gps": 17,
+      "undecided": 5,
+      "imu": 2
+     },
+     "correct_blame": 0.7083333333333334,
+     "wrong_blame": 0.08333333333333333
+    },
+    "doppler_spoof": {
+     "runs": 30,
+     "detection": 0.8666666666666667,
+     "detected": 26,
+     "median_delay_s": 3.999999999999999,
+     "undecided": 0.34615384615384615,
+     "blame_counts": {
+      "gps": 17,
+      "undecided": 9
+     },
+     "correct_blame": 0.6538461538461539,
+     "wrong_blame": 0.0
+    },
+    "meaconing": {
+     "runs": 30,
+     "detection": 0.6666666666666666,
+     "detected": 20,
+     "median_delay_s": 3.0,
+     "undecided": 0.2,
+     "blame_counts": {
+      "gps": 15,
+      "undecided": 4,
+      "imu": 1
+     },
+     "correct_blame": 0.75,
+     "wrong_blame": 0.05
+    },
+    "lidar_scale": {
+     "runs": 30,
+     "detection": 0.7333333333333333,
+     "detected": 22,
+     "median_delay_s": 0.0,
+     "undecided": 0.22727272727272727,
+     "blame_counts": {
+      "lidar": 17,
+      "undecided": 5
+     },
+     "correct_blame": 0.7727272727272727,
+     "wrong_blame": 0.0
+    },
+    "lidar_bias": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 2.0,
+     "undecided": 0.25925925925925924,
+     "blame_counts": {
+      "lidar": 19,
+      "undecided": 7,
+      "imu": 1
+     },
+     "correct_blame": 0.7037037037037037,
+     "wrong_blame": 0.037037037037037035
+    },
+    "lidar_yaw": {
+     "runs": 30,
+     "detection": 0.8333333333333334,
+     "detected": 25,
+     "median_delay_s": 0.0,
+     "undecided": 0.68,
+     "blame_counts": {
+      "undecided": 17,
+      "lidar": 8
+     },
+     "correct_blame": 0.32,
+     "wrong_blame": 0.0
+    },
+    "can_scale": {
+     "runs": 30,
+     "detection": 0.6666666666666666,
+     "detected": 20,
+     "median_delay_s": 1.5000000000000002,
+     "undecided": 0.3,
+     "blame_counts": {
+      "can": 13,
+      "undecided": 6,
+      "gps": 1
+     },
+     "correct_blame": 0.65,
+     "wrong_blame": 0.05
+    },
+    "can_offset": {
+     "runs": 30,
+     "detection": 0.8666666666666667,
+     "detected": 26,
+     "median_delay_s": 3.0,
+     "undecided": 0.07692307692307693,
+     "blame_counts": {
+      "can": 22,
+      "undecided": 2,
+      "gps": 1,
+      "imu": 1
+     },
+     "correct_blame": 0.8461538461538461,
+     "wrong_blame": 0.07692307692307693
+    },
+    "can_freeze": {
+     "runs": 30,
+     "detection": 0.8333333333333334,
+     "detected": 25,
+     "median_delay_s": 3.0,
+     "undecided": 0.08,
+     "blame_counts": {
+      "can": 22,
+      "undecided": 2,
+      "imu": 1
+     },
+     "correct_blame": 0.88,
+     "wrong_blame": 0.04
+    },
+    "gps_can": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 3.0,
+     "undecided": 0.2962962962962963,
+     "blame_counts": {
+      "lidar": 14,
+      "undecided": 8,
+      "can": 4,
+      "gps": 1
+     }
+    }
+   },
+   "mean_detection_single": 0.7999999999999999,
+   "pooled_single": {
+    "detected": 240,
+    "correct_blame": 0.7,
+    "wrong_blame": 0.041666666666666664,
+    "undecided": 0.25833333333333336
+   },
+   "selection_mean_detection": 0.7999999999999999,
+   "tau": 0.9962962962962965
+  },
+  "inst": {
+   "fa_rows": 0.008771929824561403,
+   "clean_rows": 570,
+   "fa_runs": 0.16666666666666666,
+   "clean_runs": 30,
+   "clean_rows_with_decided_blame": 2,
+   "attacks": {
+    "drift": {
+     "runs": 30,
+     "detection": 0.7333333333333333,
+     "detected": 22,
+     "median_delay_s": 1.0000000000000009,
+     "undecided": 0.18181818181818182,
+     "blame_counts": {
+      "gps": 15,
+      "undecided": 4,
+      "imu": 3
+     },
+     "correct_blame": 0.6818181818181818,
+     "wrong_blame": 0.13636363636363635
+    },
+    "accel_drift": {
+     "runs": 30,
+     "detection": 0.7333333333333333,
+     "detected": 22,
+     "median_delay_s": 4.5,
+     "undecided": 0.3181818181818182,
+     "blame_counts": {
+      "gps": 13,
+      "undecided": 7,
+      "imu": 2
+     },
+     "correct_blame": 0.5909090909090909,
+     "wrong_blame": 0.09090909090909091
+    },
+    "doppler_spoof": {
+     "runs": 30,
+     "detection": 0.6333333333333333,
+     "detected": 19,
+     "median_delay_s": 4.0,
+     "undecided": 0.3157894736842105,
+     "blame_counts": {
+      "gps": 12,
+      "undecided": 6,
+      "lidar": 1
+     },
+     "correct_blame": 0.631578947368421,
+     "wrong_blame": 0.05263157894736842
+    },
+    "meaconing": {
+     "runs": 30,
+     "detection": 0.5666666666666667,
+     "detected": 17,
+     "median_delay_s": 3.0,
+     "undecided": 0.11764705882352941,
+     "blame_counts": {
+      "gps": 14,
+      "undecided": 2,
+      "imu": 1
+     },
+     "correct_blame": 0.8235294117647058,
+     "wrong_blame": 0.058823529411764705
+    },
+    "lidar_scale": {
+     "runs": 30,
+     "detection": 0.8333333333333334,
+     "detected": 25,
+     "median_delay_s": 0.0,
+     "undecided": 0.4,
+     "blame_counts": {
+      "lidar": 15,
+      "undecided": 10
+     },
+     "correct_blame": 0.6,
+     "wrong_blame": 0.0
+    },
+    "lidar_bias": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 1.0,
+     "undecided": 0.4444444444444444,
+     "blame_counts": {
+      "lidar": 14,
+      "undecided": 12,
+      "imu": 1
+     },
+     "correct_blame": 0.5185185185185185,
+     "wrong_blame": 0.037037037037037035
+    },
+    "lidar_yaw": {
+     "runs": 30,
+     "detection": 0.7,
+     "detected": 21,
+     "median_delay_s": 0.0,
+     "undecided": 0.8095238095238095,
+     "blame_counts": {
+      "undecided": 17,
+      "lidar": 4
+     },
+     "correct_blame": 0.19047619047619047,
+     "wrong_blame": 0.0
+    },
+    "can_scale": {
+     "runs": 30,
+     "detection": 0.7666666666666667,
+     "detected": 23,
+     "median_delay_s": 1.0,
+     "undecided": 0.6521739130434783,
+     "blame_counts": {
+      "undecided": 15,
+      "can": 7,
+      "gps": 1
+     },
+     "correct_blame": 0.30434782608695654,
+     "wrong_blame": 0.043478260869565216
+    },
+    "can_offset": {
+     "runs": 30,
+     "detection": 0.9,
+     "detected": 27,
+     "median_delay_s": 2.0,
+     "undecided": 0.4444444444444444,
+     "blame_counts": {
+      "can": 13,
+      "undecided": 12,
+      "gps": 1,
+      "imu": 1
+     },
+     "correct_blame": 0.48148148148148145,
+     "wrong_blame": 0.07407407407407407
+    },
+    "can_freeze": {
+     "runs": 30,
+     "detection": 0.8,
+     "detected": 24,
+     "median_delay_s": 2.0,
+     "undecided": 0.08333333333333333,
+     "blame_counts": {
+      "can": 21,
+      "undecided": 2,
+      "lidar": 1
+     },
+     "correct_blame": 0.875,
+     "wrong_blame": 0.041666666666666664
+    },
+    "gps_can": {
+     "runs": 30,
+     "detection": 0.9666666666666667,
+     "detected": 29,
+     "median_delay_s": 2.0,
+     "undecided": 0.4482758620689655,
+     "blame_counts": {
+      "undecided": 13,
+      "lidar": 13,
+      "can": 3
+     }
+    }
+   },
+   "mean_detection_single": 0.7566666666666667,
+   "pooled_single": {
+    "detected": 227,
+    "correct_blame": 0.5638766519823789,
+    "wrong_blame": 0.05286343612334802,
+    "undecided": 0.3832599118942731
+   },
+   "selection_mean_detection": 0.811111111111111,
+   "tau": 0.9962962962962965
+  }
+ },
+ "comma_k": {
+  "0.25": {
+   "fa_rows": 0.008771929824561403,
+   "clean_rows": 2280,
+   "fa_runs": 0.15789473684210525,
+   "clean_runs": 19,
+   "clean_rows_with_decided_blame": 10,
+   "attacks": {
+    "drift": {
+     "runs": 38,
+     "detection": 0.9210526315789473,
+     "detected": 35,
+     "median_delay_s": 6.79434578580549,
+     "undecided": 0.02857142857142857,
+     "blame_counts": {
+      "gps": 34,
+      "undecided": 1
+     },
+     "correct_blame": 0.9714285714285714,
+     "wrong_blame": 0.0
+    },
+    "accel_drift": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 6.790065258857794,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "doppler_spoof": {
+     "runs": 38,
+     "detection": 0.9736842105263158,
+     "detected": 37,
+     "median_delay_s": 5.028207024384756,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 37
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "meaconing": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 2.0340818448457867,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_scale": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 0.894371501985006,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_offset": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.6241187450068537,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_freeze": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 2.5731695942231454,
+     "undecided": 0.02631578947368421,
+     "blame_counts": {
+      "can": 36,
+      "undecided": 1,
+      "gps": 1
+     },
+     "correct_blame": 0.9473684210526315,
+     "wrong_blame": 0.02631578947368421
+    },
+    "gnss_can": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.5953182446974097,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     }
+    },
+    "can_bus": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.5507362306525465,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     }
+    }
+   },
+   "mean_detection_single": 0.9849624060150377,
+   "pooled_single": {
+    "detected": 262,
+    "correct_blame": 0.9885496183206107,
+    "wrong_blame": 0.003816793893129771,
+    "undecided": 0.007633587786259542
+   },
+   "selection_mean_detection": 0.9802631578947368,
+   "tau": 0.9973684210526317
+  },
+  "0.5": {
+   "fa_rows": 0.008771929824561403,
+   "clean_rows": 2280,
+   "fa_runs": 0.2631578947368421,
+   "clean_runs": 19,
+   "clean_rows_with_decided_blame": 4,
+   "attacks": {
+    "drift": {
+     "runs": 38,
+     "detection": 0.8947368421052632,
+     "detected": 34,
+     "median_delay_s": 4.53816653607646,
+     "undecided": 0.029411764705882353,
+     "blame_counts": {
+      "gps": 33,
+      "undecided": 1
+     },
+     "correct_blame": 0.9705882352941176,
+     "wrong_blame": 0.0
+    },
+    "accel_drift": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 5.490388662496116,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "doppler_spoof": {
+     "runs": 38,
+     "detection": 0.9736842105263158,
+     "detected": 37,
+     "median_delay_s": 3.9669356259400956,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 37
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "meaconing": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.9256495264125988,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_scale": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 0.8136817950289696,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 37,
+      "gps": 1
+     },
+     "correct_blame": 0.9736842105263158,
+     "wrong_blame": 0.02631578947368421
+    },
+    "can_offset": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.5811646928777918,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_freeze": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 2.5731695942231454,
+     "undecided": 0.02631578947368421,
+     "blame_counts": {
+      "can": 36,
+      "undecided": 1,
+      "gps": 1
+     },
+     "correct_blame": 0.9473684210526315,
+     "wrong_blame": 0.02631578947368421
+    },
+    "gnss_can": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.5953182446974097,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     }
+    },
+    "can_bus": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.3752279696927872,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     }
+    }
+   },
+   "mean_detection_single": 0.981203007518797,
+   "pooled_single": {
+    "detected": 261,
+    "correct_blame": 0.9846743295019157,
+    "wrong_blame": 0.007662835249042145,
+    "undecided": 0.007662835249042145
+   },
+   "selection_mean_detection": 0.9736842105263158,
+   "tau": 0.9978070175438598
+  },
+  "1.0": {
+   "fa_rows": 0.008771929824561403,
+   "clean_rows": 2280,
+   "fa_runs": 0.42105263157894735,
+   "clean_runs": 19,
+   "clean_rows_with_decided_blame": 10,
+   "attacks": {
+    "drift": {
+     "runs": 38,
+     "detection": 0.8421052631578947,
+     "detected": 32,
+     "median_delay_s": 3.280261310894275,
+     "undecided": 0.03125,
+     "blame_counts": {
+      "gps": 31,
+      "undecided": 1
+     },
+     "correct_blame": 0.96875,
+     "wrong_blame": 0.0
+    },
+    "accel_drift": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 4.929824992257636,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "doppler_spoof": {
+     "runs": 38,
+     "detection": 0.9736842105263158,
+     "detected": 37,
+     "median_delay_s": 2.9669356259400956,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 37
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "meaconing": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.3762658223859034,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_scale": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 0.8729566098772921,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_offset": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.5498893541225698,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_freeze": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 2.4551000038336497,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "gnss_can": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.5208487687486922,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     }
+    },
+    "can_bus": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.0672686302277725,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     }
+    }
+   },
+   "mean_detection_single": 0.9736842105263158,
+   "pooled_single": {
+    "detected": 259,
+    "correct_blame": 0.9961389961389961,
+    "wrong_blame": 0.0,
+    "undecided": 0.003861003861003861
+   },
+   "selection_mean_detection": 0.9605263157894737,
+   "tau": 0.9973684210526317
+  },
+  "inst": {
+   "fa_rows": 0.009649122807017544,
+   "clean_rows": 2280,
+   "fa_runs": 0.5263157894736842,
+   "clean_runs": 19,
+   "clean_rows_with_decided_blame": 11,
+   "attacks": {
+    "drift": {
+     "runs": 38,
+     "detection": 0.7368421052631579,
+     "detected": 28,
+     "median_delay_s": 6.769108853157377,
+     "undecided": 0.14285714285714285,
+     "blame_counts": {
+      "gps": 24,
+      "undecided": 4
+     },
+     "correct_blame": 0.8571428571428571,
+     "wrong_blame": 0.0
+    },
+    "accel_drift": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 5.573589488340076,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "doppler_spoof": {
+     "runs": 38,
+     "detection": 0.9473684210526315,
+     "detected": 36,
+     "median_delay_s": 2.437745464136242,
+     "undecided": 0.027777777777777776,
+     "blame_counts": {
+      "gps": 35,
+      "undecided": 1
+     },
+     "correct_blame": 0.9722222222222222,
+     "wrong_blame": 0.0
+    },
+    "meaconing": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.08409912879506,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_scale": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 0.7531393283934449,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_offset": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.2020180595718557,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_freeze": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.9279198271979112,
+     "undecided": 0.02631578947368421,
+     "blame_counts": {
+      "can": 36,
+      "gps": 1,
+      "undecided": 1
+     },
+     "correct_blame": 0.9473684210526315,
+     "wrong_blame": 0.02631578947368421
+    },
+    "gnss_can": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 1.2609598360068048,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 38
+     }
+    },
+    "can_bus": {
+     "runs": 38,
+     "detection": 1.0,
+     "detected": 38,
+     "median_delay_s": 0.8938422953433474,
+     "undecided": 0.0,
+     "blame_counts": {
+      "gps": 38
+     }
+    }
+   },
+   "mean_detection_single": 0.9548872180451128,
+   "pooled_single": {
+    "detected": 254,
+    "correct_blame": 0.9724409448818898,
+    "wrong_blame": 0.003937007874015748,
+    "undecided": 0.023622047244094488
+   },
+   "selection_mean_detection": 0.9342105263157895,
+   "tau": 0.9972527472527474
+  }
+ }
+}

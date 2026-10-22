@@ -23,4 +23,8 @@ Witness layer (crossdomain.witness):
 S2 contract: for every grid second and pair, |z| large = the pair disagrees; the domain shared by the disagreeing pairs
 (and absent from the agreeing ones) is the suspect. Pairs available: KITTI gps-lidar (speed, yaw, lateral), gps-can, lidar-can
 (speed), gps-imu, imu-lidar (yaw); comma gnss-can, gnss-wheel (speed), gnss-imu (yaw).
+S2 ("which domain lies", crossdomain.consistency / crossdomain.attacks):
+  layer = WhichDomainLies(edges, domain_of, k).fit(clean_val_Z_runs)     Z = train-fitted z per edge (T x E, NaN = unobserved)
+  res = layer.run(Z); layer.evidence(t, Z)                                Evidence(domain "cross", name "cross.which_domain_lies")
+  run_outcome(t, onset_t, res)                                            detected, delay, first decided blame or "undecided"
 """

@@ -12,7 +12,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
 | WP4 Network | S7 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-22 | S6 APPROVED (L4 optional supervised). S7 -> M1-NET |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
-| WP6 Cross-domain | S2 | IN PROGRESS | worker opus (medium, T4) | 2026-10-22 | S1 APPROVED with miss (sigma honesty) |
+| WP6 Cross-domain | S2 | REVIEW | worker opus (medium, T4) | 2026-10-22 | S2 NOT MET (FA 4.4% KITTI / 5.4% comma, KITTI blame 49%); comma test exposed twice (bug fix, labelled); reports/WP6_S2.md |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 
 ## Overall progress (orchestrator updates this at every approval)
