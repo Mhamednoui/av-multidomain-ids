@@ -62,3 +62,72 @@ Verdict MET only if A1-A7 hold; otherwise report which fails and why.
   the parameters actually used (needed to check the box surface).
 - Next (not started): S2 L1 sensor geometry. Tuning of anything on test did not occur in S1; the
   only test pass is the reproduction of fixed v2 models.
+
+## 2026-10-22 S2 start (worker sonnet medium): generator calibration (Part A) + L1 sensor geometry (Part B)
+Pre-result exploration (train drives only, no judged number): KITTI .bin files are written ring by ring
+(65 azimuth-wrap runs: runs 0-63 = the 64 lasers, the 65th a fragment). Each laser lies on a line z = v_k + s_k * rho
+(laser vertical offset v_k ~0.1-0.25 m, tan elevation s_k); after removing a per-scan, per-azimuth common offset
+(vehicle pitch / heave during the sweep, ~0.03 m) the residual is ~0.01-0.03 m. No tracklets exist under the raw drives
+(only velodyne_points + oxts), so real objects are car-like clusters (ground removal + connected components), documented.
+Consequence for the generator: the v2/S1 ray-cast uses the ray from the sensor ORIGIN to the real return; the real laser
+sits at height v_k above it, so a shortened phantom return is up to -v_k*(1 - rho'/rho) (~0.1 m) off its own ring. The
+calibrated generator uses the laser origin (0, 0, h) of each ray (h = z - s_k*rho of the real return).
+
+### ACCEPTANCE RULE S2 (written 2026-10-22 before any calibration / L1 result)
+Part A (generator calibration; fitted on TRAIN scans, model form / constants chosen with VAL, test not used for A):
+- A1 Real-object table exists (car-like clusters on TRAIN scans, no labels: documented limits). Point count and
+  occupancy q = n / (rings spanned x azimuth extent / 0.179 deg) measured vs range; model: per-phantom return
+  probability ~ Beta(mean p(rho), concentration kappa), per-point intensity from a library of real objects of the same range band.
+- A2 On VAL (3 drives, real car-like clusters vs calibrated phantoms of car size, ranges 8-45 m): two-sample KS statistic
+  D <= 0.20 for q and for intensity in EVERY range bin with >= 30 real clusters (effect-size criterion; p-values are
+  reported but with thousands of points a p-value criterion rejects any model), and the ratio of median point counts
+  phantom / real within 0.8-1.25 in every such bin. The UNcalibrated generator is reported with the same statistics.
+- A3 Calibrated phantom at 30 m median point count within +-20 % of the real measured median at 30 m (reported, whichever it is).
+- A4 Unit tests: ray-exactness (spoofed points on their ring: residual vs the ring line <= 0.02 m), first-return/occlusion,
+  Beta/thinning statistics (mean kept fraction = p), intensity from library, determinism with a seed.
+- A5 Regenerated evaluation phantoms re-scored with the v2 model: VAL numbers (threshold from val 1% / val-2%) then TEST ONCE; old vs
+  calibrated side by side. No acceptance level on detection (it is a measurement); the old S1 numbers stay as they were.
+Part B (L1 sensor geometry, v3 Layers, domain "lidar", layer "L1"):
+- B0 Rules: (r1) ring: points whose z-residual to the nearest of the 64 ring lines (after the per-azimuth common-mode removal)
+  exceeds 3 x 0.02 m (spec range accuracy 2 cm, HDL-64E manual) in 8-80 m; raw = count (and 10-degree-sector maximum);
+  (r2) range / FOV limits: range > 120 m or < train minimum, elevation outside [-24.8, +2.0] +- tolerance; (r3) intensity outside [0, 1];
+  (r4) single-return: two returns on the same laser within half an azimuth step (0.09 deg) at different range
+  (duplicate direction / point behind a closer return in the same bin). Thresholds: physics constants where they exist (r2, r3,
+  the 6 cm of r1), otherwise clean VAL scans, union budget 1% (tie-safe, Layer.calibrate), nothing tuned on test.
+- B1 FA: false alarms on clean TEST scans <= 2.0 % (1 % budget + sampling slack; 7 unseen drives); per-drive FA spread reported.
+- B2 Predicted detection (stated before the run, a prediction, not a target): box cloud >= 90 %; ray-cast ADD (real return kept = multi-return
+  assumption) caught by r4 (>= 90 %, it is physically impossible for a single-return sensor); ray-cast REPLACE and BUDGET (budget 50-400)
+  at most FA + 3 points (physics bound: a phantom on its ring and replacing the return is a legal single-return scan);
+  PointDrop and IntensitySpoof at most FA + 5 points (removal and in-range intensity do not violate sensor geometry).
+  Deviations are reported plainly, and a high detection of a ray-cast phantom is treated as a generator artefact to explain, not a success.
+- B3 Harness ablation: v2 descriptor model alone, each L1 rule alone, L1 union, v2 + L1 (OR at the common 1 % / 2 % budget), via common/evaluate.py.
+- B4 Tests pass (full suite), cache <= 3 GB under ../data_extra/cache_v3/WP3/. Test exposure: L1 verdict = ONE run on test, labelled FIRST exposure of L1.
+
+### 2026-10-22 S2 Part A results (results/WP3/S2/calib_report.json, ring_table_report.json)
+- Ring table (lidar/geometry.py, 128 train scans): 64 lines z = v_k + s_k rho, elevations +1.95 .. -24.9 deg (spec +2.0 / -24.8), v_k 0.09-0.25 m.
+  Common-mode removal (per 2 deg azimuth bin, per scan) cuts the 99 % |residual| from 0.097 to 0.040 m on clean train scans (0.091 -> 0.039 val);
+  0.28 % (train) / 0.24 % (val) of 8-80 m points exceed 6 cm. KITTI max range in the files = 80 m, min 1.46 m, intensity 0-0.99.
+- Duplicate rule needed a design fix found on TRAIN/VAL clean scans before any attack result: neighbouring lasers fire at nearly the same azimuth, so at
+  short range (ring spacing < residual noise) 'same ring, same azimuth' pairs are common (1700/scan); restricted to unambiguous lasers (runner-up ring
+  >= 7.5 cm away) and 0.02 deg: ~2.5/scan at >=15 m. True same-laser gaps < 0.02 deg: 0.03 % of 359k train pairs (7 % of gaps are 0.09 deg).
+- Real objects: no tracklets; 6453 car-like clusters (train, every 3rd scan), 2176 (val). Real median points at ~30 m: 53 (not the ~270 quoted
+  from v2: that figure is not reproduced by car-like clusters; clusters are partial / occluded views). Real occupancy q = 0.34-0.54.
+- S1-type phantom (ideal density): q 0.52-0.91, point count 1.8-3.7x real (unconditional), 1.3-1.9x at equal angular size.
+- Fit (train): p(range) = 0.59-0.73, Beta concentration kappa = 7.2. Variant chosen on VAL: beta (max D_q 0.216 vs 0.333 Bernoulli).
+- A2 (as written): D_int max 0.157 <= 0.20 OK; D_q max 0.216 (bin 6-12 m) just above 0.20 NOT strictly met; unconditional count ratio 1.28-1.75 NOT MET
+  (real clusters are smaller angular views than a full 4 x 1.8 m box); at EQUAL angular size (terciles) ratios 0.8-1.3 in 16 of 19 strata (3 strata with
+  n<=12 phantoms at 2.2-3.0). A3: 80 vs 53 points at 30-35 m unconditional (+50 %), NOT within 20 %: stated plainly.
+
+### 2026-10-22 S2 Part B + A5 results (ONE test run: results/WP3/S2/final.json, tables.md, L1_ablation.md) - FIRST test exposure of L1
+- Build (tools/WP3_S2_build.py): v2l1 rows aligned with the S1 train4 cache (n_pts asserted equal), ray tables old+calibrated, every 2nd scan; cache 0.25 GB.
+- dev (VAL only, no design change after it): union FA 0.9 %, replace/budget ~FA, add far 60 %, box cloud 47 %. Final test run done once, no re-tuning.
+- TEST FA clean scans: L1 union 1.57 % (ring_sector 1.57, ring_total 0.13, single_return/range/intensity 0.0); v2 0.79 %; v2 OR L1 2.36 %.
+  Per-drive FA union: 0001 1.9, 0005 5.9, 0028 0, 0039 2.8, 0052 0, 0079 0, 0095 0.7 (spread large: sector rule fires on a few drives).
+- Detection test (L1 union): BoxCloud 46.9 (v2 46.3, v2 OR L1 65.7), PointDrop 1.4, IntensitySpoof 1.6, cal add far 60.2 / near 1.7, cal budget_add far 58.3 / near 1.7,
+  cal replace 1.7-2.4, cal budget 1.7-2.2 (= FA, physics bound). Old S1 generator: replace far 11.3, budget far 6.9 (off-ring artefact of origin rays; gone with exact rays).
+- Predictions B2: box cloud >= 90 % FAILED (47 %: a uniformly random z is within 6 cm of a ring for much of the time at 20-40 m where the ring spacing is only 12-20 cm,
+  and the scan-level rule is limited by 1 % FA); add caught by duplicates only far (>=~20 m, laser unambiguous): 60 % far, 0 % near; replace / budget at FA: MET;
+  PointDrop / IntensitySpoof at FA: MET.
+- A5: v2 on calibrated phantoms (test, val-1 %): add near onset 75.3 -> 61.9, add far 20.5 -> 13.0, budget_add near 5.4 -> 6.5, far 6.9 -> 5.2; replace/budget = FA both.
+  Calibrated phantoms are thinner (median 1298 vs 2340 near add, 122 vs 188 far add), so the earlier numbers were inflated by density, as suspected.
+- Test exposure: this is the first L1 test run; v2 model/threshold on test was already exposed in S1 (reproduction) and is used here unchanged.

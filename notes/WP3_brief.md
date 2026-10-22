@@ -1,4 +1,4 @@
-# WP3 LiDAR brief (state after S1, 2026-10-22)
+# WP3 LiDAR brief (state after S2, 2026-10-22)
 
 ## Current state
 - S1 (data layer + attack generator): REVIEW. Acceptance A1-A7 all MET (notes/WP3_lidar.md, results/WP3/S1_acceptance.json). Tables: results/WP3/S1_tables.md.
@@ -28,3 +28,10 @@
 - Scan file names repeat across drives: always "<drive>/<file>". First scan of each drive has no previous scan (skipped in train4).
 - Operating point conventions: v2 quantile(1 - fpr) on val normals; "~1 % FA" of the WP file = val_fpr 0.02 (test FA 1.05 %).
 - Test touched only by fixed v2 models and the retrained baseline (same protocol as v2); no choice made on test.
+
+## S2 state (2026-10-22, REVIEW)
+- New modules: lidar/geometry.py (RingTable: 64 lines z = v_k + s_k*rho fitted on train; per-azimuth common mode; l1_stats = n_off_ring, sector_off_ring, n_range, n_intensity, n_dup), lidar/objects.py (car-like clusters), lidar/phantom.py (calibrated ray-cast: exact laser rays, Beta dropout, intensity library), lidar/calibration.py, lidar/l1.py (Layers: 5 rules + union), lidar/l1_build.py. Tools WP3_S2_{ringtable,calib_collect,calib_fit,build,eval,tables}.py. Tests tests/lidar/test_geometry.py (14).
+- Model files: results/WP3/S2/ring_table.json, calibration_beta.npz (chosen on val), calib_choice.json. Cache ../data_extra/cache_v3/WP3/S2 (0.25 GB total with S1).
+- Use lidar.phantom.phantom (exact rays + calibration) for all future attacks; lidar.raycast (S1) only for old comparison. Real car-like clusters have median 53 points at 30-35 m (not 270); calibrated phantoms are still ~1.5x denser unconditionally (full 4 m box vs partial views) but match at equal angular size.
+- L1 result (test, once): FA 1.57 %; catches box cloud 47 %, ray-cast add/budget_add FAR 58-60 % (duplicate direction, only valid for unambiguous lasers >= ~20 m), nothing else; replace/budget/near/PointDrop/IntensitySpoof at FA (physics bound).
+- Pitfalls: nearby lasers fire at the same azimuth (duplicate test only on unambiguous lasers); KITTI max range 80 m; ring residual needs the common mode; v2l1 rows depend on the exact rng path of build.drive_rows.

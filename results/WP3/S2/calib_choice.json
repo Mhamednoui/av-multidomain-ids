@@ -1,0 +1,1 @@
+{"variant": "beta", "reason": "val max D_q 0.216 vs 0.333 (bernoulli); val max D_int 0.157 vs 0.117; chosen on validation before any test use"}
