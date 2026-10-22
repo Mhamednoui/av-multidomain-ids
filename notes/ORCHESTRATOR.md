@@ -172,3 +172,4 @@ State:
 - WP2 S7 (M1-CAN) and WP4 S5 were still running at 13:45; they will likely stop at the same limit. Check git status / STATUS.md, then resume each with SendMessage (same session) or a fresh worker told to continue from the files on disk.
 - Option asked to the user: continue now with Opus workers (uses Opus quota) or wait for the Sonnet reset.
 - User items pending: V2AIX form; TOW-IDS (IEEE DataPort login); optional Tampa ITS DataHub request; stray python PID 30976.
+- 2026-10-22 13:50: user reset the usage limit; WP3 S3 resumed; WP2 S7 and WP4 S5 still running.
