@@ -47,4 +47,4 @@ unless S8 adds a camera / radar check.
 - Validation drives are harder than test drives; KITTI frames ~0.1032 s apart.
 
 ## Progress
-(worker updates this section)
+- 2026-10-22 S1 done, REVIEW: v2 descriptor and all v2 baseline numbers reproduced exactly on the v3 layer (A1-A7 MET). See reports/WP3_S1.md, notes/WP3_brief.md.
