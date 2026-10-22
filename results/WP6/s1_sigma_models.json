@@ -1,0 +1,200 @@
+{
+ "kitti": {
+  "fitted_on": "KITTI train drives (WP1 split), clean phase-0 runs",
+  "models": {
+   "gps-can speed": {
+    "bias_mode": "const",
+    "bias": -0.05548019870209664,
+    "bias_per_mps": 0.0,
+    "a": 0.4877313227350918,
+    "b": 0.010882766909426586,
+    "bins": 10
+   },
+   "gps-imu yaw_rate": {
+    "bias_mode": "const",
+    "bias": -0.0013928046051921786,
+    "bias_per_mps": 0.0,
+    "a": 0.05010158183878699,
+    "b": 0.0015343572227691238,
+    "bins": 10
+   },
+   "gps-lidar lateral": {
+    "bias_mode": "const",
+    "bias": -0.03363473618623426,
+    "bias_per_mps": 0.0,
+    "a": 0.5198390163788208,
+    "b": 0.036188557613429026,
+    "bins": 10
+   },
+   "gps-lidar speed": {
+    "bias_mode": "const",
+    "bias": 0.08506486669678681,
+    "bias_per_mps": 0.0,
+    "a": 0.46863503045865457,
+    "b": 0.009343980303672297,
+    "bins": 10
+   },
+   "gps-lidar yaw_rate": {
+    "bias_mode": "const",
+    "bias": -0.003780249222308015,
+    "bias_per_mps": 0.0,
+    "a": 0.048965601998357436,
+    "b": 0.0017068772389063913,
+    "bins": 10
+   },
+   "imu-lidar yaw_rate": {
+    "bias_mode": "const",
+    "bias": -6.414446867184648e-05,
+    "bias_per_mps": 0.0,
+    "a": 0.008618068883517866,
+    "b": 0.0,
+    "bins": 10
+   },
+   "lidar-can speed": {
+    "bias_mode": "const",
+    "bias": -0.11145786603799313,
+    "bias_per_mps": 0.0,
+    "a": 0.14819348509834793,
+    "b": 0.009784110799875264,
+    "bins": 10
+   }
+  }
+ },
+ "comma": {
+  "fitted_on": "comma2k19 Chunk_1 train routes",
+  "models": {
+   "gnss-can speed": {
+    "bias_mode": "const",
+    "bias": 0.2653068171093764,
+    "bias_per_mps": 0.0,
+    "a": 0.14080160658674665,
+    "b": 0.0,
+    "bins": 10
+   },
+   "gnss-imu yaw_rate": {
+    "bias_mode": "const",
+    "bias": 0.001111595195961117,
+    "bias_per_mps": 0.0,
+    "a": 0.008344322370030155,
+    "b": 0.0,
+    "bins": 10
+   },
+   "gnss-wheel speed": {
+    "bias_mode": "const",
+    "bias": 0.26445544714101743,
+    "bias_per_mps": 0.0,
+    "a": 0.14049254449969423,
+    "b": 0.0,
+    "bins": 10
+   }
+  },
+  "lags": {
+   "gnss-can speed": -0.22404599178795537,
+   "gnss-wheel speed": -0.22153309386506587,
+   "gnss-imu yaw_rate": -0.26200842518037754
+  },
+  "gyro": {
+   "axis": 2,
+   "sign": -1.0
+  }
+ },
+ "kitti_R": {
+  "fitted_on": "KITTI train drives, revised design R (R1 + R2 + R4)",
+  "models": {
+   "gps-can speed": {
+    "bias_mode": "linear",
+    "bias": -0.07641405807051824,
+    "bias_per_mps": 0.028268955503897318,
+    "a": 0.41085731293642963,
+    "b": 0.013375360927564158,
+    "bins": 10
+   },
+   "gps-imu yaw_rate": {
+    "bias_mode": "linear",
+    "bias": 0.0011628300806384862,
+    "bias_per_mps": -8.111159764790239e-05,
+    "a": 0.05005041763296166,
+    "b": 0.001542090158498149,
+    "bins": 10
+   },
+   "gps-lidar lateral": {
+    "bias_mode": "linear",
+    "bias": -0.03545084548249334,
+    "bias_per_mps": -0.003242407278703612,
+    "a": 0.5160491062288649,
+    "b": 0.03656003217509099,
+    "bins": 10
+   },
+   "gps-lidar speed": {
+    "bias_mode": "linear",
+    "bias": -0.038695068520136586,
+    "bias_per_mps": 0.0022132503694286655,
+    "a": 0.4300946676457558,
+    "b": 0.01481723821047919,
+    "bins": 10
+   },
+   "gps-lidar yaw_rate": {
+    "bias_mode": "linear",
+    "bias": 0.0002599664751694884,
+    "bias_per_mps": -4.735828606007582e-05,
+    "a": 0.04878669035209578,
+    "b": 0.0017206874155559551,
+    "bins": 10
+   },
+   "imu-lidar yaw_rate": {
+    "bias_mode": "linear",
+    "bias": -0.0010225092664126311,
+    "bias_per_mps": 4.818435966634303e-05,
+    "a": 0.008595538046686406,
+    "b": 0.0,
+    "bins": 10
+   },
+   "lidar-can speed": {
+    "bias_mode": "linear",
+    "bias": -0.06242364662538035,
+    "bias_per_mps": 0.028120580131100113,
+    "a": 0.1220777319099219,
+    "b": 0.0,
+    "bins": 10
+   }
+  }
+ },
+ "comma_R": {
+  "fitted_on": "comma2k19 Chunk_1 train routes, revised design R1",
+  "models": {
+   "gnss-can speed": {
+    "bias_mode": "linear",
+    "bias": -0.008170267512273477,
+    "bias_per_mps": 0.010341430143128558,
+    "a": 0.08065818414964744,
+    "b": 0.0,
+    "bins": 10
+   },
+   "gnss-imu yaw_rate": {
+    "bias_mode": "linear",
+    "bias": 0.00035546610850124675,
+    "bias_per_mps": 3.677696200423208e-05,
+    "a": 0.008336962660930503,
+    "b": 0.0,
+    "bins": 10
+   },
+   "gnss-wheel speed": {
+    "bias_mode": "linear",
+    "bias": -0.016043025877951637,
+    "bias_per_mps": 0.010621671481122606,
+    "a": 0.07562254165949908,
+    "b": 0.0,
+    "bins": 10
+   }
+  },
+  "lags": {
+   "gnss-can speed": -0.22404599178795537,
+   "gnss-wheel speed": -0.22153309386506587,
+   "gnss-imu yaw_rate": -0.26200842518037754
+  },
+  "gyro": {
+   "axis": 2,
+   "sign": -1.0
+  }
+ }
+}

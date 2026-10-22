@@ -1,0 +1,60 @@
+{
+ "A1_streams": {
+  "verdict": "MET",
+  "kitti_sources": [
+   "gps",
+   "imu",
+   "lidar",
+   "can (simulated)"
+  ],
+  "comma_sources": [
+   "can",
+   "wheel",
+   "gnss",
+   "imu"
+  ],
+  "v2x": "no ego self-report in any data set: V2X provides other vehicles' motion only (adapter crossdomain/v2x_self.py, tested)"
+ },
+ "A2_latency": {
+  "verdict": "MET",
+  "unit_test": "tests/crossdomain/test_witness.py::test_lag_recovery (+ through can_sim): 0.30 s within 0.05 s",
+  "note": "comma gnss-imu yaw peak correlation only 0.16: low confidence"
+ },
+ "A3_sigma_honesty_val": {
+  "verdict": "NOT MET",
+  "per_pair_recalibrated": {
+   "kitti gps-can speed": false,
+   "kitti gps-imu yaw_rate": true,
+   "kitti gps-lidar lateral": true,
+   "kitti gps-lidar speed": true,
+   "kitti gps-lidar yaw_rate": true,
+   "kitti imu-lidar yaw_rate": false,
+   "kitti lidar-can speed": false,
+   "comma gnss-can speed": false,
+   "comma gnss-imu yaw_rate": false,
+   "comma gnss-wheel speed": false
+  },
+  "revised_R_val_information_only": {
+   "kitti gps-can speed": true,
+   "kitti gps-imu yaw_rate": true,
+   "kitti gps-lidar lateral": true,
+   "kitti gps-lidar speed": true,
+   "kitti gps-lidar yaw_rate": true,
+   "kitti imu-lidar yaw_rate": false,
+   "kitti lidar-can speed": false,
+   "comma gnss-can speed": false,
+   "comma gnss-imu yaw_rate": false,
+   "comma gnss-wheel speed": false
+  }
+ },
+ "A4_tests": "see test log (full suite) in the step report",
+ "A5_api": "crossdomain/__init__.py docstring + reports/WP6_S1.md section API",
+ "A6_can_unit": {
+  "road_plausible": true,
+  "road_confirmable": false,
+  "comma_slope_train": 0.9899958462567102,
+  "comma_slope_within_5pct": true,
+  "comma_val_speed_honest_after_A3": false,
+  "verdict": "ROAD unit PLAUSIBLE (not confirmable); comma CAN-vs-GNSS slope within 5% but val residual not honest -> relation NOT 'validated' by the A6 wording"
+ }
+}

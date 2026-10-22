@@ -27,3 +27,4 @@ Fusion meta at a 2% validation budget: test 95.23% acc, 1.06% FA. Zero-day on de
 
 ## Progress
 (worker updates this section)
+- 2026-10-22 S1 motion witnesses: REVIEW. A1/A2/A4/A5 met, A3 (sigma honesty on val) NOT MET, A6 ROAD unit plausible; report reports/WP6_S1.md.

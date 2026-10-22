@@ -12,7 +12,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
 | WP4 Network | S6 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-22 | S5 APPROVED with misses |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
-| WP6 Cross-domain | S1 | IN PROGRESS | worker opus (medium, T4) | 2026-10-22 | motion witnesses (GPS, LiDAR, CAN, V2X) |
+| WP6 Cross-domain | S1 | REVIEW | worker opus (medium, T4) | 2026-10-22 | motion witnesses: A1/A2/A4/A5 met, A3 sigma honesty NOT MET (revised R proposed), A6 ROAD unit plausible; reports/WP6_S1.md |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 
 ## Overall progress (orchestrator updates this at every approval)
