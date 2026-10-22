@@ -15,6 +15,21 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP6 Cross-domain | S1 | BLOCKED | - | 2026-10-20 | waits for WP1 S5 + domain milestones |
 | WP7 System | S1 | BLOCKED | - | 2026-10-20 | waits for M2 |
 
+## Overall progress (orchestrator updates this at every approval)
+
+**Overall: 34 / 55 steps approved = 62%** (updated 2026-10-22 13:40)
+
+| WP | Steps counted | Approved | % |
+|---|---|---|---|
+| WP0 Foundation | S1-S4 (4) | 4 | 100 |
+| WP1 GPS | S0-S8 (9) | 9 | 100 (M1-GPS partial) |
+| WP2 CAN | S0-S7 (8) | 6 | 75 |
+| WP3 LiDAR | S1-S7, S9 (8; S0, S8 optional) | 1 | 13 |
+| WP4 Network | S0-S7 (8) | 5 | 63 |
+| WP5 V2X | S0, S0b, S1, S1b, S2-S6 (9; S3b, S7 optional) | 9 | 100 (M1-V2X partial) |
+| WP6 Cross-domain | S1-S5 (5) | 0 | 0 |
+| WP7 System | S1-S4 (4) | 0 | 0 |
+
 ## Milestones
 
 | Id | State |

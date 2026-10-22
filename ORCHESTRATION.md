@@ -87,3 +87,9 @@ Token savings that do not change quality:
   notes log, ARCHITECTURE and DATASETS (it opens those only for the sections it needs).
 - Reports: a summary section (<= 40 lines) first; long tables go to results/*.md.
 - Max 3 workers in parallel (user 2026-10-21; was 2).
+
+## 7. Progress percentage (user request 2026-10-22)
+
+At every approval, update the "Overall progress" table in STATUS.md (approved steps / total
+counted steps, per WP and overall, with date and time) and mention the overall % to the user.
+Optional steps are not counted; a new fix step (e.g. S1b) adds to the total when assigned.
