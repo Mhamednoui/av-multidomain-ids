@@ -165,3 +165,10 @@ State:
 | 2026-10-22 | WP2 | S6 | sonnet high (T3) | APPROVED (negative result) | commit 262b304, 275/275 tests. Retrained v2 timing/payload L4: adds NOTHING (ROAD val already 9/9 by L1+L2b+L3 at 2.3% FA; Car-Hacking already 4/4 by L1; D11 gain in 1/32 cells). Zero-shot to unknown vehicle: 100% FA for every layer. NOT MET items: window-level shuffled control fails 11/12 (frame-level holds), payload reverse windows 5.9% vs 5%, Car-Hacking FA 2.3/4.0% vs 2%. Car-Hacking-trained -> ROAD 1.3%/0% recall (v2 0.5%). ROAD test never read. |
 | 2026-10-22 | WP2 | decisions | - | DECISION | (1) Window-level shuffled bound is NOT dropped retroactively: S6 stays NOT MET on it. For future steps the null control is applied at the unit where labels are learned (frame/flow/message); window-level nulls are reported as information. (2) Importance rule clarified (it was always "dominant NON-PHYSICAL feature = red flag"): dt_id_ratio / n_id_win are timing physics -> explained, not a fail. (3) L4 OUT of the default CAN stack. (4) S7 fresh holdout: the 4 ROAD accelerator captures have NO injected frames / labels (WP2 pitfalls): usable only as capture-level checks with ROAD-documented attack timing; if that timing is not documented, state that no fresh labelled ROAD holdout exists. |
 | 2026-10-22 | WP2 | S7 | sonnet high (T3) | ASSIGNED | combiner + cross-vehicle tests -> M1-CAN |
+
+## HANDOFF 2026-10-22 13:45: Sonnet WEEKLY limit hit (resets 2026-10-24 17:00 Africa/Tunis)
+- Progress 36/55 = 65% (STATUS.md table).
+- WP3 S3 stopped mid-step (generator single-return fix + segmentation): uncommitted files on disk, do not delete.
+- WP2 S7 (M1-CAN) and WP4 S5 were still running at 13:45; they will likely stop at the same limit. Check git status / STATUS.md, then resume each with SendMessage (same session) or a fresh worker told to continue from the files on disk.
+- Option asked to the user: continue now with Opus workers (uses Opus quota) or wait for the Sonnet reset.
+- User items pending: V2AIX form; TOW-IDS (IEEE DataPort login); optional Tampa ITS DataHub request; stray python PID 30976.
