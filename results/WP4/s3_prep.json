@@ -1,0 +1,94 @@
+{
+ "D10": {
+  "n": 2830743,
+  "by_split": {
+   "train": 1623768,
+   "test": 585951,
+   "val": 502291,
+   "gap": 118733
+  },
+  "by_family_split": {
+   "BENIGN|gap": 74712,
+   "BENIGN|test": 496538,
+   "BENIGN|train": 1263896,
+   "BENIGN|val": 437951,
+   "Bot|gap": 10,
+   "Bot|test": 308,
+   "Bot|train": 1539,
+   "Bot|val": 109,
+   "DDoS-LOIC-HTTP|gap": 12353,
+   "DDoS-LOIC-HTTP|test": 25655,
+   "DDoS-LOIC-HTTP|train": 70984,
+   "DDoS-LOIC-HTTP|val": 19035,
+   "DoS-GoldenEye|gap": 2048,
+   "DoS-GoldenEye|test": 3347,
+   "DoS-GoldenEye|train": 4586,
+   "DoS-GoldenEye|val": 312,
+   "DoS-Hulk|gap": 24391,
+   "DoS-Hulk|test": 48337,
+   "DoS-Hulk|train": 120502,
+   "DoS-Hulk|val": 37843,
+   "DoS-SlowHTTPTest|gap": 144,
+   "DoS-SlowHTTPTest|test": 1191,
+   "DoS-SlowHTTPTest|train": 2746,
+   "DoS-SlowHTTPTest|val": 1418,
+   "DoS-Slowloris|gap": 431,
+   "DoS-Slowloris|test": 1278,
+   "DoS-Slowloris|train": 3379,
+   "DoS-Slowloris|val": 708,
+   "FTP-Patator|gap": 262,
+   "FTP-Patator|test": 2049,
+   "FTP-Patator|train": 4209,
+   "FTP-Patator|val": 1418,
+   "Heartbleed|val": 11,
+   "Infiltration|gap": 1,
+   "Infiltration|test": 6,
+   "Infiltration|train": 23,
+   "Infiltration|val": 6,
+   "PortScan|gap": 4025,
+   "PortScan|test": 5150,
+   "PortScan|train": 147744,
+   "PortScan|val": 2011,
+   "SSH-Patator|gap": 212,
+   "SSH-Patator|test": 1639,
+   "SSH-Patator|train": 2991,
+   "SSH-Patator|val": 1055,
+   "Web-BruteForce|gap": 77,
+   "Web-BruteForce|test": 321,
+   "Web-BruteForce|train": 792,
+   "Web-BruteForce|val": 317,
+   "Web-SQLi|train": 21,
+   "Web-XSS|gap": 67,
+   "Web-XSS|test": 132,
+   "Web-XSS|train": 356,
+   "Web-XSS|val": 97
+  },
+  "self_check": [
+   2141075,
+   2141075
+  ]
+ },
+ "D23tue": {
+  "n": 7948748,
+  "by_split": {
+   "train": 4669483,
+   "test": 1587833,
+   "val": 1537210,
+   "gap": 154222
+  },
+  "by_family_split": {
+   "BENIGN|gap": 135657,
+   "BENIGN|test": 1467308,
+   "BENIGN|train": 4335440,
+   "BENIGN|val": 1434152,
+   "DDoS-LOIC-HTTP|gap": 18565,
+   "DDoS-LOIC-HTTP|test": 120525,
+   "DDoS-LOIC-HTTP|train": 334043,
+   "DDoS-LOIC-HTTP|val": 103058
+  },
+  "self_check": [
+   5327506,
+   5327506
+  ]
+ }
+}

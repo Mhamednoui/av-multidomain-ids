@@ -35,4 +35,4 @@ Target (fixed): time-based split; unseen Bot > 70% at the same false-alarm level
   labels are used.
 
 ## Progress
-- S1 APPROVED (data layer). S2 done 2026-10-22 (L1 rules, reports/WP4_S2.md), waits for review.
+- S1, S2 APPROVED. S3 done 2026-10-22 (L2a time-window layers, reports/WP4_S3.md), waits for review.

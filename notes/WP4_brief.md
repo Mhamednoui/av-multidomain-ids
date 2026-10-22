@@ -47,3 +47,11 @@ Status after S1 (2026-10-21). Details: notes/WP4_network.md, reports/WP4_S1.md, 
 - Blind: SSH-Patator (0%), FTP-Patator (allow_service 0%), Bot (flags 0%); D23 in-dataset ~0 detection; transfer D10 -> D23: allow-list FA 66-97%, tcp_flags FA 30.6% (flag semantics differ, RST = ECE column in D23).
 - proto_port and flow_rate have AUC < 0.5 (attacks look ordinary / slower than benign): negative results.
 - Compact tables for later steps: tools/WP4_S2_lib.py load_d10() / load_d23() (cache .../cache_v3/WP4/S2/; ids, 17 features, t in seconds).
+
+## After S3 (2026-10-22): L2a host time-window layers (network/l2a.py; report reports/WP4_S3.md, tables results/WP4/s3_tables.md)
+- Compact PRE-DEDUP streams: ../data_extra/cache_v3/WP4/S3/D10_stage.pkl, D23tue_stage.pkl (tools/WP4_S3_prep.py; ids factorised, minute index, split from final intervals). D10 time resolution = 1 minute.
+- Layers: net.scan (W1), net.trw (W5), net.bruteforce (W1), net.dos_rate (W1), net.slow (W5); fit benign train, 1% on benign val. Test D10: PortScan 97, SSH 99, FTP 100, Hulk/GoldenEye/LOIC 100, SlowHTTP 85; blind: Bot, Web-*, Slowloris.
+- AUDIT: D10 Thursday-Infiltration file has a benign-labelled scan by the compromised host; its benign flows are excluded from fit / calibration / headline FA (published-label FA also reported). Reversed flows: scan/TRW count only dst port < 32768.
+- Macro over 11 families: tcp_flags alone 21%, + L2a 54%, L2a alone 62%. Learned logistic combiner is hurt by correlated layers (SSH 0.1%): use per-layer/OR views or rethink the combiner in S7.
+- Transfer to D23 Tue: bruteforce/scan/trw FA 2-3% (bruteforce LOIC 99%); dos_rate needs refit (FA 40%).
+- Helpers: tools/WP4_S3_lib.py (load, stream, fit_calibrate, flow_eval, window_eval).

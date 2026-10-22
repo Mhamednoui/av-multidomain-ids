@@ -197,3 +197,50 @@ D23 in-dataset: flag layers FA ~1%, detection ~0 (except tiny families, DDoS-LOI
 Transfer D10 -> D23: allow-list FA 96.9% / 66.5%; tcp_flags FA 30.6% (RST/ECE flag semantics differ), proto_port 0.3%, flow_rate 0.1%.
 Acceptance: A1 MET, A2 MET numerically (topology caveat), A3 MET, A4 NOT MET. No layer removed or inverted after the verdict; proto_port and flow_rate stay as reported negatives.
 Cache S2: ../data_extra/cache_v3/WP4/S2/ (compact D10 / D23 tables, ~1.7 GB; WP4 cache total 4.9 GB). Smoke outputs deleted.
+
+## 2026-10-22 S3 plan and acceptance rule (written BEFORE any L2a score was computed)
+Data: PRE-DEDUP stage caches (flow multiplicity matters: dedup removed 99% of PortScan and most FTP/Slow flows), tools/WP4_S3_prep.py -> ../data_extra/cache_v3/WP4/S3/
+(D10_stage 2,830,743 flows, D23tue_stage 7,948,748 flows). Stage ts needed the S1 +12 h fix (hours 1-7); split looked up from the final tables' (day, period, split) time intervals
+(self-check: all 2,141,075 D10 and 5,327,506 D23 final rows keep their split and ts; flows in the 1-min gaps = "gap", never scored). D10 time resolution is ONE MINUTE (Monday: seconds),
+so windows are whole minutes; D23 has seconds but is binned to the same minute grid.
+Layers (network/l2a.py, topology-free: IPs only GROUP flows, no address identity, no lists of known hosts):
+  net.scan       distinct dst ports per (src,dst) and distinct dst hosts per src in a trailing window of W minutes (sliding, via interval-union events)
+  net.trw        threshold random walk (Jung 2004), theta0=0.8, theta1=0.2, first contacts per (src,dst,port) in a tumbling window of W min, success/failure from packet counts
+                 (failure: no reply packet, or TCP with exactly 1 forward + 1 backward packet and no payload either way = SYN answered by a bare RST); score = peak log-likelihood ratio
+  net.bruteforce flows (sessions) per (src,dst,dst_port) in the trailing window, scored as the benign tail probability of that count for that port (frequent ports own table, rest pooled)
+  net.dos_rate   flows per (dst) in the trailing window / that destination's own benign median per-minute rate (learned on benign train; unseen destination -> pooled fallback)
+  net.slow       half-open (no reply) + stalled (>= 5 s with <= 2 packets/s) flows per dst in the window, benign tail probability (pooled)
+Scores are per flow = value of its cell (key, minute) = alarm at the end of the window. Fit: benign TRAIN stream (attack flows removed before computing the features: the
+fitted statistics describe attack-free traffic). Calibration: benign VAL stream, tie-safe 1% budget (common.Layer.calibrate, flow unit) and, separately, the same budget on benign
+(key, minute) cells (window unit). Test: the full mixed stream (attack flows present, they inflate the counts as they would in reality); FA counts every benign flow / benign cell.
+Only choice made on val: window W in {1, 5} min per layer (max mean detection over the families the layer targets at 1% FA); nothing else is tuned.
+Harness: topology-free stack = net.tcp_flags (L1, refit on stage benign train/val) + the 5 L2a layers, logistic combiner, subsample of the test stream AFTER the features are computed.
+Acceptance (fixed now; one verdict run on test):
+ B1 FA <= 2% on benign test, flow unit AND window unit, for every L2a layer and the stack.
+ B2 PortScan (pre-dedup flows) >= 80%, SSH-Patator >= 50%, FTP-Patator >= 50% of test flows detected by some L2a layer at its 1% budget.
+ B3 DoS: the L2a layers detect >= 50% of the flows of >= 3 of the 5 DoS/DDoS families (Hulk, GoldenEye, Slowloris, SlowHTTPTest, DDoS-LOIC-HTTP).
+ B4 Added value over the topology-free L1: macro mean detection over the 11 evaluable families of (tcp_flags + L2a) exceeds tcp_flags alone by >= 20 points (harness ablation).
+ B5 Transfer to D23 Tue-20-02 without refit (D10 tables, thresholds): FA <= 5% on benign test flows and DDoS-LOIC-HTTP detection >= 50% (dos layers). Refit-on-D23 shown separately.
+ B6 Honesty: list families time windows cannot see (single-flow application attacks: Web-XSS, Web-SQLi, Heartbleed, Infiltration, Bot unless it shows up as repetition), delay from
+    attack-window start per family, FA split into "benign flows in attack cells" and others.
+
+## 2026-10-22 S3 development on VALIDATION (D10), before the verdict run (tools/WP4_S3_dev.py, results/WP4/s3_dev_val.json, log results/WP4/logs/s3_dev.log)
+Findings that changed the design (all on train / val, test never read):
+1. Reversed flows: CICFlowMeter reports many flows with the server as "source" and an ephemeral client port as "destination"; a busy server then "contacts" 1000+ distinct ports
+   in a minute. Fix (fixed rule): scan and TRW count only service-directed flows (dst port < 32768); TRW only TCP connection attempts (Jung 2004).
+2. TRW success / failure: the "bare RST" reply carries 6 payload bytes (Ethernet padding counted by CICFlowMeter), so a refused SYN is 1 fwd + 1 bwd packet with <= 6 B per direction.
+3. Brute force: a tail probability saturates at 1/N and favoured ports with many benign cells (SSH / FTP val detection 0); replaced by log10(count / benign 99.9th percentile of that port).
+4. LABEL PROBLEM in D10 (benign validation): Thursday 2017-07-06 15:23, one benign-labelled host sends 2,033 flows (1,008 distinct ports) in ONE minute = a port scan by the compromised
+   Infiltration victim (the Infiltration file has 36 Infiltration labels but this scanning is labelled BENIGN). With published labels the scan thresholds sit above the real PortScan
+   (913 vs 909 ports) and every layer's 1% budget is eaten by it. DECISION (made on val, before the verdict): the whole D10 file Thursday-Afternoon-Infilteration is AUDITED: its benign
+   flows are excluded from fit, calibration and the headline FA, but stay in the stream (they still contribute to window counts). The FA with the published labels is reported next to the headline.
+   Acceptance B1 therefore reads: headline FA = benign test flows outside the audited file; FA with published labels reported as well (not a criterion).
+5. Window W (val rule fixed above): scan 1, trw 5, bruteforce 1, dos_rate 1, slow 5 (PortScan val 100% by scan W=1 and TRW; SSH / FTP 100% by bruteforce; DDoS-LOIC / Hulk by dos_rate and
+   bruteforce; Slowloris only partly by bruteforce; GoldenEye by nothing on val (312 flows in one minute, below the busiest benign server's rate)). No other parameter was tuned.
+   Classic TRW threshold ln(99) (diagnostic): FA 10% on benign val (benign hosts fail first contacts often) -> a budget threshold is needed.
+
+## 2026-10-22 S3 VERDICT (one test run: results/WP4/logs/s3_verdict.log; tables s3_tables.md; report reports/WP4_S3.md)
+B1 MET (layer FA 0.00-1.77%, window FA 0.07-0.90%, stack 0.33%). B2 MET (PortScan 97.4, SSH 98.6, FTP 99.95). B3 MET (4/5 DoS >= 50; Slowloris 0). B4 MET (macro 21.1 -> 54.2; L2a alone 61.9).
+B5 NOT MET: transfer to D23 Tue-20-02 FA of OR 46.6% (dos_rate 39.7%, slow 7.7%; scan 2.5, trw 3.1, bruteforce 2.2); LOIC 99.7%. Refit: LOIC 100%, OR FA 5.5%. B6 done (report caveats).
+Surprises: the learned logistic combiner kills SSH (0.1%) when tcp_flags and slow are in the stack; PortScan on dedup survivors only 40.6% vs 97.4% pre-dedup (multiplicity matters).
+No layer, threshold or window changed after the verdict. S2/D23.pkl deleted (cache 4.7 GB).

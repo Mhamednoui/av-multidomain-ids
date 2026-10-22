@@ -1,0 +1,458 @@
+{
+ "mode": "verdict",
+ "test_side": "test",
+ "families": [
+  "DDoS-LOIC-HTTP"
+ ],
+ "n_test": 1587833,
+ "n_train_benign": 4335440,
+ "n_val_benign": 1434152,
+ "transfer": {
+  "net.scan": {
+   "W": 1,
+   "flow": {
+    "fa_benign": 0.02541865784143479,
+    "fa_benign_published_labels": 0.02541865784143479,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 0.0,
+    "fa_benign_other": 0.02541865784143479,
+    "benign_in_attack_cells_share": 0.0,
+    "auc": 0.1698433457733482,
+    "threshold": 0.9851624793656288,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.0
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.02541865784143479
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.0069446279899563895,
+    "n_benign_cells": 151340,
+    "fa_benign_cells_published_labels": 0.0069446279899563895,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.0
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 166
+    }
+   }
+  },
+  "net.trw": {
+   "W": 5,
+   "flow": {
+    "fa_benign": 0.031285183478860605,
+    "fa_benign_published_labels": 0.031285183478860605,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 0.0,
+    "fa_benign_other": 0.031285183478860605,
+    "benign_in_attack_cells_share": 0.0,
+    "auc": 0.37650922642008355,
+    "threshold": 0.9875136303584133,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.0
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.031285183478860605
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.017587007598136875,
+    "n_benign_cells": 72781,
+    "fa_benign_cells_published_labels": 0.017587007598136875,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.0
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 62
+    }
+   }
+  },
+  "net.bruteforce": {
+   "W": 1,
+   "flow": {
+    "fa_benign": 0.02228434657208984,
+    "fa_benign_published_labels": 0.02228434657208984,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 0.0,
+    "fa_benign_other": 0.02228434657208984,
+    "benign_in_attack_cells_share": 0.0,
+    "auc": 0.9829284860309657,
+    "threshold": 0.9890984599411664,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9925575606720597
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      0.1,
+      0.0,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.02228434657208984
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.007793038761606305,
+    "n_benign_cells": 687665,
+    "fa_benign_cells_published_labels": 0.007793038761606305,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.8493975903614458
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 166
+    }
+   }
+  },
+  "net.dos_rate": {
+   "W": 1,
+   "flow": {
+    "fa_benign": 0.39672788535195064,
+    "fa_benign_published_labels": 0.39672788535195064,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 2.180864549228928e-05,
+    "fa_benign_other": 0.39670607670645835,
+    "benign_in_attack_cells_share": 2.38532060071914e-05,
+    "auc": 0.9937690558150329,
+    "threshold": 0.9891424066886951,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9974942957892553
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      0.1,
+      0.0,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.39672788535195064
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.022595509735714843,
+    "n_benign_cells": 166449,
+    "fa_benign_cells_published_labels": 0.022595509735714843,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 20
+    }
+   }
+  },
+  "net.slow": {
+   "W": 5,
+   "flow": {
+    "fa_benign": 0.0772714385800391,
+    "fa_benign_published_labels": 0.0772714385800391,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 2.180864549228928e-05,
+    "fa_benign_other": 0.0772496299345468,
+    "benign_in_attack_cells_share": 2.38532060071914e-05,
+    "auc": 0.9607579629657974,
+    "threshold": 0.9876866706768075,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9974942957892553
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      0.1,
+      0.0,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.0772714385800391
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.03044175693455653,
+    "n_benign_cells": 166449,
+    "fa_benign_cells_published_labels": 0.03044175693455653,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.75
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 20
+    }
+   }
+  }
+ },
+ "transfer_or": {
+  "fa_benign": 0.46551030867411614,
+  "fa_benign_published_labels": 0.46551030867411614,
+  "detection": {
+   "DDoS-LOIC-HTTP": 0.9974942957892553
+  }
+ },
+ "refit": {
+  "net.scan": {
+   "W": 1,
+   "flow": {
+    "fa_benign": 0.00980775678998547,
+    "fa_benign_published_labels": 0.00980775678998547,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 0.0,
+    "fa_benign_other": 0.00980775678998547,
+    "benign_in_attack_cells_share": 0.0,
+    "auc": 0.1698433457733482,
+    "threshold": 0.9897772342122733,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.0
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.00980775678998547
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.009818950707017313,
+    "n_benign_cells": 151340,
+    "fa_benign_cells_published_labels": 0.009818950707017313,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.0
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 166
+    }
+   }
+  },
+  "net.trw": {
+   "W": 5,
+   "flow": {
+    "fa_benign": 0.012315751021598736,
+    "fa_benign_published_labels": 0.012315751021598736,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 0.0,
+    "fa_benign_other": 0.012315751021598736,
+    "benign_in_attack_cells_share": 0.0,
+    "auc": 0.37650922642008355,
+    "threshold": 0.9899222676536379,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.0
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      null,
+      null,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.012315751021598736
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.00849122710597546,
+    "n_benign_cells": 72781,
+    "fa_benign_cells_published_labels": 0.00849122710597546,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.0
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 62
+    }
+   }
+  },
+  "net.bruteforce": {
+   "W": 1,
+   "flow": {
+    "fa_benign": 0.010578556104103569,
+    "fa_benign_published_labels": 0.010578556104103569,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 0.0,
+    "fa_benign_other": 0.010578556104103569,
+    "benign_in_attack_cells_share": 0.0,
+    "auc": 0.9994190331776782,
+    "threshold": 0.9896824046544579,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9983737813731591
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      0.0,
+      0.0,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.010578556104103569
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.0009990329593624803,
+    "n_benign_cells": 687665,
+    "fa_benign_cells_published_labels": 0.0009990329593624803,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.8493975903614458
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 166
+    }
+   }
+  },
+  "net.dos_rate": {
+   "W": 1,
+   "flow": {
+    "fa_benign": 0.014146995722779403,
+    "fa_benign_published_labels": 0.014146995722779403,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 2.38532060071914e-05,
+    "fa_benign_other": 0.014123142516772212,
+    "benign_in_attack_cells_share": 2.38532060071914e-05,
+    "auc": 0.9999761758473065,
+    "threshold": 0.9899550396331771,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9999336237295167
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      0.0,
+      0.0,
+      null,
+      0.0
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.014146995722779403
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.009630577534259744,
+    "n_benign_cells": 166449,
+    "fa_benign_cells_published_labels": 0.009630577534259744,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.95
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 20
+    }
+   }
+  },
+  "net.slow": {
+   "W": 5,
+   "flow": {
+    "fa_benign": 0.0124411507331794,
+    "fa_benign_published_labels": 0.0124411507331794,
+    "fa_benign_audit_file": null,
+    "n_benign": 1467308,
+    "n_benign_audit": 0,
+    "fa_benign_in_attack_cells": 2.180864549228928e-05,
+    "fa_benign_other": 0.012419342087687111,
+    "benign_in_attack_cells_share": 2.38532060071914e-05,
+    "auc": 0.9987139039824519,
+    "threshold": 0.9896119797622568,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9974942957892553
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "delay_min": {
+     "DDoS-LOIC-HTTP": [
+      0.1,
+      0.0,
+      null,
+      null
+     ]
+    },
+    "fa_by_day": {
+     "2018-02-20": 0.0124411507331794
+    }
+   },
+   "window": {
+    "fa_benign_cells": 0.010669934935025143,
+    "n_benign_cells": 166449,
+    "fa_benign_cells_published_labels": 0.010669934935025143,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.75
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 20
+    }
+   }
+  }
+ },
+ "refit_or": {
+  "fa_benign": 0.05515883509120103,
+  "fa_benign_published_labels": 0.05515883509120103,
+  "detection": {
+   "DDoS-LOIC-HTTP": 0.9999336237295167
+  }
+ }
+}
