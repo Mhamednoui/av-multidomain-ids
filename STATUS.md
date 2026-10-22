@@ -8,7 +8,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 |---|---|---|---|---|---|
 | WP0 Foundation | S4 | APPROVED | worker sonnet | 2026-10-21 | combiner noisy_or log form (rank-equivalent, no saturation) |
 | WP1 GPS | done (M1-GPS partial) | APPROVED | - | 2026-10-21 | M1-GPS closed PARTIAL, see reports/M1_GPS.md; frozen output gps/domain.py |
-| WP2 CAN | S6 | REVIEW | worker sonnet (high, T3) | 2026-10-22 | L4 NOT MET; L4 adds nothing on L1+L2b+L3; ROAD test not scored |
+| WP2 CAN | S7 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-22 | S6 APPROVED (negative: L4 adds nothing). S7 -> M1-CAN |
 | WP3 LiDAR | S3 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S2 APPROVED with misses; S3 starts with single-return generator fix |
 | WP4 Network | S5 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-22 | S4 APPROVED with miss (Bot 36%) |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
@@ -17,13 +17,13 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 
 ## Overall progress (orchestrator updates this at every approval)
 
-**Overall: 35 / 55 steps approved = 64%** (updated 2026-10-22)
+**Overall: 36 / 55 steps approved = 65%** (updated 2026-10-22)
 
 | WP | Steps counted | Approved | % |
 |---|---|---|---|
 | WP0 Foundation | S1-S4 (4) | 4 | 100 |
 | WP1 GPS | S0-S8 (9) | 9 | 100 (M1-GPS partial) |
-| WP2 CAN | S0-S7 (8) | 6 | 75 |
+| WP2 CAN | S0-S7 (8) | 7 | 88 |
 | WP3 LiDAR | S1-S7, S9 (8; S0, S8 optional) | 2 | 25 |
 | WP4 Network | S0-S7 (8) | 5 | 63 |
 | WP5 V2X | S0, S0b, S1, S1b, S2-S6 (9; S3b, S7 optional) | 9 | 100 (M1-V2X partial) |
