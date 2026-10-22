@@ -173,3 +173,6 @@ State:
 - Option asked to the user: continue now with Opus workers (uses Opus quota) or wait for the Sonnet reset.
 - User items pending: V2AIX form; TOW-IDS (IEEE DataPort login); optional Tampa ITS DataHub request; stray python PID 30976.
 - 2026-10-22 13:50: user reset the usage limit; WP3 S3 resumed; WP2 S7 and WP4 S5 still running.
+| 2026-10-22 | WP4 | S5 | sonnet high (T3) | APPROVED with documented misses | commit f792e2c, 283/283 tests. Normal-only L3 (service Mahalanobis, iforest, Keras AE) on 60 clean features: FA ~1% (AE 5.9% with published labels: Infiltration file). Only the AE catches a rule-blind family (Slowloris 78%); Bot / Web-XSS / Web-BruteForce 0% at 1% FA (Bot test flows are the beacon phase and look like benign traffic of the same shape). Stack macro 54.2 -> 61.0% at FA 0.74%. Zero-shot to D23 NOT MET (FA 36/6.5/14%); refit on D23 FA ~1%. |
+| 2026-10-22 | WP4 | decisions | - | DECISION | D2/D5 misses accepted. AE and service profile kept as ON-NETWORK optional layers (refit on the target network's benign warm-up); iforest dropped (adds 0). |
+| 2026-10-22 | WP4 | S6 | sonnet high (T3) | ASSIGNED | retrain v2 XGBoost on the time split |
