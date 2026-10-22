@@ -1,0 +1,55 @@
+{
+ "combined_threshold_loco": {
+  "ambient_dyno_drive_basic_long": 0.0008,
+  "ambient_dyno_drive_extended_long": 0.091324200913242,
+  "ambient_dyno_drive_radio_infotainment": 0.002564102564102564,
+  "ambient_dyno_idle_radio_infotainment": 0.007598784194528876,
+  "ambient_dyno_drive_basic_short": 0.0045045045045045045,
+  "ambient_dyno_drive_winter": 0.0425531914893617,
+  "hw_block0": 0.00755939524838013,
+  "hw_block1": 0.0,
+  "hw_block2": 0.006586169045005488,
+  "hw_block3": 0.004424778761061947
+ },
+ "per_layer_threshold_loco": {
+  "L1": {
+   "ambient_dyno_drive_basic_long": 0.0032,
+   "ambient_dyno_drive_extended_long": 0.0487062404870624,
+   "ambient_dyno_drive_radio_infotainment": 0.005128205128205128,
+   "ambient_dyno_idle_radio_infotainment": 0.007598784194528876,
+   "ambient_dyno_drive_basic_short": 0.01126126126126126,
+   "ambient_dyno_drive_winter": 0.0425531914893617,
+   "hw_block0": 0.01079913606911447,
+   "hw_block1": 0.0043907793633369925,
+   "hw_block2": 0.008781558726673985,
+   "hw_block3": 0.0055309734513274336
+  },
+  "L3c": {
+   "ambient_dyno_drive_basic_long": 0.0,
+   "ambient_dyno_drive_extended_long": 0.1293759512937595,
+   "ambient_dyno_drive_radio_infotainment": 0.005128205128205128,
+   "ambient_dyno_idle_radio_infotainment": 0.0,
+   "ambient_dyno_drive_basic_short": 0.0045045045045045045,
+   "ambient_dyno_drive_winter": 0.0,
+   "hw_block0": 0.0021598272138228943,
+   "hw_block1": 0.0,
+   "hw_block2": 0.0,
+   "hw_block3": 0.004424778761061947
+  },
+  "L3d": {
+   "ambient_dyno_drive_basic_long": 0.0,
+   "ambient_dyno_drive_extended_long": 0.0,
+   "ambient_dyno_drive_radio_infotainment": 0.0,
+   "ambient_dyno_idle_radio_infotainment": 0.0,
+   "ambient_dyno_drive_basic_short": 0.0,
+   "ambient_dyno_drive_winter": 0.0,
+   "hw_block0": 0.0,
+   "hw_block1": 0.0,
+   "hw_block2": 0.0,
+   "hw_block3": 0.0
+  }
+ },
+ "combined_pooled_dyno": 0.02060359837492745,
+ "combined_pooled_road": 0.004654983570646221,
+ "combined_pooled_all": 0.012397858551704706
+}

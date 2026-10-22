@@ -1,0 +1,1864 @@
+{
+ "exposure": 6,
+ "layers": [
+  "L1",
+  "L3c",
+  "L3d"
+ ],
+ "combined_method": "max",
+ "layer_thresholds": {
+  "L1": 0.9899971823048748,
+  "L3c": 0.9898432965757401,
+  "L3d": 5e-324
+ },
+ "frozen": {
+  "cfg": {
+   "l1_variant": 0,
+   "K": null,
+   "l3c": [
+    "M1",
+    0.9,
+    "P0"
+   ],
+   "l3d_floor": 0.05000000074505806,
+   "pool_l3c": "P0"
+  },
+  "layers": [
+   "L1",
+   "L3c",
+   "L3d"
+  ],
+  "layer_thresholds": {
+   "L1": 0.9899971823048748,
+   "L3c": 0.9898432965757401,
+   "L3d": 5e-324
+  },
+  "combiner": {
+   "method": "max",
+   "threshold": 0.9930354033662219,
+   "selection": {
+    "noisy_or": 0.9453111124267362,
+    "logistic": 0.9430761944230656,
+    "max": 0.994183292877864
+   }
+  },
+  "design_rule": "qualifying designs: lowest regime-averaged threshold-LOCO FA",
+  "l2b_chosen": null,
+  "design_chosen": 3,
+  "note": "frozen before any S7 test table was built; ROAD test exposure 6"
+ },
+ "configs": {
+  "all": {
+   "method": "max",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.17490196228027344
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.04838709677419355,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 12,
+     "fa_clean": 0.02771362586605081
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 24,
+     "fa_clean": 0.06685236768802229
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 8,
+     "fa_clean": 0.017057569296375266
+    }
+   },
+   "clean_fa_pooled": 0.032,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.0,
+    0.05647225109124921
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 44,
+   "false_alerts_per_hour": 115.2,
+   "masquerade_detected": 5,
+   "masquerade_ci95_clopper_pearson": [
+    0.4781762498950185,
+    1.0
+   ],
+   "plain_detected": 6,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.02771362586605081,
+    "ambient_dyno_drive_extended_short": 0.06685236768802229,
+    "ambient_dyno_reverse": 0.0,
+    "ambient_highway_street_driving_diagnostics": 0.017057569296375266
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.02771362586605081,
+     [
+      0.004545454545454545,
+      0.06136363636363636
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.06685236768802229,
+     [
+      0.030555555555555555,
+      0.11388888888888889
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0,
+     [
+      0.0,
+      0.5218237501049815
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.017057569296375266,
+     [
+      0.00425531914893617,
+      0.031914893617021274
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.039735099337748346
+  },
+  "only_L1": {
+   "method": "layer threshold",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.17490196228027344
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.058823529411764705,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.058823529411764705,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 16,
+     "fa_clean": 0.03695150115473441
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 33,
+     "fa_clean": 0.09192200557103064
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.0196078431372549
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 14,
+     "fa_clean": 0.029850746268656716
+    }
+   },
+   "clean_fa_pooled": 0.04727272727272727,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.022553019319599445,
+    0.08043420401999771
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 65,
+   "false_alerts_per_hour": 170.1818181818182,
+   "masquerade_detected": 0,
+   "masquerade_ci95_clopper_pearson": [
+    0.0,
+    0.5218237501049814
+   ],
+   "plain_detected": 6,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.03695150115473441,
+    "ambient_dyno_drive_extended_short": 0.09192200557103064,
+    "ambient_dyno_reverse": 0.0196078431372549,
+    "ambient_highway_street_driving_diagnostics": 0.029850746268656716
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.03695150115473441,
+     [
+      0.011363636363636364,
+      0.07045454545454545
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.09192200557103064,
+     [
+      0.04722222222222222,
+      0.15
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0196078431372549,
+     [
+      0.0,
+      0.03333333333333333
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.029850746268656716,
+     [
+      0.010638297872340425,
+      0.05106382978723404
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.056291390728476824
+  },
+  "only_L3c": {
+   "method": "layer threshold",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 3,
+     "fa_clean": 0.006928406466512702
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 8,
+     "fa_clean": 0.022284122562674095
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    }
+   },
+   "clean_fa_pooled": 0.008,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.0,
+    0.01882408369708307
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 11,
+   "false_alerts_per_hour": 28.8,
+   "masquerade_detected": 3,
+   "masquerade_ci95_clopper_pearson": [
+    0.14663279963467313,
+    0.9472550494736831
+   ],
+   "plain_detected": 3,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.006928406466512702,
+    "ambient_dyno_drive_extended_short": 0.022284122562674095,
+    "ambient_dyno_reverse": 0.0,
+    "ambient_highway_street_driving_diagnostics": 0.0
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.006928406466512702,
+     [
+      0.0,
+      0.01818181818181818
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.022284122562674095,
+     [
+      0.005555555555555556,
+      0.044444444444444446
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0,
+     [
+      0.0,
+      0.5218237501049815
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.0,
+     [
+      0.0,
+      0.07706182705190068
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.012141280353200883
+  },
+  "only_L3d": {
+   "method": "layer threshold",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8,
+     "delay_s": 1.4758679866790771
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.16666666666666666,
+     "delay_s": 20.92932415008545
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    }
+   },
+   "clean_fa_pooled": 0.0,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.0,
+    0.0
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 0,
+   "false_alerts_per_hour": 0.0,
+   "masquerade_detected": 2,
+   "masquerade_ci95_clopper_pearson": [
+    0.052744950526316906,
+    0.8533672003653268
+   ],
+   "plain_detected": 2,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.0,
+    "ambient_dyno_drive_extended_short": 0.0,
+    "ambient_dyno_reverse": 0.0,
+    "ambient_highway_street_driving_diagnostics": 0.0
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.0,
+     [
+      0.0,
+      0.08221112115413853
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.0,
+     [
+      0.0,
+      0.10003243557210506
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0,
+     [
+      0.0,
+      0.5218237501049815
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.0,
+     [
+      0.0,
+      0.07706182705190068
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.0
+  },
+  "all_but_L1": {
+   "method": "noisy_or",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8,
+     "delay_s": 1.4758679866790771
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.16666666666666666,
+     "delay_s": 20.92932415008545
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 4,
+     "fa_clean": 0.009237875288683603
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 11,
+     "fa_clean": 0.03064066852367688
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.0021321961620469083
+    }
+   },
+   "clean_fa_pooled": 0.011636363636363636,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.0,
+    0.02588311508348922
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 16,
+   "false_alerts_per_hour": 41.89090909090909,
+   "masquerade_detected": 5,
+   "masquerade_ci95_clopper_pearson": [
+    0.4781762498950185,
+    1.0
+   ],
+   "plain_detected": 5,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.009237875288683603,
+    "ambient_dyno_drive_extended_short": 0.03064066852367688,
+    "ambient_dyno_reverse": 0.0,
+    "ambient_highway_street_driving_diagnostics": 0.0021321961620469083
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.009237875288683603,
+     [
+      0.0,
+      0.022727272727272728
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.03064066852367688,
+     [
+      0.008263888888888894,
+      0.06388888888888888
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0,
+     [
+      0.0,
+      0.5218237501049815
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.0021321961620469083,
+     [
+      0.0,
+      0.006382978723404255
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.016556291390728478
+  },
+  "all_but_L3c": {
+   "method": "noisy_or",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.17490196228027344
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.058823529411764705,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.058823529411764705,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 16,
+     "fa_clean": 0.03695150115473441
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 33,
+     "fa_clean": 0.09192200557103064
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.0196078431372549
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 14,
+     "fa_clean": 0.029850746268656716
+    }
+   },
+   "clean_fa_pooled": 0.04727272727272727,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.022553019319599445,
+    0.08043420401999771
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 65,
+   "false_alerts_per_hour": 170.1818181818182,
+   "masquerade_detected": 2,
+   "masquerade_ci95_clopper_pearson": [
+    0.052744950526316906,
+    0.8533672003653268
+   ],
+   "plain_detected": 6,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.03695150115473441,
+    "ambient_dyno_drive_extended_short": 0.09192200557103064,
+    "ambient_dyno_reverse": 0.0196078431372549,
+    "ambient_highway_street_driving_diagnostics": 0.029850746268656716
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.03695150115473441,
+     [
+      0.011363636363636364,
+      0.07045454545454545
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.09192200557103064,
+     [
+      0.04722222222222222,
+      0.15
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0196078431372549,
+     [
+      0.0,
+      0.03333333333333333
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.029850746268656716,
+     [
+      0.010638297872340425,
+      0.05106382978723404
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.056291390728476824
+  },
+  "all_but_L3d": {
+   "method": "max",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.17490196228027344
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.04838709677419355,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 0.8333333333333334,
+     "delay_s": 1.020190954208374
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 12,
+     "fa_clean": 0.02771362586605081
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 24,
+     "fa_clean": 0.06685236768802229
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 8,
+     "fa_clean": 0.017057569296375266
+    }
+   },
+   "clean_fa_pooled": 0.032,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.0,
+    0.05647225109124921
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 44,
+   "false_alerts_per_hour": 115.2,
+   "masquerade_detected": 3,
+   "masquerade_ci95_clopper_pearson": [
+    0.14663279963467313,
+    0.9472550494736831
+   ],
+   "plain_detected": 6,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.02771362586605081,
+    "ambient_dyno_drive_extended_short": 0.06685236768802229,
+    "ambient_dyno_reverse": 0.0,
+    "ambient_highway_street_driving_diagnostics": 0.017057569296375266
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.02771362586605081,
+     [
+      0.004545454545454545,
+      0.06136363636363636
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.06685236768802229,
+     [
+      0.030555555555555555,
+      0.11388888888888889
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0,
+     [
+      0.0,
+      0.5218237501049815
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.017057569296375266,
+     [
+      0.00425531914893617,
+      0.031914893617021274
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.039735099337748346
+  },
+  "all+L2b (optional)": {
+   "method": "logistic",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.14285714285714285,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 2,
+     "fa_clean": 0.09523809523809523,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.17490196228027344
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 1,
+     "fa_clean": 0.14285714285714285,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.4758939743041992
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 2,
+     "fa_clean": 0.09523809523809523,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.0203399658203125
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.0203399658203125
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 42,
+     "fa_clean": 0.09699769053117784
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 12,
+     "fa_clean": 0.033426183844011144
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 4,
+     "fa_clean": 0.0784313725490196
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 10,
+     "fa_clean": 0.021321961620469083
+    }
+   },
+   "clean_fa_pooled": 0.05163636363636363,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.024564784299084673,
+    0.09333357452966715
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 71,
+   "false_alerts_per_hour": 185.8909090909091,
+   "masquerade_detected": 5,
+   "masquerade_ci95_clopper_pearson": [
+    0.4781762498950185,
+    1.0
+   ],
+   "plain_detected": 6,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.09699769053117784,
+    "ambient_dyno_drive_extended_short": 0.033426183844011144,
+    "ambient_dyno_reverse": 0.0784313725490196,
+    "ambient_highway_street_driving_diagnostics": 0.021321961620469083
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.09699769053117784,
+     [
+      0.04090909090909091,
+      0.16590909090909092
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.033426183844011144,
+     [
+      0.011111111111111112,
+      0.06111111111111111
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0784313725490196,
+     [
+      0.0,
+      0.1
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.021321961620469083,
+     [
+      0.00425531914893617,
+      0.04468085106382979
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.0673289183222958
+  },
+  "only_L2b (optional)": {
+   "method": "layer threshold",
+   "per_capture": {
+    "correlated_signal_attack_3": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_on_attack_3": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "fuzzing_attack_3": {
+     "windows": 5,
+     "attack_windows": 2,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "correlated_signal_attack_3_masquerade": {
+     "windows": 16,
+     "attack_windows": 13,
+     "clean_windows": 2,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.6810259819030762
+    },
+    "max_speedometer_attack_3_masquerade": {
+     "windows": 86,
+     "attack_windows": 62,
+     "clean_windows": 7,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.481065034866333
+    },
+    "reverse_light_off_attack_3_masquerade": {
+     "windows": 57,
+     "attack_windows": 25,
+     "clean_windows": 14,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": false,
+     "window_recall": 0.0,
+     "delay_s": null
+    },
+    "reverse_light_on_attack_3_masquerade": {
+     "windows": 64,
+     "attack_windows": 24,
+     "clean_windows": 21,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.9291970729827881
+    },
+    "max_engine_coolant_temp_attack": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.0203399658203125
+    },
+    "max_engine_coolant_temp_attack_masquerade": {
+     "windows": 25,
+     "attack_windows": 6,
+     "clean_windows": 17,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0,
+     "detected": true,
+     "window_recall": 1.0,
+     "delay_s": 0.0203399658203125
+    },
+    "ambient_dyno_drive_benign_anomaly": {
+     "windows": 433,
+     "attack_windows": 0,
+     "clean_windows": 433,
+     "false_alerts_clean": 59,
+     "fa_clean": 0.13625866050808313
+    },
+    "ambient_dyno_drive_extended_short": {
+     "windows": 359,
+     "attack_windows": 0,
+     "clean_windows": 359,
+     "false_alerts_clean": 10,
+     "fa_clean": 0.027855153203342618
+    },
+    "ambient_dyno_reverse": {
+     "windows": 51,
+     "attack_windows": 0,
+     "clean_windows": 51,
+     "false_alerts_clean": 0,
+     "fa_clean": 0.0
+    },
+    "ambient_highway_street_driving_diagnostics": {
+     "windows": 469,
+     "attack_windows": 0,
+     "clean_windows": 469,
+     "false_alerts_clean": 5,
+     "fa_clean": 0.010660980810234541
+    }
+   },
+   "clean_fa_pooled": 0.05381818181818182,
+   "clean_fa_ci95_cluster_bootstrap": [
+    0.0,
+    0.12065748409743109
+   ],
+   "clean_windows": 1375,
+   "false_alerts": 74,
+   "false_alerts_per_hour": 193.74545454545455,
+   "masquerade_detected": 4,
+   "masquerade_ci95_clopper_pearson": [
+    0.2835820638819105,
+    0.9949492366205319
+   ],
+   "plain_detected": 4,
+   "n_plain": 6,
+   "ambient_fa": {
+    "ambient_dyno_drive_benign_anomaly": 0.13625866050808313,
+    "ambient_dyno_drive_extended_short": 0.027855153203342618,
+    "ambient_dyno_reverse": 0.0,
+    "ambient_highway_street_driving_diagnostics": 0.010660980810234541
+   },
+   "ambient_fa_ci95_block_bootstrap": {
+    "ambient_dyno_drive_benign_anomaly": [
+     0.13625866050808313,
+     [
+      0.045454545454545456,
+      0.25
+     ]
+    ],
+    "ambient_dyno_drive_extended_short": [
+     0.027855153203342618,
+     [
+      0.005555555555555556,
+      0.05555555555555555
+     ]
+    ],
+    "ambient_dyno_reverse": [
+     0.0,
+     [
+      0.0,
+      0.5218237501049815
+     ]
+    ],
+    "ambient_highway_street_driving_diagnostics": [
+     0.010660980810234541,
+     [
+      0.002127659574468085,
+      0.02127659574468085
+     ]
+    ]
+   },
+   "fa_without_highway_diag": 0.076158940397351
+  }
+ },
+ "alarm_windows_by_layer_in_attack": {
+  "correlated_signal_attack_3": {
+   "L1": 13,
+   "L3c": 13,
+   "L3d": 0
+  },
+  "max_speedometer_attack_3": {
+   "L1": 62,
+   "L3c": 62,
+   "L3d": 0
+  },
+  "reverse_light_off_attack_3": {
+   "L1": 25,
+   "L3c": 0,
+   "L3d": 20
+  },
+  "reverse_light_on_attack_3": {
+   "L1": 24,
+   "L3c": 0,
+   "L3d": 4
+  },
+  "fuzzing_attack_3": {
+   "L1": 2,
+   "L3c": 0,
+   "L3d": 0
+  },
+  "correlated_signal_attack_3_masquerade": {
+   "L1": 0,
+   "L3c": 13,
+   "L3d": 0
+  },
+  "max_speedometer_attack_3_masquerade": {
+   "L1": 0,
+   "L3c": 3,
+   "L3d": 0
+  },
+  "reverse_light_off_attack_3_masquerade": {
+   "L1": 0,
+   "L3c": 0,
+   "L3d": 25
+  },
+  "reverse_light_on_attack_3_masquerade": {
+   "L1": 0,
+   "L3c": 0,
+   "L3d": 24
+  },
+  "max_engine_coolant_temp_attack": {
+   "L1": 5,
+   "L3c": 5,
+   "L3d": 0
+  },
+  "max_engine_coolant_temp_attack_masquerade": {
+   "L1": 0,
+   "L3c": 5,
+   "L3d": 0
+  }
+ }
+}

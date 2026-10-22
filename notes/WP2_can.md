@@ -427,3 +427,68 @@ Leakage: gain share > 50% in the timing model on Car-Hacking (dt_id_ratio 62%) a
  dt == 0: injected frames are 380x more likely to carry dt_prev == 0 in set_01 (0.64% vs 0.0017%) but the timing model without it has the same AP (0.99927 vs 0.99928).
 Pitfalls: (1) window FA of supervised layers on tiny clean pools (D11 regime B: 240-300 clean windows) is 1-6%; (2) shuffled-label window AUC is not a clean leakage test for max-type aggregation; (3) ROAD val is saturated by L3 (S5 design used these captures), so "adds" cannot be positive there;
  (4) the payload model learns attacked-signal values (b1) and fails to transfer to unseen families (OOF recall 0% for correlated_signal, speedometer, fuzzing).
+
+## 2026-10-22 S7 start: combined CAN stack, ablation, fresh checks, M1-CAN. Design + acceptance rule, written BEFORE any S7 score
+Binding decisions (orchestrator 2026-10-22): default stack = L1 + L2b relations-only (+ named gear/reverse rule) + L3 (L3c predictors + L3d lag-aware reverse rule); L2a and L4 are optional ablation rows only.
+ROAD test exposure count BEFORE this step: S2, S3, S4 (x2: verdict + R1), S5 = 5 exposures; the S7 run is the 6th and is labelled so. Car-Hacking test blocks were scored in S2 (L1), S3 (L2a) and S6 (L4): by the reports the
+ S7 numbers would be at least the 4th exposure (the orchestrator wrote "second"); I do NOT re-score Car-Hacking / D11 for L1: the S2 numbers (deterministic, code unchanged) are re-used, no new exposure, and the count is stated in the report.
+Fresh data: the 4 ROAD accelerator captures were never scored in v3. ROAD documents their timing as "the injection happens BEFORE the start of the capture" and the log has no injected frames: they are usable ONLY as whole-capture
+ checks (the whole capture is in the attacked vehicle state; there is no onset, no frame label, no ground-truth window label). They are NOT a labelled holdout; the report says so.
+Units (window = 1 s by running-max time, label = >= 1 injected frame; clean = attack-free frames only):
+ - LOCO folds = 6 dyno captures (basic_long, extended_long, radio_infotainment, idle_radio, basic_short, winter) + 4 time blocks of the real-road highway_long drive (equal duration, 30 s cut at every block boundary, belongs
+   to neither fit nor score). exercise_all_bits is fit-only. The block folds are a PROXY for a new real-road session (the failing condition of S5); they are data of the train split, not test data.
+ - final models = fit on all clean ambient units (6 dyno + exercise + 4 blocks), no attack frames anywhere in any fit; calibrators / thresholds from the pooled LOCO windows (tie-safe 1%, window level primary).
+ - validation = attack captures of instances 1 and 2 (18 captures, 8 masquerade) scored with the final models; their clean leads (lead_clean, 1 s margin) are the "lead FA" check. Leads are NOT in any calibration pool.
+Layers:
+ L1: five rules of can/l1.py; profile per fold from the clean frames of all OTHER units (+ clean leads of the 18 train/val attack captures; for a lead unit, the capture and its masquerade twin are left out);
+     tolerance variant (4) chosen by the S2 rule (period rule alone, mean window recall on the non-masquerade train/val attack captures at the pooled LOCO 1% threshold); L1 window score = noisy-or log statistic of the 5 ECDF-calibrated rules.
+ L2b relations-only, S4 variant 0 (rho 0.98, ms 1), refit per fold from sufficient statistics; surprise weights recomputed from the LOCO traces; 3 s in-situ mute REMOVED (decision 2 of 2026-10-22: no onset-free way to define it that I trust; the
+     remaining need is judged by the lead FA below). Check-type subsets K0 = {linear}, K1 = {linear, joint(reverse bit pairs)}, K2 = K1 + rate(cont), K3 = K2 + value(cont) (= S5 default).
+     Selection rule (LOCO + validation only): K must have lead FA <= 3% on the 18 train/val attack leads AND threshold-LOCO fold FA <= 5% for every one of the 10 folds; among qualifying sets take the highest mean validation
+     masquerade recall of the set alone, ties -> the smaller set; if none qualifies L2b is dropped from the default stack (documented).
+ L3c/L3d: S5 variant 5 (cross+own, windowed CUSUM, L3d floor rule) fixed. FA-transfer designs (selection = this step's decision 3): model M0 (S5: inner folds for lambda / sigma / R2 = dyno folds only) vs M1 (inner folds = dyno + road
+     blocks, i.e. sigma and R2 conservative over both regimes); pool P0 (threshold from dyno folds only) vs P1 (all 10 folds); r_min 0 vs 0.9 (R2-filtered high-precision L3c). 8 designs. Metric = regime-averaged
+     threshold-LOCO FA (mean over the dyno folds pooled and the road blocks pooled; the threshold applied to a fold is computed from the OTHER folds' held-out scores of the design's pool, i.e. a simulation of a new session).
+     Rule: among designs with mean validation masquerade recall (L3c + L3d union) >= 0.9 and lead FA <= 3%, take the lowest regime-averaged threshold-LOCO FA; ties -> lowest index in the order M0P0r0, M0P0r.9, M0P1r0, ...
+ Combination: the four layers L1, L2b (if kept), L3c, L3d -> ECDF-calibrated (pooled LOCO normal windows) -> common.combiner.DomainCombiner, method chosen by method="auto" (group-halves on validation: LOCO windows as normal groups,
+     validation attack windows as attack groups); alarm threshold = tie-safe 1% of the pooled LOCO normal windows. Ablation: each layer alone, all, all-but-one (+ optional L2a/L4 rows from S3/S6 where they exist).
+Evaluation: ROAD test once with the frozen domain (per attack/capture: detection, delay, clean FA per capture; pooled FA and per-capture CIs by bootstrap over captures / window blocks; Clopper-Pearson for detection counts);
+ accelerator captures whole-capture checks; Car-Hacking and D11 from the S2 results (L1 only: no DBC, L2b / L3 not evaluable); v2 side-by-side from ../codes_v2 results (read only).
+ACCEPTANCE RULE S7 (judges the single ROAD test run; MET only if 1-4 hold; otherwise M1-CAN is reported PARTIAL with every unmet item named):
+ 1 Process: frozen CanDomain (Evidence + MotionEstimate) implemented and tested; every choice made on LOCO / validation by the rules above; test scored once; unit tests pass; caches <= 3 GB new; own files committed.
+ 2 Detection (ROAD test, window level): the combined stack detects >= 4 of the 5 masquerade captures (correlated_signal_3, max_speedometer_3, reverse_light_off_3, reverse_light_on_3, coolant) and the five v2-detected
+   non-masquerade captures with delay <= 2 s.
+ 3 False alarms: clean ROAD test windows FA <= 2% pooled, no clean ambient test capture above 5%. The fixed WP2 target "<= 1 false alert per hour" is also stated (it needs <= 0.03% of windows).
+ 4 Reverse driving (ambient_dyno_reverse): alarms in <= 2% of its windows.
+ 5 Reported without gate: ablation, per-capture table, CIs, accelerator whole-capture check, Car-Hacking / D11 (S2 numbers), v2 side-by-side, delay.
+Plan: tools/WP2_S7_*.py build per-unit window tables (cache ../data_extra/WP2_S7_cache), then selection (LOCO + validation, no test), then the single test run.
+
+## 2026-10-22 S7 selection + freeze (BEFORE any test table was built; numbers: results/WP2/s7_select.json, s7_select_tables.md, s7_dev.json, s7_frozen.json)
+Process incidents: the machine was at 100% CPU (other workers). The first fold fit took 128 s alone, then 1073 s (BLAS oversubscription); a kill of my own slow process was denied by the permission system, so a second process
+ (same script, reverse order, OMP/MKL threads 4) was started; basic_short was fitted by both (identical deterministic result). All 11 model fits done (10 folds + final). Code: can/stack_core.py, can/stack_eval.py, can/domain.py,
+ tools/WP2_S7_{lib,fit,tables,select,final,others}.py, tests/can/test_stack.py. Caches: ../data_extra/WP2_S7_cache (grids, Grams, CapStats, models, tables).
+Units: windows per fold (scored): basic_long 1250, extended_long 657, radio 390, idle_radio 658, basic_short 444, winter 47, road blocks 926 / 911 / 911 / 904 (pool 7,198); 135 validation lead windows; 18 validation attack captures.
+Selection (rules of "S7 start", unchanged):
+ 1 L1 variant: the period rule alone has window recall 0.0 for all 4 tolerance variants at its pooled LOCO 1% threshold (threshold 140: the LOCO period score has a heavy tail, up to 12,700, from legitimately absent IDs):
+   tie -> variant 0. The L1 detections come from id_allow (fuzzing), bus load (threshold 267.07 vs clean max 268.4, attacks 277-287) and flood.
+ 2 L2b sets: K0 {linear} and K1 {linear, joint(reverse)}: lead FA 0, but the threshold-LOCO FA of road block 3 is 100% (all its windows violate a learned linear relation at a threshold just above zero); K2 +rate: max fold 6.4%;
+   K3 +value: max fold 6.6% (road block 3). No set meets "every fold <= 5%" -> **L2b is dropped from the default stack by the pre-registered rule.** Masquerade recall of K1..K3 is 6/8 (reverse_light_off 0 in both instances). L2b K3 is kept as an OPTIONAL ablation domain (results/WP2/s7_domain_l2b).
+ 3 L3c design: all 8 designs detect 8/8 validation masquerade captures. Threshold-LOCO FA (dyno folds avg / road blocks avg): M0 (S5: inner folds dyno only) with the dyno threshold: 2.0% / 24.0% (r_min 0) and 1.9% / 12.5% (r_min 0.9): this reproduces the S5 failure on a
+   new road session; M1 (inner folds include the road blocks: sigma and R2 conservative over both regimes) 2.7% / 0.2% (r_min 0), 2.6% / 0.2% (r_min 0.9). Pool P1 (all folds) lowers dyno FA to 0.2% only for M0 and costs recall (0.74-0.75). Chosen by the rule: **M1, r_min 0.9, pool P0** (regime-avg 1.37%; max fold FA 12.9% = extended_long;
+   lead FA 2.2% = 3 windows of the fuzzing_attack_2 lead, which starts from park and reverses). L3d floor = 0.05 s (9 pool windows non-zero, all exactly one grid step).
+ 4 Combiner (DomainCombiner auto, groups = captures): held-out-half detection noisy_or 0.945, logistic 0.943, max 0.994 -> **max**; threshold 0.9930 (1% of pooled LOCO normal windows).
+ Layer thresholds (own 1%): L1 0.98999, L3c 0.98984, L3d any non-zero (floor rule). Development ablation (LOCO normals + validation attack windows, in-sample for the combiner): all AUC 0.997, detection 92.1% at FA 0.97%; only L1 58.0%, only L3c 52.7%, only L3d 45.8%;
+ all-but-L1 98.5%, all-but-L3c 80.9%, all-but-L3d 69.2%. The combined 1% budget is shared by three layers, so the weakest masquerade (max_speedometer_masquerade: 49% of its windows) loses window recall that its own layer has at its own 1%.
+Frozen: results/WP2/s7_domain (CanDomain: L1 + L3c + L3d, combiner max), s7_frozen.json written before the test tables. Causality check (prefix of a validation capture scores identically, max diff 0.0).
+NEXT: tables test / accel -> final.py test (ROAD test exposure 6) -> accel -> others.
+
+## 2026-10-22 S7 results (ROAD test exposure 6, ONE run of the frozen domain; reports/M1_CAN.md, reports/WP2_S7.md; results/WP2/s7_test.json, s7_test_tables.md, s7_summary.md, s7_accel.json, s7_others.json, s7_diag_*.json)
+Verdict PARTIAL. Acceptance: 1 met (303 tests), 2 met (masquerade 5/5, delay 0.48-1.02 s; plain 6/6, 0.17-1.02 s), 3 NOT MET (clean FA 3.20% [0.00, 5.65] = 44/1375 windows, 115 alerts/h; extended_short 6.7% > 5%; WP2 target <= 1/h not met), 4 met (0/51).
+Per capture FA: benign_anomaly 2.8%, extended_short 6.7%, reverse 0.0%, highway diagnostics 1.7% (S5 L3: 20.4%, now 0 L3c alarms). Ablation: only L1 4.73% / masq 0 / injected 6; only L3c 0.80% / 3 / 3; only L3d 0.00% / 2 / 2; all but L1 (noisy-or) 1.16% / 5 / 5;
+all but L3c 4.73% / 2 / 6; all but L3d 3.20% / 3 / 6; optional all + L2b (K3) 5.16% / 5 / 6; L2b alone 5.38% / 4 / 4. Threshold-LOCO prediction of the stack: dyno 2.06%, road 0.47%, all 1.24% (extended_long fold 9.1%).
+Post-verdict description (no design change): all 44 combined alarms have L1 as the maximum layer; clean windows above the ECDF 0.99 level of the bus-load rule 37, of the period rule 17.
+Accelerator whole-capture check (first v3 scoring): alarm fractions drive_1 11.6%, drive_2 4.2%, reverse_1 4.7%, reverse_2 0.0% (clean test captures 0.0-6.7%): no evidence either way; no labels, no onset.
+Car-Hacking / D11 (L1 only, S2 results re-read, no re-scoring): see s7_others.md. v2 side-by-side in s7_summary.md section 3.
+Pitfalls found: (1) BLAS oversubscription on the shared machine: one fold fit 128 s alone, 1073 s under load (set OMP/MKL threads 4; a second process from the other end of the fold list); (2) tie-safe thresholds of exact-zero scores (linear-only L2b) make a
+ fold in which every window has a tiny violation alarm 100%; (3) the combined 1% budget is shared by all layers: the weakest masquerade loses window recall (not capture detection); (4) the period rule has a heavy LOCO tail (up to 12,700 for IDs legitimately absent for seconds): its pooled 1% threshold (140) is above every attack score, so L1 detects through bus load / flood / unknown IDs only.
+Cleanup: S7 cache stats / l1b / grid / grams deleted after the run (rebuild with WP2_S7_fit.py prep); models, weights, design, tables kept.

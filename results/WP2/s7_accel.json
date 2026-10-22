@@ -1,0 +1,245 @@
+{
+ "note": "ROAD documents the accelerator attack as injected BEFORE the capture starts; the logs have no injected frames and ROAD labels them 0. Whole-capture check only: no onset, no window labels. Reference = the same alarm fraction on clean captures.",
+ "captures": {
+  "accelerator_attack_drive_1": {
+   "all": {
+    "windows": 86,
+    "alarm_windows": 10,
+    "alarm_fraction": 0.11627906976744186,
+    "first_alarm_s": 3.9980599880218506,
+    "kind": "accelerator"
+   },
+   "only_L1": {
+    "windows": 86,
+    "alarm_windows": 7,
+    "alarm_fraction": 0.08139534883720931,
+    "first_alarm_s": 3.9980599880218506,
+    "kind": "accelerator"
+   },
+   "only_L3c": {
+    "windows": 86,
+    "alarm_windows": 5,
+    "alarm_fraction": 0.05813953488372093,
+    "first_alarm_s": 9.999738931655884,
+    "kind": "accelerator"
+   },
+   "only_L3d": {
+    "windows": 86,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "accelerator"
+   }
+  },
+  "accelerator_attack_drive_2": {
+   "all": {
+    "windows": 72,
+    "alarm_windows": 3,
+    "alarm_fraction": 0.041666666666666664,
+    "first_alarm_s": 1.9992098808288574,
+    "kind": "accelerator"
+   },
+   "only_L1": {
+    "windows": 72,
+    "alarm_windows": 4,
+    "alarm_fraction": 0.05555555555555555,
+    "first_alarm_s": 1.9992098808288574,
+    "kind": "accelerator"
+   },
+   "only_L3c": {
+    "windows": 72,
+    "alarm_windows": 4,
+    "alarm_fraction": 0.05555555555555555,
+    "first_alarm_s": 1.9992098808288574,
+    "kind": "accelerator"
+   },
+   "only_L3d": {
+    "windows": 72,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "accelerator"
+   }
+  },
+  "accelerator_attack_reverse_1": {
+   "all": {
+    "windows": 86,
+    "alarm_windows": 4,
+    "alarm_fraction": 0.046511627906976744,
+    "first_alarm_s": 76.9999430179596,
+    "kind": "accelerator"
+   },
+   "only_L1": {
+    "windows": 86,
+    "alarm_windows": 4,
+    "alarm_fraction": 0.046511627906976744,
+    "first_alarm_s": 76.9999430179596,
+    "kind": "accelerator"
+   },
+   "only_L3c": {
+    "windows": 86,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "accelerator"
+   },
+   "only_L3d": {
+    "windows": 86,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "accelerator"
+   }
+  },
+  "accelerator_attack_reverse_2": {
+   "all": {
+    "windows": 105,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "accelerator"
+   },
+   "only_L1": {
+    "windows": 105,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "accelerator"
+   },
+   "only_L3c": {
+    "windows": 105,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "accelerator"
+   },
+   "only_L3d": {
+    "windows": 105,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "accelerator"
+   }
+  },
+  "ambient_dyno_drive_benign_anomaly": {
+   "all": {
+    "windows": 433,
+    "alarm_windows": 12,
+    "alarm_fraction": 0.02771362586605081,
+    "first_alarm_s": 166.99892401695251,
+    "kind": "clean test ambient"
+   },
+   "only_L1": {
+    "windows": 433,
+    "alarm_windows": 16,
+    "alarm_fraction": 0.03695150115473441,
+    "first_alarm_s": 57.99259698390961,
+    "kind": "clean test ambient"
+   },
+   "only_L3c": {
+    "windows": 433,
+    "alarm_windows": 3,
+    "alarm_fraction": 0.006928406466512702,
+    "first_alarm_s": 188.99906599521637,
+    "kind": "clean test ambient"
+   },
+   "only_L3d": {
+    "windows": 433,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "clean test ambient"
+   }
+  },
+  "ambient_dyno_drive_extended_short": {
+   "all": {
+    "windows": 359,
+    "alarm_windows": 24,
+    "alarm_fraction": 0.06685236768802229,
+    "first_alarm_s": 20.999925017356873,
+    "kind": "clean test ambient"
+   },
+   "only_L1": {
+    "windows": 359,
+    "alarm_windows": 33,
+    "alarm_fraction": 0.09192200557103064,
+    "first_alarm_s": 20.999925017356873,
+    "kind": "clean test ambient"
+   },
+   "only_L3c": {
+    "windows": 359,
+    "alarm_windows": 8,
+    "alarm_fraction": 0.022284122562674095,
+    "first_alarm_s": 20.999925017356873,
+    "kind": "clean test ambient"
+   },
+   "only_L3d": {
+    "windows": 359,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "clean test ambient"
+   }
+  },
+  "ambient_dyno_reverse": {
+   "all": {
+    "windows": 51,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "clean test ambient"
+   },
+   "only_L1": {
+    "windows": 51,
+    "alarm_windows": 1,
+    "alarm_fraction": 0.0196078431372549,
+    "first_alarm_s": 49.99970602989197,
+    "kind": "clean test ambient"
+   },
+   "only_L3c": {
+    "windows": 51,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "clean test ambient"
+   },
+   "only_L3d": {
+    "windows": 51,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "clean test ambient"
+   }
+  },
+  "ambient_highway_street_driving_diagnostics": {
+   "all": {
+    "windows": 469,
+    "alarm_windows": 8,
+    "alarm_fraction": 0.017057569296375266,
+    "first_alarm_s": 13.999709010124207,
+    "kind": "clean test ambient"
+   },
+   "only_L1": {
+    "windows": 469,
+    "alarm_windows": 14,
+    "alarm_fraction": 0.029850746268656716,
+    "first_alarm_s": 13.999709010124207,
+    "kind": "clean test ambient"
+   },
+   "only_L3c": {
+    "windows": 469,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "clean test ambient"
+   },
+   "only_L3d": {
+    "windows": 469,
+    "alarm_windows": 0,
+    "alarm_fraction": 0.0,
+    "first_alarm_s": null,
+    "kind": "clean test ambient"
+   }
+  }
+ }
+}

@@ -1,0 +1,36 @@
+{
+ "cfg": {
+  "l1_variant": 0,
+  "K": null,
+  "l3c": [
+   "M1",
+   0.9,
+   "P0"
+  ],
+  "l3d_floor": 0.05000000074505806,
+  "pool_l3c": "P0"
+ },
+ "layers": [
+  "L1",
+  "L3c",
+  "L3d"
+ ],
+ "layer_thresholds": {
+  "L1": 0.9899971823048748,
+  "L3c": 0.9898432965757401,
+  "L3d": 5e-324
+ },
+ "combiner": {
+  "method": "max",
+  "threshold": 0.9930354033662219,
+  "selection": {
+   "noisy_or": 0.9453111124267362,
+   "logistic": 0.9430761944230656,
+   "max": 0.994183292877864
+  }
+ },
+ "design_rule": "qualifying designs: lowest regime-averaged threshold-LOCO FA",
+ "l2b_chosen": null,
+ "design_chosen": 3,
+ "note": "frozen before any S7 test table was built; ROAD test exposure 6"
+}

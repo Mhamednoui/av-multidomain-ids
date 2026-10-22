@@ -1,0 +1,95 @@
+[
+ {
+  "domain": "can",
+  "layer": "combined",
+  "name": "can.combined",
+  "t": 4.999487042427063,
+  "score": 0.8696816004508312,
+  "alarm": false,
+  "reason": "",
+  "details": {
+   "method": "max",
+   "layer_scores": {
+    "can.l1_spec_rules": 0.8696816004508312,
+    "can.l3c_signal_predictors": 0.3403946604759141,
+    "can.l3d_reverse_state": 0.0
+   }
+  },
+  "sample_id": "correlated_signal_attack_2_masquerade/4"
+ },
+ {
+  "domain": "can",
+  "layer": "combined",
+  "name": "can.combined",
+  "t": 5.999379992485046,
+  "score": 0.611439842209073,
+  "alarm": false,
+  "reason": "",
+  "details": {
+   "method": "max",
+   "layer_scores": {
+    "can.l1_spec_rules": 0.611439842209073,
+    "can.l3c_signal_predictors": 0.3052814857806152,
+    "can.l3d_reverse_state": 0.0
+   }
+  },
+  "sample_id": "correlated_signal_attack_2_masquerade/5"
+ },
+ {
+  "domain": "can",
+  "layer": "combined",
+  "name": "can.combined",
+  "t": 6.999276041984558,
+  "score": 0.9997098084735926,
+  "alarm": true,
+  "reason": "CAN domain alarm in the second ending at 7.00 s: a signal disagrees with the prediction from the signals that physically tie to it (signal 0x6e0.3).",
+  "details": {
+   "method": "max",
+   "layer_scores": {
+    "can.l1_spec_rules": 0.8317836010143702,
+    "can.l3c_signal_predictors": 0.9997098084735926,
+    "can.l3d_reverse_state": 0.0
+   },
+   "culprit_signal": "0x6e0.3"
+  },
+  "sample_id": "correlated_signal_attack_2_masquerade/6"
+ },
+ {
+  "domain": "can",
+  "layer": "combined",
+  "name": "can.combined",
+  "t": 7.999766945838928,
+  "score": 0.9999999999999996,
+  "alarm": true,
+  "reason": "CAN domain alarm in the second ending at 8.00 s: a signal disagrees with the prediction from the signals that physically tie to it (signal 0x6e0.3).",
+  "details": {
+   "method": "max",
+   "layer_scores": {
+    "can.l1_spec_rules": 0.9881656804733728,
+    "can.l3c_signal_predictors": 0.9999999999999996,
+    "can.l3d_reverse_state": 0.0
+   },
+   "culprit_signal": "0x6e0.3"
+  },
+  "sample_id": "correlated_signal_attack_2_masquerade/7"
+ },
+ {
+  "domain": "can",
+  "layer": "combined",
+  "name": "can.combined",
+  "t": 8.999135971069336,
+  "score": 0.9999999999999982,
+  "alarm": true,
+  "reason": "CAN domain alarm in the second ending at 9.00 s: a specification rule of this vehicle is broken (unknown ID / DLC, wrong period, bus load or flood); a signal disagrees with the prediction from the signals that physically tie to it (signal 0x6e0.3).",
+  "details": {
+   "method": "max",
+   "layer_scores": {
+    "can.l1_spec_rules": 0.9921104536489151,
+    "can.l3c_signal_predictors": 0.9999999999999982,
+    "can.l3d_reverse_state": 0.0
+   },
+   "culprit_signal": "0x6e0.3"
+  },
+  "sample_id": "correlated_signal_attack_2_masquerade/8"
+ }
+]

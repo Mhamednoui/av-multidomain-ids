@@ -1,0 +1,314 @@
+{
+ "name": "s7_dev",
+ "budget": 0.01,
+ "layers": {
+  "can.l1_spec_rules": {
+   "threshold": 0.9899971823048748,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009861932938856016,
+   "detection": 0.5801526717557252,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.08888888888888889,
+    "fuzzing": 1.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.43859649122807015,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.9830508474576272,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.8370994015444984,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 0.7222222222222222,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.23070376652937669
+   },
+   "n_test": 7491,
+   "n_test_attack": 393
+  },
+  "can.l3c_signal_predictors": {
+   "threshold": 0.9843296575739989,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009861932938856016,
+   "detection": 0.5267175572519084,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 1.0,
+    "fuzzing": 0.42857142857142855,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 1.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.6583261457013658,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 0.5555555555555556,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.3365997076034546
+   },
+   "n_test": 7491,
+   "n_test_attack": 393
+  },
+  "can.l3d_reverse_state": {
+   "threshold": 5e-324,
+   "budget": 0.01,
+   "false_alarm_rate": 0.0,
+   "detection": 0.4580152671755725,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 1.0,
+    "reverse_light_on": 0.9830508474576272,
+    "reverse_light_on_masquerade": 0.9830508474576272
+   },
+   "auc": 0.7290076335877862,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 0.4444444444444444,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.24982225894927979
+   },
+   "n_test": 7491,
+   "n_test_attack": 393
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.9930354033662219,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009721048182586645,
+   "detection": 0.9211195928753181,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 1.0,
+    "fuzzing": 1.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.49122807017543857,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 1.0,
+    "reverse_light_on": 0.9830508474576272,
+    "reverse_light_on_masquerade": 0.9830508474576272
+   },
+   "auc": 0.9969406857251837,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 1.0,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.11103211508856879
+   },
+   "n_test": 7491,
+   "n_test_attack": 393,
+   "method": "max",
+   "method_selection": {
+    "noisy_or": 0.9453111124267362,
+    "logistic": 0.9430761944230656,
+    "max": 0.994183292877864
+   }
+  },
+  "only_can.l1_spec_rules": {
+   "threshold": 0.9899971823048748,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009861932938856016,
+   "detection": 0.5801526717557252,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.08888888888888889,
+    "fuzzing": 1.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.43859649122807015,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.9830508474576272,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.8370994015444984,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 0.7222222222222222,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.23070376652937669
+   },
+   "n_test": 7491,
+   "n_test_attack": 393
+  },
+  "only_can.l3c_signal_predictors": {
+   "threshold": 0.9843296575739989,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009861932938856016,
+   "detection": 0.5267175572519084,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 1.0,
+    "fuzzing": 0.42857142857142855,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 1.0,
+    "reverse_light_off": 0.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.0,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.6583261457013658,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 0.5555555555555556,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.3365997076034546
+   },
+   "n_test": 7491,
+   "n_test_attack": 393
+  },
+  "only_can.l3d_reverse_state": {
+   "threshold": 5e-324,
+   "budget": 0.01,
+   "false_alarm_rate": 0.0,
+   "detection": 0.4580152671755725,
+   "detection_by_attack": {
+    "correlated_signal": 0.0,
+    "correlated_signal_masquerade": 0.0,
+    "fuzzing": 0.0,
+    "max_speedometer": 0.0,
+    "max_speedometer_masquerade": 0.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 1.0,
+    "reverse_light_on": 0.9830508474576272,
+    "reverse_light_on_masquerade": 0.9830508474576272
+   },
+   "auc": 0.7290076335877862,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 0.4444444444444444,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.24982225894927979
+   },
+   "n_test": 7491,
+   "n_test_attack": 393
+  },
+  "all_but_can.l1_spec_rules": {
+   "threshold": 0.675112938120922,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009861932938856016,
+   "detection": 0.9847328244274809,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 1.0,
+    "fuzzing": 0.42857142857142855,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 1.0,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 1.0,
+    "reverse_light_on": 0.9830508474576272,
+    "reverse_light_on_masquerade": 0.9830508474576272
+   },
+   "auc": 0.9932809084306442,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 1.0,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.29803195264604354
+   },
+   "n_test": 7491,
+   "n_test_attack": 393,
+   "method": "noisy_or"
+  },
+  "all_but_can.l3c_signal_predictors": {
+   "threshold": 0.6971939778735914,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009861932938856016,
+   "detection": 0.8091603053435115,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 0.08888888888888889,
+    "fuzzing": 1.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.43859649122807015,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 1.0,
+    "reverse_light_on": 0.9830508474576272,
+    "reverse_light_on_masquerade": 0.9830508474576272
+   },
+   "auc": 0.9300673880826553,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 0.9444444444444444,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.23520223533405976
+   },
+   "n_test": 7491,
+   "n_test_attack": 393,
+   "method": "noisy_or"
+  },
+  "all_but_can.l3d_reverse_state": {
+   "threshold": 0.9930354033662219,
+   "budget": 0.01,
+   "false_alarm_rate": 0.009721048182586645,
+   "detection": 0.6921119592875318,
+   "detection_by_attack": {
+    "correlated_signal": 1.0,
+    "correlated_signal_masquerade": 1.0,
+    "fuzzing": 1.0,
+    "max_speedometer": 1.0,
+    "max_speedometer_masquerade": 0.49122807017543857,
+    "reverse_light_off": 1.0,
+    "reverse_light_off_masquerade": 0.0,
+    "reverse_light_on": 0.9830508474576272,
+    "reverse_light_on_masquerade": 0.0
+   },
+   "auc": 0.8621351246131046,
+   "delay": {
+    "n_segments": 18,
+    "detected_fraction": 0.7777777777777778,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.07137778827122279
+   },
+   "n_test": 7491,
+   "n_test_attack": 393,
+   "method": "max"
+  }
+ },
+ "layer_names": [
+  "can.l1_spec_rules",
+  "can.l3c_signal_predictors",
+  "can.l3d_reverse_state"
+ ],
+ "combined": {
+  "threshold": 0.9930354033662219,
+  "budget": 0.01,
+  "false_alarm_rate": 0.009721048182586645,
+  "detection": 0.9211195928753181,
+  "detection_by_attack": {
+   "correlated_signal": 1.0,
+   "correlated_signal_masquerade": 1.0,
+   "fuzzing": 1.0,
+   "max_speedometer": 1.0,
+   "max_speedometer_masquerade": 0.49122807017543857,
+   "reverse_light_off": 1.0,
+   "reverse_light_off_masquerade": 1.0,
+   "reverse_light_on": 0.9830508474576272,
+   "reverse_light_on_masquerade": 0.9830508474576272
+  },
+  "auc": 0.9969406857251837,
+  "delay": {
+   "n_segments": 18,
+   "detected_fraction": 1.0,
+   "median_delay_s": 0.0,
+   "mean_delay_s": 0.11103211508856879
+  },
+  "n_test": 7491,
+  "n_test_attack": 393,
+  "method": "max",
+  "method_selection": {
+   "noisy_or": 0.9453111124267362,
+   "logistic": 0.9430761944230656,
+   "max": 0.994183292877864
+  }
+ }
+}

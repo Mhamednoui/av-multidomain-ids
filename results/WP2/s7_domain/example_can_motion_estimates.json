@@ -1,0 +1,50 @@
+[
+ {
+  "t": 4.0,
+  "source": "can",
+  "speed": 5.876388888888889,
+  "yaw_rate": null,
+  "displacement": null,
+  "sigma": 0.3
+ },
+ {
+  "t": 5.0,
+  "source": "can",
+  "speed": 5.897222222222222,
+  "yaw_rate": null,
+  "displacement": null,
+  "sigma": 0.3
+ },
+ {
+  "t": 6.0,
+  "source": "can",
+  "speed": 5.925694444444445,
+  "yaw_rate": null,
+  "displacement": null,
+  "sigma": 0.3
+ },
+ {
+  "t": 7.0,
+  "source": "can",
+  "speed": 16.820138888888888,
+  "yaw_rate": null,
+  "displacement": null,
+  "sigma": 0.5046041666666666
+ },
+ {
+  "t": 8.0,
+  "source": "can",
+  "speed": 16.820138888888888,
+  "yaw_rate": null,
+  "displacement": null,
+  "sigma": 0.5046041666666666
+ },
+ {
+  "t": 9.0,
+  "source": "can",
+  "speed": 16.820138888888888,
+  "yaw_rate": null,
+  "displacement": null,
+  "sigma": 0.5046041666666666
+ }
+]

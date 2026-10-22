@@ -1,8 +1,8 @@
-# WP2 CAN brief (state at 2026-10-22, after S6)
+# WP2 CAN brief (state at 2026-10-22, after S7: M1-CAN reported PARTIAL, step in REVIEW)
 
 ## State
 - S0 data inventory, S1 adapters/splits/frames: APPROVED. S2 (L1 rules): done, verdict NOT MET (ROAD false alerts 3.4% > 1%).
-- Next (see notes/WP2_can.md): L2 timing/statistical layer, payload/signal layer, combination + bench.
+- S3-S6 outcomes below; S7 (combined stack, M1-CAN) done: see the S7 section and reports/M1_CAN.md. WP2 has no further planned steps.
 
 ## S3 (L2a clock skew) outcome
 - NOT MET: skew does not catch ROAD masquerade (run 1: 0/5, FA 3.9%; revised run 2b: FA 35%). Rate difference attacker vs ECU about 60 ppm median, logger jitter 12-28% of period.
@@ -30,6 +30,26 @@
 - Controls: window shuffled-label AUC bound (0.55) failed in 11/12 cases (max-type window score of a noise model rises in sparse regions); frame bound met (but < 0.5); timing model dominated (>50% gain) by dt_id_ratio / n_id_win on Car-Hacking and D11 (timing relations, not identifiers).
 - Code: can/l4_features.py, can/l4_exp.py; tools/WP2_S6_*.py; tests/can/test_l4.py. Caches ../data_extra/WP2_S6_cache = 1.7 GB (raw features ROAD train+val and Car-Hacking, models, window tables, D11 run); rebuild: WP2_S6_cache.py road|carhacking, WP2_S6_road.py p1|oof|ctrl, WP2_S6_ch.py fit|test|ctrl, WP2_S6_d11.py fit|test <set>.
 - S7 hint: keep L4 timing as optional low-FA single-vehicle layer at most; L3/L3d carry the ROAD masquerade; ROAD test (single labelled run + fresh holdout) still to be done in S7.
+
+## S7 (combined stack, ablation, fresh checks, M1-CAN) outcome
+- PARTIAL: ROAD test (6th exposure) masquerade 5/5 (0.48-1.02 s), injected 6/6, clean-window FA 3.20% [0.00, 5.65] (limit 2%; 115 alerts/h vs target <= 1/h; extended_short 6.7%), reverse 0/51. Report reports/M1_CAN.md, step report reports/WP2_S7.md, tables results/WP2/s7_summary.md, s7_test_tables.md, s7_others.md.
+- Default stack: L1 + L3c + L3d (DomainCombiner auto -> max, threshold = 1% of 7,198 pooled LOCO normal windows). L2b relations-only DROPPED by the pre-registered LOCO rule (a road block alarms in 100% of its windows at the linear-only threshold; 6.4-6.6% with rate / value checks; limit 5%). L2a, L4 out (S3, S6). 3 s mute removed.
+- FA-transfer design (rule on LOCO): inner folds of the L3c fit (sigma, R2, lambda) include the real-road blocks (M1), R2 >= 0.9, threshold pool = dyno folds. Highway drive split in 4 time blocks (30 s cut) = LOCO folds of the real-road regime. M0 (S5) gives 24% FA on a new road session in LOCO.
+- All 44 combined false alarms of the test are L1 (bus load, period); L3c + L3d alone: 1.16% FA, 5/5 masquerade, fuzzing missed. Open decision for the supervisor: L1 as alarm source or as a first-stage flag.
+- Accelerator captures: whole-capture check only (injection precedes the capture; no labels): 11.6 / 4.2 / 4.7 / 0.0% alarm windows vs 0.0-6.7% clean. No fresh labelled ROAD holdout exists.
+- Car-Hacking / D11: L1 only (no DBC), S2 numbers re-read, no new scoring. D11 unknown vehicles zero-shot 100% FA; on-vehicle calibration 3.28% FA, recall 98.9%.
+- Code: can/stack_core.py, stack_eval.py, domain.py; tools/WP2_S7_*.py; tests/can/test_stack.py, test_domain.py (suite 303 passed). Cache ../data_extra/WP2_S7_cache (rebuild: WP2_S7_fit.py prep|fold|weights|loo, WP2_S7_tables.py folds|val, WP2_S7_select.py, WP2_S7_final.py freeze; test tables and final.py test only after s7_frozen.json exists).
+
+## Frozen CAN domain output (for WP6 / WP7)
+`can/domain.py`; fitted object `results/WP2/s7_domain/` (domain.pkl force-added to git, domain.json, fixtures example_evidence_correlated_signal.json, example_can_motion_estimates.json).
+```
+d = CanDomain.load("results/WP2/s7_domain")
+comb, per = d.score_capture(t, ids, dlc, B, name="car0")    # t seconds (recorded order), ids, dlc, B n x 8 uint8
+est = d.motion_estimates(t, ids, dlc, B)
+```
+- Evidence (comb): domain "can", layer "combined", name "can.combined", one per 1 s window (emitted when its second has passed; the first second is not scored), t = window end, score in [0, 1] = max of ECDF-calibrated layer scores, alarm = score >= 0.99304, reason = layer physics sentences + culprit signal, details {method, layer_scores, culprit_signal}, sample_id "capture/second". per = {layer name: Evidence list} (L1 spec rules, L3c predictors, L3d reverse-light rule) with their own 1% thresholds.
+- MotionEstimate: source "can", one per second, speed = mean of the 4 wheel speeds (0x6e0.0-3) x 0.01 km/h -> m/s (ASSUMED unit; calibrate against GPS / LiDAR), unsigned, sigma = max(0.3 m/s, 3% of speed), yaw_rate / displacement None. A CAN attacker who rewrites 0x6e0 controls it: a claim, not a witness.
+- Vehicle-specific (ROAD, anonymised DBC): another vehicle needs its own clean calibration and DBC. Expect 1-3% window FA on unseen sessions (worst test capture 6.7%).
 
 ## Binding decisions
 - Domain "can", layers L1.. ; Layer API from common/layer.py; evaluation only through common/evaluate.py.

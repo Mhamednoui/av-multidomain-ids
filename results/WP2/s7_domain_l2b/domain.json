@@ -1,0 +1,42 @@
+{
+ "schema": 1,
+ "budget": 0.01,
+ "layers": [
+  "L1",
+  "L2b",
+  "L3c",
+  "L3d"
+ ],
+ "cfg": {
+  "l1_variant": 0,
+  "K": [
+   "linear",
+   "joint",
+   "rate",
+   "value"
+  ],
+  "l3c": [
+   "M1",
+   0.9,
+   "P0"
+  ],
+  "l3d_floor": 0.05000000074505806,
+  "pool_l3c": "P0"
+ },
+ "layer_thresholds": {
+  "L1": 0.9899971823048748,
+  "L2b": 0.9899971823048748,
+  "L3c": 0.9898432965757401,
+  "L3d": 5e-324
+ },
+ "combined": {
+  "method": "logistic",
+  "threshold": 0.04851508055784922,
+  "selection": {
+   "noisy_or": 0.9960629921259843,
+   "logistic": 1.0,
+   "max": 1.0
+  }
+ },
+ "vehicle": "ROAD (anonymised DBC); not transferable to another vehicle without its own clean calibration and DBC"
+}

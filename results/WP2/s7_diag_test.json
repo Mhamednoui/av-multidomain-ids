@@ -1,0 +1,173 @@
+{
+ "note": "post-verdict description of the ROAD test false alarms; no design change follows",
+ "ambient_dyno_drive_benign_anomaly": {
+  "clean_windows": 433,
+  "combined_alarms": 12,
+  "L1_alarm": 16,
+  "L1_is_max_in_combined_alarms": 12,
+  "L3c_alarm": 3,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 15,
+   "can.l1_bus_load": 6,
+   "can.l1_flood": 0
+  }
+ },
+ "ambient_dyno_drive_extended_short": {
+  "clean_windows": 359,
+  "combined_alarms": 24,
+  "L1_alarm": 33,
+  "L1_is_max_in_combined_alarms": 24,
+  "L3c_alarm": 8,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 2,
+   "can.l1_bus_load": 24,
+   "can.l1_flood": 0
+  }
+ },
+ "ambient_dyno_reverse": {
+  "clean_windows": 51,
+  "combined_alarms": 0,
+  "L1_alarm": 1,
+  "L1_is_max_in_combined_alarms": 0,
+  "L3c_alarm": 0,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 0,
+   "can.l1_bus_load": 0,
+   "can.l1_flood": 0
+  }
+ },
+ "ambient_highway_street_driving_diagnostics": {
+  "clean_windows": 469,
+  "combined_alarms": 8,
+  "L1_alarm": 14,
+  "L1_is_max_in_combined_alarms": 8,
+  "L3c_alarm": 0,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 0,
+   "can.l1_bus_load": 7,
+   "can.l1_flood": 0
+  }
+ },
+ "correlated_signal_attack_3": {
+  "clean_windows": 2,
+  "combined_alarms": 0,
+  "L1_alarm": 0,
+  "L1_is_max_in_combined_alarms": 0,
+  "L3c_alarm": 0,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 0,
+   "can.l1_bus_load": 0,
+   "can.l1_flood": 0
+  }
+ },
+ "max_speedometer_attack_3": {
+  "clean_windows": 7,
+  "combined_alarms": 0,
+  "L1_alarm": 0,
+  "L1_is_max_in_combined_alarms": 0,
+  "L3c_alarm": 0,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 0,
+   "can.l1_bus_load": 0,
+   "can.l1_flood": 0
+  }
+ },
+ "reverse_light_off_attack_3": {
+  "clean_windows": 14,
+  "combined_alarms": 0,
+  "L1_alarm": 0,
+  "L1_is_max_in_combined_alarms": 0,
+  "L3c_alarm": 0,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 0,
+   "can.l1_bus_load": 0,
+   "can.l1_flood": 0
+  }
+ },
+ "reverse_light_on_attack_3": {
+  "clean_windows": 21,
+  "combined_alarms": 0,
+  "L1_alarm": 0,
+  "L1_is_max_in_combined_alarms": 0,
+  "L3c_alarm": 0,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 0,
+   "can.l1_bus_load": 0,
+   "can.l1_flood": 0
+  }
+ },
+ "fuzzing_attack_3": {
+  "clean_windows": 2,
+  "combined_alarms": 0,
+  "L1_alarm": 0,
+  "L1_is_max_in_combined_alarms": 0,
+  "L3c_alarm": 0,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 0,
+   "can.l1_bus_load": 0,
+   "can.l1_flood": 0
+  }
+ },
+ "max_engine_coolant_temp_attack": {
+  "clean_windows": 17,
+  "combined_alarms": 0,
+  "L1_alarm": 1,
+  "L1_is_max_in_combined_alarms": 0,
+  "L3c_alarm": 0,
+  "L3c_is_max_in_combined_alarms": 0,
+  "L3d_alarm": 0,
+  "L3d_is_max_in_combined_alarms": 0,
+  "L1_rules_above_ECDF_0.99": {
+   "can.l1_id_allow": 0,
+   "can.l1_dlc": 0,
+   "can.l1_period": 0,
+   "can.l1_bus_load": 0,
+   "can.l1_flood": 0
+  }
+ }
+}
