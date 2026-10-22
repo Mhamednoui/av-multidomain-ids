@@ -10,14 +10,14 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP1 GPS | done (M1-GPS partial) | APPROVED | - | 2026-10-21 | M1-GPS closed PARTIAL, see reports/M1_GPS.md; frozen output gps/domain.py |
 | WP2 CAN | done (M1-CAN partial) | APPROVED | - | 2026-10-22 | M1-CAN closed PARTIAL, see reports/M1_CAN.md; frozen output can/domain.py |
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
-| WP4 Network | S7 | REVIEW | worker sonnet (high, T3) | 2026-10-22 | M1-NET PARTIAL: reports/M1_NET.md; H FA 0.48% macro 65.9%, unseen Bot 0%, D23 zero-shot flag layer FA 30%; frozen network/domain.py |
+| WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
-| WP6 Cross-domain | S3 | TODO (waits for M1-NET freeze) | - | 2026-10-22 | S2b APPROVED partial; S3 may add glitch filter + LiDAR quality flag (val only) |
+| WP6 Cross-domain | S3 | IN PROGRESS | worker opus (medium, T4) | 2026-10-22 | fusion over 5 domains (LiDAR interim) |
 | WP7 System | S1 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | streaming runtime, started early: GPS/CAN/V2X frozen, NET when frozen, LiDAR placeholder |
 
 ## Overall progress (orchestrator updates this at every approval)
 
-**Overall: 43 / 56 steps approved = 77%** (updated 2026-10-22)
+**Overall: 44 / 56 steps approved = 79%** (updated 2026-10-22)
 
 | WP | Steps counted | Approved | % |
 |---|---|---|---|
@@ -25,7 +25,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP1 GPS | S0-S8 (9) | 9 | 100 (M1-GPS partial) |
 | WP2 CAN | S0-S7 (8) | 8 | 100 (M1-CAN partial) |
 | WP3 LiDAR | S1-S7, S9 (8; S0, S8 optional) | 3 | 38 |
-| WP4 Network | S0-S7 (8) | 7 | 88 |
+| WP4 Network | S0-S7 (8) | 8 | 100 (M1-NET partial) |
 | WP5 V2X | S0, S0b, S1, S1b, S2-S6 (9; S3b, S7 optional) | 9 | 100 (M1-V2X partial) |
 | WP6 Cross-domain | S1, S2, S2b, S3-S5 (6) | 3 | 50 |
 | WP7 System | S1-S4 (4) | 0 | 0 |
@@ -35,7 +35,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | Id | State |
 |---|---|
 | M0 foundation | closed 2026-10-19 |
-| M1 GPS / CAN / LiDAR / NET / V2X | V2X, GPS, CAN closed partial (2026-10-21/22); LiDAR, NET open |
+| M1 GPS / CAN / LiDAR / NET / V2X | V2X, GPS, CAN, NET closed partial (2026-10-21/22); LiDAR open |
 | M2 cross-domain + fusion | open |
 | M3 system | open |
 | M4 publication | open (needs the user's approval) |
