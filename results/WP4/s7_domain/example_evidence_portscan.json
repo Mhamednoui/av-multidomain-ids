@@ -1,0 +1,375 @@
+{
+ "note": "Evidence of the frozen network domain (stack H) for flows of a 10-minute slice around a PortScan; combined + per-layer",
+ "combined": [
+  {
+   "domain": "network",
+   "layer": "combined",
+   "name": "network.combined",
+   "t": 1499436780.0,
+   "score": 0.9999230931918248,
+   "alarm": true,
+   "reason": "Network alarm: TCP flag combination (for this packet count) that benign traffic almost never shows (probe or malformed flow) (layer net.tcp_flags, score 1.000).",
+   "details": {
+    "method": "max",
+    "layer_scores": {
+     "net.bruteforce": 0.018850408018084085,
+     "net.scan": 0.3513350197897697,
+     "net.tcp_flags": 0.9999230931918248,
+     "net.trw": 0.657962463984267
+    },
+    "final": true
+   },
+   "sample_id": "2406926"
+  },
+  {
+   "domain": "network",
+   "layer": "combined",
+   "name": "network.combined",
+   "t": 1499436780.0,
+   "score": 0.9983684769979977,
+   "alarm": true,
+   "reason": "Network alarm: TCP flag combination (for this packet count) that benign traffic almost never shows (probe or malformed flow) (layer net.tcp_flags, score 0.998).",
+   "details": {
+    "method": "max",
+    "layer_scores": {
+     "net.bruteforce": 0.562284901270885,
+     "net.scan": 0.13933041636796611,
+     "net.tcp_flags": 0.9983684769979977,
+     "net.trw": 0.657962463984267
+    },
+    "final": true
+   },
+   "sample_id": "2408056"
+  },
+  {
+   "domain": "network",
+   "layer": "combined",
+   "name": "network.combined",
+   "t": 1499436780.0,
+   "score": 0.9977010357699058,
+   "alarm": true,
+   "reason": "Network alarm: TCP flag combination (for this packet count) that benign traffic almost never shows (probe or malformed flow) (layer net.tcp_flags, score 0.998).",
+   "details": {
+    "method": "max",
+    "layer_scores": {
+     "net.bruteforce": 0.23577155381965903,
+     "net.scan": 0.9675425802783477,
+     "net.tcp_flags": 0.9977010357699058,
+     "net.trw": 0.0
+    },
+    "final": true
+   },
+   "sample_id": "2408202"
+  },
+  {
+   "domain": "network",
+   "layer": "combined",
+   "name": "network.combined",
+   "t": 1499436780.0,
+   "score": 0.8269267215451677,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "method": "max",
+    "layer_scores": {
+     "net.bruteforce": 0.8269267215451677,
+     "net.scan": 0.3513350197897697,
+     "net.tcp_flags": 0.6728137179772411,
+     "net.trw": 0.657962463984267
+    },
+    "final": true
+   },
+   "sample_id": "2406449"
+  },
+  {
+   "domain": "network",
+   "layer": "combined",
+   "name": "network.combined",
+   "t": 1499436780.0,
+   "score": 0.8269267215451677,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "method": "max",
+    "layer_scores": {
+     "net.bruteforce": 0.8269267215451677,
+     "net.scan": 0.3513350197897697,
+     "net.tcp_flags": 0.4545714230780851,
+     "net.trw": 0.657962463984267
+    },
+    "final": true
+   },
+   "sample_id": "2406450"
+  }
+ ],
+ "per_layer": {
+  "net.bruteforce": [
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.bruteforce",
+    "t": 1499436780.0,
+    "score": 0.018850408018084085,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": -1.7993405494535817
+    },
+    "sample_id": "2406926"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.bruteforce",
+    "t": 1499436780.0,
+    "score": 0.562284901270885,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": -0.47712125471966244
+    },
+    "sample_id": "2408056"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.bruteforce",
+    "t": 1499436780.0,
+    "score": 0.23577155381965903,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": -1.100370545117563
+    },
+    "sample_id": "2408202"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.bruteforce",
+    "t": 1499436780.0,
+    "score": 0.8269267215451677,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": -0.3010299956639812
+    },
+    "sample_id": "2406449"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.bruteforce",
+    "t": 1499436780.0,
+    "score": 0.8269267215451677,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": -0.3010299956639812
+    },
+    "sample_id": "2406450"
+   }
+  ],
+  "net.scan": [
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.scan",
+    "t": 1499436780.0,
+    "score": 0.3513350197897697,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 1.2886990266407858
+    },
+    "sample_id": "2406926"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.scan",
+    "t": 1499436780.0,
+    "score": 0.13933041636796611,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.5952759451869324
+    },
+    "sample_id": "2408056"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.scan",
+    "t": 1499436780.0,
+    "score": 0.9675425802783477,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 3.6798862640745575
+    },
+    "sample_id": "2408202"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.scan",
+    "t": 1499436780.0,
+    "score": 0.3513350197897697,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 1.2886990266407858
+    },
+    "sample_id": "2406449"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.scan",
+    "t": 1499436780.0,
+    "score": 0.3513350197897697,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 1.2886990266407858
+    },
+    "sample_id": "2406450"
+   }
+  ],
+  "net.tcp_flags": [
+   {
+    "domain": "network",
+    "layer": "L1",
+    "name": "net.tcp_flags",
+    "t": 1499436780.0,
+    "score": 0.9999230931918248,
+    "alarm": true,
+    "reason": "TCP flag combination (for this packet count) that benign traffic almost never shows (probe or malformed flow).",
+    "details": {
+     "raw": 4.1032504299413874
+    },
+    "sample_id": "2406926"
+   },
+   {
+    "domain": "network",
+    "layer": "L1",
+    "name": "net.tcp_flags",
+    "t": 1499436780.0,
+    "score": 0.9983684769979977,
+    "alarm": true,
+    "reason": "TCP flag combination (for this packet count) that benign traffic almost never shows (probe or malformed flow).",
+    "details": {
+     "raw": 3.238574526061268
+    },
+    "sample_id": "2408056"
+   },
+   {
+    "domain": "network",
+    "layer": "L1",
+    "name": "net.tcp_flags",
+    "t": 1499436780.0,
+    "score": 0.9977010357699058,
+    "alarm": true,
+    "reason": "TCP flag combination (for this packet count) that benign traffic almost never shows (probe or malformed flow).",
+    "details": {
+     "raw": 3.092182262928192
+    },
+    "sample_id": "2408202"
+   },
+   {
+    "domain": "network",
+    "layer": "L1",
+    "name": "net.tcp_flags",
+    "t": 1499436780.0,
+    "score": 0.6728137179772411,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.8092105037501978
+    },
+    "sample_id": "2406449"
+   },
+   {
+    "domain": "network",
+    "layer": "L1",
+    "name": "net.tcp_flags",
+    "t": 1499436780.0,
+    "score": 0.4545714230780851,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.40725968685554265
+    },
+    "sample_id": "2406450"
+   }
+  ],
+  "net.trw": [
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.trw",
+    "t": 1499436780.0,
+    "score": 0.657962463984267,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 1.3862943611198908
+    },
+    "sample_id": "2406926"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.trw",
+    "t": 1499436780.0,
+    "score": 0.657962463984267,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 1.3862943611198908
+    },
+    "sample_id": "2408056"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.trw",
+    "t": 1499436780.0,
+    "score": 0.0,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.0
+    },
+    "sample_id": "2408202"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.trw",
+    "t": 1499436780.0,
+    "score": 0.657962463984267,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 1.3862943611198908
+    },
+    "sample_id": "2406449"
+   },
+   {
+    "domain": "network",
+    "layer": "L2a",
+    "name": "net.trw",
+    "t": 1499436780.0,
+    "score": 0.657962463984267,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 1.3862943611198908
+    },
+    "sample_id": "2406450"
+   }
+  ]
+ }
+}

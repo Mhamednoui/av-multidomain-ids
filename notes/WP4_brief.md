@@ -82,3 +82,10 @@ Status after S1 (2026-10-21). Details: notes/WP4_network.md, reports/WP4_S1.md, 
 - Scope proposal: L4 = optional supervised layer, seen families, refit per network, outside the zero-shot headline stack.
 - Helpers: tools/WP4_S6_lib.py (load_s6, sel, feat), cache ../data_extra/cache_v3/WP4/S6 (base_val.pkl / base_test.pkl = scores of tcp_flags, 5 L2a, beacon, L3 service + AE on the D10 stream rows with their calibrators in base_cal.pkl; l4_model.json; D10_in_final.npy). WP4 cache 6.1 GB.
 - Next: S7 combiner + ablation + leave-one-attack-out (test side) + cross-dataset -> M1-NET.
+
+## After S7 (2026-10-22): M1-NET closed PARTIAL (reports/M1_NET.md, step report reports/WP4_S7.md, tables results/WP4/s7_tables_d10.md / s7_tables_d23.md, numbers s7_d10.json / s7_d23.json / s7_dev_val.json)
+- Stacks: H (zero-shot, topology-free) = tcp_flags + scan + trw + bruteforce, combiner max; O (on-network) = H + dos_rate + l3_service + l3_ae refit on the target warm-up, combiner noisy_or (validation selection on a family-balanced sample, 10-min time-block groups). Optional rows: slow, beacon, topology (lab artefact), L4.
+- D10 test (stage stream, 585,951 flows): H FA 0.48% macro11 65.9% [39.5, 76.5]; O 0.48% / 63.5%; O+L4 0.85% / 94.0% (in-window ceiling); L4 alone 1.23% / 92.9%; published labels FA 5.82% (Infiltration audit file). LOAO: unseen Bot 0% everywhere; H macro 57.0; PortScan 0 when the combiner is re-selected without it.
+- D23: tcp_flags zero-shot FA 30.4%; H on Tue 34.7% / 23.5%, without tcp_flags 6.1% / 4.5%; on-network O Tue FA 1.67% LOIC 100%; flow-level O all days FA 1.08% macro9 25.7%.
+- Frozen domain: network/domain.py NetworkDomain (stack H saved in results/WP4/s7_domain/, stack O refit per network), Evidence interface in reports/M1_NET.md section 9; not sample-causal (window finality flag).
+- Helpers: tools/WP4_S7_lib.py (S7 tables d10_val / d10_test with every layer's raw score in cache .../WP4/S7, ArrCombiner, Scorer with block bootstrap). S5/D23_eval.pkl was replaced by S7/d23_eval.pkl (same rows + file / row / ts). WP4 cache 6.3 GB.

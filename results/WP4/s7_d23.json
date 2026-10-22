@@ -1,0 +1,1077 @@
+{
+ "n_sample": {
+  "train": 400000,
+  "val": 429462,
+  "test": 651434
+ },
+ "method_O_d10": "noisy_or",
+ "method_H_d10": "max",
+ "d10_threshold_check": {
+  "net.scan": [
+   0.9851624793656288,
+   0.9851624793656288
+  ],
+  "net.trw": [
+   0.9875136303584133,
+   0.9875136303584133
+  ],
+  "net.bruteforce": [
+   0.9890984599411664,
+   0.9890984599411664
+  ],
+  "net.dos_rate": [
+   0.9891424066886951,
+   0.9891424066886951
+  ],
+  "net.slow": [
+   0.9876866706768075,
+   0.9876866706768075
+  ],
+  "net.tcp_flags": [
+   0.9899224614573292,
+   0.9899224614573292
+  ]
+ },
+ "zero_shot_tcp_flags_all_days": {
+  "fa": 0.304334,
+  "fa_pub": 0.304334,
+  "n_benign": 500000,
+  "fa_audit_file": null,
+  "detection": {
+   "Bot": 0.9877326446396991,
+   "DDoS-HOIC": 0.20152354570637118,
+   "DDoS-LOIC-HTTP": 0.49828333333333336,
+   "DDoS-LOIC-UDP": 0.0,
+   "DoS-GoldenEye": 0.0,
+   "DoS-Slowloris": 0.21066208082545143,
+   "Infiltration": 0.40614406779661016,
+   "SSH-Patator": 0.0,
+   "Web-BruteForce": 0.509090909090909
+  },
+  "n": {
+   "Bot": 35623,
+   "DDoS-HOIC": 1444,
+   "DDoS-LOIC-HTTP": 60000,
+   "DDoS-LOIC-UDP": 351,
+   "DoS-GoldenEye": 11570,
+   "DoS-Slowloris": 2326,
+   "Infiltration": 18880,
+   "SSH-Patator": 20174,
+   "Web-BruteForce": 110
+  },
+  "n_blocks": {
+   "Bot": 9,
+   "DDoS-HOIC": 2,
+   "DDoS-LOIC-HTTP": 5,
+   "DDoS-LOIC-UDP": 3,
+   "DoS-GoldenEye": 2,
+   "DoS-Slowloris": 2,
+   "Infiltration": 14,
+   "SSH-Patator": 4,
+   "Web-BruteForce": 8
+  },
+  "macro": 0.31260406459915274,
+  "n_ge50": 2,
+  "fa_ci": [
+   0.2520648253889339,
+   0.3819708933451475
+  ],
+  "detection_ci": {
+   "Bot": [
+    0.9612729274059274,
+    0.9965292946083294
+   ],
+   "DDoS-HOIC": [
+    0.001122334455667789,
+    0.5244122965641953
+   ],
+   "DDoS-LOIC-HTTP": [
+    0.0,
+    0.49924193928775984
+   ],
+   "DDoS-LOIC-UDP": [
+    0.0,
+    0.0
+   ],
+   "DoS-GoldenEye": [
+    0.0,
+    0.0
+   ],
+   "DoS-Slowloris": [
+    0.19463087248322147,
+    0.21447578499201703
+   ],
+   "Infiltration": [
+    0.39177573071630706,
+    0.42062872778140514
+   ],
+   "SSH-Patator": [
+    0.0,
+    0.0
+   ],
+   "Web-BruteForce": [
+    0.37865699873896597,
+    0.7368421052631579
+   ]
+  },
+  "macro_ci": [
+   0.2651133838055659,
+   0.39853158301313846
+  ],
+  "fa_by_day": {
+   "2018-02-14": 0.1043013382717775,
+   "2018-02-15": 0.15470220696682846,
+   "2018-02-16": 0.0,
+   "2018-02-20": 0.3156883559595718,
+   "2018-02-21": 0.9946982880731717,
+   "2018-02-22": 0.19857543708180445,
+   "2018-02-23": 0.18608562312962185,
+   "2018-02-28": 0.3929969104016478,
+   "2018-03-01": 0.33703220191470845,
+   "2018-03-02": 0.2533023285857314
+  }
+ },
+ "zero_shot_tue": {
+  "n_sample_rows": 327536,
+  "found_in_stage": 327536,
+  "sample_rows": {
+   "H": {
+    "fa": 0.3469215357933138,
+    "fa_pub": 0.3469215357933138,
+    "n_benign": 267536,
+    "fa_audit_file": null,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9940666666666667
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 60000
+    },
+    "n_blocks": {
+     "DDoS-LOIC-HTTP": 5
+    },
+    "macro": 0.9940666666666667,
+    "n_ge50": 1,
+    "fa_ci": [
+     0.3281321075448334,
+     0.36476198300402135
+    ],
+    "detection_ci": {
+     "DDoS-LOIC-HTTP": [
+      0.0,
+      1.0
+     ]
+    },
+    "macro_ci": [
+     NaN,
+     NaN
+    ],
+    "auc": 0.7336021578404402,
+    "method": "max"
+   },
+   "H without tcp_flags": {
+    "fa": 0.06133006399138807,
+    "fa_pub": 0.06133006399138807,
+    "n_benign": 267536,
+    "fa_audit_file": null,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.98945
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 60000
+    },
+    "n_blocks": {
+     "DDoS-LOIC-HTTP": 5
+    },
+    "macro": 0.98945,
+    "n_ge50": 1,
+    "fa_ci": [
+     0.05190564172173813,
+     0.07025808296248966
+    ],
+    "detection_ci": {
+     "DDoS-LOIC-HTTP": [
+      0.0,
+      1.0
+     ]
+    },
+    "macro_ci": [
+     NaN,
+     NaN
+    ],
+    "auc": 0.9467163581412097,
+    "method": "max"
+   },
+   "layers_alone": {
+    "net.scan": {
+     "fa": 0.038477064768853535,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.0
+     }
+    },
+    "net.trw": {
+     "fa": 0.03395430895281383,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.0
+     }
+    },
+    "net.bruteforce": {
+     "fa": 0.030033341307338077,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.9923333333333333
+     }
+    },
+    "net.tcp_flags": {
+     "fa": 0.3156883559595718,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.49828333333333336
+     }
+    }
+   }
+  },
+  "stage_stream": {
+   "H": {
+    "fa": 0.23475575680088978,
+    "fa_pub": 0.23475575680088978,
+    "n_benign": 1467308,
+    "fa_audit_file": null,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9943248288736777
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "n_blocks": {
+     "DDoS-LOIC-HTTP": 5
+    },
+    "macro": 0.9943248288736777,
+    "n_ge50": 1,
+    "fa_ci": [
+     0.22245887012988516,
+     0.24700458548177653
+    ],
+    "detection_ci": {
+     "DDoS-LOIC-HTTP": [
+      0.0,
+      1.0
+     ]
+    },
+    "macro_ci": [
+     NaN,
+     NaN
+    ],
+    "auc": 0.8198534494873057,
+    "method": "max"
+   },
+   "H without tcp_flags": {
+    "fa": 0.045350396781043925,
+    "fa_pub": 0.045350396781043925,
+    "n_benign": 1467308,
+    "fa_audit_file": null,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9896701929060361
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 120525
+    },
+    "n_blocks": {
+     "DDoS-LOIC-HTTP": 5
+    },
+    "macro": 0.9896701929060361,
+    "n_ge50": 1,
+    "fa_ci": [
+     0.038318458006870025,
+     0.052255872924648845
+    ],
+    "detection_ci": {
+     "DDoS-LOIC-HTTP": [
+      0.0,
+      1.0
+     ]
+    },
+    "macro_ci": [
+     NaN,
+     NaN
+    ],
+    "auc": 0.9613017561410088,
+    "method": "max"
+   },
+   "layers_alone": {
+    "net.scan": {
+     "fa": 0.02541865784143479,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.0
+     }
+    },
+    "net.trw": {
+     "fa": 0.031285183478860605,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.0
+     }
+    },
+    "net.bruteforce": {
+     "fa": 0.02228434657208984,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.9925575606720597
+     }
+    },
+    "net.tcp_flags": {
+     "fa": 0.2263246707576051,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.5001037129226301
+     }
+    }
+   }
+  }
+ },
+ "on_network": {
+  "warm_up": {
+   "tue_train_benign_flows": 4335440,
+   "tue_val_benign_flows": 1434152,
+   "sample_train_benign": 400000,
+   "sample_val_benign": 300000,
+   "tue_warmup_hours": 7.7941666666666665
+  },
+  "tue": {
+   "layers_alone": {
+    "net.tcp_flags": {
+     "fa": 0.009333323365827402,
+     "fa_pub": 0.009333323365827402,
+     "n_benign": 267536,
+     "fa_audit_file": null,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.0
+     },
+     "n": {
+      "DDoS-LOIC-HTTP": 60000
+     },
+     "n_blocks": {
+      "DDoS-LOIC-HTTP": 5
+     },
+     "macro": 0.0,
+     "n_ge50": 0,
+     "fa_ci": [
+      0.00867267250607242,
+      0.010013471240782392
+     ],
+     "detection_ci": {
+      "DDoS-LOIC-HTTP": [
+       0.0,
+       0.0
+      ]
+     },
+     "macro_ci": [
+      NaN,
+      NaN
+     ]
+    },
+    "net.scan": {
+     "fa": 0.01452888583218707,
+     "fa_pub": 0.01452888583218707,
+     "n_benign": 267536,
+     "fa_audit_file": null,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.0
+     },
+     "n": {
+      "DDoS-LOIC-HTTP": 60000
+     },
+     "n_blocks": {
+      "DDoS-LOIC-HTTP": 5
+     },
+     "macro": 0.0,
+     "n_ge50": 0,
+     "fa_ci": [
+      0.010089767586633528,
+      0.019170301672685273
+     ],
+     "detection_ci": {
+      "DDoS-LOIC-HTTP": [
+       0.0,
+       0.0
+      ]
+     },
+     "macro_ci": [
+      NaN,
+      NaN
+     ]
+    },
+    "net.trw": {
+     "fa": 0.015422223551223012,
+     "fa_pub": 0.015422223551223012,
+     "n_benign": 267536,
+     "fa_audit_file": null,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.0
+     },
+     "n": {
+      "DDoS-LOIC-HTTP": 60000
+     },
+     "n_blocks": {
+      "DDoS-LOIC-HTTP": 5
+     },
+     "macro": 0.0,
+     "n_ge50": 0,
+     "fa_ci": [
+      0.010346697341497164,
+      0.020054159723269113
+     ],
+     "detection_ci": {
+      "DDoS-LOIC-HTTP": [
+       0.0,
+       0.0
+      ]
+     },
+     "macro_ci": [
+      NaN,
+      NaN
+     ]
+    },
+    "net.bruteforce": {
+     "fa": 0.0140429699180671,
+     "fa_pub": 0.0140429699180671,
+     "n_benign": 267536,
+     "fa_audit_file": null,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.9984333333333333
+     },
+     "n": {
+      "DDoS-LOIC-HTTP": 60000
+     },
+     "n_blocks": {
+      "DDoS-LOIC-HTTP": 5
+     },
+     "macro": 0.9984333333333333,
+     "n_ge50": 1,
+     "fa_ci": [
+      0.010437114582397329,
+      0.017677204873133075
+     ],
+     "detection_ci": {
+      "DDoS-LOIC-HTTP": [
+       0.0,
+       1.0
+      ]
+     },
+     "macro_ci": [
+      NaN,
+      NaN
+     ]
+    },
+    "net.dos_rate": {
+     "fa": 0.016588421745110937,
+     "fa_pub": 0.016588421745110937,
+     "n_benign": 267536,
+     "fa_audit_file": null,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.9999333333333333
+     },
+     "n": {
+      "DDoS-LOIC-HTTP": 60000
+     },
+     "n_blocks": {
+      "DDoS-LOIC-HTTP": 5
+     },
+     "macro": 0.9999333333333333,
+     "n_ge50": 1,
+     "fa_ci": [
+      0.012372290025533278,
+      0.0210303001195774
+     ],
+     "detection_ci": {
+      "DDoS-LOIC-HTTP": [
+       0.975,
+       1.0
+      ]
+     },
+     "macro_ci": [
+      NaN,
+      NaN
+     ]
+    },
+    "net.l3_service": {
+     "fa": 0.009542640990371389,
+     "fa_pub": 0.009542640990371389,
+     "n_benign": 267536,
+     "fa_audit_file": null,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.03191666666666667
+     },
+     "n": {
+      "DDoS-LOIC-HTTP": 60000
+     },
+     "n_blocks": {
+      "DDoS-LOIC-HTTP": 5
+     },
+     "macro": 0.03191666666666667,
+     "n_ge50": 0,
+     "fa_ci": [
+      0.008421762363929143,
+      0.011208817968941518
+     ],
+     "detection_ci": {
+      "DDoS-LOIC-HTTP": [
+       0.006187565230356344,
+       1.0
+      ]
+     },
+     "macro_ci": [
+      NaN,
+      NaN
+     ]
+    },
+    "net.l3_ae": {
+     "fa": 0.010548113151127326,
+     "fa_pub": 0.010548113151127326,
+     "n_benign": 267536,
+     "fa_audit_file": null,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.4213166666666667
+     },
+     "n": {
+      "DDoS-LOIC-HTTP": 60000
+     },
+     "n_blocks": {
+      "DDoS-LOIC-HTTP": 5
+     },
+     "macro": 0.4213166666666667,
+     "n_ge50": 0,
+     "fa_ci": [
+      0.008774915370024023,
+      0.013856479413641327
+     ],
+     "detection_ci": {
+      "DDoS-LOIC-HTTP": [
+       0.38952879581151834,
+       1.0
+      ]
+     },
+     "macro_ci": [
+      NaN,
+      NaN
+     ]
+    }
+   },
+   "all_but": {
+    "net.tcp_flags": {
+     "fa": 0.018173255188086837,
+     "detection": {
+      "DDoS-LOIC-HTTP": 1.0
+     }
+    },
+    "net.scan": {
+     "fa": 0.015433436995395013,
+     "detection": {
+      "DDoS-LOIC-HTTP": 1.0
+     }
+    },
+    "net.trw": {
+     "fa": 0.014442916093535076,
+     "detection": {
+      "DDoS-LOIC-HTTP": 1.0
+     }
+    },
+    "net.bruteforce": {
+     "fa": 0.016794001554930924,
+     "detection": {
+      "DDoS-LOIC-HTTP": 1.0
+     }
+    },
+    "net.dos_rate": {
+     "fa": 0.014001853956103105,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.9854833333333334
+     }
+    },
+    "net.l3_service": {
+     "fa": 0.015803480653070988,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.99935
+     }
+    },
+    "net.l3_ae": {
+     "fa": 0.015183003408887029,
+     "detection": {
+      "DDoS-LOIC-HTTP": 0.99965
+     }
+    }
+   },
+   "O": {
+    "fa": 0.01671550744572693,
+    "fa_pub": 0.01671550744572693,
+    "n_benign": 267536,
+    "fa_audit_file": null,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9999833333333333
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 60000
+    },
+    "n_blocks": {
+     "DDoS-LOIC-HTTP": 5
+    },
+    "macro": 0.9999833333333333,
+    "n_ge50": 1,
+    "fa_ci": [
+     0.012745642092725263,
+     0.02132134357181611
+    ],
+    "detection_ci": {
+     "DDoS-LOIC-HTTP": [
+      0.99375,
+      1.0
+     ]
+    },
+    "macro_ci": [
+     NaN,
+     NaN
+    ],
+    "auc": 0.9999818569588143,
+    "threshold": 0.7086683763325664
+   },
+   "H_on_network": {
+    "fa": 0.01467839842114706,
+    "fa_pub": 0.01467839842114706,
+    "n_benign": 267536,
+    "fa_audit_file": null,
+    "detection": {
+     "DDoS-LOIC-HTTP": 0.9854833333333334
+    },
+    "n": {
+     "DDoS-LOIC-HTTP": 60000
+    },
+    "n_blocks": {
+     "DDoS-LOIC-HTTP": 5
+    },
+    "macro": 0.9854833333333334,
+    "n_ge50": 1,
+    "fa_ci": [
+     0.011056358258846884,
+     0.017874695127074552
+    ],
+    "detection_ci": {
+     "DDoS-LOIC-HTTP": [
+      0.0,
+      1.0
+     ]
+    },
+    "macro_ci": [
+     NaN,
+     NaN
+    ]
+   }
+  },
+  "flow_all_days": {
+   "layers_alone": {
+    "net.tcp_flags": {
+     "fa": 0.0096,
+     "fa_pub": 0.0096,
+     "n_benign": 500000,
+     "fa_audit_file": null,
+     "detection": {
+      "Bot": 2.8071751396569632e-05,
+      "DDoS-HOIC": 0.0,
+      "DDoS-LOIC-HTTP": 0.0,
+      "DDoS-LOIC-UDP": 0.0,
+      "DoS-GoldenEye": 0.0,
+      "DoS-Slowloris": 0.0021496130696474634,
+      "Infiltration": 0.044385593220338984,
+      "SSH-Patator": 0.0,
+      "Web-BruteForce": 0.0
+     },
+     "n": {
+      "Bot": 35623,
+      "DDoS-HOIC": 1444,
+      "DDoS-LOIC-HTTP": 60000,
+      "DDoS-LOIC-UDP": 351,
+      "DoS-GoldenEye": 11570,
+      "DoS-Slowloris": 2326,
+      "Infiltration": 18880,
+      "SSH-Patator": 20174,
+      "Web-BruteForce": 110
+     },
+     "n_blocks": {
+      "Bot": 9,
+      "DDoS-HOIC": 2,
+      "DDoS-LOIC-HTTP": 5,
+      "DDoS-LOIC-UDP": 3,
+      "DoS-GoldenEye": 2,
+      "DoS-Slowloris": 2,
+      "Infiltration": 14,
+      "SSH-Patator": 4,
+      "Web-BruteForce": 8
+     },
+     "macro": 0.005173697560153668,
+     "n_ge50": 0,
+     "fa_ci": [
+      0.008304073842846054,
+      0.010882252562200628
+     ],
+     "detection_ci": {
+      "Bot": [
+       0.0,
+       7.060367615137235e-05
+      ],
+      "DDoS-HOIC": [
+       0.0,
+       0.0
+      ],
+      "DDoS-LOIC-HTTP": [
+       0.0,
+       0.0
+      ],
+      "DDoS-LOIC-UDP": [
+       0.0,
+       0.0
+      ],
+      "DoS-GoldenEye": [
+       0.0,
+       0.0
+      ],
+      "DoS-Slowloris": [
+       0.0015965939329430547,
+       0.0044742729306487695
+      ],
+      "Infiltration": [
+       0.03187417828343898,
+       0.057311010394591175
+      ],
+      "SSH-Patator": [
+       0.0,
+       0.0
+      ],
+      "Web-BruteForce": [
+       0.0,
+       0.0
+      ]
+     },
+     "macro_ci": [
+      0.003923422986832452,
+      0.007401884708727774
+     ]
+    },
+    "net.l3_service": {
+     "fa": 0.009552,
+     "fa_pub": 0.009552,
+     "n_benign": 500000,
+     "fa_audit_file": null,
+     "detection": {
+      "Bot": 0.00912331920388513,
+      "DDoS-HOIC": 0.0,
+      "DDoS-LOIC-HTTP": 0.03191666666666667,
+      "DDoS-LOIC-UDP": 1.0,
+      "DoS-GoldenEye": 0.04814174589455488,
+      "DoS-Slowloris": 0.7910576096302665,
+      "Infiltration": 0.03114406779661017,
+      "SSH-Patator": 0.0,
+      "Web-BruteForce": 0.24545454545454545
+     },
+     "n": {
+      "Bot": 35623,
+      "DDoS-HOIC": 1444,
+      "DDoS-LOIC-HTTP": 60000,
+      "DDoS-LOIC-UDP": 351,
+      "DoS-GoldenEye": 11570,
+      "DoS-Slowloris": 2326,
+      "Infiltration": 18880,
+      "SSH-Patator": 20174,
+      "Web-BruteForce": 110
+     },
+     "n_blocks": {
+      "Bot": 9,
+      "DDoS-HOIC": 2,
+      "DDoS-LOIC-HTTP": 5,
+      "DDoS-LOIC-UDP": 3,
+      "DoS-GoldenEye": 2,
+      "DoS-Slowloris": 2,
+      "Infiltration": 14,
+      "SSH-Patator": 4,
+      "Web-BruteForce": 8
+     },
+     "macro": 0.2396486616273921,
+     "n_ge50": 2,
+     "fa_ci": [
+      0.008301811696848085,
+      0.01087020693293281
+     ],
+     "detection_ci": {
+      "Bot": [
+       0.0,
+       0.013012633340835435
+      ],
+      "DDoS-HOIC": [
+       0.0,
+       0.0
+      ],
+      "DDoS-LOIC-HTTP": [
+       0.0061134720047714905,
+       1.0
+      ],
+      "DDoS-LOIC-UDP": [
+       1.0,
+       1.0
+      ],
+      "DoS-GoldenEye": [
+       0.0,
+       0.049418862567651496
+      ],
+      "DoS-Slowloris": [
+       0.7871208089409261,
+       0.8076062639821029
+      ],
+      "Infiltration": [
+       0.019140743572104876,
+       0.04167698136613255
+      ],
+      "SSH-Patator": [
+       0.0,
+       0.0
+      ],
+      "Web-BruteForce": [
+       0.17141917293233083,
+       0.3448275862068966
+      ]
+     },
+     "macro_ci": [
+      0.14869102010624788,
+      0.34698954519246483
+     ]
+    },
+    "net.l3_ae": {
+     "fa": 0.01029,
+     "fa_pub": 0.01029,
+     "n_benign": 500000,
+     "fa_audit_file": null,
+     "detection": {
+      "Bot": 0.009291749712264548,
+      "DDoS-HOIC": 0.0,
+      "DDoS-LOIC-HTTP": 0.4213166666666667,
+      "DDoS-LOIC-UDP": 1.0,
+      "DoS-GoldenEye": 0.027571305099394986,
+      "DoS-Slowloris": 0.7695614789337919,
+      "Infiltration": 0.025529661016949153,
+      "SSH-Patator": 0.0,
+      "Web-BruteForce": 0.24545454545454545
+     },
+     "n": {
+      "Bot": 35623,
+      "DDoS-HOIC": 1444,
+      "DDoS-LOIC-HTTP": 60000,
+      "DDoS-LOIC-UDP": 351,
+      "DoS-GoldenEye": 11570,
+      "DoS-Slowloris": 2326,
+      "Infiltration": 18880,
+      "SSH-Patator": 20174,
+      "Web-BruteForce": 110
+     },
+     "n_blocks": {
+      "Bot": 9,
+      "DDoS-HOIC": 2,
+      "DDoS-LOIC-HTTP": 5,
+      "DDoS-LOIC-UDP": 3,
+      "DoS-GoldenEye": 2,
+      "DoS-Slowloris": 2,
+      "Infiltration": 14,
+      "SSH-Patator": 4,
+      "Web-BruteForce": 8
+     },
+     "macro": 0.27763615632040145,
+     "n_ge50": 2,
+     "fa_ci": [
+      0.008732826971152798,
+      0.012249534555841825
+     ],
+     "detection_ci": {
+      "Bot": [
+       0.0,
+       0.013106630084786365
+      ],
+      "DDoS-HOIC": [
+       0.0,
+       0.0
+      ],
+      "DDoS-LOIC-HTTP": [
+       0.38952879581151834,
+       1.0
+      ],
+      "DDoS-LOIC-UDP": [
+       1.0,
+       1.0
+      ],
+      "DoS-GoldenEye": [
+       0.0,
+       0.028302723804453908
+      ],
+      "DoS-Slowloris": [
+       0.6957494407158836,
+       0.7871208089409261
+      ],
+      "Infiltration": [
+       0.01866811959499071,
+       0.03141256614568524
+      ],
+      "SSH-Patator": [
+       0.0,
+       0.0
+      ],
+      "Web-BruteForce": [
+       0.17141917293233083,
+       0.3448275862068966
+      ]
+     },
+     "macro_ci": [
+      0.18749952139857082,
+      0.35016347095048345
+     ]
+    }
+   },
+   "O_flow": {
+    "fa": 0.010836,
+    "fa_pub": 0.010836,
+    "n_benign": 500000,
+    "fa_audit_file": null,
+    "detection": {
+     "Bot": 0.00912331920388513,
+     "DDoS-HOIC": 0.0,
+     "DDoS-LOIC-HTTP": 0.0013833333333333334,
+     "DDoS-LOIC-UDP": 1.0,
+     "DoS-GoldenEye": 0.01529818496110631,
+     "DoS-Slowloris": 0.998280309544282,
+     "Infiltration": 0.04417372881355932,
+     "SSH-Patator": 0.0,
+     "Web-BruteForce": 0.24545454545454545
+    },
+    "n": {
+     "Bot": 35623,
+     "DDoS-HOIC": 1444,
+     "DDoS-LOIC-HTTP": 60000,
+     "DDoS-LOIC-UDP": 351,
+     "DoS-GoldenEye": 11570,
+     "DoS-Slowloris": 2326,
+     "Infiltration": 18880,
+     "SSH-Patator": 20174,
+     "Web-BruteForce": 110
+    },
+    "n_blocks": {
+     "Bot": 9,
+     "DDoS-HOIC": 2,
+     "DDoS-LOIC-HTTP": 5,
+     "DDoS-LOIC-UDP": 3,
+     "DoS-GoldenEye": 2,
+     "DoS-Slowloris": 2,
+     "Infiltration": 14,
+     "SSH-Patator": 4,
+     "Web-BruteForce": 8
+    },
+    "macro": 0.2570792690345235,
+    "n_ge50": 2,
+    "fa_ci": [
+     0.009176134599534471,
+     0.012831069443689218
+    ],
+    "detection_ci": {
+     "Bot": [
+      0.0,
+      0.013012633340835435
+     ],
+     "DDoS-HOIC": [
+      0.0,
+      0.0
+     ],
+     "DDoS-LOIC-HTTP": [
+      0.0,
+      0.9875361570247935
+     ],
+     "DDoS-LOIC-UDP": [
+      1.0,
+      1.0
+     ],
+     "DoS-GoldenEye": [
+      0.0,
+      0.015704019164226778
+     ],
+     "DoS-Slowloris": [
+      0.9910514541387024,
+      1.0
+     ],
+     "Infiltration": [
+      0.029942870825743855,
+      0.057705922092906085
+     ],
+     "SSH-Patator": [
+      0.0,
+      0.0
+     ],
+     "Web-BruteForce": [
+      0.17141917293233083,
+      0.3448275862068966
+     ]
+    },
+    "macro_ci": [
+     0.15868227701304552,
+     0.36696625262148935
+    ],
+    "auc": 0.8610412331906969,
+    "threshold": 0.7909980256829721,
+    "fa_by_day": {
+     "2018-02-14": 0.010587372025577413,
+     "2018-02-15": 0.01000241345096672,
+     "2018-02-16": 0.014285714285714285,
+     "2018-02-20": 0.011127474433347289,
+     "2018-02-21": 4.047108341090291e-05,
+     "2018-02-22": 0.006787059021032688,
+     "2018-02-23": 0.00823584695669379,
+     "2018-02-28": 0.03208032955715757,
+     "2018-03-01": 0.012184508268059183,
+     "2018-03-02": 0.013273907567096212
+    },
+    "detection_by_day_family": {
+     "2018-02-14|SSH-Patator": 0.0,
+     "2018-02-15|DoS-GoldenEye": 0.01529818496110631,
+     "2018-02-15|DoS-Slowloris": 0.998280309544282,
+     "2018-02-20|DDoS-LOIC-HTTP": 0.0013833333333333334,
+     "2018-02-21|DDoS-HOIC": 0.0,
+     "2018-02-21|DDoS-LOIC-UDP": 1.0,
+     "2018-02-22|Web-BruteForce": 0.32558139534883723,
+     "2018-02-23|Web-BruteForce": 0.19402985074626866,
+     "2018-02-28|Infiltration": 0.02869757174392936,
+     "2018-03-01|Infiltration": 0.057140075927187776,
+     "2018-03-02|Bot": 0.00912331920388513
+    }
+   }
+  }
+ },
+ "dos_rate_warmup_d23_tue": {
+  "0.1": {
+   "hours": 0.5497222222222222,
+   "flows": 90381,
+   "known_destinations": 4,
+   "fa_benign_test": 0.44036834802236474,
+   "detection_loic": 0.9991039203484754,
+   "auc": 0.9819142749469012
+  },
+  "0.25": {
+   "hours": 1.3997222222222223,
+   "flows": 798332,
+   "known_destinations": 1033,
+   "fa_benign_test": 0.015836484228260186,
+   "detection_loic": 0.9999336237295167,
+   "auc": 0.9999767422540421
+  },
+  "0.5": {
+   "hours": 3.9497222222222224,
+   "flows": 2011827,
+   "known_destinations": 2162,
+   "fa_benign_test": 0.015962565460012484,
+   "detection_loic": 0.9999336237295167,
+   "auc": 0.9999762146830713
+  },
+  "1.0": {
+   "hours": 7.7941666666666665,
+   "flows": 4335440,
+   "known_destinations": 3778,
+   "fa_benign_test": 0.014146995722779403,
+   "detection_loic": 0.9999336237295167,
+   "auc": 0.9999761758473065
+  }
+ }
+}

@@ -10,7 +10,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP1 GPS | done (M1-GPS partial) | APPROVED | - | 2026-10-21 | M1-GPS closed PARTIAL, see reports/M1_GPS.md; frozen output gps/domain.py |
 | WP2 CAN | done (M1-CAN partial) | APPROVED | - | 2026-10-22 | M1-CAN closed PARTIAL, see reports/M1_CAN.md; frozen output can/domain.py |
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
-| WP4 Network | S7 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-22 | S6 APPROVED (L4 optional supervised). S7 -> M1-NET |
+| WP4 Network | S7 | REVIEW | worker sonnet (high, T3) | 2026-10-22 | M1-NET PARTIAL: reports/M1_NET.md; H FA 0.48% macro 65.9%, unseen Bot 0%, D23 zero-shot flag layer FA 30%; frozen network/domain.py |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
 | WP6 Cross-domain | S3 | TODO (waits for M1-NET freeze) | - | 2026-10-22 | S2b APPROVED partial; S3 may add glitch filter + LiDAR quality flag (val only) |
 | WP7 System | S1 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | streaming runtime, started early: GPS/CAN/V2X frozen, NET when frozen, LiDAR placeholder |

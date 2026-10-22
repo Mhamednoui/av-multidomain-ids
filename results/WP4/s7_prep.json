@@ -1,0 +1,57 @@
+{
+ "rule_matches_by_file": {
+  "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": 350,
+  "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": 623,
+  "Friday-WorkingHours-Morning.pcap_ISCX.csv": 1962,
+  "Monday-WorkingHours.pcap_ISCX.csv": 0,
+  "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": 0,
+  "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": 0,
+  "Tuesday-WorkingHours.pcap_ISCX.csv": 0,
+  "Wednesday-workingHours.pcap_ISCX.csv": 0
+ },
+ "rule_matches_total": 2935,
+ "val": {
+  "rule_matches": 263,
+  "of_which_published_bot": 107,
+  "relabelled_benign_to_bot": 156,
+  "published_bot": 109,
+  "rule_matches_other_attack_labels": {},
+  "relabelled_in_audit_file": 0
+ },
+ "test": {
+  "rule_matches": 524,
+  "of_which_published_bot": 308,
+  "relabelled_benign_to_bot": 216,
+  "published_bot": 308,
+  "rule_matches_other_attack_labels": {},
+  "relabelled_in_audit_file": 0
+ },
+ "layers": [
+  "net.allow_pair",
+  "net.allow_service",
+  "net.beacon",
+  "net.bruteforce",
+  "net.dos_rate",
+  "net.l3_ae",
+  "net.l3_service",
+  "net.l4_xgb",
+  "net.scan",
+  "net.slow",
+  "net.tcp_flags",
+  "net.trw"
+ ],
+ "thresholds": {
+  "net.scan": 0.9851624793656288,
+  "net.trw": 0.9875136303584133,
+  "net.bruteforce": 0.9890984599411664,
+  "net.dos_rate": 0.9891424066886951,
+  "net.slow": 0.9876866706768075,
+  "net.beacon": 0.9898840080532416,
+  "net.tcp_flags": 0.9899224614573292,
+  "net.l3_service": 0.9899993682655044,
+  "net.l3_ae": 0.9899966215937839,
+  "net.l4_xgb": 0.9899762011054765,
+  "net.allow_service": 0.9894692606234397,
+  "net.allow_pair": 0.9898483013208745
+ }
+}

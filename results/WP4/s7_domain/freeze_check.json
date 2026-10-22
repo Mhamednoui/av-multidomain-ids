@@ -1,0 +1,15 @@
+{
+ "n_rows": 585951,
+ "max_abs_score_diff": 0.0,
+ "alarm_mismatches": 0,
+ "alarm_rate": 0.19879989965031206,
+ "fixture_flows": 5,
+ "stack": "H",
+ "layers": [
+  "net.tcp_flags",
+  "net.scan",
+  "net.trw",
+  "net.bruteforce"
+ ],
+ "domain_pkl_bytes": 14613215
+}

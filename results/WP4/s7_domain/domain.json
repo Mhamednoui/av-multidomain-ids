@@ -1,0 +1,28 @@
+{
+ "stack": "H",
+ "method": "max",
+ "combined_threshold": 0.996066766096183,
+ "budget": 0.01,
+ "layers": {
+  "net.tcp_flags": {
+   "layer_id": "L1",
+   "threshold": 0.9899224614573292,
+   "W": null
+  },
+  "net.scan": {
+   "layer_id": "L2a",
+   "threshold": 0.9851624793656288,
+   "W": 1
+  },
+  "net.trw": {
+   "layer_id": "L2a",
+   "threshold": 0.9875136303584133,
+   "W": 5
+  },
+  "net.bruteforce": {
+   "layer_id": "L2a",
+   "threshold": 0.9890984599411664,
+   "W": 1
+  }
+ }
+}

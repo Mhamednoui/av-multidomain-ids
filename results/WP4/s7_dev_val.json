@@ -1,0 +1,471 @@
+{
+ "n_val_sample": 161445,
+ "selection": {
+  "H": {
+   "noisy_or": 0.6511494069427815,
+   "logistic": 0.841523078252598,
+   "max": 0.8803422669784862
+  },
+  "O": {
+   "noisy_or": 0.8318332594017473,
+   "logistic": 0.8287614379279504,
+   "max": 0.7611406706309871
+  },
+  "O+slow": {
+   "noisy_or": 0.8315395943157318,
+   "logistic": 0.8257443980145418,
+   "max": 0.7887182213066246
+  },
+  "O+beacon": {
+   "noisy_or": 0.8326341735122662,
+   "logistic": 0.8323389688976215,
+   "max": 0.7611406706309871
+  },
+  "O+topology": {
+   "noisy_or": 0.9816593645113197,
+   "logistic": 0.8941157624946604,
+   "max": 0.9824602529630282
+  },
+  "O+L4": {
+   "noisy_or": 0.9323225780494829,
+   "logistic": 0.8906718369511915,
+   "max": 0.9575510133074803
+  },
+  "H all-but net.tcp_flags": {
+   "noisy_or": 0.4687850563498269,
+   "logistic": 0.8405088624505068,
+   "max": 0.8764977560857053
+  },
+  "H all-but net.scan": {
+   "noisy_or": 0.7393559813047854,
+   "logistic": 0.7993936463858744,
+   "max": 0.8803422669784862
+  },
+  "H all-but net.trw": {
+   "noisy_or": 0.6635639605379811,
+   "logistic": 0.8398678027293174,
+   "max": 0.8902739201181702
+  },
+  "H all-but net.bruteforce": {
+   "noisy_or": 0.1355990901180531,
+   "logistic": 0.20946356972350683,
+   "max": 0.3165759148751514
+  },
+  "O all-but net.tcp_flags": {
+   "noisy_or": 0.8304716746232927,
+   "logistic": 0.8264657184949322,
+   "max": 0.8598378753191187
+  },
+  "O all-but net.scan": {
+   "noisy_or": 0.8645911699617026,
+   "logistic": 0.7467986015332473,
+   "max": 0.7611406706309871
+  },
+  "O all-but net.trw": {
+   "noisy_or": 0.8416848057350932,
+   "logistic": 0.8323923648822436,
+   "max": 0.8595174994113869
+  },
+  "O all-but net.bruteforce": {
+   "noisy_or": 0.6041617358985849,
+   "logistic": 0.6686603647943877,
+   "max": 0.6870295328803288
+  },
+  "O all-but net.dos_rate": {
+   "noisy_or": 0.8314061685012032,
+   "logistic": 0.8323389688976215,
+   "max": 0.7611406706309871
+  },
+  "O all-but net.l3_service": {
+   "noisy_or": 0.8184578859890783,
+   "logistic": 0.7989130825242767,
+   "max": 0.8543116859870667
+  },
+  "O all-but net.l3_ae": {
+   "noisy_or": 0.7702701267196278,
+   "logistic": 0.8255042828660111,
+   "max": 0.8451273200439854
+  }
+ },
+ "method": {
+  "H": "max",
+  "O": "noisy_or",
+  "O+slow": "noisy_or",
+  "O+beacon": "noisy_or",
+  "O+topology": "max",
+  "O+L4": "max",
+  "H all-but net.tcp_flags": "max",
+  "H all-but net.scan": "max",
+  "H all-but net.trw": "max",
+  "H all-but net.bruteforce": "max",
+  "O all-but net.tcp_flags": "max",
+  "O all-but net.scan": "noisy_or",
+  "O all-but net.trw": "max",
+  "O all-but net.bruteforce": "max",
+  "O all-but net.dos_rate": "logistic",
+  "O all-but net.l3_service": "max",
+  "O all-but net.l3_ae": "max"
+ },
+ "threshold": {
+  "H": 0.996066766096183,
+  "O": 0.7192754789335456,
+  "O+slow": 0.7253445076321151,
+  "O+beacon": 0.6924552788821301,
+  "O+topology": 0.9978246359973304,
+  "O+L4": 0.9976049022596869,
+  "H all-but net.tcp_flags": 0.9948609772108649,
+  "H all-but net.scan": 0.996066766096183,
+  "H all-but net.trw": 0.9948609772108649,
+  "H all-but net.bruteforce": 0.9948609772108649,
+  "O all-but net.tcp_flags": 0.99706380793074,
+  "O all-but net.scan": 0.7210728393820369,
+  "O all-but net.trw": 0.9966161004402916,
+  "O all-but net.bruteforce": 0.9973961552089257,
+  "O all-but net.dos_rate": 0.981947498489064,
+  "O all-but net.l3_service": 0.997387915193764,
+  "O all-but net.l3_ae": 0.9973961552089257
+ },
+ "val_view": {
+  "H": {
+   "fa": 0.0095996176632965,
+   "macro": 0.582567672276777,
+   "detection": {
+    "Bot": 0.05504587155963303,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.00641025641025641,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9739069111424542,
+    "DoS-Slowloris": 0.3728813559322034,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O": {
+   "fa": 0.010148952007405027,
+   "macro": 0.5254200012554125,
+   "detection": {
+    "Bot": 0.0,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.00641025641025641,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9760225669957687,
+    "DoS-Slowloris": 0.7810734463276836,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 0.016113744075829384,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O+slow": {
+   "fa": 0.010126978633640685,
+   "macro": 0.5248386081926957,
+   "detection": {
+    "Bot": 0.0,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.01282051282051282,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9760225669957687,
+    "DoS-Slowloris": 0.7824858757062146,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 0.0018957345971563982,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O+beacon": {
+   "fa": 0.01011049860331743,
+   "macro": 0.5244350128055675,
+   "detection": {
+    "Bot": 0.0,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.00641025641025641,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9760225669957687,
+    "DoS-Slowloris": 0.7711864406779662,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 0.015165876777251185,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O+topology": {
+   "fa": 0.010170925381169368,
+   "macro": 0.9157631359466222,
+   "detection": {
+    "Bot": 0.07339449541284404,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 1.0,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 1.0,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 1.0,
+    "Web-BruteForce": 1.0,
+    "Web-XSS": 1.0
+   }
+  },
+  "O+L4": {
+   "fa": 0.009396363955976346,
+   "macro": 0.9415844121952233,
+   "detection": {
+    "Bot": 0.981651376146789,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 1.0,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.997179125528914,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 0.5033175355450237,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.8958990536277602,
+    "Web-XSS": 0.979381443298969
+   }
+  },
+  "H all-but net.tcp_flags": {
+   "fa": 0.00823177514646627,
+   "macro": 0.5480866166092807,
+   "detection": {
+    "Bot": 0.05504587155963303,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.0,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9739069111424542,
+    "DoS-Slowloris": 0.0,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "H all-but net.scan": {
+   "fa": 0.0095996176632965,
+   "macro": 0.582567672276777,
+   "detection": {
+    "Bot": 0.05504587155963303,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.00641025641025641,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9739069111424542,
+    "DoS-Slowloris": 0.3728813559322034,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "H all-but net.trw": {
+   "fa": 0.00870145601067906,
+   "macro": 0.5774730903091254,
+   "detection": {
+    "Bot": 0.0,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.00641025641025641,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9739069111424542,
+    "DoS-Slowloris": 0.3728813559322034,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 0.9990054699154649,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "H all-but net.bruteforce": {
+   "fa": 0.00829494859603875,
+   "macro": 0.19915870891414514,
+   "detection": {
+    "Bot": 0.05504587155963303,
+    "DDoS-LOIC-HTTP": 0.00903598634095088,
+    "DoS-GoldenEye": 0.00641025641025641,
+    "DoS-Hulk": 0.2593610443146685,
+    "DoS-SlowHTTPTest": 0.48801128349788436,
+    "DoS-Slowloris": 0.3728813559322034,
+    "FTP-Patator": 0.0,
+    "SSH-Patator": 0.0,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O all-but net.tcp_flags": {
+   "fa": 0.010050071825465492,
+   "macro": 0.6172682916379812,
+   "detection": {
+    "Bot": 0.06422018348623854,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.009615384615384616,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9901269393511989,
+    "DoS-Slowloris": 0.7259887005649718,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O all-but net.scan": {
+   "fa": 0.010234098830741849,
+   "macro": 0.5700444253683247,
+   "detection": {
+    "Bot": 0.0,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.01282051282051282,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9894217207334274,
+    "DoS-Slowloris": 1.0,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 0.2682464454976303,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O all-but net.trw": {
+   "fa": 0.01005831184062712,
+   "macro": 0.6125102908746383,
+   "detection": {
+    "Bot": 0.009174311926605505,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.01282051282051282,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9901269393511989,
+    "DoS-Slowloris": 0.7259887005649718,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 0.9995027349577325,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O all-but net.bruteforce": {
+   "fa": 0.008575109111534099,
+   "macro": 0.46149402721008276,
+   "detection": {
+    "Bot": 0.06422018348623854,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.01282051282051282,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.771509167842031,
+    "DoS-Slowloris": 0.7259887005649718,
+    "FTP-Patator": 0.5,
+    "SSH-Patator": 0.0018957345971563982,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O all-but net.dos_rate": {
+   "fa": 0.004897315677727514,
+   "macro": 0.6113323092731492,
+   "detection": {
+    "Bot": 0.0,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.01282051282051282,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9739069111424542,
+    "DoS-Slowloris": 0.7612994350282486,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 0.9766285430134262,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O all-but net.l3_service": {
+   "fa": 0.009907244895997275,
+   "macro": 0.6152510905534156,
+   "detection": {
+    "Bot": 0.05504587155963303,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.01282051282051282,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.9739069111424542,
+    "DoS-Slowloris": 0.7259887005649718,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 1.0,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  },
+  "O all-but net.l3_ae": {
+   "fa": 0.007424253660626735,
+   "macro": 0.4527869553142274,
+   "detection": {
+    "Bot": 0.06422018348623854,
+    "DDoS-LOIC-HTTP": 1.0,
+    "DoS-GoldenEye": 0.00641025641025641,
+    "DoS-Hulk": 1.0,
+    "DoS-SlowHTTPTest": 0.5437235543018336,
+    "DoS-Slowloris": 0.3644067796610169,
+    "FTP-Patator": 1.0,
+    "SSH-Patator": 0.0018957345971563982,
+    "PortScan": 1.0,
+    "Web-BruteForce": 0.0,
+    "Web-XSS": 0.0
+   }
+  }
+ },
+ "warmup": {
+  "n_warmup_minutes_total": 1260,
+  "n_warmup_flows_total": 1151157,
+  "0.1": {
+   "minutes": 126,
+   "flows": 162026,
+   "known_destinations": 193,
+   "fa_benign_val": 0.005831184062712009,
+   "detection": {
+    "DoS-Hulk": 1.0,
+    "DoS-GoldenEye": 0.0,
+    "DDoS-LOIC-HTTP": 1.0
+   },
+   "auc": 0.9907159411232473
+  },
+  "0.25": {
+   "minutes": 315,
+   "flows": 381626,
+   "known_destinations": 498,
+   "fa_benign_val": 0.009412843986299602,
+   "detection": {
+    "DoS-Hulk": 1.0,
+    "DoS-GoldenEye": 0.0,
+    "DDoS-LOIC-HTTP": 1.0
+   },
+   "auc": 0.9906024331237877
+  },
+  "0.5": {
+   "minutes": 630,
+   "flows": 663831,
+   "known_destinations": 840,
+   "fa_benign_val": 0.010179165396330996,
+   "detection": {
+    "DoS-Hulk": 1.0,
+    "DoS-GoldenEye": 0.0,
+    "DDoS-LOIC-HTTP": 1.0
+   },
+   "auc": 0.9898809311412251
+  },
+  "1.0": {
+   "minutes": 1260,
+   "flows": 1151157,
+   "known_destinations": 1341,
+   "fa_benign_val": 0.0092645237133903,
+   "detection": {
+    "DoS-Hulk": 1.0,
+    "DoS-GoldenEye": 0.0,
+    "DDoS-LOIC-HTTP": 1.0
+   },
+   "auc": 0.9891729551593351
+  }
+ }
+}

@@ -39,3 +39,4 @@ Target (fixed): time-based split; unseen Bot > 70% at the same false-alarm level
 - S3 APPROVED. S4 done 2026-10-22 (L2b beaconing, reports/WP4_S4.md): Bot 36% of flows, C2/C3 not met; waits for review.
 - S4 APPROVED. S5 done 2026-10-22 (L3 normal-only service profile / isolation forest / autoencoder, reports/WP4_S5.md): rule-blind families not caught at 1% FA, harness +6.8 points; waits for review.
 - S5 APPROVED. S6 done 2026-10-22 (L4 supervised XGBoost on the time split, reports/WP4_S6.md): in-distribution macro 98.0% at FA 1.0% but unseen Bot 0% (signature of the Ares C2 beacon), D23 zero-shot FA 5.2%; waits for review.
+- S6 APPROVED. S7 done 2026-10-22 (combiner + ablation + LOAO + D23 -> M1-NET PARTIAL, reports/M1_NET.md, reports/WP4_S7.md): H FA 0.48% macro 65.9%, unseen Bot 0%, D23 zero-shot tcp_flags FA 30%; frozen network/domain.py; waits for review.
