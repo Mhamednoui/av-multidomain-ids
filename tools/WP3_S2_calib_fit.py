@@ -41,7 +41,7 @@ def val_job(args):
         rays = P.prepare(pts, table)
         for _ in range(3):
             p = C.phantom_params(rng)
-            att, n, q, idx = P.phantom(pts, rays, p, rng, "add", calib)
+            att, n, q, idx = P.phantom(pts, rays, p, rng, "add", calib, single_return=False)
             if n >= C.N_MIN:
                 new = att[len(pts):]
                 r, n_, cells, qq = C.stat_of(new, rays["k"][idx])

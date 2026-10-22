@@ -131,3 +131,48 @@ Part B (L1 sensor geometry, v3 Layers, domain "lidar", layer "L1"):
 - A5: v2 on calibrated phantoms (test, val-1 %): add near onset 75.3 -> 61.9, add far 20.5 -> 13.0, budget_add near 5.4 -> 6.5, far 6.9 -> 5.2; replace/budget = FA both.
   Calibrated phantoms are thinner (median 1298 vs 2340 near add, 122 vs 188 far add), so the earlier numbers were inflated by density, as suspected.
 - Test exposure: this is the first L1 test run; v2 model/threshold on test was already exposed in S1 (reproduction) and is used here unchanged.
+
+## 2026-10-22 S3 (with S2b) - ACCEPTANCE RULE (written before any S2b / S3 result)
+
+### S2b single-return generator fix
+Physics: KITTI's HDL-64E reports one return per beam (laser k, azimuth step 0.1728 deg). A phantom return therefore
+occupies a beam and the real return behind it in the same beam cannot also be reported. Fix: lidar/singlereturn.py drops, for
+every injected point, the real points of the same laser and azimuth (|d az| < 0.04 deg, laser = nearest ring line after the common
+mode) that lie BEHIND it. Calibrated ray-cast phantoms sit exactly on the real return's own ray: add == replace by
+construction (budget_add == budget). No rng draw is added, so placements are identical to the S2 tables (paired comparison).
+- F1 Physics unit test: after every attack (PointDrop, IntensitySpoof, box cloud, all 4 ray-cast modes, both generators) the number
+  of beams carrying two returns does not exceed that of the clean scan (synthetic scene: 0). Test must pass.
+- F2 VALIDATION only (3 drives; test not scored, no test attack table is built): regenerate box cloud and ray-cast attacks,
+  re-score v2 (threshold = val 1 % / 2 % of clean val scans, as in S2 dev) and L1 (same layers/thresholds as S2, calibrated on
+  clean val), side by side old (S2 tables) vs fixed. No detection target. Prediction written now: L1 single_return detection of
+  far add/budget_add drops from ~60 % to <= FA + 5 points (it was an artefact of the multi-return assumption); L1 box-cloud
+  detection unchanged within 5 points (ring rule); v2 on add/budget_add changes by less than 10 points (descriptor effects only).
+  If far-add collapses this confirms the artefact; if it does not, explain.
+
+### S3 object segmentation (data step, no detection verdict)
+- Pipeline: ground removal -> clustering -> object table. Parameters chosen on VALIDATION drives (3), train used for
+  fitting/inspection, test never used for choices; no labels exist (no tracklets), so the choice criteria are proxies, fixed now:
+  * ground: candidates = local-grid minimum filter (S2 objects.ground_height, cell 2 m) with height thresholds h0 in
+    {0.15, 0.20, 0.30} m, and RANSAC plane (fit on points < 25 m, inlier 0.12 m) + grid. Chosen: highest median number of
+    car-like clusters per scan among variants whose ground fraction is in 35-65 % of points < 40 m (KITTI urban scenes) and
+    whose flat-wide leakage (cluster with height < 0.5 m and footprint > 4 m) <= 2 % of clusters.
+  * clustering: Euclidean link radius eps(r) = e0 + e1 * r (cKDTree, no new packages), min points 5. Grid e0 in {0.4,0.6,0.8},
+    e1 in {0.0, 0.01, 0.02}. Chosen on val: maximise frame-to-frame match rate at 10-40 m (association by nearest centroid after
+    OXTS ego-motion compensation, distance <= 1.0 m) subject to oversize clusters (longest side > 8 m) <= 5 % of clusters.
+- S1 Sanity numbers on clean train/val (and, unchanged parameters, test): ground fraction, objects per scan by range bin
+  (0-10, 10-20, 20-30, 30-40, 40-60 m), median points per object by range, match rate between consecutive scans by range, ratio of
+  point counts of matched objects, centroid residual after ego-motion (median, p90).
+- S2 Acceptance: (a) match rate at 10-30 m >= 60 % on val at chosen parameters; (b) median centroid residual of matched
+  objects <= 0.5 m; (c) oversize clusters <= 5 %; (d) car-like clusters per scan from the table within +-25 % of the S2 objects.clusters
+  count on the same val scans; (e) phantom appearance (val, calibrated single-return phantoms, near/far, add/replace): >= 70 % of
+  phantoms appear as ONE object (an object holding >= 60 % of the phantom points, centroid within 2 m of the phantom centre); the
+  share merged with real structure and the share split are reported (not thresholds).
+- S3 Runtime: median seconds per scan reported (target <= 1.0 s single process).
+- S4 Tests pass (full suite); object-table cache <= 3 GB total under ../data_extra/cache_v3/WP3/.
+- Ego-motion: velocity-free pose from OXTS lat/lon/yaw (Mercator, as WP1), IMU->velodyne offset from the KITTI calibration
+  (T = (-0.8087, 0.3196, -0.7997), R = I; same for the whole 2011_09_26 date).
+
+### 2026-10-22 S2b + S3 results (reports/WP3_S3.md; numbers in results/WP3/S2b/val_old_vs_fixed.json, results/WP3/S3/{choice,sanity,phantom_appearance}.json)
+- S2b: lidar/singlereturn.py, phantom(single_return=True): add == replace. VAL: L1 far add 60.0 -> 1.5 %, near add v2 86.2 -> 8.7 %, box cloud v2 65.1 -> 25.7 / L1 45.6 -> 21.0. Far-add was a multi-return artefact (confirmed). Predictions: L1 far-add MET, box cloud within 5 pts NOT MET, v2 add within 10 NOT MET.
+- S3 choice on val: grid ground h0 0.30 (frac 0.42, leak 0.8 %), cluster e0 0.4 e1 0.0 (all settings 57-64 % match; e1>0 only increases oversize). Sanity: a MET (60.4/63.8), b MET (0.13-0.19 m), c MET (1.6 %), d MET (ratio 1.09), e NOT MET (62 % far / 43 % near add), runtime 0.68 s/scan single process.
+- Pitfalls: query_ball_point with per-point radius is too slow (6M neighbours/scan): use shell-wise query_pairs; multiprocessing under `timeout` in Git Bash fails (WinError 5); pgrep is missing in Git Bash.

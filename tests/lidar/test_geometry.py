@@ -93,7 +93,7 @@ def test_phantom_points_lie_on_their_ring():
     rays = P.prepare(pts, TABLE)
     rng = np.random.default_rng(2)
     p = {"range": 22.0, "az": 10.0, "rot": 0.7, "budget": 400}
-    att, n, q, idx = P.phantom(pts, rays, p, rng, "add", None)
+    att, n, q, idx = P.phantom(pts, rays, p, rng, "add", None, single_return=False)
     assert n >= 60
     a = TABLE.assign(att)
     res_new = a["res"][len(pts):]
@@ -107,7 +107,7 @@ def test_old_origin_rays_leave_the_ring_but_new_rays_do_not():
     p = {"range": 15.0, "az": 10.0, "rot": 0.3, "budget": 400, "n": 0}
     old, n_old = raycast_ghost(pts, p, rng, "add", retry=False)
     rays = P.prepare(pts, TABLE)
-    new, n_new, _, _ = P.phantom(pts, rays, p, rng, "add", None)
+    new, n_new, _, _ = P.phantom(pts, rays, p, rng, "add", None, single_return=False)
     k_old, r_old = TABLE.nearest(old[len(pts):], None)
     k_new, r_new = TABLE.nearest(new[len(pts):], None)
     assert n_old > 30 and n_new > 30
@@ -119,11 +119,11 @@ def test_phantom_first_return_and_modes():
     rays = P.prepare(pts, TABLE)
     rng = np.random.default_rng(4)
     p = {"range": 25.0, "az": -40.0, "rot": 1.1, "budget": 120}
-    n_add = P.phantom(pts, rays, p, rng, "add", None)[1]
+    n_add = P.phantom(pts, rays, p, rng, "add", None, single_return=False)[1]
     att, n_rep, q, idx = P.phantom(pts, rays, p, rng, "replace", None)
     assert n_add == n_rep and len(att) == len(pts)
     assert (np.linalg.norm(att[idx, :3], axis=1) < np.linalg.norm(pts[idx, :3], axis=1)).all(), "nearer than the real return"
-    att_b, n_b, _, _ = P.phantom(pts, rays, p, rng, "budget_add", None)
+    att_b, n_b, _, _ = P.phantom(pts, rays, p, rng, "budget_add", None, single_return=False)
     assert n_b == min(120, n_add) and len(att_b) == len(pts) + n_b
 
 
@@ -133,7 +133,7 @@ def test_add_mode_creates_duplicates_replace_does_not():
     rng = np.random.default_rng(5)
     p = {"range": 30.0, "az": 0.0, "rot": 0.4, "budget": 400}
     base = G.l1_stats(pts, TABLE)
-    add, n, _, _ = P.phantom(pts, rays, p, rng, "add", None)
+    add, n, _, _ = P.phantom(pts, rays, p, rng, "add", None, single_return=False)
     rep, n2, _, _ = P.phantom(pts, rays, p, rng, "replace", None)
     s_add, s_rep = G.l1_stats(add, TABLE), G.l1_stats(rep, TABLE)
     assert s_add[4] - base[4] > 0.5 * n, (s_add, base, n)
@@ -153,12 +153,12 @@ def test_calibration_thinning_and_intensity():
     pts = ground_scene()
     rays = P.prepare(pts, TABLE)
     p = {"range": 20.0, "az": 5.0, "rot": 0.5, "budget": 10 ** 6}
-    full = P.phantom(pts, rays, p, np.random.default_rng(1), "add", None)[1]
+    full = P.phantom(pts, rays, p, np.random.default_rng(1), "add", None, single_return=False)[1]
     cal2 = P.Calib([5.0, 20.0, 45.0], [0.6, 0.6], np.inf, lib)
-    kept = np.mean([P.phantom(pts, rays, p, np.random.default_rng(s), "add", cal2)[1] for s in range(20)])
+    kept = np.mean([P.phantom(pts, rays, p, np.random.default_rng(s), "add", cal2, single_return=False)[1] for s in range(20)])
     assert abs(kept / full - 0.6) < 0.06, kept / full
-    a1 = P.phantom(pts, rays, p, np.random.default_rng(9), "add", cal2)[0]
-    a2 = P.phantom(pts, rays, p, np.random.default_rng(9), "add", cal2)[0]
+    a1 = P.phantom(pts, rays, p, np.random.default_rng(9), "add", cal2, single_return=False)[0]
+    a2 = P.phantom(pts, rays, p, np.random.default_rng(9), "add", cal2, single_return=False)[0]
     assert np.array_equal(a1, a2), "seeded generator is deterministic"
 
 

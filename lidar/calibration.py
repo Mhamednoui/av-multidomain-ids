@@ -44,7 +44,7 @@ def scan_records(pts, table, rng, n_ph=3, calib=None):
         p = phantom_params(rng)
         variants = [("exact", None)] + ([("calibrated", calib)] if calib is not None else [])
         for kind, cb in variants:
-            att, n, q, idx = P.phantom(pts, rays, p, rng, "add", cb)
+            att, n, q, idx = P.phantom(pts, rays, p, rng, "add", cb, single_return=False)
             if n >= N_MIN:
                 new = att[len(pts):]
                 r, n_, cells, qq = stat_of(new, rays["k"][idx])

@@ -13,7 +13,7 @@ Calibration (lidar.calibration, fitted on TRAIN scans): a phantom has a return p
 kappa) (beam dropout / dark surfaces; per-ray p(rho) / p(range centre)), and its intensities are drawn from a real
 object of the same range band (library of car-like clusters). Order: ray hits -> dropout -> budget (the attacker's
 50-400 point capacity applies to the injected returns) -> mode (add keeps the real return = multi-return assumption;
-replace overwrites it = single-return sensor, the physics bound).
+replace overwrites it = single-return sensor, the physics bound; since S2b `add` also overwrites it, see phantom()).
 """
 import numpy as np
 
@@ -97,9 +97,12 @@ class Calib:
         raise ValueError("empty intensity library")
 
 
-def phantom(pts, rays, p, rng, mode, calib=None):
+def phantom(pts, rays, p, rng, mode, calib=None, single_return=True):
     """Attacked scan, number of injected returns, parameters used, indices of the real rays used.
-    calib=None: no dropout and intensity from random real points (S1 behaviour on exact rays)."""
+    calib=None: no dropout and intensity from random real points (S1 behaviour on exact rays).
+    single_return=True (default since S2b): KITTI's HDL-64E reports one return per beam, so an injected return REPLACES the
+    real return behind it on the same ray: add == replace and budget_add == budget. single_return=False keeps the real
+    return (multi-return sensor assumption of S1 / S2, only used to reproduce the old numbers)."""
     if mode not in MODES:
         raise ValueError(mode)
     q = place(pts, rays, p)
@@ -118,7 +121,7 @@ def phantom(pts, rays, p, rng, mode, calib=None):
     inten = (calib.draw_intensity(q["range"], len(idx), rng) if calib is not None
              else rng.choice(pts[:, 3], len(idx)).astype(np.float32))
     new = np.c_[xyz, inten].astype(np.float32)
-    if mode in ("add", "budget_add"):
+    if mode in ("add", "budget_add") and not single_return:
         return np.vstack([pts, new]), int(len(idx)), q, idx
     out = pts.copy()
     out[idx] = new
