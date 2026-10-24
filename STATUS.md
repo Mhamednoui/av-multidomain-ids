@@ -13,11 +13,11 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | done (M1-V2X partial + V2AIX addendum) | APPROVED | - | 2026-10-24 | S3b APPROVED partial: real-CAM FA 92-95% with VeReMi calibration, ~1% recalibrated |
 | WP6 Cross-domain | S5b | TODO (after M1-LiDAR) | - | 2026-10-24 | S5 / M2 closed NOT MET (1 of 7 rules); addendum S5b after M1-LiDAR |
-| WP7 System | S3 (early) + S2 later | REVIEW | worker sonnet (medium, T2) | 2026-10-24 | S3 run_all / make_report / README done (reports/WP7_S3.md); open sections PENDING; S2 simulation waits for M1-LiDAR + M2 addendum |
+| WP7 System | S2 | TODO (waits for M1-LiDAR + M2 addendum) | - | 2026-10-24 | S1, S1b, S3 APPROVED; regenerate RESULTS_v3.md after every milestone |
 
 ## Overall progress (orchestrator updates this at every approval)
 
-**Overall: 52 / 59 steps approved = 88%** (updated 2026-10-24)
+**Overall: 53 / 59 steps approved = 90%** (updated 2026-10-24)
 
 | WP | Steps counted | Approved | % |
 |---|---|---|---|
@@ -28,7 +28,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP4 Network | S0-S7 (8) | 8 | 100 (M1-NET partial) |
 | WP5 V2X | S0, S0b, S0c, S1, S1b, S2-S6, S3b (11; S7 optional) | 11 | 100 (M1-V2X partial + V2AIX addendum) |
 | WP6 Cross-domain | S1, S2, S2b, S3-S5, S5b (7) | 6 | 86 |
-| WP7 System | S1-S4 (4) | 1 | 25 |
+| WP7 System | S1-S4 (4) | 2 | 50 |
 
 ## Milestones
 

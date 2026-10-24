@@ -125,6 +125,11 @@
    "value": 3,
    "qualifier": "",
    "source": "reports/M2.md section 2 (scored in S3, S4, S5); the planned S5b run will be the fourth"
+  },
+  "road_can_test": {
+   "value": 6,
+   "qualifier": "",
+   "source": "reports/M1_CAN.md (S2, S3, S4 x2, S5 before; S7 = 6th exposure); ORCHESTRATOR 2026-10-22 WP2 decisions"
   }
  },
  "v2_reference": {
