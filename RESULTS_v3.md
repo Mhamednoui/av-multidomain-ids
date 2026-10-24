@@ -395,7 +395,18 @@ Removing the domain with the lowest value costs the most detection: v2x. Removin
 
 #### M2 addendum (after M1-LiDAR)
 
-**PENDING.** The addendum replaces the interim LiDAR input, decides event blame by majority and requires corroboration by two domains for SAFE_STOP; it is built on new random pairings of the test streams. This section fills itself from the first of these files that exists: `results/WP6/s5b_acceptance.json`.
+Filled from `results/WP6/s5b_acceptance.json`.
+
+| item | rule | values | verdict |
+|---|---|---|---|
+| A1_raw_tick_fa | <= 0.030 (K and C) | K 0.035; C 0.074; M2_K 0.021; M2_C 0.067 | NOT MET |
+| A2_events_per_clean_hour | <= 10 (K and C) | K 17.539; C 28.680; M2_K 25.402; M2_C 30.960 | NOT MET |
+| A3_K_event_detection_single | >= 0.70 (single-domain families; comparison rows and LiDAR episodes excluded) | value 0.576; M2 0.602; m2_shared_families 0.624; M2_m2_shared_families 0.623 | NOT MET |
+| A4_K_heldout_event_detection | >= 0.60 | value 0.605; M2 0.588 | MET |
+| A5_K_blame | correct >= 0.75 and wrong <= 0.10 (detected single-domain K events, pooled; decided-majority event blame) | correct 0.880; wrong 0.062; M2_correct 0.867; M2_wrong 0.132 | MET |
+| A6_safe_stop_per_clean_hour | <= 1 (K and C; SAFE_STOP needs >= 2 corroborating domains) | K 0.080; C 1.050; M2_K 0.000; M2_C 1.230 | NOT MET |
+| A7_explained | 100% of alert events | K_share 1.000; C_share 1.000 | MET |
+| coupling_test | reported, not judged (GPS families, mean over drift / accel_drift / doppler_spoof / meaconing) | lidar_own_alarm_post_onset_control 0.051; lidar_own_alarm_post_onset_coupled 0.097; blamed_lidar_control 0.000; blamed_lidar_coupled 0.000 | reported |
 
 ## 8. M3: system runtime and simulation
 
@@ -1331,62 +1342,106 @@ Each row is one printed value: the text as printed, the file it was read from an
 | 777 | NOT MET | `results/WP6/s4_acceptance.json` | `Z4_physics_ge_l3/met` | json | 1 |
 | 778 | kept iff K: held-out +3 points and FA +0.5 points at most | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/rule` | json | 1 |
 | 779 | NOT MET | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/met` | json | 1 |
-| 780 | MET | `results/WP7/S1_acceptance.json` | `A1/gps/met` | json | 1 |
-| 781 | MET | `results/WP7/S1_acceptance.json` | `A2/gps/met` | json | 1 |
-| 782 | MET | `results/WP7/S1_acceptance.json` | `A3/gps/met` | json | 1 |
-| 783 | MET | `results/WP7/S1_acceptance.json` | `A1/can/met` | json | 1 |
-| 784 | MET | `results/WP7/S1_acceptance.json` | `A2/can/met` | json | 1 |
-| 785 | MET | `results/WP7/S1_acceptance.json` | `A3/can/met` | json | 1 |
-| 786 | MET | `results/WP7/S1_acceptance.json` | `A1/v2x/met` | json | 1 |
-| 787 | MET | `results/WP7/S1_acceptance.json` | `A2/v2x/met` | json | 1 |
-| 788 | MET | `results/WP7/S1_acceptance.json` | `A3/v2x/met` | json | 1 |
-| 789 | MET | `results/WP7/S1_acceptance.json` | `A1/cross/met` | json | 1 |
-| 790 | MET | `results/WP7/S1_acceptance.json` | `A2/cross/met` | json | 1 |
-| 791 | MET | `results/WP7/S1_acceptance.json` | `A3/cross/met` | json | 1 |
-| 792 | MET | `results/WP7/S1_acceptance.json` | `A1/lidar_interim/met` | json | 1 |
-| 793 | MET | `results/WP7/S1_acceptance.json` | `A2/lidar_interim/met` | json | 1 |
-| 794 | MET | `results/WP7/S1_acceptance.json` | `A3/lidar_interim/met` | json | 1 |
-| 795 | 5/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/captures_detected` | json | 1 |
-| 796 | 0.00% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/test_window_fpr` | json | 1 |
-| 797 | 0 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/false_alerts_per_hour` | json | 1 |
-| 798 | 7/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/captures_detected` | json | 1 |
-| 799 | 0.83% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/test_window_fpr` | json | 1 |
-| 800 | 30 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
-| 801 | 10/11 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/captures_detected` | json | 1 |
-| 802 | 4.85% | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/test_window_fpr` | json | 1 |
-| 803 | 175 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
-| 804 | 99.73% | `results/WP7/S3_registry.json` | `v2_reference/net_accuracy_random_split/value` | curated | 1 |
-| 805 | 99.60% | `results/WP7/S3_registry.json` | `v2_reference/net_macro_f1_random_split/value` | curated | 1 |
-| 806 | 2.9% | `results/WP7/S3_registry.json` | `v2_reference/net_ocsvm_fa/value` | curated | 1 |
-| 807 | 0.0% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_supervised/value` | curated | 1 |
-| 808 | 5.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_ocsvm/value` | curated | 1 |
-| 809 | 1.2% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_supervised/value` | curated | 1 |
-| 810 | 96.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_ocsvm/value` | curated | 1 |
-| 811 | 91.7% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/accuracy` | json | 1 |
-| 812 | 1.90% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/fpr` | json | 1 |
-| 813 | 84.2% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/recall` | json | 1 |
-| 814 | 26.0% | `results/WP6/s5_test.json` | `system/K/tick_recall_attack_ticks` | json | 1 |
-| 815 | 8 | `results/WP7/S3_registry.json` | `exposure/kitti_gps_test_drives/value` | curated | 1 |
-| 816 | 3 | `results/WP7/S3_registry.json` | `exposure/carhacking_test_blocks/value` | curated | 1 |
-| 817 | 4 | `results/WP7/S3_registry.json` | `exposure/d11_test_subsets/value` | curated | 1 |
-| 818 | 6 | `results/WP7/S3_registry.json` | `exposure/d10_cicids2017_test/value` | curated | 1 |
-| 819 | 3 | `results/WP7/S3_registry.json` | `exposure/d23_cse_cic_ids2018/value` | curated | 1 |
-| 820 | 2 | `results/WP7/S3_registry.json` | `exposure/veremi_test/value` | curated | 1 |
-| 821 | 1 | `results/WP7/S3_registry.json` | `exposure/v2aix_test/value` | curated | 1 |
-| 822 | 2 | `results/WP7/S3_registry.json` | `exposure/comma2k19/value` | curated | 1 |
-| 823 | 3 | `results/WP7/S3_registry.json` | `exposure/fusion_composites/value` | curated | 1 |
-| 824 | 23.3% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/attack_window_recall` | json | 1 |
-| 825 | 35.0% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/fa_clean_rate` | json | 1 |
-| 826 | 4.1% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/fa_clean_runs` | json | 1 |
-| 827 | 26% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/worst_drive_fa` | json | 1 |
-| 828 | 0.60 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/mean_window_auc` | json | 1 |
-| 829 | 0.55 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/bound` | json | 1 |
-| 830 | -8.0 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_K` | json | 1 |
-| 831 | -4.6 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_C` | json | 1 |
-| 832 | 7 | `results/WP1/S8_kitti.json` | `deployed/n_drives` | json | 1 |
-| 833 | 490 | `results/WP1/S8_kitti.json` | `n_test_runs` | json | 1 |
-| 834 | 1,375 | `results/WP2/s7_test.json` | `configs/all/clean_windows` | json | 1 |
-| 835 | 0.6 | `results/WP5/s3b_clean.json` | `envs/Mobile/receiver_hours` | json | 1 |
-| 836 | 3.8 | `results/WP5/s3b_clean.json` | `envs/Stationary/receiver_hours` | json | 1 |
-| 837 | 12.6 | `results/WP6/s5_test.json` | `system/K/clean_hours` | json | 1 |
-| 838 | 7 | `results/WP6/s5_test.json` | `system/K/ci_heldout_event/n_vehicle_groups` | json | 1 |
+| 780 | 0.035 | `results/WP6/s5b_acceptance.json` | `A1_raw_tick_fa/K` | json | 1 |
+| 781 | 0.074 | `results/WP6/s5b_acceptance.json` | `A1_raw_tick_fa/C` | json | 1 |
+| 782 | 0.021 | `results/WP6/s5b_acceptance.json` | `A1_raw_tick_fa/M2_K` | json | 1 |
+| 783 | 0.067 | `results/WP6/s5b_acceptance.json` | `A1_raw_tick_fa/M2_C` | json | 1 |
+| 784 | <= 0.030 (K and C) | `results/WP6/s5b_acceptance.json` | `A1_raw_tick_fa/rule` | json | 1 |
+| 785 | NOT MET | `results/WP6/s5b_acceptance.json` | `A1_raw_tick_fa/met` | json | 1 |
+| 786 | 17.539 | `results/WP6/s5b_acceptance.json` | `A2_events_per_clean_hour/K` | json | 1 |
+| 787 | 28.680 | `results/WP6/s5b_acceptance.json` | `A2_events_per_clean_hour/C` | json | 1 |
+| 788 | 25.402 | `results/WP6/s5b_acceptance.json` | `A2_events_per_clean_hour/M2_K` | json | 1 |
+| 789 | 30.960 | `results/WP6/s5b_acceptance.json` | `A2_events_per_clean_hour/M2_C` | json | 1 |
+| 790 | <= 10 (K and C) | `results/WP6/s5b_acceptance.json` | `A2_events_per_clean_hour/rule` | json | 1 |
+| 791 | NOT MET | `results/WP6/s5b_acceptance.json` | `A2_events_per_clean_hour/met` | json | 1 |
+| 792 | 0.576 | `results/WP6/s5b_acceptance.json` | `A3_K_event_detection_single/value` | json | 1 |
+| 793 | 0.602 | `results/WP6/s5b_acceptance.json` | `A3_K_event_detection_single/M2` | json | 1 |
+| 794 | 0.624 | `results/WP6/s5b_acceptance.json` | `A3_K_event_detection_single/m2_shared_families` | json | 1 |
+| 795 | 0.623 | `results/WP6/s5b_acceptance.json` | `A3_K_event_detection_single/M2_m2_shared_families` | json | 1 |
+| 796 | >= 0.70 (single-domain families; comparison rows and LiDAR episodes excluded) | `results/WP6/s5b_acceptance.json` | `A3_K_event_detection_single/rule` | json | 1 |
+| 797 | NOT MET | `results/WP6/s5b_acceptance.json` | `A3_K_event_detection_single/met` | json | 1 |
+| 798 | 0.605 | `results/WP6/s5b_acceptance.json` | `A4_K_heldout_event_detection/value` | json | 1 |
+| 799 | 0.588 | `results/WP6/s5b_acceptance.json` | `A4_K_heldout_event_detection/M2` | json | 1 |
+| 800 | >= 0.60 | `results/WP6/s5b_acceptance.json` | `A4_K_heldout_event_detection/rule` | json | 1 |
+| 801 | MET | `results/WP6/s5b_acceptance.json` | `A4_K_heldout_event_detection/met` | json | 1 |
+| 802 | 0.880 | `results/WP6/s5b_acceptance.json` | `A5_K_blame/correct` | json | 1 |
+| 803 | 0.062 | `results/WP6/s5b_acceptance.json` | `A5_K_blame/wrong` | json | 1 |
+| 804 | 0.867 | `results/WP6/s5b_acceptance.json` | `A5_K_blame/M2_correct` | json | 1 |
+| 805 | 0.132 | `results/WP6/s5b_acceptance.json` | `A5_K_blame/M2_wrong` | json | 1 |
+| 806 | correct >= 0.75 and wrong <= 0.10 (detected single-domain K events, pooled; decided-majority event blame) | `results/WP6/s5b_acceptance.json` | `A5_K_blame/rule` | json | 1 |
+| 807 | MET | `results/WP6/s5b_acceptance.json` | `A5_K_blame/met` | json | 1 |
+| 808 | 0.080 | `results/WP6/s5b_acceptance.json` | `A6_safe_stop_per_clean_hour/K` | json | 1 |
+| 809 | 1.050 | `results/WP6/s5b_acceptance.json` | `A6_safe_stop_per_clean_hour/C` | json | 1 |
+| 810 | 0.000 | `results/WP6/s5b_acceptance.json` | `A6_safe_stop_per_clean_hour/M2_K` | json | 1 |
+| 811 | 1.230 | `results/WP6/s5b_acceptance.json` | `A6_safe_stop_per_clean_hour/M2_C` | json | 1 |
+| 812 | <= 1 (K and C; SAFE_STOP needs >= 2 corroborating domains) | `results/WP6/s5b_acceptance.json` | `A6_safe_stop_per_clean_hour/rule` | json | 1 |
+| 813 | NOT MET | `results/WP6/s5b_acceptance.json` | `A6_safe_stop_per_clean_hour/met` | json | 1 |
+| 814 | 1.000 | `results/WP6/s5b_acceptance.json` | `A7_explained/K_share` | json | 1 |
+| 815 | 1.000 | `results/WP6/s5b_acceptance.json` | `A7_explained/C_share` | json | 1 |
+| 816 | 100% of alert events | `results/WP6/s5b_acceptance.json` | `A7_explained/rule` | json | 1 |
+| 817 | MET | `results/WP6/s5b_acceptance.json` | `A7_explained/met` | json | 1 |
+| 818 | 0.051 | `results/WP6/s5b_acceptance.json` | `coupling_test/lidar_own_alarm_post_onset_control` | json | 1 |
+| 819 | 0.097 | `results/WP6/s5b_acceptance.json` | `coupling_test/lidar_own_alarm_post_onset_coupled` | json | 1 |
+| 820 | 0.000 | `results/WP6/s5b_acceptance.json` | `coupling_test/blamed_lidar_control` | json | 1 |
+| 821 | 0.000 | `results/WP6/s5b_acceptance.json` | `coupling_test/blamed_lidar_coupled` | json | 1 |
+| 822 | reported, not judged (GPS families, mean over drift / accel_drift / doppler_spoof / meaconing) | `results/WP6/s5b_acceptance.json` | `coupling_test/rule` | json | 1 |
+| 823 | reported | `results/WP6/s5b_acceptance.json` | `coupling_test/verdict` | json | 1 |
+| 824 | MET | `results/WP7/S1_acceptance.json` | `A1/gps/met` | json | 1 |
+| 825 | MET | `results/WP7/S1_acceptance.json` | `A2/gps/met` | json | 1 |
+| 826 | MET | `results/WP7/S1_acceptance.json` | `A3/gps/met` | json | 1 |
+| 827 | MET | `results/WP7/S1_acceptance.json` | `A1/can/met` | json | 1 |
+| 828 | MET | `results/WP7/S1_acceptance.json` | `A2/can/met` | json | 1 |
+| 829 | MET | `results/WP7/S1_acceptance.json` | `A3/can/met` | json | 1 |
+| 830 | MET | `results/WP7/S1_acceptance.json` | `A1/v2x/met` | json | 1 |
+| 831 | MET | `results/WP7/S1_acceptance.json` | `A2/v2x/met` | json | 1 |
+| 832 | MET | `results/WP7/S1_acceptance.json` | `A3/v2x/met` | json | 1 |
+| 833 | MET | `results/WP7/S1_acceptance.json` | `A1/cross/met` | json | 1 |
+| 834 | MET | `results/WP7/S1_acceptance.json` | `A2/cross/met` | json | 1 |
+| 835 | MET | `results/WP7/S1_acceptance.json` | `A3/cross/met` | json | 1 |
+| 836 | MET | `results/WP7/S1_acceptance.json` | `A1/lidar_interim/met` | json | 1 |
+| 837 | MET | `results/WP7/S1_acceptance.json` | `A2/lidar_interim/met` | json | 1 |
+| 838 | MET | `results/WP7/S1_acceptance.json` | `A3/lidar_interim/met` | json | 1 |
+| 839 | 5/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/captures_detected` | json | 1 |
+| 840 | 0.00% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/test_window_fpr` | json | 1 |
+| 841 | 0 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/false_alerts_per_hour` | json | 1 |
+| 842 | 7/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/captures_detected` | json | 1 |
+| 843 | 0.83% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/test_window_fpr` | json | 1 |
+| 844 | 30 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
+| 845 | 10/11 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/captures_detected` | json | 1 |
+| 846 | 4.85% | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/test_window_fpr` | json | 1 |
+| 847 | 175 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
+| 848 | 99.73% | `results/WP7/S3_registry.json` | `v2_reference/net_accuracy_random_split/value` | curated | 1 |
+| 849 | 99.60% | `results/WP7/S3_registry.json` | `v2_reference/net_macro_f1_random_split/value` | curated | 1 |
+| 850 | 2.9% | `results/WP7/S3_registry.json` | `v2_reference/net_ocsvm_fa/value` | curated | 1 |
+| 851 | 0.0% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_supervised/value` | curated | 1 |
+| 852 | 5.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_ocsvm/value` | curated | 1 |
+| 853 | 1.2% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_supervised/value` | curated | 1 |
+| 854 | 96.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_ocsvm/value` | curated | 1 |
+| 855 | 91.7% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/accuracy` | json | 1 |
+| 856 | 1.90% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/fpr` | json | 1 |
+| 857 | 84.2% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/recall` | json | 1 |
+| 858 | 26.0% | `results/WP6/s5_test.json` | `system/K/tick_recall_attack_ticks` | json | 1 |
+| 859 | 8 | `results/WP7/S3_registry.json` | `exposure/kitti_gps_test_drives/value` | curated | 1 |
+| 860 | 3 | `results/WP7/S3_registry.json` | `exposure/carhacking_test_blocks/value` | curated | 1 |
+| 861 | 4 | `results/WP7/S3_registry.json` | `exposure/d11_test_subsets/value` | curated | 1 |
+| 862 | 6 | `results/WP7/S3_registry.json` | `exposure/d10_cicids2017_test/value` | curated | 1 |
+| 863 | 3 | `results/WP7/S3_registry.json` | `exposure/d23_cse_cic_ids2018/value` | curated | 1 |
+| 864 | 2 | `results/WP7/S3_registry.json` | `exposure/veremi_test/value` | curated | 1 |
+| 865 | 1 | `results/WP7/S3_registry.json` | `exposure/v2aix_test/value` | curated | 1 |
+| 866 | 2 | `results/WP7/S3_registry.json` | `exposure/comma2k19/value` | curated | 1 |
+| 867 | 3 | `results/WP7/S3_registry.json` | `exposure/fusion_composites/value` | curated | 1 |
+| 868 | 23.3% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/attack_window_recall` | json | 1 |
+| 869 | 35.0% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/fa_clean_rate` | json | 1 |
+| 870 | 4.1% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/fa_clean_runs` | json | 1 |
+| 871 | 26% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/worst_drive_fa` | json | 1 |
+| 872 | 0.60 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/mean_window_auc` | json | 1 |
+| 873 | 0.55 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/bound` | json | 1 |
+| 874 | -8.0 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_K` | json | 1 |
+| 875 | -4.6 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_C` | json | 1 |
+| 876 | 7 | `results/WP1/S8_kitti.json` | `deployed/n_drives` | json | 1 |
+| 877 | 490 | `results/WP1/S8_kitti.json` | `n_test_runs` | json | 1 |
+| 878 | 1,375 | `results/WP2/s7_test.json` | `configs/all/clean_windows` | json | 1 |
+| 879 | 0.6 | `results/WP5/s3b_clean.json` | `envs/Mobile/receiver_hours` | json | 1 |
+| 880 | 3.8 | `results/WP5/s3b_clean.json` | `envs/Stationary/receiver_hours` | json | 1 |
+| 881 | 12.6 | `results/WP6/s5_test.json` | `system/K/clean_hours` | json | 1 |
+| 882 | 7 | `results/WP6/s5_test.json` | `system/K/ci_heldout_event/n_vehicle_groups` | json | 1 |
