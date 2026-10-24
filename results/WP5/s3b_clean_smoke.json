@@ -1,0 +1,1250 @@
+{
+ "smoke": true,
+ "envs": {
+  "Mobile": {
+   "n_messages": 7440,
+   "n_senders": 96,
+   "n_recordings": 76,
+   "receiver_hours": 0.7400086526075998,
+   "val": {
+    "messages": 7440,
+    "senders": 96,
+    "recordings": 76,
+    "receiver_hours": 0.7400086526075998
+   },
+   "thresholds_B": {
+    "v2x.beacon_rate": 0.9893817204301076,
+    "v2x.field_ranges": 0.9891129032258066,
+    "v2x.pos_speed": 0.9899193548387097,
+    "v2x.pos_heading": 0.9899193548387097,
+    "v2x.speed_change": 0.9899193548387097,
+    "v2x.implied_speed": 0.9899193548387097,
+    "v2x.heading_rate": 0.9899193548387097,
+    "v2x.accel_consistency": 0.9899193548387097,
+    "v2x.overlap": 5e-324,
+    "v2x.kf_nis": 0.9899193548387097,
+    "v2x.kf_cusum_hi": 0.9899193548387097,
+    "v2x.track_birth": 5e-324
+   },
+   "comb_threshold_B": 0.9987903225806453,
+   "comb_threshold_A": 0.9990150285579772,
+   "cfg_threshold_B": {
+    "L1": 0.9947580645161291,
+    "L2": 0.9983870967741937,
+    "L3": 0.9956989247311829,
+    "physics": 0.9987903225806453,
+    "physics+range": 0.9989247311827958
+   },
+   "k_val": {
+    "L1": 20,
+    "L2": 20,
+    "L3": 36,
+    "physics": 18,
+    "physics+range": 16,
+    "range": 40,
+    "range_loc": 40,
+    "appear": 1,
+    "fresh": 75,
+    "physics+fresh": 83,
+    "rx": 40,
+    "physics+rx": 16,
+    "A_physics": 500
+   },
+   "range_pooled_val_raw_quantiles_km": {
+    "0.5": 0.2287832423788163,
+    "0.9": 2.959098057126563,
+    "0.99": 3.524247634097324,
+    "0.999": 4.0062662971169765,
+    "1.0": 4.1318317468656565
+   },
+   "range_loc_val_p99_km": {
+    "Mobile/Aachen": 0.3424552167100001,
+    "Mobile/Highway": 3.5268625665025115
+   },
+   "false_alarms": {
+    "A_physics": {
+     "per_message": {
+      "p": 0.9666666666666667,
+      "ci": [
+       0.9315530554643324,
+       0.9824287281214845
+      ],
+      "n": 7440,
+      "alarms": 7192
+     },
+     "alarms": 7192,
+     "alarms_per_hour": 9718.805279718345,
+     "events_per_hour": 132.4308839561176,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.84375,
+      "k_val": 500,
+      "at_k_val": 0.052083333333333336,
+      "senders_k3": 81,
+      "senders_kval": 5
+     }
+    },
+    "physics": {
+     "per_message": {
+      "p": 0.009543010752688172,
+      "ci": [
+       0.005009774810519511,
+       0.018312697224033978
+      ],
+      "n": 7440,
+      "alarms": 71
+     },
+     "alarms": 71,
+     "alarms_per_hour": 95.94482409065662,
+     "events_per_hour": 32.43205321374309,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.08333333333333333,
+      "k_val": 18,
+      "at_k_val": 0.0,
+      "senders_k3": 8,
+      "senders_kval": 0
+     }
+    },
+    "L1": {
+     "per_message": {
+      "p": 0.009543010752688172,
+      "ci": [
+       0.0038567222495863103,
+       0.022862651977159906
+      ],
+      "n": 7440,
+      "alarms": 71
+     },
+     "alarms": 71,
+     "alarms_per_hour": 95.94482409065662,
+     "events_per_hour": 22.972704359734685,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.0625,
+      "k_val": 20,
+      "at_k_val": 0.0,
+      "senders_k3": 6,
+      "senders_kval": 0
+     }
+    },
+    "L2": {
+     "per_message": {
+      "p": 0.009408602150537635,
+      "ci": [
+       0.0038838856571809586,
+       0.019833519758228457
+      ],
+      "n": 7440,
+      "alarms": 70
+     },
+     "alarms": 70,
+     "alarms_per_hour": 94.593488540084,
+     "events_per_hour": 28.3780465620252,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.07291666666666667,
+      "k_val": 20,
+      "at_k_val": 0.0,
+      "senders_k3": 7,
+      "senders_kval": 0
+     }
+    },
+    "L3": {
+     "per_message": {
+      "p": 0.009946236559139785,
+      "ci": [
+       0.003519453055051259,
+       0.021691500461714083
+      ],
+      "n": 7440,
+      "alarms": 74
+     },
+     "alarms": 74,
+     "alarms_per_hour": 99.99883074237452,
+     "events_per_hour": 43.242737618324114,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.041666666666666664,
+      "k_val": 36,
+      "at_k_val": 0.0,
+      "senders_k3": 4,
+      "senders_kval": 0
+     }
+    },
+    "fresh": {
+     "per_message": {
+      "p": 0.009946236559139785,
+      "ci": [
+       0.0,
+       0.04474511908481991
+      ],
+      "n": 7440,
+      "alarms": 74
+     },
+     "alarms": 74,
+     "alarms_per_hour": 99.99883074237452,
+     "events_per_hour": 4.054006651717886,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.010416666666666666,
+      "k_val": 75,
+      "at_k_val": 0.0,
+      "senders_k3": 1,
+      "senders_kval": 0
+     }
+    },
+    "physics+fresh": {
+     "per_message": {
+      "p": 0.01827956989247312,
+      "ci": [
+       0.005009774810519511,
+       0.05598625538760997
+      ],
+      "n": 7440,
+      "alarms": 136
+     },
+     "alarms": 136,
+     "alarms_per_hour": 183.78163487787748,
+     "events_per_hour": 32.43205321374309,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.08333333333333333,
+      "k_val": 83,
+      "at_k_val": 0.0,
+      "senders_k3": 8,
+      "senders_kval": 0
+     }
+    },
+    "range": {
+     "per_message": {
+      "p": 0.007258064516129033,
+      "ci": [
+       0.0,
+       0.014443332514985764
+      ],
+      "n": 7440,
+      "alarms": 54
+     },
+     "per_message_with_rx": 0.009915534337128168,
+     "messages_with_rx": 5446,
+     "alarms": 54,
+     "alarms_per_hour": 72.97211973092195,
+     "events_per_hour": 2.702671101145257,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.020833333333333332,
+      "k_val": 40,
+      "at_k_val": 0.0,
+      "senders_k3": 2,
+      "senders_kval": 0
+     }
+    },
+    "range_loc": {
+     "per_message": {
+      "p": 0.006720430107526882,
+      "ci": [
+       0.0,
+       0.012838517791098457
+      ],
+      "n": 7440,
+      "alarms": 50
+     },
+     "per_message_with_rx": 0.00918105031215571,
+     "messages_with_rx": 5446,
+     "alarms": 50,
+     "alarms_per_hour": 67.56677752863143,
+     "events_per_hour": 4.054006651717886,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.03125,
+      "k_val": 40,
+      "at_k_val": 0.0,
+      "senders_k3": 3,
+      "senders_kval": 0
+     }
+    },
+    "physics+range": {
+     "per_message": {
+      "p": 0.00913978494623656,
+      "ci": [
+       0.004990959508751408,
+       0.016310354077253217
+      ],
+      "n": 7440,
+      "alarms": 68
+     },
+     "alarms": 68,
+     "alarms_per_hour": 91.89081743893874,
+     "events_per_hour": 32.43205321374309,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.07291666666666667,
+      "k_val": 16,
+      "at_k_val": 0.0,
+      "senders_k3": 7,
+      "senders_kval": 0
+     }
+    },
+    "rx": {
+     "per_message": {
+      "p": 0.007258064516129033,
+      "ci": [
+       0.0,
+       0.014443332514985764
+      ],
+      "n": 7440,
+      "alarms": 54
+     },
+     "alarms": 54,
+     "alarms_per_hour": 72.97211973092195,
+     "events_per_hour": 2.702671101145257,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.020833333333333332,
+      "k_val": 40,
+      "at_k_val": 0.0,
+      "senders_k3": 2,
+      "senders_kval": 0
+     }
+    },
+    "physics+rx": {
+     "per_message": {
+      "p": 0.00913978494623656,
+      "ci": [
+       0.004990959508751408,
+       0.016310354077253217
+      ],
+      "n": 7440,
+      "alarms": 68
+     },
+     "alarms": 68,
+     "alarms_per_hour": 91.89081743893874,
+     "events_per_hour": 32.43205321374309,
+     "sender": {
+      "n_senders": 96,
+      "k3": 0.07291666666666667,
+      "k_val": 16,
+      "at_k_val": 0.0,
+      "senders_k3": 7,
+      "senders_kval": 0
+     }
+    },
+    "appear": {
+     "per_message": {
+      "p": 0.0,
+      "ci": [
+       0.0,
+       0.0
+      ],
+      "n": 7440,
+      "alarms": 0
+     },
+     "alarms": 0,
+     "evaluable_first_messages": 29,
+     "per_evaluable_first": 0.0,
+     "physical_300m_alarms_on_evaluable_first": 0.3448275862068966
+    }
+   },
+   "per_layer_FA": {
+    "A": {
+     "beacon_rate": 0.9342741935483871,
+     "field_ranges": 0.6459677419354839,
+     "pos_speed": 0.013306451612903225,
+     "pos_heading": 0.0,
+     "speed_change": 0.001881720430107527,
+     "implied_speed": 0.7326612903225806,
+     "heading_rate": 0.0038978494623655912,
+     "accel_consistency": 0.005779569892473118,
+     "overlap": 0.0005376344086021505,
+     "kf_nis": 0.07580645161290323,
+     "kf_cusum_hi": 0.5189516129032258,
+     "track_birth": 0.0016129032258064516
+    },
+    "B": {
+     "beacon_rate": 0.00900537634408602,
+     "field_ranges": 0.009811827956989247,
+     "pos_speed": 0.009946236559139785,
+     "pos_heading": 0.009946236559139785,
+     "speed_change": 0.009946236559139785,
+     "implied_speed": 0.009946236559139785,
+     "heading_rate": 0.009946236559139785,
+     "accel_consistency": 0.00967741935483871,
+     "overlap": 0.0017473118279569893,
+     "kf_nis": 0.009946236559139785,
+     "kf_cusum_hi": 0.009946236559139785,
+     "track_birth": 0.0016129032258064516
+    }
+   },
+   "per_location": {
+    "Mobile/Aachen": {
+     "messages": 398,
+     "recordings": 5,
+     "hours": 0.06346958498160045,
+     "FA_B_physics": 0.04271356783919598,
+     "FA_A_physics": 0.8040201005025126,
+     "alarms_per_hour_B": 267.84482685570146,
+     "FA_range_pooled": 0.0,
+     "FA_range_loc": 0.007537688442211055
+    },
+    "Mobile/Cologne": {
+     "messages": 291,
+     "recordings": 3,
+     "hours": 0.036323429346084596,
+     "FA_B_physics": 0.003436426116838488,
+     "FA_A_physics": 0.8487972508591065,
+     "alarms_per_hour_B": 27.53044021455515,
+     "FA_range_pooled": 0.0,
+     "FA_range_loc": 0.0
+    },
+    "Mobile/Dusseldorf": {
+     "messages": 125,
+     "recordings": 3,
+     "hours": 0.01736699985133277,
+     "FA_B_physics": 0.072,
+     "FA_A_physics": 0.824,
+     "alarms_per_hour_B": 518.224222781307,
+     "FA_range_pooled": 0.0,
+     "FA_range_loc": 0.0
+    },
+    "Mobile/Highway": {
+     "messages": 6623,
+     "recordings": 64,
+     "hours": 0.6187179529004627,
+     "FA_B_physics": 0.0066435150234032915,
+     "FA_A_physics": 0.9845991242639287,
+     "alarms_per_hour_B": 71.11479438043489,
+     "FA_range_pooled": 0.008153404801449495,
+     "FA_range_loc": 0.007096481956817152
+    },
+    "Mobile/Rural": {
+     "messages": 3,
+     "recordings": 1,
+     "hours": 0.004130685528119405,
+     "FA_B_physics": 0.0,
+     "FA_A_physics": 0.3333333333333333,
+     "alarms_per_hour_B": 0.0,
+     "FA_range_pooled": 0.0,
+     "FA_range_loc": 0.0
+    }
+   },
+   "row_kinds": {
+    "scored": 0.9600806451612903,
+    "unscored_first_or_gap": 0.018682795698924733,
+    "exact_repeat": 0.021236559139784946
+   },
+   "FA_B_scored_rows": 0.009659806803863923,
+   "flagged_senders_B": {
+    "senders_with_ge1_alarm": 16,
+    "senders_with_k3": 8,
+    "kinds_among_k3": {
+     "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)": 8
+    },
+    "alarm_share_in_k3_senders": 0.8309859154929577,
+    "top": [
+     {
+      "rank": 1,
+      "env_loc": "Mobile/Aachen",
+      "messages": 180,
+      "alarms_B": 17,
+      "alarms_A": 158,
+      "v_max": 15.52,
+      "implied_speed_max": 16.88247585122293,
+      "jump_max_m": 7.271402706044305,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "heading_rate:50,pos_heading:43,field_ranges:25"
+     },
+     {
+      "rank": 2,
+      "env_loc": "Mobile/Highway",
+      "messages": 39,
+      "alarms_B": 9,
+      "alarms_A": 39,
+      "v_max": 64.79,
+      "implied_speed_max": 85.01112736992773,
+      "jump_max_m": 52.2737853274845,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "field_ranges:39,implied_speed:31,kf_nis:11"
+     },
+     {
+      "rank": 3,
+      "env_loc": "Mobile/Highway",
+      "messages": 552,
+      "alarms_B": 8,
+      "alarms_A": 552,
+      "v_max": 44.49,
+      "implied_speed_max": 60.41038974877944,
+      "jump_max_m": 36.94918760531584,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "kf_cusum_hi:74,beacon_rate:18,kf_nis:12"
+     },
+     {
+      "rank": 4,
+      "env_loc": "Mobile/Dusseldorf",
+      "messages": 120,
+      "alarms_B": 7,
+      "alarms_A": 102,
+      "v_max": 16.38,
+      "implied_speed_max": 18.024809580522795,
+      "jump_max_m": 60.06484799174741,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "speed_change:14,heading_rate:9,accel_consistency:8"
+     },
+     {
+      "rank": 5,
+      "env_loc": "Mobile/Highway",
+      "messages": 634,
+      "alarms_B": 6,
+      "alarms_A": 608,
+      "v_max": 40.58,
+      "implied_speed_max": 54.74611634815924,
+      "jump_max_m": 163.20477775447566,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "pos_speed:7,accel_consistency:7,speed_change:6"
+     },
+     {
+      "rank": 6,
+      "env_loc": "Mobile/Highway",
+      "messages": 1099,
+      "alarms_B": 5,
+      "alarms_A": 1081,
+      "v_max": 40.58,
+      "implied_speed_max": 53.50205009940336,
+      "jump_max_m": 44.721899881082514,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "speed_change:29,accel_consistency:24,beacon_rate:17"
+     },
+     {
+      "rank": 7,
+      "env_loc": "Mobile/Highway",
+      "messages": 490,
+      "alarms_B": 4,
+      "alarms_A": 490,
+      "v_max": 45.2,
+      "implied_speed_max": 54.74759374553745,
+      "jump_max_m": 195.9745143708118,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "kf_nis:16,pos_speed:15,accel_consistency:6"
+     },
+     {
+      "rank": 8,
+      "env_loc": "Mobile/Highway",
+      "messages": 552,
+      "alarms_B": 3,
+      "alarms_A": 552,
+      "v_max": 30.8,
+      "implied_speed_max": 33.56894988827766,
+      "jump_max_m": 29.411251337244227,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "overlap:5,speed_change:4"
+     },
+     {
+      "rank": 9,
+      "env_loc": "Mobile/Highway",
+      "messages": 584,
+      "alarms_B": 2,
+      "alarms_A": 584,
+      "v_max": 45.84,
+      "implied_speed_max": 61.02756977794989,
+      "jump_max_m": 136.56608975165082,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "implied_speed:22,field_ranges:9,pos_speed:4"
+     },
+     {
+      "rank": 10,
+      "env_loc": "Mobile/Dusseldorf",
+      "messages": 4,
+      "alarms_B": 2,
+      "alarms_A": 1,
+      "v_max": 8.58,
+      "implied_speed_max": 8.449321728551867,
+      "jump_max_m": 13.458613855942135,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "pos_heading:3,heading_rate:1"
+     },
+     {
+      "rank": 11,
+      "env_loc": "Mobile/Highway",
+      "messages": 40,
+      "alarms_B": 2,
+      "alarms_A": 40,
+      "v_max": 29.87,
+      "implied_speed_max": 29.422449117286263,
+      "jump_max_m": 61.0183361677005,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "pos_speed:3,beacon_rate:2"
+     },
+     {
+      "rank": 12,
+      "env_loc": "Mobile/Highway",
+      "messages": 40,
+      "alarms_B": 2,
+      "alarms_A": 40,
+      "v_max": 28.98,
+      "implied_speed_max": 34.423244235033074,
+      "jump_max_m": 88.49049156428485,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "pos_speed:4,kf_nis:1"
+     }
+    ]
+   }
+  },
+  "Stationary": {
+   "n_messages": 33845,
+   "n_senders": 284,
+   "n_recordings": 228,
+   "receiver_hours": 2.945787234240108,
+   "val": {
+    "messages": 33845,
+    "senders": 284,
+    "recordings": 228,
+    "receiver_hours": 2.945787234240108
+   },
+   "thresholds_B": {
+    "v2x.beacon_rate": 0.988949623282612,
+    "v2x.field_ranges": 0.989983749446004,
+    "v2x.pos_speed": 0.989983749446004,
+    "v2x.pos_heading": 0.989983749446004,
+    "v2x.speed_change": 0.9899542029841928,
+    "v2x.implied_speed": 0.989983749446004,
+    "v2x.heading_rate": 0.989983749446004,
+    "v2x.accel_consistency": 0.989983749446004,
+    "v2x.overlap": 5e-324,
+    "v2x.kf_nis": 0.989983749446004,
+    "v2x.kf_cusum_hi": 0.989983749446004,
+    "v2x.track_birth": 5e-324
+   },
+   "comb_threshold_B": 0.9988181415275522,
+   "comb_threshold_A": 0.9990150285579772,
+   "cfg_threshold_B": {
+    "L1": 0.9946225439503621,
+    "L2": 0.9981976658295171,
+    "L3": 0.9957157630373764,
+    "physics": 0.9988181415275522,
+    "physics+range": 0.9989658738366082
+   },
+   "k_val": {
+    "L1": 25,
+    "L2": 14,
+    "L3": 15,
+    "physics": 22,
+    "physics+range": 22,
+    "range": 25,
+    "range_loc": 25,
+    "appear": 1,
+    "fresh": 22,
+    "physics+fresh": 38,
+    "rx": 25,
+    "physics+rx": 22,
+    "A_physics": 500
+   },
+   "range_pooled_val_raw_quantiles_km": {
+    "0.5": 0.5872687715877355,
+    "0.9": 3.1862481477589717,
+    "0.99": 4.258869141583614,
+    "0.999": 5.266416978447539,
+    "1.0": 6.950127042509918
+   },
+   "range_loc_val_p99_km": {
+    "Stationary/A44-Jackerath": 4.744309469811492,
+    "Stationary/Aachen-Heinrichsallee": 0.07283078940465558,
+    "Stationary/Aachen-Monheimsallee": 0.14809022704684852,
+    "Stationary/Aachen-Ponttor": 0.12949039359789288,
+    "Stationary/Aachen-Theaterstrasse": 0.26199268326027014
+   },
+   "false_alarms": {
+    "A_physics": {
+     "per_message": {
+      "p": 0.9476436696705569,
+      "ci": [
+       0.9099435582206236,
+       0.9693118040201173
+      ],
+      "n": 33845,
+      "alarms": 32073
+     },
+     "alarms": 32073,
+     "alarms_per_hour": 10887.75171105442,
+     "events_per_hour": 107.95076993468977,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.8380281690140845,
+      "k_val": 500,
+      "at_k_val": 0.06690140845070422,
+      "senders_k3": 238,
+      "senders_kval": 19
+     }
+    },
+    "physics": {
+     "per_message": {
+      "p": 0.009898064706751367,
+      "ci": [
+       0.005745061222004224,
+       0.015622560443913112
+      ],
+      "n": 33845,
+      "alarms": 335
+     },
+     "alarms": 335,
+     "alarms_per_hour": 113.7217230444059,
+     "events_per_hour": 31.57050818844701,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.09859154929577464,
+      "k_val": 22,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 28,
+      "senders_kval": 2
+     }
+    },
+    "L1": {
+     "per_message": {
+      "p": 0.00998670409218496,
+      "ci": [
+       0.0027989822561758078,
+       0.02086387844529817
+      ],
+      "n": 33845,
+      "alarms": 338
+     },
+     "alarms": 338,
+     "alarms_per_hour": 114.74012653435581,
+     "events_per_hour": 13.578713199332048,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.0528169014084507,
+      "k_val": 25,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 15,
+      "senders_kval": 2
+     }
+    },
+    "L2": {
+     "per_message": {
+      "p": 0.009868518244940169,
+      "ci": [
+       0.005242534109745732,
+       0.017066475330642025
+      ],
+      "n": 33845,
+      "alarms": 334
+     },
+     "alarms": 334,
+     "alarms_per_hour": 113.3822552144226,
+     "events_per_hour": 33.607315168346815,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.10211267605633803,
+      "k_val": 14,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 29,
+      "senders_kval": 2
+     }
+    },
+    "L3": {
+     "per_message": {
+      "p": 0.00998670409218496,
+      "ci": [
+       0.003889136055885977,
+       0.02040321561747047
+      ],
+      "n": 33845,
+      "alarms": 338
+     },
+     "alarms": 338,
+     "alarms_per_hour": 114.74012653435581,
+     "events_per_hour": 38.359864788113036,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.07042253521126761,
+      "k_val": 15,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 20,
+      "senders_kval": 2
+     }
+    },
+    "fresh": {
+     "per_message": {
+      "p": 0.00998670409218496,
+      "ci": [
+       0.0053302341173853745,
+       0.013779277400763484
+      ],
+      "n": 33845,
+      "alarms": 338
+     },
+     "alarms": 338,
+     "alarms_per_hour": 114.74012653435581,
+     "events_per_hour": 34.28625082831342,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.11267605633802817,
+      "k_val": 22,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 32,
+      "senders_kval": 2
+     }
+    },
+    "physics+fresh": {
+     "per_message": {
+      "p": 0.019796129413502735,
+      "ci": [
+       0.012985383704239557,
+       0.027612305236172332
+      ],
+      "n": 33845,
+      "alarms": 670
+     },
+     "alarms": 670,
+     "alarms_per_hour": 227.4434460888118,
+     "events_per_hour": 61.78314505696082,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.1936619718309859,
+      "k_val": 38,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 55,
+      "senders_kval": 2
+     }
+    },
+    "range": {
+     "per_message": {
+      "p": 0.00998670409218496,
+      "ci": [
+       0.004286701195959978,
+       0.018743419770697316
+      ],
+      "n": 33845,
+      "alarms": 338
+     },
+     "per_message_with_rx": 0.00998670409218496,
+     "messages_with_rx": 33845,
+     "alarms": 338,
+     "alarms_per_hour": 114.74012653435581,
+     "events_per_hour": 11.881374049415541,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.07042253521126761,
+      "k_val": 25,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 20,
+      "senders_kval": 2
+     }
+    },
+    "range_loc": {
+     "per_message": {
+      "p": 0.009927611168562564,
+      "ci": [
+       0.00525182094295144,
+       0.017892650990460016
+      ],
+      "n": 33845,
+      "alarms": 336
+     },
+     "per_message_with_rx": 0.009927611168562564,
+     "messages_with_rx": 33845,
+     "alarms": 336,
+     "alarms_per_hour": 114.0611908743892,
+     "events_per_hour": 25.12061941876429,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.08450704225352113,
+      "k_val": 25,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 24,
+      "senders_kval": 2
+     }
+    },
+    "physics+range": {
+     "per_message": {
+      "p": 0.009868518244940169,
+      "ci": [
+       0.006025441418984674,
+       0.014784333825699955
+      ],
+      "n": 33845,
+      "alarms": 334
+     },
+     "alarms": 334,
+     "alarms_per_hour": 113.3822552144226,
+     "events_per_hour": 34.28625082831342,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.09859154929577464,
+      "k_val": 22,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 28,
+      "senders_kval": 2
+     }
+    },
+    "rx": {
+     "per_message": {
+      "p": 0.010045797015807358,
+      "ci": [
+       0.004394713008221082,
+       0.018841416647343026
+      ],
+      "n": 33845,
+      "alarms": 340
+     },
+     "alarms": 340,
+     "alarms_per_hour": 115.41906219432241,
+     "events_per_hour": 12.560309709382144,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.07042253521126761,
+      "k_val": 25,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 20,
+      "senders_kval": 2
+     }
+    },
+    "physics+rx": {
+     "per_message": {
+      "p": 0.009898064706751367,
+      "ci": [
+       0.006081547024248784,
+       0.014786099059919434
+      ],
+      "n": 33845,
+      "alarms": 335
+     },
+     "alarms": 335,
+     "alarms_per_hour": 113.7217230444059,
+     "events_per_hour": 34.28625082831342,
+     "sender": {
+      "n_senders": 284,
+      "k3": 0.09859154929577464,
+      "k_val": 22,
+      "at_k_val": 0.007042253521126761,
+      "senders_k3": 28,
+      "senders_kval": 2
+     }
+    },
+    "appear": {
+     "per_message": {
+      "p": 5.909292362239622e-05,
+      "ci": [
+       0.0,
+       0.0001857667069118275
+      ],
+      "n": 33845,
+      "alarms": 2
+     },
+     "alarms": 2,
+     "evaluable_first_messages": 217,
+     "per_evaluable_first": 0.009216589861751152,
+     "physical_300m_alarms_on_evaluable_first": 0.3870967741935484
+    }
+   },
+   "per_layer_FA": {
+    "A": {
+     "beacon_rate": 0.917979022012114,
+     "field_ranges": 0.587324567882996,
+     "pos_speed": 0.011759491800856848,
+     "pos_heading": 0.0,
+     "speed_change": 0.0018023341704830847,
+     "implied_speed": 0.7244792436105776,
+     "heading_rate": 0.0027773674102526224,
+     "accel_consistency": 0.005436548973260452,
+     "overlap": 0.0006204756980351603,
+     "kf_nis": 0.050908553700694345,
+     "kf_cusum_hi": 0.44189688284827894,
+     "track_birth": 0.0015955089378046979
+    },
+    "B": {
+     "beacon_rate": 0.00969123947407298,
+     "field_ranges": 0.00998670409218496,
+     "pos_speed": 0.00998670409218496,
+     "pos_heading": 0.00998670409218496,
+     "speed_change": 0.009898064706751367,
+     "implied_speed": 0.00998670409218496,
+     "heading_rate": 0.00998670409218496,
+     "accel_consistency": 0.00998670409218496,
+     "overlap": 0.0011227655488255282,
+     "kf_nis": 0.00998670409218496,
+     "kf_cusum_hi": 0.00998670409218496,
+     "track_birth": 0.0015955089378046979
+    }
+   },
+   "per_location": {
+    "Stationary/A44-Jackerath": {
+     "messages": 24933,
+     "recordings": 60,
+     "hours": 1.1596744251913496,
+     "FA_B_physics": 0.007580315244856215,
+     "FA_A_physics": 0.998315485501143,
+     "alarms_per_hour_B": 162.976776838736,
+     "FA_range_pooled": 0.013556330966991537,
+     "FA_range_loc": 0.009986764528937552
+    },
+    "Stationary/Aachen-Heinrichsallee": {
+     "messages": 460,
+     "recordings": 30,
+     "hours": 0.10554717706309424,
+     "FA_B_physics": 0.004347826086956522,
+     "FA_A_physics": 0.7782608695652173,
+     "alarms_per_hour_B": 18.94887249143987,
+     "FA_range_pooled": 0.0,
+     "FA_range_loc": 0.008695652173913044
+    },
+    "Stationary/Aachen-Monheimsallee": {
+     "messages": 550,
+     "recordings": 16,
+     "hours": 0.09634811242421468,
+     "FA_B_physics": 0.007272727272727273,
+     "FA_A_physics": 0.8963636363636364,
+     "alarms_per_hour_B": 41.51612210510417,
+     "FA_range_pooled": 0.0,
+     "FA_range_loc": 0.00909090909090909
+    },
+    "Stationary/Aachen-Ponttor": {
+     "messages": 3568,
+     "recordings": 61,
+     "hours": 0.6805711993243959,
+     "FA_B_physics": 0.015414798206278026,
+     "FA_A_physics": 0.7982062780269058,
+     "alarms_per_hour_B": 80.81446886761971,
+     "FA_range_pooled": 0.0,
+     "FA_range_loc": 0.009809417040358745
+    },
+    "Stationary/Aachen-Theaterstrasse": {
+     "messages": 4334,
+     "recordings": 61,
+     "hours": 0.9036463202370537,
+     "FA_B_physics": 0.01961236732810337,
+     "FA_A_physics": 0.8036455929856945,
+     "alarms_per_hour_B": 94.06334989302223,
+     "FA_range_pooled": 0.0,
+     "FA_range_loc": 0.009921550530687587
+    }
+   },
+   "row_kinds": {
+    "scored": 0.9339636578519722,
+    "unscored_first_or_gap": 0.013886837051263111,
+    "exact_repeat": 0.052149505096764665
+   },
+   "FA_B_scored_rows": 0.009490667510281556,
+   "flagged_senders_B": {
+    "senders_with_ge1_alarm": 70,
+    "senders_with_k3": 28,
+    "kinds_among_k3": {
+     "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)": 26,
+     "parked / queuing sender (median speed < 1 m/s): heading and speed noise at standstill": 1,
+     "GNSS position jump (position moved at > 70 m/s between two CAMs, by >= 15 m)": 1
+    },
+    "alarm_share_in_k3_senders": 0.8208955223880597,
+    "top": [
+     {
+      "rank": 1,
+      "env_loc": "Stationary/A44-Jackerath",
+      "messages": 464,
+      "alarms_B": 67,
+      "alarms_A": 464,
+      "v_max": 68.5,
+      "implied_speed_max": 94.18954518422606,
+      "jump_max_m": 129.53260239330697,
+      "kind": "GNSS position jump (position moved at > 70 m/s between two CAMs, by >= 15 m)",
+      "top_layers": "field_ranges:165,implied_speed:138,accel_consistency:71"
+     },
+     {
+      "rank": 2,
+      "env_loc": "Stationary/A44-Jackerath",
+      "messages": 726,
+      "alarms_B": 40,
+      "alarms_A": 726,
+      "v_max": 37.81,
+      "implied_speed_max": 68.70878400302259,
+      "jump_max_m": 177.5348793106608,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "kf_cusum_hi:235,kf_nis:38,pos_speed:26"
+     },
+     {
+      "rank": 3,
+      "env_loc": "Stationary/Aachen-Ponttor",
+      "messages": 73,
+      "alarms_B": 21,
+      "alarms_A": 72,
+      "v_max": 14.120000000000001,
+      "implied_speed_max": 34.34899986005011,
+      "jump_max_m": 7.0675286922735925,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "heading_rate:24,pos_heading:22,field_ranges:20"
+     },
+     {
+      "rank": 4,
+      "env_loc": "Stationary/A44-Jackerath",
+      "messages": 304,
+      "alarms_B": 11,
+      "alarms_A": 304,
+      "v_max": 43.93,
+      "implied_speed_max": 63.64097809259065,
+      "jump_max_m": 72.61974651921042,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "kf_nis:16,implied_speed:14,pos_speed:13"
+     },
+     {
+      "rank": 5,
+      "env_loc": "Stationary/Aachen-Ponttor",
+      "messages": 90,
+      "alarms_B": 10,
+      "alarms_A": 59,
+      "v_max": 10.15,
+      "implied_speed_max": 9.4093868227684,
+      "jump_max_m": 11.281855931159122,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "accel_consistency:18,speed_change:14,pos_speed:2"
+     },
+     {
+      "rank": 6,
+      "env_loc": "Stationary/A44-Jackerath",
+      "messages": 233,
+      "alarms_B": 10,
+      "alarms_A": 232,
+      "v_max": 31.28,
+      "implied_speed_max": 41.787764556782925,
+      "jump_max_m": 98.62898250751562,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "beacon_rate:10,accel_consistency:6,speed_change:5"
+     },
+     {
+      "rank": 7,
+      "env_loc": "Stationary/A44-Jackerath",
+      "messages": 652,
+      "alarms_B": 10,
+      "alarms_A": 652,
+      "v_max": 42.43,
+      "implied_speed_max": 55.47662386602405,
+      "jump_max_m": 142.0478071255549,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "overlap:10,implied_speed:3,pos_speed:2"
+     },
+     {
+      "rank": 8,
+      "env_loc": "Stationary/A44-Jackerath",
+      "messages": 868,
+      "alarms_B": 9,
+      "alarms_A": 868,
+      "v_max": 41.71,
+      "implied_speed_max": 52.54802970681173,
+      "jump_max_m": 173.48591943697002,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "beacon_rate:87,kf_nis:19,accel_consistency:15"
+     },
+     {
+      "rank": 9,
+      "env_loc": "Stationary/A44-Jackerath",
+      "messages": 150,
+      "alarms_B": 9,
+      "alarms_A": 150,
+      "v_max": 30.310000000000002,
+      "implied_speed_max": 36.93646263555092,
+      "jump_max_m": 64.96889999397922,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "beacon_rate:6,overlap:3,kf_nis:3"
+     },
+     {
+      "rank": 10,
+      "env_loc": "Stationary/Aachen-Theaterstrasse",
+      "messages": 111,
+      "alarms_B": 7,
+      "alarms_A": 103,
+      "v_max": 8.59,
+      "implied_speed_max": 106.43608514394131,
+      "jump_max_m": 19.965536166644632,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "pos_speed:5,kf_nis:5,beacon_rate:1"
+     },
+     {
+      "rank": 11,
+      "env_loc": "Stationary/Aachen-Theaterstrasse",
+      "messages": 62,
+      "alarms_B": 6,
+      "alarms_A": 55,
+      "v_max": 9.85,
+      "implied_speed_max": 13.575504894342604,
+      "jump_max_m": 18.72856716176724,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "pos_heading:14,heading_rate:12,speed_change:6"
+     },
+     {
+      "rank": 12,
+      "env_loc": "Stationary/A44-Jackerath",
+      "messages": 451,
+      "alarms_B": 6,
+      "alarms_A": 451,
+      "v_max": 32.46,
+      "implied_speed_max": 52.91425611630208,
+      "jump_max_m": 135.98680478397873,
+      "kind": "no kinematic anomaly found (alarm from noise statistics, sparse or irregular CAMs)",
+      "top_layers": "pos_speed:34,kf_nis:30,overlap:6"
+     }
+    ]
+   }
+  }
+ },
+ "speed_gt_70": [
+  {
+   "env": "Stationary",
+   "split": "train",
+   "location": "Stationary/Aachen-Ponttor",
+   "speed_mps": 163.82,
+   "sender_msgs_in_recording": 122,
+   "prev_speed": 0.02,
+   "next_speed": 108.46000000000001,
+   "pos_sigma": 2.5100000000000002,
+   "alarm_L1_field_ranges_B": true,
+   "alarm_physics_A": true,
+   "alarm_physics_B": true,
+   "layers_B_alarming": [
+    "field_ranges",
+    "pos_speed",
+    "speed_change",
+    "implied_speed",
+    "accel_consistency",
+    "kf_nis"
+   ]
+  },
+  {
+   "env": "Stationary",
+   "split": "train",
+   "location": "Stationary/Aachen-Ponttor",
+   "speed_mps": 108.46000000000001,
+   "sender_msgs_in_recording": 122,
+   "prev_speed": 163.82,
+   "next_speed": 108.46000000000001,
+   "pos_sigma": 3.3200000000000003,
+   "alarm_L1_field_ranges_B": true,
+   "alarm_physics_A": true,
+   "alarm_physics_B": true,
+   "layers_B_alarming": [
+    "field_ranges",
+    "speed_change",
+    "implied_speed",
+    "accel_consistency",
+    "kf_nis"
+   ]
+  },
+  {
+   "env": "Stationary",
+   "split": "train",
+   "location": "Stationary/Aachen-Ponttor",
+   "speed_mps": 108.46000000000001,
+   "sender_msgs_in_recording": 122,
+   "prev_speed": 108.46000000000001,
+   "next_speed": 8.17,
+   "pos_sigma": 4.2,
+   "alarm_L1_field_ranges_B": true,
+   "alarm_physics_A": true,
+   "alarm_physics_B": true,
+   "layers_B_alarming": [
+    "field_ranges",
+    "pos_speed",
+    "pos_heading",
+    "accel_consistency",
+    "kf_nis",
+    "kf_cusum_hi"
+   ]
+  }
+ ]
+}

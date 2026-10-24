@@ -20,6 +20,7 @@ Time: the sender clock is not synchronised with the logger (apparent offset is a
 t = reception time minus the apparent latency, where the latency is the generation_delta_time difference unwrapped around its per-(recording,
 sender) median; so t is the sender's generation time on the logger clock up to one constant per (recording, sender). age_s = (recv - t) minus
 its per-(recording, sender) minimum (relative latency >= 0). recv time = recording_timestamp_nsec of the /v2x/cam record (epoch seconds).
+recv_s = reception time on the logger clock (epoch s), the common clock of all senders and of the ego pose (S3b: cross-sender checks use it).
 Local frame: x east, y north in metres from (LAT0, LON0) with an equirectangular projection (error < 0.5% inside the dataset area).
 """
 import json
@@ -40,7 +41,7 @@ _M_PER_DEG = 111320.0
 GAP_S = 5.0
 UNAVAIL = {"lat": 900000001, "lon": 1800000001, "heading": 3601, "speed": 16383, "acl": 161, "yaw": 32767,
            "pos_conf": 4095, "spd_conf": 127, "acl_conf": 102}
-EXTRA = ["age_s", "recording", "station_id", "station_type", "rx_src"]
+EXTRA = ["age_s", "recording", "station_id", "station_type", "rx_src", "recv_s"]
 
 
 def to_xy(lat, lon):
@@ -173,7 +174,7 @@ def build_table(d: dict, rec: str) -> pd.DataFrame:
         "pos_sigma": df["pos_sigma"], "spd_sigma": df["spd_sigma"], "acl_sigma": df["acl_sigma"],
         "rx_id": rec, "rx_x": rx, "rx_y": ry, "lat": df["lat"], "lon": df["lon"],
         "label": 0, "attack": "Genuine", "injected": False,
-        "age_s": age, "recording": rec, "station_id": sid, "station_type": df["station_type"].astype(float), "rx_src": src,
+        "age_s": age, "recv_s": recv[df["k"].to_numpy()], "recording": rec, "station_id": sid, "station_type": df["station_type"].astype(float), "rx_src": src,
     })
     th = out["heading"].to_numpy(float)
     out["vx"] = out["speed"] * np.cos(th)
@@ -197,7 +198,9 @@ def load_recording(path, root=JSON_ROOT, cache=True) -> pd.DataFrame:
     rec = recording_id(path, root)
     cf = CACHE_DIR / (rec.replace("/", "__") + ".pkl")
     if cache and cf.exists() and cf.stat().st_mtime >= Path(path).stat().st_mtime:
-        return pd.read_pickle(cf)
+        old = pd.read_pickle(cf)
+        if "recv_s" in old.columns:          # caches written by S0c lack the reception time (added in S3b): rebuild them
+            return old
     with open(path, "r", encoding="utf-8") as f:
         d = json.load(f)
     df = build_table(d, rec)

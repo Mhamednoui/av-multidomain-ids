@@ -1,0 +1,5786 @@
+{
+ "env": "Stationary",
+ "smoke": false,
+ "base_messages": 43087,
+ "base_senders": 303,
+ "k_val": {
+  "L1": 25,
+  "L2": 14,
+  "L3": 15,
+  "physics": 22,
+  "physics+range": 22,
+  "range": 25,
+  "range_loc": 25,
+  "appear": 1,
+  "fresh": 22,
+  "physics+fresh": 38,
+  "rx": 25,
+  "physics+rx": 22
+ },
+ "types": {
+  "1": {
+   "physics": {
+    "msg_all": 0.8512521786992019,
+    "msg_all_ci": [
+     0.7403172708756066,
+     0.9099395572232969
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.7967914438502673,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.9019607843137255,
+    "sender_kval": 0.5784313725490197,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00718816067653277
+   },
+   "L1": {
+    "msg_all": 0.007338776259058802,
+    "msg_all_ci": [
+     0.0016232153441625128,
+     0.013876983087462186
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.0962566844919786,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0024430350011745362
+   },
+   "L2": {
+    "msg_all": 0.8990918264379415,
+    "msg_all_ci": [
+     0.8267257026375446,
+     0.9377465812062086
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.8342245989304813,
+    "n_injected_tracks": 187,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9705882352941176,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008879492600422832
+   },
+   "L3": {
+    "msg_all": 0.8940922851114577,
+    "msg_all_ci": [
+     0.8099158163122153,
+     0.9354227361896407
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.7914438502673797,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.9705882352941176,
+    "sender_kval": 0.8823529411764706,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005966643175945502
+   },
+   "fresh": {
+    "msg_all": 0.010228419411063205,
+    "msg_all_ci": [
+     0.0064495113834198625,
+     0.013657198610427574
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.18716577540106952,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.17647058823529413,
+    "sender_kval": 0.029411764705882353,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012919896640826873
+   },
+   "physics+fresh": {
+    "msg_all": 0.851298046050821,
+    "msg_all_ci": [
+     0.7403172708756066,
+     0.9100039891768489
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.7967914438502673,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.9019607843137255,
+    "sender_kval": 0.45098039215686275,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.020108057317359644
+   },
+   "range": {
+    "msg_all": 0.17113108889092743,
+    "msg_all_ci": [
+     0.09583637940783803,
+     0.2812785421805163
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.29411764705882354,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.4117647058823529,
+    "sender_kval": 0.3431372549019608,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0033826638477801266
+   },
+   "range_loc": {
+    "msg_all": 0.21085221539308321,
+    "msg_all_ci": [
+     0.12685382847354656,
+     0.3464566169726493
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.37967914438502676,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.5196078431372549,
+    "sender_kval": 0.4411764705882353,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005027014329339911
+   },
+   "appear": {
+    "msg_all": 4.586735161911751e-05,
+    "msg_all_ci": [
+     0.0,
+     0.00018420021528700383
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.0053475935828877,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.0,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.17117695624254656,
+    "msg_all_ci": [
+     0.09592973526144716,
+     0.28135457690159793
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.2994652406417112,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.4117647058823529,
+    "sender_kval": 0.3431372549019608,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0033826638477801266
+   },
+   "physics+range": {
+    "msg_all": 0.9255572883221723,
+    "msg_all_ci": [
+     0.8645000343342023,
+     0.9596513158454183
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.8449197860962567,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.9411764705882353,
+    "sender_kval": 0.7941176470588235,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006859290580220813
+   },
+   "physics+rx": {
+    "msg_all": 0.9256031556737914,
+    "msg_all_ci": [
+     0.8646265639439762,
+     0.9596869006052018
+    ],
+    "n_injected": 21802,
+    "msg_scored": null,
+    "msg_scored_ci": [
+     null,
+     null
+    ],
+    "n_scored": 0,
+    "track_any": 0.8449197860962567,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.9411764705882353,
+    "sender_kval": 0.7941176470588235,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006859290580220813
+   },
+   "_meta": {
+    "n_injected": 21802,
+    "n_recordings_with_injection": 79,
+    "scored_share": 0.0
+   },
+   "name": "ConstPos",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "2": {
+   "physics": {
+    "msg_all": 0.009514881649871104,
+    "msg_all_ci": [
+     0.003901818168951084,
+     0.019329915215069163
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.009530975670930524,
+    "msg_scored_ci": [
+     0.003579321442130388,
+     0.020070351042401055
+    ],
+    "n_scored": 19935,
+    "track_any": 0.18681318681318682,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.13725490196078433,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008504965060684076
+   },
+   "L1": {
+    "msg_all": 0.0037028357159596906,
+    "msg_all_ci": [
+     0.0009184499789774616,
+     0.009022019369157473
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.003360922999749185,
+    "msg_scored_ci": [
+     0.0005873381088204522,
+     0.009281134102804062
+    ],
+    "n_scored": 19935,
+    "track_any": 0.08241758241758242,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.058823529411764705,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006114380286870173
+   },
+   "L2": {
+    "msg_all": 0.006983829388329037,
+    "msg_all_ci": [
+     0.004064607453879176,
+     0.012492726765899975
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.007474291447203411,
+    "msg_scored_ci": [
+     0.004232316461918065,
+     0.013527359842993521
+    ],
+    "n_scored": 19935,
+    "track_any": 0.22527472527472528,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.17647058823529413,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007171754321441706
+   },
+   "L3": {
+    "msg_all": 0.014717600187485353,
+    "msg_all_ci": [
+     0.003431822763803815,
+     0.031237439479277603
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.01474793077501881,
+    "msg_scored_ci": [
+     0.002649765204857761,
+     0.03243111808353313
+    ],
+    "n_scored": 19935,
+    "track_any": 0.24725274725274726,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.11764705882352941,
+    "sender_kval": 0.029411764705882353,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007401618242000736
+   },
+   "fresh": {
+    "msg_all": 0.012842746660417155,
+    "msg_all_ci": [
+     0.006389199393821389,
+     0.01810789122092555
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.013594181088537747,
+    "msg_scored_ci": [
+     0.007090134756003953,
+     0.018982187251694326
+    ],
+    "n_scored": 19935,
+    "track_any": 0.19230769230769232,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.20588235294117646,
+    "sender_kval": 0.049019607843137254,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010297903641044501
+   },
+   "physics+fresh": {
+    "msg_all": 0.022357628310288258,
+    "msg_all_ci": [
+     0.012684894935492668,
+     0.03342328709530417
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.02312515675946827,
+    "msg_scored_ci": [
+     0.013069987863760998,
+     0.03483321816426783
+    ],
+    "n_scored": 19935,
+    "track_any": 0.32967032967032966,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.3137254901960784,
+    "sender_kval": 0.029411764705882353,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.01875689591761677
+   },
+   "range": {
+    "msg_all": 0.002812280290602297,
+    "msg_all_ci": [
+     0.0003005714521483082,
+     0.0069617773656569255
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.002508151492350138,
+    "msg_scored_ci": [
+     6.744688169972222e-05,
+     0.006607507818850856
+    ],
+    "n_scored": 19935,
+    "track_any": 0.06593406593406594,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.029411764705882353,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0046892239794041925
+   },
+   "range_loc": {
+    "msg_all": 0.13020857745488634,
+    "msg_all_ci": [
+     0.08113539871992978,
+     0.20526934173788802
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.10057687484324053,
+    "msg_scored_ci": [
+     0.0626819766399914,
+     0.16104156473233072
+    ],
+    "n_scored": 19935,
+    "track_any": 0.3901098901098901,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.4803921568627451,
+    "sender_kval": 0.39215686274509803,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006712026480323648
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 19935,
+    "track_any": 0.0,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.002812280290602297,
+    "msg_all_ci": [
+     0.0003005714521483082,
+     0.0069617773656569255
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.002508151492350138,
+    "msg_scored_ci": [
+     6.744688169972222e-05,
+     0.006607507818850856
+    ],
+    "n_scored": 19935,
+    "track_any": 0.06593406593406594,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.029411764705882353,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0046892239794041925
+   },
+   "physics+range": {
+    "msg_all": 0.00796812749003984,
+    "msg_all_ci": [
+     0.00317463478591521,
+     0.01643404388731958
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.007875595685979434,
+    "msg_scored_ci": [
+     0.002779746485611158,
+     0.01698999912536579
+    ],
+    "n_scored": 19935,
+    "track_any": 0.17032967032967034,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.11764705882352941,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007171754321441706
+   },
+   "physics+rx": {
+    "msg_all": 0.00796812749003984,
+    "msg_all_ci": [
+     0.00317463478591521,
+     0.01643404388731958
+    ],
+    "n_injected": 21335,
+    "msg_scored": 0.007875595685979434,
+    "msg_scored_ci": [
+     0.002779746485611158,
+     0.01698999912536579
+    ],
+    "n_scored": 19935,
+    "track_any": 0.17032967032967034,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.11764705882352941,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007171754321441706
+   },
+   "_meta": {
+    "n_injected": 21335,
+    "n_recordings_with_injection": 80,
+    "scored_share": 0.934380126552613
+   },
+   "name": "ConstPosOffset",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "3": {
+   "physics": {
+    "msg_all": 0.9909586826952217,
+    "msg_all_ci": [
+     0.9879239002378774,
+     0.9928876565183393
+    ],
+    "n_injected": 19798,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19619,
+    "track_any": 0.8324022346368715,
+    "n_injected_tracks": 179,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9509803921568627,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010605865430031345
+   },
+   "L1": {
+    "msg_all": 0.002323467016870391,
+    "msg_all_ci": [
+     0.0007932525990211086,
+     0.004657411339858742
+    ],
+    "n_injected": 19798,
+    "msg_scored": 0.0022936948876089505,
+    "msg_scored_ci": [
+     0.0007548663147187496,
+     0.004644735919701141
+    ],
+    "n_scored": 19619,
+    "track_any": 0.055865921787709494,
+    "n_injected_tracks": 179,
+    "sender_k3": 0.049019607843137254,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007127828588604062
+   },
+   "L2": {
+    "msg_all": 0.9909586826952217,
+    "msg_all_ci": [
+     0.9879239002378774,
+     0.9928876565183393
+    ],
+    "n_injected": 19798,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19619,
+    "track_any": 0.8324022346368715,
+    "n_injected_tracks": 179,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0064408089656060805
+   },
+   "L3": {
+    "msg_all": 0.9912112334579251,
+    "msg_all_ci": [
+     0.9882499815412887,
+     0.9931775015454344
+    ],
+    "n_injected": 19798,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19619,
+    "track_any": 0.8379888268156425,
+    "n_injected_tracks": 179,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.015457941517454592
+   },
+   "fresh": {
+    "msg_all": 0.010607132033538741,
+    "msg_all_ci": [
+     0.006031836545286535,
+     0.014643610602171305
+    ],
+    "n_injected": 19798,
+    "msg_scored": 0.010550996483001172,
+    "msg_scored_ci": [
+     0.005892668120524922,
+     0.014619838910964373
+    ],
+    "n_scored": 19619,
+    "track_any": 0.16759776536312848,
+    "n_injected_tracks": 179,
+    "sender_k3": 0.16666666666666666,
+    "sender_kval": 0.029411764705882353,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012366353213963673
+   },
+   "physics+fresh": {
+    "msg_all": 0.9911102131528438,
+    "msg_all_ci": [
+     0.9880493520347453,
+     0.9931162541701744
+    ],
+    "n_injected": 19798,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19619,
+    "track_any": 0.8379888268156425,
+    "n_injected_tracks": 179,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8725490196078431,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.022929279917557645
+   },
+   "range": {
+    "msg_all": 0.13137690675825842,
+    "msg_all_ci": [
+     0.08187367627257058,
+     0.1683066290405018
+    ],
+    "n_injected": 19798,
+    "msg_scored": 0.13191294153626587,
+    "msg_scored_ci": [
+     0.08261801718110974,
+     0.16911580936292897
+    ],
+    "n_scored": 19619,
+    "track_any": 0.31843575418994413,
+    "n_injected_tracks": 179,
+    "sender_k3": 0.2647058823529412,
+    "sender_kval": 0.22549019607843138,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0060543604276697156
+   },
+   "range_loc": {
+    "msg_all": 0.3125568239216082,
+    "msg_all_ci": [
+     0.239262897911855,
+     0.42626968778545327
+    ],
+    "n_injected": 19798,
+    "msg_scored": 0.3100056068097253,
+    "msg_scored_ci": [
+     0.23706144146405553,
+     0.42313445956613055
+    ],
+    "n_scored": 19619,
+    "track_any": 0.8659217877094972,
+    "n_injected_tracks": 179,
+    "sender_k3": 0.9117647058823529,
+    "sender_kval": 0.7745098039215687,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006011421701232342
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 19798,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 19619,
+    "track_any": 0.0,
+    "n_injected_tracks": 179,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.13137690675825842,
+    "msg_all_ci": [
+     0.08187367627257058,
+     0.1683066290405018
+    ],
+    "n_injected": 19798,
+    "msg_scored": 0.13191294153626587,
+    "msg_scored_ci": [
+     0.08261801718110974,
+     0.16911580936292897
+    ],
+    "n_scored": 19619,
+    "track_any": 0.31843575418994413,
+    "n_injected_tracks": 179,
+    "sender_k3": 0.2647058823529412,
+    "sender_kval": 0.22549019607843138,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0060543604276697156
+   },
+   "physics+range": {
+    "msg_all": 0.9912112334579251,
+    "msg_all_ci": [
+     0.9880935507050598,
+     0.9931650114972411
+    ],
+    "n_injected": 19798,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19619,
+    "track_any": 0.8547486033519553,
+    "n_injected_tracks": 179,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9509803921568627,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009918845807033363
+   },
+   "physics+rx": {
+    "msg_all": 0.9912112334579251,
+    "msg_all_ci": [
+     0.9880935507050598,
+     0.9931650114972411
+    ],
+    "n_injected": 19798,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19619,
+    "track_any": 0.8547486033519553,
+    "n_injected_tracks": 179,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9509803921568627,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009918845807033363
+   },
+   "_meta": {
+    "n_injected": 19798,
+    "n_recordings_with_injection": 87,
+    "scored_share": 0.9909586826952217
+   },
+   "name": "RandomPos",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "4": {
+   "physics": {
+    "msg_all": 0.9913466256300459,
+    "msg_all_ci": [
+     0.9881869906020083,
+     0.9929961191976611
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.9999549346552501,
+    "msg_scored_ci": [
+     0.9998311264954967,
+     1.0
+    ],
+    "n_scored": 22190,
+    "track_any": 0.8082901554404145,
+    "n_injected_tracks": 193,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9705882352941176,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007499516160247726
+   },
+   "L1": {
+    "msg_all": 0.007002988536509211,
+    "msg_all_ci": [
+     0.002067615346439917,
+     0.013259193309905739
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.005407841369986481,
+    "msg_scored_ci": [
+     0.0011464797880067898,
+     0.011182591208428412
+    ],
+    "n_scored": 22190,
+    "track_any": 0.11917098445595854,
+    "n_injected_tracks": 193,
+    "sender_k3": 0.09803921568627451,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0026611186375072576
+   },
+   "L2": {
+    "msg_all": 0.9897854498416522,
+    "msg_all_ci": [
+     0.9868361522620142,
+     0.9917109447432473
+    ],
+    "n_injected": 22419,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 22190,
+    "track_any": 0.8082901554404145,
+    "n_injected_tracks": 193,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0073543642345655115
+   },
+   "L3": {
+    "msg_all": 0.9903207101119587,
+    "msg_all_ci": [
+     0.9873274287017438,
+     0.9922182358296935
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.9999549346552501,
+    "msg_scored_ci": [
+     0.9998357110275136,
+     1.0
+    ],
+    "n_scored": 22190,
+    "track_any": 0.8341968911917098,
+    "n_injected_tracks": 193,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00909618734275208
+   },
+   "fresh": {
+    "msg_all": 0.013604531870288594,
+    "msg_all_ci": [
+     0.008507890219117567,
+     0.018376046041986453
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.013654799459215864,
+    "msg_scored_ci": [
+     0.008577647998607307,
+     0.01841926028679957
+    ],
+    "n_scored": 22190,
+    "track_any": 0.18652849740932642,
+    "n_injected_tracks": 193,
+    "sender_k3": 0.19607843137254902,
+    "sender_kval": 0.058823529411764705,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009338107218889105
+   },
+   "physics+fresh": {
+    "msg_all": 0.991435835675097,
+    "msg_all_ci": [
+     0.9882566929479873,
+     0.9930853314277075
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.9999549346552501,
+    "msg_scored_ci": [
+     0.9998311264954967,
+     1.0
+    ],
+    "n_scored": 22190,
+    "track_any": 0.8134715025906736,
+    "n_injected_tracks": 193,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8823529411764706,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.016789239403909424
+   },
+   "range": {
+    "msg_all": 0.00504036754538561,
+    "msg_all_ci": [
+     0.0028724518046495894,
+     0.006876369618907642
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.0046417305092383955,
+    "msg_scored_ci": [
+     0.00259485066741328,
+     0.006346892515270255
+    ],
+    "n_scored": 22190,
+    "track_any": 0.13471502590673576,
+    "n_injected_tracks": 193,
+    "sender_k3": 0.11764705882352941,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007499516160247726
+   },
+   "range_loc": {
+    "msg_all": 0.1011641910879165,
+    "msg_all_ci": [
+     0.06509099298877659,
+     0.16743826731987313
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.09954934655250113,
+    "msg_scored_ci": [
+     0.0640548329082007,
+     0.16566918919175538
+    ],
+    "n_scored": 22190,
+    "track_any": 0.49222797927461137,
+    "n_injected_tracks": 193,
+    "sender_k3": 0.5882352941176471,
+    "sender_kval": 0.39215686274509803,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008176891813431392
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 22190,
+    "track_any": 0.0,
+    "n_injected_tracks": 193,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.00504036754538561,
+    "msg_all_ci": [
+     0.0028724518046495894,
+     0.006876369618907642
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.0046417305092383955,
+    "msg_scored_ci": [
+     0.00259485066741328,
+     0.006346892515270255
+    ],
+    "n_scored": 22190,
+    "track_any": 0.13471502590673576,
+    "n_injected_tracks": 193,
+    "sender_k3": 0.11764705882352941,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007499516160247726
+   },
+   "physics+range": {
+    "msg_all": 0.9913466256300459,
+    "msg_all_ci": [
+     0.9881869906020083,
+     0.9929961191976611
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.9999549346552501,
+    "msg_scored_ci": [
+     0.9998311264954967,
+     1.0
+    ],
+    "n_scored": 22190,
+    "track_any": 0.8082901554404145,
+    "n_injected_tracks": 193,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9705882352941176,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007160828333655893
+   },
+   "physics+rx": {
+    "msg_all": 0.9913466256300459,
+    "msg_all_ci": [
+     0.9881869906020083,
+     0.9929961191976611
+    ],
+    "n_injected": 22419,
+    "msg_scored": 0.9999549346552501,
+    "msg_scored_ci": [
+     0.9998311264954967,
+     1.0
+    ],
+    "n_scored": 22190,
+    "track_any": 0.8082901554404145,
+    "n_injected_tracks": 193,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9705882352941176,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007160828333655893
+   },
+   "_meta": {
+    "n_injected": 22419,
+    "n_recordings_with_injection": 83,
+    "scored_share": 0.9897854498416522
+   },
+   "name": "RandomPosOffset",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "5": {
+   "physics": {
+    "msg_all": 0.8715887935340326,
+    "msg_all_ci": [
+     0.8158579344054085,
+     0.9219148961205195
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.8738429239431244,
+    "msg_scored_ci": [
+     0.8155254201785433,
+     0.9263697380937809
+    ],
+    "n_scored": 20958,
+    "track_any": 0.8172043010752689,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9313725490196079,
+    "sender_kval": 0.8431372549019608,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012580706418533991
+   },
+   "L1": {
+    "msg_all": 0.005130999409708033,
+    "msg_all_ci": [
+     0.0012705470279246343,
+     0.010382783930961752
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.004246588414925088,
+    "msg_scored_ci": [
+     0.0007642710692418765,
+     0.009380973766879049
+    ],
+    "n_scored": 20958,
+    "track_any": 0.10752688172043011,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004320167109760729
+   },
+   "L2": {
+    "msg_all": 0.34863551741361304,
+    "msg_all_ci": [
+     0.2801079265687608,
+     0.45081370658400677
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.32550815917549386,
+    "msg_scored_ci": [
+     0.26487973230617423,
+     0.42248338880611863
+    ],
+    "n_scored": 20958,
+    "track_any": 0.8279569892473119,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9509803921568627,
+    "sender_kval": 0.8921568627450981,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008355488036460312
+   },
+   "L3": {
+    "msg_all": 0.9172229033283386,
+    "msg_all_ci": [
+     0.8735161470969431,
+     0.9550498241709813
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.9221299742341826,
+    "msg_scored_ci": [
+     0.8773740512840656,
+     0.961629456543239
+    ],
+    "n_scored": 20958,
+    "track_any": 0.8440860215053764,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9803921568627451,
+    "sender_kval": 0.9509803921568627,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012675655146221041
+   },
+   "fresh": {
+    "msg_all": 0.013395086954547518,
+    "msg_all_ci": [
+     0.0067625037444909485,
+     0.019949301414130646
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.013932627159080065,
+    "msg_scored_ci": [
+     0.007002987957307901,
+     0.020830122864796928
+    ],
+    "n_scored": 20958,
+    "track_any": 0.1935483870967742,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.17647058823529413,
+    "sender_kval": 0.058823529411764705,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009637295860235472
+   },
+   "physics+fresh": {
+    "msg_all": 0.8729510057666985,
+    "msg_all_ci": [
+     0.8180061886984373,
+     0.9223264653817488
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.8751789292871457,
+    "msg_scored_ci": [
+     0.8178080030237621,
+     0.9269073992484491
+    ],
+    "n_scored": 20958,
+    "track_any": 0.8225806451612904,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9411764705882353,
+    "sender_kval": 0.7549019607843137,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.022218002278769463
+   },
+   "range": {
+    "msg_all": 0.0015438405303546292,
+    "msg_all_ci": [
+     0.0002987101339517688,
+     0.002958262737390422
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.0014314342971657602,
+    "msg_scored_ci": [
+     0.0002929986041433448,
+     0.002739742164161363
+    ],
+    "n_scored": 20958,
+    "track_any": 0.03225806451612903,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.049019607843137254,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00845043676414736
+   },
+   "range_loc": {
+    "msg_all": 0.001680061753621214,
+    "msg_all_ci": [
+     0.0006834827863161193,
+     0.0030356314230475722
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.0009542895314438401,
+    "msg_scored_ci": [
+     0.00014608338164329285,
+     0.0022438282198869934
+    ],
+    "n_scored": 20958,
+    "track_any": 0.10215053763440861,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.0196078431372549,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00802316748955564
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 20958,
+    "track_any": 0.0,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.0015438405303546292,
+    "msg_all_ci": [
+     0.0002987101339517688,
+     0.002958262737390422
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.0014314342971657602,
+    "msg_scored_ci": [
+     0.0002929986041433448,
+     0.002739742164161363
+    ],
+    "n_scored": 20958,
+    "track_any": 0.03225806451612903,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.049019607843137254,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00845043676414736
+   },
+   "physics+range": {
+    "msg_all": 0.8646415111474368,
+    "msg_all_ci": [
+     0.8069410305162097,
+     0.9155416316338901
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.8664948945510068,
+    "msg_scored_ci": [
+     0.8064651974712309,
+     0.9201729311089727
+    ],
+    "n_scored": 20958,
+    "track_any": 0.8225806451612904,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9313725490196079,
+    "sender_kval": 0.8431372549019608,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.01077668059248006
+   },
+   "physics+rx": {
+    "msg_all": 0.8646415111474368,
+    "msg_all_ci": [
+     0.8069410305162097,
+     0.9155416316338901
+    ],
+    "n_injected": 22023,
+    "msg_scored": 0.8664948945510068,
+    "msg_scored_ci": [
+     0.8064651974712309,
+     0.9201729311089727
+    ],
+    "n_scored": 20958,
+    "track_any": 0.8225806451612904,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9313725490196079,
+    "sender_kval": 0.8431372549019608,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.01077668059248006
+   },
+   "_meta": {
+    "n_injected": 22023,
+    "n_recordings_with_injection": 87,
+    "scored_share": 0.9516414657403623
+   },
+   "name": "ConstSpeed",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "6": {
+   "physics": {
+    "msg_all": 0.8443804034582133,
+    "msg_all_ci": [
+     0.8030061258660477,
+     0.8759099962036264
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.8455933080372542,
+    "msg_scored_ci": [
+     0.8007069740170746,
+     0.879358430343514
+    ],
+    "n_scored": 23192,
+    "track_any": 0.8121827411167513,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.9509803921568627,
+    "sender_kval": 0.7745098039215687,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.013387533875338753
+   },
+   "L1": {
+    "msg_all": 0.05694686853107115,
+    "msg_all_ci": [
+     0.014837796079144476,
+     0.10888633774687685
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.05915833045877889,
+    "msg_scored_ci": [
+     0.01430093110930242,
+     0.11467231721944714
+    ],
+    "n_scored": 23192,
+    "track_any": 0.13705583756345177,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.14705882352941177,
+    "sender_kval": 0.058823529411764705,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007154471544715447
+   },
+   "L2": {
+    "msg_all": 0.34277712383812964,
+    "msg_all_ci": [
+     0.27272153345284517,
+     0.449955154040996
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.31148671955846846,
+    "msg_scored_ci": [
+     0.2461536534360118,
+     0.4159137714743507
+    ],
+    "n_scored": 23192,
+    "track_any": 0.8324873096446701,
+    "n_injected_tracks": 197,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8921568627450981,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008617886178861788
+   },
+   "L3": {
+    "msg_all": 0.926614441693388,
+    "msg_all_ci": [
+     0.8990588064872302,
+     0.9438423099407857
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.943515005174198,
+    "msg_scored_ci": [
+     0.9234443274544952,
+     0.9578319581053313
+    ],
+    "n_scored": 23192,
+    "track_any": 0.8223350253807107,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.9803921568627451,
+    "sender_kval": 0.9607843137254902,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.014850948509485096
+   },
+   "fresh": {
+    "msg_all": 0.014815115476722004,
+    "msg_all_ci": [
+     0.009026704820524043,
+     0.019920142020562026
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.015565712314591239,
+    "msg_scored_ci": [
+     0.009462300182880322,
+     0.02062299300963685
+    ],
+    "n_scored": 23192,
+    "track_any": 0.23857868020304568,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.24509803921568626,
+    "sender_kval": 0.058823529411764705,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007208672086720868
+   },
+   "physics+fresh": {
+    "msg_all": 0.8457198522547388,
+    "msg_all_ci": [
+     0.8043823936846931,
+     0.8770353164757431
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.8468868575370817,
+    "msg_scored_ci": [
+     0.8025031340318594,
+     0.8806514267782126
+    ],
+    "n_scored": 23192,
+    "track_any": 0.817258883248731,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.9509803921568627,
+    "sender_kval": 0.7058823529411765,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.020596205962059622
+   },
+   "range": {
+    "msg_all": 0.0049519016113974915,
+    "msg_all_ci": [
+     0.0014208272648631463,
+     0.00930924559822388
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.004484304932735426,
+    "msg_scored_ci": [
+     0.0011014424766118789,
+     0.008559018000606855
+    ],
+    "n_scored": 23192,
+    "track_any": 0.1065989847715736,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004878048780487805
+   },
+   "range_loc": {
+    "msg_all": 0.0036530421723424116,
+    "msg_all_ci": [
+     0.001200984229370147,
+     0.006933166638744954
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.0029751638496033116,
+    "msg_scored_ci": [
+     0.0004530045130698574,
+     0.0062713845017200115
+    ],
+    "n_scored": 23192,
+    "track_any": 0.116751269035533,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.0392156862745098,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006287262872628726
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 23192,
+    "track_any": 0.0,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.0049519016113974915,
+    "msg_all_ci": [
+     0.0014208272648631463,
+     0.00930924559822388
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.004484304932735426,
+    "msg_scored_ci": [
+     0.0011014424766118789,
+     0.008559018000606855
+    ],
+    "n_scored": 23192,
+    "track_any": 0.1065989847715736,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004878048780487805
+   },
+   "physics+range": {
+    "msg_all": 0.8355319235296506,
+    "msg_all_ci": [
+     0.7925942240740975,
+     0.8679567014094933
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.8360210417385305,
+    "msg_scored_ci": [
+     0.7895885532893299,
+     0.8712901647191794
+    ],
+    "n_scored": 23192,
+    "track_any": 0.8274111675126904,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.9411764705882353,
+    "sender_kval": 0.7647058823529411,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.011111111111111112
+   },
+   "physics+rx": {
+    "msg_all": 0.8355319235296506,
+    "msg_all_ci": [
+     0.7925942240740975,
+     0.8679567014094933
+    ],
+    "n_injected": 24637,
+    "msg_scored": 0.8360210417385305,
+    "msg_scored_ci": [
+     0.7895885532893299,
+     0.8712901647191794
+    ],
+    "n_scored": 23192,
+    "track_any": 0.8274111675126904,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.9411764705882353,
+    "sender_kval": 0.7647058823529411,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.011111111111111112
+   },
+   "_meta": {
+    "n_injected": 24637,
+    "n_recordings_with_injection": 77,
+    "scored_share": 0.941348378455169
+   },
+   "name": "ConstSpeedOffset",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "7": {
+   "physics": {
+    "msg_all": 0.9840090205525088,
+    "msg_all_ci": [
+     0.9784174323560025,
+     0.987022271172076
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.9937570636671869,
+    "msg_scored_ci": [
+     0.990272000116254,
+     0.9955303084277332
+    ],
+    "n_scored": 18581,
+    "track_any": 0.8223350253807107,
+    "n_injected_tracks": 197,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9313725490196079,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.011282660332541567
+   },
+   "L1": {
+    "msg_all": 0.005689098457280509,
+    "msg_all_ci": [
+     0.0015209551297408063,
+     0.011725097796551558
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.004413110166298907,
+    "msg_scored_ci": [
+     0.0003855222216708811,
+     0.011163307077342791
+    ],
+    "n_scored": 18581,
+    "track_any": 0.07614213197969544,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.058823529411764705,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.003817441465897523
+   },
+   "L2": {
+    "msg_all": 0.9743734303726104,
+    "msg_all_ci": [
+     0.9689451423798778,
+     0.9780440618700478
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.9853613906678865,
+    "msg_scored_ci": [
+     0.9822437193294509,
+     0.9879795704225602
+    ],
+    "n_scored": 18581,
+    "track_any": 0.8324873096446701,
+    "n_injected_tracks": 197,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007846963013233798
+   },
+   "L3": {
+    "msg_all": 0.9510532520116857,
+    "msg_all_ci": [
+     0.9313154190069904,
+     0.9627850024404668
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.9601743716699854,
+    "msg_scored_ci": [
+     0.9391827499575697,
+     0.9711486215403641
+    ],
+    "n_scored": 18581,
+    "track_any": 0.8477157360406091,
+    "n_injected_tracks": 197,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9411764705882353,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010900916185951815
+   },
+   "fresh": {
+    "msg_all": 0.012198247142637486,
+    "msg_all_ci": [
+     0.006993626130648389,
+     0.017421423688575435
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.012701146332274904,
+    "msg_scored_ci": [
+     0.007290005509756428,
+     0.018470052705519942
+    ],
+    "n_scored": 18581,
+    "track_any": 0.16751269035532995,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.17647058823529413,
+    "sender_kval": 0.029411764705882353,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.011028164234815067
+   },
+   "physics+fresh": {
+    "msg_all": 0.9841627799702731,
+    "msg_all_ci": [
+     0.9785572114803374,
+     0.9872106019103908
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.9938647005005112,
+    "msg_scored_ci": [
+     0.9904183133464536,
+     0.9955995580540402
+    ],
+    "n_scored": 18581,
+    "track_any": 0.8223350253807107,
+    "n_injected_tracks": 197,
+    "sender_k3": 1.0,
+    "sender_kval": 0.7941176470588235,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.022268408551068885
+   },
+   "range": {
+    "msg_all": 0.007277945774178668,
+    "msg_all_ci": [
+     0.001515082974576323,
+     0.01390360732174466
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.006673483666110543,
+    "msg_scored_ci": [
+     0.0012868187941466218,
+     0.01291718716967205
+    ],
+    "n_scored": 18581,
+    "track_any": 0.1065989847715736,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0029691211401425177
+   },
+   "range_loc": {
+    "msg_all": 0.0053303264824970525,
+    "msg_all_ci": [
+     0.0013164031825879713,
+     0.010603419241174023
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.0043054733329745435,
+    "msg_scored_ci": [
+     0.0002549380892155471,
+     0.00943851788132372
+    ],
+    "n_scored": 18581,
+    "track_any": 0.1319796954314721,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.0392156862745098,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004326433661350526
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 18581,
+    "track_any": 0.0,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.007277945774178668,
+    "msg_all_ci": [
+     0.001515082974576323,
+     0.01390360732174466
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.006673483666110543,
+    "msg_scored_ci": [
+     0.0012868187941466218,
+     0.01291718716967205
+    ],
+    "n_scored": 18581,
+    "track_any": 0.1065989847715736,
+    "n_injected_tracks": 197,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0029691211401425177
+   },
+   "physics+range": {
+    "msg_all": 0.9838552611347445,
+    "msg_all_ci": [
+     0.9782753566545332,
+     0.9869836422599015
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.9933265163338895,
+    "msg_scored_ci": [
+     0.9897583072400947,
+     0.9952216034107221
+    ],
+    "n_scored": 18581,
+    "track_any": 0.8375634517766497,
+    "n_injected_tracks": 197,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9313725490196079,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009204275534441805
+   },
+   "physics+rx": {
+    "msg_all": 0.9838552611347445,
+    "msg_all_ci": [
+     0.9782753566545332,
+     0.9869836422599015
+    ],
+    "n_injected": 19511,
+    "msg_scored": 0.9933265163338895,
+    "msg_scored_ci": [
+     0.9897583072400947,
+     0.9952216034107221
+    ],
+    "n_scored": 18581,
+    "track_any": 0.8375634517766497,
+    "n_injected_tracks": 197,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9313725490196079,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009204275534441805
+   },
+   "_meta": {
+    "n_injected": 19511,
+    "n_recordings_with_injection": 81,
+    "scored_share": 0.9523345804930552
+   },
+   "name": "RandomSpeed",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "8": {
+   "physics": {
+    "msg_all": 0.8883805588351043,
+    "msg_all_ci": [
+     0.8551167843589182,
+     0.9111575781769032
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.9139400315623356,
+    "msg_scored_ci": [
+     0.8896990316354147,
+     0.9307747435281528
+    ],
+    "n_scored": 19010,
+    "track_any": 0.8208955223880597,
+    "n_injected_tracks": 201,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9019607843137255,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007118063183795422
+   },
+   "L1": {
+    "msg_all": 0.03596025186934278,
+    "msg_all_ci": [
+     0.01217885846817394,
+     0.0702605887734065
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.03745397159389795,
+    "msg_scored_ci": [
+     0.012111593661145935,
+     0.07476270465270142
+    ],
+    "n_scored": 19010,
+    "track_any": 0.12935323383084577,
+    "n_injected_tracks": 201,
+    "sender_k3": 0.09803921568627451,
+    "sender_kval": 0.058823529411764705,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00562414868843095
+   },
+   "L2": {
+    "msg_all": 0.8897579693034239,
+    "msg_all_ci": [
+     0.8834175833222502,
+     0.8950614665783783
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.8987375065754866,
+    "msg_scored_ci": [
+     0.8931115995090649,
+     0.9043666911516137
+    ],
+    "n_scored": 19010,
+    "track_any": 0.8258706467661692,
+    "n_injected_tracks": 201,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006195351289599719
+   },
+   "L3": {
+    "msg_all": 0.681129476584022,
+    "msg_all_ci": [
+     0.6003393786332196,
+     0.737870368812035
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.7238295633876907,
+    "msg_scored_ci": [
+     0.6589979283847233,
+     0.7692870161574061
+    ],
+    "n_scored": 19010,
+    "track_any": 0.7611940298507462,
+    "n_injected_tracks": 201,
+    "sender_k3": 0.9803921568627451,
+    "sender_kval": 0.6568627450980392,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008875609648930093
+   },
+   "fresh": {
+    "msg_all": 0.01077331759149941,
+    "msg_all_ci": [
+     0.006811537601643035,
+     0.014957034853039428
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.011415044713308784,
+    "msg_scored_ci": [
+     0.007216602740478756,
+     0.01567286361625988
+    ],
+    "n_scored": 19010,
+    "track_any": 0.18407960199004975,
+    "n_injected_tracks": 201,
+    "sender_k3": 0.19607843137254902,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012258886594314337
+   },
+   "physics+fresh": {
+    "msg_all": 0.8889216843762299,
+    "msg_all_ci": [
+     0.8554331695735731,
+     0.9117011967220005
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.9144660704892162,
+    "msg_scored_ci": [
+     0.8902402877984605,
+     0.9312145662383617
+    ],
+    "n_scored": 19010,
+    "track_any": 0.8258706467661692,
+    "n_injected_tracks": 201,
+    "sender_k3": 1.0,
+    "sender_kval": 0.7843137254901961,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.01933301111648139
+   },
+   "range": {
+    "msg_all": 0.004968516332152696,
+    "msg_all_ci": [
+     0.0014720498091213385,
+     0.00972248096937842
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.0046291425565491845,
+    "msg_scored_ci": [
+     0.0012836924843998702,
+     0.009083208183808825
+    ],
+    "n_scored": 19010,
+    "track_any": 0.06965174129353234,
+    "n_injected_tracks": 201,
+    "sender_k3": 0.058823529411764705,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004877191440748715
+   },
+   "range_loc": {
+    "msg_all": 0.003738685556867375,
+    "msg_all_ci": [
+     0.001260807581379633,
+     0.007709332241144061
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.0028932140978432403,
+    "msg_scored_ci": [
+     0.0004194066232051809,
+     0.006699844955918228
+    ],
+    "n_scored": 19010,
+    "track_any": 0.10945273631840796,
+    "n_injected_tracks": 201,
+    "sender_k3": 0.0392156862745098,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005712026011687684
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 19010,
+    "track_any": 0.0,
+    "n_injected_tracks": 201,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.004968516332152696,
+    "msg_all_ci": [
+     0.0014720498091213385,
+     0.00972248096937842
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.0046291425565491845,
+    "msg_scored_ci": [
+     0.0012836924843998702,
+     0.009083208183808825
+    ],
+    "n_scored": 19010,
+    "track_any": 0.06965174129353234,
+    "n_injected_tracks": 201,
+    "sender_k3": 0.058823529411764705,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004877191440748715
+   },
+   "physics+range": {
+    "msg_all": 0.8820838252656434,
+    "msg_all_ci": [
+     0.8475156181751944,
+     0.9057470859445539
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.9085218306154655,
+    "msg_scored_ci": [
+     0.8828411112178829,
+     0.9258940785105404
+    ],
+    "n_scored": 19010,
+    "track_any": 0.8258706467661692,
+    "n_injected_tracks": 201,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9019607843137255,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0067226152291401204
+   },
+   "physics+rx": {
+    "msg_all": 0.8820838252656434,
+    "msg_all_ci": [
+     0.8475156181751944,
+     0.9057470859445539
+    ],
+    "n_injected": 20328,
+    "msg_scored": 0.9085218306154655,
+    "msg_scored_ci": [
+     0.8828411112178829,
+     0.9258940785105404
+    ],
+    "n_scored": 19010,
+    "track_any": 0.8258706467661692,
+    "n_injected_tracks": 201,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9019607843137255,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0067226152291401204
+   },
+   "_meta": {
+    "n_injected": 20328,
+    "n_recordings_with_injection": 84,
+    "scored_share": 0.9351633215269579
+   },
+   "name": "RandomSpeedOffset",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "9": {
+   "physics": {
+    "msg_all": 0.0175545320239854,
+    "msg_all_ci": [
+     0.008123515348869055,
+     0.03678176410808475
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.9666666666666667,
+    "msg_scored_ci": [
+     0.9176470588235294,
+     1.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.6223776223776224,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.049019607843137254,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0077897403419886005
+   },
+   "L1": {
+    "msg_all": 0.00564873555227253,
+    "msg_all_ci": [
+     0.0008611903592669676,
+     0.013171481630704807
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.07692307692307693,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.0392156862745098,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004623179227359088
+   },
+   "L2": {
+    "msg_all": 0.00773442252541931,
+    "msg_all_ci": [
+     0.006222919166526636,
+     0.010186889831280022
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.9777777777777777,
+    "msg_scored_ci": [
+     0.9408088235294118,
+     1.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.6153846153846154,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007441418619379354
+   },
+   "L3": {
+    "msg_all": 0.01381767619709742,
+    "msg_all_ci": [
+     0.00513365652065335,
+     0.03293595030623149
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.6,
+    "msg_scored_ci": [
+     0.47848101265822784,
+     0.7059239130434782
+    ],
+    "n_scored": 90,
+    "track_any": 0.4125874125874126,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.0196078431372549,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0073147561747941734
+   },
+   "fresh": {
+    "msg_all": 0.011818892847831755,
+    "msg_all_ci": [
+     0.005385118624479741,
+     0.018480105880318492
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.14685314685314685,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.14705882352941177,
+    "sender_kval": 0.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.011462951234958834
+   },
+   "physics+fresh": {
+    "msg_all": 0.029373424871817155,
+    "msg_all_ci": [
+     0.01641094241386864,
+     0.049989451241851904
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.9666666666666667,
+    "msg_scored_ci": [
+     0.9176470588235294,
+     1.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.6643356643356644,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.18627450980392157,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.01922102596580114
+   },
+   "range": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.0,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0063964534515516145
+   },
+   "range_loc": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.0,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00636478784040532
+   },
+   "appear": {
+    "msg_all": 8.690362388111584e-05,
+    "msg_all_ci": [
+     0.0,
+     0.00030591658585310316
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.006993006993006993,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.0,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 8.690362388111584e-05,
+    "msg_all_ci": [
+     0.0,
+     0.00030591658585310316
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.006993006993006993,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0063964534515516145
+   },
+   "physics+range": {
+    "msg_all": 0.013035543582167377,
+    "msg_all_ci": [
+     0.007603382747641006,
+     0.02272648684279074
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.9666666666666667,
+    "msg_scored_ci": [
+     0.9176470588235294,
+     1.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.6223776223776224,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.029411764705882353,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006649778340721976
+   },
+   "physics+rx": {
+    "msg_all": 0.013122447206048491,
+    "msg_all_ci": [
+     0.007700234342415424,
+     0.02283828356589891
+    ],
+    "n_injected": 11507,
+    "msg_scored": 0.9666666666666667,
+    "msg_scored_ci": [
+     0.9176470588235294,
+     1.0
+    ],
+    "n_scored": 90,
+    "track_any": 0.6293706293706294,
+    "n_injected_tracks": 143,
+    "sender_k3": 0.029411764705882353,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006649778340721976
+   },
+   "_meta": {
+    "n_injected": 11507,
+    "n_recordings_with_injection": 85,
+    "scored_share": 0.007821326149300426
+   },
+   "name": "EventualStop",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "10": {
+   "physics": {
+    "msg_all": 0.991980753809142,
+    "msg_all_ci": [
+     0.9893877336438869,
+     0.9936958547244895
+    ],
+    "n_injected": 19952,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19754,
+    "track_any": 0.85625,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9803921568627451,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0072185001080613785
+   },
+   "L1": {
+    "msg_all": 0.00907177225340818,
+    "msg_all_ci": [
+     0.0033741098430848777,
+     0.015493854818665843
+    ],
+    "n_injected": 19952,
+    "msg_scored": 0.00734028551179508,
+    "msg_scored_ci": [
+     0.0018692940082910752,
+     0.013279239009708307
+    ],
+    "n_scored": 19754,
+    "track_any": 0.16875,
+    "n_injected_tracks": 160,
+    "sender_k3": 0.10784313725490197,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.001383185649448887
+   },
+   "L2": {
+    "msg_all": 0.9901764234161988,
+    "msg_all_ci": [
+     0.9873153968935535,
+     0.99240543156728
+    ],
+    "n_injected": 19952,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19754,
+    "track_any": 0.85625,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00739139831424249
+   },
+   "L3": {
+    "msg_all": 0.9886226944667201,
+    "msg_all_ci": [
+     0.9855446687255776,
+     0.9908412878490203
+    ],
+    "n_injected": 19952,
+    "msg_scored": 0.9983800749215349,
+    "msg_scored_ci": [
+     0.9978177695416637,
+     0.9989436580046406
+    ],
+    "n_scored": 19754,
+    "track_any": 0.85625,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009293278582234709
+   },
+   "fresh": {
+    "msg_all": 0.010074178027265438,
+    "msg_all_ci": [
+     0.005186777082970466,
+     0.014638976309070288
+    ],
+    "n_injected": 19952,
+    "msg_scored": 0.010124531740407006,
+    "msg_scored_ci": [
+     0.00521520343677881,
+     0.014708556006587612
+    ],
+    "n_scored": 19754,
+    "track_any": 0.1625,
+    "n_injected_tracks": 160,
+    "sender_k3": 0.13725490196078433,
+    "sender_kval": 0.0392156862745098,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012837691808947482
+   },
+   "physics+fresh": {
+    "msg_all": 0.9920308740978349,
+    "msg_all_ci": [
+     0.9894241237457791,
+     0.9937360159729104
+    ],
+    "n_injected": 19952,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19754,
+    "track_any": 0.85625,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9019607843137255,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.020012967365463583
+   },
+   "range": {
+    "msg_all": 0.3699879711307137,
+    "msg_all_ci": [
+     0.3180757724920629,
+     0.4647951493505482
+    ],
+    "n_injected": 19952,
+    "msg_scored": 0.36929229523134555,
+    "msg_scored_ci": [
+     0.3175550363146896,
+     0.4640608785405417
+    ],
+    "n_scored": 19754,
+    "track_any": 0.9125,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8529411764705882,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007693970175059434
+   },
+   "range_loc": {
+    "msg_all": 0.3994085805934242,
+    "msg_all_ci": [
+     0.33672218047830393,
+     0.5139913054669617
+    ],
+    "n_injected": 19952,
+    "msg_scored": 0.3982990786676116,
+    "msg_scored_ci": [
+     0.3359029984427587,
+     0.5121574724169475
+    ],
+    "n_scored": 19754,
+    "track_any": 0.9125,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8529411764705882,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007477847417333045
+   },
+   "appear": {
+    "msg_all": 5.012028869286287e-05,
+    "msg_all_ci": [
+     0.0,
+     0.00020278225276251267
+    ],
+    "n_injected": 19952,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 19754,
+    "track_any": 0.00625,
+    "n_injected_tracks": 160,
+    "sender_k3": 0.0,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.3700380914194066,
+    "msg_all_ci": [
+     0.3180757724920629,
+     0.46483751467341655
+    ],
+    "n_injected": 19952,
+    "msg_scored": 0.36929229523134555,
+    "msg_scored_ci": [
+     0.3175550363146896,
+     0.4640608785405417
+    ],
+    "n_scored": 19754,
+    "track_any": 0.91875,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8529411764705882,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007693970175059434
+   },
+   "physics+range": {
+    "msg_all": 0.9958901363271853,
+    "msg_all_ci": [
+     0.9948345646793962,
+     0.9966610382645208
+    ],
+    "n_injected": 19952,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19754,
+    "track_any": 0.925,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9803921568627451,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006786254592608601
+   },
+   "physics+rx": {
+    "msg_all": 0.9959402566158782,
+    "msg_all_ci": [
+     0.994923695288894,
+     0.9967523897022718
+    ],
+    "n_injected": 19952,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 19754,
+    "track_any": 0.93125,
+    "n_injected_tracks": 160,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9803921568627451,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006786254592608601
+   },
+   "_meta": {
+    "n_injected": 19952,
+    "n_recordings_with_injection": 86,
+    "scored_share": 0.9900761828388132
+   },
+   "name": "Disruptive",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "11": {
+   "physics": {
+    "msg_all": 0.9289847964688572,
+    "msg_all_ci": [
+     0.8834533023276152,
+     0.9545855961976513
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.9494929108431304,
+    "msg_scored_ci": [
+     0.9145837919753975,
+     0.9687607164266545
+    ],
+    "n_scored": 19819,
+    "track_any": 0.8225806451612904,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9607843137254902,
+    "sender_kval": 0.7549019607843137,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012644842930783804
+   },
+   "L1": {
+    "msg_all": 0.0038254046101029917,
+    "msg_all_ci": [
+     0.0007626663269036883,
+     0.008928510919825019
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.003431051011655482,
+    "msg_scored_ci": [
+     0.0004423564705606074,
+     0.009068007887706555
+    ],
+    "n_scored": 19819,
+    "track_any": 0.06989247311827956,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.049019607843137254,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006432568180816848
+   },
+   "L2": {
+    "msg_all": 0.5931338891613536,
+    "msg_all_ci": [
+     0.5414743362848505,
+     0.6505346997742435
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.6083556183460316,
+    "msg_scored_ci": [
+     0.5565215755692593,
+     0.6686196640541813
+    ],
+    "n_scored": 19819,
+    "track_any": 0.8333333333333334,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9901960784313726,
+    "sender_kval": 0.8137254901960784,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007886504824426136
+   },
+   "L3": {
+    "msg_all": 0.9375183913683178,
+    "msg_all_ci": [
+     0.8963092870335261,
+     0.9596056478306394
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.9562036429688683,
+    "msg_scored_ci": [
+     0.9238435945316111,
+     0.9734066538735234
+    ],
+    "n_scored": 19819,
+    "track_any": 0.8387096774193549,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9215686274509803,
+    "sender_kval": 0.7941176470588235,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.01277701898929374
+   },
+   "fresh": {
+    "msg_all": 0.012751348700343305,
+    "msg_all_ci": [
+     0.006346274453399383,
+     0.018067722978258885
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.012916897926232403,
+    "msg_scored_ci": [
+     0.006416728125551149,
+     0.018390324114045054
+    ],
+    "n_scored": 19819,
+    "track_any": 0.1827956989247312,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.17647058823529413,
+    "sender_kval": 0.0392156862745098,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010485967308454861
+   },
+   "physics+fresh": {
+    "msg_all": 0.9291809710642471,
+    "msg_all_ci": [
+     0.8837436479180528,
+     0.9546914062498427
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.9495433674756547,
+    "msg_scored_ci": [
+     0.9146551574878365,
+     0.9688008239696896
+    ],
+    "n_scored": 19819,
+    "track_any": 0.8279569892473119,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9607843137254902,
+    "sender_kval": 0.6862745098039216,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.023086751553068687
+   },
+   "range": {
+    "msg_all": 0.21265326140264837,
+    "msg_all_ci": [
+     0.1374801932245866,
+     0.3447462979854877
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.20818406579544882,
+    "msg_scored_ci": [
+     0.1349477698351949,
+     0.34562955477791674
+    ],
+    "n_scored": 19819,
+    "track_any": 0.46774193548387094,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.5392156862745098,
+    "sender_kval": 0.46078431372549017,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005947922632947086
+   },
+   "range_loc": {
+    "msg_all": 0.24502206964198137,
+    "msg_all_ci": [
+     0.16053113913144698,
+     0.3994700283219172
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.2334628386901458,
+    "msg_scored_ci": [
+     0.14751824301377475,
+     0.38978837245162923
+    ],
+    "n_scored": 19819,
+    "track_any": 0.5483870967741935,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.6372549019607843,
+    "sender_kval": 0.5686274509803921,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005859805260607129
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 19819,
+    "track_any": 0.0,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.21265326140264837,
+    "msg_all_ci": [
+     0.1374801932245866,
+     0.3447462979854877
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.20818406579544882,
+    "msg_scored_ci": [
+     0.1349477698351949,
+     0.34562955477791674
+    ],
+    "n_scored": 19819,
+    "track_any": 0.46774193548387094,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.5392156862745098,
+    "sender_kval": 0.46078431372549017,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005947922632947086
+   },
+   "physics+range": {
+    "msg_all": 0.9447278077488965,
+    "msg_all_ci": [
+     0.9055512717198138,
+     0.9672331188111736
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.9589283011251829,
+    "msg_scored_ci": [
+     0.9269313135194063,
+     0.9762486869084432
+    ],
+    "n_scored": 19819,
+    "track_any": 0.8978494623655914,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9509803921568627,
+    "sender_kval": 0.7941176470588235,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010441908622284883
+   },
+   "physics+rx": {
+    "msg_all": 0.9447278077488965,
+    "msg_all_ci": [
+     0.9055512717198138,
+     0.9672331188111736
+    ],
+    "n_injected": 20390,
+    "msg_scored": 0.9589283011251829,
+    "msg_scored_ci": [
+     0.9269313135194063,
+     0.9762486869084432
+    ],
+    "n_scored": 19819,
+    "track_any": 0.8978494623655914,
+    "n_injected_tracks": 186,
+    "sender_k3": 0.9509803921568627,
+    "sender_kval": 0.7941176470588235,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010441908622284883
+   },
+   "_meta": {
+    "n_injected": 20390,
+    "n_recordings_with_injection": 84,
+    "scored_share": 0.9719960765080922
+   },
+   "name": "DataReplay",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "12": {
+   "physics": {
+    "msg_all": 0.7430676412576865,
+    "msg_all_ci": [
+     0.5936379400414297,
+     0.8317821670079374
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.775227617602428,
+    "msg_scored_ci": [
+     0.6386126584738131,
+     0.8513089590623161
+    ],
+    "n_scored": 10544,
+    "track_any": 0.7790697674418605,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.7058823529411765,
+    "sender_kval": 0.43137254901960786,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010308869592799651
+   },
+   "L1": {
+    "msg_all": 0.0029585798816568047,
+    "msg_all_ci": [
+     0.0011520421431601,
+     0.005372995457983337
+    ],
+    "n_injected": 17238,
+    "msg_scored": 9.484066767830046e-05,
+    "msg_scored_ci": [
+     0.0,
+     0.00037829532618664124
+    ],
+    "n_scored": 10544,
+    "track_any": 0.09302325581395349,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.049019607843137254,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006185321755679791
+   },
+   "L2": {
+    "msg_all": 0.5031326139923425,
+    "msg_all_ci": [
+     0.42406066821573757,
+     0.5552084896412759
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.38135432473444614,
+    "msg_scored_ci": [
+     0.3318975325513548,
+     0.40966689088996405
+    ],
+    "n_scored": 10544,
+    "track_any": 0.8546511627906976,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.9901960784313726,
+    "sender_kval": 0.5784313725490197,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006224971254113636
+   },
+   "L3": {
+    "msg_all": 0.766330200719341,
+    "msg_all_ci": [
+     0.6239357331452391,
+     0.8479126726299991
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.792583459787557,
+    "msg_scored_ci": [
+     0.662827033116662,
+     0.864661826546373
+    ],
+    "n_scored": 10544,
+    "track_any": 0.8313953488372093,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.8627450980392157,
+    "sender_kval": 0.5098039215686274,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.015304706395464097
+   },
+   "fresh": {
+    "msg_all": 0.010674092122055922,
+    "msg_all_ci": [
+     0.005172259645388621,
+     0.016624793618459397
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.011855083459787558,
+    "msg_scored_ci": [
+     0.005680581739781851,
+     0.019148299871864713
+    ],
+    "n_scored": 10544,
+    "track_any": 0.14534883720930233,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.09803921568627451,
+    "sender_kval": 0.0392156862745098,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012410293009793426
+   },
+   "physics+fresh": {
+    "msg_all": 0.7432996867386008,
+    "msg_all_ci": [
+     0.59398071323983,
+     0.8318759714480143
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.7756069802731411,
+    "msg_scored_ci": [
+     0.6386126584738131,
+     0.8515935747529744
+    ],
+    "n_scored": 10544,
+    "track_any": 0.7790697674418605,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.7058823529411765,
+    "sender_kval": 0.3627450980392157,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.02267951310415923
+   },
+   "range": {
+    "msg_all": 0.005917159763313609,
+    "msg_all_ci": [
+     0.0011876393124103932,
+     0.011383401977372387
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.0023710166919575114,
+    "msg_scored_ci": [
+     0.0,
+     0.005171850122805459
+    ],
+    "n_scored": 10544,
+    "track_any": 0.05232558139534884,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.0392156862745098,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004995836802664446
+   },
+   "range_loc": {
+    "msg_all": 0.004756932358742314,
+    "msg_all_ci": [
+     0.0015257828941626016,
+     0.009222761920836039
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.0011380880121396055,
+    "msg_scored_ci": [
+     0.0,
+     0.002675567728425586
+    ],
+    "n_scored": 10544,
+    "track_any": 0.0755813953488372,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.058823529411764705,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005431981285436739
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 10544,
+    "track_any": 0.0,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.005917159763313609,
+    "msg_all_ci": [
+     0.0011876393124103932,
+     0.011383401977372387
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.0023710166919575114,
+    "msg_scored_ci": [
+     0.0,
+     0.005171850122805459
+    ],
+    "n_scored": 10544,
+    "track_any": 0.05232558139534884,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.0392156862745098,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004995836802664446
+   },
+   "physics+range": {
+    "msg_all": 0.7415593456317439,
+    "msg_all_ci": [
+     0.5916618045779699,
+     0.8309577956938108
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.7735204855842185,
+    "msg_scored_ci": [
+     0.6365304675951495,
+     0.8501368584553375
+    ],
+    "n_scored": 10544,
+    "track_any": 0.7616279069767442,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.7058823529411765,
+    "sender_kval": 0.43137254901960786,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00824709567423972
+   },
+   "physics+rx": {
+    "msg_all": 0.7415593456317439,
+    "msg_all_ci": [
+     0.5916618045779699,
+     0.8309577956938108
+    ],
+    "n_injected": 17238,
+    "msg_scored": 0.7735204855842185,
+    "msg_scored_ci": [
+     0.6365304675951495,
+     0.8501368584553375
+    ],
+    "n_scored": 10544,
+    "track_any": 0.7616279069767442,
+    "n_injected_tracks": 172,
+    "sender_k3": 0.7058823529411765,
+    "sender_kval": 0.43137254901960786,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00824709567423972
+   },
+   "_meta": {
+    "n_injected": 17238,
+    "n_recordings_with_injection": 84,
+    "scored_share": 0.6116718876899873
+   },
+   "name": "DelayedMessages",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 42459
+  },
+  "13": {
+   "physics": {
+    "msg_all": 0.09273683185668387,
+    "msg_all_ci": [
+     0.07005209932692061,
+     0.11829891326410749
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.09030143826887566,
+    "msg_scored_ci": [
+     0.06824221127151482,
+     0.12078417544461961
+    ],
+    "n_scored": 38449,
+    "track_any": 0.6223404255319149,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.7745098039215687,
+    "sender_kval": 0.4215686274509804,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012153470836105566
+   },
+   "L1": {
+    "msg_all": 0.10449323337552331,
+    "msg_all_ci": [
+     0.06402493205523092,
+     0.1546446797239261
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.10322765221462196,
+    "msg_scored_ci": [
+     0.05941817261801231,
+     0.15662703148364313
+    ],
+    "n_scored": 38449,
+    "track_any": 0.601063829787234,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.7549019607843137,
+    "sender_kval": 0.2647058823529412,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007318695941450432
+   },
+   "L2": {
+    "msg_all": 0.06688735274072631,
+    "msg_all_ci": [
+     0.049644567897409335,
+     0.09008813777524363
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.07126323181357122,
+    "msg_scored_ci": [
+     0.05197655557348694,
+     0.09976153995272578
+    ],
+    "n_scored": 38449,
+    "track_any": 0.601063829787234,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.7156862745098039,
+    "sender_kval": 0.46078431372549017,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006742071412730095
+   },
+   "L3": {
+    "msg_all": 0.020056469671891734,
+    "msg_all_ci": [
+     0.00802495026970226,
+     0.035176459594728884
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.016931519675414185,
+    "msg_scored_ci": [
+     0.00670657853942392,
+     0.029972398385487462
+    ],
+    "n_scored": 38449,
+    "track_any": 0.3191489361702128,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.20588235294117646,
+    "sender_kval": 0.06862745098039216,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.016810822798846752
+   },
+   "fresh": {
+    "msg_all": 0.009298023561483789,
+    "msg_all_ci": [
+     0.0057266520825648565,
+     0.013203678225979716
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.009753179536528909,
+    "msg_scored_ci": [
+     0.006033781615072015,
+     0.013705066173621105
+    ],
+    "n_scored": 38449,
+    "track_any": 0.18085106382978725,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.21568627450980393,
+    "sender_kval": 0.058823529411764705,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.013617210024395653
+   },
+   "physics+fresh": {
+    "msg_all": 0.10140200564696719,
+    "msg_all_ci": [
+     0.07861448746917438,
+     0.12705848750209364
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.09948243127259486,
+    "msg_scored_ci": [
+     0.076122918815597,
+     0.1288885681375884
+    ],
+    "n_scored": 38449,
+    "track_any": 0.6542553191489362,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.8137254901960784,
+    "sender_kval": 0.3235294117647059,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.025681969394544243
+   },
+   "range": {
+    "msg_all": 0.0035536948690487783,
+    "msg_all_ci": [
+     0.0006694917668391764,
+     0.008714544762070663
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.003459127675622253,
+    "msg_scored_ci": [
+     0.0005535305314581379,
+     0.008499079964705112
+    ],
+    "n_scored": 38449,
+    "track_any": 0.06914893617021277,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.06862745098039216,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006165446884009758
+   },
+   "range_loc": {
+    "msg_all": 0.003212929607633142,
+    "msg_all_ci": [
+     0.0008726340310292811,
+     0.007405652348668508
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.002886941142812557,
+    "msg_scored_ci": [
+     0.0005940078828882254,
+     0.00693771700463827
+    ],
+    "n_scored": 38449,
+    "track_any": 0.10638297872340426,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.06862745098039216,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006165446884009758
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 38449,
+    "track_any": 0.0,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.0035536948690487783,
+    "msg_all_ci": [
+     0.0006694917668391764,
+     0.008714544762070663
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.003459127675622253,
+    "msg_scored_ci": [
+     0.0005535305314581379,
+     0.008499079964705112
+    ],
+    "n_scored": 38449,
+    "track_any": 0.06914893617021277,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.06862745098039216,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006165446884009758
+   },
+   "physics+range": {
+    "msg_all": 0.09010807126862039,
+    "msg_all_ci": [
+     0.06818856778224042,
+     0.11560576445382041
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.08744050560482718,
+    "msg_scored_ci": [
+     0.06587443507225758,
+     0.11727828223472153
+    ],
+    "n_scored": 38449,
+    "track_any": 0.6170212765957447,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.7647058823529411,
+    "sender_kval": 0.4215686274509804,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009713905522288756
+   },
+   "physics+rx": {
+    "msg_all": 0.09010807126862039,
+    "msg_all_ci": [
+     0.06818856778224042,
+     0.11560576445382041
+    ],
+    "n_injected": 41084,
+    "msg_scored": 0.08744050560482718,
+    "msg_scored_ci": [
+     0.06587443507225758,
+     0.11727828223472153
+    ],
+    "n_scored": 38449,
+    "track_any": 0.6170212765957447,
+    "n_injected_tracks": 188,
+    "sender_k3": 0.7647058823529411,
+    "sender_kval": 0.4215686274509804,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009713905522288756
+   },
+   "_meta": {
+    "n_injected": 41084,
+    "n_recordings_with_injection": 88,
+    "scored_share": 0.9358631097264142
+   },
+   "name": "DoS",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 63629
+  },
+  "14": {
+   "physics": {
+    "msg_all": 0.9978720419044056,
+    "msg_all_ci": [
+     0.9973200847184029,
+     0.9981974435000112
+    ],
+    "n_injected": 85528,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 84629,
+    "track_any": 1.0,
+    "n_injected_tracks": 182,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.01124164938954158
+   },
+   "L1": {
+    "msg_all": 0.776295482181274,
+    "msg_all_ci": [
+     0.6602109214977311,
+     0.8379315846630694
+    ],
+    "n_injected": 85528,
+    "msg_scored": 0.7760696687896584,
+    "msg_scored_ci": [
+     0.6584905448055056,
+     0.8383244747185594
+    ],
+    "n_scored": 84629,
+    "track_any": 0.9065934065934066,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.9509803921568627,
+    "sender_kval": 0.7549019607843137,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0055286800276434
+   },
+   "L2": {
+    "msg_all": 0.9894888223739594,
+    "msg_all_ci": [
+     0.9861383467860346,
+     0.9927113180735071
+    ],
+    "n_injected": 85528,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 84629,
+    "track_any": 1.0,
+    "n_injected_tracks": 182,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007325501036627506
+   },
+   "L3": {
+    "msg_all": 0.9894888223739594,
+    "msg_all_ci": [
+     0.9861383467860346,
+     0.9927113180735071
+    ],
+    "n_injected": 85528,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 84629,
+    "track_any": 1.0,
+    "n_injected_tracks": 182,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012577747062888736
+   },
+   "fresh": {
+    "msg_all": 0.011084089421008326,
+    "msg_all_ci": [
+     0.006980525261341369,
+     0.016458561114768743
+    ],
+    "n_injected": 85528,
+    "msg_scored": 0.011048222240603103,
+    "msg_scored_ci": [
+     0.0069296988731048495,
+     0.016380943928007388
+    ],
+    "n_scored": 84629,
+    "track_any": 0.21978021978021978,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.28431372549019607,
+    "sender_kval": 0.1568627450980392,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012024879060124396
+   },
+   "physics+fresh": {
+    "msg_all": 0.9978837339818539,
+    "msg_all_ci": [
+     0.9973295718159503,
+     0.99822416868512
+    ],
+    "n_injected": 85528,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 84629,
+    "track_any": 1.0,
+    "n_injected_tracks": 182,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.02322045611610228
+   },
+   "range": {
+    "msg_all": 0.14789308764381257,
+    "msg_all_ci": [
+     0.09751457073702491,
+     0.18151550052896653
+    ],
+    "n_injected": 85528,
+    "msg_scored": 0.14789256637795556,
+    "msg_scored_ci": [
+     0.09772759602072525,
+     0.18168191205952036
+    ],
+    "n_scored": 84629,
+    "track_any": 0.46153846153846156,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.3235294117647059,
+    "sender_kval": 0.3235294117647059,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0044229440221147205
+   },
+   "range_loc": {
+    "msg_all": 0.2874964923767655,
+    "msg_all_ci": [
+     0.222128086154428,
+     0.40579598542363526
+    ],
+    "n_injected": 85528,
+    "msg_scored": 0.28724196197520946,
+    "msg_scored_ci": [
+     0.2216660344812658,
+     0.4050462466413333
+    ],
+    "n_scored": 84629,
+    "track_any": 0.8901098901098901,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.9215686274509803,
+    "sender_kval": 0.8725490196078431,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005759041695461875
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 85528,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 84629,
+    "track_any": 0.0,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.14789308764381257,
+    "msg_all_ci": [
+     0.09751457073702491,
+     0.18151550052896653
+    ],
+    "n_injected": 85528,
+    "msg_scored": 0.14789256637795556,
+    "msg_scored_ci": [
+     0.09772759602072525,
+     0.18168191205952036
+    ],
+    "n_scored": 84629,
+    "track_any": 0.46153846153846156,
+    "n_injected_tracks": 182,
+    "sender_k3": 0.3235294117647059,
+    "sender_kval": 0.3235294117647059,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0044229440221147205
+   },
+   "physics+range": {
+    "msg_all": 0.9979538864465438,
+    "msg_all_ci": [
+     0.9973769885420515,
+     0.9982726287837898
+    ],
+    "n_injected": 85528,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 84629,
+    "track_any": 1.0,
+    "n_injected_tracks": 182,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009168394379175306
+   },
+   "physics+rx": {
+    "msg_all": 0.9979538864465438,
+    "msg_all_ci": [
+     0.9973769885420515,
+     0.9982726287837898
+    ],
+    "n_injected": 85528,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 84629,
+    "track_any": 1.0,
+    "n_injected_tracks": 182,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009168394379175306
+   },
+   "_meta": {
+    "n_injected": 85528,
+    "n_recordings_with_injection": 83,
+    "scored_share": 0.9894888223739594
+   },
+   "name": "DoSRandom",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 107233
+  },
+  "15": {
+   "physics": {
+    "msg_all": 0.9978155231599126,
+    "msg_all_ci": [
+     0.9970962420559544,
+     0.9982569034415968
+    ],
+    "n_injected": 89724,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 88338,
+    "track_any": 1.0,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010602246320681642
+   },
+   "L1": {
+    "msg_all": 0.7695934198207838,
+    "msg_all_ci": [
+     0.6468670615658596,
+     0.8295949082046662
+    ],
+    "n_injected": 89724,
+    "msg_scored": 0.7682197921619235,
+    "msg_scored_ci": [
+     0.644459905652854,
+     0.8287368300936253
+    ],
+    "n_scored": 88338,
+    "track_any": 0.8484848484848485,
+    "n_injected_tracks": 198,
+    "sender_k3": 0.9607843137254902,
+    "sender_kval": 0.7843137254901961,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004405499612703331
+   },
+   "L2": {
+    "msg_all": 0.9847086621193883,
+    "msg_all_ci": [
+     0.9786536599066034,
+     0.990780413375303
+    ],
+    "n_injected": 89724,
+    "msg_scored": 0.9999660395299871,
+    "msg_scored_ci": [
+     0.9999310662278259,
+     1.0
+    ],
+    "n_scored": 88338,
+    "track_any": 1.0,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008907823392718823
+   },
+   "L3": {
+    "msg_all": 0.9842739958093709,
+    "msg_all_ci": [
+     0.97812776042209,
+     0.9905386205655486
+    ],
+    "n_injected": 89724,
+    "msg_scored": 0.9993660712264257,
+    "msg_scored_ci": [
+     0.9991522884819385,
+     0.9995504605319652
+    ],
+    "n_scored": 88338,
+    "track_any": 1.0,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.011086367157242448
+   },
+   "fresh": {
+    "msg_all": 0.012839374080513576,
+    "msg_all_ci": [
+     0.007993385601024089,
+     0.017890303298217905
+    ],
+    "n_injected": 89724,
+    "msg_scored": 0.012769136724852272,
+    "msg_scored_ci": [
+     0.007939455574074723,
+     0.0178666437770875
+    ],
+    "n_scored": 88338,
+    "track_any": 0.18686868686868688,
+    "n_injected_tracks": 198,
+    "sender_k3": 0.27450980392156865,
+    "sender_kval": 0.1568627450980392,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010166537567776917
+   },
+   "physics+fresh": {
+    "msg_all": 0.9978266684499131,
+    "msg_all_ci": [
+     0.9971040401665835,
+     0.998258707128162
+    ],
+    "n_injected": 89724,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 88338,
+    "track_any": 1.0,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0206719597211464
+   },
+   "range": {
+    "msg_all": 0.3664905710846596,
+    "msg_all_ci": [
+     0.3330139607968845,
+     0.4264164441766657
+    ],
+    "n_injected": 89724,
+    "msg_scored": 0.36664855441599314,
+    "msg_scored_ci": [
+     0.333323076221179,
+     0.426298383187586
+    ],
+    "n_scored": 88338,
+    "track_any": 0.9747474747474747,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005325329202168862
+   },
+   "range_loc": {
+    "msg_all": 0.39544603450581783,
+    "msg_all_ci": [
+     0.34931949395324385,
+     0.478080506637832
+    ],
+    "n_injected": 89724,
+    "msg_scored": 0.39565079580701396,
+    "msg_scored_ci": [
+     0.3497695473820234,
+     0.4777182588581866
+    ],
+    "n_scored": 88338,
+    "track_any": 0.9747474747474747,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006584043377226956
+   },
+   "appear": {
+    "msg_all": 1.1145290000445811e-05,
+    "msg_all_ci": [
+     0.0,
+     4.055218503307512e-05
+    ],
+    "n_injected": 89724,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 88338,
+    "track_any": 0.005050505050505051,
+    "n_injected_tracks": 198,
+    "sender_k3": 0.0,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.36650171637466006,
+    "msg_all_ci": [
+     0.33301833171735873,
+     0.42643143695496094
+    ],
+    "n_injected": 89724,
+    "msg_scored": 0.36664855441599314,
+    "msg_scored_ci": [
+     0.333323076221179,
+     0.426298383187586
+    ],
+    "n_scored": 88338,
+    "track_any": 0.9747474747474747,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005325329202168862
+   },
+   "physics+range": {
+    "msg_all": 0.9989189068699568,
+    "msg_all_ci": [
+     0.9986575242225814,
+     0.9991052517148642
+    ],
+    "n_injected": 89724,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 88338,
+    "track_any": 1.0,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009730828814872193
+   },
+   "physics+rx": {
+    "msg_all": 0.9989300521599572,
+    "msg_all_ci": [
+     0.9986742255043888,
+     0.9991136431027545
+    ],
+    "n_injected": 89724,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 88338,
+    "track_any": 1.0,
+    "n_injected_tracks": 198,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009730828814872193
+   },
+   "_meta": {
+    "n_injected": 89724,
+    "n_recordings_with_injection": 80,
+    "scored_share": 0.9845526280593822
+   },
+   "name": "DoSDisruptive",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 110380
+  },
+  "16": {
+   "physics": {
+    "msg_all": 0.1178145376964452,
+    "msg_all_ci": [
+     0.10075711354126875,
+     0.13617356920011803
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.11845968980527283,
+    "msg_scored_ci": [
+     0.10195339576692027,
+     0.1372740053459492
+    ],
+    "n_scored": 125663,
+    "track_any": 1.0,
+    "n_injected_tracks": 612,
+    "sender_k3": 1.0,
+    "sender_kval": 0.6764705882352942,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009473230945887756
+   },
+   "L1": {
+    "msg_all": 0.007076534751645182,
+    "msg_all_ci": [
+     0.0016533141472241941,
+     0.013226597860475512
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.006063837406396473,
+    "msg_scored_ci": [
+     0.0007380927079549291,
+     0.012774549949310994
+    ],
+    "n_scored": 125663,
+    "track_any": 0.1568627450980392,
+    "n_injected_tracks": 612,
+    "sender_k3": 0.1568627450980392,
+    "sender_kval": 0.06862745098039216,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.002631453040524377
+   },
+   "L2": {
+    "msg_all": 0.107718080471168,
+    "msg_all_ci": [
+     0.09165757367515642,
+     0.12352950234171943
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.1137566348089732,
+    "msg_scored_ci": [
+     0.09911729702998084,
+     0.12932975363363503
+    ],
+    "n_scored": 125663,
+    "track_any": 0.7516339869281046,
+    "n_injected_tracks": 612,
+    "sender_k3": 0.8333333333333334,
+    "sender_kval": 0.7156862745098039,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009234007942203722
+   },
+   "L3": {
+    "msg_all": 0.028343700231377146,
+    "msg_all_ci": [
+     0.01506126846185483,
+     0.04798454254762843
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.025067044396520854,
+    "msg_scored_ci": [
+     0.010551011689941369,
+     0.04625647263507907
+    ],
+    "n_scored": 125663,
+    "track_any": 1.0,
+    "n_injected_tracks": 612,
+    "sender_k3": 1.0,
+    "sender_kval": 0.35294117647058826,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0066503995024161525
+   },
+   "fresh": {
+    "msg_all": 0.012485351122329397,
+    "msg_all_ci": [
+     0.007386819733383464,
+     0.017616140433042632
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.01313035658865378,
+    "msg_scored_ci": [
+     0.007804518140752763,
+     0.018304142095311084
+    ],
+    "n_scored": 125663,
+    "track_any": 0.2647058823529412,
+    "n_injected_tracks": 612,
+    "sender_k3": 0.2647058823529412,
+    "sender_kval": 0.18627450980392157,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010573656762834314
+   },
+   "physics+fresh": {
+    "msg_all": 0.12480092550857898,
+    "msg_all_ci": [
+     0.10564069720813585,
+     0.1433868801468658
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.12586043624615043,
+    "msg_scored_ci": [
+     0.10770166229183142,
+     0.1447017773157619
+    ],
+    "n_scored": 125663,
+    "track_any": 1.0,
+    "n_injected_tracks": 612,
+    "sender_k3": 1.0,
+    "sender_kval": 0.6078431372549019,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.019999043107985264
+   },
+   "range": {
+    "msg_all": 0.00510832657231287,
+    "msg_all_ci": [
+     0.0015898498155049695,
+     0.009728697430263077
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.0047746751231468295,
+    "msg_scored_ci": [
+     0.001393700028854957,
+     0.009453667448998252
+    ],
+    "n_scored": 125663,
+    "track_any": 0.0915032679738562,
+    "n_injected_tracks": 612,
+    "sender_k3": 0.08823529411764706,
+    "sender_kval": 0.049019607843137254,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004784460073680685
+   },
+   "range_loc": {
+    "msg_all": 0.004605006160040867,
+    "msg_all_ci": [
+     0.0018268291402153357,
+     0.008351351303799765
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.00397093814408378,
+    "msg_scored_ci": [
+     0.001188564569487404,
+     0.007705804033296462
+    ],
+    "n_scored": 125663,
+    "track_any": 0.18790849673202614,
+    "n_injected_tracks": 612,
+    "sender_k3": 0.2549019607843137,
+    "sender_kval": 0.0392156862745098,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005406439883259174
+   },
+   "appear": {
+    "msg_all": 7.512244959283632e-06,
+    "msg_all_ci": [
+     0.0,
+     2.5444309965925444e-05
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 125663,
+    "track_any": 0.0016339869281045752,
+    "n_injected_tracks": 612,
+    "sender_k3": 0.0,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.005115838817272154,
+    "msg_all_ci": [
+     0.0015967654448272378,
+     0.009736465722547117
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.0047746751231468295,
+    "msg_scored_ci": [
+     0.001393700028854957,
+     0.009453667448998252
+    ],
+    "n_scored": 125663,
+    "track_any": 0.09313725490196079,
+    "n_injected_tracks": 612,
+    "sender_k3": 0.08823529411764706,
+    "sender_kval": 0.049019607843137254,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004784460073680685
+   },
+   "physics+range": {
+    "msg_all": 0.10768051924637159,
+    "msg_all_ci": [
+     0.09224103554168273,
+     0.12427412453313423
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.10772462857006437,
+    "msg_scored_ci": [
+     0.09233837136580944,
+     0.12508735316039116
+    ],
+    "n_scored": 125663,
+    "track_any": 1.0,
+    "n_injected_tracks": 612,
+    "sender_k3": 1.0,
+    "sender_kval": 0.6666666666666666,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007607291517152289
+   },
+   "physics+rx": {
+    "msg_all": 0.10768051924637159,
+    "msg_all_ci": [
+     0.09224103554168273,
+     0.12427412453313423
+    ],
+    "n_injected": 133116,
+    "msg_scored": 0.10772462857006437,
+    "msg_scored_ci": [
+     0.09233837136580944,
+     0.12508735316039116
+    ],
+    "n_scored": 125663,
+    "track_any": 1.0,
+    "n_injected_tracks": 612,
+    "sender_k3": 1.0,
+    "sender_kval": 0.6666666666666666,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007607291517152289
+   },
+   "_meta": {
+    "n_injected": 133116,
+    "n_recordings_with_injection": 80,
+    "scored_share": 0.9440112383184591
+   },
+   "name": "GridSybil",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 154017
+  },
+  "17": {
+   "physics": {
+    "msg_all": 0.7727031097723044,
+    "msg_all_ci": [
+     0.7265075713270719,
+     0.80298833612011
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.8412964808307547,
+    "msg_scored_ci": [
+     0.7969246960878817,
+     0.8695563404629084
+    ],
+    "n_scored": 19067,
+    "track_any": 0.9839034205231388,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.9607843137254902,
+    "sender_kval": 0.8137254901960784,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009506166821040316
+   },
+   "L1": {
+    "msg_all": 0.007176397625586958,
+    "msg_all_ci": [
+     0.00377139740709086,
+     0.011005830135462916
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.007185189070121152,
+    "msg_scored_ci": [
+     0.003317302450830753,
+     0.011336652264698464
+    ],
+    "n_scored": 19067,
+    "track_any": 0.1227364185110664,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.17647058823529413,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005557451372300492
+   },
+   "L2": {
+    "msg_all": 0.45122707539647383,
+    "msg_all_ci": [
+     0.43070313741114313,
+     0.4727679904268317
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.5308123983846437,
+    "msg_scored_ci": [
+     0.5065453664654485,
+     0.555516234430188
+    ],
+    "n_scored": 19067,
+    "track_any": 0.9899396378269618,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.9803921568627451,
+    "sender_kval": 0.8725490196078431,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006044947106712816
+   },
+   "L3": {
+    "msg_all": 0.7931248338796846,
+    "msg_all_ci": [
+     0.7469279833989031,
+     0.8252582150339457
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.8610688624324749,
+    "msg_scored_ci": [
+     0.8183827183078355,
+     0.8880833702645489
+    ],
+    "n_scored": 19067,
+    "track_any": 0.9637826961770624,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.9607843137254902,
+    "sender_kval": 0.8725490196078431,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0120411446399844
+   },
+   "fresh": {
+    "msg_all": 0.015061575263577567,
+    "msg_all_ci": [
+     0.008889551309999896,
+     0.020200248359692717
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.015209524309015577,
+    "msg_scored_ci": [
+     0.009076710004830225,
+     0.020408383666889147
+    ],
+    "n_scored": 19067,
+    "track_any": 0.17706237424547283,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.22549019607843138,
+    "sender_kval": 0.058823529411764705,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0077024326037147175
+   },
+   "physics+fresh": {
+    "msg_all": 0.7742535660494374,
+    "msg_all_ci": [
+     0.7279165255476899,
+     0.8044516468303804
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.842450306812818,
+    "msg_scored_ci": [
+     0.7976931010421764,
+     0.8706965359747459
+    ],
+    "n_scored": 19067,
+    "track_any": 0.9839034205231388,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.9607843137254902,
+    "sender_kval": 0.7254901960784313,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.017208599424755035
+   },
+   "range": {
+    "msg_all": 0.5657393461504385,
+    "msg_all_ci": [
+     0.5179071297776423,
+     0.6140882181926607
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.5308648450201919,
+    "msg_scored_ci": [
+     0.4843987794408243,
+     0.5815717595206462
+    ],
+    "n_scored": 19067,
+    "track_any": 0.5674044265593562,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.7745098039215687,
+    "sender_kval": 0.7156862745098039,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004046214595622289
+   },
+   "range_loc": {
+    "msg_all": 0.6252325684415699,
+    "msg_all_ci": [
+     0.5844014681996257,
+     0.6855951942676968
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.5816856348665234,
+    "msg_scored_ci": [
+     0.5348546087368052,
+     0.6495453203232473
+    ],
+    "n_scored": 19067,
+    "track_any": 0.6519114688128773,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.9215686274509803,
+    "sender_kval": 0.8235294117647058,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0058986983863891194
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 19067,
+    "track_any": 0.0,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.5657393461504385,
+    "msg_all_ci": [
+     0.5179071297776423,
+     0.6140882181926607
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.5308648450201919,
+    "msg_scored_ci": [
+     0.4843987794408243,
+     0.5815717595206462
+    ],
+    "n_scored": 19067,
+    "track_any": 0.5674044265593562,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.7745098039215687,
+    "sender_kval": 0.7156862745098039,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.004046214595622289
+   },
+   "physics+range": {
+    "msg_all": 0.8893417205634802,
+    "msg_all_ci": [
+     0.8257410843146994,
+     0.9253810884014181
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.911050506110033,
+    "msg_scored_ci": [
+     0.8554881701367708,
+     0.9420679531904936
+    ],
+    "n_scored": 19067,
+    "track_any": 0.9879275653923542,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.9607843137254902,
+    "sender_kval": 0.803921568627451,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009262418953834154
+   },
+   "physics+rx": {
+    "msg_all": 0.8893417205634802,
+    "msg_all_ci": [
+     0.8257410843146994,
+     0.9253810884014181
+    ],
+    "n_injected": 22574,
+    "msg_scored": 0.911050506110033,
+    "msg_scored_ci": [
+     0.8554881701367708,
+     0.9420679531904936
+    ],
+    "n_scored": 19067,
+    "track_any": 0.9879275653923542,
+    "n_injected_tracks": 497,
+    "sender_k3": 0.9607843137254902,
+    "sender_kval": 0.803921568627451,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009262418953834154
+   },
+   "_meta": {
+    "n_injected": 22574,
+    "n_recordings_with_injection": 81,
+    "scored_share": 0.8446442810312749
+   },
+   "name": "DataReplaySybil",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "18": {
+   "physics": {
+    "msg_all": 0.396417949049528,
+    "msg_all_ci": [
+     0.37649416944740005,
+     0.41958300272535964
+    ],
+    "n_injected": 46398,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 15019,
+    "track_any": 0.7997034474236995,
+    "n_injected_tracks": 8093,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009402654867256638
+   },
+   "L1": {
+    "msg_all": 0.001896633475580844,
+    "msg_all_ci": [
+     0.0008754846887621116,
+     0.0029934873768107492
+    ],
+    "n_injected": 46398,
+    "msg_scored": 0.005659497969238964,
+    "msg_scored_ci": [
+     0.0026994525060460963,
+     0.008649902561201777
+    ],
+    "n_scored": 15019,
+    "track_any": 0.010255776597059186,
+    "n_injected_tracks": 8093,
+    "sender_k3": 0.08823529411764706,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0027654867256637168
+   },
+   "L2": {
+    "msg_all": 0.3237639553429027,
+    "msg_all_ci": [
+     0.2868788671853949,
+     0.3488598436833508
+    ],
+    "n_injected": 46398,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 15019,
+    "track_any": 0.5147658470282961,
+    "n_injected_tracks": 8093,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8235294117647058,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008045052292839904
+   },
+   "L3": {
+    "msg_all": 0.43152722100090524,
+    "msg_all_ci": [
+     0.41026739703669524,
+     0.4594677632661888
+    ],
+    "n_injected": 46398,
+    "msg_scored": 0.9994673413676011,
+    "msg_scored_ci": [
+     0.998909145783903,
+     0.9997974210815519
+    ],
+    "n_scored": 15019,
+    "track_any": 0.8884220931669344,
+    "n_injected_tracks": 8093,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.013525744167337088
+   },
+   "fresh": {
+    "msg_all": 0.009871115134273028,
+    "msg_all_ci": [
+     0.006039745159185626,
+     0.012630071164984978
+    ],
+    "n_injected": 46398,
+    "msg_scored": 0.01171848991277715,
+    "msg_scored_ci": [
+     0.00695959323113421,
+     0.016293503870610963
+    ],
+    "n_scored": 15019,
+    "track_any": 0.048807611516125046,
+    "n_injected_tracks": 8093,
+    "sender_k3": 0.22549019607843138,
+    "sender_kval": 0.0784313725490196,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.013525744167337088
+   },
+   "physics+fresh": {
+    "msg_all": 0.40232337600758655,
+    "msg_all_ci": [
+     0.3820918550580594,
+     0.4252602998366229
+    ],
+    "n_injected": 46398,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 15019,
+    "track_any": 0.8013097738786605,
+    "n_injected_tracks": 8093,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8921568627450981,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.022928399034593726
+   },
+   "range": {
+    "msg_all": 0.14000603474287684,
+    "msg_all_ci": [
+     0.09621889209106901,
+     0.17090923366456423
+    ],
+    "n_injected": 46398,
+    "msg_scored": 0.1570677142286437,
+    "msg_scored_ci": [
+     0.11418600140208111,
+     0.18766433977853805
+    ],
+    "n_scored": 15019,
+    "track_any": 0.3166934387742493,
+    "n_injected_tracks": 8093,
+    "sender_k3": 0.37254901960784315,
+    "sender_kval": 0.30392156862745096,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0039722445695897024
+   },
+   "range_loc": {
+    "msg_all": 0.26417086943402734,
+    "msg_all_ci": [
+     0.20178746092483973,
+     0.3615789012818532
+    ],
+    "n_injected": 46398,
+    "msg_scored": 0.16832012783807176,
+    "msg_scored_ci": [
+     0.12978273958747572,
+     0.22841362317885158
+    ],
+    "n_scored": 15019,
+    "track_any": 0.7009761522303225,
+    "n_injected_tracks": 8093,
+    "sender_k3": 0.9019607843137255,
+    "sender_kval": 0.7745098039215687,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.005681818181818182
+   },
+   "appear": {
+    "msg_all": 4.3105306263201e-05,
+    "msg_all_ci": [
+     0.0,
+     0.00012114066589017261
+    ],
+    "n_injected": 46398,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 15019,
+    "track_any": 0.0002471271469170888,
+    "n_injected_tracks": 8093,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.14004914004914004,
+    "msg_all_ci": [
+     0.09626600518305552,
+     0.17095653420930626
+    ],
+    "n_injected": 46398,
+    "msg_scored": 0.1570677142286437,
+    "msg_scored_ci": [
+     0.11418600140208111,
+     0.18766433977853805
+    ],
+    "n_scored": 15019,
+    "track_any": 0.31694056592116643,
+    "n_injected_tracks": 8093,
+    "sender_k3": 0.37254901960784315,
+    "sender_kval": 0.30392156862745096,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0039722445695897024
+   },
+   "physics+range": {
+    "msg_all": 0.42064313116944696,
+    "msg_all_ci": [
+     0.39914465950919936,
+     0.44047335056244075
+    ],
+    "n_injected": 46398,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 15019,
+    "track_any": 0.8086000247127146,
+    "n_injected_tracks": 8093,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0073913917940466615
+   },
+   "physics+rx": {
+    "msg_all": 0.42066468382257854,
+    "msg_all_ci": [
+     0.3991765239650151,
+     0.44048974117665746
+    ],
+    "n_injected": 46398,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 15019,
+    "track_any": 0.8087235882861732,
+    "n_injected_tracks": 8093,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0073913917940466615
+   },
+   "_meta": {
+    "n_injected": 46398,
+    "n_recordings_with_injection": 86,
+    "scored_share": 0.3236992973835079
+   },
+   "name": "DoSRandomSybil",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 66286
+  },
+  "19": {
+   "physics": {
+    "msg_all": 0.4061694108311843,
+    "msg_all_ci": [
+     0.3851334575881635,
+     0.4301352372178303
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.9987915894626601,
+    "msg_scored_ci": [
+     0.9981855940058754,
+     0.9992911319997826
+    ],
+    "n_scored": 12413,
+    "track_any": 0.7185279187817258,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9607843137254902,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00881211010775204
+   },
+   "L1": {
+    "msg_all": 0.0022564967268399127,
+    "msg_all_ci": [
+     0.001302105750216473,
+     0.003400669112152707
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.0053170063642954965,
+    "msg_scored_ci": [
+     0.002629056919698527,
+     0.008648997005682623
+    ],
+    "n_scored": 12413,
+    "track_any": 0.011040609137055837,
+    "n_injected_tracks": 7880,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00702351350172316
+   },
+   "L2": {
+    "msg_all": 0.3112229716326126,
+    "msg_all_ci": [
+     0.2771673293986044,
+     0.33829853139065963
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.9994360750825747,
+    "msg_scored_ci": [
+     0.9988882408995616,
+     0.9998186874147903
+    ],
+    "n_scored": 12413,
+    "track_any": 0.49251269035532996,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 0.7647058823529411,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006281900274833137
+   },
+   "L3": {
+    "msg_all": 0.4452737552073001,
+    "msg_all_ci": [
+     0.4244421158848033,
+     0.47271788868538905
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.9908966406187062,
+    "msg_scored_ci": [
+     0.9893140965054266,
+     0.9922829484462276
+    ],
+    "n_scored": 12413,
+    "track_any": 0.8426395939086294,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010862452558565633
+   },
+   "fresh": {
+    "msg_all": 0.012001586986708987,
+    "msg_all_ci": [
+     0.007329547815585569,
+     0.01753456764170344
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.016192701200354466,
+    "msg_scored_ci": [
+     0.008943071571792669,
+     0.026390479928352185
+    ],
+    "n_scored": 12413,
+    "track_any": 0.05203045685279188,
+    "n_injected_tracks": 7880,
+    "sender_k3": 0.20588235294117646,
+    "sender_kval": 0.058823529411764705,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.011167822710814465
+   },
+   "physics+fresh": {
+    "msg_all": 0.41254215433445746,
+    "msg_all_ci": [
+     0.38999672083251363,
+     0.4360563466578795
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.9988721501651494,
+    "msg_scored_ci": [
+     0.9982585509048139,
+     0.9993842895967663
+    ],
+    "n_scored": 12413,
+    "track_any": 0.7196700507614213,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8333333333333334,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.019892684203638267
+   },
+   "range": {
+    "msg_all": 0.3597748462606626,
+    "msg_all_ci": [
+     0.3118425974321083,
+     0.43330477773298004
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.29227422863127367,
+    "msg_scored_ci": [
+     0.2659186310608821,
+     0.33765385186683844
+    ],
+    "n_scored": 12413,
+    "track_any": 0.8222081218274112,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9215686274509803,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006805391964402565
+   },
+   "range_loc": {
+    "msg_all": 0.3912418170997818,
+    "msg_all_ci": [
+     0.32990770392226326,
+     0.4856119907808486
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.3042777733021832,
+    "msg_scored_ci": [
+     0.2721988192131555,
+     0.36071646698103094
+    ],
+    "n_scored": 12413,
+    "track_any": 0.8628172588832488,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9215686274509803,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007241635039043755
+   },
+   "appear": {
+    "msg_all": 0.0008678833564768895,
+    "msg_all_ci": [
+     0.0004676937205782672,
+     0.0015060278691471803
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 12413,
+    "track_any": 0.004441624365482234,
+    "n_injected_tracks": 7880,
+    "sender_k3": 0.049019607843137254,
+    "sender_kval": 0.19607843137254902,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.36064272961713945,
+    "msg_all_ci": [
+     0.31242974165599413,
+     0.4350988104091737
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.29227422863127367,
+    "msg_scored_ci": [
+     0.2659186310608821,
+     0.33765385186683844
+    ],
+    "n_scored": 12413,
+    "track_any": 0.8248730964467005,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9215686274509803,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006805391964402565
+   },
+   "physics+range": {
+    "msg_all": 0.6248016266613767,
+    "msg_all_ci": [
+     0.5949314962258201,
+     0.671016351340714
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.999758317892532,
+    "msg_scored_ci": [
+     0.9994231964216981,
+     1.0
+    ],
+    "n_scored": 12413,
+    "track_any": 0.9361675126903554,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008288618418182611
+   },
+   "physics+rx": {
+    "msg_all": 0.6251487800039675,
+    "msg_all_ci": [
+     0.5951082740945071,
+     0.6715624028908538
+    ],
+    "n_injected": 40328,
+    "msg_scored": 0.999758317892532,
+    "msg_scored_ci": [
+     0.9994231964216981,
+     1.0
+    ],
+    "n_scored": 12413,
+    "track_any": 0.9373096446700507,
+    "n_injected_tracks": 7880,
+    "sender_k3": 1.0,
+    "sender_kval": 1.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008288618418182611
+   },
+   "_meta": {
+    "n_injected": 40328,
+    "n_recordings_with_injection": 86,
+    "scored_share": 0.30780103154136085
+   },
+   "name": "DoSDisruptiveSybil",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 63251
+  },
+  "12b": {
+   "physics": {
+    "msg_all": 0.01081661299644951,
+    "msg_all_ci": [
+     0.003060093537600917,
+     0.024851352505947562
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.010213964955534031,
+    "msg_scored_ci": [
+     0.0022272832424824265,
+     0.025645300701648204
+    ],
+    "n_scored": 11357,
+    "track_any": 0.16326530612244897,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.08823529411764706,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.00887784090909091
+   },
+   "L1": {
+    "msg_all": 0.00825695648583932,
+    "msg_all_ci": [
+     0.0016515471251775829,
+     0.015802056221599074
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.007572422294620058,
+    "msg_scored_ci": [
+     0.0012626424409477707,
+     0.014805801977166359
+    ],
+    "n_scored": 11357,
+    "track_any": 0.09523809523809523,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.058823529411764705,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.003615702479338843
+   },
+   "L2": {
+    "msg_all": 0.006110147799521097,
+    "msg_all_ci": [
+     0.003516160179506299,
+     0.009659354644846204
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.006515805230254469,
+    "msg_scored_ci": [
+     0.0037068234424554114,
+     0.010516242525144387
+    ],
+    "n_scored": 11357,
+    "track_any": 0.1836734693877551,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.08823529411764706,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.008038481404958678
+   },
+   "L3": {
+    "msg_all": 0.013789117331351663,
+    "msg_all_ci": [
+     0.0022790124268299867,
+     0.0376260697252898
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.014088227524874528,
+    "msg_scored_ci": [
+     0.001979689359946383,
+     0.03952808719607138
+    ],
+    "n_scored": 11357,
+    "track_any": 0.19047619047619047,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.049019607843137254,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.009975464876033058
+   },
+   "fresh": {
+    "msg_all": 1.0,
+    "msg_all_ci": [
+     1.0,
+     1.0
+    ],
+    "n_injected": 12111,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 11357,
+    "track_any": 1.0,
+    "n_injected_tracks": 147,
+    "sender_k3": 1.0,
+    "sender_kval": 0.8137254901960784,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012106146694214876
+   },
+   "physics+fresh": {
+    "msg_all": 1.0,
+    "msg_all_ci": [
+     1.0,
+     1.0
+    ],
+    "n_injected": 12111,
+    "msg_scored": 1.0,
+    "msg_scored_ci": [
+     1.0,
+     1.0
+    ],
+    "n_scored": 11357,
+    "track_any": 1.0,
+    "n_injected_tracks": 147,
+    "sender_k3": 1.0,
+    "sender_kval": 0.6274509803921569,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.020951704545454544
+   },
+   "range": {
+    "msg_all": 0.0013211130377342912,
+    "msg_all_ci": [
+     0.00018938704283015062,
+     0.003290959135964875
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.0011446684863960553,
+    "msg_scored_ci": [
+     0.0,
+     0.003094268116428649
+    ],
+    "n_scored": 11357,
+    "track_any": 0.04081632653061224,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.00980392156862745,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006327479338842975
+   },
+   "range_loc": {
+    "msg_all": 0.0005779869540087524,
+    "msg_all_ci": [
+     8.989717698935465e-05,
+     0.001229090998937563
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.0002641542660913974,
+    "msg_scored_ci": [
+     0.0,
+     0.0008094548147276647
+    ],
+    "n_scored": 11357,
+    "track_any": 0.04081632653061224,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0064243285123966945
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 11357,
+    "track_any": 0.0,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.0013211130377342912,
+    "msg_all_ci": [
+     0.00018938704283015062,
+     0.003290959135964875
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.0011446684863960553,
+    "msg_scored_ci": [
+     0.0,
+     0.003094268116428649
+    ],
+    "n_scored": 11357,
+    "track_any": 0.04081632653061224,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.00980392156862745,
+    "sender_kval": 0.0,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006327479338842975
+   },
+   "physics+range": {
+    "msg_all": 0.009743208653290397,
+    "msg_all_ci": [
+     0.0029056795131845842,
+     0.02223151756224447
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.008893193625077045,
+    "msg_scored_ci": [
+     0.0017335070983250072,
+     0.022752784764642466
+    ],
+    "n_scored": 11357,
+    "track_any": 0.17006802721088435,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007328254132231405
+   },
+   "physics+rx": {
+    "msg_all": 0.009743208653290397,
+    "msg_all_ci": [
+     0.0029056795131845842,
+     0.02223151756224447
+    ],
+    "n_injected": 12111,
+    "msg_scored": 0.008893193625077045,
+    "msg_scored_ci": [
+     0.0017335070983250072,
+     0.022752784764642466
+    ],
+    "n_scored": 11357,
+    "track_any": 0.17006802721088435,
+    "n_injected_tracks": 147,
+    "sender_k3": 0.0784313725490196,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007328254132231405
+   },
+   "_meta": {
+    "n_injected": 12111,
+    "n_recordings_with_injection": 81,
+    "scored_share": 0.9377425480967715
+   },
+   "name": "DelayedBurst",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  },
+  "20": {
+   "physics": {
+    "msg_all": 0.011802918706253718,
+    "msg_all_ci": [
+     0.004915874025928487,
+     0.021441362190805335
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.009861265529076232,
+    "msg_scored_ci": [
+     0.002991531524914658,
+     0.020153495993801795
+    ],
+    "n_scored": 20687,
+    "track_any": 0.3673469387755102,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.20408163265306123,
+    "sender_kval": 0.030612244897959183,
+    "k_val": 22,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.009767441860465116
+   },
+   "L1": {
+    "msg_all": 0.007411135001601172,
+    "msg_all_ci": [
+     0.0024033780390395627,
+     0.013667551261080373
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.005849083965775608,
+    "msg_scored_ci": [
+     0.0007072400076987233,
+     0.011518860790001445
+    ],
+    "n_scored": 20687,
+    "track_any": 0.17346938775510204,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.09183673469387756,
+    "sender_kval": 0.02040816326530612,
+    "k_val": 25,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.004930232558139535
+   },
+   "L2": {
+    "msg_all": 0.005443981883892219,
+    "msg_all_ci": [
+     0.003264214826654633,
+     0.008159700338635
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.005607386281239426,
+    "msg_scored_ci": [
+     0.0031995917396975618,
+     0.008607586131490633
+    ],
+    "n_scored": 20687,
+    "track_any": 0.32653061224489793,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.17346938775510204,
+    "sender_kval": 0.01020408163265306,
+    "k_val": 14,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.007767441860465117
+   },
+   "L3": {
+    "msg_all": 0.018116107781691752,
+    "msg_all_ci": [
+     0.006191484894498911,
+     0.03310373141672329
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.016193744863924203,
+    "msg_scored_ci": [
+     0.0033749627898358894,
+     0.03195936472703682
+    ],
+    "n_scored": 20687,
+    "track_any": 0.7244897959183674,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.16326530612244897,
+    "sender_kval": 0.030612244897959183,
+    "k_val": 15,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.011162790697674419
+   },
+   "fresh": {
+    "msg_all": 0.010887963767784437,
+    "msg_all_ci": [
+     0.00571227402298518,
+     0.016406767371561538
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.011408130710107798,
+    "msg_scored_ci": [
+     0.0061329346991522695,
+     0.017009978946020136
+    ],
+    "n_scored": 20687,
+    "track_any": 0.29591836734693877,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.20408163265306123,
+    "sender_kval": 0.030612244897959183,
+    "k_val": 22,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.011581395348837209
+   },
+   "physics+fresh": {
+    "msg_all": 0.02264513472711469,
+    "msg_all_ci": [
+     0.012653238624116507,
+     0.03275479662727105
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.02126939623918403,
+    "msg_scored_ci": [
+     0.011297599759229171,
+     0.031884613620440164
+    ],
+    "n_scored": 20687,
+    "track_any": 0.5612244897959183,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.3877551020408163,
+    "sender_kval": 0.030612244897959183,
+    "k_val": 38,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.02130232558139535
+   },
+   "range": {
+    "msg_all": 0.10114826844777895,
+    "msg_all_ci": [
+     0.047934212937591925,
+     0.15247463927115237
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.10663701841736356,
+    "msg_scored_ci": [
+     0.05296324417387563,
+     0.15959480643995233
+    ],
+    "n_scored": 20687,
+    "track_any": 0.16326530612244897,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.15306122448979592,
+    "sender_kval": 0.1326530612244898,
+    "k_val": 25,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.004930232558139535
+   },
+   "range_loc": {
+    "msg_all": 0.08390136785763301,
+    "msg_all_ci": [
+     0.04279560817396522,
+     0.12945115797061943
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.08048532895054865,
+    "msg_scored_ci": [
+     0.04019715308598169,
+     0.1284396543906093
+    ],
+    "n_scored": 20687,
+    "track_any": 0.3163265306122449,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.29591836734693877,
+    "sender_kval": 0.12244897959183673,
+    "k_val": 25,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.004790697674418604
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 20687,
+    "track_any": 0.0,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.10114826844777895,
+    "msg_all_ci": [
+     0.047934212937591925,
+     0.15247463927115237
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.10663701841736356,
+    "msg_scored_ci": [
+     0.05296324417387563,
+     0.15959480643995233
+    ],
+    "n_scored": 20687,
+    "track_any": 0.16326530612244897,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.15306122448979592,
+    "sender_kval": 0.1326530612244898,
+    "k_val": 25,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.004930232558139535
+   },
+   "physics+range": {
+    "msg_all": 0.01948854018939567,
+    "msg_all_ci": [
+     0.0052901007768287765,
+     0.03882273901893161
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.018030647266399188,
+    "msg_scored_ci": [
+     0.003633874471960402,
+     0.03815138861655764
+    ],
+    "n_scored": 20687,
+    "track_any": 0.3469387755102041,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.19387755102040816,
+    "sender_kval": 0.030612244897959183,
+    "k_val": 22,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.008325581395348837
+   },
+   "physics+rx": {
+    "msg_all": 0.01948854018939567,
+    "msg_all_ci": [
+     0.0052901007768287765,
+     0.03882273901893161
+    ],
+    "n_injected": 21859,
+    "msg_scored": 0.018030647266399188,
+    "msg_scored_ci": [
+     0.003633874471960402,
+     0.03815138861655764
+    ],
+    "n_scored": 20687,
+    "track_any": 0.3469387755102041,
+    "n_injected_tracks": 98,
+    "sender_k3": 0.19387755102040816,
+    "sender_kval": 0.030612244897959183,
+    "k_val": 22,
+    "n_attackers": 98,
+    "fa_on_scenario_genuine": 0.008325581395348837
+   },
+   "_meta": {
+    "n_injected": 21859,
+    "n_recordings_with_injection": 74,
+    "scored_share": 0.9463836406057001
+   },
+   "name": "GhostNearReceiver",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 64859
+  },
+  "21": {
+   "physics": {
+    "msg_all": 0.005339028296849973,
+    "msg_all_ci": [
+     0.003314381962678344,
+     0.007957988300352308
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.004967762392981715,
+    "msg_scored_ci": [
+     0.0029392187006721197,
+     0.0078689282424606
+    ],
+    "n_scored": 18922,
+    "track_any": 0.20320855614973263,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.13725490196078433,
+    "sender_kval": 0.0,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012898060843266322
+   },
+   "L1": {
+    "msg_all": 0.003688783186914527,
+    "msg_all_ci": [
+     0.0006042580781861587,
+     0.007854236120387013
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.00338230631011521,
+    "msg_scored_ci": [
+     0.00040793375248384127,
+     0.0072101147579331235
+    ],
+    "n_scored": 18922,
+    "track_any": 0.06417112299465241,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.0392156862745098,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.006048745774773172
+   },
+   "L2": {
+    "msg_all": 0.007426102994709509,
+    "msg_all_ci": [
+     0.004824610809133067,
+     0.011002875283714282
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.007927280414332523,
+    "msg_scored_ci": [
+     0.0050322165987608265,
+     0.012151629410663228
+    ],
+    "n_scored": 18922,
+    "track_any": 0.24064171122994651,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.17647058823529413,
+    "sender_kval": 0.0196078431372549,
+    "k_val": 14,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.007294075787226472
+   },
+   "L3": {
+    "msg_all": 0.00417414939571907,
+    "msg_all_ci": [
+     0.0025809731845305383,
+     0.006544493221558687
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.0033294577740196596,
+    "msg_scored_ci": [
+     0.0017620462996100368,
+     0.005609730896294549
+    ],
+    "n_scored": 18922,
+    "track_any": 0.2192513368983957,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.09803921568627451,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 15,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.017256715886852875
+   },
+   "fresh": {
+    "msg_all": 0.009998543901373586,
+    "msg_all_ci": [
+     0.005413798060363886,
+     0.014810848958478465
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.01078110136349223,
+    "msg_scored_ci": [
+     0.0059728785594447865,
+     0.01607182217366045
+    ],
+    "n_scored": 18922,
+    "track_any": 0.1711229946524064,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.16666666666666666,
+    "sender_kval": 0.0392156862745098,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.012987012987012988
+   },
+   "physics+fresh": {
+    "msg_all": 0.01533757219822356,
+    "msg_all_ci": [
+     0.010384938558908242,
+     0.02004522184524393
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.015748863756473944,
+    "msg_scored_ci": [
+     0.010801999963897387,
+     0.021101651810720767
+    ],
+    "n_scored": 18922,
+    "track_any": 0.33689839572192515,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.29411764705882354,
+    "sender_kval": 0.00980392156862745,
+    "k_val": 38,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.025840597758405977
+   },
+   "range": {
+    "msg_all": 0.985681696840266,
+    "msg_all_ci": [
+     0.9511020512930958,
+     1.0
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.9844625303879082,
+    "msg_scored_ci": [
+     0.9474257876092442,
+     1.0
+    ],
+    "n_scored": 18922,
+    "track_any": 0.9946524064171123,
+    "n_injected_tracks": 187,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9411764705882353,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0057818893435331795
+   },
+   "range_loc": {
+    "msg_all": 0.9800029121972528,
+    "msg_all_ci": [
+     0.9399644128618453,
+     1.0
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.9783321002008244,
+    "msg_scored_ci": [
+     0.9345584584875398,
+     1.0
+    ],
+    "n_scored": 18922,
+    "track_any": 0.9946524064171123,
+    "n_injected_tracks": 187,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9411764705882353,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0062266500622665
+   },
+   "appear": {
+    "msg_all": 0.0,
+    "msg_all_ci": [
+     0.0,
+     0.0
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.0,
+    "msg_scored_ci": [
+     0.0,
+     0.0
+    ],
+    "n_scored": 18922,
+    "track_any": 0.0,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.0,
+    "sender_kval": 0.0,
+    "k_val": 1,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0
+   },
+   "rx": {
+    "msg_all": 0.985681696840266,
+    "msg_all_ci": [
+     0.9511020512930958,
+     1.0
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.9844625303879082,
+    "msg_scored_ci": [
+     0.9474257876092442,
+     1.0
+    ],
+    "n_scored": 18922,
+    "track_any": 0.9946524064171123,
+    "n_injected_tracks": 187,
+    "sender_k3": 1.0,
+    "sender_kval": 0.9411764705882353,
+    "k_val": 25,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.0057818893435331795
+   },
+   "physics+range": {
+    "msg_all": 0.9631607047517352,
+    "msg_all_ci": [
+     0.9130633482006473,
+     0.9945447268136677
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.9634288130218793,
+    "msg_scored_ci": [
+     0.9104756716244451,
+     0.995401435834657
+    ],
+    "n_scored": 18922,
+    "track_any": 0.983957219251337,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.9705882352941176,
+    "sender_kval": 0.9509803921568627,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010585305105853052
+   },
+   "physics+rx": {
+    "msg_all": 0.9631607047517352,
+    "msg_all_ci": [
+     0.9130633482006473,
+     0.9945447268136677
+    ],
+    "n_injected": 20603,
+    "msg_scored": 0.9634288130218793,
+    "msg_scored_ci": [
+     0.9104756716244451,
+     0.995401435834657
+    ],
+    "n_scored": 18922,
+    "track_any": 0.983957219251337,
+    "n_injected_tracks": 187,
+    "sender_k3": 0.9705882352941176,
+    "sender_kval": 0.9509803921568627,
+    "k_val": 22,
+    "n_attackers": 102,
+    "fa_on_scenario_genuine": 0.010585305105853052
+   },
+   "_meta": {
+    "n_injected": 20603,
+    "n_recordings_with_injection": 84,
+    "scored_share": 0.9184099402999563
+   },
+   "name": "FarPosOffset",
+   "n_attackers_chosen": 102,
+   "scenario_messages": 43087
+  }
+ }
+}

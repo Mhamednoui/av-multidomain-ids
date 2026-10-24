@@ -1,0 +1,252 @@
+{
+ "Mobile": [
+  {
+   "messages": 393,
+   "duration_s": 234.39800000190735,
+   "dt_median_s": 0.4010000228881836,
+   "dt_p95_s": 1.003000020980835,
+   "share_dt_gt_1s": 0.1556122448979592,
+   "dist_to_rx_m_min_max": [
+    5.165116600790021,
+    411.01365258656375
+   ],
+   "speed_median": 4.39,
+   "speed_max": 13.41,
+   "implied_speed_max": 14.355375593584133,
+   "share_pairs_speed_position_mismatch_gt_10": 0.0,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 2.8200000000000003,
+   "rank": 1,
+   "location": "Mobile/Cologne",
+   "alarms": 13,
+   "top_checks": "heading_rate:24,pos_heading:23,field_ranges:14,speed_change:12"
+  },
+  {
+   "messages": 130,
+   "duration_s": 71.89999985694885,
+   "dt_median_s": 0.4010002613067627,
+   "dt_p95_s": 1.2085999965667724,
+   "share_dt_gt_1s": 0.11627906976744186,
+   "dist_to_rx_m_min_max": [
+    126.43092882498406,
+    353.7873021816534
+   ],
+   "speed_median": 6.720000000000001,
+   "speed_max": 13.280000000000001,
+   "implied_speed_max": 14.297167420609368,
+   "share_pairs_speed_position_mismatch_gt_10": 0.0,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 2.895,
+   "rank": 2,
+   "location": "Mobile/Cologne",
+   "alarms": 12,
+   "top_checks": "pos_heading:17,heading_rate:16,field_ranges:12,speed_change:1"
+  },
+  {
+   "messages": 72,
+   "duration_s": 42.00600004196167,
+   "dt_median_s": 0.5199999809265137,
+   "dt_p95_s": 1.0,
+   "share_dt_gt_1s": 0.028169014084507043,
+   "dist_to_rx_m_min_max": [
+    9.296917105522407,
+    154.1269093357471
+   ],
+   "speed_median": 4.725,
+   "speed_max": 8.71,
+   "implied_speed_max": 9.033195404783127,
+   "share_pairs_speed_position_mismatch_gt_10": 0.0,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 3.66,
+   "rank": 3,
+   "location": "Mobile/Dusseldorf",
+   "alarms": 4,
+   "top_checks": "pos_heading:13,heading_rate:11"
+  },
+  {
+   "messages": 28,
+   "duration_s": 6.20199990272522,
+   "dt_median_s": 0.20100021362304688,
+   "dt_p95_s": 0.46870005130767817,
+   "share_dt_gt_1s": 0.0,
+   "dist_to_rx_m_min_max": null,
+   "speed_median": 8.015,
+   "speed_max": 15.73,
+   "implied_speed_max": 15.508566814388645,
+   "share_pairs_speed_position_mismatch_gt_10": 0.0,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 2.81,
+   "rank": 4,
+   "location": "Mobile/Highway",
+   "alarms": 4,
+   "top_checks": "speed_change:11,accel_consistency:6"
+  },
+  {
+   "messages": 12,
+   "duration_s": 4.597999811172485,
+   "dt_median_s": 0.20100021362304688,
+   "dt_p95_s": 1.0495001077651978,
+   "share_dt_gt_1s": 0.09090909090909091,
+   "dist_to_rx_m_min_max": [
+    229.40709878305043,
+    237.01502818630874
+   ],
+   "speed_median": 3.88,
+   "speed_max": 6.45,
+   "implied_speed_max": 5.73823401809189,
+   "share_pairs_speed_position_mismatch_gt_10": 0.0,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 16.715,
+   "rank": 5,
+   "location": "Mobile/Aachen",
+   "alarms": 4,
+   "top_checks": "pos_heading:7,heading_rate:7,field_ranges:4"
+  },
+  {
+   "messages": 5,
+   "duration_s": 3.999999761581421,
+   "dt_median_s": 0.9994997978210449,
+   "dt_p95_s": 1.0034001231193543,
+   "share_dt_gt_1s": 0.25,
+   "dist_to_rx_m_min_max": null,
+   "speed_median": 31.18,
+   "speed_max": 31.650000000000002,
+   "implied_speed_max": 0.0,
+   "share_pairs_speed_position_mismatch_gt_10": 1.0,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 27.8,
+   "rank": 6,
+   "location": "Mobile/Highway",
+   "alarms": 4,
+   "top_checks": "pos_speed:4,kf_nis:4"
+  }
+ ],
+ "Stationary": [
+  {
+   "messages": 695,
+   "duration_s": 140.93700003623962,
+   "dt_median_s": 0.1279999017715454,
+   "dt_p95_s": 0.48169997930526737,
+   "share_dt_gt_1s": 0.020172910662824207,
+   "dist_to_rx_m_min_max": [
+    32.65517175088971,
+    4093.7826679027385
+   ],
+   "speed_median": 41.67,
+   "speed_max": 48.870000000000005,
+   "implied_speed_max": 64.34655880369526,
+   "share_pairs_speed_position_mismatch_gt_10": 0.17579250720461095,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 2.83,
+   "rank": 1,
+   "location": "Stationary/A44-Jackerath",
+   "alarms": 79,
+   "top_checks": "kf_cusum_hi:217,beacon_rate:71,implied_speed:58,kf_nis:42"
+  },
+  {
+   "messages": 141,
+   "duration_s": 89.84100008010864,
+   "dt_median_s": 0.5189999341964722,
+   "dt_p95_s": 1.0399999618530273,
+   "share_dt_gt_1s": 0.22142857142857142,
+   "dist_to_rx_m_min_max": [
+    0.760732729392094,
+    113.2458656474847
+   ],
+   "speed_median": 0.58,
+   "speed_max": 10.620000000000001,
+   "implied_speed_max": 60.11003728955206,
+   "share_pairs_speed_position_mismatch_gt_10": 0.03571428571428571,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 2.8200000000000003,
+   "rank": 2,
+   "location": "Stationary/Aachen-Ponttor",
+   "alarms": 42,
+   "top_checks": "kf_cusum_hi:36,kf_nis:9,pos_speed:6,speed_change:4"
+  },
+  {
+   "messages": 745,
+   "duration_s": 156.49999976158142,
+   "dt_median_s": 0.10099995136260986,
+   "dt_p95_s": 0.40085003376007083,
+   "share_dt_gt_1s": 0.0228494623655914,
+   "dist_to_rx_m_min_max": [
+    15.9712532196756,
+    4234.894127462844
+   ],
+   "speed_median": 41.660000000000004,
+   "speed_max": 43.550000000000004,
+   "implied_speed_max": 64.03726690672882,
+   "share_pairs_speed_position_mismatch_gt_10": 0.1303763440860215,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 2.83,
+   "rank": 3,
+   "location": "Stationary/A44-Jackerath",
+   "alarms": 26,
+   "top_checks": "kf_cusum_hi:171,kf_nis:56,implied_speed:42,pos_speed:37"
+  },
+  {
+   "messages": 427,
+   "duration_s": 112.99799966812134,
+   "dt_median_s": 0.19900012016296387,
+   "dt_p95_s": 0.6762499809265137,
+   "share_dt_gt_1s": 0.03286384976525822,
+   "dist_to_rx_m_min_max": [
+    1817.7648969378554,
+    4247.543833906916
+   ],
+   "speed_median": 27.85,
+   "speed_max": 32.64,
+   "implied_speed_max": 36.66892726065187,
+   "share_pairs_speed_position_mismatch_gt_10": 0.046948356807511735,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 2.8200000000000003,
+   "rank": 4,
+   "location": "Stationary/A44-Jackerath",
+   "alarms": 18,
+   "top_checks": "beacon_rate:18,kf_nis:4,speed_change:1"
+  },
+  {
+   "messages": 72,
+   "duration_s": 53.32200026512146,
+   "dt_median_s": 0.8819999694824219,
+   "dt_p95_s": 1.9945000410079956,
+   "share_dt_gt_1s": 0.2535211267605634,
+   "dist_to_rx_m_min_max": [
+    44.47794680709181,
+    80.98718881310553
+   ],
+   "speed_median": 2.1900000000000004,
+   "speed_max": 18.44,
+   "implied_speed_max": 18.913284632399325,
+   "share_pairs_speed_position_mismatch_gt_10": 0.0,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 3.02,
+   "rank": 5,
+   "location": "Stationary/Aachen-Ponttor",
+   "alarms": 13,
+   "top_checks": "speed_change:25,accel_consistency:8,beacon_rate:2,pos_speed:1"
+  },
+  {
+   "messages": 73,
+   "duration_s": 58.5,
+   "dt_median_s": 0.751500129699707,
+   "dt_p95_s": 1.9988998413085937,
+   "share_dt_gt_1s": 0.2916666666666667,
+   "dist_to_rx_m_min_max": [
+    40.013206385824894,
+    88.97604389296964
+   ],
+   "speed_median": 1.83,
+   "speed_max": 18.16,
+   "implied_speed_max": 22.551224710014164,
+   "share_pairs_speed_position_mismatch_gt_10": 0.0,
+   "gnss_jumps(implied>70&jump>=15m)": 0,
+   "pos_sigma_median": 2.98,
+   "rank": 6,
+   "location": "Stationary/Aachen-Ponttor",
+   "alarms": 12,
+   "top_checks": "speed_change:19,accel_consistency:11"
+  }
+ ]
+}

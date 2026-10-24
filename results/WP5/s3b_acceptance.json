@@ -1,0 +1,176 @@
+{
+ "gate": {
+  "Mobile": {
+   "E1_ratio_range_far": [
+    0.9992683061744493,
+    1.0454452193554058
+   ],
+   "E1": true,
+   "E2_far": 0.0002079434393844874,
+   "E2_near": 0.0072439353099730455,
+   "E2": true,
+   "E2prime_far": 0.0004162330905306972,
+   "E2prime_near": 0.005652577406563739,
+   "E2prime": true,
+   "E3_far_age_p99": 0.28785805702209466,
+   "E3_near_age_p99_max_bin": 0.9920956993103027,
+   "E3_far_recordings": 4,
+   "E3_top_recording_share": 0.37037789516456726,
+   "E3": true,
+   "E4_margin_db": 6.684622933002402,
+   "E4": true,
+   "explained_pre_registered": true,
+   "explained_amended_E2prime": true
+  },
+  "Stationary": {
+   "E1_ratio_range_far": [
+    0.9968573542117101,
+    0.9988673888384335
+   ],
+   "E1": true,
+   "E2_far": 0.018083401372886995,
+   "E2_near": 0.02140772791306098,
+   "E2": false,
+   "E2prime_far": 0.0,
+   "E2prime_near": 0.0024414979528978704,
+   "E2prime": true,
+   "E3_far_age_p99": 1.7752217411994982,
+   "E3_near_age_p99_max_bin": 1.682283973693846,
+   "E3_far_recordings": 158,
+   "E3_top_recording_share": 0.05528708755520915,
+   "E3": true,
+   "E4_margin_db": 10.014106547248048,
+   "E4": true,
+   "explained_pre_registered": false,
+   "explained_amended_E2prime": true
+  }
+ },
+ "F1": {
+  "Mobile": {
+   "fa_msg_B": 0.011526048870447211,
+   "met_msg": true,
+   "genuine_senders_kval": 0.0,
+   "met_sender": true,
+   "genuine_senders_k3": 0.07608695652173914,
+   "alarms_per_hour": 83.3711996560182,
+   "receiver_hours": 0.5997274863057667
+  },
+  "Stationary": {
+   "fa_msg_B": 0.00970130201684963,
+   "met_msg": true,
+   "genuine_senders_kval": 0.009900990099009901,
+   "met_sender": true,
+   "genuine_senders_k3": 0.132013201320132,
+   "alarms_per_hour": 109.53872506640062,
+   "receiver_hours": 3.8160020554065706
+  }
+ },
+ "F2": {
+  "Mobile": {
+   "fa_msg_A": 0.9230059935454127,
+   "gt_2pct": true
+  },
+  "Stationary": {
+   "fa_msg_A": 0.9511685659247568,
+   "gt_2pct": true
+  }
+ },
+ "R2": {
+  "Mobile": {
+   "gate_pre_registered": true,
+   "gate_amended": true,
+   "fa_pooled_among_rx_messages": 0.007445008460236886,
+   "fa_met": true,
+   "far_offset_detection_msg": 0.6865180854950675,
+   "far_offset_detection_sender": 0.6875,
+   "range_threshold_km": 3.524247634097324
+  },
+  "Stationary": {
+   "gate_pre_registered": false,
+   "gate_amended": true,
+   "fa_pooled_among_rx_messages": 0.004920277577923736,
+   "fa_met": true,
+   "far_offset_detection_msg": 0.985681696840266,
+   "far_offset_detection_sender": 1.0,
+   "range_threshold_km": 4.258869141583614
+  }
+ },
+ "R3": {
+  "Mobile": {
+   "fa_per_evaluable_first": 0.0625,
+   "evaluable_first_test": 32,
+   "fa_met": false,
+   "ghost_tracks_detected": 0.21052631578947367,
+   "ghost_tracks": 19,
+   "physical_300m_fa": 0.625,
+   "fresh_on_delay_burst": 1.0
+  },
+  "Stationary": {
+   "fa_per_evaluable_first": 0.0,
+   "evaluable_first_test": 262,
+   "fa_met": true,
+   "ghost_tracks_detected": 0.0,
+   "ghost_tracks": 98,
+   "physical_300m_fa": 0.40076335877862596,
+   "fresh_on_delay_burst": 1.0
+  },
+  "ghost_met_in_one_env": false
+ },
+ "I1": {
+  "Mobile": {
+   "types_used": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19"
+   ],
+   "mean_scored_physics": 0.7731116945210514,
+   "mean_scored_physics_rx": 0.789591742615437,
+   "mean_all_rows": 0.6878359221306487,
+   "mean_sender_k3": 0.90234375,
+   "mean_sender_kval": 0.77734375,
+   "veremi_same_types": 0.8625564348371338,
+   "met": true
+  },
+  "Stationary": {
+   "types_used": [
+    "2",
+    "3",
+    "4",
+    "5",
+    "6",
+    "7",
+    "8",
+    "9",
+    "10",
+    "11",
+    "13",
+    "14",
+    "15",
+    "16",
+    "17",
+    "18",
+    "19"
+   ],
+   "mean_scored_physics": 0.8000957654949084,
+   "mean_scored_physics_rx": 0.8025743376205545,
+   "mean_all_rows": 0.6647193207604379,
+   "mean_sender_k3": 0.8685121107266437,
+   "mean_sender_kval": 0.765282583621684,
+   "veremi_same_types": 0.8091803090912545,
+   "met": true
+  }
+ }
+}
