@@ -12,7 +12,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
-| WP6 Cross-domain | S3 | IN PROGRESS | worker opus (medium, T4) | 2026-10-22 | fusion over 5 domains (LiDAR interim) |
+| WP6 Cross-domain | S3 | REVIEW | worker opus (medium, T4) | 2026-10-24 | PARTIAL: test FA tick 6.4% (rule 3%), det 82.5%, cross +25 pts; reports/WP6_S3.md |
 | WP7 System | S1b | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-24 | S1 APPROVED; S1b = wire frozen network domain + V2X birth causality count |
 
 ## Overall progress (orchestrator updates this at every approval)

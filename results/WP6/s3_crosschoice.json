@@ -1,0 +1,740 @@
+{
+ "note": "S3 val-only cross additions, DEV groups (train + val), leave-one-group-out as S2b; no test data",
+ "rule": "FA <= 1.5% then max selection detection",
+ "kitti": {
+  "base_inst": {
+   "fa_rows": 0.012418503570319777,
+   "clean_rows": 3221,
+   "fa_per_group": {
+    "0002": 0.0,
+    "0011": 0.008298755186721992,
+    "0013": 0.006711409395973154,
+    "0015": 0.003257328990228013,
+    "0017": 0.0,
+    "0019": 0.018072289156626505,
+    "0020": 0.011235955056179775,
+    "0027": 0.0,
+    "0029": 0.011235955056179775,
+    "0035": 0.0,
+    "0046": 0.0,
+    "0060": 0.0125,
+    "0070": 0.029953917050691243,
+    "0106": 0.02564102564102564,
+    "0113": 0.011235955056179775
+   },
+   "fa_val_groups": 0.0035087719298245615,
+   "attacks": {
+    "drift": {
+     "runs": 270,
+     "detection": 0.6111111111111112,
+     "detected": 165,
+     "detection_val_groups": 0.6333333333333333,
+     "median_delay_s": 2.0,
+     "undecided": 0.503030303030303,
+     "blame_counts": {
+      "undecided": 83,
+      "gps": 77,
+      "imu": 5
+     },
+     "correct_blame": 0.4666666666666667,
+     "wrong_blame": 0.030303030303030304
+    },
+    "accel_drift": {
+     "runs": 270,
+     "detection": 0.5,
+     "detected": 135,
+     "detection_val_groups": 0.6,
+     "median_delay_s": 5.0,
+     "undecided": 0.2962962962962963,
+     "blame_counts": {
+      "gps": 93,
+      "undecided": 40,
+      "imu": 2
+     },
+     "correct_blame": 0.6888888888888889,
+     "wrong_blame": 0.014814814814814815
+    },
+    "doppler_spoof": {
+     "runs": 270,
+     "detection": 0.5222222222222223,
+     "detected": 141,
+     "detection_val_groups": 0.6,
+     "median_delay_s": 4.0,
+     "undecided": 0.425531914893617,
+     "blame_counts": {
+      "gps": 72,
+      "undecided": 60,
+      "imu": 8,
+      "can": 1
+     },
+     "correct_blame": 0.5106382978723404,
+     "wrong_blame": 0.06382978723404255
+    },
+    "meaconing": {
+     "runs": 270,
+     "detection": 0.5185185185185185,
+     "detected": 140,
+     "detection_val_groups": 0.5666666666666667,
+     "median_delay_s": 3.0,
+     "undecided": 0.19285714285714287,
+     "blame_counts": {
+      "gps": 113,
+      "undecided": 27
+     },
+     "correct_blame": 0.8071428571428572,
+     "wrong_blame": 0.0
+    },
+    "lidar_scale": {
+     "runs": 150,
+     "detection": 0.6266666666666667,
+     "detected": 94,
+     "detection_val_groups": 0.7333333333333333,
+     "median_delay_s": 0.0,
+     "undecided": 0.4148936170212766,
+     "blame_counts": {
+      "lidar": 52,
+      "undecided": 39,
+      "gps": 2,
+      "imu": 1
+     },
+     "correct_blame": 0.5531914893617021,
+     "wrong_blame": 0.031914893617021274
+    },
+    "lidar_bias": {
+     "runs": 150,
+     "detection": 0.8,
+     "detected": 120,
+     "detection_val_groups": 0.8,
+     "median_delay_s": 2.0,
+     "undecided": 0.5166666666666667,
+     "blame_counts": {
+      "undecided": 62,
+      "lidar": 56,
+      "gps": 2
+     },
+     "correct_blame": 0.4666666666666667,
+     "wrong_blame": 0.016666666666666666
+    },
+    "lidar_yaw": {
+     "runs": 150,
+     "detection": 0.19333333333333333,
+     "detected": 29,
+     "detection_val_groups": 0.1,
+     "median_delay_s": 2.0,
+     "undecided": 0.7931034482758621,
+     "blame_counts": {
+      "undecided": 23,
+      "gps": 3,
+      "imu": 3
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.20689655172413793
+    },
+    "can_scale": {
+     "runs": 150,
+     "detection": 0.56,
+     "detected": 84,
+     "detection_val_groups": 0.6,
+     "median_delay_s": 1.0,
+     "undecided": 0.5238095238095238,
+     "blame_counts": {
+      "undecided": 44,
+      "can": 35,
+      "imu": 2,
+      "lidar": 2,
+      "gps": 1
+     },
+     "correct_blame": 0.4166666666666667,
+     "wrong_blame": 0.05952380952380952
+    },
+    "can_offset": {
+     "runs": 150,
+     "detection": 0.7466666666666667,
+     "detected": 112,
+     "detection_val_groups": 0.8333333333333334,
+     "median_delay_s": 2.0,
+     "undecided": 0.5446428571428571,
+     "blame_counts": {
+      "undecided": 61,
+      "can": 47,
+      "gps": 2,
+      "imu": 1,
+      "lidar": 1
+     },
+     "correct_blame": 0.41964285714285715,
+     "wrong_blame": 0.03571428571428571
+    },
+    "can_freeze": {
+     "runs": 150,
+     "detection": 0.6666666666666666,
+     "detected": 100,
+     "detection_val_groups": 0.8,
+     "median_delay_s": 2.0000000000000004,
+     "undecided": 0.22,
+     "blame_counts": {
+      "can": 76,
+      "undecided": 22,
+      "lidar": 2
+     },
+     "correct_blame": 0.76,
+     "wrong_blame": 0.02
+    },
+    "gps_can": {
+     "runs": 150,
+     "detection": 0.7333333333333333,
+     "detected": 110,
+     "detection_val_groups": 0.8,
+     "median_delay_s": 2.0,
+     "undecided": 0.45454545454545453,
+     "blame_counts": {
+      "lidar": 53,
+      "undecided": 50,
+      "can": 5,
+      "gps": 2
+     }
+    }
+   },
+   "worst_group": [
+    "0070",
+    0.029953917050691243
+   ],
+   "mean_detection_single": 0.5745185185185185,
+   "selection_mean_detection": 0.6407407407407407,
+   "pooled_single": {
+    "correct_blame": 0.5544642857142857,
+    "wrong_blame": 0.033928571428571426,
+    "undecided": 0.41160714285714284,
+    "detected": 1120
+   }
+  },
+  "inst_quality_flag": {
+   "fa_rows": 0.012418503570319777,
+   "clean_rows": 3221,
+   "fa_per_group": {
+    "0002": 0.0,
+    "0011": 0.008298755186721992,
+    "0013": 0.006711409395973154,
+    "0015": 0.003257328990228013,
+    "0017": 0.0,
+    "0019": 0.018072289156626505,
+    "0020": 0.011235955056179775,
+    "0027": 0.0,
+    "0029": 0.011235955056179775,
+    "0035": 0.0,
+    "0046": 0.0,
+    "0060": 0.0125,
+    "0070": 0.029953917050691243,
+    "0106": 0.02564102564102564,
+    "0113": 0.011235955056179775
+   },
+   "fa_val_groups": 0.0035087719298245615,
+   "attacks": {
+    "drift": {
+     "runs": 270,
+     "detection": 0.6111111111111112,
+     "detected": 165,
+     "detection_val_groups": 0.6333333333333333,
+     "median_delay_s": 2.0,
+     "undecided": 0.503030303030303,
+     "blame_counts": {
+      "undecided": 83,
+      "gps": 77,
+      "imu": 5
+     },
+     "correct_blame": 0.4666666666666667,
+     "wrong_blame": 0.030303030303030304
+    },
+    "accel_drift": {
+     "runs": 270,
+     "detection": 0.5,
+     "detected": 135,
+     "detection_val_groups": 0.6,
+     "median_delay_s": 5.0,
+     "undecided": 0.2962962962962963,
+     "blame_counts": {
+      "gps": 93,
+      "undecided": 40,
+      "imu": 2
+     },
+     "correct_blame": 0.6888888888888889,
+     "wrong_blame": 0.014814814814814815
+    },
+    "doppler_spoof": {
+     "runs": 270,
+     "detection": 0.5222222222222223,
+     "detected": 141,
+     "detection_val_groups": 0.6,
+     "median_delay_s": 4.0,
+     "undecided": 0.425531914893617,
+     "blame_counts": {
+      "gps": 72,
+      "undecided": 60,
+      "imu": 8,
+      "can": 1
+     },
+     "correct_blame": 0.5106382978723404,
+     "wrong_blame": 0.06382978723404255
+    },
+    "meaconing": {
+     "runs": 270,
+     "detection": 0.5185185185185185,
+     "detected": 140,
+     "detection_val_groups": 0.5666666666666667,
+     "median_delay_s": 3.0,
+     "undecided": 0.19285714285714287,
+     "blame_counts": {
+      "gps": 113,
+      "undecided": 27
+     },
+     "correct_blame": 0.8071428571428572,
+     "wrong_blame": 0.0
+    },
+    "lidar_scale": {
+     "runs": 150,
+     "detection": 0.6266666666666667,
+     "detected": 94,
+     "detection_val_groups": 0.7333333333333333,
+     "median_delay_s": 0.0,
+     "undecided": 0.4148936170212766,
+     "blame_counts": {
+      "lidar": 52,
+      "undecided": 39,
+      "gps": 2,
+      "imu": 1
+     },
+     "correct_blame": 0.5531914893617021,
+     "wrong_blame": 0.031914893617021274
+    },
+    "lidar_bias": {
+     "runs": 150,
+     "detection": 0.8,
+     "detected": 120,
+     "detection_val_groups": 0.8,
+     "median_delay_s": 2.0,
+     "undecided": 0.5166666666666667,
+     "blame_counts": {
+      "undecided": 62,
+      "lidar": 56,
+      "gps": 2
+     },
+     "correct_blame": 0.4666666666666667,
+     "wrong_blame": 0.016666666666666666
+    },
+    "lidar_yaw": {
+     "runs": 150,
+     "detection": 0.19333333333333333,
+     "detected": 29,
+     "detection_val_groups": 0.1,
+     "median_delay_s": 2.0,
+     "undecided": 0.7931034482758621,
+     "blame_counts": {
+      "undecided": 23,
+      "gps": 3,
+      "imu": 3
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.20689655172413793
+    },
+    "can_scale": {
+     "runs": 150,
+     "detection": 0.56,
+     "detected": 84,
+     "detection_val_groups": 0.6,
+     "median_delay_s": 1.0,
+     "undecided": 0.5238095238095238,
+     "blame_counts": {
+      "undecided": 44,
+      "can": 35,
+      "imu": 2,
+      "lidar": 2,
+      "gps": 1
+     },
+     "correct_blame": 0.4166666666666667,
+     "wrong_blame": 0.05952380952380952
+    },
+    "can_offset": {
+     "runs": 150,
+     "detection": 0.7466666666666667,
+     "detected": 112,
+     "detection_val_groups": 0.8333333333333334,
+     "median_delay_s": 2.0,
+     "undecided": 0.5446428571428571,
+     "blame_counts": {
+      "undecided": 61,
+      "can": 47,
+      "gps": 2,
+      "imu": 1,
+      "lidar": 1
+     },
+     "correct_blame": 0.41964285714285715,
+     "wrong_blame": 0.03571428571428571
+    },
+    "can_freeze": {
+     "runs": 150,
+     "detection": 0.6666666666666666,
+     "detected": 100,
+     "detection_val_groups": 0.8,
+     "median_delay_s": 2.0000000000000004,
+     "undecided": 0.22,
+     "blame_counts": {
+      "can": 76,
+      "undecided": 22,
+      "lidar": 2
+     },
+     "correct_blame": 0.76,
+     "wrong_blame": 0.02
+    },
+    "gps_can": {
+     "runs": 150,
+     "detection": 0.7333333333333333,
+     "detected": 110,
+     "detection_val_groups": 0.8,
+     "median_delay_s": 2.0,
+     "undecided": 0.45454545454545453,
+     "blame_counts": {
+      "lidar": 53,
+      "undecided": 50,
+      "can": 5,
+      "gps": 2
+     }
+    }
+   },
+   "worst_group": [
+    "0070",
+    0.029953917050691243
+   ],
+   "mean_detection_single": 0.5745185185185185,
+   "selection_mean_detection": 0.6407407407407407,
+   "pooled_single": {
+    "correct_blame": 0.5544642857142857,
+    "wrong_blame": 0.033928571428571426,
+    "undecided": 0.41160714285714284,
+    "detected": 1120
+   }
+  },
+  "poor_quality_fraction": 0.0
+ },
+ "comma": {
+  "base_inst": {
+   "fa_rows": 0.010975227343994982,
+   "clean_rows": 9567,
+   "fa_per_group": {
+    "b0c9d2329ad1606b_2018-07-27--06-03-57": 0.0074487895716946,
+    "b0c9d2329ad1606b_2018-07-27--06-50-48": 0.0,
+    "b0c9d2329ad1606b_2018-07-29--11-17-20": 0.006734006734006734,
+    "b0c9d2329ad1606b_2018-07-29--12-02-42": 0.11627906976744186,
+    "b0c9d2329ad1606b_2018-07-29--16-37-17": 0.008547008547008548,
+    "b0c9d2329ad1606b_2018-07-30--13-03-07": 0.009328358208955223,
+    "b0c9d2329ad1606b_2018-07-30--13-44-30": 0.0,
+    "b0c9d2329ad1606b_2018-07-31--20-50-28": 0.0074487895716946,
+    "b0c9d2329ad1606b_2018-08-01--21-13-49": 0.006700167504187605,
+    "b0c9d2329ad1606b_2018-08-02--08-34-47": 0.002789400278940028,
+    "b0c9d2329ad1606b_2018-08-02--16-41-38": 0.003861003861003861,
+    "b0c9d2329ad1606b_2018-08-03--10-35-16": 0.028314028314028315,
+    "b0c9d2329ad1606b_2018-08-06--10-04-53": 0.004189944134078212,
+    "b0c9d2329ad1606b_2018-08-10--22-42-26": 0.008375209380234505,
+    "b0c9d2329ad1606b_2018-08-14--10-32-01": 0.010296010296010296,
+    "b0c9d2329ad1606b_2018-08-14--20-41-07": 0.007731958762886598,
+    "b0c9d2329ad1606b_2018-08-15--09-01-03": 0.012578616352201259
+   },
+   "fa_val_groups": 0.00951655881233346,
+   "attacks": {
+    "drift": {
+     "runs": 136,
+     "detection": 0.5955882352941176,
+     "detected": 81,
+     "detection_val_groups": 0.5789473684210527,
+     "median_delay_s": 4.812729304518143,
+     "undecided": 0.9629629629629629,
+     "blame_counts": {
+      "undecided": 78,
+      "can": 3
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.037037037037037035
+    },
+    "accel_drift": {
+     "runs": 136,
+     "detection": 0.9338235294117647,
+     "detected": 127,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 6.9763611478265375,
+     "undecided": 0.968503937007874,
+     "blame_counts": {
+      "undecided": 123,
+      "can": 4
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.031496062992125984
+    },
+    "doppler_spoof": {
+     "runs": 136,
+     "detection": 0.875,
+     "detected": 119,
+     "detection_val_groups": 0.9473684210526315,
+     "median_delay_s": 2.535282723606997,
+     "undecided": 0.9831932773109243,
+     "blame_counts": {
+      "undecided": 117,
+      "can": 2
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.01680672268907563
+    },
+    "meaconing": {
+     "runs": 136,
+     "detection": 0.9411764705882353,
+     "detected": 128,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 1.2035958355947969,
+     "undecided": 0.9765625,
+     "blame_counts": {
+      "undecided": 125,
+      "can": 3
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.0234375
+    },
+    "can_scale": {
+     "runs": 136,
+     "detection": 0.9485294117647058,
+     "detected": 129,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 0.7665708949948566,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 129
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_offset": {
+     "runs": 136,
+     "detection": 0.9191176470588235,
+     "detected": 125,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 1.0540101297665387,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 125
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "can_freeze": {
+     "runs": 136,
+     "detection": 0.9558823529411765,
+     "detected": 130,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 1.3460886222635509,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 130
+     },
+     "correct_blame": 1.0,
+     "wrong_blame": 0.0
+    },
+    "gnss_can": {
+     "runs": 136,
+     "detection": 0.9264705882352942,
+     "detected": 126,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 1.1046990063853173,
+     "undecided": 0.0,
+     "blame_counts": {
+      "can": 126
+     }
+    },
+    "can_bus": {
+     "runs": 136,
+     "detection": 0.9411764705882353,
+     "detected": 128,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 0.9216919405416775,
+     "undecided": 0.671875,
+     "blame_counts": {
+      "undecided": 86,
+      "can": 42
+     }
+    }
+   },
+   "worst_group": [
+    "b0c9d2329ad1606b_2018-07-29--12-02-42",
+    0.11627906976744186
+   ],
+   "mean_detection_single": 0.8813025210084033,
+   "selection_mean_detection": 0.8492647058823528,
+   "pooled_single": {
+    "correct_blame": 0.4576877234803337,
+    "wrong_blame": 0.014302741358760428,
+    "undecided": 0.5280095351609059,
+    "detected": 839
+   }
+  },
+  "inst_glitch_filter": {
+   "fa_rows": 0.010975227343994982,
+   "clean_rows": 9567,
+   "fa_per_group": {
+    "b0c9d2329ad1606b_2018-07-27--06-03-57": 0.0074487895716946,
+    "b0c9d2329ad1606b_2018-07-27--06-50-48": 0.0,
+    "b0c9d2329ad1606b_2018-07-29--11-17-20": 0.006734006734006734,
+    "b0c9d2329ad1606b_2018-07-29--12-02-42": 0.050387596899224806,
+    "b0c9d2329ad1606b_2018-07-29--16-37-17": 0.008547008547008548,
+    "b0c9d2329ad1606b_2018-07-30--13-03-07": 0.009328358208955223,
+    "b0c9d2329ad1606b_2018-07-30--13-44-30": 0.0,
+    "b0c9d2329ad1606b_2018-07-31--20-50-28": 0.0074487895716946,
+    "b0c9d2329ad1606b_2018-08-01--21-13-49": 0.01507537688442211,
+    "b0c9d2329ad1606b_2018-08-02--08-34-47": 0.002789400278940028,
+    "b0c9d2329ad1606b_2018-08-02--16-41-38": 0.011583011583011582,
+    "b0c9d2329ad1606b_2018-08-03--10-35-16": 0.028314028314028315,
+    "b0c9d2329ad1606b_2018-08-06--10-04-53": 0.004189944134078212,
+    "b0c9d2329ad1606b_2018-08-10--22-42-26": 0.008375209380234505,
+    "b0c9d2329ad1606b_2018-08-14--10-32-01": 0.019305019305019305,
+    "b0c9d2329ad1606b_2018-08-14--20-41-07": 0.006443298969072165,
+    "b0c9d2329ad1606b_2018-08-15--09-01-03": 0.012578616352201259
+   },
+   "fa_val_groups": 0.011800532927293491,
+   "attacks": {
+    "drift": {
+     "runs": 136,
+     "detection": 0.6102941176470589,
+     "detected": 83,
+     "detection_val_groups": 0.631578947368421,
+     "median_delay_s": 4.812729304518143,
+     "undecided": 0.9036144578313253,
+     "blame_counts": {
+      "undecided": 75,
+      "can": 8
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.0963855421686747
+    },
+    "accel_drift": {
+     "runs": 136,
+     "detection": 0.9338235294117647,
+     "detected": 127,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 6.9763611478265375,
+     "undecided": 0.937007874015748,
+     "blame_counts": {
+      "undecided": 119,
+      "can": 8
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.06299212598425197
+    },
+    "doppler_spoof": {
+     "runs": 136,
+     "detection": 0.875,
+     "detected": 119,
+     "detection_val_groups": 0.9473684210526315,
+     "median_delay_s": 2.535282723606997,
+     "undecided": 0.9747899159663865,
+     "blame_counts": {
+      "undecided": 116,
+      "can": 3
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.025210084033613446
+    },
+    "meaconing": {
+     "runs": 136,
+     "detection": 0.9411764705882353,
+     "detected": 128,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 1.2139278730567185,
+     "undecided": 0.921875,
+     "blame_counts": {
+      "undecided": 118,
+      "can": 10
+     },
+     "correct_blame": 0.0,
+     "wrong_blame": 0.078125
+    },
+    "can_scale": {
+     "runs": 136,
+     "detection": 0.9411764705882353,
+     "detected": 128,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 0.8992710135644302,
+     "undecided": 0.8046875,
+     "blame_counts": {
+      "undecided": 103,
+      "can": 25
+     },
+     "correct_blame": 0.1953125,
+     "wrong_blame": 0.0
+    },
+    "can_offset": {
+     "runs": 136,
+     "detection": 0.9411764705882353,
+     "detected": 128,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 1.9251175102335765,
+     "undecided": 0.6015625,
+     "blame_counts": {
+      "undecided": 77,
+      "can": 51
+     },
+     "correct_blame": 0.3984375,
+     "wrong_blame": 0.0
+    },
+    "can_freeze": {
+     "runs": 136,
+     "detection": 0.9558823529411765,
+     "detected": 130,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 2.7558564162259245,
+     "undecided": 0.4153846153846154,
+     "blame_counts": {
+      "can": 76,
+      "undecided": 54
+     },
+     "correct_blame": 0.5846153846153846,
+     "wrong_blame": 0.0
+    },
+    "gnss_can": {
+     "runs": 136,
+     "detection": 0.9264705882352942,
+     "detected": 126,
+     "detection_val_groups": 0.9736842105263158,
+     "median_delay_s": 1.8552560835437362,
+     "undecided": 0.6111111111111112,
+     "blame_counts": {
+      "undecided": 77,
+      "can": 49
+     }
+    },
+    "can_bus": {
+     "runs": 136,
+     "detection": 0.9411764705882353,
+     "detected": 128,
+     "detection_val_groups": 1.0,
+     "median_delay_s": 0.9189566755044609,
+     "undecided": 0.5625,
+     "blame_counts": {
+      "undecided": 72,
+      "can": 56
+     }
+    }
+   },
+   "worst_group": [
+    "b0c9d2329ad1606b_2018-07-29--12-02-42",
+    0.050387596899224806
+   ],
+   "mean_detection_single": 0.8855042016806723,
+   "selection_mean_detection": 0.8566176470588236,
+   "pooled_single": {
+    "correct_blame": 0.18030842230130487,
+    "wrong_blame": 0.03440094899169632,
+    "undecided": 0.7852906287069988,
+    "detected": 843
+   }
+  },
+  "filtered_fraction": 0.0005988289567068843
+ },
+ "choice": {
+  "kitti": "base_inst",
+  "comma": "inst_glitch_filter"
+ }
+}

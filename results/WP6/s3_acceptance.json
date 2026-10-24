@@ -1,0 +1,92 @@
+{
+ "G1_fa_tick_K": {
+  "value": 0.06358204381798682,
+  "ci": [
+   0.05048493100510955,
+   0.07662444986835278
+  ],
+  "rule": "<= 0.030",
+  "met": false
+ },
+ "G1_fa_tick_C": {
+  "value": 0.063075,
+  "ci": [
+   0.05084345479082321,
+   0.07501646903820818
+  ],
+  "rule": "<= 0.030",
+  "met": false
+ },
+ "G2_mean_detection_K": {
+  "value": 0.8250326797385621,
+  "ci": [
+   0.7523732933124171,
+   0.8899373474520177
+  ],
+  "rule": ">= 0.70",
+  "met": true
+ },
+ "G3_cross_gain_vehicle_families_points": {
+  "value": 25.06666666666666,
+  "rule": ">= +10",
+  "met": true
+ },
+ "G3_cross_gain_gps_families_points": {
+  "value": 17.499999999999993,
+  "rule": ">= +5",
+  "met": true
+ },
+ "G4_explanations": {
+  "value": 1.0,
+  "alarms": 119952,
+  "rule": "1.0",
+  "met": true
+ },
+ "G4_attributed_K": {
+  "value": 0.9339301275449576,
+  "rule": ">= 0.80",
+  "met": true
+ },
+ "G5_no_domain_lost": {
+  "value": {
+   "gps": {
+    "fused": 0.6616666666666666,
+    "alone": 0.6883333333333334,
+    "loss_points": 2.6666666666666727,
+    "met": true
+   },
+   "lidar": {
+    "fused": 0.6266666666666667,
+    "alone": 1.0,
+    "loss_points": 37.33333333333333,
+    "met": false
+   },
+   "can": {
+    "fused": 0.9296969696969698,
+    "alone": 1.0,
+    "loss_points": 7.0303030303030205,
+    "met": true
+   },
+   "network": {
+    "fused": 0.7573333333333334,
+    "alone": 0.45633333333333326,
+    "loss_points": -30.100000000000016,
+    "met": true
+   },
+   "v2x": {
+    "fused": 0.9524074074074075,
+    "alone": 0.9925925925925925,
+    "loss_points": 4.0185185185184995,
+    "met": true
+   },
+   "cross": {
+    "fused": 0.5388888888888889,
+    "alone": 0.7927777777777777,
+    "loss_points": 25.388888888888882,
+    "met": false
+   }
+  },
+  "rule": "fused >= alone - 15 points per attacked domain",
+  "met": false
+ }
+}

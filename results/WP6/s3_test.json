@@ -1,0 +1,3251 @@
+{
+ "chosen": "noisy_or",
+ "exposure_caveat": "domain test sets scored before: ROAD 6x, D10 several (WP4 S2-S7), VeReMi 2x, KITTI several; the fusion layer and the S2b cross choice are scored here once",
+ "families": {
+  "K": {
+   "headline": {
+    "clean_ticks": 45689,
+    "fa_tick": 0.06358204381798682,
+    "fa_events_per_hour": 118.8207227122502,
+    "clean_hours": 12.69138888888889,
+    "alarms": 119952,
+    "alarms_with_explanation": 119952,
+    "examples": [
+     {
+      "family": "drift",
+      "attacked": "gps",
+      "tick": 2,
+      "reason": "system alarm (noisy_or, 0.6851 >= 0.6820): domains fired: v2x (0.998, layers v2x.beacon_rate, v2x.overlap)"
+     },
+     {
+      "family": "drift",
+      "attacked": "gps",
+      "tick": 34,
+      "reason": "system alarm (noisy_or, 0.7245 >= 0.6820): domains fired: gps (0.996, layers gps.cusum_dr, gps.cusum_ekf, gps.lidar_course); cross (0.996, layers gps-lidar lateral, gyro-lidar yaw); cross-domain blame: undecided"
+     },
+     {
+      "family": "drift",
+      "attacked": "gps",
+      "tick": 35,
+      "reason": "system alarm (noisy_or, 0.7003 >= 0.6820): domains fired: gps (0.996, layers gps.cusum_dr, gps.cusum_ekf, gps.jerk)"
+     },
+     {
+      "family": "drift",
+      "attacked": "gps",
+      "tick": 36,
+      "reason": "system alarm (noisy_or, 0.7258 >= 0.6820): domains fired: gps (0.996, layers gps.cusum_dr, gps.cusum_ekf, gps.lidar_resid_1); cross (0.996, layers gps-lidar lateral); cross-domain blame: undecided"
+     }
+    ],
+    "mean_detection_single": 0.8250326797385621,
+    "per_domain_mean_detection": {
+     "gps": 0.6616666666666666,
+     "cross": 0.5388888888888889,
+     "lidar": 0.6266666666666667,
+     "can": 0.9296969696969698,
+     "network": 0.7573333333333334,
+     "v2x": 0.9524074074074075
+    },
+    "ci": {
+     "fa_tick": [
+      0.05048493100510955,
+      0.07662444986835278
+     ],
+     "mean_detection": [
+      0.7523732933124171,
+      0.8899373474520177
+     ],
+     "n_vehicle_groups": 7
+    },
+    "families": {
+     "drift": {
+      "attacked": "gps",
+      "n": 300,
+      "detection": 0.7433333333333333,
+      "median_delay_s": 2.0,
+      "attributed": 0.8071748878923767,
+      "cross_blame_counts": {
+       "None": 123,
+       "gps": 35,
+       "imu": 4,
+       "undecided": 61
+      }
+     },
+     "accel_drift": {
+      "attacked": "gps",
+      "n": 300,
+      "detection": 0.6166666666666667,
+      "median_delay_s": 4.0,
+      "attributed": 0.7675675675675676,
+      "cross_blame_counts": {
+       "None": 117,
+       "gps": 22,
+       "undecided": 46
+      }
+     },
+     "doppler_spoof": {
+      "attacked": "gps",
+      "n": 300,
+      "detection": 0.6633333333333333,
+      "median_delay_s": 3.0,
+      "attributed": 0.7889447236180904,
+      "cross_blame_counts": {
+       "None": 145,
+       "gps": 11,
+       "undecided": 43
+      }
+     },
+     "meaconing": {
+      "attacked": "gps",
+      "n": 300,
+      "detection": 0.6233333333333333,
+      "median_delay_s": 2.0,
+      "attributed": 0.8449197860962567,
+      "cross_blame_counts": {
+       "None": 75,
+       "gps": 77,
+       "undecided": 35
+      }
+     },
+     "lidar_scale": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 0.5433333333333333,
+      "median_delay_s": 2.0,
+      "attributed": 0.8282208588957055,
+      "cross_blame_counts": {
+       "None": 36,
+       "can": 1,
+       "lidar": 44,
+       "undecided": 82
+      }
+     },
+     "lidar_bias": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 0.6266666666666667,
+      "median_delay_s": 3.0,
+      "attributed": 0.6542553191489362,
+      "cross_blame_counts": {
+       "None": 74,
+       "can": 2,
+       "imu": 3,
+       "lidar": 43,
+       "undecided": 66
+      }
+     },
+     "lidar_yaw": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 0.3466666666666667,
+      "median_delay_s": 3.0,
+      "attributed": 0.28846153846153844,
+      "cross_blame_counts": {
+       "None": 86,
+       "imu": 1,
+       "undecided": 17
+      }
+     },
+     "can_scale": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 0.5633333333333334,
+      "median_delay_s": 2.0,
+      "attributed": 0.7337278106508875,
+      "cross_blame_counts": {
+       "None": 51,
+       "can": 34,
+       "lidar": 1,
+       "undecided": 83
+      }
+     },
+     "can_offset": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 0.5866666666666667,
+      "median_delay_s": 3.0,
+      "attributed": 0.7443181818181818,
+      "cross_blame_counts": {
+       "None": 57,
+       "can": 14,
+       "lidar": 10,
+       "undecided": 95
+      }
+     },
+     "can_freeze": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 0.5666666666666667,
+      "median_delay_s": 3.5,
+      "attributed": 0.6941176470588235,
+      "cross_blame_counts": {
+       "None": 58,
+       "can": 35,
+       "imu": 1,
+       "lidar": 7,
+       "undecided": 69
+      }
+     },
+     "gps_can": {
+      "attacked": "gps+can",
+      "n": 300,
+      "detection": 0.6066666666666667,
+      "median_delay_s": 3.0,
+      "attributed": 0.8131868131868132,
+      "cross_blame_counts": {
+       "None": 56,
+       "gps": 2,
+       "imu": 1,
+       "lidar": 30,
+       "undecided": 93
+      }
+     },
+     "GhostCluster": {
+      "attacked": "lidar",
+      "n": 300,
+      "detection": 0.6433333333333333,
+      "median_delay_s": 3.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 183,
+       "imu": 5,
+       "undecided": 5
+      }
+     },
+     "IntensitySpoof": {
+      "attacked": "lidar",
+      "n": 300,
+      "detection": 0.6666666666666666,
+      "median_delay_s": 2.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 193,
+       "imu": 3,
+       "undecided": 4
+      }
+     },
+     "PointDrop": {
+      "attacked": "lidar",
+      "n": 300,
+      "detection": 0.5866666666666667,
+      "median_delay_s": 3.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 170,
+       "imu": 3,
+       "undecided": 3
+      }
+     },
+     "correlated_signal": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9866666666666667,
+      "median_delay_s": 0.5,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 294,
+       "undecided": 2
+      }
+     },
+     "correlated_signal_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.98,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 293,
+       "undecided": 1
+      }
+     },
+     "fuzzing": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.6533333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 196
+      }
+     },
+     "max_engine_coolant_temp": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9166666666666666,
+      "median_delay_s": 1.0,
+      "attributed": 0.9490909090909091,
+      "cross_blame_counts": {
+       "None": 272,
+       "imu": 2,
+       "undecided": 1
+      }
+     },
+     "max_engine_coolant_temp_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.91,
+      "median_delay_s": 1.0,
+      "attributed": 0.9377289377289377,
+      "cross_blame_counts": {
+       "None": 271,
+       "imu": 2
+      }
+     },
+     "max_speedometer": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9833333333333333,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 291,
+       "imu": 2,
+       "undecided": 2
+      }
+     },
+     "max_speedometer_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.84,
+      "median_delay_s": 1.0,
+      "attributed": 0.8849206349206349,
+      "cross_blame_counts": {
+       "None": 247,
+       "imu": 2,
+       "undecided": 3
+      }
+     },
+     "reverse_light_off": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.98,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 293,
+       "imu": 1
+      }
+     },
+     "reverse_light_off_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.99,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 295,
+       "imu": 1,
+       "undecided": 1
+      }
+     },
+     "reverse_light_on": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 293,
+       "undecided": 5
+      }
+     },
+     "reverse_light_on_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 296,
+       "imu": 1,
+       "undecided": 1
+      }
+     },
+     "DDoS-LOIC-HTTP": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.9966666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 297,
+       "imu": 1,
+       "undecided": 1
+      }
+     },
+     "DoS-GoldenEye": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 300
+      }
+     },
+     "DoS-Hulk": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.7533333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 0.7123893805309734,
+      "cross_blame_counts": {
+       "None": 219,
+       "imu": 1,
+       "undecided": 6
+      }
+     },
+     "DoS-SlowHTTPTest": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.9,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 267,
+       "imu": 1,
+       "undecided": 2
+      }
+     },
+     "DoS-Slowloris": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.8733333333333333,
+      "median_delay_s": 3.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 255,
+       "imu": 2,
+       "undecided": 5
+      }
+     },
+     "FTP-Patator": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.6533333333333333,
+      "median_delay_s": 1.0,
+      "attributed": 0.8061224489795918,
+      "cross_blame_counts": {
+       "None": 182,
+       "imu": 4,
+       "undecided": 10
+      }
+     },
+     "PortScan": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.77,
+      "median_delay_s": 0.0,
+      "attributed": 0.8831168831168831,
+      "cross_blame_counts": {
+       "None": 229,
+       "undecided": 2
+      }
+     },
+     "SSH-Patator": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.6566666666666666,
+      "median_delay_s": 6.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 186,
+       "imu": 2,
+       "undecided": 9
+      }
+     },
+     "Web-BruteForce": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.6166666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 0.7891891891891892,
+      "cross_blame_counts": {
+       "None": 176,
+       "imu": 1,
+       "undecided": 8
+      }
+     },
+     "Web-XSS": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.35333333333333333,
+      "median_delay_s": 6.0,
+      "attributed": 0.0,
+      "cross_blame_counts": {
+       "None": 92,
+       "imu": 1,
+       "undecided": 13
+      }
+     },
+     "01_ConstPos": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9533333333333334,
+      "median_delay_s": 1.0,
+      "attributed": 0.993006993006993,
+      "cross_blame_counts": {
+       "None": 285,
+       "imu": 1
+      }
+     },
+     "02_ConstPosOffset": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.96,
+      "median_delay_s": 1.0,
+      "attributed": 0.9826388888888888,
+      "cross_blame_counts": {
+       "None": 285,
+       "imu": 1,
+       "undecided": 2
+      }
+     },
+     "03_RandomPos": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.92,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 275,
+       "imu": 1
+      }
+     },
+     "04_RandomPosOffset": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9766666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 0.9965870307167235,
+      "cross_blame_counts": {
+       "None": 288,
+       "imu": 3,
+       "undecided": 2
+      }
+     },
+     "05_ConstSpeed": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9833333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 294,
+       "imu": 1
+      }
+     },
+     "06_ConstSpeedOffset": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.99,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 296,
+       "undecided": 1
+      }
+     },
+     "07_RandomSpeed": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9766666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 292,
+       "imu": 1
+      }
+     },
+     "08_RandomSpeedOffset": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9633333333333334,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 287,
+       "imu": 1,
+       "undecided": 1
+      }
+     },
+     "09_EventualStop": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9133333333333333,
+      "median_delay_s": 1.0,
+      "attributed": 0.9781021897810219,
+      "cross_blame_counts": {
+       "None": 272,
+       "undecided": 2
+      }
+     },
+     "10_Disruptive": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9766666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 0.9965870307167235,
+      "cross_blame_counts": {
+       "None": 291,
+       "undecided": 2
+      }
+     },
+     "11_DataReplay": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.95,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 282,
+       "imu": 1,
+       "undecided": 2
+      }
+     },
+     "13_DoS": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9766666666666667,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 291,
+       "imu": 1,
+       "undecided": 1
+      }
+     },
+     "14_DoSRandom": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.93,
+      "median_delay_s": 1.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 277,
+       "imu": 1,
+       "undecided": 1
+      }
+     },
+     "15_DoSDisruptive": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.97,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 291
+      }
+     },
+     "16_GridSybil": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.98,
+      "median_delay_s": 1.0,
+      "attributed": 0.9897959183673469,
+      "cross_blame_counts": {
+       "None": 293,
+       "undecided": 1
+      }
+     },
+     "17_DataReplaySybil": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.94,
+      "median_delay_s": 1.0,
+      "attributed": 0.9929078014184397,
+      "cross_blame_counts": {
+       "None": 281,
+       "undecided": 1
+      }
+     },
+     "18_DoSRandomSybil": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.8966666666666666,
+      "median_delay_s": 1.0,
+      "attributed": 0.9851301115241635,
+      "cross_blame_counts": {
+       "None": 265,
+       "imu": 1,
+       "undecided": 3
+      }
+     },
+     "19_DoSDisruptiveSybil": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.8866666666666667,
+      "median_delay_s": 1.0,
+      "attributed": 0.9661654135338346,
+      "cross_blame_counts": {
+       "None": 263,
+       "imu": 1,
+       "undecided": 2
+      }
+     }
+    },
+    "v2_style": {
+     "accuracy": 0.68825,
+     "composite_FA": 0.4445,
+     "composite_detection": 0.821,
+     "n": 4000
+    },
+    "attributed_pooled": 0.9339301275449576
+   },
+   "max (label-free, not chosen)": {
+    "fa_tick": 0.05158790956247675,
+    "fa_events_per_hour": 62.719691829543216,
+    "mean_detection_single": 0.71640522875817,
+    "per_domain_mean_detection": {
+     "gps": 0.16499999999999998,
+     "cross": 0.1727777777777778,
+     "lidar": 0.16999999999999998,
+     "can": 1.0,
+     "network": 0.5646666666666667,
+     "v2x": 0.9918518518518518
+    },
+    "families": {
+     "drift": 0.14333333333333334,
+     "accel_drift": 0.18333333333333332,
+     "doppler_spoof": 0.16666666666666666,
+     "meaconing": 0.16666666666666666,
+     "lidar_scale": 0.17333333333333334,
+     "lidar_bias": 0.21666666666666667,
+     "lidar_yaw": 0.16666666666666666,
+     "can_scale": 0.15666666666666668,
+     "can_offset": 0.13666666666666666,
+     "can_freeze": 0.18666666666666668,
+     "gps_can": 0.16,
+     "GhostCluster": 0.17333333333333334,
+     "IntensitySpoof": 0.17333333333333334,
+     "PointDrop": 0.16666666666666666,
+     "correlated_signal": 1.0,
+     "correlated_signal_masquerade": 1.0,
+     "fuzzing": 1.0,
+     "max_engine_coolant_temp": 1.0,
+     "max_engine_coolant_temp_masquerade": 1.0,
+     "max_speedometer": 1.0,
+     "max_speedometer_masquerade": 1.0,
+     "reverse_light_off": 1.0,
+     "reverse_light_off_masquerade": 1.0,
+     "reverse_light_on": 1.0,
+     "reverse_light_on_masquerade": 1.0,
+     "DDoS-LOIC-HTTP": 1.0,
+     "DoS-GoldenEye": 1.0,
+     "DoS-Hulk": 0.6266666666666667,
+     "DoS-SlowHTTPTest": 0.6166666666666667,
+     "DoS-Slowloris": 0.21666666666666667,
+     "FTP-Patator": 0.44333333333333336,
+     "PortScan": 0.75,
+     "SSH-Patator": 0.21333333333333335,
+     "Web-BruteForce": 0.5766666666666667,
+     "Web-XSS": 0.20333333333333334,
+     "01_ConstPos": 1.0,
+     "02_ConstPosOffset": 0.9966666666666667,
+     "03_RandomPos": 1.0,
+     "04_RandomPosOffset": 1.0,
+     "05_ConstSpeed": 1.0,
+     "06_ConstSpeedOffset": 1.0,
+     "07_RandomSpeed": 1.0,
+     "08_RandomSpeedOffset": 1.0,
+     "09_EventualStop": 0.96,
+     "10_Disruptive": 1.0,
+     "11_DataReplay": 1.0,
+     "13_DoS": 1.0,
+     "14_DoSRandom": 1.0,
+     "15_DoSDisruptive": 1.0,
+     "16_GridSybil": 0.9966666666666667,
+     "17_DataReplaySybil": 0.9966666666666667,
+     "18_DoSRandomSybil": 0.9933333333333333,
+     "19_DoSDisruptiveSybil": 0.91
+    }
+   },
+   "seen-attack logistic (labelled)": {
+    "fa_tick": 0.05830725119831907,
+    "fa_events_per_hour": 136.2341044890455,
+    "mean_detection_single": 0.8130718954248366,
+    "per_domain_mean_detection": {
+     "gps": 0.48083333333333333,
+     "cross": 0.6844444444444444,
+     "lidar": 0.9233333333333333,
+     "can": 0.8578787878787879,
+     "network": 0.8,
+     "v2x": 0.8974074074074073
+    },
+    "families": {
+     "drift": 0.45666666666666667,
+     "accel_drift": 0.5066666666666667,
+     "doppler_spoof": 0.49666666666666665,
+     "meaconing": 0.4633333333333333,
+     "lidar_scale": 0.6266666666666667,
+     "lidar_bias": 0.7866666666666666,
+     "lidar_yaw": 0.56,
+     "can_scale": 0.6933333333333334,
+     "can_offset": 0.7633333333333333,
+     "can_freeze": 0.6766666666666666,
+     "gps_can": 0.5766666666666667,
+     "GhostCluster": 0.9433333333333334,
+     "IntensitySpoof": 0.9266666666666666,
+     "PointDrop": 0.92,
+     "correlated_signal": 0.9166666666666666,
+     "correlated_signal_masquerade": 0.9266666666666666,
+     "fuzzing": 0.37666666666666665,
+     "max_engine_coolant_temp": 0.7566666666666667,
+     "max_engine_coolant_temp_masquerade": 0.73,
+     "max_speedometer": 0.9566666666666667,
+     "max_speedometer_masquerade": 0.8866666666666667,
+     "reverse_light_off": 0.9733333333333334,
+     "reverse_light_off_masquerade": 0.95,
+     "reverse_light_on": 0.9866666666666667,
+     "reverse_light_on_masquerade": 0.9766666666666667,
+     "DDoS-LOIC-HTTP": 1.0,
+     "DoS-GoldenEye": 1.0,
+     "DoS-Hulk": 0.8033333333333333,
+     "DoS-SlowHTTPTest": 0.9666666666666667,
+     "DoS-Slowloris": 0.95,
+     "FTP-Patator": 0.7066666666666667,
+     "PortScan": 0.7733333333333333,
+     "SSH-Patator": 0.7766666666666666,
+     "Web-BruteForce": 0.63,
+     "Web-XSS": 0.3933333333333333,
+     "01_ConstPos": 0.9166666666666666,
+     "02_ConstPosOffset": 0.93,
+     "03_RandomPos": 0.85,
+     "04_RandomPosOffset": 0.9433333333333334,
+     "05_ConstSpeed": 0.9633333333333334,
+     "06_ConstSpeedOffset": 0.94,
+     "07_RandomSpeed": 0.94,
+     "08_RandomSpeedOffset": 0.93,
+     "09_EventualStop": 0.85,
+     "10_Disruptive": 0.91,
+     "11_DataReplay": 0.8933333333333333,
+     "13_DoS": 0.9366666666666666,
+     "14_DoSRandom": 0.85,
+     "15_DoSDisruptive": 0.9166666666666666,
+     "16_GridSybil": 0.95,
+     "17_DataReplaySybil": 0.86,
+     "18_DoSRandomSybil": 0.78,
+     "19_DoSDisruptiveSybil": 0.7933333333333333
+    }
+   },
+   "ablation": {
+    "without gps": {
+     "domains": [
+      "lidar",
+      "can",
+      "network",
+      "v2x",
+      "cross"
+     ],
+     "fa_tick": 0.057738186434371515,
+     "fa_events_per_hour": 89.7458906957911,
+     "mean_detection_single": 0.8092156862745097,
+     "per_domain_mean_detection": {
+      "gps": 0.3958333333333333,
+      "cross": 0.5311111111111111,
+      "lidar": 0.5583333333333333,
+      "can": 0.954848484848485,
+      "network": 0.7323333333333333,
+      "v2x": 0.9753703703703704
+     },
+     "families": {
+      "drift": 0.3933333333333333,
+      "accel_drift": 0.44666666666666666,
+      "doppler_spoof": 0.37666666666666665,
+      "meaconing": 0.36666666666666664,
+      "lidar_scale": 0.5,
+      "lidar_bias": 0.6333333333333333,
+      "lidar_yaw": 0.34,
+      "can_scale": 0.5433333333333333,
+      "can_offset": 0.6066666666666667,
+      "can_freeze": 0.5633333333333334,
+      "gps_can": 0.47,
+      "GhostCluster": 0.62,
+      "IntensitySpoof": 0.58,
+      "PointDrop": 0.5366666666666666,
+      "correlated_signal": 0.9866666666666667,
+      "correlated_signal_masquerade": 0.9966666666666667,
+      "fuzzing": 0.7566666666666667,
+      "max_engine_coolant_temp": 0.9766666666666667,
+      "max_engine_coolant_temp_masquerade": 0.9666666666666667,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.8233333333333334,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 0.9966666666666667,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 1.0,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.7266666666666667,
+      "DoS-SlowHTTPTest": 0.92,
+      "DoS-Slowloris": 0.8833333333333333,
+      "FTP-Patator": 0.6,
+      "PortScan": 0.75,
+      "SSH-Patator": 0.6066666666666667,
+      "Web-BruteForce": 0.5633333333333334,
+      "Web-XSS": 0.2733333333333333,
+      "01_ConstPos": 0.98,
+      "02_ConstPosOffset": 0.9866666666666667,
+      "03_RandomPos": 0.95,
+      "04_RandomPosOffset": 0.9933333333333333,
+      "05_ConstSpeed": 0.9933333333333333,
+      "06_ConstSpeedOffset": 1.0,
+      "07_RandomSpeed": 0.9966666666666667,
+      "08_RandomSpeedOffset": 0.9933333333333333,
+      "09_EventualStop": 0.96,
+      "10_Disruptive": 0.98,
+      "11_DataReplay": 0.9766666666666667,
+      "13_DoS": 0.98,
+      "14_DoSRandom": 0.9766666666666667,
+      "15_DoSDisruptive": 0.9833333333333333,
+      "16_GridSybil": 0.9933333333333333,
+      "17_DataReplaySybil": 0.9833333333333333,
+      "18_DoSRandomSybil": 0.9366666666666666,
+      "19_DoSDisruptiveSybil": 0.8933333333333333
+     }
+    },
+    "gps alone": {
+     "domains": [
+      "gps"
+     ],
+     "fa_tick": 0.026352075992033094,
+     "fa_events_per_hour": 75.48425222701306,
+     "mean_detection_single": 0.27738562091503266,
+     "per_domain_mean_detection": {
+      "gps": 0.6883333333333334,
+      "cross": 0.22944444444444445,
+      "lidar": 0.21666666666666667,
+      "can": 0.19696969696969696,
+      "network": 0.307,
+      "v2x": 0.24148148148148144
+     },
+     "families": {
+      "drift": 0.7666666666666667,
+      "accel_drift": 0.68,
+      "doppler_spoof": 0.6966666666666667,
+      "meaconing": 0.61,
+      "lidar_scale": 0.19,
+      "lidar_bias": 0.23666666666666666,
+      "lidar_yaw": 0.19333333333333333,
+      "can_scale": 0.26,
+      "can_offset": 0.23,
+      "can_freeze": 0.26666666666666666,
+      "gps_can": 0.49333333333333335,
+      "GhostCluster": 0.25,
+      "IntensitySpoof": 0.20666666666666667,
+      "PointDrop": 0.22666666666666666,
+      "correlated_signal": 0.18,
+      "correlated_signal_masquerade": 0.21,
+      "fuzzing": 0.006666666666666667,
+      "max_engine_coolant_temp": 0.08666666666666667,
+      "max_engine_coolant_temp_masquerade": 0.07333333333333333,
+      "max_speedometer": 0.30666666666666664,
+      "max_speedometer_masquerade": 0.2733333333333333,
+      "reverse_light_off": 0.25,
+      "reverse_light_off_masquerade": 0.24666666666666667,
+      "reverse_light_on": 0.27666666666666667,
+      "reverse_light_on_masquerade": 0.25666666666666665,
+      "DDoS-LOIC-HTTP": 0.31666666666666665,
+      "DoS-GoldenEye": 0.31,
+      "DoS-Hulk": 0.29333333333333333,
+      "DoS-SlowHTTPTest": 0.31333333333333335,
+      "DoS-Slowloris": 0.3333333333333333,
+      "FTP-Patator": 0.31,
+      "PortScan": 0.31333333333333335,
+      "SSH-Patator": 0.27,
+      "Web-BruteForce": 0.32666666666666666,
+      "Web-XSS": 0.2833333333333333,
+      "01_ConstPos": 0.25666666666666665,
+      "02_ConstPosOffset": 0.24666666666666667,
+      "03_RandomPos": 0.25,
+      "04_RandomPosOffset": 0.22,
+      "05_ConstSpeed": 0.28,
+      "06_ConstSpeedOffset": 0.28,
+      "07_RandomSpeed": 0.29,
+      "08_RandomSpeedOffset": 0.22666666666666666,
+      "09_EventualStop": 0.27666666666666667,
+      "10_Disruptive": 0.25333333333333335,
+      "11_DataReplay": 0.24333333333333335,
+      "13_DoS": 0.22,
+      "14_DoSRandom": 0.17333333333333334,
+      "15_DoSDisruptive": 0.23666666666666666,
+      "16_GridSybil": 0.25666666666666665,
+      "17_DataReplaySybil": 0.21333333333333335,
+      "18_DoSRandomSybil": 0.18,
+      "19_DoSDisruptiveSybil": 0.24333333333333335
+     }
+    },
+    "without lidar": {
+     "domains": [
+      "gps",
+      "can",
+      "network",
+      "v2x",
+      "cross"
+     ],
+     "fa_tick": 0.060167655234301474,
+     "fa_events_per_hour": 112.12326818271356,
+     "mean_detection_single": 0.7879738562091502,
+     "per_domain_mean_detection": {
+      "gps": 0.6458333333333334,
+      "cross": 0.4922222222222223,
+      "lidar": 0.2816666666666667,
+      "can": 0.9060606060606059,
+      "network": 0.7380000000000001,
+      "v2x": 0.9300000000000002
+     },
+     "families": {
+      "drift": 0.73,
+      "accel_drift": 0.6133333333333333,
+      "doppler_spoof": 0.62,
+      "meaconing": 0.62,
+      "lidar_scale": 0.5133333333333333,
+      "lidar_bias": 0.5833333333333334,
+      "lidar_yaw": 0.31,
+      "can_scale": 0.5066666666666667,
+      "can_offset": 0.5166666666666667,
+      "can_freeze": 0.5233333333333333,
+      "gps_can": 0.5966666666666667,
+      "GhostCluster": 0.2966666666666667,
+      "IntensitySpoof": 0.2833333333333333,
+      "PointDrop": 0.28,
+      "correlated_signal": 0.9666666666666667,
+      "correlated_signal_masquerade": 0.9533333333333334,
+      "fuzzing": 0.6733333333333333,
+      "max_engine_coolant_temp": 0.8966666666666666,
+      "max_engine_coolant_temp_masquerade": 0.8933333333333333,
+      "max_speedometer": 0.9566666666666667,
+      "max_speedometer_masquerade": 0.8,
+      "reverse_light_off": 0.9566666666666667,
+      "reverse_light_off_masquerade": 0.9666666666666667,
+      "reverse_light_on": 0.94,
+      "reverse_light_on_masquerade": 0.9633333333333334,
+      "DDoS-LOIC-HTTP": 0.9966666666666667,
+      "DoS-GoldenEye": 0.9966666666666667,
+      "DoS-Hulk": 0.74,
+      "DoS-SlowHTTPTest": 0.8833333333333333,
+      "DoS-Slowloris": 0.8266666666666667,
+      "FTP-Patator": 0.64,
+      "PortScan": 0.7566666666666667,
+      "SSH-Patator": 0.6166666666666667,
+      "Web-BruteForce": 0.5966666666666667,
+      "Web-XSS": 0.32666666666666666,
+      "01_ConstPos": 0.9533333333333334,
+      "02_ConstPosOffset": 0.94,
+      "03_RandomPos": 0.9033333333333333,
+      "04_RandomPosOffset": 0.9466666666666667,
+      "05_ConstSpeed": 0.96,
+      "06_ConstSpeedOffset": 0.96,
+      "07_RandomSpeed": 0.9666666666666667,
+      "08_RandomSpeedOffset": 0.9533333333333334,
+      "09_EventualStop": 0.9,
+      "10_Disruptive": 0.9366666666666666,
+      "11_DataReplay": 0.92,
+      "13_DoS": 0.9566666666666667,
+      "14_DoSRandom": 0.9066666666666666,
+      "15_DoSDisruptive": 0.9466666666666667,
+      "16_GridSybil": 0.9633333333333334,
+      "17_DataReplaySybil": 0.8933333333333333,
+      "18_DoSRandomSybil": 0.88,
+      "19_DoSDisruptiveSybil": 0.8533333333333334
+     }
+    },
+    "lidar alone": {
+     "domains": [
+      "lidar"
+     ],
+     "fa_tick": 0.0757512749239423,
+     "fa_events_per_hour": 180.4373043839874,
+     "mean_detection_single": 0.5947058823529411,
+     "per_domain_mean_detection": {
+      "gps": 0.47916666666666663,
+      "cross": 0.5305555555555556,
+      "lidar": 1.0,
+      "can": 0.5448484848484849,
+      "network": 0.6583333333333332,
+      "v2x": 0.5918518518518519
+     },
+     "families": {
+      "drift": 0.4533333333333333,
+      "accel_drift": 0.5333333333333333,
+      "doppler_spoof": 0.49333333333333335,
+      "meaconing": 0.43666666666666665,
+      "lidar_scale": 0.48333333333333334,
+      "lidar_bias": 0.51,
+      "lidar_yaw": 0.5333333333333333,
+      "can_scale": 0.5833333333333334,
+      "can_offset": 0.5433333333333333,
+      "can_freeze": 0.53,
+      "gps_can": 0.47,
+      "GhostCluster": 1.0,
+      "IntensitySpoof": 1.0,
+      "PointDrop": 1.0,
+      "correlated_signal": 0.69,
+      "correlated_signal_masquerade": 0.69,
+      "fuzzing": 0.016666666666666666,
+      "max_engine_coolant_temp": 0.35333333333333333,
+      "max_engine_coolant_temp_masquerade": 0.42,
+      "max_speedometer": 0.63,
+      "max_speedometer_masquerade": 0.59,
+      "reverse_light_off": 0.65,
+      "reverse_light_off_masquerade": 0.57,
+      "reverse_light_on": 0.7,
+      "reverse_light_on_masquerade": 0.6833333333333333,
+      "DDoS-LOIC-HTTP": 0.6633333333333333,
+      "DoS-GoldenEye": 0.6766666666666666,
+      "DoS-Hulk": 0.6866666666666666,
+      "DoS-SlowHTTPTest": 0.6666666666666666,
+      "DoS-Slowloris": 0.6333333333333333,
+      "FTP-Patator": 0.6466666666666666,
+      "PortScan": 0.6933333333333334,
+      "SSH-Patator": 0.67,
+      "Web-BruteForce": 0.6066666666666667,
+      "Web-XSS": 0.64,
+      "01_ConstPos": 0.6133333333333333,
+      "02_ConstPosOffset": 0.63,
+      "03_RandomPos": 0.52,
+      "04_RandomPosOffset": 0.57,
+      "05_ConstSpeed": 0.5633333333333334,
+      "06_ConstSpeedOffset": 0.63,
+      "07_RandomSpeed": 0.6366666666666667,
+      "08_RandomSpeedOffset": 0.61,
+      "09_EventualStop": 0.6033333333333334,
+      "10_Disruptive": 0.61,
+      "11_DataReplay": 0.57,
+      "13_DoS": 0.69,
+      "14_DoSRandom": 0.5833333333333334,
+      "15_DoSDisruptive": 0.5766666666666667,
+      "16_GridSybil": 0.65,
+      "17_DataReplaySybil": 0.56,
+      "18_DoSRandomSybil": 0.4533333333333333,
+      "19_DoSDisruptiveSybil": 0.5833333333333334
+     }
+    },
+    "without can": {
+     "domains": [
+      "gps",
+      "lidar",
+      "network",
+      "v2x",
+      "cross"
+     ],
+     "fa_tick": 0.06548622206658057,
+     "fa_events_per_hour": 116.85088314473943,
+     "mean_detection_single": 0.7139215686274509,
+     "per_domain_mean_detection": {
+      "gps": 0.7091666666666666,
+      "cross": 0.5733333333333334,
+      "lidar": 0.6599999999999999,
+      "can": 0.30696969696969695,
+      "network": 0.778,
+      "v2x": 0.9809259259259259
+     },
+     "families": {
+      "drift": 0.7866666666666666,
+      "accel_drift": 0.67,
+      "doppler_spoof": 0.7233333333333334,
+      "meaconing": 0.6566666666666666,
+      "lidar_scale": 0.5333333333333333,
+      "lidar_bias": 0.66,
+      "lidar_yaw": 0.37666666666666665,
+      "can_scale": 0.5966666666666667,
+      "can_offset": 0.6633333333333333,
+      "can_freeze": 0.61,
+      "gps_can": 0.6466666666666666,
+      "GhostCluster": 0.6866666666666666,
+      "IntensitySpoof": 0.7066666666666667,
+      "PointDrop": 0.6133333333333333,
+      "correlated_signal": 0.33666666666666667,
+      "correlated_signal_masquerade": 0.3,
+      "fuzzing": 0.07333333333333333,
+      "max_engine_coolant_temp": 0.18666666666666668,
+      "max_engine_coolant_temp_masquerade": 0.19666666666666666,
+      "max_speedometer": 0.3933333333333333,
+      "max_speedometer_masquerade": 0.44,
+      "reverse_light_off": 0.37333333333333335,
+      "reverse_light_off_masquerade": 0.36666666666666664,
+      "reverse_light_on": 0.38,
+      "reverse_light_on_masquerade": 0.33,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.7766666666666666,
+      "DoS-SlowHTTPTest": 0.9666666666666667,
+      "DoS-Slowloris": 0.9066666666666666,
+      "FTP-Patator": 0.66,
+      "PortScan": 0.77,
+      "SSH-Patator": 0.7333333333333333,
+      "Web-BruteForce": 0.6333333333333333,
+      "Web-XSS": 0.3333333333333333,
+      "01_ConstPos": 0.9866666666666667,
+      "02_ConstPosOffset": 0.9966666666666667,
+      "03_RandomPos": 0.9633333333333334,
+      "04_RandomPosOffset": 1.0,
+      "05_ConstSpeed": 1.0,
+      "06_ConstSpeedOffset": 0.9966666666666667,
+      "07_RandomSpeed": 0.9966666666666667,
+      "08_RandomSpeedOffset": 0.9966666666666667,
+      "09_EventualStop": 0.94,
+      "10_Disruptive": 0.99,
+      "11_DataReplay": 0.9833333333333333,
+      "13_DoS": 0.9966666666666667,
+      "14_DoSRandom": 0.97,
+      "15_DoSDisruptive": 0.9966666666666667,
+      "16_GridSybil": 0.99,
+      "17_DataReplaySybil": 0.9766666666666667,
+      "18_DoSRandomSybil": 0.9466666666666667,
+      "19_DoSDisruptiveSybil": 0.93
+     }
+    },
+    "can alone": {
+     "domains": [
+      "can"
+     ],
+     "fa_tick": 0.019939153844470224,
+     "fa_events_per_hour": 37.50574536540524,
+     "mean_detection_single": 0.3073856209150327,
+     "per_domain_mean_detection": {
+      "gps": 0.08833333333333332,
+      "cross": 0.08666666666666667,
+      "lidar": 0.07666666666666666,
+      "can": 1.0,
+      "network": 0.13033333333333336,
+      "v2x": 0.13037037037037036
+     },
+     "families": {
+      "drift": 0.056666666666666664,
+      "accel_drift": 0.09333333333333334,
+      "doppler_spoof": 0.11333333333333333,
+      "meaconing": 0.09,
+      "lidar_scale": 0.09333333333333334,
+      "lidar_bias": 0.11,
+      "lidar_yaw": 0.07666666666666666,
+      "can_scale": 0.07,
+      "can_offset": 0.07333333333333333,
+      "can_freeze": 0.09666666666666666,
+      "gps_can": 0.08666666666666667,
+      "GhostCluster": 0.10666666666666667,
+      "IntensitySpoof": 0.07,
+      "PointDrop": 0.08333333333333333,
+      "correlated_signal": 1.0,
+      "correlated_signal_masquerade": 1.0,
+      "fuzzing": 1.0,
+      "max_engine_coolant_temp": 1.0,
+      "max_engine_coolant_temp_masquerade": 1.0,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 1.0,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 1.0,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 1.0,
+      "DDoS-LOIC-HTTP": 0.12,
+      "DoS-GoldenEye": 0.15,
+      "DoS-Hulk": 0.13,
+      "DoS-SlowHTTPTest": 0.12666666666666668,
+      "DoS-Slowloris": 0.15,
+      "FTP-Patator": 0.12666666666666668,
+      "PortScan": 0.12666666666666668,
+      "SSH-Patator": 0.13333333333333333,
+      "Web-BruteForce": 0.11333333333333333,
+      "Web-XSS": 0.12666666666666668,
+      "01_ConstPos": 0.12666666666666668,
+      "02_ConstPosOffset": 0.14333333333333334,
+      "03_RandomPos": 0.12333333333333334,
+      "04_RandomPosOffset": 0.12,
+      "05_ConstSpeed": 0.13,
+      "06_ConstSpeedOffset": 0.12666666666666668,
+      "07_RandomSpeed": 0.14,
+      "08_RandomSpeedOffset": 0.14666666666666667,
+      "09_EventualStop": 0.12,
+      "10_Disruptive": 0.13666666666666666,
+      "11_DataReplay": 0.12,
+      "13_DoS": 0.11666666666666667,
+      "14_DoSRandom": 0.11666666666666667,
+      "15_DoSDisruptive": 0.18333333333333332,
+      "16_GridSybil": 0.14666666666666667,
+      "17_DataReplaySybil": 0.13,
+      "18_DoSRandomSybil": 0.13,
+      "19_DoSDisruptiveSybil": 0.09
+     }
+    },
+    "without network": {
+     "domains": [
+      "gps",
+      "lidar",
+      "can",
+      "v2x",
+      "cross"
+     ],
+     "fa_tick": 0.06531112521613518,
+     "fa_events_per_hour": 173.26708835824815,
+     "mean_detection_single": 0.8168627450980395,
+     "per_domain_mean_detection": {
+      "gps": 0.7275,
+      "cross": 0.6472222222222221,
+      "lidar": 0.7266666666666667,
+      "can": 0.9748484848484847,
+      "network": 0.5033333333333333,
+      "v2x": 0.9809259259259259
+     },
+     "families": {
+      "drift": 0.8266666666666667,
+      "accel_drift": 0.6966666666666667,
+      "doppler_spoof": 0.7233333333333334,
+      "meaconing": 0.6633333333333333,
+      "lidar_scale": 0.63,
+      "lidar_bias": 0.7366666666666667,
+      "lidar_yaw": 0.4766666666666667,
+      "can_scale": 0.6433333333333333,
+      "can_offset": 0.73,
+      "can_freeze": 0.6666666666666666,
+      "gps_can": 0.6666666666666666,
+      "GhostCluster": 0.8033333333333333,
+      "IntensitySpoof": 0.7566666666666667,
+      "PointDrop": 0.6966666666666667,
+      "correlated_signal": 1.0,
+      "correlated_signal_masquerade": 1.0,
+      "fuzzing": 0.83,
+      "max_engine_coolant_temp": 0.9933333333333333,
+      "max_engine_coolant_temp_masquerade": 0.99,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.91,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 1.0,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 1.0,
+      "DDoS-LOIC-HTTP": 0.5033333333333333,
+      "DoS-GoldenEye": 0.4866666666666667,
+      "DoS-Hulk": 0.5033333333333333,
+      "DoS-SlowHTTPTest": 0.47,
+      "DoS-Slowloris": 0.5533333333333333,
+      "FTP-Patator": 0.4766666666666667,
+      "PortScan": 0.5166666666666667,
+      "SSH-Patator": 0.4866666666666667,
+      "Web-BruteForce": 0.52,
+      "Web-XSS": 0.5166666666666667,
+      "01_ConstPos": 0.98,
+      "02_ConstPosOffset": 0.99,
+      "03_RandomPos": 0.9666666666666667,
+      "04_RandomPosOffset": 0.9933333333333333,
+      "05_ConstSpeed": 0.9933333333333333,
+      "06_ConstSpeedOffset": 1.0,
+      "07_RandomSpeed": 0.9966666666666667,
+      "08_RandomSpeedOffset": 0.9966666666666667,
+      "09_EventualStop": 0.9566666666666667,
+      "10_Disruptive": 0.9866666666666667,
+      "11_DataReplay": 0.99,
+      "13_DoS": 0.9933333333333333,
+      "14_DoSRandom": 0.9733333333333334,
+      "15_DoSDisruptive": 0.9933333333333333,
+      "16_GridSybil": 0.9933333333333333,
+      "17_DataReplaySybil": 0.9766666666666667,
+      "18_DoSRandomSybil": 0.95,
+      "19_DoSDisruptiveSybil": 0.9266666666666666
+     }
+    },
+    "network alone": {
+     "domains": [
+      "network"
+     ],
+     "fa_tick": 0.02733699577578848,
+     "fa_events_per_hour": 5.751931537131475,
+     "mean_detection_single": 0.1150326797385621,
+     "per_domain_mean_detection": {
+      "gps": 0.03,
+      "cross": 0.032777777777777774,
+      "lidar": 0.03833333333333333,
+      "can": 0.032424242424242425,
+      "network": 0.45633333333333326,
+      "v2x": 0.030740740740740742
+     },
+     "families": {
+      "drift": 0.03,
+      "accel_drift": 0.03,
+      "doppler_spoof": 0.043333333333333335,
+      "meaconing": 0.016666666666666666,
+      "lidar_scale": 0.03666666666666667,
+      "lidar_bias": 0.043333333333333335,
+      "lidar_yaw": 0.03333333333333333,
+      "can_scale": 0.03333333333333333,
+      "can_offset": 0.02,
+      "can_freeze": 0.03,
+      "gps_can": 0.023333333333333334,
+      "GhostCluster": 0.02666666666666667,
+      "IntensitySpoof": 0.03333333333333333,
+      "PointDrop": 0.043333333333333335,
+      "correlated_signal": 0.04,
+      "correlated_signal_masquerade": 0.03333333333333333,
+      "fuzzing": 0.043333333333333335,
+      "max_engine_coolant_temp": 0.03333333333333333,
+      "max_engine_coolant_temp_masquerade": 0.04666666666666667,
+      "max_speedometer": 0.02666666666666667,
+      "max_speedometer_masquerade": 0.02666666666666667,
+      "reverse_light_off": 0.013333333333333334,
+      "reverse_light_off_masquerade": 0.03666666666666667,
+      "reverse_light_on": 0.03666666666666667,
+      "reverse_light_on_masquerade": 0.02,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.5366666666666666,
+      "DoS-SlowHTTPTest": 0.5366666666666666,
+      "DoS-Slowloris": 0.0,
+      "FTP-Patator": 0.3233333333333333,
+      "PortScan": 0.68,
+      "SSH-Patator": 0.0,
+      "Web-BruteForce": 0.4866666666666667,
+      "Web-XSS": 0.0,
+      "01_ConstPos": 0.03666666666666667,
+      "02_ConstPosOffset": 0.016666666666666666,
+      "03_RandomPos": 0.02666666666666667,
+      "04_RandomPosOffset": 0.056666666666666664,
+      "05_ConstSpeed": 0.04,
+      "06_ConstSpeedOffset": 0.03333333333333333,
+      "07_RandomSpeed": 0.03,
+      "08_RandomSpeedOffset": 0.03,
+      "09_EventualStop": 0.03,
+      "10_Disruptive": 0.023333333333333334,
+      "11_DataReplay": 0.02,
+      "13_DoS": 0.05,
+      "14_DoSRandom": 0.02,
+      "15_DoSDisruptive": 0.02666666666666667,
+      "16_GridSybil": 0.043333333333333335,
+      "17_DataReplaySybil": 0.023333333333333334,
+      "18_DoSRandomSybil": 0.03,
+      "19_DoSDisruptiveSybil": 0.016666666666666666
+     }
+    },
+    "without v2x": {
+     "domains": [
+      "gps",
+      "lidar",
+      "can",
+      "network",
+      "cross"
+     ],
+     "fa_tick": 0.046772746175228176,
+     "fa_events_per_hour": 77.848059708026,
+     "mean_detection_single": 0.5483006535947713,
+     "per_domain_mean_detection": {
+      "gps": 0.6266666666666667,
+      "cross": 0.4611111111111111,
+      "lidar": 0.515,
+      "can": 0.9163636363636364,
+      "network": 0.7136666666666666,
+      "v2x": 0.24685185185185185
+     },
+     "families": {
+      "drift": 0.6866666666666666,
+      "accel_drift": 0.5666666666666667,
+      "doppler_spoof": 0.6566666666666666,
+      "meaconing": 0.5966666666666667,
+      "lidar_scale": 0.49666666666666665,
+      "lidar_bias": 0.5533333333333333,
+      "lidar_yaw": 0.23,
+      "can_scale": 0.5,
+      "can_offset": 0.49333333333333335,
+      "can_freeze": 0.49333333333333335,
+      "gps_can": 0.5733333333333334,
+      "GhostCluster": 0.5466666666666666,
+      "IntensitySpoof": 0.5366666666666666,
+      "PointDrop": 0.49333333333333335,
+      "correlated_signal": 0.9933333333333333,
+      "correlated_signal_masquerade": 0.99,
+      "fuzzing": 0.55,
+      "max_engine_coolant_temp": 0.8833333333333333,
+      "max_engine_coolant_temp_masquerade": 0.9033333333333333,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.76,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 1.0,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 1.0,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.7033333333333334,
+      "DoS-SlowHTTPTest": 0.88,
+      "DoS-Slowloris": 0.83,
+      "FTP-Patator": 0.5833333333333334,
+      "PortScan": 0.7433333333333333,
+      "SSH-Patator": 0.5866666666666667,
+      "Web-BruteForce": 0.55,
+      "Web-XSS": 0.26,
+      "01_ConstPos": 0.23,
+      "02_ConstPosOffset": 0.27,
+      "03_RandomPos": 0.25,
+      "04_RandomPosOffset": 0.27,
+      "05_ConstSpeed": 0.31,
+      "06_ConstSpeedOffset": 0.2966666666666667,
+      "07_RandomSpeed": 0.27,
+      "08_RandomSpeedOffset": 0.24,
+      "09_EventualStop": 0.22666666666666666,
+      "10_Disruptive": 0.24333333333333335,
+      "11_DataReplay": 0.23,
+      "13_DoS": 0.26666666666666666,
+      "14_DoSRandom": 0.22666666666666666,
+      "15_DoSDisruptive": 0.23666666666666666,
+      "16_GridSybil": 0.25666666666666665,
+      "17_DataReplaySybil": 0.23666666666666666,
+      "18_DoSRandomSybil": 0.17,
+      "19_DoSDisruptiveSybil": 0.21333333333333335
+     }
+    },
+    "v2x alone": {
+     "domains": [
+      "v2x"
+     ],
+     "fa_tick": 0.07036704677274618,
+     "fa_events_per_hour": 187.0559653308236,
+     "mean_detection_single": 0.6086928104575162,
+     "per_domain_mean_detection": {
+      "gps": 0.33666666666666667,
+      "cross": 0.35277777777777786,
+      "lidar": 0.4083333333333333,
+      "can": 0.39121212121212123,
+      "network": 0.45933333333333337,
+      "v2x": 0.9925925925925925
+     },
+     "families": {
+      "drift": 0.34,
+      "accel_drift": 0.35333333333333333,
+      "doppler_spoof": 0.29333333333333333,
+      "meaconing": 0.36,
+      "lidar_scale": 0.2866666666666667,
+      "lidar_bias": 0.39,
+      "lidar_yaw": 0.34,
+      "can_scale": 0.33,
+      "can_offset": 0.4,
+      "can_freeze": 0.37,
+      "gps_can": 0.31,
+      "GhostCluster": 0.43333333333333335,
+      "IntensitySpoof": 0.42,
+      "PointDrop": 0.39666666666666667,
+      "correlated_signal": 0.4066666666666667,
+      "correlated_signal_masquerade": 0.41,
+      "fuzzing": 0.12666666666666668,
+      "max_engine_coolant_temp": 0.2833333333333333,
+      "max_engine_coolant_temp_masquerade": 0.30333333333333334,
+      "max_speedometer": 0.4633333333333333,
+      "max_speedometer_masquerade": 0.5066666666666667,
+      "reverse_light_off": 0.45,
+      "reverse_light_off_masquerade": 0.4666666666666667,
+      "reverse_light_on": 0.4266666666666667,
+      "reverse_light_on_masquerade": 0.46,
+      "DDoS-LOIC-HTTP": 0.49333333333333335,
+      "DoS-GoldenEye": 0.49,
+      "DoS-Hulk": 0.4266666666666667,
+      "DoS-SlowHTTPTest": 0.42333333333333334,
+      "DoS-Slowloris": 0.5033333333333333,
+      "FTP-Patator": 0.39666666666666667,
+      "PortScan": 0.47,
+      "SSH-Patator": 0.43666666666666665,
+      "Web-BruteForce": 0.5033333333333333,
+      "Web-XSS": 0.45,
+      "01_ConstPos": 1.0,
+      "02_ConstPosOffset": 0.9966666666666667,
+      "03_RandomPos": 1.0,
+      "04_RandomPosOffset": 1.0,
+      "05_ConstSpeed": 1.0,
+      "06_ConstSpeedOffset": 1.0,
+      "07_RandomSpeed": 1.0,
+      "08_RandomSpeedOffset": 1.0,
+      "09_EventualStop": 0.96,
+      "10_Disruptive": 1.0,
+      "11_DataReplay": 1.0,
+      "13_DoS": 1.0,
+      "14_DoSRandom": 1.0,
+      "15_DoSDisruptive": 1.0,
+      "16_GridSybil": 0.9966666666666667,
+      "17_DataReplaySybil": 0.9966666666666667,
+      "18_DoSRandomSybil": 0.9933333333333333,
+      "19_DoSDisruptiveSybil": 0.9233333333333333
+     }
+    },
+    "without cross": {
+     "domains": [
+      "gps",
+      "lidar",
+      "can",
+      "network",
+      "v2x"
+     ],
+     "fa_tick": 0.05765063800914881,
+     "fa_events_per_hour": 88.64278053798508,
+     "mean_detection_single": 0.768235294117647,
+     "per_domain_mean_detection": {
+      "gps": 0.4866666666666667,
+      "cross": 0.23777777777777775,
+      "lidar": 0.52,
+      "can": 0.9333333333333332,
+      "network": 0.7236666666666667,
+      "v2x": 0.959074074074074
+     },
+     "families": {
+      "drift": 0.51,
+      "accel_drift": 0.4866666666666667,
+      "doppler_spoof": 0.49333333333333335,
+      "meaconing": 0.45666666666666667,
+      "lidar_scale": 0.23666666666666666,
+      "lidar_bias": 0.29333333333333333,
+      "lidar_yaw": 0.2,
+      "can_scale": 0.22,
+      "can_offset": 0.23,
+      "can_freeze": 0.24666666666666667,
+      "gps_can": 0.37666666666666665,
+      "GhostCluster": 0.57,
+      "IntensitySpoof": 0.5366666666666666,
+      "PointDrop": 0.5033333333333333,
+      "correlated_signal": 0.9766666666666667,
+      "correlated_signal_masquerade": 0.99,
+      "fuzzing": 0.7166666666666667,
+      "max_engine_coolant_temp": 0.9366666666666666,
+      "max_engine_coolant_temp_masquerade": 0.94,
+      "max_speedometer": 0.99,
+      "max_speedometer_masquerade": 0.7766666666666666,
+      "reverse_light_off": 0.9833333333333333,
+      "reverse_light_off_masquerade": 0.98,
+      "reverse_light_on": 0.99,
+      "reverse_light_on_masquerade": 0.9866666666666667,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.7266666666666667,
+      "DoS-SlowHTTPTest": 0.8933333333333333,
+      "DoS-Slowloris": 0.8466666666666667,
+      "FTP-Patator": 0.5966666666666667,
+      "PortScan": 0.7466666666666667,
+      "SSH-Patator": 0.6066666666666667,
+      "Web-BruteForce": 0.5633333333333334,
+      "Web-XSS": 0.25666666666666665,
+      "01_ConstPos": 0.9566666666666667,
+      "02_ConstPosOffset": 0.9633333333333334,
+      "03_RandomPos": 0.9433333333333334,
+      "04_RandomPosOffset": 0.98,
+      "05_ConstSpeed": 0.9766666666666667,
+      "06_ConstSpeedOffset": 0.9833333333333333,
+      "07_RandomSpeed": 0.9733333333333334,
+      "08_RandomSpeedOffset": 0.97,
+      "09_EventualStop": 0.9333333333333333,
+      "10_Disruptive": 0.9766666666666667,
+      "11_DataReplay": 0.9566666666666667,
+      "13_DoS": 0.9766666666666667,
+      "14_DoSRandom": 0.9533333333333334,
+      "15_DoSDisruptive": 0.9733333333333334,
+      "16_GridSybil": 0.98,
+      "17_DataReplaySybil": 0.96,
+      "18_DoSRandomSybil": 0.9233333333333333,
+      "19_DoSDisruptiveSybil": 0.8833333333333333
+     }
+    },
+    "cross alone": {
+     "domains": [
+      "cross"
+     ],
+     "fa_tick": 0.04224211516995338,
+     "fa_events_per_hour": 126.30611306879116,
+     "mean_detection_single": 0.4630718954248366,
+     "per_domain_mean_detection": {
+      "gps": 0.6941666666666666,
+      "cross": 0.7927777777777777,
+      "lidar": 0.3616666666666667,
+      "can": 0.3318181818181818,
+      "network": 0.477,
+      "v2x": 0.38555555555555565
+     },
+     "families": {
+      "drift": 0.78,
+      "accel_drift": 0.6766666666666666,
+      "doppler_spoof": 0.6833333333333333,
+      "meaconing": 0.6366666666666667,
+      "lidar_scale": 0.7333333333333333,
+      "lidar_bias": 0.9266666666666666,
+      "lidar_yaw": 0.5833333333333334,
+      "can_scale": 0.75,
+      "can_offset": 0.9,
+      "can_freeze": 0.8633333333333333,
+      "gps_can": 0.7733333333333333,
+      "GhostCluster": 0.3466666666666667,
+      "IntensitySpoof": 0.37666666666666665,
+      "PointDrop": 0.3466666666666667,
+      "correlated_signal": 0.3233333333333333,
+      "correlated_signal_masquerade": 0.27,
+      "fuzzing": 0.07666666666666666,
+      "max_engine_coolant_temp": 0.18666666666666668,
+      "max_engine_coolant_temp_masquerade": 0.18666666666666668,
+      "max_speedometer": 0.4533333333333333,
+      "max_speedometer_masquerade": 0.5,
+      "reverse_light_off": 0.45666666666666667,
+      "reverse_light_off_masquerade": 0.4166666666666667,
+      "reverse_light_on": 0.4,
+      "reverse_light_on_masquerade": 0.38,
+      "DDoS-LOIC-HTTP": 0.49333333333333335,
+      "DoS-GoldenEye": 0.49333333333333335,
+      "DoS-Hulk": 0.4633333333333333,
+      "DoS-SlowHTTPTest": 0.49,
+      "DoS-Slowloris": 0.5,
+      "FTP-Patator": 0.48333333333333334,
+      "PortScan": 0.49,
+      "SSH-Patator": 0.4866666666666667,
+      "Web-BruteForce": 0.44666666666666666,
+      "Web-XSS": 0.42333333333333334,
+      "01_ConstPos": 0.41,
+      "02_ConstPosOffset": 0.43,
+      "03_RandomPos": 0.36333333333333334,
+      "04_RandomPosOffset": 0.39666666666666667,
+      "05_ConstSpeed": 0.4066666666666667,
+      "06_ConstSpeedOffset": 0.42,
+      "07_RandomSpeed": 0.4066666666666667,
+      "08_RandomSpeedOffset": 0.34,
+      "09_EventualStop": 0.39666666666666667,
+      "10_Disruptive": 0.37,
+      "11_DataReplay": 0.41,
+      "13_DoS": 0.37333333333333335,
+      "14_DoSRandom": 0.33,
+      "15_DoSDisruptive": 0.42,
+      "16_GridSybil": 0.44,
+      "17_DataReplaySybil": 0.3466666666666667,
+      "18_DoSRandomSybil": 0.28,
+      "19_DoSDisruptiveSybil": 0.4
+     }
+    }
+   }
+  },
+  "C": {
+   "headline": {
+    "clean_ticks": 120000,
+    "fa_tick": 0.063075,
+    "fa_events_per_hour": 93.72,
+    "clean_hours": 33.333333333333336,
+    "alarms": 544813,
+    "alarms_with_explanation": 544813,
+    "examples": [
+     {
+      "family": "drift",
+      "attacked": "gps",
+      "tick": 40,
+      "reason": "system alarm (noisy_or, 0.7750 >= 0.7379): domains fired: cross (1.000, layers gnss-can pspeed, gnss-wheel pspeed); cross-domain blame: undecided"
+     },
+     {
+      "family": "drift",
+      "attacked": "gps",
+      "tick": 41,
+      "reason": "system alarm (noisy_or, 0.7660 >= 0.7379): domains fired: cross (1.000, layers gnss-can pspeed, gnss-wheel pspeed); cross-domain blame: undecided"
+     },
+     {
+      "family": "drift",
+      "attacked": "gps",
+      "tick": 42,
+      "reason": "system alarm (noisy_or, 0.7978 >= 0.7379): domains fired: cross (1.000, layers gnss-can pspeed, gnss-wheel pspeed); cross-domain blame: undecided"
+     },
+     {
+      "family": "drift",
+      "attacked": "gps",
+      "tick": 43,
+      "reason": "system alarm (noisy_or, 0.7400 >= 0.7379): domains fired: cross (1.000, layers gnss-can pspeed, gnss-wheel pspeed); cross-domain blame: undecided"
+     }
+    ],
+    "mean_detection_single": 0.948768115942029,
+    "per_domain_mean_detection": {
+     "gps": 0.9608333333333332,
+     "cross": 0.9955555555555554,
+     "can": 0.9069696969696968,
+     "network": 0.9099999999999999,
+     "v2x": 0.9853703703703702
+    },
+    "ci": {
+     "fa_tick": [
+      0.05084345479082321,
+      0.07501646903820818
+     ],
+     "mean_detection": [
+      0.9403610141645702,
+      0.9637327585343821
+     ],
+     "n_vehicle_groups": 4
+    },
+    "families": {
+     "drift": {
+      "attacked": "gps",
+      "n": 300,
+      "detection": 0.8866666666666667,
+      "median_delay_s": 3.0,
+      "attributed": 0.6804511278195489,
+      "cross_blame_counts": {
+       "None": 92,
+       "can": 2,
+       "undecided": 172
+      }
+     },
+     "accel_drift": {
+      "attacked": "gps",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 7.0,
+      "attributed": 0.7248322147651006,
+      "cross_blame_counts": {
+       "None": 89,
+       "can": 3,
+       "undecided": 206
+      }
+     },
+     "doppler_spoof": {
+      "attacked": "gps",
+      "n": 300,
+      "detection": 0.97,
+      "median_delay_s": 2.0,
+      "attributed": 0.7628865979381443,
+      "cross_blame_counts": {
+       "None": 75,
+       "undecided": 216
+      }
+     },
+     "meaconing": {
+      "attacked": "gps",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 2.0,
+      "attributed": 0.9060402684563759,
+      "cross_blame_counts": {
+       "None": 34,
+       "can": 11,
+       "undecided": 253
+      }
+     },
+     "can_scale": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 1.0,
+      "attributed": 0.9166666666666666,
+      "cross_blame_counts": {
+       "None": 29,
+       "can": 15,
+       "undecided": 256
+      }
+     },
+     "can_offset": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 0.9966666666666667,
+      "median_delay_s": 2.0,
+      "attributed": 0.8561872909698997,
+      "cross_blame_counts": {
+       "None": 54,
+       "can": 23,
+       "undecided": 222
+      }
+     },
+     "can_freeze": {
+      "attacked": "cross",
+      "n": 300,
+      "detection": 0.99,
+      "median_delay_s": 2.0,
+      "attributed": 0.8215488215488216,
+      "cross_blame_counts": {
+       "None": 61,
+       "can": 92,
+       "undecided": 144
+      }
+     },
+     "gnss_can": {
+      "attacked": "gps+can",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 2.0,
+      "attributed": 0.8624161073825504,
+      "cross_blame_counts": {
+       "None": 48,
+       "can": 38,
+       "undecided": 212
+      }
+     },
+     "can_bus": {
+      "attacked": "gps+can",
+      "n": 300,
+      "detection": 0.9966666666666667,
+      "median_delay_s": 1.0,
+      "attributed": 0.8595317725752508,
+      "cross_blame_counts": {
+       "None": 44,
+       "can": 77,
+       "undecided": 178
+      }
+     },
+     "correlated_signal": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9166666666666666,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 272,
+       "can": 3
+      }
+     },
+     "correlated_signal_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9233333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 274,
+       "can": 3
+      }
+     },
+     "fuzzing": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.6433333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 186,
+       "can": 7
+      }
+     },
+     "max_engine_coolant_temp": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.85,
+      "median_delay_s": 1.0,
+      "attributed": 0.9294117647058824,
+      "cross_blame_counts": {
+       "None": 215,
+       "can": 19,
+       "undecided": 21
+      }
+     },
+     "max_engine_coolant_temp_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.8466666666666667,
+      "median_delay_s": 1.0,
+      "attributed": 0.9173228346456693,
+      "cross_blame_counts": {
+       "None": 229,
+       "can": 14,
+       "undecided": 11
+      }
+     },
+     "max_speedometer": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 298,
+       "can": 1,
+       "undecided": 1
+      }
+     },
+     "max_speedometer_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9266666666666666,
+      "median_delay_s": 7.0,
+      "attributed": 0.658273381294964,
+      "cross_blame_counts": {
+       "None": 249,
+       "can": 13,
+       "undecided": 16
+      }
+     },
+     "reverse_light_off": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9766666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 277,
+       "can": 1,
+       "undecided": 15
+      }
+     },
+     "reverse_light_off_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.96,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 264,
+       "undecided": 24
+      }
+     },
+     "reverse_light_on": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.9833333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 290,
+       "can": 2,
+       "undecided": 3
+      }
+     },
+     "reverse_light_on_masquerade": {
+      "attacked": "can",
+      "n": 300,
+      "detection": 0.95,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 279,
+       "can": 2,
+       "undecided": 4
+      }
+     },
+     "DDoS-LOIC-HTTP": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 297,
+       "can": 2,
+       "undecided": 1
+      }
+     },
+     "DoS-GoldenEye": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 299,
+       "undecided": 1
+      }
+     },
+     "DoS-Hulk": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.8833333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 0.5547169811320755,
+      "cross_blame_counts": {
+       "None": 249,
+       "can": 1,
+       "undecided": 15
+      }
+     },
+     "DoS-SlowHTTPTest": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.9966666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 285,
+       "can": 4,
+       "undecided": 10
+      }
+     },
+     "DoS-Slowloris": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 4.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 287,
+       "can": 4,
+       "undecided": 7
+      }
+     },
+     "FTP-Patator": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.8333333333333334,
+      "median_delay_s": 4.0,
+      "attributed": 0.756,
+      "cross_blame_counts": {
+       "None": 217,
+       "can": 6,
+       "undecided": 27
+      }
+     },
+     "PortScan": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.8633333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 0.7297297297297297,
+      "cross_blame_counts": {
+       "None": 244,
+       "can": 1,
+       "undecided": 14
+      }
+     },
+     "SSH-Patator": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.9566666666666667,
+      "median_delay_s": 9.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 259,
+       "can": 8,
+       "undecided": 20
+      }
+     },
+     "Web-BruteForce": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.8566666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 0.5719844357976653,
+      "cross_blame_counts": {
+       "None": 227,
+       "can": 5,
+       "undecided": 25
+      }
+     },
+     "Web-XSS": {
+      "attacked": "network",
+      "n": 300,
+      "detection": 0.7166666666666667,
+      "median_delay_s": 24.0,
+      "attributed": 0.0,
+      "cross_blame_counts": {
+       "None": 166,
+       "can": 7,
+       "undecided": 42
+      }
+     },
+     "01_ConstPos": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9866666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 285,
+       "can": 5,
+       "undecided": 6
+      }
+     },
+     "02_ConstPosOffset": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 0.9932885906040269,
+      "cross_blame_counts": {
+       "None": 291,
+       "can": 3,
+       "undecided": 4
+      }
+     },
+     "03_RandomPos": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9766666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 287,
+       "can": 5,
+       "undecided": 1
+      }
+     },
+     "04_RandomPosOffset": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.98,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 288,
+       "can": 2,
+       "undecided": 4
+      }
+     },
+     "05_ConstSpeed": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 285,
+       "can": 6,
+       "undecided": 9
+      }
+     },
+     "06_ConstSpeedOffset": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 293,
+       "can": 5
+      }
+     },
+     "07_RandomSpeed": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 297,
+       "can": 3
+      }
+     },
+     "08_RandomSpeedOffset": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9833333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 287,
+       "can": 5,
+       "undecided": 3
+      }
+     },
+     "09_EventualStop": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9366666666666666,
+      "median_delay_s": 1.0,
+      "attributed": 0.9608540925266904,
+      "cross_blame_counts": {
+       "None": 272,
+       "can": 6,
+       "undecided": 3
+      }
+     },
+     "10_Disruptive": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 295,
+       "can": 3,
+       "undecided": 2
+      }
+     },
+     "11_DataReplay": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.98,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 280,
+       "can": 11,
+       "undecided": 3
+      }
+     },
+     "13_DoS": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 286,
+       "can": 8,
+       "undecided": 4
+      }
+     },
+     "14_DoSRandom": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9866666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 288,
+       "can": 4,
+       "undecided": 4
+      }
+     },
+     "15_DoSDisruptive": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 1.0,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 292,
+       "can": 5,
+       "undecided": 3
+      }
+     },
+     "16_GridSybil": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9933333333333333,
+      "median_delay_s": 0.0,
+      "attributed": 1.0,
+      "cross_blame_counts": {
+       "None": 289,
+       "can": 5,
+       "undecided": 4
+      }
+     },
+     "17_DataReplaySybil": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9966666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 0.9832775919732442,
+      "cross_blame_counts": {
+       "None": 295,
+       "can": 3,
+       "undecided": 1
+      }
+     },
+     "18_DoSRandomSybil": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.97,
+      "median_delay_s": 0.0,
+      "attributed": 0.993127147766323,
+      "cross_blame_counts": {
+       "None": 285,
+       "can": 5,
+       "undecided": 1
+      }
+     },
+     "19_DoSDisruptiveSybil": {
+      "attacked": "v2x",
+      "n": 300,
+      "detection": 0.9666666666666667,
+      "median_delay_s": 0.0,
+      "attributed": 0.9793103448275862,
+      "cross_blame_counts": {
+       "None": 286,
+       "can": 2,
+       "undecided": 2
+      }
+     }
+    },
+    "v2_style": {
+     "accuracy": 0.5515,
+     "composite_FA": 0.836,
+     "composite_detection": 0.939,
+     "n": 2000
+    },
+    "attributed_pooled": 0.9145344840754601
+   },
+   "max (label-free, not chosen)": {
+    "fa_tick": 0.05851666666666667,
+    "fa_events_per_hour": 70.28999999999999,
+    "mean_detection_single": 0.9456521739130435,
+    "per_domain_mean_detection": {
+     "gps": 0.9433333333333334,
+     "cross": 1.0,
+     "can": 0.9575757575757575,
+     "network": 0.8236666666666667,
+     "v2x": 0.9975925925925924
+    },
+    "families": {
+     "drift": 0.8533333333333334,
+     "accel_drift": 0.99,
+     "doppler_spoof": 0.93,
+     "meaconing": 1.0,
+     "can_scale": 1.0,
+     "can_offset": 1.0,
+     "can_freeze": 1.0,
+     "gnss_can": 0.9666666666666667,
+     "can_bus": 0.98,
+     "correlated_signal": 1.0,
+     "correlated_signal_masquerade": 1.0,
+     "fuzzing": 1.0,
+     "max_engine_coolant_temp": 1.0,
+     "max_engine_coolant_temp_masquerade": 1.0,
+     "max_speedometer": 1.0,
+     "max_speedometer_masquerade": 0.5333333333333333,
+     "reverse_light_off": 1.0,
+     "reverse_light_off_masquerade": 1.0,
+     "reverse_light_on": 1.0,
+     "reverse_light_on_masquerade": 1.0,
+     "DDoS-LOIC-HTTP": 1.0,
+     "DoS-GoldenEye": 1.0,
+     "DoS-Hulk": 0.8033333333333333,
+     "DoS-SlowHTTPTest": 1.0,
+     "DoS-Slowloris": 0.7,
+     "FTP-Patator": 0.7233333333333334,
+     "PortScan": 0.86,
+     "SSH-Patator": 0.65,
+     "Web-BruteForce": 0.8166666666666667,
+     "Web-XSS": 0.6833333333333333,
+     "01_ConstPos": 1.0,
+     "02_ConstPosOffset": 1.0,
+     "03_RandomPos": 1.0,
+     "04_RandomPosOffset": 1.0,
+     "05_ConstSpeed": 1.0,
+     "06_ConstSpeedOffset": 1.0,
+     "07_RandomSpeed": 1.0,
+     "08_RandomSpeedOffset": 1.0,
+     "09_EventualStop": 0.9766666666666667,
+     "10_Disruptive": 1.0,
+     "11_DataReplay": 1.0,
+     "13_DoS": 1.0,
+     "14_DoSRandom": 1.0,
+     "15_DoSDisruptive": 1.0,
+     "16_GridSybil": 1.0,
+     "17_DataReplaySybil": 1.0,
+     "18_DoSRandomSybil": 0.99,
+     "19_DoSDisruptiveSybil": 0.99
+    }
+   },
+   "seen-attack logistic (labelled)": {
+    "fa_tick": 0.046358333333333335,
+    "fa_events_per_hour": 64.97999999999999,
+    "mean_detection_single": 0.8348550724637679,
+    "per_domain_mean_detection": {
+     "gps": 0.9308333333333334,
+     "cross": 0.9811111111111112,
+     "can": 0.6024242424242424,
+     "network": 0.8606666666666667,
+     "v2x": 0.9168518518518519
+    },
+    "families": {
+     "drift": 0.82,
+     "accel_drift": 0.9566666666666667,
+     "doppler_spoof": 0.9566666666666667,
+     "meaconing": 0.99,
+     "can_scale": 0.9933333333333333,
+     "can_offset": 0.9933333333333333,
+     "can_freeze": 0.9566666666666667,
+     "gnss_can": 0.99,
+     "can_bus": 0.99,
+     "correlated_signal": 0.58,
+     "correlated_signal_masquerade": 0.53,
+     "fuzzing": 0.17,
+     "max_engine_coolant_temp": 0.38666666666666666,
+     "max_engine_coolant_temp_masquerade": 0.32,
+     "max_speedometer": 0.9133333333333333,
+     "max_speedometer_masquerade": 0.8266666666666667,
+     "reverse_light_off": 0.7666666666666667,
+     "reverse_light_off_masquerade": 0.7166666666666667,
+     "reverse_light_on": 0.73,
+     "reverse_light_on_masquerade": 0.6866666666666666,
+     "DDoS-LOIC-HTTP": 1.0,
+     "DoS-GoldenEye": 1.0,
+     "DoS-Hulk": 0.8266666666666667,
+     "DoS-SlowHTTPTest": 1.0,
+     "DoS-Slowloris": 1.0,
+     "FTP-Patator": 0.78,
+     "PortScan": 0.7433333333333333,
+     "SSH-Patator": 0.9766666666666667,
+     "Web-BruteForce": 0.79,
+     "Web-XSS": 0.49,
+     "01_ConstPos": 0.9633333333333334,
+     "02_ConstPosOffset": 0.9333333333333333,
+     "03_RandomPos": 0.8866666666666667,
+     "04_RandomPosOffset": 0.8933333333333333,
+     "05_ConstSpeed": 0.94,
+     "06_ConstSpeedOffset": 0.9533333333333334,
+     "07_RandomSpeed": 0.9533333333333334,
+     "08_RandomSpeedOffset": 0.9166666666666666,
+     "09_EventualStop": 0.8,
+     "10_Disruptive": 0.93,
+     "11_DataReplay": 0.9166666666666666,
+     "13_DoS": 0.95,
+     "14_DoSRandom": 0.91,
+     "15_DoSDisruptive": 0.9233333333333333,
+     "16_GridSybil": 0.9533333333333334,
+     "17_DataReplaySybil": 0.9166666666666666,
+     "18_DoSRandomSybil": 0.8766666666666667,
+     "19_DoSDisruptiveSybil": 0.8866666666666667
+    }
+   },
+   "ablation": {
+    "without can": {
+     "domains": [
+      "network",
+      "v2x",
+      "cross"
+     ],
+     "fa_tick": 0.050133333333333335,
+     "fa_events_per_hour": 60.35999999999999,
+     "mean_detection_single": 0.7763043478260869,
+     "per_domain_mean_detection": {
+      "gps": 0.9383333333333335,
+      "cross": 0.9866666666666667,
+      "can": 0.2421212121212121,
+      "network": 0.8683333333333334,
+      "v2x": 0.9805555555555555
+     },
+     "families": {
+      "drift": 0.8433333333333334,
+      "accel_drift": 0.9733333333333334,
+      "doppler_spoof": 0.9466666666666667,
+      "meaconing": 0.99,
+      "can_scale": 0.9866666666666667,
+      "can_offset": 0.98,
+      "can_freeze": 0.9933333333333333,
+      "gnss_can": 0.9766666666666667,
+      "can_bus": 0.99,
+      "correlated_signal": 0.15666666666666668,
+      "correlated_signal_masquerade": 0.13,
+      "fuzzing": 0.03666666666666667,
+      "max_engine_coolant_temp": 0.1,
+      "max_engine_coolant_temp_masquerade": 0.11666666666666667,
+      "max_speedometer": 0.5266666666666666,
+      "max_speedometer_masquerade": 0.5833333333333334,
+      "reverse_light_off": 0.25,
+      "reverse_light_off_masquerade": 0.25666666666666665,
+      "reverse_light_on": 0.2833333333333333,
+      "reverse_light_on_masquerade": 0.22333333333333333,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.8133333333333334,
+      "DoS-SlowHTTPTest": 1.0,
+      "DoS-Slowloris": 0.9833333333333333,
+      "FTP-Patator": 0.7933333333333333,
+      "PortScan": 0.7966666666666666,
+      "SSH-Patator": 0.8966666666666666,
+      "Web-BruteForce": 0.7866666666666666,
+      "Web-XSS": 0.6133333333333333,
+      "01_ConstPos": 0.99,
+      "02_ConstPosOffset": 0.99,
+      "03_RandomPos": 0.9833333333333333,
+      "04_RandomPosOffset": 0.98,
+      "05_ConstSpeed": 0.9866666666666667,
+      "06_ConstSpeedOffset": 0.9933333333333333,
+      "07_RandomSpeed": 0.99,
+      "08_RandomSpeedOffset": 0.97,
+      "09_EventualStop": 0.93,
+      "10_Disruptive": 0.99,
+      "11_DataReplay": 0.9833333333333333,
+      "13_DoS": 0.9933333333333333,
+      "14_DoSRandom": 0.97,
+      "15_DoSDisruptive": 0.9866666666666667,
+      "16_GridSybil": 0.9866666666666667,
+      "17_DataReplaySybil": 0.9866666666666667,
+      "18_DoSRandomSybil": 0.9666666666666667,
+      "19_DoSDisruptiveSybil": 0.9733333333333334
+     }
+    },
+    "can alone": {
+     "domains": [
+      "can"
+     ],
+     "fa_tick": 0.05234166666666667,
+     "fa_events_per_hour": 97.86,
+     "mean_detection_single": 0.8020289855072464,
+     "per_domain_mean_detection": {
+      "gps": 0.7324999999999999,
+      "cross": 0.7244444444444444,
+      "can": 1.0,
+      "network": 0.8666666666666666,
+      "v2x": 0.6735185185185185
+     },
+     "families": {
+      "drift": 0.7566666666666667,
+      "accel_drift": 0.7333333333333333,
+      "doppler_spoof": 0.7333333333333333,
+      "meaconing": 0.7066666666666667,
+      "can_scale": 0.7466666666666667,
+      "can_offset": 0.7166666666666667,
+      "can_freeze": 0.71,
+      "gnss_can": 0.7366666666666667,
+      "can_bus": 0.7366666666666667,
+      "correlated_signal": 1.0,
+      "correlated_signal_masquerade": 1.0,
+      "fuzzing": 1.0,
+      "max_engine_coolant_temp": 1.0,
+      "max_engine_coolant_temp_masquerade": 1.0,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 1.0,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 1.0,
+      "reverse_light_on": 1.0,
+      "reverse_light_on_masquerade": 1.0,
+      "DDoS-LOIC-HTTP": 0.8533333333333334,
+      "DoS-GoldenEye": 0.8766666666666667,
+      "DoS-Hulk": 0.8466666666666667,
+      "DoS-SlowHTTPTest": 0.85,
+      "DoS-Slowloris": 0.8866666666666667,
+      "FTP-Patator": 0.7866666666666666,
+      "PortScan": 0.8566666666666667,
+      "SSH-Patator": 0.9166666666666666,
+      "Web-BruteForce": 0.9066666666666666,
+      "Web-XSS": 0.8866666666666667,
+      "01_ConstPos": 0.6766666666666666,
+      "02_ConstPosOffset": 0.68,
+      "03_RandomPos": 0.5733333333333334,
+      "04_RandomPosOffset": 0.6233333333333333,
+      "05_ConstSpeed": 0.6966666666666667,
+      "06_ConstSpeedOffset": 0.7466666666666667,
+      "07_RandomSpeed": 0.7566666666666667,
+      "08_RandomSpeedOffset": 0.6433333333333333,
+      "09_EventualStop": 0.5733333333333334,
+      "10_Disruptive": 0.6733333333333333,
+      "11_DataReplay": 0.7366666666666667,
+      "13_DoS": 0.7466666666666667,
+      "14_DoSRandom": 0.6333333333333333,
+      "15_DoSDisruptive": 0.66,
+      "16_GridSybil": 0.7233333333333334,
+      "17_DataReplaySybil": 0.6533333333333333,
+      "18_DoSRandomSybil": 0.6466666666666666,
+      "19_DoSDisruptiveSybil": 0.68
+     }
+    },
+    "without network": {
+     "domains": [
+      "can",
+      "v2x",
+      "cross"
+     ],
+     "fa_tick": 0.082725,
+     "fa_events_per_hour": 182.51999999999998,
+     "mean_detection_single": 0.9789855072463766,
+     "per_domain_mean_detection": {
+      "gps": 0.9916666666666667,
+      "cross": 1.0,
+      "can": 0.9915151515151517,
+      "network": 0.9203333333333333,
+      "v2x": 0.9975925925925926
+     },
+     "families": {
+      "drift": 0.9733333333333334,
+      "accel_drift": 1.0,
+      "doppler_spoof": 0.9933333333333333,
+      "meaconing": 1.0,
+      "can_scale": 1.0,
+      "can_offset": 1.0,
+      "can_freeze": 1.0,
+      "gnss_can": 1.0,
+      "can_bus": 1.0,
+      "correlated_signal": 0.9966666666666667,
+      "correlated_signal_masquerade": 0.9833333333333333,
+      "fuzzing": 0.98,
+      "max_engine_coolant_temp": 0.9966666666666667,
+      "max_engine_coolant_temp_masquerade": 0.98,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.99,
+      "reverse_light_off": 1.0,
+      "reverse_light_off_masquerade": 0.9933333333333333,
+      "reverse_light_on": 0.9933333333333333,
+      "reverse_light_on_masquerade": 0.9933333333333333,
+      "DDoS-LOIC-HTTP": 0.9266666666666666,
+      "DoS-GoldenEye": 0.9466666666666667,
+      "DoS-Hulk": 0.9133333333333333,
+      "DoS-SlowHTTPTest": 0.9033333333333333,
+      "DoS-Slowloris": 0.93,
+      "FTP-Patator": 0.87,
+      "PortScan": 0.9233333333333333,
+      "SSH-Patator": 0.9133333333333333,
+      "Web-BruteForce": 0.9333333333333333,
+      "Web-XSS": 0.9433333333333334,
+      "01_ConstPos": 0.9933333333333333,
+      "02_ConstPosOffset": 1.0,
+      "03_RandomPos": 1.0,
+      "04_RandomPosOffset": 1.0,
+      "05_ConstSpeed": 1.0,
+      "06_ConstSpeedOffset": 1.0,
+      "07_RandomSpeed": 1.0,
+      "08_RandomSpeedOffset": 0.9966666666666667,
+      "09_EventualStop": 0.9866666666666667,
+      "10_Disruptive": 1.0,
+      "11_DataReplay": 1.0,
+      "13_DoS": 1.0,
+      "14_DoSRandom": 1.0,
+      "15_DoSDisruptive": 1.0,
+      "16_GridSybil": 1.0,
+      "17_DataReplaySybil": 1.0,
+      "18_DoSRandomSybil": 0.9866666666666667,
+      "19_DoSDisruptiveSybil": 0.9933333333333333
+     }
+    },
+    "network alone": {
+     "domains": [
+      "network"
+     ],
+     "fa_tick": 0.025791666666666668,
+     "fa_events_per_hour": 2.13,
+     "mean_detection_single": 0.14768115942028984,
+     "per_domain_mean_detection": {
+      "gps": 0.05583333333333333,
+      "cross": 0.06666666666666667,
+      "can": 0.03878787878787879,
+      "network": 0.4923333333333334,
+      "v2x": 0.05666666666666667
+     },
+     "families": {
+      "drift": 0.07333333333333333,
+      "accel_drift": 0.04666666666666667,
+      "doppler_spoof": 0.04,
+      "meaconing": 0.06333333333333334,
+      "can_scale": 0.07,
+      "can_offset": 0.06,
+      "can_freeze": 0.07,
+      "gnss_can": 0.08,
+      "can_bus": 0.03666666666666667,
+      "correlated_signal": 0.03,
+      "correlated_signal_masquerade": 0.02,
+      "fuzzing": 0.02,
+      "max_engine_coolant_temp": 0.043333333333333335,
+      "max_engine_coolant_temp_masquerade": 0.043333333333333335,
+      "max_speedometer": 0.03333333333333333,
+      "max_speedometer_masquerade": 0.06333333333333334,
+      "reverse_light_off": 0.05333333333333334,
+      "reverse_light_off_masquerade": 0.03333333333333333,
+      "reverse_light_on": 0.04666666666666667,
+      "reverse_light_on_masquerade": 0.04,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.49,
+      "DoS-SlowHTTPTest": 1.0,
+      "DoS-Slowloris": 0.0,
+      "FTP-Patator": 0.31333333333333335,
+      "PortScan": 0.63,
+      "SSH-Patator": 0.0,
+      "Web-BruteForce": 0.49,
+      "Web-XSS": 0.0,
+      "01_ConstPos": 0.056666666666666664,
+      "02_ConstPosOffset": 0.06,
+      "03_RandomPos": 0.03333333333333333,
+      "04_RandomPosOffset": 0.06,
+      "05_ConstSpeed": 0.06,
+      "06_ConstSpeedOffset": 0.056666666666666664,
+      "07_RandomSpeed": 0.056666666666666664,
+      "08_RandomSpeedOffset": 0.05333333333333334,
+      "09_EventualStop": 0.04666666666666667,
+      "10_Disruptive": 0.07666666666666666,
+      "11_DataReplay": 0.04666666666666667,
+      "13_DoS": 0.05,
+      "14_DoSRandom": 0.06333333333333334,
+      "15_DoSDisruptive": 0.07,
+      "16_GridSybil": 0.06,
+      "17_DataReplaySybil": 0.06666666666666667,
+      "18_DoSRandomSybil": 0.04666666666666667,
+      "19_DoSDisruptiveSybil": 0.056666666666666664
+     }
+    },
+    "without v2x": {
+     "domains": [
+      "can",
+      "network",
+      "cross"
+     ],
+     "fa_tick": 0.0389,
+     "fa_events_per_hour": 38.879999999999995,
+     "mean_detection_single": 0.6683333333333333,
+     "per_domain_mean_detection": {
+      "gps": 0.9291666666666667,
+      "cross": 0.9900000000000001,
+      "can": 0.813939393939394,
+      "network": 0.8213333333333332,
+      "v2x": 0.38277777777777783
+     },
+     "families": {
+      "drift": 0.7866666666666666,
+      "accel_drift": 0.9833333333333333,
+      "doppler_spoof": 0.9533333333333334,
+      "meaconing": 0.9933333333333333,
+      "can_scale": 0.9966666666666667,
+      "can_offset": 0.9966666666666667,
+      "can_freeze": 0.9766666666666667,
+      "gnss_can": 0.9766666666666667,
+      "can_bus": 0.9966666666666667,
+      "correlated_signal": 0.8733333333333333,
+      "correlated_signal_masquerade": 0.8833333333333333,
+      "fuzzing": 0.5433333333333333,
+      "max_engine_coolant_temp": 0.7466666666666667,
+      "max_engine_coolant_temp_masquerade": 0.6533333333333333,
+      "max_speedometer": 1.0,
+      "max_speedometer_masquerade": 0.75,
+      "reverse_light_off": 0.8533333333333334,
+      "reverse_light_off_masquerade": 0.8333333333333334,
+      "reverse_light_on": 0.9066666666666666,
+      "reverse_light_on_masquerade": 0.91,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.7466666666666667,
+      "DoS-SlowHTTPTest": 1.0,
+      "DoS-Slowloris": 0.99,
+      "FTP-Patator": 0.6833333333333333,
+      "PortScan": 0.73,
+      "SSH-Patator": 0.9066666666666666,
+      "Web-BruteForce": 0.7066666666666667,
+      "Web-XSS": 0.45,
+      "01_ConstPos": 0.41333333333333333,
+      "02_ConstPosOffset": 0.37666666666666665,
+      "03_RandomPos": 0.2866666666666667,
+      "04_RandomPosOffset": 0.37333333333333335,
+      "05_ConstSpeed": 0.41,
+      "06_ConstSpeedOffset": 0.44666666666666666,
+      "07_RandomSpeed": 0.37333333333333335,
+      "08_RandomSpeedOffset": 0.37666666666666665,
+      "09_EventualStop": 0.30666666666666664,
+      "10_Disruptive": 0.37,
+      "11_DataReplay": 0.43666666666666665,
+      "13_DoS": 0.43,
+      "14_DoSRandom": 0.3333333333333333,
+      "15_DoSDisruptive": 0.43,
+      "16_GridSybil": 0.43,
+      "17_DataReplaySybil": 0.3466666666666667,
+      "18_DoSRandomSybil": 0.39,
+      "19_DoSDisruptiveSybil": 0.36
+     }
+    },
+    "v2x alone": {
+     "domains": [
+      "v2x"
+     ],
+     "fa_tick": 0.074425,
+     "fa_events_per_hour": 170.30999999999997,
+     "mean_detection_single": 0.7813768115942029,
+     "per_domain_mean_detection": {
+      "gps": 0.7133333333333334,
+      "cross": 0.7577777777777778,
+      "can": 0.4642424242424241,
+      "network": 0.7756666666666667,
+      "v2x": 0.9974074074074074
+     },
+     "families": {
+      "drift": 0.72,
+      "accel_drift": 0.6933333333333334,
+      "doppler_spoof": 0.74,
+      "meaconing": 0.7,
+      "can_scale": 0.7333333333333333,
+      "can_offset": 0.7866666666666666,
+      "can_freeze": 0.7533333333333333,
+      "gnss_can": 0.75,
+      "can_bus": 0.78,
+      "correlated_signal": 0.39666666666666667,
+      "correlated_signal_masquerade": 0.35,
+      "fuzzing": 0.1,
+      "max_engine_coolant_temp": 0.22333333333333333,
+      "max_engine_coolant_temp_masquerade": 0.24,
+      "max_speedometer": 0.78,
+      "max_speedometer_masquerade": 0.7733333333333333,
+      "reverse_light_off": 0.5766666666666667,
+      "reverse_light_off_masquerade": 0.5633333333333334,
+      "reverse_light_on": 0.6,
+      "reverse_light_on_masquerade": 0.5033333333333333,
+      "DDoS-LOIC-HTTP": 0.79,
+      "DoS-GoldenEye": 0.8366666666666667,
+      "DoS-Hulk": 0.7733333333333333,
+      "DoS-SlowHTTPTest": 0.7433333333333333,
+      "DoS-Slowloris": 0.7933333333333333,
+      "FTP-Patator": 0.75,
+      "PortScan": 0.7966666666666666,
+      "SSH-Patator": 0.7366666666666667,
+      "Web-BruteForce": 0.74,
+      "Web-XSS": 0.7966666666666666,
+      "01_ConstPos": 1.0,
+      "02_ConstPosOffset": 1.0,
+      "03_RandomPos": 1.0,
+      "04_RandomPosOffset": 1.0,
+      "05_ConstSpeed": 1.0,
+      "06_ConstSpeedOffset": 1.0,
+      "07_RandomSpeed": 1.0,
+      "08_RandomSpeedOffset": 1.0,
+      "09_EventualStop": 0.9766666666666667,
+      "10_Disruptive": 1.0,
+      "11_DataReplay": 1.0,
+      "13_DoS": 1.0,
+      "14_DoSRandom": 1.0,
+      "15_DoSDisruptive": 1.0,
+      "16_GridSybil": 1.0,
+      "17_DataReplaySybil": 1.0,
+      "18_DoSRandomSybil": 0.99,
+      "19_DoSDisruptiveSybil": 0.9866666666666667
+     }
+    },
+    "without cross": {
+     "domains": [
+      "can",
+      "network",
+      "v2x"
+     ],
+     "fa_tick": 0.058708333333333335,
+     "fa_events_per_hour": 74.69999999999999,
+     "mean_detection_single": 0.8821739130434784,
+     "per_domain_mean_detection": {
+      "gps": 0.5516666666666667,
+      "cross": 0.5633333333333334,
+      "can": 0.9124242424242425,
+      "network": 0.8793333333333335,
+      "v2x": 0.991851851851852
+     },
+     "families": {
+      "drift": 0.57,
+      "accel_drift": 0.5266666666666666,
+      "doppler_spoof": 0.56,
+      "meaconing": 0.55,
+      "can_scale": 0.5533333333333333,
+      "can_offset": 0.58,
+      "can_freeze": 0.5566666666666666,
+      "gnss_can": 0.6133333333333333,
+      "can_bus": 0.58,
+      "correlated_signal": 0.9166666666666666,
+      "correlated_signal_masquerade": 0.88,
+      "fuzzing": 0.7566666666666667,
+      "max_engine_coolant_temp": 0.87,
+      "max_engine_coolant_temp_masquerade": 0.9133333333333333,
+      "max_speedometer": 0.9966666666666667,
+      "max_speedometer_masquerade": 0.8466666666666667,
+      "reverse_light_off": 0.97,
+      "reverse_light_off_masquerade": 0.9733333333333334,
+      "reverse_light_on": 0.97,
+      "reverse_light_on_masquerade": 0.9433333333333334,
+      "DDoS-LOIC-HTTP": 1.0,
+      "DoS-GoldenEye": 1.0,
+      "DoS-Hulk": 0.8566666666666667,
+      "DoS-SlowHTTPTest": 1.0,
+      "DoS-Slowloris": 0.9933333333333333,
+      "FTP-Patator": 0.76,
+      "PortScan": 0.8333333333333334,
+      "SSH-Patator": 0.9566666666666667,
+      "Web-BruteForce": 0.7866666666666666,
+      "Web-XSS": 0.6066666666666667,
+      "01_ConstPos": 0.99,
+      "02_ConstPosOffset": 0.9966666666666667,
+      "03_RandomPos": 0.9933333333333333,
+      "04_RandomPosOffset": 0.9933333333333333,
+      "05_ConstSpeed": 1.0,
+      "06_ConstSpeedOffset": 0.9966666666666667,
+      "07_RandomSpeed": 1.0,
+      "08_RandomSpeedOffset": 0.99,
+      "09_EventualStop": 0.9566666666666667,
+      "10_Disruptive": 0.9966666666666667,
+      "11_DataReplay": 0.99,
+      "13_DoS": 1.0,
+      "14_DoSRandom": 0.9933333333333333,
+      "15_DoSDisruptive": 1.0,
+      "16_GridSybil": 0.9966666666666667,
+      "17_DataReplaySybil": 0.9966666666666667,
+      "18_DoSRandomSybil": 0.9833333333333333,
+      "19_DoSDisruptiveSybil": 0.98
+     }
+    },
+    "cross alone": {
+     "domains": [
+      "cross"
+     ],
+     "fa_tick": 0.021491666666666666,
+     "fa_events_per_hour": 50.04,
+     "mean_detection_single": 0.5404347826086956,
+     "per_domain_mean_detection": {
+      "gps": 0.96,
+      "cross": 1.0,
+      "can": 0.23939393939393935,
+      "network": 0.6663333333333334,
+      "v2x": 0.4846296296296297
+     },
+     "families": {
+      "drift": 0.8966666666666666,
+      "accel_drift": 0.9833333333333333,
+      "doppler_spoof": 0.96,
+      "meaconing": 1.0,
+      "can_scale": 1.0,
+      "can_offset": 1.0,
+      "can_freeze": 1.0,
+      "gnss_can": 1.0,
+      "can_bus": 1.0,
+      "correlated_signal": 0.13666666666666666,
+      "correlated_signal_masquerade": 0.12666666666666668,
+      "fuzzing": 0.056666666666666664,
+      "max_engine_coolant_temp": 0.15333333333333332,
+      "max_engine_coolant_temp_masquerade": 0.1,
+      "max_speedometer": 0.5433333333333333,
+      "max_speedometer_masquerade": 0.5933333333333334,
+      "reverse_light_off": 0.22,
+      "reverse_light_off_masquerade": 0.26,
+      "reverse_light_on": 0.22333333333333333,
+      "reverse_light_on_masquerade": 0.22,
+      "DDoS-LOIC-HTTP": 0.7333333333333333,
+      "DoS-GoldenEye": 0.7433333333333333,
+      "DoS-Hulk": 0.5533333333333333,
+      "DoS-SlowHTTPTest": 0.6866666666666666,
+      "DoS-Slowloris": 0.6933333333333334,
+      "FTP-Patator": 0.6033333333333334,
+      "PortScan": 0.5866666666666667,
+      "SSH-Patator": 0.6466666666666666,
+      "Web-BruteForce": 0.7033333333333334,
+      "Web-XSS": 0.7133333333333334,
+      "01_ConstPos": 0.4866666666666667,
+      "02_ConstPosOffset": 0.5233333333333333,
+      "03_RandomPos": 0.47333333333333333,
+      "04_RandomPosOffset": 0.48333333333333334,
+      "05_ConstSpeed": 0.4666666666666667,
+      "06_ConstSpeedOffset": 0.53,
+      "07_RandomSpeed": 0.4866666666666667,
+      "08_RandomSpeedOffset": 0.42,
+      "09_EventualStop": 0.4166666666666667,
+      "10_Disruptive": 0.49666666666666665,
+      "11_DataReplay": 0.5566666666666666,
+      "13_DoS": 0.5433333333333333,
+      "14_DoSRandom": 0.47,
+      "15_DoSDisruptive": 0.4633333333333333,
+      "16_GridSybil": 0.57,
+      "17_DataReplaySybil": 0.44666666666666666,
+      "18_DoSRandomSybil": 0.43333333333333335,
+      "19_DoSDisruptiveSybil": 0.45666666666666667
+     }
+    }
+   }
+  }
+ },
+ "cross_first_test": {
+  "K": {
+   "fa_rows": 0.010745891276864728,
+   "clean_rows": 1582,
+   "detection": {
+    "can_freeze": 0.7857142857142857,
+    "can_offset": 0.7428571428571429,
+    "can_scale": 0.6142857142857143,
+    "gps_can": 0.7,
+    "lidar_bias": 0.8285714285714286,
+    "lidar_scale": 0.6285714285714286,
+    "lidar_yaw": 0.32857142857142857,
+    "drift": 0.5285714285714286,
+    "accel_drift": 0.4857142857142857,
+    "doppler_spoof": 0.4714285714285714,
+    "meaconing": 0.6
+   },
+   "blame": {
+    "can_freeze": {
+     "can": 37,
+     "imu": 1,
+     "lidar": 3,
+     "undecided": 14
+    },
+    "can_offset": {
+     "can": 28,
+     "lidar": 1,
+     "undecided": 23
+    },
+    "can_scale": {
+     "can": 25,
+     "imu": 2,
+     "undecided": 16
+    },
+    "gps_can": {
+     "gps": 1,
+     "imu": 1,
+     "lidar": 27,
+     "undecided": 20
+    },
+    "lidar_scale": {
+     "lidar": 25,
+     "undecided": 19
+    },
+    "drift": {
+     "gps": 17,
+     "imu": 1,
+     "undecided": 19
+    },
+    "doppler_spoof": {
+     "gps": 14,
+     "imu": 3,
+     "undecided": 16
+    },
+    "meaconing": {
+     "gps": 33,
+     "imu": 1,
+     "undecided": 8
+    },
+    "lidar_bias": {
+     "can": 1,
+     "imu": 2,
+     "lidar": 33,
+     "undecided": 22
+    },
+    "accel_drift": {
+     "gps": 25,
+     "undecided": 9
+    },
+    "lidar_yaw": {
+     "imu": 3,
+     "undecided": 20
+    }
+   }
+  },
+  "C": {
+   "fa_rows": 0.018229166666666668,
+   "clean_rows": 1920,
+   "detection": {
+    "accel_drift": 0.96875,
+    "can_bus": 1.0,
+    "can_freeze": 1.0,
+    "can_offset": 1.0,
+    "can_scale": 1.0,
+    "doppler_spoof": 0.96875,
+    "drift": 0.84375,
+    "gnss_can": 1.0,
+    "meaconing": 1.0
+   },
+   "blame": {
+    "accel_drift": {
+     "can": 5,
+     "undecided": 26
+    },
+    "can_bus": {
+     "can": 17,
+     "undecided": 15
+    },
+    "can_freeze": {
+     "can": 14,
+     "undecided": 18
+    },
+    "can_offset": {
+     "can": 4,
+     "undecided": 28
+    },
+    "can_scale": {
+     "can": 6,
+     "undecided": 26
+    },
+    "doppler_spoof": {
+     "can": 4,
+     "undecided": 27
+    },
+    "drift": {
+     "can": 5,
+     "undecided": 22
+    },
+    "gnss_can": {
+     "can": 8,
+     "undecided": 24
+    },
+    "meaconing": {
+     "can": 4,
+     "undecided": 28
+    }
+   }
+  }
+ },
+ "domain_own_fa_ticks": {
+  "gps": {
+   "fa_ticks_own_threshold": 0.018331226295828066,
+   "clean_ticks": 1582
+  },
+  "lidar": {
+   "fa_ticks_own_threshold": 0.07741935483870968,
+   "clean_ticks": 155
+  },
+  "can": {
+   "fa_ticks_own_threshold": 0.03353658536585366,
+   "clean_ticks": 1312
+  },
+  "network": {
+   "fa_ticks_own_threshold": 0.04411764705882353,
+   "clean_ticks": 28560
+  },
+  "v2x": {
+   "fa_ticks_own_threshold": 0.060510775366209066,
+   "clean_ticks": 13039
+  },
+  "cross": {
+   "fa_ticks_own_threshold": 0.010745891276864728,
+   "clean_ticks": 1582
+  },
+  "cross_comma": {
+   "fa_ticks_own_threshold": 0.018229166666666668
+  }
+ },
+ "v2_reference": {
+  "accuracy": 0.9523,
+  "fa": 0.0106,
+  "source": "../codes_v2/results/fusion.json (meta fusion, 2% val budget)"
+ },
+ "acceptance": {
+  "G1_fa_tick_K": {
+   "value": 0.06358204381798682,
+   "ci": [
+    0.05048493100510955,
+    0.07662444986835278
+   ],
+   "rule": "<= 0.030",
+   "met": false
+  },
+  "G1_fa_tick_C": {
+   "value": 0.063075,
+   "ci": [
+    0.05084345479082321,
+    0.07501646903820818
+   ],
+   "rule": "<= 0.030",
+   "met": false
+  },
+  "G2_mean_detection_K": {
+   "value": 0.8250326797385621,
+   "ci": [
+    0.7523732933124171,
+    0.8899373474520177
+   ],
+   "rule": ">= 0.70",
+   "met": true
+  },
+  "G3_cross_gain_vehicle_families_points": {
+   "value": 25.06666666666666,
+   "rule": ">= +10",
+   "met": true
+  },
+  "G3_cross_gain_gps_families_points": {
+   "value": 17.499999999999993,
+   "rule": ">= +5",
+   "met": true
+  },
+  "G4_explanations": {
+   "value": 1.0,
+   "alarms": 119952,
+   "rule": "1.0",
+   "met": true
+  },
+  "G4_attributed_K": {
+   "value": 0.9339301275449576,
+   "rule": ">= 0.80",
+   "met": true
+  },
+  "G5_no_domain_lost": {
+   "value": {
+    "gps": {
+     "fused": 0.6616666666666666,
+     "alone": 0.6883333333333334,
+     "loss_points": 2.6666666666666727,
+     "met": true
+    },
+    "lidar": {
+     "fused": 0.6266666666666667,
+     "alone": 1.0,
+     "loss_points": 37.33333333333333,
+     "met": false
+    },
+    "can": {
+     "fused": 0.9296969696969698,
+     "alone": 1.0,
+     "loss_points": 7.0303030303030205,
+     "met": true
+    },
+    "network": {
+     "fused": 0.7573333333333334,
+     "alone": 0.45633333333333326,
+     "loss_points": -30.100000000000016,
+     "met": true
+    },
+    "v2x": {
+     "fused": 0.9524074074074075,
+     "alone": 0.9925925925925925,
+     "loss_points": 4.0185185185184995,
+     "met": true
+    },
+    "cross": {
+     "fused": 0.5388888888888889,
+     "alone": 0.7927777777777777,
+     "loss_points": 25.388888888888882,
+     "met": false
+    }
+   },
+   "rule": "fused >= alone - 15 points per attacked domain",
+   "met": false
+  }
+ }
+}

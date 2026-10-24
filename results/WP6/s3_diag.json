@@ -1,0 +1,93 @@
+{
+ "note": "POST-TEST diagnostic; no choice",
+ "shift": {
+  "K": {
+   "gps": {
+    "val_B_above_0.99": 0.0121580547112462,
+    "test_above_0.99": 0.022756005056890013,
+    "val_B_ticks": 329,
+    "test_ticks": 1582
+   },
+   "lidar": {
+    "val_B_above_0.99": 0.0,
+    "test_above_0.99": 0.0,
+    "val_B_ticks": 32,
+    "test_ticks": 155
+   },
+   "can": {
+    "val_B_above_0.99": 0.029608127721335267,
+    "test_above_0.99": 0.057926829268292686,
+    "val_B_ticks": 3445,
+    "test_ticks": 1312
+   },
+   "network": {
+    "val_B_above_0.99": 0.02727272727272727,
+    "test_above_0.99": 0.0273109243697479,
+    "val_B_ticks": 13200,
+    "test_ticks": 28560
+   },
+   "v2x": {
+    "val_B_above_0.99": 0.013609748377907897,
+    "test_above_0.99": 0.04218114886110898,
+    "val_B_ticks": 6319,
+    "test_ticks": 13039
+   },
+   "cross": {
+    "val_B_above_0.99": 0.00303951367781155,
+    "test_above_0.99": 0.01327433628318584,
+    "val_B_ticks": 329,
+    "test_ticks": 1582
+   }
+  },
+  "C": {
+   "can": {
+    "val_B_above_0.99": 0.029608127721335267,
+    "test_above_0.99": 0.057926829268292686,
+    "val_B_ticks": 3445,
+    "test_ticks": 1312
+   },
+   "network": {
+    "val_B_above_0.99": 0.02727272727272727,
+    "test_above_0.99": 0.0273109243697479,
+    "val_B_ticks": 13200,
+    "test_ticks": 28560
+   },
+   "v2x": {
+    "val_B_above_0.99": 0.013609748377907897,
+    "test_above_0.99": 0.04218114886110898,
+    "val_B_ticks": 6319,
+    "test_ticks": 13039
+   },
+   "cross": {
+    "val_B_above_0.99": 0.03045977011494253,
+    "test_above_0.99": 0.024479166666666666,
+    "val_B_ticks": 3480,
+    "test_ticks": 1920
+   }
+  }
+ },
+ "clean_alarm_top_domain": {
+  "K": {
+   "alarm_ticks": 2905,
+   "fa_tick_replay": 0.06358204381798682,
+   "share": {
+    "can": 0.19931153184165232,
+    "cross": 0.05748709122203098,
+    "gps": 0.16695352839931152,
+    "lidar": 0.004130808950086058,
+    "network": 0.3848537005163511,
+    "v2x": 0.187263339070568
+   }
+  },
+  "C": {
+   "alarm_ticks": 7569,
+   "fa_tick_replay": 0.063075,
+   "share": {
+    "can": 0.22407187210992205,
+    "cross": 0.11864182851103185,
+    "network": 0.40705509314308363,
+    "v2x": 0.25023120623596246
+   }
+  }
+ }
+}

@@ -1,0 +1,239 @@
+{
+ "chosen": "noisy_or",
+ "composites_test": {
+  "K": {
+   "n_clean": 2000,
+   "n_attack": 300,
+   "seed": [
+    42,
+    63,
+    9,
+    75
+   ]
+  },
+  "C": {
+   "n_clean": 1000,
+   "n_attack": 300,
+   "seed": [
+    42,
+    63,
+    9,
+    67
+   ]
+  }
+ },
+ "fusions": {
+  "max | K | all": {
+   "domains": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.9986312619764578
+  },
+  "max | C | all": {
+   "domains": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.9991452991452993
+  },
+  "noisy_or | K | all": {
+   "domains": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.6820465115859903
+  },
+  "noisy_or | C | all": {
+   "domains": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.7378709775792119
+  },
+  "noisy_or | K | without gps": {
+   "domains": [
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.6891637893382941
+  },
+  "noisy_or | K | gps alone": {
+   "domains": [
+    "gps"
+   ],
+   "threshold": 0.8038639804912352
+  },
+  "noisy_or | K | without lidar": {
+   "domains": [
+    "gps",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.7146512094353966
+  },
+  "noisy_or | K | lidar alone": {
+   "domains": [
+    "lidar"
+   ],
+   "threshold": 0.7612556012293226
+  },
+  "noisy_or | K | without can": {
+   "domains": [
+    "gps",
+    "lidar",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.6793616676527762
+  },
+  "noisy_or | K | can alone": {
+   "domains": [
+    "can"
+   ],
+   "threshold": 0.8550875626738278
+  },
+  "noisy_or | K | without network": {
+   "domains": [
+    "gps",
+    "lidar",
+    "can",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.6894929792736333
+  },
+  "noisy_or | K | network alone": {
+   "domains": [
+    "network"
+   ],
+   "threshold": 0.8417250699615859
+  },
+  "noisy_or | K | without v2x": {
+   "domains": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "cross"
+   ],
+   "threshold": 0.6974742003350638
+  },
+  "noisy_or | K | v2x alone": {
+   "domains": [
+    "v2x"
+   ],
+   "threshold": 0.7892206209118996
+  },
+  "noisy_or | K | without cross": {
+   "domains": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x"
+   ],
+   "threshold": 0.6925915048645778
+  },
+  "noisy_or | K | cross alone": {
+   "domains": [
+    "cross"
+   ],
+   "threshold": 0.7948869004967583
+  },
+  "logistic | K | all": {
+   "domains": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.8490637731782563
+  },
+  "noisy_or | C | without can": {
+   "domains": [
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.7563175988994661
+  },
+  "noisy_or | C | can alone": {
+   "domains": [
+    "can"
+   ],
+   "threshold": 0.8307227153733161
+  },
+  "noisy_or | C | without network": {
+   "domains": [
+    "can",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.7498669144055855
+  },
+  "noisy_or | C | network alone": {
+   "domains": [
+    "network"
+   ],
+   "threshold": 0.8417250699615859
+  },
+  "noisy_or | C | without v2x": {
+   "domains": [
+    "can",
+    "network",
+    "cross"
+   ],
+   "threshold": 0.7692413596987858
+  },
+  "noisy_or | C | v2x alone": {
+   "domains": [
+    "v2x"
+   ],
+   "threshold": 0.8013897438077543
+  },
+  "noisy_or | C | without cross": {
+   "domains": [
+    "can",
+    "network",
+    "v2x"
+   ],
+   "threshold": 0.760787812008229
+  },
+  "noisy_or | C | cross alone": {
+   "domains": [
+    "cross"
+   ],
+   "threshold": 0.8295706640593556
+  },
+  "logistic | C | all": {
+   "domains": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "threshold": 0.921796829009565
+  }
+ }
+}

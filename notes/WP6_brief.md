@@ -1,4 +1,4 @@
-# WP6 cross-domain brief (state at end of S2b, 2026-10-22: S2b in REVIEW)
+# WP6 cross-domain brief (state at end of S3, 2026-10-24: S3 in REVIEW)
 
 ## Current state
 - S1 APPROVED with miss (sigma honesty). S2 "which domain lies" done, report reports/WP6_S2.md, verdict NOT MET
@@ -20,6 +20,14 @@
   clipped bias tracker): comma FA 1.85% (val routes continuous 0.11%), not chosen. Frozen choice: s2b_choice_r2.json.
   Its test number comes once in S3 (labelled).
 
+- S3 (fusion over 5 domains, LiDAR INTERIM) REVIEW, PARTIAL: reports/WP6_S3.md, results/WP6/s3_*. Composite drives (K = KITTI run +
+  ROAD CAN + D10 host 192.168.10.50 view + VeReMi ego view (300 m) + LiDAR same drive; C = comma 120 s window + CAN/NET/V2X), 1 Hz ticks
+  (max per second; network closed minute held 60 s). Per-domain tick ECDF (val half A) -> noisy_or (chosen over max on val) -> 2% tie-safe
+  threshold (half B). Test once: FA tick K 6.36% / C 6.31% (NOT MET, 119 / 94 events per hour), mean det K 82.5%, cross gain +25 pts,
+  100% alarms explained, attributed 93%. G5 not met (LiDAR, cross lose in budget sharing). Cross alone test FA KITTI 1.07%, comma 1.82%.
+  Cross additions: LiDAR quality flag useless (lid_ok always true); comma glitch filter chosen (blame 46 -> 18% correct: open question).
+  Frozen fusion: results/WP6/s3_frozen.pkl (+ .json). Rerun when M1-LiDAR closes: tools/WP6_S3_streams.py lidar, then dev, test.
+
 ## Binding decisions / conventions
 - comma's two CAN speed messages = ONE domain; blame at domain level (supervisor 2026-10-22).
 - Grid 1 Hz, quantity = mean over (t-1, t]; inst sources via cumulative trapezoid; gap > 1.5 s drops the point.
@@ -37,6 +45,8 @@
 - comma: "|" in route names -> "_"; read arrays with np.load(allow_pickle=False), python -I for the fetcher.
 
 ## File map
+- S3: fusion/streams.py, composite.py, system.py; tools/WP6_S3_{crosschoice,streams,dev,test,tables,lib}.py; tests/fusion/test_fusion.py;
+  cache ../data_extra/cache_v3/WP6/s3_*.pkl (gps, lidar, can, network, v2x, cross_kitti, cross_comma).
 - crossdomain/: witness.py, kitti.py, can_sim.py, comma.py, v2x_self.py (S1); consistency.py (+ S2b drift_cusum, robust_cusum,
   blame_domain_pattern), attacks.py (S2); __init__.py.
 - tools/WP6_S1_*.py; tools/WP6_S2_kitti.py, WP6_S2_comma.py (build), WP6_S2_gpsdomain.py, WP6_S2_eval.py (dev/test), WP6_S2_tables.py; S2b: WP6_S2_kitti/comma.py build_dev,

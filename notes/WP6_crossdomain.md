@@ -336,3 +336,76 @@ B4 MET (wrong blame 3.4% / 1.4%), B5 MET (328 tests pass). Report reports/WP6_S2
 Domain-level blame: comma GNSS attacks 96-98% undecided (by design), CAN single-message 100% CAN, gnss_can 126/126
 CAN, can_bus 67% undecided / 33% CAN; KITTI lidar_yaw undecided.
 Next ideas (for S3, validation): LiDAR ICP quality flag in the sigma model (KITTI 0070); glitch filter for |z| > 20.
+
+## 2026-10-22 S3 start: fusion v3 over 5 domains + cross-domain Evidence (plan + acceptance rule, written BEFORE any S3 result)
+Inputs (frozen, read only): gps/domain.py (results/WP1/frozen_gps, per-layer calibrated scores + layer thresholds), can/domain.py
+(results/WP2/s7_domain, per-layer L1 / L3c / L3d on the WP2 S7 window tables), V2X physics-only stack L1+L2+L3 (12 checks, recipe of
+tools/WP5_S6_run.py without L4, refitted here on VeReMi val genuine without held-out types 6/12/17, same as WP5 / WP7), network stack H
+(D10 S7 score tables + cal.pkl, max, threshold 0.99607 = results/WP4/s7_domain), cross-domain S2b frozen choice (inst |z|, out-of-fold
+sigma models, LODO thresholds, domain-level blame) + the allowed val-only additions, LiDAR INTERIM = WP3 S1 v2-baseline XGB
+(retrained_deployed.json, 1 - P(Normal)) + WP3 S2 L1 geometry union, max of the two val-normal ECDF scores (labelled interim).
+Data construction (no dataset has all five domains): 1 Hz system clock; composite "drive" = one vehicle block plus same-length
+segments of the other domains' own streams of the SAME split (val for development, test for the one test run; never train rows of a
+domain for its attacks).
+- Family K: vehicle block = one KITTI run (WP1 split, val 0011/0027/0035, test 7 drives, 8-45 s): GPS domain + cross_kitti on the same
+  run; LiDAR scans of the same KITTI drive at a random offset (WP3 split = WP1 split; not time-synchronised with the run).
+- Family C: vehicle block = one comma 120 s window (S2 route split): cross_comma only (no GPS domain: it needs KITTI-style wheel
+  odometry / compass / LiDAR inputs; no LiDAR).
+- CAN = ROAD 1 s windows (val clean = LOCO out-of-fold clean tables of WP2 S7 "folds", val attacks = attack_2 captures; test = the 4
+  ambient test captures + attack_3 / coolant captures). Network = the D10 view of ONE host (192.168.10.50, id 49, the host the D10
+  attacks target): tick value = per-layer max over the host's flows of the last CLOSED minute (D10 resolution is one minute; network
+  Evidence is final when its minute closes), score 0 when the host has no flow; groups = (day, period) blocks. V2X = VeReMi, ego =
+  a genuine sender, heard set = messages of other senders within 300 m of the ego's interpolated position (VeReMi has no receiver
+  positions: a stated construction), class 12 messages dropped (artefact, never claimed), tick = max over the heard messages.
+- Clean composites: every domain clean. Attack composites: exactly one domain attacked (vehicle-block families: GPS drift /
+  accel_drift / doppler_spoof / meaconing; LiDAR-odometry lidar_scale / bias / yaw and CAN wheel-speed can_scale / offset / freeze seen
+  by cross only (the GPS domain is scored on the clean run: approximation; the ROAD CAN domain sees a consistent speed rewrite as
+  clean, M1-CAN); CAN families of ROAD; network families in the host view; V2X classes except 12; LiDAR PointDrop / IntensitySpoof
+  (v2 generators, per-scan draws); GhostCluster box cloud ONLY as a labelled v2-comparison row (physically impossible on a
+  single-return sensor); single-return phantoms NOT evaluated (no test rows exist; WP3 S9)). Coordinated scenarios: KITTI gps_can
+  (GPS + CAN wheel odometry on the same car), comma gnss_can and can_bus (GNSS + CAN on the same car). Onset placed uniformly in the
+  first half of the composite for non-vehicle-block attacks.
+- Detected = a system alarm at a tick >= onset (for recorded-attack domains: while the attacked domain's label is active); delay =
+  first such tick - onset. Attributed = that first alarm's explanation names the attacked domain (domain alarm) or, for vehicle-block
+  attacks, a cross alarm. FA per tick on clean composites; FA per hour = alarm events (maximal runs of alarm ticks) per composite hour.
+Fusion: per-domain tick score -> ECDF on clean ticks of validation half A -> zero-shot combiner max OR log-form noisy_or
+(common.combiner) -> tie-safe 2% threshold on clean composite ticks of half B. Halves BY GROUP per domain (KITTI drive, ROAD capture,
+D10 (day, period) block, VeReMi time block, comma route). Choice max vs noisy_or on half B: higher mean detection over the val attack
+families (pooled K + C). Seen-attack row (labelled, never the headline): logistic on half-A composite ticks, threshold half B.
+Cross additions (val only, S2b rule FA <= 1.5% then max selection detection, LODO dev groups): KITTI LiDAR ICP quality flag (z of
+LiDAR edges / 3 when lid_ok is false), comma CAN glitch filter (an edge with |z| > 20 = sensor fault -> unobserved that second).
+Ablation: each domain removed and each alone (threshold re-fitted on half B, combiner fixed). Test scored ONCE.
+Acceptance (test, judged once):
+ G1 FA on clean test composite ticks <= 3.0% for K and for C (2% val budget, 1.5x transfer allowance as in S2b).
+ G2 K mean composite detection over the single-domain families (headline zero-shot combiner, v2-comparison rows excluded) >= 70%.
+ G3 cross gain (K): all vehicle-block single-domain families, with cross vs without cross >= +10 points; GPS families alone >= +5.
+ G4 every system alarm carries an explanation (100%); attributed detection >= 80% of detected single-domain composites.
+ G5 no domain lost: per attacked domain, fused detection >= that domain alone (same composites, own 2% threshold) - 15 points.
+ G6 unit tests pass. Reported, not judged: family C detection, coordinated scenarios, delays, v2 comparison (not like-for-like).
+Exposure caveat: every domain test set was scored before (D10 6x per WP4 logs, ROAD 6x, VeReMi 2x, KITTI several); the fusion layer is
+new and scored once; cross S2b choice gets its first test number here (labelled).
+
+## 2026-10-22 S3 validation (before the test run; results/WP6/s3_crosschoice.json, s3_dev.json, s3_frozen.json)
+- Cross additions (S2b LODO dev folds, inst): KITTI LiDAR quality flag changes NOTHING: the cached ICP quality (lid_ok) is True on 100% of
+  dev scan pairs, even on drive 0070 (degenerate highway ICP is not flagged by the ICP quality test) -> base inst kept (FA 1.24%, sel 64.1%).
+  comma glitch filter (|z| > 20 on a CAN / wheel edge -> unobserved): FA 1.10% -> 1.10%, worst route 12-02-42 11.6% -> 5.0%, selection
+  detection 84.9 -> 85.7% -> CHOSEN by the rule. Side effect (not in the rule, flagged): correct domain blame 45.8% -> 18.0%, wrong 1.4 -> 3.4%,
+  because large CAN spoofs (|z| > 20) are now read as sensor faults on that edge -> blame undecided. An attacker could hide behind the filter.
+- Streams (tools/WP6_S3_streams.py, cache s3_*.pkl): V2X refit thresholds identical to WP5 S6 (max diff 0.0); network host view 84,269 val /
+  114,429 test flows, flow FA on host benign 1.0% / 1.07%; LiDAR val-normal scan FA 0.91%.
+- Fusion on validation half B (K: 400 clean + 60 per family; C likewise): max K FA tick 1.77%, mean det 65.6%; noisy_or K 1.99%, 73.8%;
+  C max 91.9%, noisy_or 89.3%. Pooled: max 77.9%, noisy_or 81.0% -> noisy_or CHOSEN. Clean alarm EVENTS per hour 28-40 (2% of seconds).
+- Smoke run of the test tool on validation packs (plumbing; temp folder): G5 fails by construction for weak domains (gps / lidar / cross alone
+  get the whole 2% budget). Nothing changed after it.
+
+## 2026-10-24 S3 TEST run (once) and verdict (s3_test.json, s3_acceptance.json, s3_tables.md, post-test diagnostic s3_diag.json)
+- Headline noisy_or: K FA tick 6.36% [5.0, 7.7], 118.8 alarm events / clean hour, mean det 82.5% [75.2, 89.0] over 52 families;
+  C FA 6.31%, 93.7 / h, 94.9%. max row 5.16% / 71.6%; seen-attack logistic (labelled) 5.83% / 81.3%.
+- G1 NOT MET (both). G2 MET. G3 MET (+25.1 vehicle-block, +17.5 GPS). G4 MET (100% explained; attributed 93.4%). G5 NOT MET (LiDAR 62.7
+  vs 100 alone [alone has 7.6% FA], cross 53.9 vs 79.3). Tests 364 passed.
+- Diagnostic (no choice): every domain's clean tick scores are shifted up on test (CAN 3.0 -> 5.8%, V2X 1.4 -> 4.2%, cross 0.3 -> 1.3% above
+  the 0.99 level); own-threshold tick FA on test: LiDAR 7.7% (155 ticks), V2X 6.1%, network 4.4%, CAN 3.4%; top contributor at clean
+  alarms: network 38%. Causes: tick max over many samples depends on traffic density; network minute hold; small validation pools.
+- Cross alone at own 1% threshold (first test number of the S2b choice): KITTI FA 1.07%, comma 1.82%.
+- v2 view (not like-for-like): composite 50/50 accuracy K 68.8% (composite FA 44%), C 55.2% vs v2 95.23% at 1.06% FA (sample mix).
+- Report reports/WP6_S3.md. Open: density-aware tick calibration + LOGO ECDFs + temporal correlator (S5, validation); glitch filter vs blame.
