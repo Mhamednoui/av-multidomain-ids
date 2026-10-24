@@ -79,3 +79,39 @@ domain and the cross-domain runtime object, both by the documented recipes above
 - Tools: tools/WP7_S1_run_all.sh runs gps, can, cross, v2x, lidar one at a time (latency); WP7_S1_bus.py; WP7_S1_report.py writes S1_acceptance.json, S1_tables.md, reports/WP7_S1.md.
 - Pitfalls: bash heredocs with long text fail in this harness (use the Write tool for files with docstrings); python -I needs explicit sys.path inserts; the V2X fit needs about 3 GB RAM (VeReMi CSV load 47 s).
 - For the next reader: if WP1 / WP2 / WP5 later provide incremental entry points (reports/REQUEST_WP7_incremental_entry_points.md), only the _push of the corresponding runner changes; the stream == batch tests stay as they are.
+
+## 2026-10-24 S3 start: run_all.py, make_report.py, RESULTS_v3.md, README (started early by the supervisor; engineering step, NO test set is scored)
+
+Inputs read: RULES.md, STATUS.md, workpackages/WP7_system.md, notes/WP7_brief.md, ROADMAP.md, ORCHESTRATOR DECISION rows (2026-10-24: corrected thesis claim; V2X sim-to-real headline; M2 closed NOT MET;
+novelty layer dropped), reports/M1_GPS, M1_CAN, M1_NET, M1_V2X (+V2AIX addendum), M2. JSON keys located with a small structure-printer; no result was recomputed.
+
+### S3 acceptance rule (written BEFORE the generated report exists)
+- R1 run_all.py: (a) `--list` prints every step (id, WP, kind, dependencies, data needed with DATASETS id) and exits 0 without importing heavy packages; (b) `--dry-run` prints the exact commands in
+  execution order and runs nothing; (c) execution order is a valid topological order of the declared dependencies and WP order is WP0 -> WP1..WP5 -> WP6 -> WP7 (tested); (d) every script a step names
+  exists; no command or path touches ../codes or ../codes_v2 for writing, nothing is downloaded (missing data is printed with its DATASETS id and the step is SKIPPED); (e) default run executes no refit
+  and no test-set scoring (those kinds need --refit, and the plan prints that each one adds a labelled test exposure); (f) `--only <WP>`, `--from <step>` select consistently with dependencies;
+  (g) `--check` is read-only: frozen objects load, thresholds/aliases in the frozen objects equal the saved verdict values, saved freeze-check files report 0 score difference / 0 alarm mismatch.
+- R2 make_report.py: RESULTS_v3.md is generated from results JSON only; running it twice gives byte-identical output; every number in the body is rendered through a tracker and the appendix lists
+  (file, key path) next to each of them; a scan of the body finds no untracked standalone number; closed milestones have no missing key; milestones whose result JSON does not exist yet
+  (M1-LiDAR, M2 addendum, M3 simulation) render "PENDING" with the file name that will fill them. Verdicts (met / not met) are read from the saved acceptance JSON where one exists, otherwise
+  computed from saved numbers against the thresholds of the pre-registered rule (written next to the verdict with its source report).
+- R3 tests/system/test_run_all.py and test_make_report.py pass; `python tests/run_tests.py` passes (full suite).
+- R4 README.md covers: what v3 is, install, data and licences (V2AIX non-commercial / no redistribution; CICIDS unofficial mirror), how to run, where results are, honest summary.
+- Curated inputs that exist in no result JSON (test-exposure counts, v2 reference numbers quoted in the M1 reports) go in ONE file results/WP7/S3_registry.json with a "source" for each entry
+  (report + section); they are treated like JSON keys by the tracker and labelled "curated" in the appendix.
+
+### 2026-10-24 S3 built and checked (numbers from the generated files; no test set scored)
+- Files: run_all.py (step table, 47 steps incl. a pending marker; kinds regression / tables / tests / runtime / report by default, prep / dev / build / eval only with --refit), make_report.py, RESULTS_v3.md,
+  README.md, results/WP7/S3_registry.json, tests/system/test_run_all.py (10 tests), test_make_report.py (8 tests), reports/WP7_S3.md.
+- Entry points were discovered from the headers of tools/WP*_S*.py (usage lines), not from memory: WP1 S8 dev/test/control/external/freeze/tables, WP2 S7 select/fit/final/tables/others/summary, WP3 S4 tables (LiDAR
+  open: pending step), WP4 S7 prep/dev/test/d23/freeze/tables, WP5 S6 dev/run and S3b cache/geometry/clean/inject/senders/tables, WP6 S5 streams/dev/test/tables, WP7 S1 fits/runtime/S1b. Tools that rewrite reports/*.md
+  (WP5_S6_report, WP7_S1_report) are NOT in the default run (they overwrite committed milestone reports).
+- `python run_all.py --check` (read-only) all OK: GPS/CAN/network freeze checks (diff 0, mismatches 0), V2X runtime thresholds == WP5 S6, M2 system == config, WP7 S1 acceptance MET, make_report inputs complete.
+- make_report: 786 traced values, 0 missing keys in closed milestones, deterministic. Pitfalls met while building it: (1) a Python non-raw string "\b" inside a patch script became a backspace character and silently disabled a regex
+  (check with od -c); (2) pathlib.write_text has no newline= in Python 3.9 (use open(..., newline="\n")); (3) many numbers hide in prose ("1% budget", "section 4", "class 17"): the scan allows only identifiers, dates,
+  section / class references and "95% interval"; everything else must come through a Ctx method; (4) dict keys of some JSON mix captures and ambient entries (s7_test per_capture): filter by name.
+- Verdict policy: GPS (G1..G10), V2X (rules 1..5), M2 (A1..A7, Z1..Z6) read `met` / `verdict` from their acceptance JSON; CAN (C1..C5) and NET (N1..N3) are computed from saved numbers against thresholds in the registry
+  (sources in M1_CAN.md / M1_NET.md / ROADMAP.md); there is no acceptance JSON for those two milestones.
+- Rule counts shown in RESULTS_v3.md section 1 are rows of the generated tables, not the milestone reports' own rule grouping.
+- Full suite: 440 passed, 0 failed (tests/run_tests.py).
+- Open for the supervisor: names of the files that fill the PENDING sections (results/WP3/S9/acceptance.json, results/WP6/s5b_acceptance.json, results/WP7/S2_acceptance.json); regenerate RESULTS_v3.md after every milestone close.

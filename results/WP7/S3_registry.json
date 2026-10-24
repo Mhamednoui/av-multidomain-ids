@@ -1,0 +1,160 @@
+{
+ "_note": "Curated inputs of make_report.py that exist in no result JSON: pre-registered rule thresholds, milestone status words, test-exposure counts and the v2 reference numbers quoted in the milestone reports. Every entry names its source; make_report.py treats the entries like JSON keys and labels them 'curated' in the appendix. Edit here (with the source), never in make_report.py.",
+ "milestone_status": {
+  "M1_GPS": {
+   "value": "PARTIAL",
+   "source": "reports/M1_GPS.md header"
+  },
+  "M1_CAN": {
+   "value": "PARTIAL",
+   "source": "reports/M1_CAN.md header"
+  },
+  "M1_NET": {
+   "value": "PARTIAL",
+   "source": "reports/M1_NET.md header"
+  },
+  "M1_V2X": {
+   "value": "PARTIAL",
+   "source": "reports/M1_V2X.md header; results/WP5/s6_acceptance.json overall"
+  },
+  "M2": {
+   "value": "NOT MET (LiDAR interim)",
+   "source": "reports/M2.md; STATUS.md milestones table; ORCHESTRATOR 2026-10-24 WP6 row (1)"
+  }
+ },
+ "rules": {
+  "gps_G3_target": {
+   "value": 0.75,
+   "source": "reports/M1_GPS.md section 5 (Doppler / meaconing target, not lowered)"
+  },
+  "gps_G6_bound": {
+   "value": 0.55,
+   "source": "ORCHESTRATOR 2026-10-21 WP1 row (shuffled control, mean AUC bound)"
+  },
+  "can_fa_max": {
+   "value": 0.02,
+   "source": "reports/M1_CAN.md section 5 (clean-window FA bound)"
+  },
+  "can_alerts_per_hour_max": {
+   "value": 1,
+   "source": "reports/M1_CAN.md section 5 (WP2 target: at most one false alert per hour)"
+  },
+  "can_masquerade_total": {
+   "value": 5,
+   "source": "reports/M1_CAN.md section 2 (five masquerade captures)"
+  },
+  "net_fa_max": {
+   "value": 0.02,
+   "source": "reports/M1_NET.md header (false alarms against 2%)"
+  },
+  "net_unseen_bot_min": {
+   "value": 0.7,
+   "source": "ROADMAP.md section 5 and reports/M1_NET.md section 4 (unseen Bot above 70%)"
+  },
+  "net_d23_fa_max": {
+   "value": 0.05,
+   "source": "reports/M1_NET.md section 5 (bound 5% on the other dataset)"
+  },
+  "gps_uav_fa_max": {
+   "value": 0.02,
+   "source": "reports/M1_GPS.md section 4 (UAV pre-onset FA bound 2%)"
+  },
+  "v2x_fa_msg_max": {
+   "value": 0.015,
+   "source": "reports/M1_V2X.md section 7 (FA messages <= 1.5%)"
+  },
+  "v2x_sender_k3_fa_max": {
+   "value": 0.05,
+   "source": "reports/M1_V2X.md section 7 (genuine senders at k=3 <= 5%)"
+  },
+  "v2x_class17_gain_min_points": {
+   "value": 10,
+   "source": "reports/M1_V2X.md section 7 (class 17 gain >= 10 points)"
+  },
+  "v2x_class6_min": {
+   "value": 0.95,
+   "source": "results/WP5/s6_acceptance.json key 3c_class6_ge_95"
+  },
+  "v2x_shuffled_gap_max_points": {
+   "value": 1,
+   "source": "reports/M1_V2X.md section 7 (shuffled control, 1 point)"
+  }
+ },
+ "exposure": {
+  "kitti_gps_test_drives": {
+   "value": 8,
+   "qualifier": "at least",
+   "source": "reports/M1_GPS.md section 7: scored once per step S1-S7 and once in S8"
+  },
+  "carhacking_test_blocks": {
+   "value": 3,
+   "qualifier": "at least",
+   "source": "ORCHESTRATOR 2026-10-22 WP2 correction; reports/M1_CAN.md section 8 (S2, S3, S6)"
+  },
+  "d11_test_subsets": {
+   "value": 4,
+   "qualifier": "at least",
+   "source": "reports/M1_CAN.md section 8 (by the reports at least the fourth)"
+  },
+  "d10_cicids2017_test": {
+   "value": 6,
+   "qualifier": "",
+   "source": "reports/M1_NET.md protocol (6th exposure)"
+  },
+  "d23_cse_cic_ids2018": {
+   "value": 3,
+   "qualifier": "at least",
+   "source": "results/WP4/s5_d23.json, s6_d23.json, s7_d23.json exist (S5, S6, S7)"
+  },
+  "veremi_test": {
+   "value": 2,
+   "qualifier": "",
+   "source": "reports/M1_V2X.md protocol (second exposure)"
+  },
+  "v2aix_test": {
+   "value": 1,
+   "qualifier": "",
+   "source": "reports/M1_V2X.md V2AIX addendum (test scored once)"
+  },
+  "comma2k19": {
+   "value": 2,
+   "qualifier": "",
+   "source": "reports/M2.md section 2 (comma 2x)"
+  },
+  "fusion_composites": {
+   "value": 3,
+   "qualifier": "",
+   "source": "reports/M2.md section 2 (scored in S3, S4, S5); the planned S5b run will be the fourth"
+  }
+ },
+ "v2_reference": {
+  "net_accuracy_random_split": {
+   "value": 0.9973,
+   "source": "reports/M1_NET.md section 6 (v2 on D01, random split after dedup)"
+  },
+  "net_macro_f1_random_split": {
+   "value": 0.996,
+   "source": "reports/M1_NET.md section 6"
+  },
+  "net_unseen_bot_supervised": {
+   "value": 0.0,
+   "source": "reports/M1_NET.md section 6"
+  },
+  "net_unseen_bot_ocsvm": {
+   "value": 0.053,
+   "source": "reports/M1_NET.md section 6 (OCSVM at FA 2.9%)"
+  },
+  "net_unseen_web_supervised": {
+   "value": 0.012,
+   "source": "reports/M1_NET.md section 6"
+  },
+  "net_unseen_web_ocsvm": {
+   "value": 0.963,
+   "source": "reports/M1_NET.md section 6 (OCSVM at FA 2.9%)"
+  },
+  "net_ocsvm_fa": {
+   "value": 0.029,
+   "source": "reports/M1_NET.md section 6"
+  }
+ }
+}

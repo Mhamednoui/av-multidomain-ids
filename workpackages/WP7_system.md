@@ -21,3 +21,4 @@ Owns: `system/`, `tests/system/`, `results/WP7/`, `notes/WP7_system.md`, `report
 
 ## Progress
 - 2026-10-22 S1 streaming runtime: REVIEW (reports/WP7_S1.md, notes/WP7_brief.md). Stream == batch exact on validation data in GPS, CAN, V2X, cross-domain, LiDAR (interim); network = placeholder until M1-NET.
+- 2026-10-24 S3 (early) run_all.py, make_report.py -> RESULTS_v3.md, README.md: REVIEW (reports/WP7_S3.md). Sections of M1-LiDAR, M2 addendum, M3 simulation are PENDING and fill from results/WP3/S9/acceptance.json, results/WP6/s5b_acceptance.json, results/WP7/S2_acceptance.json. S2 and S4 not started.

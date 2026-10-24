@@ -32,3 +32,11 @@
 - system/*.py, tests/system/test_{bus_runner,cross_runner,v2x_runner,placeholder_runners,gps_can_runners}.py (21 tests).
 - tools/WP7_S1_{gps,can,v2x,cross,lidar}.py (stream vs batch + latency), WP7_S1_{v2x,lidar,cross}_fit.py, WP7_S1_bus.py, WP7_S1_report.py, WP7_S1_lib.py, WP7_S1_run_all.sh.
 - results/WP7/S1_*.json, S1_tables.md, frozen_*/, logs/. reports/WP7_S1.md, reports/REQUEST_WP7_incremental_entry_points.md.
+
+## Update 2026-10-24: S3 (early) built, REVIEW
+- run_all.py (root): 47 steps in dependency order; default = regression / tables / tests / runtime / report; `--refit` adds prep / dev / build / eval (each eval = a test exposure); `--list`, `--dry-run`, `--only WPn`, `--from <step>`, `--check` (read-only frozen-object verification), `--keep-going`. Missing data -> step SKIPPED, nothing downloaded.
+- make_report.py -> RESULTS_v3.md: every number through a Ctx method (pc, num, cnt, ci, pp, txt, met, derived); markers are stripped after an untracked-number scan; appendix lists file + key path. Curated inputs only in results/WP7/S3_registry.json. Add a section = add a builder function + one entry in build(); a new number = use a Ctx method, never type it.
+- PENDING sections fill from PENDING_FILES in make_report.py (M1-LiDAR, M2 addendum, M3 simulation). After each milestone close: run `python make_report.py`, commit RESULTS_v3.md.
+- Tests: tests/system/test_run_all.py, test_make_report.py (test_committed_report_is_current SKIPS when stale). Full suite 440 passed.
+- Pitfalls: non-raw "\b" in patch scripts becomes a backspace; Python 3.9 Path.write_text has no newline=; CAN s7_test per_capture mixes attack and ambient captures; reports/*.md rewriting tools are excluded from run_all.
+- S2 simulation and S4 publication: not started (S2 waits for M1-LiDAR + M2 addendum).
