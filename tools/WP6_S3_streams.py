@@ -28,6 +28,7 @@ from fusion import streams as ST  # noqa: E402
 CACHE = DATA_EXTRA / "cache_v3" / "WP6"
 T0 = time.time()
 BUDGET = 0.01
+PREFIX = "s3"            # WP6 S5 sets "s5" (tools/WP6_S5_streams.py): same series plus per-tick sample counts; cross_comma without the glitch filter
 
 
 def log(*a):
@@ -35,7 +36,7 @@ def log(*a):
 
 
 def save(name, packs):
-    pickle.dump(packs, open(CACHE / f"s3_{name}.pkl", "wb"))
+    pickle.dump(packs, open(CACHE / f"{PREFIX}_{name}.pkl", "wb"))
     for part, p in packs.items():
         n = sum(len(s["score"]) for s in p["series"])
         log(name, part, "series", len(p["series"]), "ticks", n, "kinds", pd.Series([s["kind"] for s in p["series"]]).value_counts().to_dict())
@@ -123,12 +124,13 @@ def stage_cross_kitti():
     save("cross_kitti", packs)
 
 
-def stage_cross_comma():
+def stage_cross_comma(glitch=None):
     import WP6_S2_comma as SC
     import WP6_S2b_eval as B
     import WP6_S3_crosschoice as X
     choice = json.loads((ROOT / "results" / "WP6" / "s3_crosschoice.json").read_text())["choice"]["comma"]
-    glitch = choice == "inst_glitch_filter"
+    if glitch is None:                                            # S3: the val-only choice; S5: False (glitch filter dropped, ORCHESTRATOR 2026-10-24)
+        glitch = choice == "inst_glitch_filter"
     edges, data, cls = B.comma_data()                             # dev routes (train + val), out-of-fold models
     if glitch:
         X.apply_glitch(edges, data)
@@ -177,7 +179,8 @@ def stage_cross_comma():
             packs["test"]["series"].append(_cross_series(n, run, "attack", r0["attack"], x["t"].to_numpy(float), Ze, cal, edges, SC.DOMAIN_OF, float(r0["onset_t"])))
     packs["test"]["dom_thr"] = cal.tau
     packs["test"]["calibration"] = cal.to_dict()
-    packs["glitch_filter"] = glitch
+    for p in ("val", "test"):
+        packs[p]["glitch_filter"] = glitch
     save("cross_comma", {"val": packs["val"], "test": packs["test"]})
 
 
@@ -238,7 +241,7 @@ def stage_network():
         mins = (x["t"].to_numpy(float) // 60).astype(np.int64)
         blk = x["day"].astype(str) + "|" + x["period"].astype(str)
         p = {"domain": "network", "layer_names": list(H), "layer_thr": lthr, "dom_thr": thr, "series": [], "host": "192.168.10.50 (id 49)",
-             "n_flows": int(m.sum()), "fa_flows_host_benign": float((comb[~att & ~audit] >= thr).mean())}
+             "n_flows": int(m.sum()), "fa_flows_host_benign": float((comb[~att & ~audit] >= thr).mean()), "clean_samples": {}}
         for b, idx in pd.Series(np.arange(len(x))).groupby(blk.to_numpy()).indices.items():
             mi = mins[idx]
             u, inv = np.unique(mi, return_inverse=True)
@@ -246,10 +249,15 @@ def stage_network():
             lab = ST.tick_any(inv, att[idx], len(u))
             fm = ST.tick_family(inv, np.where(att[idx], fam[idx], ""), len(u))
             Vt, Lt, Ft = ST.hold_minutes(u, V, lab, fm, int(u.min()), int(u.max()) + 1)
+            cnt = ST.hold_minutes(u, np.bincount(inv, minlength=len(u)).astype(np.float32)[:, None], lab, fm, int(u.min()), int(u.max()) + 1)[0][:, 0]
             kind = "attack" if Lt.any() else "clean"
             fams = sorted(set(Ft[Lt]))
             s = ST.series(b, b, kind, ",".join(fams) if fams else "none", Vt.max(axis=1), Vt, Lt, fam=Ft)
+            s["count"] = cnt                                          # flows of the held minute (S5 density model)
             p["series"].append(s)
+            if kind == "clean":
+                ok = ~att[idx] & ~audit[idx]
+                p["clean_samples"][b] = comb[idx][ok].astype(np.float32)   # per-flow combined score (S5 density model)
         packs[part] = p
         log("network", part, "host flows", int(m.sum()), "blocks", len(p["series"]), "flow FA (host benign)", round(p["fa_flows_host_benign"], 4))
     save("network", packs)
@@ -300,6 +308,7 @@ def ego_series(blk, Lc, rng, part, pack):
         grp = str(blk["group"].iloc[0])
         Vc = ST.tick_max(k[gen], Lc[idx][gen], n)
         pack["series"].append(ST.series(grp, f"{grp}/ego{e}/clean", "clean", "none", Vc.max(axis=1), Vc, np.zeros(n, bool)))
+        pack["series"][-1]["count"] = np.bincount(k[gen], minlength=n)[:n].astype(np.float32)      # heard messages per tick (S5 density model)
         if (~gen).any():
             from tools.WP5_S2_l1 import aname
             V = ST.tick_max(k, Lc[idx], n)
@@ -307,6 +316,7 @@ def ego_series(blk, Lc, rng, part, pack):
             Lt = ST.tick_any(k, ~gen, n)
             Ft = ST.tick_family(k, fam, n)
             pack["series"].append(ST.series(grp, f"{grp}/ego{e}/attack", "attack", ",".join(sorted(set(Ft[Lt]))), V.max(axis=1), V, Lt, fam=Ft))
+            pack["series"][-1]["count"] = np.bincount(k, minlength=n)[:n].astype(np.float32)
 
 
 def stage_v2x():
@@ -336,8 +346,10 @@ def stage_v2x():
         p = {"domain": "v2x", "layer_names": V2X_NAMES, "layer_thr": lthr, "dom_thr": dthr, "series": [], "threshold_diff_vs_wp5": diff,
              "fa_msgs_genuine": float((Lc.max(axis=1)[gp] >= dthr).mean())}
         rng = np.random.default_rng([SEED, 6, 3, 1 if part == "val" else 2])
+        p["clean_samples"] = {}
         for grp, idx in df.groupby("group", sort=True).indices.items():
             ego_series(df.iloc[idx].reset_index(drop=True), Lc[idx], rng, part, p)
+            p["clean_samples"][str(df["group"].iloc[idx[0]])] = Lc[idx].max(axis=1)[gp[idx]].astype(np.float32)   # genuine messages (S5 density model)
         packs[part] = p
         log("v2x", part, "messages", len(df), "genuine msg FA", round(p["fa_msgs_genuine"], 4))
     save("v2x", packs)

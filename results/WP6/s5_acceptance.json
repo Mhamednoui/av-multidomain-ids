@@ -1,0 +1,76 @@
+{
+ "A1_raw_tick_fa": {
+  "K": 0.02079382579933848,
+  "K_ci": [
+   0.012808430874057355,
+   0.03302522037218413
+  ],
+  "C": 0.067025,
+  "C_ci": [
+   0.059508990318118946,
+   0.07664191419141914
+  ],
+  "rule": "<= 0.030 (K and C)",
+  "met": false
+ },
+ "A2_events_per_clean_hour": {
+  "K": 25.402425578831313,
+  "K_ci": [
+   12.990296012395008,
+   45.61704211557297
+  ],
+  "C": 30.959999999999997,
+  "C_ci": [
+   28.630705394190873,
+   33.26732673267327
+  ],
+  "rule": "<= 10 (K and C)",
+  "met": false
+ },
+ "A3_K_event_detection_single": {
+  "value": 0.602483660130719,
+  "ci": [
+   0.4538591561677618,
+   0.7259903570428721
+  ],
+  "rule": ">= 0.70",
+  "met": false
+ },
+ "A4_K_heldout_event_detection": {
+  "value": 0.5875,
+  "ci": [
+   0.44057373519650583,
+   0.7092914810880343
+  ],
+  "rule": ">= 0.60",
+  "met": false
+ },
+ "A5_K_blame": {
+  "value": {
+   "correct": 0.8672163159036668,
+   "wrong": 0.13180733347797788,
+   "undecided": 0.0009763506183553916,
+   "n_detected": 9218
+  },
+  "rule": "correct >= 0.75 and wrong <= 0.10 (detected single-domain K events, pooled)",
+  "met": false
+ },
+ "A6_safe_stop_per_clean_hour": {
+  "K": 0.0,
+  "C": 1.23,
+  "rule": "<= 1 (K and C)",
+  "met": false
+ },
+ "A7_explained": {
+  "K": [
+   10467,
+   10467
+  ],
+  "C": [
+   18454,
+   18454
+  ],
+  "rule": "100% of alert events",
+  "met": true
+ }
+}

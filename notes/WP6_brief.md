@@ -1,4 +1,4 @@
-# WP6 cross-domain brief (state at end of S4, 2026-10-24: S4 in REVIEW)
+# WP6 cross-domain brief (state at end of S5 / M2, 2026-10-24: S5 in REVIEW)
 
 ## Current state
 - S1 APPROVED with miss (sigma honesty). S2 "which domain lies" done, report reports/WP6_S2.md, verdict NOT MET
@@ -35,7 +35,14 @@
   seen +4.7 (equal FA: held-out -2.1, seen +12.8). max combiner is degenerate (tie blocks). v2 WebAttack 96.3% vs v3 42.7/15.3%. Open: gated novelty, GPS EKF/S7 L3 in system, S5.
   Files: fusion/novelty.py, tools/WP6_S4_{streams,lib,dev,test,tables}.py, tests/fusion/test_{novelty,zeroday}.py; cache s4_network.pkl, s4_gps_l3.pkl.
 
+- S5 -> M2 (REVIEW, NOT MET 1/7 + tests): reports/WP6_S5.md, reports/M2.md, results/WP6/s5_* (tables s5_tables.md). Validation (3 group folds, nested held-out):
+  LOGO threshold + noisy_or + V2X density transform G(M)^k (alpha_v2x 1, alpha_net 0); correlator 2-of-5 s or 2-domain corroboration, gap 15 s; response LOG/WARN/DEGRADE/SAFE_STOP
+  (fusion/correlator.py). Test once (3rd fusion exposure): raw tick FA K 2.08% [1.3, 3.3] / C 6.70%; events per clean hour K 25.4 / C 31.0 (val 8.2); K event det 60.2%
+  (tick 68.7%), held-out 58.8%; blame 86.7% correct / 13.2% wrong; safe-stop C 1.23/h; 100% events explained. Cross adds +24.7 pts (K vehicle families), +51 (C).
+  FROZEN M2: results/WP6/m2_system.pkl (+ .json), fusion.system.load_m2(). Open: blame by decided majority, safe-stop corroboration, M2 addendum after M1-LiDAR.
+
 ## Binding decisions / conventions
+- S5 decisions applied: label-free combiner; novelty layer dropped; LiDAR L1 only (INTERIM); CAN glitch filter dropped (s5_cross_comma rebuilt without it).
 - comma's two CAN speed messages = ONE domain; blame at domain level (supervisor 2026-10-22).
 - Grid 1 Hz, quantity = mean over (t-1, t]; inst sources via cumulative trapezoid; gap > 1.5 s drops the point.
 - Splits: KITTI = WP1 drive split; comma = by route sorted by date, 13 / 4 / 4. comma S2 episodes = 120 s windows.
@@ -52,6 +59,8 @@
 - comma: "|" in route names -> "_"; read arrays with np.load(allow_pickle=False), python -I for the fetcher.
 
 ## File map
+- S5: fusion/correlator.py, fusion/system.py (DensityTransform, M2System, load_m2), composite.py (count, grp); tools/WP6_S5_{streams,lib,dev,test,diag,tables}.py;
+  tests/fusion/test_correlator.py, test_m2.py; cache s5_{cross_comma,network,v2x,lidar}.pkl (WP6 cache total 167 MB).
 - S3: fusion/streams.py, composite.py, system.py; tools/WP6_S3_{crosschoice,streams,dev,test,tables,lib}.py; tests/fusion/test_fusion.py;
   cache ../data_extra/cache_v3/WP6/s3_*.pkl (gps, lidar, can, network, v2x, cross_kitti, cross_comma).
 - crossdomain/: witness.py, kitti.py, can_sim.py, comma.py, v2x_self.py (S1); consistency.py (+ S2b drift_cusum, robust_cusum,

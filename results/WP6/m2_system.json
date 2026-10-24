@@ -1,0 +1,60 @@
+{
+ "status": "M2 system FROZEN (WP6 S5, 2026-10-24); LiDAR INTERIM (label-free L1); re-run fusion when M1-LiDAR closes (M2 addendum)",
+ "how_to_load": "pickle.load(open('results/WP6/m2_system.pkl','rb')) -> {'K': M2System, 'C': M2System}; M2System.run(parts) (fusion/system.py)",
+ "inputs": "per-tick parts per domain: score (domain combined calibrated tick max), count (samples in the tick), dom_alarm, layer_alarm, blame (cross)",
+ "systems": {
+  "K": {
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "method": "noisy_or",
+   "threshold": 0.7053670187133589,
+   "procedure": "logo",
+   "density_alpha": {
+    "gps": 0.0,
+    "lidar": 0.0,
+    "can": 0.0,
+    "network": 0.0,
+    "v2x": 1.0,
+    "cross": 0.0
+   },
+   "correlator": {
+    "m": 2,
+    "w": 5,
+    "gap": 15,
+    "corroborate": true
+   },
+   "budget_tick": 0.02
+  },
+  "C": {
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "method": "noisy_or",
+   "threshold": 0.7031737671081112,
+   "procedure": "logo",
+   "density_alpha": {
+    "can": 0.0,
+    "network": 0.0,
+    "v2x": 1.0,
+    "cross": 0.0
+   },
+   "correlator": {
+    "m": 2,
+    "w": 5,
+    "gap": 15,
+    "corroborate": true
+   },
+   "budget_tick": 0.02
+  }
+ },
+ "response_policy": "fusion/correlator.py respond(): WARN every event; DEGRADE blamed domain >= 3 blamed ticks; SAFE_STOP >= 2 motion-critical domains degraded or motion-critical degrade lasting >= 30 s; V2X / network alone never above DEGRADE"
+}

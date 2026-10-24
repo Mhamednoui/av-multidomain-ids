@@ -102,3 +102,74 @@ def alarm_events(alarm):
     """Number of alarm events = maximal runs of consecutive alarm ticks."""
     a = np.asarray(alarm, bool)
     return int(a[0]) + int((a[1:] & ~a[:-1]).sum()) if len(a) else 0
+
+
+# ---------------------------------------------------------------------------------------------------- WP6 S5 / M2 additions
+class DensityTransform:
+    """Traffic-density correction of a tick maximum (WP6 S5). A tick holds the maximum M of k samples (V2X messages heard, network flows of the minute);
+    q = G(M) ** (k ** alpha), G = ECDF of the per-sample combined score on clean calibration samples. alpha = 0: identity (the S3 tick score, returned
+    unchanged), alpha = 1: independent samples (q is uniform under the null for any k). Ticks without a sample (k = 0) score 0."""
+
+    def __init__(self, alpha=0.0):
+        self.alpha, self.G = float(alpha), None
+
+    def fit(self, samples):
+        if self.alpha > 0:
+            self.G = ECDFCalibrator().fit(np.asarray(samples, float))
+        return self
+
+    def transform(self, M, k):
+        M = np.asarray(M, float)
+        if self.alpha == 0:
+            return M
+        k = np.asarray(k, float)
+        q = self.G.transform(M) ** (np.maximum(k, 1.0) ** self.alpha)
+        return np.where(k > 0, q, 0.0)
+
+    def to_dict(self):
+        return {"alpha": self.alpha, "G": None if self.G is None else self.G.to_dict()}
+
+
+class M2System:
+    """The frozen M2 system (WP6 S5): per-entry density transform -> per-entry ECDF -> label-free combiner -> system threshold -> temporal correlator ->
+    response. entries: domain names (each entry = that domain's combined tick score; LiDAR = its label-free L1 union). parts: domain -> dict(score (n,),
+    count (n,), dom_alarm (n,), layer_alarm (n, m), blame (n,) for cross) as in fusion/composite.py segments, or the WP7 runtime's per-tick view."""
+
+    def __init__(self, entries, density, fusion, correlator, meta=None):
+        self.entries, self.density, self.fusion, self.correlator = list(entries), density, fusion, correlator
+        self.meta = meta or {}
+
+    def matrix(self, parts):
+        raw = {d: self.density[d].transform(parts[d]["score"], parts[d].get("count", np.ones(len(parts[d]["score"])))) for d in self.entries}
+        return self.fusion.matrix(raw)
+
+    def run(self, parts, layer_names=None, explain=True):
+        """-> dict(X, score, alarm, own, blame, events) for one drive."""
+        from fusion import correlator as CR
+        X = self.matrix(parts)
+        s = self.fusion.scores(X)
+        alarm = s >= self.fusion.threshold
+        own = np.column_stack([np.asarray(parts[d]["dom_alarm"], bool) for d in self.entries])
+        cr = parts.get("cross")
+        blame = CR.tick_blame(self.entries, X, own, None if cr is None else cr.get("blame"), None if cr is None else cr["dom_alarm"])
+        reasons = None
+        if explain:
+            reasons = np.full(len(s), "", object)
+            ln = layer_names or {d: [f"{d}.layer{j}" for j in range(np.asarray(parts[d]["layer_alarm"]).reshape(len(s), -1).shape[1])] for d in self.entries}
+            for i in np.flatnonzero(alarm):
+                reasons[i] = self.fusion.explain(i, X[i], parts, ln, s[i]).reason
+        ev = self.correlator.events(alarm, own, self.entries, blame, reasons)
+        return {"X": X, "score": s, "alarm": alarm, "own": own, "blame": blame, "events": ev}
+
+    def to_dict(self):
+        return {"entries": self.entries, "density": {d: t.to_dict() for d, t in self.density.items()}, "fusion": self.fusion.to_dict(),
+                "correlator": self.correlator.to_dict(), "meta": self.meta}
+
+
+def load_m2(path=None):
+    """The frozen M2 system (WP6 S5): {"K": M2System (gps, lidar, can, network, v2x, cross), "C": M2System (can, network, v2x, cross)}.
+    Config summary: results/WP6/m2_system.json. LiDAR entry is INTERIM (label-free L1 union) until M1-LiDAR closes."""
+    import pickle
+    from pathlib import Path
+    p = Path(path) if path else Path(__file__).resolve().parent.parent / "results" / "WP6" / "m2_system.pkl"
+    return pickle.load(open(p, "rb"))

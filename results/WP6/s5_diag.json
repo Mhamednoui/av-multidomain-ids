@@ -1,0 +1,323 @@
+{
+ "note": "POST-TEST diagnostic, no choice made from it",
+ "val_nested_heldout": {
+  "K": [
+   {
+    "share_ge_099": {
+     "gps": 0.008014370595550643,
+     "lidar": 0.0,
+     "can": 0.0059416885449772,
+     "network": 0.019068674865275668,
+     "v2x": 0.00787619179217908,
+     "cross": 0.015614204780986596
+    },
+    "own_alarm_rate": {
+     "gps": 0.002625397264059693,
+     "lidar": 0.12436092303440652,
+     "can": 0.007185297775321266,
+     "network": 0.027083045460826308,
+     "v2x": 0.02473400580350974,
+     "cross": 0.008981622219151582
+    },
+    "strongest_at_clean_alarm_ticks": {
+     "network": 0.40594059405940597,
+     "cross": 0.2871287128712871,
+     "lidar": 0.1617161716171617,
+     "v2x": 0.0627062706270627,
+     "gps": 0.0627062706270627,
+     "can": 0.019801980198019802
+    },
+    "clean_events_by_blamed": {
+     "network": 9,
+     "lidar": 9,
+     "v2x": 4,
+     "gps": 4
+    },
+    "clean_events_by_blamed_response": {
+     "network|DEGRADE": 9,
+     "lidar|WARN": 6,
+     "v2x|WARN": 4,
+     "gps|WARN": 4,
+     "lidar|DEGRADE": 3
+    },
+    "alarm_ticks_per_clean_event_median": 3.0,
+    "clean_composites_with_an_event": 0.08666666666666667,
+    "clean_composite_median_length_s": 24.0,
+    "clean_hours": 2.0102777777777776
+   },
+   {
+    "share_ge_099": {
+     "gps": 0.0,
+     "lidar": 0.0,
+     "can": 0.017016029593094943,
+     "network": 0.0,
+     "v2x": 0.014303329223181258,
+     "cross": 0.00591861898890259
+    },
+    "own_alarm_rate": {
+     "gps": 0.0,
+     "lidar": 0.0,
+     "can": 0.019235511713933416,
+     "network": 0.046115906288532675,
+     "v2x": 0.024907521578298397,
+     "cross": 0.0
+    },
+    "strongest_at_clean_alarm_ticks": {
+     "cross": 1.0
+    },
+    "clean_events_by_blamed": {},
+    "clean_events_by_blamed_response": {},
+    "alarm_ticks_per_clean_event_median": null,
+    "clean_composites_with_an_event": 0.0,
+    "clean_composite_median_length_s": 14.0,
+    "clean_hours": 1.1263888888888889
+   },
+   {
+    "share_ge_099": {
+     "gps": 0.038540949759119064,
+     "lidar": 0.0,
+     "can": 0.0440467997247075,
+     "network": 0.05333792154163799,
+     "v2x": 0.013592567102546456,
+     "cross": 0.0
+    },
+    "own_alarm_rate": {
+     "gps": 0.0055058499655884375,
+     "lidar": 0.0,
+     "can": 0.03475567790777701,
+     "network": 0.12749483826565727,
+     "v2x": 0.016517549896765314,
+     "cross": 0.0
+    },
+    "strongest_at_clean_alarm_ticks": {
+     "can": 0.59375,
+     "gps": 0.203125,
+     "v2x": 0.15625,
+     "network": 0.046875
+    },
+    "clean_events_by_blamed": {
+     "can": 9,
+     "v2x": 3,
+     "network": 1
+    },
+    "clean_events_by_blamed_response": {
+     "can|DEGRADE": 6,
+     "can|WARN": 3,
+     "v2x|WARN": 3,
+     "network|DEGRADE": 1
+    },
+    "alarm_ticks_per_clean_event_median": 3.0,
+    "clean_composites_with_an_event": 0.043333333333333335,
+    "clean_composite_median_length_s": 19.0,
+    "clean_hours": 1.6144444444444443
+   }
+  ],
+  "C": [
+   {
+    "share_ge_099": {
+     "can": 0.004138888888888889,
+     "network": 0.011555555555555555,
+     "v2x": 0.006527777777777778,
+     "cross": 0.0067777777777777775
+    },
+    "own_alarm_rate": {
+     "can": 0.004694444444444445,
+     "network": 0.020805555555555556,
+     "v2x": 0.0067777777777777775,
+     "cross": 0.008055555555555555
+    },
+    "strongest_at_clean_alarm_ticks": {
+     "network": 0.9387186629526463,
+     "v2x": 0.04456824512534819,
+     "cross": 0.011142061281337047,
+     "can": 0.005571030640668524
+    },
+    "clean_events_by_blamed": {
+     "network": 9,
+     "v2x": 2
+    },
+    "clean_events_by_blamed_response": {
+     "network|DEGRADE": 9,
+     "v2x|WARN": 2
+    },
+    "alarm_ticks_per_clean_event_median": 39.0,
+    "clean_composites_with_an_event": 0.03666666666666667,
+    "clean_composite_median_length_s": 120.0,
+    "clean_hours": 10.0
+   },
+   {
+    "share_ge_099": {
+     "can": 0.0009444444444444445,
+     "network": 0.0,
+     "v2x": 0.015166666666666667,
+     "cross": 0.0016111111111111111
+    },
+    "own_alarm_rate": {
+     "can": 0.002611111111111111,
+     "network": 0.04019444444444444,
+     "v2x": 0.02486111111111111,
+     "cross": 0.002361111111111111
+    },
+    "strongest_at_clean_alarm_ticks": {
+     "v2x": 0.7098039215686275,
+     "cross": 0.12156862745098039,
+     "can": 0.11764705882352941,
+     "network": 0.050980392156862744
+    },
+    "clean_events_by_blamed": {
+     "v2x": 28,
+     "can": 5,
+     "network": 4,
+     "undecided": 1
+    },
+    "clean_events_by_blamed_response": {
+     "v2x|WARN": 15,
+     "v2x|DEGRADE": 13,
+     "network|DEGRADE": 3,
+     "can|WARN": 3,
+     "can|DEGRADE": 2,
+     "undecided|WARN": 1,
+     "network|WARN": 1
+    },
+    "alarm_ticks_per_clean_event_median": 3.0,
+    "clean_composites_with_an_event": 0.11,
+    "clean_composite_median_length_s": 120.0,
+    "clean_hours": 10.0
+   },
+   {
+    "share_ge_099": {
+     "can": 0.025638888888888888,
+     "network": 0.04013888888888889,
+     "v2x": 0.01011111111111111,
+     "cross": 0.030805555555555555
+    },
+    "own_alarm_rate": {
+     "can": 0.018222222222222223,
+     "network": 0.11458333333333333,
+     "v2x": 0.015527777777777777,
+     "cross": 0.01938888888888889
+    },
+    "strongest_at_clean_alarm_ticks": {
+     "can": 0.3318611987381703,
+     "cross": 0.3211356466876972,
+     "network": 0.25173501577287066,
+     "v2x": 0.09526813880126182
+    },
+    "clean_events_by_blamed": {
+     "network": 79,
+     "can": 75,
+     "v2x": 22,
+     "undecided": 21
+    },
+    "clean_events_by_blamed_response": {
+     "network|DEGRADE": 54,
+     "can|DEGRADE": 32,
+     "network|WARN": 25,
+     "can|WARN": 24,
+     "undecided|WARN": 21,
+     "can|SAFE_STOP": 19,
+     "v2x|WARN": 18,
+     "v2x|DEGRADE": 4
+    },
+    "alarm_ticks_per_clean_event_median": 3.0,
+    "clean_composites_with_an_event": 0.44333333333333336,
+    "clean_composite_median_length_s": 120.0,
+    "clean_hours": 10.0
+   }
+  ]
+ },
+ "test": {
+  "K": {
+   "share_ge_099": {
+    "gps": 0.020771775082690187,
+    "lidar": 0.0,
+    "can": 0.026350606394707828,
+    "network": 0.026306504961411247,
+    "v2x": 0.026019845644983462,
+    "cross": 0.020639470782800443
+   },
+   "own_alarm_rate": {
+    "gps": 0.017662624035281148,
+    "lidar": 0.037794928335170896,
+    "can": 0.026350606394707828,
+    "network": 0.04738699007717751,
+    "v2x": 0.06288864388092613,
+    "cross": 0.010341786108048511
+   },
+   "strongest_at_clean_alarm_ticks": {
+    "gps": 0.3669141039236479,
+    "network": 0.24708377518557795,
+    "can": 0.1823966065747614,
+    "v2x": 0.11770943796394485,
+    "cross": 0.07423117709437964,
+    "lidar": 0.01166489925768823
+   },
+   "clean_events_by_blamed": {
+    "gps": 151,
+    "can": 72,
+    "network": 39,
+    "v2x": 37,
+    "lidar": 12,
+    "imu": 8,
+    "undecided": 1
+   },
+   "clean_events_by_blamed_response": {
+    "gps|WARN": 146,
+    "can|WARN": 58,
+    "v2x|WARN": 29,
+    "network|DEGRADE": 21,
+    "network|WARN": 18,
+    "can|DEGRADE": 14,
+    "lidar|WARN": 12,
+    "v2x|DEGRADE": 8,
+    "imu|WARN": 8,
+    "gps|DEGRADE": 5,
+    "undecided|WARN": 1
+   },
+   "alarm_ticks_per_clean_event_median": 2.0,
+   "clean_composites_with_an_event": 0.1555,
+   "clean_composite_median_length_s": 16.0,
+   "clean_hours": 12.597222222222221
+  },
+  "C": {
+   "share_ge_099": {
+    "can": 0.03573333333333333,
+    "network": 0.025566666666666668,
+    "v2x": 0.031191666666666666,
+    "cross": 0.0127
+   },
+   "own_alarm_rate": {
+    "can": 0.03573333333333333,
+    "network": 0.043491666666666665,
+    "v2x": 0.06993333333333333,
+    "cross": 0.0127
+   },
+   "strongest_at_clean_alarm_ticks": {
+    "can": 0.36242695511625017,
+    "v2x": 0.29839612085042894,
+    "network": 0.23113266194206142,
+    "cross": 0.10804426209125947
+   },
+   "clean_events_by_blamed": {
+    "can": 618,
+    "v2x": 280,
+    "network": 113,
+    "undecided": 21
+   },
+   "clean_events_by_blamed_response": {
+    "can|DEGRADE": 309,
+    "can|WARN": 268,
+    "v2x|WARN": 148,
+    "v2x|DEGRADE": 132,
+    "network|DEGRADE": 103,
+    "can|SAFE_STOP": 41,
+    "undecided|WARN": 21,
+    "network|WARN": 10
+   },
+   "alarm_ticks_per_clean_event_median": 4.0,
+   "clean_composites_with_an_event": 0.693,
+   "clean_composite_median_length_s": 120.0,
+   "clean_hours": 33.333333333333336
+  }
+ }
+}

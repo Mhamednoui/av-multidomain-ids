@@ -482,3 +482,84 @@ Exposure: every domain test set was scored before; the zero-day system, the tier
 - System K held-out rules-only 36.9, L3-only 56.6, both no-novelty 69.1. FA improvement over S3 is mostly the removal of the supervised LiDAR XGB (7.7% own FA).
 - v2 reference: WebAttack 96.3% (v2) vs 42.7 / 15.3% (v3 composites); Bot 0% (M1-NET); GhostCluster is a v2-comparison row (L1 tick 100% at 9.7% FA).
 - Open: gated novelty (only above its own threshold) instead of an extra noisy_or entry; GPS EKF / S7 L3 into the system; LiDAR real zero-day layers (WP3 S9).
+
+## 2026-10-24 S5 start: density-aware calibration, LOGO threshold, temporal correlator + response, M2 test (plan + acceptance rule, written BEFORE any S5 result)
+Binding (ORCHESTRATOR 2026-10-24): label-free combiners only (max or log-form noisy_or, chosen on val); evidence-novelty DROPPED; LiDAR label-free L1 union only
+(INTERIM); CAN glitch filter DROPPED (cross_comma rebuilt with the S2b inst |z| choice, no filter); GPS / CAN / V2X / NET frozen domains; network = stack H host view.
+**M2 system entries**: gps (frozen domain score), lidar (lidar.l1_union only; own alarm = its own layer threshold), can, network (H), v2x (physics-only), cross (S2b).
+**Data**: S3 tick packs rebuilt as s5_* where needed (cross_comma without glitch; v2x / network with per-tick sample COUNT and per-group clean per-sample combined
+scores for the density model; lidar reduced to L1); unchanged scores are asserted equal to the S3 packs. Test composites = the S4 construction and seeds
+([SEED, 64, 9, ord]; K 2000 clean / C 1000 clean, 300 per family).
+**(1) Calibration fixes, VALIDATION ONLY**
+- Density transform (v2x, network: several samples per tick): tick max M of k samples -> q = G(M)^(k^alpha), G = ECDF of the per-sample combined domain score on clean
+  training-fold samples; alpha = 0 is the S3 tick ECDF (rank-identical), alpha = 1 assumes independent samples; alpha per domain in {0, 0.5, 1}. Other domains have one
+  sample per tick (gps, can, cross) or a constant 10 scans (lidar): no transform. Then per-domain ECDF on clean training-fold ticks as in S3.
+- Calibration procedure: "halves" (S3: ECDF on one part, 2% threshold on clean composites of another) vs "LOGO": ECDFs on all training groups, system threshold = tie-safe
+  2% of the pooled OUT-OF-FOLD clean composite scores (each fold scored with calibrations fitted without it).
+- Folds: 3 group folds over validation (KITTI: one val drive per fold, shared by gps / cross / lidar; ROAD capture, D10 (day, period) block, VeReMi time block, comma route:
+  seeded round-robin, clean groups and attack-only groups dealt separately). Composites of fold f use groups of fold f only (K and C: 300 clean + 40 per family per fold).
+- Held-out estimate of a procedure (nested, mirrors deployment): for fold f, run the procedure on the other two folds only (LOGO: inner out-of-fold scores of the two folds
+  -> threshold; halves: ECDF on one, threshold on the other), score fold f with calibrations fitted on the other two; pooled over f.
+- Grid: procedure {halves, LOGO} x combiner {max, noisy_or} x alpha_v2x {0, .5, 1} x alpha_net {0, .5, 1} = 36.
+  Selection rule: among configs with held-out clean tick FA <= 2.5% for K AND C, the highest pooled (K + C) held-out mean tick-level detection over the non-held-out
+  families (S4 held-out types excluded from every choice, asserted; GhostCluster excluded); ties -> simpler (halves, max, alpha 0). None qualifies -> lowest max(FA_K, FA_C).
+  Deployed: chosen procedure on all three folds (ECDFs on all validation groups; threshold as the procedure says).
+**(2) Temporal correlator + response** (fusion/correlator.py; v2 temporal/temporal_correlator.py + response/response_module.py logic copied and re-written; v2 windowing/
+  retired: v3 domains window their own samples and the system clock is 1 Hz)
+- Per-tick system alarms -> ALERT EVENTS: an event opens at tick t when >= m of the last w ticks alarm (persistence), or (corroboration on) when >= 2 different domains raise
+  their OWN alarm in the same tick; it stays open while alarms continue and closes after g ticks without an alarm; alarms within g ticks merge. Event = start (open tick),
+  first alarm tick, end, domains named, blamed domain, explanation. Raw alarm ticks that never open an event are LOGGED only.
+- Blame per alarm tick: the cross-domain blamed domain when the cross layer alarms with a decided blame, else the strongest domain with its own alarm (not cross), else the
+  strongest non-cross contributor, else undecided; event blame = most frequent decided tick blame. Correct blame = the attacked sensor domain (gps families -> gps,
+  lidar_* -> lidar, can_* / can_bus -> can, gps_can / gnss_can -> gps or can, domain families -> that domain).
+- Grid: (m, w) in {(1,1) = off, (2,3), (2,5), (3,5), (3,10)} x g in {5, 15} x corroboration {off, on}. Selection (after (1), nested held-out alarms of the chosen config):
+  among configs with held-out alert events per clean hour <= 10 (K AND C), the highest pooled mean EVENT detection over the non-held-out families; ties -> simpler
+  (smaller m*w, smaller g, corroboration off); none qualifies -> lowest max(events K, events C).
+- Response policy (fixed a priori, not tuned): LOG = alarm ticks outside events; WARN = every alert event; DEGRADE <domain> = an event whose blamed domain has >= 3 blamed
+  alarm ticks (trust of that domain lowered: GPS -> odometry fallback, LiDAR -> other perception, CAN wheel speed -> GNSS/IMU, V2X -> drop the flagged messages,
+  network -> isolate the host); SAFE-STOP RECOMMENDATION = an event with >= 2 motion-critical domains (gps, lidar, can) blamed >= 3 ticks each, or a motion-critical
+  degrade lasting >= 30 s. V2X / network alone never go above DEGRADE. Recommendation only; no feedback into detection in this evaluation.
+- Network lateness: composites show a closed minute one minute later; the streaming runtime emits network Evidence up to ~5 min late (WP7 S1b, 5-minute bins).
+  Network delays are reported as measured plus this caveat; network evidence counts for corroboration only when present in the same tick.
+**(3) M2 test run (once, labelled)**: frozen M2 system on the test composites. Exposure: every domain test set seen before (ROAD >= 6x, D10 several, VeReMi 2x, KITTI
+  several, comma 2x); fusion test composites seen in S3 (seed 63) and S4 (seed 64, the same composites as here) -> third fusion-level exposure.
+**Acceptance (test, judged once)**
+- A1 raw clean tick FA (before the correlator) <= 3.0% for K and C (S3 G1 bound).
+- A2 alert events per clean hour (after the correlator) <= 10 for K and C.
+- A3 K mean event detection over the single-domain families (GhostCluster excluded) >= 70%.
+- A4 K mean event detection over the S4 held-out (zero-day) types >= 60% (S4 Z1 bound).
+- A5 correct event blame >= 75% and wrong blame <= 10% of detected single-domain K events.
+- A6 safe-stop recommendations per clean hour <= 1 (K and C).
+- A7 100% of alert events carry an explanation. A8 unit tests pass.
+Reported, not judged: C detection / blame, coordinated scenarios, delays per family, response per scenario, ablation (each domain removed with its own validation
+threshold; correlator off), equal-FA G5 comparison (domain alone at the fused test FA: test-informed, labelled), v2 side-by-side (not like-for-like), CIs = cluster
+bootstrap over vehicle groups (1000).
+
+## 2026-10-24 S5 packs (tools/WP6_S5_streams.py, log results/WP6/logs/s5_streams.log)
+- s5_cross_comma (no glitch filter), s5_network / s5_v2x (+ count, clean_samples; layers identical to S3, max diff 0.0 asserted), s5_lidar (L1 union only).
+- Disclosure: the pack check printed the clean own-alarm rate of cross_comma on TEST too (S3 with filter 1.82%, S5 without 1.25%; val 0.96 / 0.99%). No choice depends on
+  it (the filter was dropped by the supervisor before S5); the check is now val-only in spirit, the printed number is recorded here.
+- Plan refinement BEFORE any S5 result (tick blame): step 3 "strongest non-cross contributor" becomes "the strongest entry overall, if it is not cross" (a cross-only alarm
+  with undecided blame must stay undecided, not be pinned on a noise-level domain). Implemented in fusion/correlator.py tick_blame.
+
+## 2026-10-24 S5 validation (before the test run; results/WP6/s5_dev.json, s5_frozen.pkl, m2_system.pkl/json, logs/s5_dev.log)
+- Folds: KITTI 0011 / 0035 / 0027 (one per fold); comma 5 / 5 / 6 routes; ROAD, D10, VeReMi groups dealt round-robin. Fold composites K 1860 / 1700 / 1860, C 1660 / 1500 / 1660.
+- Calibration grid (nested held-out): S3-style halves + noisy_or K FA 2.71% (fails 2.5%), LOGO + noisy_or 2.17-2.33% (all qualify); max rows qualify but detect 42-55%.
+  Density: alpha_v2x = 1 +1.8 pts (75.7 -> 77.5 pooled), alpha_net > 0 costs 2-8 pts (flows of one minute share host features: not independent).
+  CHOSEN: LOGO, noisy_or, alpha_v2x 1.0, alpha_net 0.0 (val held-out FA K 2.15%, C 2.04%; pooled selection tick detection 77.5%).
+- Correlator grid: off (S3 alarm runs) K 48.8 / C 37.5 events/h; persistence 2-of-3/2-of-5 + gap 15 brings it to 5.7-8.2/h; 3-of-5 to 3.8/h but det 55-63%.
+  CHOSEN m2w5_g15_c1 (2 of 5, gap 15 s, corroboration on): val events/h K 8.21, C 8.20; pooled event det 67.8% (tick 77.5%); clean DEGRADE ~4/h, SAFE_STOP K 0 / C 0.63/h.
+- Frozen: results/WP6/m2_system.pkl (fusion.system.M2System for K and C; load_m2()), m2_system.json, s5_frozen.pkl (+ ablation thresholds, test composite spec).
+- Smoke run of the test tool on VALIDATION packs (plumbing, temp folder; it printed validation numbers with the deployed in-sample calibration): one crash fixed
+  (comma GNSS families have no gps entry -> the cross entry is the "alone" column of the G5 table). Nothing else changed after it.
+
+## 2026-10-24 S5 TEST run (once) and verdict (s5_test.json, s5_acceptance.json, s5_tables.md, post-test diagnostic s5_diag.json; logs s5_test.log)
+- A1 raw clean tick FA: K 2.08% [1.28, 3.30] MET, C 6.70% [5.95, 7.66] NOT MET -> NOT MET. A2 events / clean hour K 25.4 [13.0, 45.6], C 31.0 [28.6, 33.3] (<= 10) NOT MET
+  (correlator off: 54.1 / 119.9). A3 K event detection single 60.2% [45.4, 72.6] NOT MET (tick level 68.7%). A4 K held-out 58.8% [44.1, 70.9] NOT MET (S4 61.1%).
+  A5 K blame correct 86.7%, wrong 13.2% (> 10%) NOT MET. A6 safe-stop per clean hour K 0.0, C 1.23 NOT MET. A7 explained 10467/10467, 18454/18454 MET. A8 tests 406 passed.
+- Cross-domain adds (ablation, val thresholds): K vehicle-block families 43.6 vs 19.0% (+24.7 pts), C +51.4 pts; overall K mean unchanged (60.2 vs 60.4) because the
+  other domains gain the budget. Without v2x K 32.1%, without can 50.3%; without lidar 68.5% (L1 interim costs budget, detects 8-11% of PointDrop/IntensitySpoof).
+- Diagnostic (no choice): every entry's clean test ticks sit above validation (share >= 0.99: v2x 1.2 -> 2.6% K, can 1.0 -> 3.6% C, cross 0.7 -> 2.1% K). C: 69% of the
+  120 s clean composites contain an alert event (K 16% of 16 s composites), so C detection (96%) is not informative. Clean C events: can 577 + 41 safe-stop
+  (ROAD CAN alarms lasting >= 30 s). Blame: comma GNSS attacks are blamed on can / v2x (0% correct): S2b domain-level blame leaves them undecided and the event rule
+  "most frequent DECIDED tick blame" lets one noisy decided tick decide. KITTI cross-only families 4-50% correct for the same reason.

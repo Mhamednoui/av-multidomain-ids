@@ -40,10 +40,12 @@ def segment(s, pack, start, n):
     dom, lay = _alarms(s, pack)
     out = {"score": np.zeros(n, np.float32), "layers": np.zeros((n, m), np.float32), "dom_alarm": np.zeros(n, bool),
            "layer_alarm": np.zeros((n, m), bool), "present": np.zeros(n, bool), "label": np.zeros(n, bool),
-           "blame": None if s.get("blame") is None else np.full(n, None, object), "src": s["name"]}
+           "blame": None if s.get("blame") is None else np.full(n, None, object), "src": s["name"], "grp": s["group"],
+           "count": np.zeros(n, np.float32)}
     if b > a:
         o = a - start
         k = b - a
+        out["count"][o:o + k] = s["count"][a:b] if "count" in s else 1.0      # samples per tick (S5 density model); 1 where the domain has one sample
         out["score"][o:o + k] = s["score"][a:b]
         out["layers"][o:o + k] = s["layers"][a:b]
         out["dom_alarm"][o:o + k] = dom[a:b]
@@ -94,8 +96,8 @@ class Builder:
         if g is not None:
             ia, ib = np.intersect1d(np.round(g["t"], 3), np.round(c["t"], 3), return_indices=True)[1:]
             gs = segment(g, self.packs["gps"], 0, len(g["score"]))          # GPS run aligned to the cross grid by time
-            gseg = {"blame": None, "src": g["name"]}
-            for k in ("score", "layers", "dom_alarm", "layer_alarm", "present", "label"):
+            gseg = {"blame": None, "src": g["name"], "grp": g["group"]}
+            for k in ("score", "layers", "dom_alarm", "layer_alarm", "present", "label", "count"):
                 v = gs[k]
                 gseg[k] = np.zeros((n,) + v.shape[1:], v.dtype)
                 gseg[k][ib] = v[ia]
