@@ -1,0 +1,266 @@
+[
+ {
+  "combined": {
+   "domain": "lidar",
+   "layer": "combined",
+   "name": "lidar.combined",
+   "t": 0.0,
+   "score": 0.75,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "method": "max",
+    "stat": 0.9250960307298336,
+    "layer_scores": {
+     "L1": 0.9251592356687898,
+     "L2a": 0.9121019108280255,
+     "L2c": 0.0,
+     "L2d": 0.0
+    },
+    "layer_raw": {
+     "L1": 0.9410828025477707,
+     "L2a": 0.9770700636942675,
+     "L2c": 0.0,
+     "L2d": 0.0
+    },
+    "first_scan_no_previous": true,
+    "stack_threshold": 0.9967989756722152
+   },
+   "sample_id": "0095/0"
+  },
+  "layers": {
+   "L1": {
+    "domain": "lidar",
+    "layer": "L1",
+    "name": "lidar.l1_geometry",
+    "t": 0.0,
+    "score": 0.9251592356687898,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.9410828025477707,
+     "available": true
+    },
+    "sample_id": "0095/0"
+   },
+   "L2a": {
+    "domain": "lidar",
+    "layer": "L2a",
+    "name": "lidar.l2a_intensity",
+    "t": 0.0,
+    "score": 0.9121019108280255,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.9770700636942675,
+     "available": true
+    },
+    "sample_id": "0095/0"
+   },
+   "L2c": {
+    "domain": "lidar",
+    "layer": "L2c",
+    "name": "lidar.l2c_background",
+    "t": 0.0,
+    "score": 0.0,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.0,
+     "available": false
+    },
+    "sample_id": "0095/0"
+   },
+   "L2d": {
+    "domain": "lidar",
+    "layer": "L2d",
+    "name": "lidar.l2d_tracking",
+    "t": 0.0,
+    "score": 0.0,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.0,
+     "available": false
+    },
+    "sample_id": "0095/0"
+   }
+  }
+ },
+ {
+  "combined": {
+   "domain": "lidar",
+   "layer": "combined",
+   "name": "lidar.combined",
+   "t": 0.1032,
+   "score": 0.8281049935979513,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "method": "max",
+    "stat": 0.9500640204865557,
+    "layer_scores": {
+     "L1": 0.8837579617834395,
+     "L2a": 0.9503184713375796,
+     "L2c": 0.7576824583866837,
+     "L2d": 0.7125480153649167
+    },
+    "layer_raw": {
+     "L1": 0.9162420382165605,
+     "L2a": 0.9847133757961783,
+     "L2c": 0.7576824583866837,
+     "L2d": 0.8271446862996159
+    },
+    "first_scan_no_previous": false,
+    "stack_threshold": 0.9967989756722152
+   },
+   "sample_id": "0095/1"
+  },
+  "layers": {
+   "L1": {
+    "domain": "lidar",
+    "layer": "L1",
+    "name": "lidar.l1_geometry",
+    "t": 0.1032,
+    "score": 0.8837579617834395,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.9162420382165605,
+     "available": true
+    },
+    "sample_id": "0095/1"
+   },
+   "L2a": {
+    "domain": "lidar",
+    "layer": "L2a",
+    "name": "lidar.l2a_intensity",
+    "t": 0.1032,
+    "score": 0.9503184713375796,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.9847133757961783,
+     "available": true
+    },
+    "sample_id": "0095/1"
+   },
+   "L2c": {
+    "domain": "lidar",
+    "layer": "L2c",
+    "name": "lidar.l2c_background",
+    "t": 0.1032,
+    "score": 0.7576824583866837,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.7576824583866837,
+     "available": true
+    },
+    "sample_id": "0095/1"
+   },
+   "L2d": {
+    "domain": "lidar",
+    "layer": "L2d",
+    "name": "lidar.l2d_tracking",
+    "t": 0.1032,
+    "score": 0.7125480153649167,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.8271446862996159,
+     "available": true
+    },
+    "sample_id": "0095/1"
+   }
+  }
+ },
+ {
+  "combined": {
+   "domain": "lidar",
+   "layer": "combined",
+   "name": "lidar.combined",
+   "t": 0.2064,
+   "score": 0.9282970550576184,
+   "alarm": false,
+   "reason": "",
+   "details": {
+    "method": "max",
+    "stat": 0.9814340588988476,
+    "layer_scores": {
+     "L1": 0.8414012738853504,
+     "L2a": 0.9815286624203822,
+     "L2c": 0.5310499359795134,
+     "L2d": 0.6718950064020487
+    },
+    "layer_raw": {
+     "L1": 0.8796178343949045,
+     "L2a": 0.9952229299363057,
+     "L2c": 0.5310499359795134,
+     "L2d": 0.7973751600512163
+    },
+    "first_scan_no_previous": false,
+    "stack_threshold": 0.9967989756722152
+   },
+   "sample_id": "0095/2"
+  },
+  "layers": {
+   "L1": {
+    "domain": "lidar",
+    "layer": "L1",
+    "name": "lidar.l1_geometry",
+    "t": 0.2064,
+    "score": 0.8414012738853504,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.8796178343949045,
+     "available": true
+    },
+    "sample_id": "0095/2"
+   },
+   "L2a": {
+    "domain": "lidar",
+    "layer": "L2a",
+    "name": "lidar.l2a_intensity",
+    "t": 0.2064,
+    "score": 0.9815286624203822,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.9952229299363057,
+     "available": true
+    },
+    "sample_id": "0095/2"
+   },
+   "L2c": {
+    "domain": "lidar",
+    "layer": "L2c",
+    "name": "lidar.l2c_background",
+    "t": 0.2064,
+    "score": 0.5310499359795134,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.5310499359795134,
+     "available": true
+    },
+    "sample_id": "0095/2"
+   },
+   "L2d": {
+    "domain": "lidar",
+    "layer": "L2d",
+    "name": "lidar.l2d_tracking",
+    "t": 0.2064,
+    "score": 0.6718950064020487,
+    "alarm": false,
+    "reason": "",
+    "details": {
+     "raw": 0.7973751600512163,
+     "available": true
+    },
+    "sample_id": "0095/2"
+   }
+  }
+ }
+]

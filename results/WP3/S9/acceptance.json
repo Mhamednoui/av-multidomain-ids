@@ -1,0 +1,77 @@
+{
+ "R1_false_alarms": {
+  "fa": 0.011795543905635648,
+  "worst_drive_fa": 0.025380710659898477,
+  "lodo_mean_fa": 0.013124199743918053,
+  "lodo_worst_fa": 0.03579952267303103,
+  "rule": "stack FA <= 2.5 % at 1 % total budget and worst test drive <= 5 %",
+  "met": true
+ },
+ "R2_targets_pointdrop_intensity": {
+  "pointdrop": 0.27647058823529413,
+  "intensity_spoof": 0.515686274509804,
+  "pointdrop_best_layer_alone": 0.8725490196078431,
+  "rule": "PointDrop >= 30 % and IntensitySpoof >= 50 % in the stack at the 1 % total budget (predicted borderline)",
+  "met": false
+ },
+ "R3_single_return_phantoms": {
+  "far_budget_max": 0.00784313725490196,
+  "near_replace": 0.1784313725490196,
+  "fa": 0.011795543905635648,
+  "rule": "far / budget calibrated phantoms <= FA + 10 points (physics bound); near replace reported",
+  "met": true
+ },
+ "R4_episodes": {
+  "false_episode_rate": 0.0625,
+  "sensor_fixed_replace_near_detected": 11,
+  "episodes_per_kind": 21,
+  "world_fixed_replace_near_detected": 8,
+  "rule": "false-episode rate <= 10 % and sensor-fixed near replace >= 50 % of the episodes within 3 s; world-fixed reported (predicted not detected after the first scan)",
+  "met": true
+ },
+ "R5_every_layer_earns_its_place": {
+  "L1_largest_loss_when_removed": 0.0,
+  "L2a": 0.507843137254902,
+  "L2c": 0.27647058823529413,
+  "L2d": 0.17058823529411765,
+  "rule": "each headline layer, when removed, lowers some physical-attack detection by >= 3 points (predicted: L1 does not on the single-return set)",
+  "met": false
+ },
+ "R6_wp_file_targets": {
+  "budget_phantoms_50_400": 0.00784313725490196,
+  "near_sparse": 0.00784313725490196,
+  "rule": "WP file: 50-400 added points >= 60 % and near sparse > 50 % at 1 % FA (predicted NOT MET: physics bound)",
+  "met": false
+ },
+ "R7_freeze_reproduces_test_scores": {
+  "max_abs_diff": 1.1102230246251565e-16,
+  "alarm_differences": 0,
+  "replayed_scans": 2381,
+  "clean_scans": 1526,
+  "attacked_scans": 855,
+  "rule": "frozen domain replayed from raw scans reproduces the stored test per-layer scores and stack score (<= 1e-9, 0 alarm differences) on all clean test scans and the attacked scans of >= 2 test drives",
+  "met": true
+ },
+ "R8_tests_cache_cost": {
+  "tests_passed": 469,
+  "tests_failed": 0,
+  "extra_cache_gb": 0.15000000000000002,
+  "scoring_s_per_scan": 1.8426141738891602,
+  "rule": "full test suite passes, extra cache <= 2 GB, scoring cost per scan reported",
+  "met": true
+ },
+ "V1_combiner_choice": {
+  "verdict": "CHOSEN max",
+  "rule": "survivors of the clean-FA control: max, split",
+  "validation_mean_physical_detection": 0.2036036036036036
+ },
+ "V2_density_part": {
+  "gain": -0.011711711711711703,
+  "verdict": "NOT KEPT (intensity part only)",
+  "rule": "density part kept only if validation mean physical detection +2 points and worst LODO FA +2 points at most"
+ },
+ "milestone": {
+  "verdict": "PARTIAL: R2, R5, R6 NOT MET",
+  "rule": "M1-LiDAR closes PARTIAL when the pre-registered predictions of the physics bound hold and every honest limit is stated"
+ }
+}

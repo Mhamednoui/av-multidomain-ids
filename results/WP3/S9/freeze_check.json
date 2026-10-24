@@ -1,0 +1,24 @@
+{
+ "replayed_scans": 2381,
+ "matched_to_stored": 2381,
+ "unmatched": 0,
+ "clean": 1526,
+ "attacked": 855,
+ "attack_drives": [
+  "0052",
+  "0079",
+  "0001"
+ ],
+ "seconds": 2029.570229291916,
+ "max_abs_diff": {
+  "stat": 1.1102230246251565e-16,
+  "score": 1.1102230246251565e-16,
+  "raw_L1": 1.1102230246251565e-16,
+  "raw_L2a": 1.1102230246251565e-16,
+  "raw_L2c": 1.1102230246251565e-16,
+  "raw_L2d": 1.1102230246251565e-16
+ },
+ "alarm_differences": 0,
+ "exact": true,
+ "seconds_per_scan_per_process": 3.4096097930145586
+}

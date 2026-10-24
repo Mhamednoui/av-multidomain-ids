@@ -1,0 +1,7 @@
+{
+ "tests_passed": 469,
+ "tests_failed": 0,
+ "extra_cache_gb": 0.15000000000000002,
+ "scoring_s_per_scan": 1.8426141738891602,
+ "note": "tests from results/WP3/S9/logs/tests.log; cache = ../data_extra/cache_v3/WP3/S9 (138 MB); timing: 20 scans, single process, machine shared"
+}

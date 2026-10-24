@@ -1,0 +1,47 @@
+{
+ "combiner": "max",
+ "density_part_in_L2a": false,
+ "reference_scans": 3124,
+ "reference_drives": [
+  "0002",
+  "0011",
+  "0013",
+  "0015",
+  "0017",
+  "0019",
+  "0020",
+  "0027",
+  "0029",
+  "0035",
+  "0046",
+  "0048",
+  "0060",
+  "0070",
+  "0106",
+  "0113"
+ ],
+ "fit": "layers fitted on clean train+val drives only; no attack label, no test data",
+ "segment_params": {
+  "ground": "grid",
+  "h0": 0.3,
+  "e0": 0.4,
+  "e1": 0.0
+ },
+ "ego_pose": "planar (x, y, yaw) of every scan, KITTI: OXTS via lidar.ego.poses",
+ "schema": 1,
+ "method": "max",
+ "budget": 0.01,
+ "stack_threshold": 0.9967989756722152,
+ "layers": [
+  "L1",
+  "L2a",
+  "L2c",
+  "L2d"
+ ],
+ "layer_thresholds": {
+  "L1": 0.9898089171974523,
+  "L2a": 0.9872611464968154,
+  "L2c": 0.9897567221510885,
+  "L2d": 0.9891165172855315
+ }
+}
