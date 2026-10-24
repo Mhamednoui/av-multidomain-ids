@@ -70,13 +70,15 @@ def test_tampa_real_file_if_present():
     assert old["sender"].nunique() > 200 and len(old) > 30000                                  # legacy: ids per RSU
 
 
-def test_v2aix_stub_raises():
-    try:
-        adapters.load_v2aix()
-    except schema.DataNotAvailableError as e:
-        assert "not available" in str(e)
-    else:
-        raise AssertionError("stub must raise")
+def test_v2aix_missing_data_raises():
+    """The real V2AIX adapter (WP5 S0c, v2x/v2aix.py) raises when nothing is extracted (tested on an empty folder)."""
+    with tempfile.TemporaryDirectory() as d:
+        try:
+            adapters.load_v2aix(Path(d))
+        except schema.DataNotAvailableError as e:
+            assert "not extracted" in str(e)
+        else:
+            raise AssertionError("must raise")
 
 
 def test_validate_rejects_bad_tables():

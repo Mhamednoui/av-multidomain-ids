@@ -393,3 +393,42 @@ Expectation E8: class 17 on scored rows is clearly lower with the invariant L4 t
 - Tampa (illustration): stack FA 2.8%, scored seen 81.8% (physics 81.7%), class 17 29.0% (29.1%), L4 alone FA 0.1%, 80.2%.
 - Pitfalls: (1) sender-level k=3 at a 1% message budget flags 11.7% of genuine senders; use a validation-chosen k. (2) Max combiner chosen on validation without class 17 dilutes the only L4 gain (class 17). (3) bash heredoc turned a double backslash-n into a real newline in a generated file: use chr(92) in edit scripts. (4) tests/run_tests.py filters on the Windows path string: use "test_l4", not "v2x/test_l4".
 - Feature cache (0.5 GB) deleted after the run. Smoke result files deleted.
+
+## 2026-10-24 S0c V2AIX (D13): plan and acceptance rule (written BEFORE downloading)
+Licence: non-commercial research, cite arXiv 2403.10221 (Hoffmann et al., V2AIX), NO redistribution: data and derived per-message files stay in ../data_extra/D13_v2aix/ and are never committed.
+Disk rule: >= 15 GB free at all times (47 GB free at start). Untrusted data: read with python -I, nothing executed.
+Extraction choice rule (fixed before looking at any message content; only archive listing metadata = paths and sizes): whole recordings (one scenarios/<ts>.json = one recording; joined.json files are NOT extracted
+unless small) until ~5 GB total. Stratify by path strata (Mobile/Stationary x V2X-only/V2X-with-Sensor-Context x location): round-robin over strata, within a stratum take recordings in a seeded random
+order (SEED 42), skipping any single file > 1 GB; stop at 5 GB. Splits 60/20/20 by recording, seed 42, stratified by (Mobile/Stationary, location) where a stratum has >= 3 recordings.
+Acceptance (S0c):
+ A1 archive downloaded completely (size equals Content-Length, zip test OK) and inventoried (recordings, scenarios, sizes, message types, ego pose and ego own CAMs present or not);
+ A2 extracted subset <= 5.5 GB, covers >= 2 path strata if the archive has them; free disk >= 15 GB throughout;
+ A3 adapter yields a table passing v2x.schema.validate; unit conversions tested (ETSI scaled integers); no negative speed; no duplicated msg_id;
+ A4 splits disjoint by recording, sizes 60/20/20 +- one recording, deterministic;
+ A5 plausibility (reported, not a pass/fail on values): speed 0..~70 m/s, heading in [0, 360), lat/lon within the region, sender-ego distance quantiles (radio range) for stationary-vs-mobile; field completeness per field.
+ A6 no detection run; no data or per-message file in git.
+Misses are reported plainly.
+
+## 2026-10-24 S0c V2AIX results (files: results/WP5/s0c_inventory.md, s0c_selection.json, s0c_verify.json, s0c_tables.md, splits_v2aix.json; logs s0c_verify.log, s0c_tests.log)
+- Download: v2aix_json.zip 1,007,346,151 bytes (equals Content-Length), zipfile testzip OK, 2,228 files, 22.16 GB uncompressed. Free disk 47 -> 40 GB after extraction (>= 15 GB kept).
+- Archive layout: json/{Mobile,Stationary}/{V2X-only,V2X-with-Sensor-Context}/<location>/{joined.json, scenarios/<UTC timestamp>.json}; joined.json = all scenarios of a location concatenated (5.2 GB for Mobile Aachen): not extracted.
+  1,540 scenario files in the selection = 13 strata (Mobile V2X-only: Aachen, Highway, Rural; Mobile Sensor-Context: Aachen, Cologne, Dusseldorf, Highway, Rural; Stationary V2X-only: Heinrichsallee, Monheimsallee, Ponttor, Theaterstrasse; Stationary Sensor-Context: A44-Jackerath).
+- Topics: /v2x/cam (parsed ETSI CAM v2: header.station_id, generation_delta_time, basic container with reference position + confidence ellipse, high-frequency container, low-frequency container with path history), /v2x/raw (same packets as bytes, ignored),
+  /gps/cohda_mk5/fix (ego GNSS of the OBU, 5-10 Hz; ONE fix for stationary units), /gps/oxts_rt3000/{fix,status,odom} (ego reference INS, ~100 Hz, Sensor-Context mobile only), /tf_static. No DENM in this JSON release. Only station type 5 (passenger car) appears; no RSU CAMs.
+- Ego's own CAMs are NOT in /v2x/cam: no mobile sender has a median distance to the ego below 20 m (s0c_verify.json own_cam_check: 0.3% of messages within 3 m = vehicles passing the ego). So no V2X self-report witness for WP6 from V2AIX; the ego GNSS (cohda / oxts) is the only ego pose.
+- Extraction (rule above, applied on paths and sizes only): 1,540 recordings, 4.999 GB (budget 5 GB), seeded round-robin over the 13 strata; the small strata are fully included.
+- Parsed: 212,303 CAMs after dropping duplicates (sender, t) and rows without finite t, x, y, speed; 1,515 of 1,540 recordings contain at least one CAM; 1,956 (recording, station) senders. Splits 60/20/20 by recording, seed 42:
+  train 907 rec / 123,593 msgs / 1,181 senders; val 304 / 41,285 / 380; test 304 / 47,425 / 395. Disjoint by construction (asserted). Mobile messages are only 12-15% of each split (18.5k / 7.4k / 4.3k): Stationary A44-Jackerath alone holds 135k messages.
+- Units: ETSI scaled integers (documented in the v2x/v2aix.py docstring and unit-tested): lat/lon 1e-7 deg, heading 0.1 deg clockwise from north -> schema math heading (pi/2 - rad), speed 0.01 m/s, longitudinal acceleration 0.1 m/s^2, yaw rate 0.01 deg/s clockwise -> CCW positive, unavailable codes -> NaN.
+- Time: CAM generation_delta_time is the sender clock (mod 65536 ms); its offset to the logger clock is a different constant per recording / sender. t = recv - latency with the latency unwrapped around the per-(recording, sender) median;
+  age_s is the relative latency (median 0.025 s, p99 1.5 s, max 3.6 s). The absolute sender-clock delay cannot be recovered, so delayed-message checks can only use age_s as a relative quantity.
+- Field completeness (finite share): speed, position, acl, yaw_rate, pos_sigma 1.0; heading 0.997; spd_sigma 0.48; acl_sigma 0.0 (always the unavailable code 102); rx_x / rx_y 0.955 (the NaN are Mobile V2X-only clips whose cohda fix is more than 2 s away: Highway 42%, Rural 40%, Aachen 13%; Sensor-Context 0-3%).
+- Plausibility: speed median 29.4 m/s (0..163.82; 3 values above 70 m/s, all in Stationary Ponttor: 163.82 = raw 16382, and 108.46 twice; left in: real-data glitches, to be reported in S3b); 5.1% of messages at speed 0;
+  yaw rate p1/p99 -0.285 / 0.211 rad/s (extremes -5.2 / +3.6 at low speed); acl p1/p99 -2.0 / 2.1 m/s^2 (range +-9.9); lat 47.17-51.24, lon 6.05-12.48 (some Highway drives leave the Aachen area; one fixed local origin, error < 0.5% inside the area).
+  Implied speed from consecutive positions agrees with the reported speed only roughly (|diff| p50 0.39, p90 4.1, p99 12.9 m/s at dt < 1.5 s): position quantisation / GNSS noise (pos_sigma median 2.8 m) and the CAM generation rule make the consistency checks look very different from VeReMi.
+  Sender-to-ego distance (radio range, needed by S3b): Mobile p50 172 m, p95 3.9 km, p99 5.0 km, max 6.6 km; Stationary p50 590 m, p99 4.2 km, max 8.05 km (A44-Jackerath p50 1.0 km, p99 4.3 km; urban Aachen stationary sites p99 70-270 m, max 327 m;
+  Mobile Rural p50 3.5 km). The acceptance range must be calibrated per environment from genuine validation data: a VeReMi-style few-hundred-metre threshold would reject most genuine highway CAMs.
+- Median inter-message time per track 0.35 s (p5 0.12, p95 1.18 s): CAM generation rule 0.1-1 s, neither 1 Hz nor 10 Hz.
+- Acceptance: A1 met, A2 met (4.999 GB, all 13 strata, free disk >= 40 GB), A3 met (validate passes; 7 unit tests; 386 tests pass), A4 met (907/304/304 recordings = 60/20/20), A5 reported, A6 met.
+- Pitfalls: (1) generation_delta_time offsets are per-recording constants, never an absolute time. (2) Mobile V2X-only clips are 2-3 s long and the cohda fix stops early: rx NaN, not extrapolated (no approximations). (3) The Bash tool breaks on some heredocs with quotes: write files with the Write tool.
+- Licence reminder: data, cache/ and per-message tables are not in git; only code, tests, aggregate JSON / MD and split lists (recording ids) are.

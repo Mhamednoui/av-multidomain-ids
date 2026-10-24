@@ -1,0 +1,319 @@
+{
+ "messages": 212303,
+ "recordings": 1515,
+ "senders_unique_per_recording": 1956,
+ "dropped_note": "rows without finite t, x, y, speed are dropped by the adapter; duplicates (sender, t) dropped",
+ "split": {
+  "train": {
+   "recordings": 907,
+   "messages": 123593,
+   "senders": 1181,
+   "tracks": 1764,
+   "mobile_msgs": 18549,
+   "stationary_msgs": 105044
+  },
+  "val": {
+   "recordings": 304,
+   "messages": 41285,
+   "senders": 380,
+   "tracks": 575,
+   "mobile_msgs": 7440,
+   "stationary_msgs": 33845
+  },
+  "test": {
+   "recordings": 304,
+   "messages": 47425,
+   "senders": 395,
+   "tracks": 618,
+   "mobile_msgs": 4338,
+   "stationary_msgs": 43087
+  }
+ },
+ "strata": {
+  "Mobile/Aachen": {
+   "recordings": 23,
+   "messages": 2180,
+   "senders": 31,
+   "test": 5,
+   "train": 13,
+   "val": 5
+  },
+  "Mobile/Cologne": {
+   "recordings": 16,
+   "messages": 2224,
+   "senders": 20,
+   "test": 3,
+   "train": 10,
+   "val": 3
+  },
+  "Mobile/Dusseldorf": {
+   "recordings": 13,
+   "messages": 966,
+   "senders": 15,
+   "test": 3,
+   "train": 7,
+   "val": 3
+  },
+  "Mobile/Highway": {
+   "recordings": 319,
+   "messages": 22196,
+   "senders": 404,
+   "test": 64,
+   "train": 191,
+   "val": 64
+  },
+  "Mobile/Rural": {
+   "recordings": 7,
+   "messages": 2761,
+   "senders": 11,
+   "test": 1,
+   "train": 5,
+   "val": 1
+  },
+  "Stationary/A44-Jackerath": {
+   "recordings": 301,
+   "messages": 134768,
+   "senders": 540,
+   "test": 60,
+   "train": 181,
+   "val": 60
+  },
+  "Stationary/Aachen-Heinrichsallee": {
+   "recordings": 148,
+   "messages": 2394,
+   "senders": 158,
+   "test": 30,
+   "train": 88,
+   "val": 30
+  },
+  "Stationary/Aachen-Monheimsallee": {
+   "recordings": 82,
+   "messages": 3830,
+   "senders": 95,
+   "test": 16,
+   "train": 50,
+   "val": 16
+  },
+  "Stationary/Aachen-Ponttor": {
+   "recordings": 303,
+   "messages": 18639,
+   "senders": 335,
+   "test": 61,
+   "train": 181,
+   "val": 61
+  },
+  "Stationary/Aachen-Theaterstrasse": {
+   "recordings": 303,
+   "messages": 22345,
+   "senders": 347,
+   "test": 61,
+   "train": 181,
+   "val": 61
+  }
+ },
+ "completeness": {
+  "t": 1.0,
+  "x": 1.0,
+  "y": 1.0,
+  "speed": 1.0,
+  "vx": 0.9971,
+  "vy": 0.9971,
+  "heading": 0.9971,
+  "acl": 1.0,
+  "yaw_rate": 1.0,
+  "pos_sigma": 1.0,
+  "spd_sigma": 0.4823,
+  "acl_sigma": 0.0,
+  "rx_x": 0.9546,
+  "rx_y": 0.9546,
+  "age_s": 1.0
+ },
+ "completeness_by_kind": {
+  "Mobile": {
+   "acl": 1.0,
+   "yaw_rate": 1.0,
+   "rx_x": 0.6821,
+   "heading": 0.9992,
+   "pos_sigma": 1.0
+  },
+  "Stationary": {
+   "acl": 1.0,
+   "yaw_rate": 1.0,
+   "rx_x": 1.0,
+   "heading": 0.9967,
+   "pos_sigma": 1.0
+  }
+ },
+ "station_type": {
+  "5.0": 212303
+ },
+ "rx_src": {
+  "cohda_static": 181976,
+  "cohda": 26741,
+  "oxts": 3586
+ },
+ "ranges": {
+  "speed_mps": {
+   "0": 0.0,
+   "1": 0.0,
+   "50": 29.39,
+   "99": 48.07,
+   "100": 163.82
+  },
+  "heading_rad": {
+   "0": -4.709,
+   "1": -4.604,
+   "50": -1.773,
+   "99": 1.398,
+   "100": 1.571
+  },
+  "acl_mps2": {
+   "0": -9.9,
+   "1": -2.0,
+   "50": 0.0,
+   "99": 2.1,
+   "100": 9.9
+  },
+  "yaw_rate_rad_s": {
+   "0": -5.239,
+   "1": -0.285,
+   "50": 0.001,
+   "99": 0.211,
+   "100": 3.555
+  },
+  "lat": {
+   "0": 47.174,
+   "1": 48.204,
+   "50": 51.035,
+   "99": 51.082,
+   "100": 51.236
+  },
+  "lon": {
+   "0": 6.054,
+   "1": 6.077,
+   "50": 6.488,
+   "99": 11.649,
+   "100": 12.483
+  },
+  "age_s": {
+   "50": 0.025,
+   "90": 0.103,
+   "99": 1.504,
+   "100": 3.593
+  },
+  "pos_sigma_m": {
+   "0": 0.48,
+   "1": 2.8,
+   "50": 2.82,
+   "99": 19.03,
+   "100": 39.63
+  }
+ },
+ "distance_to_ego_m": {
+  "Mobile": {
+   "0": 0.946,
+   "1": 7.1,
+   "5": 22.648,
+   "25": 87.495,
+   "50": 172.257,
+   "75": 1525.967,
+   "95": 3921.87,
+   "99": 5008.454,
+   "100": 6643.804
+  },
+  "Stationary": {
+   "0": 0.127,
+   "1": 6.817,
+   "5": 23.439,
+   "25": 100.272,
+   "50": 590.169,
+   "75": 2424.743,
+   "95": 3714.129,
+   "99": 4200.481,
+   "100": 8052.721
+  }
+ },
+ "distance_by_stratum_p50_p99_max": {
+  "Mobile/Aachen": [
+   164.7,
+   528.1,
+   991.6
+  ],
+  "Mobile/Cologne": [
+   133.9,
+   749.3,
+   905.4
+  ],
+  "Mobile/Dusseldorf": [
+   133.0,
+   1099.2,
+   1437.2
+  ],
+  "Mobile/Highway": [
+   170.8,
+   4974.2,
+   6643.8
+  ],
+  "Mobile/Rural": [
+   3523.5,
+   5155.9,
+   5157.8
+  ],
+  "Stationary/A44-Jackerath": [
+   1004.9,
+   4274.2,
+   8052.7
+  ],
+  "Stationary/Aachen-Heinrichsallee": [
+   24.4,
+   69.4,
+   110.9
+  ],
+  "Stationary/Aachen-Monheimsallee": [
+   78.4,
+   158.2,
+   173.3
+  ],
+  "Stationary/Aachen-Ponttor": [
+   43.3,
+   135.7,
+   236.2
+  ],
+  "Stationary/Aachen-Theaterstrasse": [
+   70.8,
+   269.0,
+   327.1
+  ]
+ },
+ "own_cam_check": {
+  "share_msgs_within_3m_of_ego": 0.003,
+  "share_msgs_within_10m": 0.01591,
+  "recordings_with_any_msg_within_3m": 140
+ },
+ "rx_nan_share": 0.04541,
+ "median_dt_per_track_s": {
+  "5": 0.12,
+  "25": 0.2,
+  "50": 0.349,
+  "75": 0.52,
+  "95": 1.179
+ },
+ "track_lengths_msgs": {
+  "0": 1.0,
+  "25": 3.0,
+  "50": 23.0,
+  "75": 70.0,
+  "100": 985.0
+ },
+ "implied_speed_mps": {
+  "50": 29.065,
+  "99": 52.678,
+  "99.9": 63.639,
+  "100": 164.432
+ },
+ "speed_vs_implied_absdiff_p50_p99_mps": [
+  0.39,
+  12.82
+ ],
+ "runtime_s": 209.9
+}

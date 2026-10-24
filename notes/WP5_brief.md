@@ -32,3 +32,10 @@
 - Tools: tools/WP5_S{1,1b,2,3,4,5}_*.py; S6: WP5_S6_dev.py (features, feature set + hyperparameters on validation), WP5_S6_run.py (final run, --smoke = validation stand-in), WP5_S6_report.py (writes reports/M1_V2X.md, reports/WP5_S6.md, results/WP5/s6_acceptance.json).
 - Results: results/WP5/ (splits_*.json, s2_* ... s5_*, s6_dev.json, s6_veremi.json, s6_tampa.json, s6_acceptance.json, s6_tables_veremi.md, s6_tables_tampa.md, s6_l4_model.json; logs/).
 - Reports: reports/WP5_S{1,1b,2,3,4,5,6}.md, reports/M1_V2X.md. Notes: notes/WP5_v2x.md (full log with acceptance rules).
+
+## Update 2026-10-24 (S0c V2AIX, REVIEW)
+- D13 V2AIX downloaded and parsed: 212,303 real CAMs, 1,515 recordings (Mobile + Stationary, 13 location strata), adapter `v2x/v2aix.py` (via adapters.load_v2aix), splits `results/WP5/splits_v2aix.json` (907 / 304 / 304 recordings, by recording, seed 42). Data in ../data_extra/D13_v2aix (non-commercial, cite arXiv 2403.10221, never commit data or per-message files).
+- Receiver = ego GNSS (cohda_mk5 5-10 Hz; oxts_rt3000 ~100 Hz for Sensor-Context). Ego's own CAMs are NOT logged (no V2X self-report witness for WP6). CAM only (no DENM); station type 5 only.
+- S3b inputs: radio range is km-scale (sender-ego p99 4-5 km, max 8 km on highway / A44; 70-270 m at urban stationary sites): calibrate the acceptance range per environment from genuine val data. t = generation time up to a per-recording constant, age_s = relative latency. rx NaN in 4.5% (Mobile V2X-only clips).
+- Real genuine traffic differs from VeReMi: irregular CAM interval (median 0.35 s), pos_sigma 2.8 m, reported vs implied speed |diff| p99 12.9 m/s, a few speed glitches (163.82 m/s). Expect the frozen physics stack to need re-thresholding on V2AIX val.
+- Files: v2x/v2aix.py, tests/v2x/test_v2aix.py, tools/WP5_S0c_{inventory,extract,verify}.py, results/WP5/{s0c_inventory.md,s0c_selection.json,s0c_verify.json,s0c_tables.md,splits_v2aix.json}, reports/WP5_S0c.md. Tests: 386 pass.

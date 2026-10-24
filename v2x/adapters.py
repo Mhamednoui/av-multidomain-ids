@@ -1,7 +1,7 @@
 """Dataset adapters: raw V2X files -> unified message table (v2x/schema.py).
 
 Inputs: D12 VeReMi Extension combined CSV, D14 Tampa CV Pilot BSM sample CSV, D13 V2AIX JSON
-(not available yet: stub). Output: DataFrame with schema.COLUMNS, sorted by (track, t).
+(real ETSI CAM, adapter in v2x/v2aix.py). Output: DataFrame with schema.COLUMNS, sorted by (track, t).
 Notes:
 - VeReMi: pos/spd/acl/hed are 2-D vectors; heading = atan2(hedy, hedx), acl = projection of
   the acceleration vector on the heading. No receiver id / position in the combined CSV.
@@ -115,13 +115,15 @@ def load_tampa_v1(path=TAMPA_CSV, with_age=False) -> pd.DataFrame:
     return out
 
 
-def load_v2aix(path=V2AIX_DIR) -> pd.DataFrame:
-    """V2AIX (real ETSI CAM, RWTH ika). NOT AVAILABLE: access needs the manual request form.
-    When the JSON files exist, implement the mapping CAM -> schema here (referenceposition lat/long
-    -> x, y; speed 0.01 m/s; heading 0.1 deg; yawRate 0.01 deg/s; stationID -> sender)."""
-    raise DataNotAvailableError(
-        "V2AIX (D13) data not available: the user must request access at "
-        "https://v2aix.ika.rwth-aachen.de and download the JSON subset to " + str(path))
+def load_v2aix(path=V2AIX_DIR, recordings=None) -> pd.DataFrame:
+    """V2AIX (real ETSI CAM, RWTH ika; WP5 S0c): all extracted recordings (or the listed recording ids) as one unified table with the ego
+    GNSS position as receiver (rx_x, rx_y). Unit conversions and time handling are documented in v2x/v2aix.py.
+    Raises DataNotAvailableError if nothing is extracted."""
+    from v2x import v2aix
+    root = path / "extracted" / "json"
+    if not root.exists() or not v2aix.list_recordings(root):
+        raise DataNotAvailableError("V2AIX (D13) not extracted under " + str(root))
+    return v2aix.load_all(root, recordings)
 
 
 _TAMPA_CACHE = {}
