@@ -1,0 +1,81 @@
+{
+ "status": "System re-frozen after the M2 addendum (WP6 S5b, 2026-10-25), config version 2; replaces the M2 system (results/WP6/m2_system.pkl) for WP7 S2",
+ "config_version": 2,
+ "how_to_load": "fusion.system.load_system(2) -> {'K': SystemV2, 'C': SystemV2}; SystemV2.run(parts) (fusion/system.py)",
+ "inputs": "per-tick parts per DOMAIN: score (domain combined calibrated tick max), count (samples in the tick), layers / layer_alarm (per-layer scores / own alarms; LiDAR: 4 columns L1, L2a, L2c, L2d), dom_alarm, blame (cross)",
+ "lidar_input": "frozen lidar/domain.py (results/WP3/S9/frozen_lidar), LidarDomain.stream().push(points, pose, t) per scan; tick = floor(scan time); tick value = max over the scans of the second of the combined score and of every per-layer score; own alarm = any scan alarm in the second (combined / per layer)",
+ "v2x_input": "VeReMi-calibrated frozen physics stack for the VeReMi view; on REAL V2X (V2AIX) the on-deployment variant (WP5 S3b thresholds fitted on the deployment's own genuine validation + freshness age check) must replace it and the v2x entry ECDF must be re-fitted on that deployment's clean ticks",
+ "systems": {
+  "K": {
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "domains": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "method": "noisy_or",
+   "threshold": 0.6963391591468857,
+   "weights": null,
+   "density_alpha": {
+    "gps": 0.0,
+    "lidar": 0.0,
+    "can": 0.0,
+    "network": 0.0,
+    "v2x": 1.0,
+    "cross": 0.0
+   },
+   "correlator": {
+    "m": 2,
+    "w": 5,
+    "gap": 15,
+    "corroborate": false,
+    "blame_rule": "majority_decided",
+    "safe_stop_min_domains": 2
+   },
+   "budget_tick": 0.02
+  },
+  "C": {
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "domains": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "method": "noisy_or",
+   "threshold": 0.7031737671081112,
+   "weights": null,
+   "density_alpha": {
+    "can": 0.0,
+    "network": 0.0,
+    "v2x": 1.0,
+    "cross": 0.0
+   },
+   "correlator": {
+    "m": 2,
+    "w": 5,
+    "gap": 15,
+    "corroborate": false,
+    "blame_rule": "majority_decided",
+    "safe_stop_min_domains": 2
+   },
+   "budget_tick": 0.02
+  }
+ },
+ "response_policy": "fusion/correlator.py respond(): WARN every event; DEGRADE blamed domain >= 3 blamed ticks; SAFE_STOP (>= 2 motion-critical domains degraded or a motion-critical degrade lasting >= 30 s) AND >= 2 different domains with their own alarm in the event; V2X / network alone never above DEGRADE; event blame = majority_decided"
+}

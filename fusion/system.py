@@ -20,7 +20,14 @@ from common.calibration import ECDFCalibrator
 from common.metrics import budget_threshold
 
 BUDGET_SYSTEM = 0.02
-ZERO_SHOT = ("max", "noisy_or")
+ZERO_SHOT = ("max", "noisy_or", "wsplit")
+
+
+def wsplit_score(X, w):
+    """Weighted budget split (WP6 S5b): s = 1 - min_d (1 - X_d) / w_d; alarm s >= t <=> some entry's tail (1 - X_d) <= (1 - t) w_d, i.e. entry d gets a share
+    of the budget proportional to w_d (w = 1 for every entry = the max combiner)."""
+    X = np.asarray(X, float)
+    return 1.0 - ((1.0 - X) / np.asarray(w, float)[None, :]).min(axis=1)
 
 
 @dataclass
@@ -39,6 +46,7 @@ class SystemFusion:
     def __init__(self, domains, method="max", budget=BUDGET_SYSTEM):
         self.domains, self.method, self.budget = list(domains), method, budget
         self.cal, self.threshold, self.model = {}, None, None
+        self.weights = None                     # wsplit only (WP6 S5b)
 
     # ---- fitting ------------------------------------------------------------------------------------
     def fit_calibration(self, clean_ticks: dict):
@@ -56,6 +64,8 @@ class SystemFusion:
         return self
 
     def scores(self, X):
+        if self.method == "wsplit":
+            return wsplit_score(X, self.weights)
         return cb._combine(self.method, np.asarray(X, float), self.model)
 
     def fit_threshold(self, clean_scores):
@@ -94,6 +104,7 @@ class SystemFusion:
 
     def to_dict(self):
         return {"domains": self.domains, "method": self.method, "budget": self.budget, "threshold": self.threshold,
+                "weights": None if getattr(self, "weights", None) is None else [float(x) for x in self.weights],
                 "cal": {d: c.to_dict() for d, c in self.cal.items()},
                 "logistic": None if self.model is None else {"coef": self.model.coef_[0].tolist(), "intercept": float(self.model.intercept_[0])}}
 
@@ -172,4 +183,89 @@ def load_m2(path=None):
     import pickle
     from pathlib import Path
     p = Path(path) if path else Path(__file__).resolve().parent.parent / "results" / "WP6" / "m2_system.pkl"
+    return pickle.load(open(p, "rb"))
+
+
+# ---------------------------------------------------------------------------------------------------- WP6 S5b / M2 addendum (config version 2)
+CONFIG_VERSION = 2
+
+
+def entry_domain(entry):
+    """Entry name -> domain ("lidar.L2c" -> "lidar"); a domain may feed several entries (per-layer LiDAR Evidence)."""
+    return entry.split(".")[0]
+
+
+def entry_part(parts, entry):
+    """Per-tick view of one entry from the composite / runtime parts: a whole domain ("lidar") or one layer of it ("lidar.L2c" = column j of the domain's
+    layers, own alarm = that layer's own alarm)."""
+    if "." not in entry:
+        return parts[entry]
+    d, lay = entry.split(".")
+    p = parts[d]
+    j = SystemV2.LIDAR_LAYERS.index(lay)
+    la = np.asarray(p["layer_alarm"], bool)
+    return {"score": np.asarray(p["layers"])[:, j], "count": p.get("count", np.ones(len(p["score"]))), "dom_alarm": la[:, j], "layer_alarm": la[:, j:j + 1],
+            "blame": None, "present": p.get("present")}
+
+
+class SystemV2(M2System):
+    """The re-frozen system after the M2 addendum (WP6 S5b, config version 2): frozen LiDAR domain (lidar/domain.py; entry = the combined LiDAR score or its
+    four per-layer Evidence, chosen on validation), label-free budget allocation (noisy_or / max / weighted split, chosen on validation), event blame by decided
+    majority and SAFE_STOP only with >= 2 corroborating domains (both inside the correlator). Blame, corroboration and response work on DOMAINS
+    (entry_domain), so the LiDAR layers count as one domain."""
+    LIDAR_LAYERS = ("L1", "L2a", "L2c", "L2d")
+
+    def __init__(self, entries, density, fusion, correlator, meta=None):
+        super().__init__(entries, density, fusion, correlator, meta)
+        self.domains = list(dict.fromkeys(entry_domain(e) for e in self.entries))
+        self.config_version = CONFIG_VERSION
+
+    def views(self, parts):
+        return {e: entry_part(parts, e) for e in self.entries}
+
+    def matrix(self, parts):
+        v = self.views(parts)
+        raw = {e: self.density[e].transform(v[e]["score"], v[e].get("count", np.ones(len(v[e]["score"])))) for e in self.entries}
+        return self.fusion.matrix(raw)
+
+    def own_by_domain(self, parts):
+        """(n, len(domains)) own alarm per DOMAIN (any of its entries)."""
+        v = self.views(parts)
+        own_e = np.column_stack([np.asarray(v[e]["dom_alarm"], bool) for e in self.entries])
+        return np.column_stack([own_e[:, [i for i, e in enumerate(self.entries) if entry_domain(e) == d]].any(axis=1) for d in self.domains]), own_e
+
+    def run(self, parts, layer_names=None, explain=True):
+        """-> dict(X, score, alarm, own (per domain), blame, events) for one drive. parts: domain -> per-tick dict (score, count, layers, dom_alarm, layer_alarm,
+        blame for cross); the LiDAR part must carry the 4 per-layer columns (L1, L2a, L2c, L2d) in layers / layer_alarm when the entries are per layer."""
+        from fusion import correlator as CR
+        X = self.matrix(parts)
+        s = self.fusion.scores(X)
+        alarm = s >= self.fusion.threshold
+        own, own_e = self.own_by_domain(parts)
+        cr = parts.get("cross")
+        blame = CR.tick_blame([entry_domain(e) for e in self.entries], X, own_e, None if cr is None else cr.get("blame"), None if cr is None else cr["dom_alarm"])
+        reasons = None
+        if explain:
+            v = self.views(parts)
+            reasons = np.full(len(s), "", object)
+            ln = layer_names or {e: [f"{e}.layer{j}" for j in range(np.asarray(v[e]["layer_alarm"]).reshape(len(s), -1).shape[1])] for e in self.entries}
+            for i in np.flatnonzero(alarm):
+                reasons[i] = self.fusion.explain(i, X[i], v, ln, s[i]).reason
+        ev = self.correlator.events(alarm, own, self.domains, blame, reasons)
+        return {"X": X, "score": s, "alarm": alarm, "own": own, "blame": blame, "events": ev}
+
+    def to_dict(self):
+        d = super().to_dict()
+        d.update(config_version=self.config_version, domains=self.domains)
+        return d
+
+
+def load_system(version=2, path=None):
+    """version 1 = the M2 system (load_m2); version 2 = the system re-frozen after the M2 addendum (WP6 S5b): {"K": SystemV2, "C": SystemV2}.
+    Config summary: results/WP6/system_v2.json."""
+    import pickle
+    from pathlib import Path
+    if version == 1:
+        return load_m2(path)
+    p = Path(path) if path else Path(__file__).resolve().parent.parent / "results" / "WP6" / "system_v2.pkl"
     return pickle.load(open(p, "rb"))

@@ -12,7 +12,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP3 LiDAR | done (M1-LiDAR partial) | APPROVED | - | 2026-10-25 | M1-LiDAR closed PARTIAL, see reports/M1_LiDAR.md; frozen lidar/domain.py |
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | done (M1-V2X partial + V2AIX addendum) | APPROVED | - | 2026-10-24 | S3b APPROVED partial: real-CAM FA 92-95% with VeReMi calibration, ~1% recalibrated |
-| WP6 Cross-domain | S5b | IN PROGRESS | worker opus (medium, T4) | 2026-10-25 | M2 addendum with frozen LiDAR |
+| WP6 Cross-domain | S5b | REVIEW | worker opus (medium, T4) | 2026-10-25 | M2 addendum NOT MET (A4, A5, A7 met); system v2 frozen for WP7 S2; reports/WP6_S5b.md |
 | WP7 System | S2 | TODO (waits for M1-LiDAR + M2 addendum) | - | 2026-10-24 | S1, S1b, S3 APPROVED; regenerate RESULTS_v3.md after every milestone |
 
 ## Overall progress (orchestrator updates this at every approval)

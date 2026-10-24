@@ -11,6 +11,9 @@ never exceed DEGRADE. Recommendations only: the evaluation does not feed them ba
 Copied logic (re-written, vectorised): codes_v2/temporal/temporal_correlator.py (sliding-window escalation: rate of attack ticks in the last `window` alerts, persistent
 domain = most frequent triggering domain) and codes_v2/response/response_module.py (level -> log / warning / alert record / isolate flag). v2 windowing/ (sample
 buffering before the detectors) is retired: v3 domains window their own samples, the system runs on a 1 Hz clock.
+WP6 S5b (M2 addendum, config version 2): blame_rule "majority_all" / "majority_decided" (event blame = a decided domain with > 50% of the event's alarm
+ticks / of its decided alarm ticks (>= 2), else "undecided"; M2 = "plurality") and safe_stop_min_domains = 2 (SAFE_STOP only when >= 2 different domains raised
+their own alarm inside the event, else capped at DEGRADE; M2 = 1). Defaults reproduce M2 exactly (old pickles have no such attributes: getattr defaults).
 References: ARCHITECTURE.md sections 2-4; WP7 S1b (network Evidence is final only when its 5-minute bin closes: up to ~5 min late in streaming).
 """
 from dataclasses import dataclass, field
@@ -68,10 +71,33 @@ def tick_blame(names, X, own, cross_blame=None, cross_alarm=None):
     return out
 
 
+BLAME_RULES = ("plurality", "majority_all", "majority_decided")
+
+
+def event_blame(blame_counts, n_ticks, rule="plurality"):
+    """Blamed domain of one event from its tick blame counts (domain -> alarm ticks, incl. "undecided")."""
+    dec = {d: c for d, c in blame_counts.items() if d != "undecided"}
+    if not dec:
+        return "undecided"
+    best = max(sorted(dec), key=lambda d: dec[d])
+    if rule == "plurality":
+        return best
+    if rule == "majority_all":
+        return best if dec[best] > 0.5 * n_ticks else "undecided"
+    if rule == "majority_decided":
+        nd = sum(dec.values())
+        return best if nd >= 2 and dec[best] > 0.5 * nd else "undecided"
+    raise ValueError(rule)
+
+
 class TemporalCorrelator:
-    def __init__(self, m=2, w=3, gap=5, corroborate=False):
-        assert m >= 1 and w >= m and gap >= 1
+    def __init__(self, m=2, w=3, gap=5, corroborate=False, blame_rule="plurality", safe_stop_min_domains=1):
+        assert m >= 1 and w >= m and gap >= 1 and blame_rule in BLAME_RULES
         self.m, self.w, self.gap, self.corroborate = int(m), int(w), int(gap), bool(corroborate)
+        self.blame_rule, self.safe_stop_min_domains = blame_rule, int(safe_stop_min_domains)
+
+    def rules(self):
+        return getattr(self, "blame_rule", "plurality"), getattr(self, "safe_stop_min_domains", 1)
 
     def key(self):
         return f"m{self.m}w{self.w}_g{self.gap}_c{int(self.corroborate)}"
@@ -124,9 +150,9 @@ class TemporalCorrelator:
             if blame is not None:
                 u, c = np.unique(np.asarray(blame, object)[ticks].astype(str), return_counts=True)
                 bc = {str(a): int(b) for a, b in zip(u, c)}
-            dec = {d: c for d, c in bc.items() if d != "undecided"}
-            blamed = max(sorted(dec), key=lambda d: dec[d]) if dec else "undecided"
-            resp, degraded = respond(bc, blamed, int(ticks[-1]) - s + 1)
+            rule, min_dom = self.rules()
+            blamed = event_blame(bc, len(ticks), rule)
+            resp, degraded = respond(bc, blamed, int(ticks[-1]) - s + 1, len(doms) if own is not None and names is not None else None, min_dom)
             ex = f"alert t={s}..{int(ticks[-1])} ({len(ticks)} alarm ticks{', corroborated' if cor else ''}); domains with own alarms: {', '.join(doms) or 'none'}; blamed: {blamed}"
             if reasons is not None:
                 ex += f"; first alarm: {reasons[int(ticks[0])]}"
@@ -139,14 +165,17 @@ class TemporalCorrelator:
         return int(np.asarray(alarm, bool).sum() - sum(len(t) for t, s, _ in self.episodes(alarm, own) if s is not None))
 
     def to_dict(self):
-        return {"m": self.m, "w": self.w, "gap": self.gap, "corroborate": self.corroborate}
+        rule, min_dom = self.rules()
+        return {"m": self.m, "w": self.w, "gap": self.gap, "corroborate": self.corroborate, "blame_rule": rule, "safe_stop_min_domains": min_dom}
 
 
-def respond(blame_counts, blamed, duration):
-    """Response level of one event from its blame counts (domain -> blamed alarm ticks), its blamed domain and its duration (ticks)."""
+def respond(blame_counts, blamed, duration, n_domains=None, min_domains=1):
+    """Response level of one event from its blame counts (domain -> blamed alarm ticks), its blamed domain, its duration (ticks) and the number of
+    different domains with their own alarm inside it (SAFE_STOP needs >= min_domains of them; min_domains = 1 is the M2 rule)."""
     degraded = sorted(d for d, c in blame_counts.items() if d != "undecided" and c >= DEGRADE_TICKS)
     mc = [d for d in degraded if d in MOTION_CRITICAL]
-    if len(mc) >= 2 or (blamed in mc and duration >= SAFE_STOP_DURATION):
+    corroborated = min_domains <= 1 or (n_domains is not None and n_domains >= min_domains)
+    if (len(mc) >= 2 or (blamed in mc and duration >= SAFE_STOP_DURATION)) and corroborated:
         return "SAFE_STOP", degraded
     if blamed in degraded:
         return "DEGRADE", degraded

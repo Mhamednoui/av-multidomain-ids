@@ -1,0 +1,64 @@
+{
+ "note": "post-test diagnostic, no choice depends on it",
+ "K": {
+  "clean_events": 219,
+  "safe_stop_events": 1,
+  "safe_stop_blamed": {
+   "can": 1
+  },
+  "safe_stop_domains": {
+   "gps+can+network+v2x+cross": 1
+  },
+  "safe_stop_degraded": {
+   "can": 1
+  },
+  "safe_stop_median_duration_s": 37.0,
+  "event_blamed": {
+   "undecided": 69,
+   "v2x": 14,
+   "can": 60,
+   "lidar": 5,
+   "gps": 42,
+   "network": 29
+  },
+  "clean_own_alarm_tick_rate": {
+   "gps": 0.017752664011924095,
+   "lidar": 0.04520477853662877,
+   "can": 0.02912059798447198,
+   "network": 0.044070209783987006,
+   "v2x": 0.05788525283086027,
+   "cross": 0.011701630664501346
+  }
+ },
+ "C": {
+  "clean_events": 956,
+  "safe_stop_events": 35,
+  "safe_stop_blamed": {
+   "can": 35
+  },
+  "safe_stop_domains": {
+   "can+v2x+cross": 12,
+   "can+v2x": 16,
+   "can+cross": 6,
+   "can+network+v2x": 1
+  },
+  "safe_stop_degraded": {
+   "can+v2x": 19,
+   "can": 15,
+   "can+network": 1
+  },
+  "safe_stop_median_duration_s": 44.0,
+  "event_blamed": {
+   "can": 468,
+   "v2x": 224,
+   "undecided": 134,
+   "network": 130
+  },
+  "clean_own_alarm_tick_rate": {
+   "can": 0.03635833333333333,
+   "network": 0.05695,
+   "v2x": 0.07455833333333334,
+   "cross": 0.011725
+  }
+ }
+}

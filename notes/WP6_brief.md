@@ -1,4 +1,4 @@
-# WP6 cross-domain brief (state at end of S5 / M2, 2026-10-24: S5 in REVIEW)
+# WP6 cross-domain brief (state at end of S5b / M2 addendum, 2026-10-25: S5b in REVIEW)
 
 ## Current state
 - S1 APPROVED with miss (sigma honesty). S2 "which domain lies" done, report reports/WP6_S2.md, verdict NOT MET
@@ -41,6 +41,13 @@
   (tick 68.7%), held-out 58.8%; blame 86.7% correct / 13.2% wrong; safe-stop C 1.23/h; 100% events explained. Cross adds +24.7 pts (K vehicle families), +51 (C).
   FROZEN M2: results/WP6/m2_system.pkl (+ .json), fusion.system.load_m2(). Open: blame by decided majority, safe-stop corroboration, M2 addendum after M1-LiDAR.
 
+- S5b M2 addendum (REVIEW, NOT MET 3/7 + tests): reports/WP6_S5b.md, reports/M2.md "Addendum 2026-10-25", results/WP6/s5b_* (tables s5b_tables.md). Frozen LiDAR domain
+  (combined entry, ECDF pool = val + 13 train drives' OOF clean ticks [round 2, labelled]), noisy_or (max / weighted split tested, not chosen), correlator m2w5_g15_c0,
+  blame majority_decided, SAFE_STOP needs >= 2 domains. NEW test composites seed [42, 66, 5, ord(fam)] (4th fusion test scoring). Test: FA K 3.50 / C 7.41%, events/h
+  17.5 / 28.7, K det 57.6% (shared-with-M2 families 62.4 vs 62.3), held-out 60.5% MET, blame 88.0 / 6.2% MET, SAFE_STOP C 1.05/h, 100% explained.
+  Coupling (GPS -> OXTS pose -> L2c/L2d): accel_drift per-scan LiDAR alarms 1.6 -> 13.6% (L2d), blame on lidar 0% at system level (8-45 s drives).
+  SYSTEM V2 for WP7: fusion.system.load_system(2) (results/WP6/system_v2.pkl git-ignored; rebuild: tools/WP6_S5b_lidar.py build, tools/WP6_S5b_dev.py).
+
 ## Binding decisions / conventions
 - S5 decisions applied: label-free combiner; novelty layer dropped; LiDAR L1 only (INTERIM); CAN glitch filter dropped (s5_cross_comma rebuilt without it).
 - comma's two CAN speed messages = ONE domain; blame at domain level (supervisor 2026-10-22).
@@ -50,6 +57,8 @@
 - Acceptance rules written in notes/WP6_crossdomain.md before results; test once per step.
 
 ## Pitfalls
+- KITTI val pools are ~30-50 clean ticks: entry ECDFs top out near 0.97, so max / split combiners can never fire on gps / lidar / cross_kitti (S5b); LiDAR fixed with train-drive OOF ticks, gps / cross not.
+- LiDAR own alarm at tick level = any scan alarm in the second (~4.5% of clean ticks); V2X own alarm 7.5% of clean C ticks: 'two domains' corroboration is cheap.
 - KITTI val = 3 drives, KITTI drives 5-90 s: short runs, noisy val statistics, val thresholds do not transfer (FA 4.4%).
 - comma: old routes duplicate gyro timestamps; gyro bias drifts per route (yaw edge); per-setup speed sigma ~0.08 m/s
   makes a 0.1-0.2% CAN scale difference a visible bias.
@@ -59,6 +68,8 @@
 - comma: "|" in route names -> "_"; read arrays with np.load(allow_pickle=False), python -I for the fetcher.
 
 ## File map
+- S5b: tools/WP6_S5b_{lidar,coupling,lib,dev,test,tables,diag}.py; fusion/system.py SystemV2 / load_system / wsplit_score / entry_part; fusion/correlator.py event_blame,
+  blame_rule, safe_stop_min_domains; tests/fusion/test_m2b.py; cache s5b_lidar.pkl, s5b_coupling/ (WP6 cache ~0.17 GB).
 - S5: fusion/correlator.py, fusion/system.py (DensityTransform, M2System, load_m2), composite.py (count, grp); tools/WP6_S5_{streams,lib,dev,test,diag,tables}.py;
   tests/fusion/test_correlator.py, test_m2.py; cache s5_{cross_comma,network,v2x,lidar}.pkl (WP6 cache total 167 MB).
 - S3: fusion/streams.py, composite.py, system.py; tools/WP6_S3_{crosschoice,streams,dev,test,tables,lib}.py; tests/fusion/test_fusion.py;

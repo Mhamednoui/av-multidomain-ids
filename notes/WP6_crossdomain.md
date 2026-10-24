@@ -563,3 +563,96 @@ bootstrap over vehicle groups (1000).
   120 s clean composites contain an alert event (K 16% of 16 s composites), so C detection (96%) is not informative. Clean C events: can 577 + 41 safe-stop
   (ROAD CAN alarms lasting >= 30 s). Blame: comma GNSS attacks are blamed on can / v2x (0% correct): S2b domain-level blame leaves them undecided and the event rule
   "most frequent DECIDED tick blame" lets one noisy decided tick decide. KITTI cross-only families 4-50% correct for the same reason.
+
+## 2026-10-25 S5b start: M2 addendum with the frozen LiDAR domain (plan + acceptance rule, written BEFORE any S5b result)
+Binding (ORCHESTRATOR 2026-10-24 "WP6 decisions" after M2, 2026-10-24 "WP5 decisions", 2026-10-25 "WP3/WP6 decisions"; assignment 2026-10-25).
+Unchanged from M2 (fixed a priori, not re-chosen): GPS / CAN / NET / V2X / cross packs (s3_gps, s3_can, s5_network, s5_v2x, s3_cross_kitti, s5_cross_comma), LOGO system
+threshold at the 2% tick budget, density alpha_v2x = 1, alpha_net = 0, 3 group folds over validation (tools/WP6_S5_lib.make_folds, same seed), the S5 correlator grid
+and its rule, DEGRADE rule (blamed domain >= 3 blamed ticks), label-free combiners only. V2X: composites use the VeReMi view -> the frozen VeReMi physics stack stays;
+the on-deployment V2X variant (WP5 S3b thresholds + freshness) applies only where real V2X is the source (V2AIX: WP7), documented for WP7, not used here.
+**(1) LiDAR = frozen lidar/domain.py** (results/WP3/S9/frozen_lidar: max of 4 layer ranks L1, L2a intensity, L2c, L2d; 1% scan budget). Scores are the stored raw layer
+scores of WP3 S9 (validation: dev_frames.pkl = val attacks scored with layers fitted on the 13 train drives + ref = out-of-fold clean scans of the 16 train+val drives;
+test: final_frames_s9.pkl clean / att / ep / epw, frozen layers; the freeze check showed replay = stored scores) pushed through the frozen Stack (stat, ECDF score,
+alarm = stat >= 0.99680) and the frozen per-layer calibrators / thresholds (layer score = calibrator(raw), own alarm = score >= layer threshold). A replay check of
+5 test scans through LidarDomain.score_scan is asserted equal before use. Ticks: scan time from the OXTS timestamps, tick = floor(t); tick value = max over the
+scans of the second (per layer and combined), own alarm = any scan alarm in the second (frozen Evidence semantics; not re-thresholded).
+Pack s5b_lidar (val drives 0011 / 0027 / 0035, test drives 7): clean series per drive; per-scan attacks (every 3rd scan attacked, the WP3 S4 design): ph_replace_near,
+ph_budget_near, ph_replace_far, ph_budget_far, PointDrop, IntensitySpoof (single-return, headline families) and cmp_boxcloud, cmp_mradd_near, cmp_mradd_far
+(physically impossible / crude: comparison rows only, like GhostCluster), 4 series per drive and kind, onset tick ~ U[0, n/2) (rng [SEED, 66, 30, drive]), after the
+onset the attacked scans replace their clean scans; persistent 30-scan episodes: world-fixed epW_* (val + test) and sensor-fixed ep_* (test only), one series per
+episode, label = the ticks holding an episode scan. Validation LiDAR clean ticks come from the out-of-fold reference (the frozen Stack threshold was fitted on the 16
+drives incl. the val drives: LiDAR own alarms on val are slightly optimistic; stated).
+LiDAR entry variants (VALIDATION choice): "combined" (one entry = the domain's combined score) or "layers" (four entries lidar.L1 / L2a / L2c / L2d = the per-layer
+Evidence; they count as ONE domain "lidar" for blame, corroboration, response and ablation).
+**(4) System budget allocation, label-free** (combiner candidates): noisy_or (M2), max (= equal split of the budget over entries), wsplit = weighted split:
+s = 1 - min_d (1 - X_d) / w_d, w_d = 1 / clip(rho_d, 0.5, 4), rho_d = out-of-fold clean-tick exceedance of entry d at its calibrated 0.99 level / 0.01 over the 3
+validation folds (clean ticks only, no attack label; per family K / C). Threshold always LOGO 2%.
+Calibration grid = lidar entry {combined, layers} x combiner {noisy_or, max, wsplit} (6). Rule (S5 rule): nested held-out clean tick FA <= 2.5% for K AND C, then the
+highest pooled (K + C) held-out mean tick detection over the selection families; ties -> simpler (combined < layers; noisy_or < max < wsplit); none -> lowest
+max(FA_K, FA_C). Selection families = single-domain families minus S4 held-out types, minus comparison rows (GhostCluster, cmp_*), minus LiDAR episode families.
+Then the S5 correlator grid with the S5 rule on the chosen calibration (events / clean hour <= 10 K and C, then highest pooled event detection, ties simpler).
+**(2) Event blame by DECIDED MAJORITY** (validation choice between two majority readings; tick blame unchanged, LiDAR layers -> "lidar"):
+ majority_all = the decided domain with > 50% of the event's alarm ticks, else "undecided"; majority_decided = > 50% of the event's decided alarm ticks and >= 2 such
+ ticks, else "undecided". Rule: candidates with validation wrong blame <= 10% for K AND C (detected selection-family events) -> highest mean correct (K, C); none ->
+ lowest max wrong; ties -> majority_all. The M2 plurality rule is reported as a reference row only.
+**(3) SAFE_STOP (a priori safety rule)**: SAFE_STOP only if the M2 condition holds AND >= 2 different domains raised their own alarm inside the event (cross counts as
+ a domain; LiDAR layers count as one); otherwise the event is capped at DEGRADE (if the blamed domain is degraded) or WARN.
+**(6) COUPLING TEST (test only, reported, not judged; no choice)**: L2c / L2d move the previous scan with the OXTS ego pose. For every K test composite of a GPS family
+ (drift, accel_drift, doppler_spoof, meaconing) and of gps_can, two variants: (i) synced control: the LiDAR part = clean scans of the SAME drive at the SAME times as
+ the GPS run (true pose); (ii) coupled: same scans, ego pose position shifted by that run's GPS attack offset (worst case: the INS position follows the spoofed GNSS 1:1,
+ yaw unchanged; offsets regenerated exactly with gps.stream.build_kitti, receiver noise removed; gps_can = run minus its clean r0 run), L2c / L2d recomputed from the
+ raw scans (L1 / L2a do not use the pose). Reported: LiDAR own-alarm share of post-onset ticks and per-scan alarm rate (i) vs (ii), event detection, blame correct /
+ wrong / undecided, share of detected events blamed on lidar, response levels incl. SAFE_STOP. A zero-offset recompute is asserted equal to the stored L2c / L2d.
+**(7) NEW test composites**: new random pairing, seed [SEED, 66, 5, ord(family)] (SEED = 42), K 2000 clean + 300 per family, C 1000 clean + 300 per family. This is the
+ 4th scoring of fusion test data (S3, S4, S5 before); every domain test set was scored before (KITTI LiDAR test drives: 8th exposure counting WP3 S1-S9). ONE test run.
+**Acceptance (test, judged once; same bounds as M2)**
+- A1 raw clean tick FA <= 3.0% (K and C). A2 alert events per clean hour <= 10 (K and C).
+- A3 K mean event detection over the single-domain families (comparison rows and LiDAR episode families excluded; the 6 single-return per-scan LiDAR families included) >= 70%.
+- A4 K mean event detection over the S4 held-out types >= 60%.
+- A5 K blame (decided majority rule chosen on val): correct >= 75% and wrong <= 10% of detected single-domain K events.
+- A6 SAFE_STOP recommendations per clean hour <= 1 (K and C). A7 100% of alert events explained. A8 unit tests pass.
+Reported, not judged, side by side with M2 (s5_test.json): CIs (cluster bootstrap over vehicle groups, 1000), WARN / DEGRADE / SAFE_STOP per clean hour, delays and
+detection per family and attacked domain, A3 on the M2-shared family set (non-LiDAR families), LiDAR per-scan + episode rows, C detection / blame, coordinated scenarios,
+ablation (each domain removed incl. LiDAR on/off, threshold from validation; correlator off; M2 blame rule and M2 SAFE_STOP rule on the same alarms), coupling test.
+
+## 2026-10-25 S5b validation round 1 (results/WP6/s5b_dev.json round 1, logs/s5b_dev.log; no test data)
+- LiDAR pack s5b_lidar: replay check of 5 raw test scans through LidarDomain.stream() = vectorised scores (max diff 0.0, alarms equal). val 124 series / 2417 ticks, test 427 / 9821.
+- Calibration grid (nested held-out): combined|noisy_or K FA 2.09% C 2.04% pooled det 79.1%; layers|noisy_or 2.46% / 2.04%, 75.3%; max rows 1.69 / 1.98%, 59.4% (combined and
+  layers IDENTICAL); wsplit 1.70 / 3.26% (C fails), 67.1%. Chosen round 1: combined + noisy_or. Correlator m2w5_g15_c0 (corroboration off), val 8.21 / 7.50 events/h.
+  Blame: plurality K 93.7 / 6.0% (correct / wrong), majority_all 92.7 / 5.2%, majority_decided 92.7 / 5.3%; C wrong 5.3 / 3.3 / 4.3% -> majority_decided chosen by the rule
+  (higher mean correct, both qualify).
+- PROBLEM found (validation): the LiDAR entry ECDF is fitted on the clean ticks of the 1-2 KITTI val drives of the calibration folds (~30-50 ticks), so the calibrated LiDAR
+  score tops out near 1 - 1/n = 0.97: under max / wsplit LiDAR can never reach the system threshold (hence max rows identical for both variants; wsplit rho(lidar) = 0 ->
+  clipped). Same resolution limit exists for gps / cross_kitti (fixed a priori, unchanged).
+## 2026-10-25 S5b round 2 (POST-HOC, labelled; written BEFORE running it): LiDAR calibration pool
+- Candidate added: lidar_cal = "trainval": the LiDAR entry ECDF(s) are fitted on the clean ticks of the fold val drives PLUS the 13 TRAIN drives' out-of-fold clean reference
+  scans (WP3 S9 ref frame, 2,575 scans, ~260 ticks; same frozen Stack; train drives never enter any composite or fold). Round-1 configs = lidar_cal "val".
+- Grid = lidar_cal {val, trainval} x entry {combined, layers} x {noisy_or, max, wsplit} (12); same selection rule; ties -> simpler (val < trainval, then as before).
+  Correlator and blame re-chosen with the same rules on the chosen calibration. Round-1 numbers stay reported.
+## 2026-10-25 S5b round 2 results and FROZEN choice (results/WP6/s5b_dev.json; round 1 kept as s5b_dev_round1.json; logs s5b_dev.log / s5b_dev_round1.log)
+- trainval rows: combined|noisy_or K FA 2.12% C 2.04% pooled det 79.6% (val 79.1); layers|noisy_or 2.28 / 2.04%, 78.0%; max / wsplit unchanged (LiDAR still never the max
+  at the threshold; wsplit C 3.26% fails). CHOSEN: LiDAR entry = combined frozen domain score, LiDAR ECDF pool = trainval, noisy_or, LOGO (8 of 12 qualify).
+- Correlator re-chosen: m2w5_g15_c0 (2 alarms in 5 s, gap 15 s, corroboration OFF; M2 had corroboration on), val events/h K 8.42 / C 7.50, pooled event det 68.1%.
+- Blame: plurality (reference) K 94.2 / 5.6% correct / wrong; majority_all 93.1 / 4.4%; majority_decided 93.1 / 4.4% (C wrong 3.3 vs 4.3%); CHOSEN majority_decided
+  (both qualify, higher mean correct by 0.02 pts). SAFE_STOP needs >= 2 domains (a priori): val clean SAFE_STOP K 0.0 / C 0.43 per hour.
+- Val held-out of the frozen system: K FA 2.12%, 8.42 events/h, event det seen 71.8%, LiDAR families 11.0% (tick level: ph_replace_near 53%, IntensitySpoof 59%,
+  PointDrop 27%, far / budget 12-19% = near the composite chance level). Ablation (val, event det over selection families): without lidar 54.5%, without v2x 24.1%.
+- Frozen: results/WP6/system_v2.pkl (+ .json, fusion.system.load_system(2)), s5b_frozen.pkl (ablation thresholds, test composite spec seed [42, 66, 5, ord(fam)]).
+- Coupling cache built (tools/WP6_S5b_coupling.py, logs/s5b_coupling.log): 350 test GPS attack runs (70 per family incl. gps_can); offsets regenerated exactly (asserted
+  against the WP1 stream); zero-offset recompute = stored L2c / L2d (asserted, 8 scans per drive). Scores not looked at before the test run.
+
+## 2026-10-25 S5b TEST run (once) and verdict (s5b_test.json, s5b_acceptance.json, s5b_tables.md; post-test diagnostic s5b_diag.json; logs s5b_test.log)
+- New composites (seed [42, 66, 5, ord(fam)]): K 22,100 composites (12.49 clean hours), C 15,400 (33.33 clean hours). 4th scoring of fusion test data.
+- A1 FA tick K 3.50% [2.2, 4.5], C 7.41% [6.6, 9.2] NOT MET (M2 2.08 / 6.70). A2 events / clean hour K 17.5 [7.8, 25.3], C 28.7 [26.5, 32.3] NOT MET (M2 25.4 / 31.0).
+  A3 K event det 57.6% [45.1, 69.5] NOT MET (M2 60.2); on the 49 M2-shared non-LiDAR families 62.4% (M2 62.3%). A4 held-out 60.5% [48.0, 72.6] MET (M2 58.8).
+  A5 blame 88.0 / 6.2 / 5.8% correct / wrong / undecided MET (M2 86.7 / 13.2). A6 SAFE_STOP / clean hour K 0.08, C 1.05 NOT MET (M2 0.0 / 1.23).
+  A7 10,725 / 10,725 and 17,862 / 17,862 MET. A8 tests 476 passed (1 skip = RESULTS_v3.md staleness check, orchestrator regenerates it).
+- Same alarms, M2 rules: plurality blame K 90.1 / 9.8%; one-domain SAFE_STOP C 1.17 / h; both 1.20 / h; corroboration-on correlator K 29.0 events / h.
+- LiDAR (frozen) at event level: IntensitySpoof 44.3, ph_replace_near 27.7, PointDrop 17.3, far / budget 5.7-10.3, episodes 1.0-8.3% (chance: 10.4% of clean K composites
+  hold an event). Without lidar K 62.3% at FA 4.1% (M2: 68.5%).
+- Coupling: per-scan LiDAR alarm after onset, true -> coupled pose: accel_drift 1.6 -> 13.6% (L2d 0.3 -> 13.7%), doppler 1.4 -> 2.7%, drift 1.4 -> 2.2%, meaconing 1.1 -> 1.3%,
+  gps_can 1.4 -> 1.5%. Composites: LiDAR own alarm post-onset 5.1 -> 9.7% (accel_drift 6.2 -> 20.0%); blamed on lidar 0 -> 0%; correct blame 88-93%; SAFE_STOP share
+  unchanged. gps_can: 55% blamed on lidar in BOTH variants (S2 predicted break, not coupling).
+- Diagnostic (no choice): the 35 clean C SAFE_STOPs are all blamed on can (median 44 s); the second own-alarm domain is v2x in 29, cross in 18; v2x own alarm on 7.5% of
+  clean C ticks.
+- Report reports/WP6_S5b.md; M2 addendum section in reports/M2.md. System v2 frozen: results/WP6/system_v2.pkl / .json (fusion.system.load_system(2)).

@@ -1,0 +1,100 @@
+{
+ "A1_raw_tick_fa": {
+  "K": 0.035015906208983115,
+  "C": 0.07413333333333333,
+  "M2_K": 0.02079382579933848,
+  "M2_C": 0.067025,
+  "K_ci": [
+   0.022164186100698917,
+   0.04479764699264509
+  ],
+  "C_ci": [
+   0.06580004591368228,
+   0.09205816554809844
+  ],
+  "rule": "<= 0.030 (K and C)",
+  "met": false
+ },
+ "A2_events_per_clean_hour": {
+  "K": 17.53909812907388,
+  "C": 28.68,
+  "M2_K": 25.402425578831313,
+  "M2_C": 30.959999999999997,
+  "K_ci": [
+   7.7790578995226864,
+   25.33646926813824
+  ],
+  "C_ci": [
+   26.547169811320753,
+   32.29525862068966
+  ],
+  "rule": "<= 10 (K and C)",
+  "met": false
+ },
+ "A3_K_event_detection_single": {
+  "value": 0.5761818181818182,
+  "M2": 0.602483660130719,
+  "m2_shared_families": 0.6240136054421769,
+  "M2_m2_shared_families": 0.623061224489796,
+  "ci": [
+   0.4507524133315814,
+   0.6951865891464516
+  ],
+  "rule": ">= 0.70 (single-domain families; comparison rows and LiDAR episodes excluded)",
+  "met": false
+ },
+ "A4_K_heldout_event_detection": {
+  "value": 0.6052777777777778,
+  "M2": 0.5875,
+  "ci": [
+   0.47984970287556256,
+   0.7264795575186883
+  ],
+  "rule": ">= 0.60",
+  "met": true
+ },
+ "A5_K_blame": {
+  "correct": 0.8795624276848638,
+  "wrong": 0.062164720732092144,
+  "M2_correct": 0.8672163159036668,
+  "M2_wrong": 0.13180733347797788,
+  "value": {
+   "correct": 0.8795624276848638,
+   "wrong": 0.062164720732092144,
+   "undecided": 0.05827285158304407,
+   "n_detected": 9507
+  },
+  "rule": "correct >= 0.75 and wrong <= 0.10 (detected single-domain K events, pooled; decided-majority event blame)",
+  "met": true
+ },
+ "A6_safe_stop_per_clean_hour": {
+  "K": 0.0800872060688305,
+  "C": 1.0499999999999998,
+  "M2_K": 0.0,
+  "M2_C": 1.23,
+  "rule": "<= 1 (K and C; SAFE_STOP needs >= 2 corroborating domains)",
+  "met": false
+ },
+ "A7_explained": {
+  "K_share": 1.0,
+  "C_share": 1.0,
+  "K": [
+   10725,
+   10725
+  ],
+  "C": [
+   17862,
+   17862
+  ],
+  "rule": "100% of alert events",
+  "met": true
+ },
+ "coupling_test": {
+  "lidar_own_alarm_post_onset_control": 0.0507258217804515,
+  "lidar_own_alarm_post_onset_coupled": 0.09735797796519859,
+  "blamed_lidar_control": 0.0,
+  "blamed_lidar_coupled": 0.0,
+  "rule": "reported, not judged (GPS families, mean over drift / accel_drift / doppler_spoof / meaconing)",
+  "verdict": "reported"
+ }
+}
