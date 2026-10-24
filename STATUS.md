@@ -9,7 +9,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP0 Foundation | S4 | APPROVED | worker sonnet | 2026-10-21 | combiner noisy_or log form (rank-equivalent, no saturation) |
 | WP1 GPS | done (M1-GPS partial) | APPROVED | - | 2026-10-21 | M1-GPS closed PARTIAL, see reports/M1_GPS.md; frozen output gps/domain.py |
 | WP2 CAN | done (M1-CAN partial) | APPROVED | - | 2026-10-22 | M1-CAN closed PARTIAL, see reports/M1_CAN.md; frozen output can/domain.py |
-| WP3 LiDAR | S5 (S6 separate) | REVIEW | worker sonnet (medium, T2) | 2026-10-24 | S7 APPROVED (L3 dropped, L4 optional seen-family); then S9 -> M1-LiDAR |
+| WP3 LiDAR | S9 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-24 | S5, S6, S7 APPROVED (occlusion + L4 optional). S9 -> M1-LiDAR |
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | done (M1-V2X partial + V2AIX addendum) | APPROVED | - | 2026-10-24 | S3b APPROVED partial: real-CAM FA 92-95% with VeReMi calibration, ~1% recalibrated |
 | WP6 Cross-domain | S5b | TODO (after M1-LiDAR) | - | 2026-10-24 | S5 / M2 closed NOT MET (1 of 7 rules); addendum S5b after M1-LiDAR |
