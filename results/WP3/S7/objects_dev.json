@@ -1,0 +1,54 @@
+{
+ "mode": "dev",
+ "model": {
+  "features": "base",
+  "model": "ae",
+  "mean_phys_val": 0.06306306306306307
+ },
+ "n_clean_objects": 133556,
+ "q99_clean_object_score": 1.162536393161699,
+ "attacks": {
+  "ph_replace_near": {
+   "n_phantom_objects": 166,
+   "auc_vs_clean_objects_n50": 0.8258170392878057,
+   "share_above_clean_q99": 0.1927710843373494,
+   "median_points": 58.0
+  },
+  "ph_replace_far": {
+   "n_phantom_objects": 149,
+   "auc_vs_clean_objects_n50": 0.5209070175209172,
+   "share_above_clean_q99": 0.06711409395973154,
+   "median_points": 72.0
+  },
+  "ph_budget_near": {
+   "n_phantom_objects": 199,
+   "auc_vs_clean_objects_n50": 0.6498782288926332,
+   "share_above_clean_q99": 0.04020100502512563,
+   "median_points": 27.0
+  },
+  "ph_budget_far": {
+   "n_phantom_objects": 169,
+   "auc_vs_clean_objects_n50": 0.5081295898185838,
+   "share_above_clean_q99": 0.023668639053254437,
+   "median_points": 64.0
+  },
+  "cmp_boxcloud": {
+   "n_phantom_objects": 151,
+   "auc_vs_clean_objects_n50": 0.5226692762871777,
+   "share_above_clean_q99": 0.039735099337748346,
+   "median_points": 215.0
+  },
+  "cmp_mradd_near": {
+   "n_phantom_objects": 174,
+   "auc_vs_clean_objects_n50": 0.758273695055153,
+   "share_above_clean_q99": 0.19540229885057472,
+   "median_points": 38.5
+  },
+  "cmp_mradd_far": {
+   "n_phantom_objects": 156,
+   "auc_vs_clean_objects_n50": 0.46023963266182444,
+   "share_above_clean_q99": 0.0,
+   "median_points": 69.5
+  }
+ }
+}

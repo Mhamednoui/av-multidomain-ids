@@ -1,0 +1,7 @@
+base cov FA 0.009 mean 0.016 {'ph_replace_near': 0.011, 'ph_replace_far': 0.011, 'ph_budget_near': 0.027, 'ph_budget_far': 0.011, 'PointDrop': 0.027, 'IntensitySpoof': 0.011} 6s
+base iforest FA 0.009 mean 0.023 {'ph_replace_near': 0.016, 'ph_replace_far': 0.011, 'ph_budget_near': 0.011, 'ph_budget_far': 0.011, 'PointDrop': 0.016, 'IntensitySpoof': 0.07} 7s
+base ae FA 0.009 mean 0.063 {'ph_replace_near': 0.016, 'ph_replace_far': 0.005, 'ph_budget_near': 0.005, 'ph_budget_far': 0.005, 'PointDrop': 0.054, 'IntensitySpoof': 0.292} 9s
+base+track cov FA 0.009 mean 0.016 {'ph_replace_near': 0.011, 'ph_replace_far': 0.011, 'ph_budget_near': 0.027, 'ph_budget_far': 0.011, 'PointDrop': 0.027, 'IntensitySpoof': 0.011} 9s
+base+track iforest FA 0.009 mean 0.018 {'ph_replace_near': 0.016, 'ph_replace_far': 0.016, 'ph_budget_near': 0.016, 'ph_budget_far': 0.016, 'PointDrop': 0.016, 'IntensitySpoof': 0.027} 11s
+base+track ae FA 0.007 mean 0.023 {'ph_replace_near': 0.016, 'ph_replace_far': 0.011, 'ph_budget_near': 0.011, 'ph_budget_far': 0.011, 'PointDrop': 0.016, 'IntensitySpoof': 0.076} 9s
+CHOICE {'features': 'base', 'model': 'ae', 'mean_phys_val': 0.06306306306306307}
