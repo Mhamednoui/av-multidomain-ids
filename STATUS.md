@@ -11,13 +11,13 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | done (M1-CAN partial) | APPROVED | - | 2026-10-22 | M1-CAN closed PARTIAL, see reports/M1_CAN.md; frozen output can/domain.py |
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
-| WP5 V2X | S0c | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-24 | V2AIX download + adapter |
-| WP6 Cross-domain | S4 | REVIEW | worker sonnet (high, T3) | 2026-10-24 | S4 zero-day PARTIAL: held-out K 61.1% at FA 2.73% (Z1 met), gap 23.7 pts, rules < L3 on held-out types, novelty layer no gain on unseen; reports/WP6_S4.md |
+| WP5 V2X | S0c | REVIEW | worker sonnet (medium, T2) | 2026-10-24 | V2AIX 212k CAMs, 1,515 recordings, ego GNSS, splits; see reports/WP5_S0c.md |
+| WP6 Cross-domain | S5 | IN PROGRESS | worker opus (medium, T4) | 2026-10-24 | S4 APPROVED partial. S5 -> M2 (LiDAR interim; addendum after M1-LiDAR) |
 | WP7 System | S2 | TODO (waits for M1-LiDAR + M2) | - | 2026-10-24 | S1 + S1b APPROVED |
 
 ## Overall progress (orchestrator updates this at every approval)
 
-**Overall: 46 / 58 steps approved = 79%** (updated 2026-10-24; V2AIX steps S0c, S3b added)
+**Overall: 47 / 58 steps approved = 81%** (updated 2026-10-24)
 
 | WP | Steps counted | Approved | % |
 |---|---|---|---|
@@ -27,7 +27,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP3 LiDAR | S1-S7, S9 (8; S0, S8 optional) | 3 | 38 |
 | WP4 Network | S0-S7 (8) | 8 | 100 (M1-NET partial) |
 | WP5 V2X | S0, S0b, S0c, S1, S1b, S2-S6, S3b (11; S7 optional) | 9 | 82 |
-| WP6 Cross-domain | S1, S2, S2b, S3-S5 (6) | 4 | 67 |
+| WP6 Cross-domain | S1, S2, S2b, S3-S5 (6) | 5 | 83 |
 | WP7 System | S1-S4 (4) | 1 | 25 |
 
 ## Milestones
