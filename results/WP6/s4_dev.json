@@ -1,0 +1,664 @@
+{
+ "note": "VALIDATION only. Held-out families are excluded from the selection; their validation numbers are not stored.",
+ "n_clean_per_half": 400,
+ "n_attack_per_family": 60,
+ "grid": {
+  "max|net=H|nov=None": {
+   "pooled_mean_detection_seen_K_C": 0.4497175141242937,
+   "K": {
+    "fa_tick_B": 0.010139225181598063,
+    "events_per_hour_B": 2.723970944309927,
+    "mean_detection_seen": 0.03854166666666666,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.051515151515151514,
+     "lidar_labelfree": 0.005555555555555556,
+     "choice_seen": 0.011904761904761906
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.0195625,
+    "events_per_hour_B": 14.7,
+    "mean_detection_seen": 0.9370370370370369,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.9424242424242423,
+     "lidar_labelfree": null,
+     "choice_seen": 0.9133333333333333
+    }
+   }
+  },
+  "max|net=H|nov=mcd": {
+   "pooled_mean_detection_seen_K_C": 0.681638418079096,
+   "K": {
+    "fa_tick_B": 0.014073849878934624,
+    "events_per_hour_B": 3.2687651331719128,
+    "mean_detection_seen": 0.6,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.7000000000000001,
+     "lidar_labelfree": 0.011111111111111112,
+     "choice_seen": 0.5380952380952381
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.019958333333333335,
+    "events_per_hour_B": 3.0,
+    "mean_detection_seen": 0.778395061728395,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.7575757575757577,
+     "lidar_labelfree": null,
+     "choice_seen": 0.8699999999999999
+    }
+   }
+  },
+  "max|net=H|nov=iforest": {
+   "pooled_mean_detection_seen_K_C": 0.41271186440677965,
+   "K": {
+    "fa_tick_B": 0.01059322033898305,
+    "events_per_hour_B": 3.2687651331719128,
+    "mean_detection_seen": 0.041666666666666664,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.05378787878787878,
+     "lidar_labelfree": 0.011111111111111112,
+     "choice_seen": 0.016666666666666666
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.019666666666666666,
+    "events_per_hour_B": 11.7,
+    "mean_detection_seen": 0.8524691358024691,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.8469696969696969,
+     "lidar_labelfree": null,
+     "choice_seen": 0.8766666666666666
+    }
+   }
+  },
+  "max|net=H+L3|nov=None": {
+   "pooled_mean_detection_seen_K_C": 0.06525423728813559,
+   "K": {
+    "fa_tick_B": 0.010139225181598063,
+    "events_per_hour_B": 2.723970944309927,
+    "mean_detection_seen": 0.03854166666666666,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.051515151515151514,
+     "lidar_labelfree": 0.005555555555555556,
+     "choice_seen": 0.011904761904761906
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.014541666666666666,
+    "events_per_hour_B": 1.275,
+    "mean_detection_seen": 0.09691358024691359,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.11287878787878786,
+     "lidar_labelfree": null,
+     "choice_seen": 0.026666666666666672
+    }
+   }
+  },
+  "max|net=H+L3|nov=mcd": {
+   "pooled_mean_detection_seen_K_C": 0.67909604519774,
+   "K": {
+    "fa_tick_B": 0.014073849878934624,
+    "events_per_hour_B": 3.2687651331719128,
+    "mean_detection_seen": 0.6,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.7000000000000001,
+     "lidar_labelfree": 0.011111111111111112,
+     "choice_seen": 0.5380952380952381
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.019958333333333335,
+    "events_per_hour_B": 3.0,
+    "mean_detection_seen": 0.7728395061728394,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.753030303030303,
+     "lidar_labelfree": null,
+     "choice_seen": 0.86
+    }
+   }
+  },
+  "max|net=H+L3|nov=iforest": {
+   "pooled_mean_detection_seen_K_C": 0.06751412429378531,
+   "K": {
+    "fa_tick_B": 0.01059322033898305,
+    "events_per_hour_B": 3.2687651331719128,
+    "mean_detection_seen": 0.041666666666666664,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.05378787878787878,
+     "lidar_labelfree": 0.011111111111111112,
+     "choice_seen": 0.016666666666666666
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.016520833333333332,
+    "events_per_hour_B": 1.425,
+    "mean_detection_seen": 0.09814814814814815,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.11439393939393937,
+     "lidar_labelfree": null,
+     "choice_seen": 0.026666666666666672
+    }
+   }
+  },
+  "noisy_or|net=H|nov=None": {
+   "pooled_mean_detection_seen_K_C": 0.7457627118644068,
+   "K": {
+    "fa_tick_B": 0.019975786924939468,
+    "events_per_hour_B": 33.232445520581116,
+    "mean_detection_seen": 0.6020833333333333,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.7962121212121211,
+     "lidar_labelfree": 0.10555555555555556,
+     "choice_seen": 0.20476190476190473
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.02,
+    "events_per_hour_B": 28.125,
+    "mean_detection_seen": 0.9160493827160494,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.9250000000000003,
+     "lidar_labelfree": null,
+     "choice_seen": 0.8766666666666667
+    }
+   }
+  },
+  "noisy_or|net=H|nov=mcd": {
+   "pooled_mean_detection_seen_K_C": 0.7977401129943504,
+   "K": {
+    "fa_tick_B": 0.019975786924939468,
+    "events_per_hour_B": 28.874092009685228,
+    "mean_detection_seen": 0.6848958333333333,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.831818181818182,
+     "lidar_labelfree": 0.05555555555555556,
+     "choice_seen": 0.4928571428571429
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.02,
+    "events_per_hour_B": 23.25,
+    "mean_detection_seen": 0.9314814814814816,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.9318181818181818,
+     "lidar_labelfree": null,
+     "choice_seen": 0.9299999999999999
+    }
+   }
+  },
+  "noisy_or|net=H|nov=iforest": {
+   "pooled_mean_detection_seen_K_C": 0.7810734463276835,
+   "K": {
+    "fa_tick_B": 0.019975786924939468,
+    "events_per_hour_B": 44.673123486682805,
+    "mean_detection_seen": 0.653125,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.8522727272727273,
+     "lidar_labelfree": 0.09444444444444444,
+     "choice_seen": 0.26666666666666666
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.02,
+    "events_per_hour_B": 38.925,
+    "mean_detection_seen": 0.932716049382716,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.9530303030303031,
+     "lidar_labelfree": null,
+     "choice_seen": 0.8433333333333332
+    }
+   }
+  },
+  "noisy_or|net=H+L3|nov=None": {
+   "pooled_mean_detection_seen_K_C": 0.6728813559322036,
+   "K": {
+    "fa_tick_B": 0.019975786924939468,
+    "events_per_hour_B": 35.41162227602906,
+    "mean_detection_seen": 0.5291666666666667,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.706060606060606,
+     "lidar_labelfree": 0.061111111111111116,
+     "choice_seen": 0.1738095238095238
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.02,
+    "events_per_hour_B": 25.724999999999998,
+    "mean_detection_seen": 0.8432098765432099,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.859090909090909,
+     "lidar_labelfree": null,
+     "choice_seen": 0.7733333333333332
+    }
+   }
+  },
+  "noisy_or|net=H+L3|nov=mcd": {
+   "pooled_mean_detection_seen_K_C": 0.7816384180790961,
+   "K": {
+    "fa_tick_B": 0.019975786924939468,
+    "events_per_hour_B": 29.9636803874092,
+    "mean_detection_seen": 0.6708333333333333,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.8227272727272726,
+     "lidar_labelfree": 0.03888888888888889,
+     "choice_seen": 0.4642857142857143
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.02,
+    "events_per_hour_B": 23.175,
+    "mean_detection_seen": 0.9129629629629631,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.9106060606060606,
+     "lidar_labelfree": null,
+     "choice_seen": 0.9233333333333332
+    }
+   }
+  },
+  "noisy_or|net=H+L3|nov=iforest": {
+   "pooled_mean_detection_seen_K_C": 0.7635593220338982,
+   "K": {
+    "fa_tick_B": 0.019975786924939468,
+    "events_per_hour_B": 43.583535108958834,
+    "mean_detection_seen": 0.6380208333333333,
+    "n_seen_families": 32,
+    "by_category": {
+     "seen": 0.8303030303030302,
+     "lidar_labelfree": 0.07777777777777778,
+     "choice_seen": 0.27380952380952384
+    }
+   },
+   "C": {
+    "fa_tick_B": 0.02,
+    "events_per_hour_B": 39.074999999999996,
+    "mean_detection_seen": 0.9123456790123458,
+    "n_seen_families": 27,
+    "by_category": {
+     "seen": 0.9356060606060607,
+     "lidar_labelfree": null,
+     "choice_seen": 0.8099999999999999
+    }
+   }
+  }
+ },
+ "chosen": {
+  "method": "noisy_or",
+  "net": "H",
+  "nov": "mcd"
+ },
+ "selection_rule": "highest pooled (K + C) mean detection over the non-held-out validation half-B families at the 2% tie-safe threshold; ties -> simpler",
+ "frozen_variants": {
+  "K|max|net=H|nov=None|groups=full": {
+   "threshold": 0.9999225107957944,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "C|max|net=H|nov=None|groups=full": {
+   "threshold": 0.9995726495726497,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "K|max|net=H|nov=mcd|groups=full": {
+   "threshold": 0.9999225130447471,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "gps.nov",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "C|max|net=H|nov=mcd|groups=full": {
+   "threshold": 0.9999048355883416,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "K|max|net=H|nov=iforest|groups=full": {
+   "threshold": 0.9999225107957944,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "gps.nov",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "C|max|net=H|nov=iforest|groups=full": {
+   "threshold": 0.9997863367871717,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "K|max|net=H+L3|nov=None|groups=full": {
+   "threshold": 0.9999185325632708,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "C|max|net=H+L3|nov=None|groups=full": {
+   "threshold": 0.9999183614381454,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "K|max|net=H+L3|nov=mcd|groups=full": {
+   "threshold": 0.9999185347548523,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "gps.nov",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "C|max|net=H+L3|nov=mcd|groups=full": {
+   "threshold": 0.9999183614381454,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "K|max|net=H+L3|nov=iforest|groups=full": {
+   "threshold": 0.9999185325632708,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "gps.nov",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "C|max|net=H+L3|nov=iforest|groups=full": {
+   "threshold": 0.9999183614381454,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "K|noisy_or|net=H|nov=None|groups=full": {
+   "threshold": 0.6997758183096857,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "C|noisy_or|net=H|nov=None|groups=full": {
+   "threshold": 0.7424131125312223,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "K|noisy_or|net=H|nov=mcd|groups=full": {
+   "threshold": 0.7234523345915194,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "gps.nov",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "C|noisy_or|net=H|nov=mcd|groups=full": {
+   "threshold": 0.7373125854556017,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "K|noisy_or|net=H|nov=iforest|groups=full": {
+   "threshold": 0.7057347997572667,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "gps.nov",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "C|noisy_or|net=H|nov=iforest|groups=full": {
+   "threshold": 0.7251740203549896,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "K|noisy_or|net=H+L3|nov=None|groups=full": {
+   "threshold": 0.7168096453643962,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "C|noisy_or|net=H+L3|nov=None|groups=full": {
+   "threshold": 0.7635650053597388,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "K|noisy_or|net=H+L3|nov=mcd|groups=full": {
+   "threshold": 0.7309681634149121,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "gps.nov",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "C|noisy_or|net=H+L3|nov=mcd|groups=full": {
+   "threshold": 0.7459486141864642,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "K|noisy_or|net=H+L3|nov=iforest|groups=full": {
+   "threshold": 0.7095233270997016,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "gps.nov",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "C|noisy_or|net=H+L3|nov=iforest|groups=full": {
+   "threshold": 0.7336598414206569,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross",
+    "can.nov",
+    "network.nov",
+    "v2x.nov",
+    "cross.nov"
+   ]
+  },
+  "K|noisy_or|net=H|nov=None|groups=rules": {
+   "threshold": 0.7066478036193179,
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "K|noisy_or|net=H|nov=None|groups=l3": {
+   "threshold": 0.7568067542733931,
+   "entries": [
+    "gps",
+    "can",
+    "network",
+    "v2x"
+   ]
+  },
+  "C|noisy_or|net=H|nov=None|groups=rules": {
+   "threshold": 0.7365630328151802,
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ]
+  },
+  "C|noisy_or|net=H|nov=None|groups=l3": {
+   "threshold": 0.7872228325489141,
+   "entries": [
+    "can",
+    "network",
+    "v2x"
+   ]
+  }
+ }
+}

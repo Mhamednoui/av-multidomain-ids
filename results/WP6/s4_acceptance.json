@@ -1,0 +1,84 @@
+{
+ "Z1_heldout_detection_K": {
+  "value": 0.6108333333333335,
+  "ci": [
+   0.4862936793089027,
+   0.7128295178075259
+  ],
+  "rule": ">= 0.60",
+  "met": true
+ },
+ "Z1_heldout_detection_C": {
+  "value": 0.8624999999999999,
+  "ci": [
+   0.8269881525443393,
+   0.9070165816878291
+  ],
+  "rule": ">= 0.60",
+  "met": true
+ },
+ "Z2_fa_tick_K": {
+  "value": 0.027320837927232635,
+  "ci": [
+   0.018710305224843637,
+   0.03812199699460825
+  ],
+  "rule": "<= 0.030 and <= S3 + 0.010",
+  "met": true,
+  "within_s3_plus_1pt": true,
+  "s3": 0.0636
+ },
+ "Z2_fa_tick_C": {
+  "value": 0.04778333333333333,
+  "rule": "<= 0.030 and <= S3 + 0.010",
+  "met": false,
+  "within_s3_plus_1pt": true,
+  "s3": 0.0631
+ },
+ "Z3_zero_day_gap_K_points": {
+  "heldout": 0.6108333333333335,
+  "seen": 0.847741935483871,
+  "value": 23.690860215053753,
+  "rule": "heldout >= seen - 15 points",
+  "met": false
+ },
+ "Z4_physics_ge_l3": {
+  "value": {
+   "gps": {
+    "rules": 0.3909559181146925,
+    "l3": 0.7243445196091436,
+    "rules_ge_l3": false
+   },
+   "can": {
+    "rules": 0.0,
+    "l3": 0.9666666666666668,
+    "rules_ge_l3": false
+   },
+   "network": {
+    "rules": 0.3333333333333333,
+    "l3": 0.0,
+    "rules_ge_l3": true
+   },
+   "v2x": {
+    "rules": 0.8763708513708514,
+    "l3": 0.9047619047619048,
+    "rules_ge_l3": false
+   }
+  },
+  "n_domains": 1,
+  "rule": ">= 3 of 4 domains: rules >= L3 on held-out types (tick level)",
+  "met": false
+ },
+ "Z5_novelty_layer": {
+  "delta_heldout_points_K": -8.027777777777768,
+  "delta_fa_points_K": -0.8511576626240355,
+  "delta_heldout_points_C": -4.638888888888893,
+  "delta_fa_points_C": -0.7083333333333337,
+  "rule": "kept iff K: held-out +3 points and FA +0.5 points at most",
+  "met": false
+ },
+ "Z6_selection_audit": {
+  "value": "dev run asserted that no held-out family entered any choice (results/WP6/logs/s4_dev.log); selection set = non-held-out families",
+  "met": true
+ }
+}

@@ -409,3 +409,76 @@ new and scored once; cross S2b choice gets its first test number here (labelled)
 - Cross alone at own 1% threshold (first test number of the S2b choice): KITTI FA 1.07%, comma 1.82%.
 - v2 view (not like-for-like): composite 50/50 accuracy K 68.8% (composite FA 44%), C 55.2% vs v2 95.23% at 1.06% FA (sample mix).
 - Report reports/WP6_S3.md. Open: density-aware tick calibration + LOGO ECDFs + temporal correlator (S5, validation); glitch filter vs blame.
+
+## 2026-10-24 S4 start: zero-day v3 (plan + acceptance rule, written BEFORE any S4 result)
+Task: detection of attack types that no labelled step saw, with the v2 unseen-attack protocol, per domain and at system level (S3 composites,
+label-free combiner, 2% budget), plus an evidence-novelty layer. Inputs: the S3 tick packs (cache s3_*.pkl), network S7 score tables (cal.pkl),
+WP1 s8_raw.pkl (S7 GPS L3 column). Nothing of the frozen domains is changed.
+**Held-out (unseen) types, fixed from earlier steps, never chosen by looking at results**
+- GPS: doppler_spoof, meaconing (WP1 S8: combiner fitted without them), in K and C vehicle blocks.
+- CAN: the masquerade families (WP2 S3): test has correlated_signal / max_speedometer / max_engine_coolant_temp / reverse_light_off /
+  reverse_light_on "_masquerade" (5). Their non-masquerade siblings are "seen" families (no layer trained on either; the split is the WP2 one).
+- Network (D10 host view): PortScan, Web-BruteForce, Web-XSS (WP4 S1 LOAO priority list: PortScan, WebAttack group; Bot is not in the host view;
+  Bot LOAO = 0% from M1-NET is cited, not re-run). Honest caveat: net.scan / net.bruteforce are rules named after these classes of behaviour.
+- V2X (VeReMi): class 6 ConstSpeedOffset and 17 DataReplaySybil (WP5; class 12 is an artefact, absent from the pack, never claimed).
+- LiDAR: no held-out type was ever fixed. The interim XGB (v2 baseline) saw PointDrop / IntensitySpoof / GhostCluster labels, so the zero-day
+  stack uses the label-free L1 geometry union only; the three families are reported as "label-free layer rows", not as unseen types.
+- Cross-domain families (can_*, lidar_*, gps_can): not held out; the S2b choice (inst |z| among a handful of options) used their validation
+  detection. Reported as a separate "choice-seen" group, never as unseen.
+**Layer tiers (fixed a priori from the design, not from scores)**
+- (b) physics / rule, never saw labels: GPS L1/L2 (max_speed, long_accel, lat_accel, jerk, yaw_rate, vel_pos_consistency, dr_resid_10, lidar_*);
+  CAN can.l1_spec_rules; network tcp_flags, scan, trw, bruteforce (+ dos_rate in the tier table only); V2X L1+L2 (beacon_rate, field_ranges,
+  pos_speed, pos_heading, speed_change, implied_speed, heading_rate, accel_consistency, overlap); LiDAR l1_union; cross-domain edges.
+- (a) normal-only models ("L3"), fit on normal data only: GPS ekf_nis, cusum_ekf, cusum_dr and the WP1 S7 L3 (MCD) column (tier table only);
+  CAN l3c, l3d; network l3_service, l3_ae (stack O, fit on the benign warm-up); V2X kf_nis, kf_cusum_hi, track_birth (per-sender CV Kalman).
+- Supervised (saw labels): LiDAR v2_baseline_interim XGB -> excluded from the zero-day stack. Nothing else in the stack is supervised.
+**What "removing the unseen types from everything that saw labels" means here**: the physics / L3 layers and their ECDF calibrations are label-free;
+V2X was refit by WP5 / WP6 S3 without 6/12/17. What used labels in S3 and is redone here WITHOUT held-out families: the combiner choice (max vs
+noisy_or), the network-variant choice, the novelty-detector choice; the 2% system threshold is label-free (clean composites). Domain owners'
+frozen layer SELECTIONS (e.g. which rules are in stack H) used validation detection of the families visible to them; this cannot be undone here and is stated.
+**Evidence-novelty layer**: per domain, features = the domain's calibrated per-layer tick scores (probit of the clipped score, zero-evidence ticks = 0),
+detector fit on CLEAN validation half A ticks only; candidates (fixed now): robust Mahalanobis (sklearn MinCovDet, support 0.75, ridge 0.1 of mean
+variance) and IsolationForest(200 trees, max_samples 256); the raw score is ECDF-calibrated on out-of-fold (5 contiguous-block folds) half-A clean ticks;
+it enters the system as ONE extra noisy_or / max entry per domain (gps, can, network, v2x, cross; not LiDAR: one label-free layer). No system-level
+novelty over the domain-score vector: composites mix independent segments, so cross-domain correlations of the clean vector do not exist.
+**System configs chosen on validation half B using SEEN families only** (K + C pooled mean detection at the 2% tie-safe threshold of half-B clean
+composites; held-out families and nothing else excluded): combiner {max, noisy_or} x network {H, H+L3(service, ae)} x novelty {none, mcd, iforest} = 12;
+tie-break: simpler first (max, H, none). Composites: S3 construction; val seeds [SEED, 64, 1|2, ord], 400 clean + 60 per family; test seeds
+[SEED, 64, 9, ord], 2000 / 1000 clean + 300 per family (K / C).
+**Tier table (tick level, per domain)**: group score = max of the group's calibrated layers; threshold = tie-safe 1% of CLEAN validation half-B ticks;
+test: tick detection of held-out families (TPR over attack ticks), AUC vs clean test ticks, FA on clean test ticks. Rows: (b) rules, (a) L3, union, novelty,
+frozen domain score. Seen families alongside.
+**Acceptance (test, judged once; the zero-day system and its tier table are scored on test ONCE, labelled)**
+- Z1 K mean detection of the held-out families at the val 2% threshold >= 60%; C likewise (held-out in C: gps families, CAN, network, V2X).
+- Z2 clean test composite tick FA <= 3.0% (the S3 G1 bound, K and C) and not more than 1.0 point above S3's 6.36% / 6.31%.
+- Z3 zero-day gap: K mean detection of held-out families >= mean detection of the other label-free single-domain families (seen, lidar and
+  choice-seen excluded: only domain families, same composites) minus 15 points.
+- Z4 physics statement: in >= 3 of the 4 domains with both groups (gps, can, network, v2x), the (b) physics / rule group detects held-out types (tick
+  level, 1% group threshold) at least as often as the (a) L3 group.
+- Z5 novelty layer is kept only if on test it adds >= +3 points to the K held-out mean detection AND raises clean-tick FA by <= 0.5 points over the
+  same system without it (matched config). Otherwise reported as "not useful".
+- Z6 choices audited: no held-out family in any selection (assert in code, logged). Z7 unit tests pass.
+Reported, not judged: C numbers, per-family detection and delay, equal-FA diagnostic (threshold at 2% of TEST clean composite ticks: test-informed,
+labelled), cross-only / lidar rows, v2 side-by-side (v2: OCSVM on detector outputs, FA 2.92%, unseen Bot 5.27%, WebAttack 96.27%, Ghost 2.87%).
+Exposure: every domain test set was scored before; the zero-day system, the tier table and the novelty layer are scored on test once here.
+
+## 2026-10-24 S4 validation (before the test run; results/WP6/s4_dev.json, s4_frozen.pkl, logs/s4_dev.log)
+- Extra material: tools/WP6_S4_streams.py (network pack with stack O layers: first four columns identical to the S3 pack, max diff 0.0; WP1 S7 L3 column aligned to
+  the S3 GPS series, coverage 100% of non-gps_can ticks). fusion/novelty.py (+ 5 tests), tools/WP6_S4_lib.py (+ 4 tests in tests/fusion/test_zeroday.py).
+- Halves (group counts A/B): gps 1/2 drives, can 9/10, network 15/15, v2x 4/5, cross_kitti 1/2, cross_comma 8/8. GPS / cross novelty is fitted on ONE drive (241 clean ticks).
+- Grid on val half B, non-held-out families only, pooled K + C mean detection: noisy_or beats max everywhere (0.67-0.80 vs 0.07-0.68). Reason for the very low
+  max rows: with max the 2% threshold lands in tie blocks of replicated outlier ticks (the clean pools are small and are re-sampled by the composites, network
+  minutes are held 60 ticks); noisy_or is smooth. Novelty rows: noisy_or/H none 74.6, mcd 79.8, iforest 78.1; noisy_or/H+L3 none 67.3, mcd 78.2, iforest 76.4.
+  H+L3 is worse than H (the two normal-only network layers add clean alarms faster than detection on seen families).
+- CHOSEN (rule: highest pooled seen detection): noisy_or, network H, novelty mcd. Frozen with 28 variants (grid + matched ablations + rules-only / L3-only systems).
+  Audit: the dev script asserts that no held-out family is in the selection set; held-out validation numbers are not stored.
+- Smoke run of the test tool on the VALIDATION packs (plumbing, temp folder; it prints held-out numbers on validation): nothing changed after it.
+  Performance fix before the real run: vectorised cluster bootstrap (fast_ci, same quantity as S3's cluster_ci).
+
+## 2026-10-24 S4 TEST run (once) and verdict (s4_test.json, s4_acceptance.json, s4_tables.md; report reports/WP6_S4.md)
+- Headline (noisy_or, network H, novelty mcd): K held-out 61.1% [48.6, 71.3], seen 84.8%, FA tick 2.73% [1.9, 3.8], 60 events/h; C held-out 86.2%, seen 97.3%, FA 4.78%, 87 events/h.
+- Z1 MET (K, C). Z2 K MET / C NOT MET (4.78%, within S3 + 1). Z3 NOT MET (gap 23.7 pts). Z4 NOT MET (rules >= L3 only in network and V2X-AUC tie; CAN rules 0% on masquerade,
+  GPS L3/EKF 72 vs rules 39). Z5 NOT MET (novelty: K held-out -8.0 pts, FA -0.85, seen +4.7; equal FA: held-out -2.1, seen +12.8). Z6 MET. Z7 MET (386 tests).
+- System K held-out rules-only 36.9, L3-only 56.6, both no-novelty 69.1. FA improvement over S3 is mostly the removal of the supervised LiDAR XGB (7.7% own FA).
+- v2 reference: WebAttack 96.3% (v2) vs 42.7 / 15.3% (v3 composites); Bot 0% (M1-NET); GhostCluster is a v2-comparison row (L1 tick 100% at 9.7% FA).
+- Open: gated novelty (only above its own threshold) instead of an extra noisy_or entry; GPS EKF / S7 L3 into the system; LiDAR real zero-day layers (WP3 S9).

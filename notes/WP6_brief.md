@@ -1,4 +1,4 @@
-# WP6 cross-domain brief (state at end of S3, 2026-10-24: S3 in REVIEW)
+# WP6 cross-domain brief (state at end of S4, 2026-10-24: S4 in REVIEW)
 
 ## Current state
 - S1 APPROVED with miss (sigma honesty). S2 "which domain lies" done, report reports/WP6_S2.md, verdict NOT MET
@@ -27,6 +27,13 @@
   100% alarms explained, attributed 93%. G5 not met (LiDAR, cross lose in budget sharing). Cross alone test FA KITTI 1.07%, comma 1.82%.
   Cross additions: LiDAR quality flag useless (lid_ok always true); comma glitch filter chosen (blame 46 -> 18% correct: open question).
   Frozen fusion: results/WP6/s3_frozen.pkl (+ .json). Rerun when M1-LiDAR closes: tools/WP6_S3_streams.py lidar, then dev, test.
+
+- S4 zero-day v3 (REVIEW, PARTIAL): reports/WP6_S4.md, results/WP6/s4_*. Held-out: GPS doppler/meaconing, CAN 5 masquerade families, network PortScan/Web-BruteForce/Web-XSS,
+  V2X classes 6/17 (LiDAR none: XGB saw all; cross families = choice-seen). Zero-day system = frozen domains with LiDAR -> L1 union only + per-domain MCD novelty entry
+  (fusion/novelty.py), noisy_or, network H, chosen on val half B with seen families only. Test once: K held-out 61.1% [48.6, 71.3] at FA 2.73%, seen 84.8%; C 86.2% at FA 4.78%.
+  Z1 met, Z2 K met / C not, Z3 (gap 23.7 pts) / Z4 (rules >= L3) / Z5 (novelty) NOT MET. Rules-only K 36.9, L3-only 56.6, both 69.1. Novelty: K held-out -8.0 pts, FA -0.85,
+  seen +4.7 (equal FA: held-out -2.1, seen +12.8). max combiner is degenerate (tie blocks). v2 WebAttack 96.3% vs v3 42.7/15.3%. Open: gated novelty, GPS EKF/S7 L3 in system, S5.
+  Files: fusion/novelty.py, tools/WP6_S4_{streams,lib,dev,test,tables}.py, tests/fusion/test_{novelty,zeroday}.py; cache s4_network.pkl, s4_gps_l3.pkl.
 
 ## Binding decisions / conventions
 - comma's two CAN speed messages = ONE domain; blame at domain level (supervisor 2026-10-22).

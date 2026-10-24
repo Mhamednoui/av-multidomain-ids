@@ -12,7 +12,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | S0c | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-24 | V2AIX download + adapter |
-| WP6 Cross-domain | S4 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-24 | S3 APPROVED partial (system FA 6.3% vs 3%) |
+| WP6 Cross-domain | S4 | REVIEW | worker sonnet (high, T3) | 2026-10-24 | S4 zero-day PARTIAL: held-out K 61.1% at FA 2.73% (Z1 met), gap 23.7 pts, rules < L3 on held-out types, novelty layer no gain on unseen; reports/WP6_S4.md |
 | WP7 System | S2 | TODO (waits for M1-LiDAR + M2) | - | 2026-10-24 | S1 + S1b APPROVED |
 
 ## Overall progress (orchestrator updates this at every approval)
