@@ -1,0 +1,77 @@
+{
+ "n_clean_runs": 150,
+ "n_rows": 3221,
+ "tau": 0.9977168949771691,
+ "edges": [
+  "gps-lidar speed",
+  "gps-can speed",
+  "lidar-can speed",
+  "gps-lidar lateral",
+  "compass-lidar yaw",
+  "compass-gyro yaw",
+  "gyro-lidar yaw"
+ ],
+ "sigma_models": {
+  "gps-lidar speed": {
+   "bias_mode": "linear",
+   "bias": -0.051101075384546314,
+   "bias_per_mps": 0.003263518905323264,
+   "a": 0.4419075850202068,
+   "b": 0.010787271290924447,
+   "bins": 10
+  },
+  "gps-can speed": {
+   "bias_mode": "linear",
+   "bias": -0.09056529939799088,
+   "bias_per_mps": 0.0282736491512436,
+   "a": 0.4181175665166628,
+   "b": 0.012678400354420236,
+   "bins": 10
+  },
+  "lidar-can speed": {
+   "bias_mode": "linear",
+   "bias": -0.050727074502422274,
+   "bias_per_mps": 0.02591654826913448,
+   "a": 0.11841554987026152,
+   "b": 0.0022919033259061303,
+   "bins": 10
+  },
+  "gps-lidar lateral": {
+   "bias_mode": "linear",
+   "bias": -0.025596095200903602,
+   "bias_per_mps": -0.002615109933040587,
+   "a": 0.4885631301973116,
+   "b": 0.038685329640624974,
+   "bins": 10
+  },
+  "compass-lidar yaw": {
+   "bias_mode": "linear",
+   "bias": 0.0011469595332670275,
+   "bias_per_mps": -0.00017403058280662125,
+   "a": 0.051288967163469236,
+   "b": 0.0009616587275703052,
+   "bins": 10
+  },
+  "compass-gyro yaw": {
+   "bias_mode": "linear",
+   "bias": 0.0019169799399751475,
+   "bias_per_mps": -0.0001617072654269602,
+   "a": 0.05205424548060796,
+   "b": 0.0008915572307130191,
+   "bins": 10
+  },
+  "gyro-lidar yaw": {
+   "bias_mode": "linear",
+   "bias": -0.0008525611193067759,
+   "bias_per_mps": -2.306208847429112e-06,
+   "a": 0.008241888611372759,
+   "b": 0.0,
+   "bins": 10
+  }
+ },
+ "parts": [
+  "train",
+  "val"
+ ],
+ "in_sample_note": "sigma models and calibration fitted on all dev drives"
+}

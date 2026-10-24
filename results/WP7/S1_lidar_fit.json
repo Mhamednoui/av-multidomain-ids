@@ -1,0 +1,7 @@
+{
+ "n_val_normal_scans": 549,
+ "threshold_calibrated_score": 0.9890710382513662,
+ "raw_threshold_equivalent": 0.9755272650718689,
+ "wp3_s1_val_fpr_0.01_raw_threshold": 0.9755272650718689,
+ "val_FA": 0.009107468123861567
+}

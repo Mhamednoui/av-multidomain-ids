@@ -1,0 +1,140 @@
+{
+ "status": "INTERIM: WP3 S1 retrained v2 baseline, not the final LiDAR domain",
+ "data": {
+  "split": "KITTI validation drives 0011,0035",
+  "scans_per_drive": 18
+ },
+ "A1_exactness": {
+  "scans_compared": 34,
+  "drives": [
+   {
+    "drive": "0011",
+    "scans_streamed": 18,
+    "compared": 17
+   },
+   {
+    "drive": "0035",
+    "scans_streamed": 18,
+    "compared": 17
+   }
+  ],
+  "max_abs_feature_diff_vs_cache": 0.0,
+  "max_abs_score_diff": 0.0,
+  "alarm_mismatches": 0,
+  "alarms_in_compared": 0,
+  "tolerance_score": 1e-06,
+  "met": true
+ },
+ "A2_causality_truncation": {
+  "checks": [
+   {
+    "scans": 4,
+    "n_stream": 4,
+    "n_batch": 4,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "scans": 9,
+    "n_stream": 9,
+    "n_batch": 9,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "scans": 14,
+    "n_stream": 14,
+    "n_batch": 14,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "all_identical": true
+ },
+ "A3_reset": {
+  "n_stream": 18,
+  "n_batch": 18,
+  "same_count": true,
+  "mismatches": 0,
+  "alarm_mismatches": 0,
+  "reason_mismatches": 0,
+  "max_abs_score_diff": 0.0,
+  "first_mismatch": null,
+  "identical": true
+ },
+ "A4_latency": {
+  "pooled": {
+   "n": 54,
+   "median_ms": 32.1404,
+   "p95_ms": 51.60798999999999,
+   "p99_ms": 59.572324,
+   "mean_ms": 34.12135555555555,
+   "max_ms": 59.8581
+  },
+  "per_repetition": [
+   {
+    "n": 18,
+    "median_ms": 31.611600000000003,
+    "p95_ms": 51.90974999999999,
+    "p99_ms": 58.26842999999999,
+    "mean_ms": 34.1917,
+    "max_ms": 59.8581
+   },
+   {
+    "n": 18,
+    "median_ms": 31.2817,
+    "p95_ms": 47.40470499999998,
+    "p99_ms": 56.936060999999974,
+    "mean_ms": 32.203377777777774,
+    "max_ms": 59.3189
+   },
+   {
+    "n": 18,
+    "median_ms": 35.4084,
+    "p95_ms": 46.25860499999999,
+    "p99_ms": 52.173720999999986,
+    "mean_ms": 35.96898888888889,
+    "max_ms": 53.6525
+   }
+  ],
+  "spread_median_ms": {
+   "min": 31.2817,
+   "max": 35.4084
+  },
+  "spread_p95_ms": {
+   "min": 46.25860499999999,
+   "max": 51.90974999999999
+  },
+  "spread_p99_ms": {
+   "min": 52.173720999999986,
+   "max": 58.26842999999999
+  },
+  "scans_per_rep": 18,
+  "scan_period_s": 0.1,
+  "v2_reference_ms": 23.0,
+  "p99_below_period": true,
+  "note": "describe (211 features) + temporal differences + XGBoost predict_proba + ECDF per scan; file reading excluded; n_jobs=2"
+ },
+ "machine": {
+  "python": "3.9.21",
+  "cpu_count": 12,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "note": "shared machine, other workers running; numbers are an upper envelope of the quiet-machine values"
+ },
+ "seconds": 8.353666305541992
+}

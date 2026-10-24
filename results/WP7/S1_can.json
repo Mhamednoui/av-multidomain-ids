@@ -1,0 +1,519 @@
+{
+ "data": {
+  "split": "ROAD validation captures (attack instance 2, ambient val)",
+  "captures": [
+   "correlated_signal_attack_2",
+   "correlated_signal_attack_2_masquerade",
+   "reverse_light_off_attack_2",
+   "reverse_light_on_attack_2",
+   "max_speedometer_attack_2",
+   "ambient_dyno_drive_winter"
+  ]
+ },
+ "A1_exactness": {
+  "combined": {
+   "n_units": 6,
+   "n_evidence": 274,
+   "all_identical": true,
+   "mismatches": 0,
+   "alarm_mismatches": 0,
+   "reason_mismatches": 0,
+   "max_abs_score_diff": 0.0,
+   "first_mismatch": null
+  },
+  "per_layer": {
+   "n_units": 6,
+   "n_evidence": 822,
+   "all_identical": true,
+   "mismatches": 0,
+   "alarm_mismatches": 0,
+   "reason_mismatches": 0,
+   "max_abs_score_diff": 0.0,
+   "first_mismatch": null
+  },
+  "motion_estimates_identical_all": true,
+  "captures": [
+   {
+    "capture": "correlated_signal_attack_2",
+    "frames": 69657,
+    "seconds": 28.226892948150635,
+    "windows": 28,
+    "alarms": 23,
+    "identical_combined": true,
+    "identical_layers": true,
+    "motion_identical": true,
+    "n_motion": 28
+   },
+   {
+    "capture": "correlated_signal_attack_2_masquerade",
+    "frames": 67517,
+    "seconds": 28.226892948150635,
+    "windows": 28,
+    "alarms": 23,
+    "identical_combined": true,
+    "identical_layers": true,
+    "motion_identical": true,
+    "n_motion": 28
+   },
+   {
+    "capture": "reverse_light_off_attack_2",
+    "frames": 99628,
+    "seconds": 40.66529607772827,
+    "windows": 40,
+    "alarms": 25,
+    "identical_combined": true,
+    "identical_layers": true,
+    "motion_identical": true,
+    "n_motion": 40
+   },
+   {
+    "capture": "reverse_light_on_attack_2",
+    "frames": 175945,
+    "seconds": 72.02090501785278,
+    "windows": 72,
+    "alarms": 39,
+    "identical_combined": true,
+    "identical_layers": true,
+    "motion_identical": true,
+    "n_motion": 72
+   },
+   {
+    "capture": "max_speedometer_attack_2",
+    "frames": 145894,
+    "seconds": 59.69697308540344,
+    "windows": 59,
+    "alarms": 33,
+    "identical_combined": true,
+    "identical_layers": true,
+    "motion_identical": true,
+    "n_motion": 59
+   },
+   {
+    "capture": "ambient_dyno_drive_winter",
+    "frames": 114148,
+    "seconds": 47.73052203655243,
+    "windows": 47,
+    "alarms": 2,
+    "identical_combined": true,
+    "identical_layers": true,
+    "motion_identical": true,
+    "n_motion": 47
+   }
+  ]
+ },
+ "A2_causality_truncation": {
+  "batch_prefix_equals_batch_full_completed_windows": [
+   {
+    "capture": "correlated_signal_attack_2",
+    "frames": 20897,
+    "windows_compared": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "correlated_signal_attack_2",
+    "frames": 41794,
+    "windows_compared": 16,
+    "n_stream": 16,
+    "n_batch": 16,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "correlated_signal_attack_2",
+    "frames": 62691,
+    "windows_compared": 24,
+    "n_stream": 24,
+    "n_batch": 24,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "reverse_light_off_attack_2",
+    "frames": 29888,
+    "windows_compared": 11,
+    "n_stream": 11,
+    "n_batch": 11,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "reverse_light_off_attack_2",
+    "frames": 59776,
+    "windows_compared": 23,
+    "n_stream": 23,
+    "n_batch": 23,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "reverse_light_off_attack_2",
+    "frames": 89665,
+    "windows_compared": 35,
+    "n_stream": 35,
+    "n_batch": 35,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "max_speedometer_attack_2",
+    "frames": 43768,
+    "windows_compared": 17,
+    "n_stream": 17,
+    "n_batch": 17,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "max_speedometer_attack_2",
+    "frames": 87536,
+    "windows_compared": 34,
+    "n_stream": 34,
+    "n_batch": 34,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "max_speedometer_attack_2",
+    "frames": 131304,
+    "windows_compared": 52,
+    "n_stream": 52,
+    "n_batch": 52,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "stream_prefix_equals_stream_full": [
+   {
+    "capture": "correlated_signal_attack_2",
+    "frames": 20897,
+    "windows_emitted": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "correlated_signal_attack_2",
+    "frames": 41794,
+    "windows_emitted": 16,
+    "n_stream": 16,
+    "n_batch": 16,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "correlated_signal_attack_2",
+    "frames": 62691,
+    "windows_emitted": 24,
+    "n_stream": 24,
+    "n_batch": 24,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "reverse_light_off_attack_2",
+    "frames": 29888,
+    "windows_emitted": 11,
+    "n_stream": 11,
+    "n_batch": 11,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "reverse_light_off_attack_2",
+    "frames": 59776,
+    "windows_emitted": 23,
+    "n_stream": 23,
+    "n_batch": 23,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "reverse_light_off_attack_2",
+    "frames": 89665,
+    "windows_emitted": 35,
+    "n_stream": 35,
+    "n_batch": 35,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "max_speedometer_attack_2",
+    "frames": 43768,
+    "windows_emitted": 17,
+    "n_stream": 17,
+    "n_batch": 17,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "max_speedometer_attack_2",
+    "frames": 87536,
+    "windows_emitted": 34,
+    "n_stream": 34,
+    "n_batch": 34,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "capture": "max_speedometer_attack_2",
+    "frames": 131304,
+    "windows_emitted": 52,
+    "n_stream": 52,
+    "n_batch": 52,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "all_identical": true,
+  "n_checks": 18
+ },
+ "A3_reset": {
+  "n_stream": 64,
+  "n_batch": 64,
+  "same_count": true,
+  "mismatches": 0,
+  "alarm_mismatches": 0,
+  "reason_mismatches": 0,
+  "max_abs_score_diff": 0.0,
+  "first_mismatch": null,
+  "identical": true
+ },
+ "A4_latency": {
+  "per_frame_all_calls": {
+   "pooled": {
+    "n": 507855,
+    "median_ms": 0.0032,
+    "p95_ms": 0.0057,
+    "p99_ms": 0.0084,
+    "mean_ms": 0.044073809256579125,
+    "max_ms": 282.403
+   },
+   "per_repetition": [
+    {
+     "n": 169285,
+     "median_ms": 0.0032,
+     "p95_ms": 0.0057,
+     "p99_ms": 0.0084,
+     "mean_ms": 0.04516481318486576,
+     "max_ms": 282.403
+    },
+    {
+     "n": 169285,
+     "median_ms": 0.0033,
+     "p95_ms": 0.0058,
+     "p99_ms": 0.0083,
+     "mean_ms": 0.04426210768821809,
+     "max_ms": 204.6581
+    },
+    {
+     "n": 169285,
+     "median_ms": 0.0031,
+     "p95_ms": 0.0057,
+     "p99_ms": 0.0085,
+     "mean_ms": 0.04279450689665358,
+     "max_ms": 203.1269
+    }
+   ],
+   "spread_median_ms": {
+    "min": 0.0031,
+    "max": 0.0033
+   },
+   "spread_p95_ms": {
+    "min": 0.0057,
+    "max": 0.0058
+   },
+   "spread_p99_ms": {
+    "min": 0.0083,
+    "max": 0.0085
+   }
+  },
+  "per_emitted_window": {
+   "pooled": {
+    "n": 198,
+    "median_ms": 95.9791,
+    "p95_ms": 185.97910499999998,
+    "p99_ms": 212.28322500000002,
+    "mean_ms": 102.57966666666665,
+    "max_ms": 282.403
+   },
+   "per_repetition": [
+    {
+     "n": 66,
+     "median_ms": 94.62115,
+     "p95_ms": 195.929575,
+     "p99_ms": 242.02519499999966,
+     "mean_ms": 105.40062878787879,
+     "max_ms": 282.403
+    },
+    {
+     "n": 66,
+     "median_ms": 96.5442,
+     "p95_ms": 180.8627,
+     "p99_ms": 201.48414999999997,
+     "mean_ms": 102.70964848484847,
+     "max_ms": 204.6581
+    },
+    {
+     "n": 66,
+     "median_ms": 97.15025,
+     "p95_ms": 182.190825,
+     "p99_ms": 197.12687999999994,
+     "mean_ms": 99.62872272727273,
+     "max_ms": 203.1269
+    }
+   ],
+   "spread_median_ms": {
+    "min": 94.62115,
+    "max": 97.15025
+   },
+   "spread_p95_ms": {
+    "min": 180.8627,
+    "max": 195.929575
+   },
+   "spread_p99_ms": {
+    "min": 197.12687999999994,
+    "max": 242.02519499999966
+   }
+  },
+  "window_by_context_frames": [
+   {
+    "size_from": 4783.0,
+    "size_to": 23924.0,
+    "n": 48,
+    "median_ms": 54.36805,
+    "p95_ms": 90.17999999999999
+   },
+   {
+    "size_from": 23924.0,
+    "size_to": 43851.5,
+    "n": 51,
+    "median_ms": 88.4386,
+    "p95_ms": 146.36715
+   },
+   {
+    "size_from": 43851.5,
+    "size_to": 64098.0,
+    "n": 48,
+    "median_ms": 110.4906,
+    "p95_ms": 186.26163
+   },
+   {
+    "size_from": 64098.0,
+    "size_to": 98044.0,
+    "n": 51,
+    "median_ms": 136.8167,
+    "p95_ms": 207.58135
+   }
+  ],
+  "captures": [
+   "correlated_signal_attack_2",
+   "reverse_light_off_attack_2"
+  ],
+  "v2_reference_ms_per_frame": 0.05,
+  "window_period_s": 1.0,
+  "p99_window_below_period": true,
+  "amortised_ms_per_frame": 0.044073809256579145,
+  "note": "a frame that does not complete a window only appends it; a window is scored by a prefix re-score of the frozen batch code (L1 rules + L3c + L3d + culprit signal), cost grows with the capture so far; the amortised number is total time / total frames"
+ },
+ "machine": {
+  "python": "3.9.21",
+  "cpu_count": 12,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "note": "shared machine, other workers running; numbers are an upper envelope of the quiet-machine values"
+ },
+ "seconds": 126.80229997634888
+}

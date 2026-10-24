@@ -1,0 +1,427 @@
+{
+ "data": {
+  "split": "VeReMi validation blocks 1,3,4,6",
+  "domain": "physics-only L1+L2+L3, combiner max, fitted on VeReMi validation"
+ },
+ "A1_exactness": {
+  "combined": {
+   "n_units": 4,
+   "n_evidence": 10906,
+   "all_identical": true,
+   "mismatches": 0,
+   "alarm_mismatches": 0,
+   "reason_mismatches": 0,
+   "max_abs_score_diff": 0.0,
+   "first_mismatch": null
+  },
+  "per_layer": {
+   "n_units": 4,
+   "n_evidence": 130872,
+   "all_identical": true,
+   "mismatches": 0,
+   "alarm_mismatches": 0,
+   "reason_mismatches": 0,
+   "max_abs_score_diff": 0.0,
+   "first_mismatch": null
+  },
+  "blocks": [
+   {
+    "block": "1",
+    "messages": 2291,
+    "classes_present": [
+     8,
+     9,
+     15,
+     19
+    ],
+    "n_attack_msgs": 1053,
+    "alarms": 927,
+    "identical_combined": true,
+    "identical_layers": true,
+    "tie_events": 0,
+    "out_of_order": 0,
+    "ctx_rows_median": 86.0,
+    "ctx_rows_max": 665,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null
+   },
+   {
+    "block": "3",
+    "messages": 2259,
+    "classes_present": [
+     2,
+     4,
+     5,
+     13,
+     18
+    ],
+    "n_attack_msgs": 813,
+    "alarms": 745,
+    "identical_combined": true,
+    "identical_layers": true,
+    "tie_events": 0,
+    "out_of_order": 0,
+    "ctx_rows_median": 59.0,
+    "ctx_rows_max": 324,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null
+   },
+   {
+    "block": "4",
+    "messages": 3144,
+    "classes_present": [
+     8,
+     9,
+     11,
+     14,
+     15,
+     16,
+     19
+    ],
+    "n_attack_msgs": 1012,
+    "alarms": 824,
+    "identical_combined": true,
+    "identical_layers": true,
+    "tie_events": 0,
+    "out_of_order": 0,
+    "ctx_rows_median": 59.0,
+    "ctx_rows_max": 229,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null
+   },
+   {
+    "block": "6",
+    "messages": 3212,
+    "classes_present": [
+     4,
+     5,
+     8,
+     9,
+     13,
+     15
+    ],
+    "n_attack_msgs": 1149,
+    "alarms": 1042,
+    "identical_combined": true,
+    "identical_layers": true,
+    "tie_events": 0,
+    "out_of_order": 0,
+    "ctx_rows_median": 80.0,
+    "ctx_rows_max": 487,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null
+   }
+  ],
+  "attack_classes_in_blocks": [
+   2,
+   4,
+   5,
+   8,
+   9,
+   11,
+   13,
+   14,
+   15,
+   16,
+   18,
+   19
+  ],
+  "n_classes": 12
+ },
+ "A2_causality_truncation": {
+  "batch_prefix_equals_batch_full": [
+   {
+    "block": "4",
+    "messages": 786,
+    "n_stream": 786,
+    "n_batch": 786,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "4",
+    "messages": 1572,
+    "n_stream": 1572,
+    "n_batch": 1572,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "4",
+    "messages": 2672,
+    "n_stream": 2672,
+    "n_batch": 2672,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "6",
+    "messages": 803,
+    "n_stream": 803,
+    "n_batch": 803,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "6",
+    "messages": 1606,
+    "n_stream": 1606,
+    "n_batch": 1606,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "6",
+    "messages": 2730,
+    "n_stream": 2730,
+    "n_batch": 2730,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "stream_prefix_equals_stream_full": [
+   {
+    "block": "4",
+    "messages": 786,
+    "n_stream": 786,
+    "n_batch": 786,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "4",
+    "messages": 1572,
+    "n_stream": 1572,
+    "n_batch": 1572,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "4",
+    "messages": 2672,
+    "n_stream": 2672,
+    "n_batch": 2672,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "6",
+    "messages": 803,
+    "n_stream": 803,
+    "n_batch": 803,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "6",
+    "messages": 1606,
+    "n_stream": 1606,
+    "n_batch": 1606,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "block": "6",
+    "messages": 2730,
+    "n_stream": 2730,
+    "n_batch": 2730,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "all_identical": true,
+  "n_checks": 12
+ },
+ "A3_reset": {
+  "n_stream": 2259,
+  "n_batch": 2259,
+  "same_count": true,
+  "mismatches": 0,
+  "alarm_mismatches": 0,
+  "reason_mismatches": 0,
+  "max_abs_score_diff": 0.0,
+  "first_mismatch": null,
+  "identical": true
+ },
+ "A4_latency": {
+  "pooled": {
+   "n": 9432,
+   "median_ms": 20.6578,
+   "p95_ms": 46.89131499999998,
+   "p99_ms": 59.758078000000005,
+   "mean_ms": 22.921410527989817,
+   "max_ms": 89.4309
+  },
+  "per_repetition": [
+   {
+    "n": 3144,
+    "median_ms": 20.4742,
+    "p95_ms": 46.74450499999999,
+    "p99_ms": 59.99846100000001,
+    "mean_ms": 22.918509923664125,
+    "max_ms": 88.8504
+   },
+   {
+    "n": 3144,
+    "median_ms": 20.7915,
+    "p95_ms": 47.188985,
+    "p99_ms": 59.68659900000003,
+    "mean_ms": 23.18938403307888,
+    "max_ms": 82.7674
+   },
+   {
+    "n": 3144,
+    "median_ms": 20.733199999999997,
+    "p95_ms": 46.689054999999996,
+    "p99_ms": 59.52155200000001,
+    "mean_ms": 22.656337627226463,
+    "max_ms": 89.4309
+   }
+  ],
+  "spread_median_ms": {
+   "min": 20.4742,
+   "max": 20.7915
+  },
+  "spread_p95_ms": {
+   "min": 46.689054999999996,
+   "max": 47.188985
+  },
+  "spread_p99_ms": {
+   "min": 59.52155200000001,
+   "max": 59.99846100000001
+  },
+  "by_messages_so_far": [
+   {
+    "size_from": 0.0,
+    "size_to": 785.75,
+    "n": 2358,
+    "median_ms": 20.004350000000002,
+    "p95_ms": 40.17725500000001
+   },
+   {
+    "size_from": 785.75,
+    "size_to": 1571.5,
+    "n": 2358,
+    "median_ms": 20.756999999999998,
+    "p95_ms": 49.683535000000006
+   },
+   {
+    "size_from": 1571.5,
+    "size_to": 2357.25,
+    "n": 2358,
+    "median_ms": 23.667900000000003,
+    "p95_ms": 49.502845
+   },
+   {
+    "size_from": 2357.25,
+    "size_to": 3143.0,
+    "n": 2358,
+    "median_ms": 18.19925,
+    "p95_ms": 44.844895
+   }
+  ],
+  "by_context_rows": [
+   {
+    "size_from": 1.0,
+    "size_to": 31.0,
+    "n": 2271,
+    "median_ms": 9.3315,
+    "p95_ms": 17.522
+   },
+   {
+    "size_from": 31.0,
+    "size_to": 59.0,
+    "n": 2439,
+    "median_ms": 16.3097,
+    "p95_ms": 27.37303
+   },
+   {
+    "size_from": 59.0,
+    "size_to": 96.0,
+    "n": 2343,
+    "median_ms": 24.6057,
+    "p95_ms": 38.123450000000005
+   },
+   {
+    "size_from": 96.0,
+    "size_to": 229.0,
+    "n": 2379,
+    "median_ms": 36.6556,
+    "p95_ms": 58.28628
+   }
+  ],
+  "block": "4",
+  "messages": 3144,
+  "message_period_s": 0.1,
+  "p99_below_period": true,
+  "v2_reference": "none (V2X is new in v3)",
+  "note": "context table (own track + last-second traffic + births) re-scored with the frozen raw-score code per message; per_layer=False"
+ },
+ "machine": {
+  "python": "3.9.21",
+  "cpu_count": 12,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "note": "shared machine, other workers running; numbers are an upper envelope of the quiet-machine values"
+ },
+ "seconds": 1051.0198831558228
+}

@@ -1,0 +1,828 @@
+{
+ "data": {
+  "level1": "360 validation-part runs of the WP6 S2b cache (KITTI val drives)",
+  "level2": [
+   "0011/clean",
+   "0011/gps_doppler_spoof",
+   "0011/can_offset",
+   "0035/clean",
+   "0035/gps_doppler_spoof",
+   "0035/can_offset",
+   "0027/clean",
+   "0027/gps_doppler_spoof",
+   "0027/can_offset"
+  ]
+ },
+ "A1_exactness_residual_level": {
+  "n_units": 360,
+  "n_evidence": 6840,
+  "all_identical": true,
+  "mismatches": 0,
+  "alarm_mismatches": 0,
+  "reason_mismatches": 0,
+  "max_abs_score_diff": 0.0,
+  "first_mismatch": null,
+  "alarms_in_batch": 1212,
+  "attacks": [
+   "accel_drift",
+   "can_freeze",
+   "can_offset",
+   "can_scale",
+   "doppler_spoof",
+   "drift",
+   "gps_can",
+   "lidar_bias",
+   "lidar_scale",
+   "lidar_yaw",
+   "meaconing",
+   "none"
+  ]
+ },
+ "A1_exactness_motion_estimate_level": {
+  "n_units": 9,
+  "n_evidence": 168,
+  "all_identical": true,
+  "mismatches": 0,
+  "alarm_mismatches": 0,
+  "reason_mismatches": 0,
+  "max_abs_score_diff": 0.0,
+  "first_mismatch": null,
+  "runs": [
+   {
+    "run": "0011/clean",
+    "steps": 24,
+    "alarms": 0,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": []
+   },
+   {
+    "run": "0011/gps_doppler_spoof",
+    "steps": 24,
+    "alarms": 0,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": []
+   },
+   {
+    "run": "0011/can_offset",
+    "steps": 24,
+    "alarms": 11,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": [
+     "None",
+     "can"
+    ]
+   },
+   {
+    "run": "0035/clean",
+    "steps": 13,
+    "alarms": 0,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": []
+   },
+   {
+    "run": "0035/gps_doppler_spoof",
+    "steps": 13,
+    "alarms": 1,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": [
+     "None"
+    ]
+   },
+   {
+    "run": "0035/can_offset",
+    "steps": 13,
+    "alarms": 5,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": [
+     "None",
+     "can"
+    ]
+   },
+   {
+    "run": "0027/clean",
+    "steps": 19,
+    "alarms": 0,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": []
+   },
+   {
+    "run": "0027/gps_doppler_spoof",
+    "steps": 19,
+    "alarms": 3,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": [
+     "gps"
+    ]
+   },
+   {
+    "run": "0027/can_offset",
+    "steps": 19,
+    "alarms": 0,
+    "identical": true,
+    "max_abs_score_diff": 0.0,
+    "blamed_domains": []
+   }
+  ],
+  "bounded_buffer_variant_keep_s_4": {
+   "n_units": 9,
+   "n_evidence": 168,
+   "all_identical": false,
+   "mismatches": 11,
+   "alarm_mismatches": 0,
+   "reason_mismatches": 0,
+   "max_abs_score_diff": 0.0003724394785847851,
+   "first_mismatch": {
+    "sample_id": "0011/clean/9",
+    "why": "score differs by 0.000372"
+   },
+   "note": "report only: the cumulative-sum origin of the interval means moves, z changes by ~1e-13, and an ECDF step can flip when z equals a calibration sample"
+  }
+ },
+ "A2_causality_truncation": {
+  "stream_prefix_equals_stream_full": [
+   {
+    "run": "0011/clean",
+    "events": 28,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/clean",
+    "events": 57,
+    "steps": 14,
+    "n_stream": 14,
+    "n_batch": 14,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/clean",
+    "events": 86,
+    "steps": 21,
+    "n_stream": 21,
+    "n_batch": 21,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/gps_doppler_spoof",
+    "events": 28,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/gps_doppler_spoof",
+    "events": 57,
+    "steps": 14,
+    "n_stream": 14,
+    "n_batch": 14,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/gps_doppler_spoof",
+    "events": 86,
+    "steps": 21,
+    "n_stream": 21,
+    "n_batch": 21,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/can_offset",
+    "events": 28,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/can_offset",
+    "events": 57,
+    "steps": 14,
+    "n_stream": 14,
+    "n_batch": 14,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/can_offset",
+    "events": 86,
+    "steps": 21,
+    "n_stream": 21,
+    "n_batch": 21,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/clean",
+    "events": 15,
+    "steps": 3,
+    "n_stream": 3,
+    "n_batch": 3,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/clean",
+    "events": 31,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/clean",
+    "events": 46,
+    "steps": 11,
+    "n_stream": 11,
+    "n_batch": 11,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/gps_doppler_spoof",
+    "events": 15,
+    "steps": 3,
+    "n_stream": 3,
+    "n_batch": 3,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/gps_doppler_spoof",
+    "events": 31,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/gps_doppler_spoof",
+    "events": 46,
+    "steps": 11,
+    "n_stream": 11,
+    "n_batch": 11,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/can_offset",
+    "events": 15,
+    "steps": 3,
+    "n_stream": 3,
+    "n_batch": 3,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/can_offset",
+    "events": 31,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/can_offset",
+    "events": 46,
+    "steps": 11,
+    "n_stream": 11,
+    "n_batch": 11,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "batch_truncated_sources_equal_batch_full_on_emitted_steps": [
+   {
+    "run": "0011/clean",
+    "events": 28,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/clean",
+    "events": 57,
+    "steps": 14,
+    "n_stream": 14,
+    "n_batch": 14,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/clean",
+    "events": 86,
+    "steps": 21,
+    "n_stream": 21,
+    "n_batch": 21,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/gps_doppler_spoof",
+    "events": 28,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/gps_doppler_spoof",
+    "events": 57,
+    "steps": 14,
+    "n_stream": 14,
+    "n_batch": 14,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/gps_doppler_spoof",
+    "events": 86,
+    "steps": 21,
+    "n_stream": 21,
+    "n_batch": 21,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/can_offset",
+    "events": 28,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/can_offset",
+    "events": 57,
+    "steps": 14,
+    "n_stream": 14,
+    "n_batch": 14,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0011/can_offset",
+    "events": 86,
+    "steps": 21,
+    "n_stream": 21,
+    "n_batch": 21,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/clean",
+    "events": 15,
+    "steps": 3,
+    "n_stream": 3,
+    "n_batch": 3,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/clean",
+    "events": 31,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/clean",
+    "events": 46,
+    "steps": 11,
+    "n_stream": 11,
+    "n_batch": 11,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/gps_doppler_spoof",
+    "events": 15,
+    "steps": 3,
+    "n_stream": 3,
+    "n_batch": 3,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/gps_doppler_spoof",
+    "events": 31,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/gps_doppler_spoof",
+    "events": 46,
+    "steps": 11,
+    "n_stream": 11,
+    "n_batch": 11,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/can_offset",
+    "events": 15,
+    "steps": 3,
+    "n_stream": 3,
+    "n_batch": 3,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/can_offset",
+    "events": 31,
+    "steps": 7,
+    "n_stream": 7,
+    "n_batch": 7,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "run": "0035/can_offset",
+    "events": 46,
+    "steps": 11,
+    "n_stream": 11,
+    "n_batch": 11,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "all_identical": true,
+  "n_checks": 36
+ },
+ "A3_reset": {
+  "n_stream": 24,
+  "n_batch": 24,
+  "same_count": true,
+  "mismatches": 0,
+  "alarm_mismatches": 0,
+  "reason_mismatches": 0,
+  "max_abs_score_diff": 0.0,
+  "first_mismatch": null,
+  "identical": true
+ },
+ "A4_latency": {
+  "motion_estimate_events_all_calls": {
+   "pooled": {
+    "n": 2016,
+    "median_ms": 0.006,
+    "p95_ms": 9.736575,
+    "p99_ms": 14.380039999999992,
+    "mean_ms": 1.8641097718253967,
+    "max_ms": 19.9044
+   },
+   "per_repetition": [
+    {
+     "n": 672,
+     "median_ms": 0.0059,
+     "p95_ms": 10.555659999999982,
+     "p99_ms": 14.993544,
+     "mean_ms": 2.0023214285714284,
+     "max_ms": 19.9044
+    },
+    {
+     "n": 672,
+     "median_ms": 0.0061,
+     "p95_ms": 9.18696,
+     "p99_ms": 13.009569999999997,
+     "mean_ms": 1.7520074404761903,
+     "max_ms": 14.9477
+    },
+    {
+     "n": 672,
+     "median_ms": 0.006,
+     "p95_ms": 9.220614999999977,
+     "p99_ms": 14.13459199999997,
+     "mean_ms": 1.8380004464285715,
+     "max_ms": 18.2018
+    }
+   ],
+   "spread_median_ms": {
+    "min": 0.0059,
+    "max": 0.0061
+   },
+   "spread_p95_ms": {
+    "min": 9.18696,
+    "max": 10.555659999999982
+   },
+   "spread_p99_ms": {
+    "min": 13.009569999999997,
+    "max": 14.993544
+   }
+  },
+  "resolving_calls_one_witness_step": {
+   "pooled": {
+    "n": 504,
+    "median_ms": 6.3012999999999995,
+    "p95_ms": 13.720155,
+    "p99_ms": 15.92666599999999,
+    "mean_ms": 7.435894246031746,
+    "max_ms": 19.9044
+   },
+   "per_repetition": [
+    {
+     "n": 168,
+     "median_ms": 6.6348,
+     "p95_ms": 14.466485,
+     "p99_ms": 16.895005000000047,
+     "mean_ms": 7.987392857142858,
+     "max_ms": 19.9044
+    },
+    {
+     "n": 168,
+     "median_ms": 5.81435,
+     "p95_ms": 12.77921,
+     "p99_ms": 14.692594000000003,
+     "mean_ms": 6.989019047619047,
+     "max_ms": 14.9477
+    },
+    {
+     "n": 168,
+     "median_ms": 6.1721,
+     "p95_ms": 13.653405000000001,
+     "p99_ms": 16.355283000000014,
+     "mean_ms": 7.331270833333333,
+     "max_ms": 18.2018
+    }
+   ],
+   "spread_median_ms": {
+    "min": 5.81435,
+    "max": 6.6348
+   },
+   "spread_p95_ms": {
+    "min": 12.77921,
+    "max": 14.466485
+   },
+   "spread_p99_ms": {
+    "min": 14.692594000000003,
+    "max": 16.895005000000047
+   }
+  },
+  "residual_level_step": {
+   "pooled": {
+    "n": 900,
+    "median_ms": 0.1829,
+    "p95_ms": 0.377335,
+    "p99_ms": 0.5081629999999999,
+    "mean_ms": 0.2228152222222222,
+    "max_ms": 0.5933
+   },
+   "per_repetition": [
+    {
+     "n": 300,
+     "median_ms": 0.22465000000000002,
+     "p95_ms": 0.41567000000000004,
+     "p99_ms": 0.5230609999999998,
+     "mean_ms": 0.25011633333333333,
+     "max_ms": 0.5933
+    },
+    {
+     "n": 300,
+     "median_ms": 0.17099999999999999,
+     "p95_ms": 0.3424700000000002,
+     "p99_ms": 0.47776999999999964,
+     "mean_ms": 0.2016633333333333,
+     "max_ms": 0.5542
+    },
+    {
+     "n": 300,
+     "median_ms": 0.191,
+     "p95_ms": 0.3406700000000001,
+     "p99_ms": 0.47913999999999984,
+     "mean_ms": 0.21666599999999997,
+     "max_ms": 0.5285
+    }
+   ],
+   "spread_median_ms": {
+    "min": 0.17099999999999999,
+    "max": 0.22465000000000002
+   },
+   "spread_p95_ms": {
+    "min": 0.3406700000000001,
+    "max": 0.41567000000000004
+   },
+   "spread_p99_ms": {
+    "min": 0.47776999999999964,
+    "max": 0.5230609999999998
+   }
+  },
+  "step_period_s": 1.0,
+  "v2_reference": "none (cross-domain layer is new in v3; v2 fusion ~0.3 ms is the fusion step, not measured here)",
+  "p99_step_below_period": true
+ },
+ "machine": {
+  "python": "3.9.21",
+  "cpu_count": 12,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "note": "shared machine, other workers running; numbers are an upper envelope of the quiet-machine values"
+ },
+ "seconds": 12.260407209396362
+}

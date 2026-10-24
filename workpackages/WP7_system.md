@@ -20,4 +20,4 @@ Owns: `system/`, `tests/system/`, `results/WP7/`, `notes/WP7_system.md`, `report
 - Milestones M3, M4.
 
 ## Progress
-(worker updates this section)
+- 2026-10-22 S1 streaming runtime: REVIEW (reports/WP7_S1.md, notes/WP7_brief.md). Stream == batch exact on validation data in GPS, CAN, V2X, cross-domain, LiDAR (interim); network = placeholder until M1-NET.

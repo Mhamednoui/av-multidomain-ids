@@ -1,0 +1,101 @@
+{
+ "A1": {
+  "gps": {
+   "met": true,
+   "runs": 210,
+   "evidence": 67830,
+   "max_abs_score_diff": 0.0
+  },
+  "can": {
+   "met": true,
+   "captures": 6,
+   "evidence": 1096,
+   "max_abs_score_diff": 0.0
+  },
+  "v2x": {
+   "met": true,
+   "blocks": 4,
+   "classes": 12,
+   "evidence": 141778,
+   "max_abs_score_diff": 0.0
+  },
+  "cross": {
+   "met": true,
+   "residual_level_runs": 360,
+   "motion_estimate_level_runs": 9,
+   "evidence": 7008,
+   "max_abs_score_diff": 0.0
+  },
+  "lidar_interim": {
+   "met": true,
+   "scans": 34,
+   "max_abs_score_diff": 0.0,
+   "max_abs_feature_diff": 0.0
+  }
+ },
+ "A2": {
+  "gps": {
+   "met": true,
+   "checks": 72
+  },
+  "can": {
+   "met": true,
+   "checks": 18
+  },
+  "v2x": {
+   "met": true,
+   "checks": 12
+  },
+  "cross": {
+   "met": true,
+   "checks": 36
+  },
+  "lidar_interim": {
+   "met": true,
+   "checks": 3
+  }
+ },
+ "A3": {
+  "gps": {
+   "met": true
+  },
+  "can": {
+   "met": true
+  },
+  "v2x": {
+   "met": true
+  },
+  "cross": {
+   "met": true
+  },
+  "lidar_interim": {
+   "met": true
+  }
+ },
+ "A4": {
+  "measured_3_repetitions_with_spread": true,
+  "real_time_p99_below_period": {
+   "gps": true,
+   "can_window": true,
+   "v2x": true,
+   "cross_step": true,
+   "lidar_interim": true
+  },
+  "met": true
+ },
+ "A5": {
+  "met": true
+ },
+ "A6": {
+  "met": true
+ },
+ "overall": {
+  "A1": true,
+  "A2": true,
+  "A3": true,
+  "A4": true,
+  "A5": true,
+  "A6": true,
+  "S1": true
+ }
+}

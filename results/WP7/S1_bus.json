@@ -1,0 +1,62 @@
+{
+ "slices": {
+  "gps_runs": 12,
+  "can_seconds": 14,
+  "v2x_messages": 400,
+  "cross_steps": 150,
+  "lidar_scans": 6,
+  "network_flows": 50
+ },
+ "evidence_on_bus": {
+  "gps/combined": 295,
+  "can/combined": 13,
+  "v2x/combined": 400,
+  "cross/L2": 150,
+  "lidar/combined": 6,
+  "network/combined": 50
+ },
+ "runner_outputs": {
+  "gps/combined": 295,
+  "can/combined": 13,
+  "v2x/combined": 400,
+  "cross/L2": 150,
+  "lidar/combined": 6,
+  "network/combined": 50
+ },
+ "A5_counts_equal": {
+  "gps/combined": true,
+  "can/combined": true,
+  "v2x/combined": true,
+  "cross/L2": true,
+  "lidar/combined": true,
+  "network/combined": true
+ },
+ "A5_merged_order_by_stream_time": true,
+ "A5_wall_clock_monotone": true,
+ "A5_ingest_before_publish": true,
+ "A5_contract_fields": true,
+ "A6_labels_on_every_record": {
+  "lidar": true,
+  "network": true
+ },
+ "A6_frozen_records_carry_no_status": true,
+ "bus_publish_us_per_record": 7.24951,
+ "network_placeholder_push_ms": {
+  "n": 5000,
+  "median_ms": 0.0019,
+  "p95_ms": 0.0023,
+  "p99_ms": 0.0026,
+  "mean_ms": 0.0018375,
+  "max_ms": 0.0651
+ },
+ "pipeline_delay_ms_median_by_domain": {
+  "gps": 39.5153,
+  "can": 88.8409,
+  "v2x": 18.000500000000002,
+  "cross": 0.27449999999999997,
+  "lidar": 36.3792,
+  "network": 0.0033499999999999997
+ },
+ "A5_met": true,
+ "A6_met": true
+}

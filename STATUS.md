@@ -13,7 +13,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
 | WP6 Cross-domain | S3 | IN PROGRESS | worker opus (medium, T4) | 2026-10-22 | fusion over 5 domains (LiDAR interim) |
-| WP7 System | S1 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | streaming runtime, started early: GPS/CAN/V2X frozen, NET when frozen, LiDAR placeholder |
+| WP7 System | S1 | REVIEW | worker sonnet (medium, T2) | 2026-10-22 | streaming runtime: stream == batch exact on val (GPS, CAN, V2X, cross, LiDAR interim); latency GPS 32 / CAN win 96 / V2X 21 / LiDAR 32 ms median; NET placeholder; reports/WP7_S1.md |
 
 ## Overall progress (orchestrator updates this at every approval)
 
