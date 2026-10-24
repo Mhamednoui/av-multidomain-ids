@@ -11,13 +11,13 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | done (M1-CAN partial) | APPROVED | - | 2026-10-22 | M1-CAN closed PARTIAL, see reports/M1_CAN.md; frozen output can/domain.py |
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
-| WP5 V2X | done (M1-V2X partial) | APPROVED | - | 2026-10-21 | M1-V2X closed PARTIAL, see reports/M1_V2X.md. Open: S3b acceptance range (needs receiver positions), V2AIX, null-control follow-up |
+| WP5 V2X | S0c | TODO (next free slot) | - | 2026-10-24 | V2AIX link received from the user; then S3b (receiver-position checks, real CAM FA) |
 | WP6 Cross-domain | S4 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-24 | S3 APPROVED partial (system FA 6.3% vs 3%) |
 | WP7 System | S1b | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-24 | S1 APPROVED; S1b = wire frozen network domain + V2X birth causality count |
 
 ## Overall progress (orchestrator updates this at every approval)
 
-**Overall: 46 / 56 steps approved = 82%** (updated 2026-10-24)
+**Overall: 46 / 58 steps approved = 79%** (updated 2026-10-24; V2AIX steps S0c, S3b added)
 
 | WP | Steps counted | Approved | % |
 |---|---|---|---|
@@ -26,7 +26,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S0-S7 (8) | 8 | 100 (M1-CAN partial) |
 | WP3 LiDAR | S1-S7, S9 (8; S0, S8 optional) | 3 | 38 |
 | WP4 Network | S0-S7 (8) | 8 | 100 (M1-NET partial) |
-| WP5 V2X | S0, S0b, S1, S1b, S2-S6 (9; S3b, S7 optional) | 9 | 100 (M1-V2X partial) |
+| WP5 V2X | S0, S0b, S0c, S1, S1b, S2-S6, S3b (11; S7 optional) | 9 | 82 |
 | WP6 Cross-domain | S1, S2, S2b, S3-S5 (6) | 4 | 67 |
 | WP7 System | S1-S4 (4) | 1 | 25 |
 
