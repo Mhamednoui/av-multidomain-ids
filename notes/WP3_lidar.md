@@ -314,3 +314,6 @@ Leakage: null mean AUC 0.516 MET; top-1 importance 21.0 % (sect_hifrac_max, phys
 Episodes: near replace L4 8/21, L2d 11/21, physics stack 11/21, physics + L4 12/21; others <= 6/21. False-episode rates L3 8.3, L4 4.2, physics + L3 + L4 12.5 %.
 Cost per scan: L3 7 ms (object scoring), L4 64 ms descriptor (loaded machine) + 0.8 ms predict.
 Decision for S9 (worker proposal): L3 out; L4 optional (seen families only, not zero-shot); max at 1 % total FA dilutes strong layers - allocate FA per layer on validation. S5 not in the stack (not committed at the time).
+### Sat Oct 24 21:53:39 WCAST 2026 S5 VERDICT run started (test, once)
+### 2026-10-24 S5 VERDICT (test once; results/WP3/S5/final.json, S5_tables.md, reports/WP3_S5.md)
+Clean test FA 0.46 % (B1 MET). fl_* 0.6 %, PointDrop 0.6, IntensitySpoof 0.6 (B2 MET). Calibrated replace near / far 6.3 / 0.8, budget 1.0 / 0.6 (B3 NOT MET, physics). Box cloud 18.8, multi-return add near / far 69.4 / 28.4 (comparison). Tile level ~0 for single-return phantoms. Episodes 3/21 replace near, others 0; false episodes 0/48. Harness all 3 layers FA 1.37 %, loses <= 2.5 points to the best single layer (B5 MET). Nested LODO FA bad for drives 0027 (100 %) and 0013 (13 %). Extra cache 0.79 GB, 0.39 s/scan. Tests 454/454.

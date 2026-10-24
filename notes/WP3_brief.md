@@ -57,3 +57,8 @@
 - Reusable: S7 cache holds descriptor rows (429 cols) of the S4 evaluation attacks (val + test, 9 attacks) and episodes for ANY detector on the same attacked scans; final_frames.pkl holds per-scan raw scores of L1, L2a(int), L2c, L2d, L3, L4 (+variants) for ref / clean test / attacks / episodes.
 - Results: reports/WP3_S7.md. L3 (AE on base features) adds nothing (FA drift: drive 0001 21.5 %). L4 (depth 8, 18 trees): PointDrop 90.8, IntensitySpoof 100, near replace 19.2 (generator-dependent), far / budget phantoms at FA; leave-one-type-out collapses. Max combiner at 1 % total FA dilutes PointDrop 87 -> 27.6 % (S9).
 - Pitfalls: fit_xgb must remap labels when a class is missing; L1 statistics of the S4 clean tables exist only for val / test drives (train: tools/WP3_S7_l1train.py); rank-of-rank on a small reference (549 scans) is coarse.
+
+## S5 state (2026-10-24, REVIEW)
+- lidar/occlusion.py (sandwich / see-through returns per tile, L2bUnion, FullCalib), occlusion_build.py, occlusion_eval.py; tools WP3_S5_{build,dev,shrink,final,tables,runtime}.py; tests/lidar/test_occlusion.py. Cache ../data_extra/cache_v3/WP3/S5 (0.79 GB; tile tables, only chosen-variant columns for test / most files).
+- Result: single-return calibrated phantoms 0.6-6.3 % (= FA to small gain, only through generator dropout holes), best-case attacker (fl_*) = FA, multi-return add near 69 % (impossible case, comparison), box cloud 18.8, FA test 0.46 %; episodes 3/21 replace near. Drives 0027 / 0013 have huge clean see-through counts (nested LODO FA 100 / 13 %).
+- Extra attacks fl_* (every ray filled) and tile builders usable by S9: occlusion_build.drive_attacks / drive_episodes.

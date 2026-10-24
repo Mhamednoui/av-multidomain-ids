@@ -1,0 +1,13 @@
+(0, 0, 0) FA 0.007 obj 0.046 {'ph_replace_near': 0.04, 'ph_replace_far': 0.01, 'ph_budget_near': 0.02, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.15}
+(0, 0, 1) FA 0.007 obj 0.045 {'ph_replace_near': 0.05, 'ph_replace_far': 0.02, 'ph_budget_near': 0.03, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.12}
+(0, 1, 0) FA 0.007 obj 0.086 {'ph_replace_near': 0.2, 'ph_replace_far': 0.01, 'ph_budget_near': 0.04, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.18}
+(0, 1, 1) FA 0.007 obj 0.080 {'ph_replace_near': 0.22, 'ph_replace_far': 0.02, 'ph_budget_near': 0.05, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.1}
+(1, 0, 0) FA 0.007 obj 0.045 {'ph_replace_near': 0.04, 'ph_replace_far': 0.01, 'ph_budget_near': 0.02, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.15}
+(1, 0, 1) FA 0.007 obj 0.041 {'ph_replace_near': 0.05, 'ph_replace_far': 0.01, 'ph_budget_near': 0.02, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.12}
+(1, 1, 0) FA 0.007 obj 0.079 {'ph_replace_near': 0.18, 'ph_replace_far': 0.01, 'ph_budget_near': 0.04, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.17}
+(1, 1, 1) FA 0.007 obj 0.074 {'ph_replace_near': 0.21, 'ph_replace_far': 0.01, 'ph_budget_near': 0.04, 'ph_budget_far': 0.0, 'cmp_boxcloud': 0.12}
+(2, 0, 0) FA 0.007 obj 0.044 {'ph_replace_near': 0.04, 'ph_replace_far': 0.01, 'ph_budget_near': 0.02, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.16}
+(2, 0, 1) FA 0.007 obj 0.036 {'ph_replace_near': 0.04, 'ph_replace_far': 0.01, 'ph_budget_near': 0.01, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.11}
+(2, 1, 0) FA 0.007 obj 0.080 {'ph_replace_near': 0.16, 'ph_replace_far': 0.01, 'ph_budget_near': 0.04, 'ph_budget_far': 0.01, 'cmp_boxcloud': 0.18}
+(2, 1, 1) FA 0.007 obj 0.066 {'ph_replace_near': 0.18, 'ph_replace_far': 0.01, 'ph_budget_near': 0.03, 'ph_budget_far': 0.0, 'cmp_boxcloud': 0.11}
+chosen ((0, 1, 0), 0.08648648648648649)
