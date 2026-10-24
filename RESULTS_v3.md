@@ -319,7 +319,21 @@ The sudden-appearance check fails on real data (genuine first messages arrive cl
 
 ## 6. M1-LiDAR: LiDAR phantom and tamper detection
 
-**PENDING.** M1-LiDAR is open: WP3 S5 (free space / occlusion) and S6 (background model and tracking) are running, S7 and the combined S9 test run follow. This section fills itself from the first of these files that exists: `results/WP3/S9/acceptance.json`, `results/WP3/S9_acceptance.json`, `results/WP3/M1_acceptance.json`.
+Filled from `results/WP3/S9/acceptance.json`.
+
+| item | rule | values | verdict |
+|---|---|---|---|
+| R1_false_alarms | stack FA <= 2.5 % at 1 % total budget and worst test drive <= 5 % | fa 0.012; worst_drive_fa 0.025; lodo_mean_fa 0.013; lodo_worst_fa 0.036 | MET |
+| R2_targets_pointdrop_intensity | PointDrop >= 30 % and IntensitySpoof >= 50 % in the stack at the 1 % total budget (predicted borderline) | pointdrop 0.276; intensity_spoof 0.516; pointdrop_best_layer_alone 0.873 | NOT MET |
+| R3_single_return_phantoms | far / budget calibrated phantoms <= FA + 10 points (physics bound); near replace reported | far_budget_max 0.008; near_replace 0.178; fa 0.012 | MET |
+| R4_episodes | false-episode rate <= 10 % and sensor-fixed near replace >= 50 % of the episodes within 3 s; world-fixed reported (predicted not detected after the first scan) | false_episode_rate 0.062; sensor_fixed_replace_near_detected 11.000; episodes_per_kind 21.000; world_fixed_replace_near_detected 8.000 | MET |
+| R5_every_layer_earns_its_place | each headline layer, when removed, lowers some physical-attack detection by >= 3 points (predicted: L1 does not on the single-return set) | L1_largest_loss_when_removed 0.000; L2a 0.508; L2c 0.276; L2d 0.171 | NOT MET |
+| R6_wp_file_targets | WP file: 50-400 added points >= 60 % and near sparse > 50 % at 1 % FA (predicted NOT MET: physics bound) | budget_phantoms_50_400 0.008; near_sparse 0.008 | NOT MET |
+| R7_freeze_reproduces_test_scores | frozen domain replayed from raw scans reproduces the stored test per-layer scores and stack score (<= 1e-9, 0 alarm differences) on all clean test scans and the attacked scans of >= 2 test drives | max_abs_diff 0.000; alarm_differences 0.000; replayed_scans 2381.000; clean_scans 1526.000 | MET |
+| R8_tests_cache_cost | full test suite passes, extra cache <= 2 GB, scoring cost per scan reported | tests_passed 469.000; tests_failed 0.000; extra_cache_gb 0.150; scoring_s_per_scan 1.843 | MET |
+| V1_combiner_choice | survivors of the clean-FA control: max, split | validation_mean_physical_detection 0.204 | CHOSEN max |
+| V2_density_part | density part kept only if validation mean physical detection +2 points and worst LODO FA +2 points at most | gain -0.012 | NOT KEPT (intensity part only) |
+| milestone | M1-LiDAR closes PARTIAL when the pre-registered predictions of the physics bound hold and every honest limit is stated | - | PARTIAL: R2, R5, R6 NOT MET |
 
 Until it closes, the M2 system uses an INTERIM LiDAR input: the label-free L1 geometry union only (the supervised v2-baseline model caused most of the first fusion's false alarms). LiDAR attack numbers in section 7 are therefore interim and weak by design.
 
@@ -1202,125 +1216,177 @@ Each row is one printed value: the text as printed, the file it was read from an
 | 662 | 4.3 | `results/WP5/s3b_acceptance.json` | `R2/Stationary/range_threshold_km` | json | 1 |
 | 663 | 99% | `results/WP5/s3b_acceptance.json` | `R2/Stationary/far_offset_detection_msg` | json | 1 |
 | 664 | 0% | `results/WP5/s3b_acceptance.json` | `R3/Stationary/ghost_tracks_detected` | json | 1 |
-| 665 | 2.08% | `results/WP6/s5_test.json` | `system/K/fa_tick` | json | 2 |
-| 666 | [1.3, 3.3] | `results/WP6/s5_test.json` | `acceptance/A1_raw_tick_fa/K_ci` | json | 1 |
-| 667 | 6.70% | `results/WP6/s5_test.json` | `system/C/fa_tick` | json | 1 |
-| 668 | [6.0, 7.7] | `results/WP6/s5_test.json` | `acceptance/A1_raw_tick_fa/C_ci` | json | 1 |
-| 669 | 25.4 | `results/WP6/s5_test.json` | `system/K/events_per_hour` | json | 1 |
-| 670 | [13, 46] | `results/WP6/s5_test.json` | `acceptance/A2_events_per_clean_hour/K_ci` | json | 1 |
-| 671 | 31.0 | `results/WP6/s5_test.json` | `system/C/events_per_hour` | json | 1 |
-| 672 | [29, 33] | `results/WP6/s5_test.json` | `acceptance/A2_events_per_clean_hour/C_ci` | json | 1 |
-| 673 | 54.1 | `results/WP6/s5_test.json` | `system/K/correlator_off/events_per_hour` | json | 1 |
-| 674 | 119.9 | `results/WP6/s5_test.json` | `system/C/correlator_off/events_per_hour` | json | 1 |
-| 675 | 21.6 | `results/WP6/s5_test.json` | `system/K/clean_response_per_hour/WARN` | json | 1 |
-| 676 | 3.8 | `results/WP6/s5_test.json` | `system/K/clean_response_per_hour/DEGRADE` | json | 1 |
-| 677 | 0.0 | `results/WP6/s5_test.json` | `system/K/clean_response_per_hour/SAFE_STOP` | json | 1 |
-| 678 | 13.4 | `results/WP6/s5_test.json` | `system/C/clean_response_per_hour/WARN` | json | 1 |
-| 679 | 16.3 | `results/WP6/s5_test.json` | `system/C/clean_response_per_hour/DEGRADE` | json | 1 |
-| 680 | 1.2 | `results/WP6/s5_test.json` | `system/C/clean_response_per_hour/SAFE_STOP` | json | 1 |
-| 681 | 60.2% | `results/WP6/s5_test.json` | `system/K/mean_event_detection_single` | json | 2 |
-| 682 | [45, 73] | `results/WP6/s5_test.json` | `system/K/ci_single_event/mean` | json | 1 |
-| 683 | 96.0% | `results/WP6/s5_test.json` | `system/C/mean_event_detection_single` | json | 1 |
-| 684 | 58.8% | `results/WP6/s5_test.json` | `system/K/mean_event_detection_heldout` | json | 1 |
-| 685 | [44, 71] | `results/WP6/s5_test.json` | `system/K/ci_heldout_event/mean` | json | 1 |
-| 686 | 90.6% | `results/WP6/s5_test.json` | `system/C/mean_event_detection_heldout` | json | 1 |
-| 687 | 86.7% | `results/WP6/s5_test.json` | `system/K/blame_single_pooled/correct` | json | 1 |
-| 688 | 13.2% | `results/WP6/s5_test.json` | `system/K/blame_single_pooled/wrong` | json | 1 |
-| 689 | 0.1% | `results/WP6/s5_test.json` | `system/K/blame_single_pooled/undecided` | json | 1 |
-| 690 | 85.5% | `results/WP6/s5_test.json` | `system/C/blame_single_pooled/correct` | json | 1 |
-| 691 | 13.7% | `results/WP6/s5_test.json` | `system/C/blame_single_pooled/wrong` | json | 1 |
-| 692 | 0.8% | `results/WP6/s5_test.json` | `system/C/blame_single_pooled/undecided` | json | 1 |
-| 693 | 10,467 | `results/WP6/s5_test.json` | `system/K/explanations/with_explanation` | json | 1 |
-| 694 | 10,467 | `results/WP6/s5_test.json` | `system/K/explanations/events` | json | 1 |
-| 695 | 18,454 | `results/WP6/s5_test.json` | `system/C/explanations/with_explanation` | json | 1 |
-| 696 | 18,454 | `results/WP6/s5_test.json` | `system/C/explanations/events` | json | 1 |
-| 697 | 56% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/gps` | json | 1 |
-| 698 | 64.5% | `results/WP6/s5_test.json` | `system/K/ablation/without gps/mean_event_detection_single` | json | 1 |
-| 699 | 33% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/cross` | json | 1 |
-| 700 | 60.4% | `results/WP6/s5_test.json` | `system/K/ablation/without cross/mean_event_detection_single` | json | 1 |
-| 701 | 10% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/lidar` | json | 1 |
-| 702 | 68.5% | `results/WP6/s5_test.json` | `system/K/ablation/without lidar/mean_event_detection_single` | json | 2 |
-| 703 | 69% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/can` | json | 1 |
-| 704 | 50.3% | `results/WP6/s5_test.json` | `system/K/ablation/without can/mean_event_detection_single` | json | 1 |
-| 705 | 44% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/network` | json | 1 |
-| 706 | 63.6% | `results/WP6/s5_test.json` | `system/K/ablation/without network/mean_event_detection_single` | json | 1 |
-| 707 | 79% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/v2x` | json | 1 |
-| 708 | 32.1% | `results/WP6/s5_test.json` | `system/K/ablation/without v2x/mean_event_detection_single` | json | 1 |
-| 709 | >= 0.60 | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_K/rule` | json | 1 |
-| 710 | 0.611 | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_K/value` | json | 1 |
-| 711 | MET | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_K/met` | json | 1 |
-| 712 | >= 0.60 | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_C/rule` | json | 1 |
-| 713 | 0.862 | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_C/value` | json | 1 |
-| 714 | MET | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_C/met` | json | 1 |
-| 715 | <= 0.030 and <= S3 + 0.010 | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_K/rule` | json | 1 |
-| 716 | 0.027 | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_K/value` | json | 1 |
-| 717 | MET | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_K/met` | json | 1 |
-| 718 | <= 0.030 and <= S3 + 0.010 | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_C/rule` | json | 1 |
-| 719 | 0.048 | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_C/value` | json | 1 |
-| 720 | NOT MET | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_C/met` | json | 1 |
-| 721 | heldout >= seen - 15 points | `results/WP6/s4_acceptance.json` | `Z3_zero_day_gap_K_points/rule` | json | 1 |
-| 722 | 23.691 | `results/WP6/s4_acceptance.json` | `Z3_zero_day_gap_K_points/value` | json | 1 |
-| 723 | NOT MET | `results/WP6/s4_acceptance.json` | `Z3_zero_day_gap_K_points/met` | json | 1 |
-| 724 | >= 3 of 4 domains: rules >= L3 on held-out types (tick level) | `results/WP6/s4_acceptance.json` | `Z4_physics_ge_l3/rule` | json | 1 |
-| 725 | NOT MET | `results/WP6/s4_acceptance.json` | `Z4_physics_ge_l3/met` | json | 1 |
-| 726 | kept iff K: held-out +3 points and FA +0.5 points at most | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/rule` | json | 1 |
-| 727 | NOT MET | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/met` | json | 1 |
-| 728 | MET | `results/WP7/S1_acceptance.json` | `A1/gps/met` | json | 1 |
-| 729 | MET | `results/WP7/S1_acceptance.json` | `A2/gps/met` | json | 1 |
-| 730 | MET | `results/WP7/S1_acceptance.json` | `A3/gps/met` | json | 1 |
-| 731 | MET | `results/WP7/S1_acceptance.json` | `A1/can/met` | json | 1 |
-| 732 | MET | `results/WP7/S1_acceptance.json` | `A2/can/met` | json | 1 |
-| 733 | MET | `results/WP7/S1_acceptance.json` | `A3/can/met` | json | 1 |
-| 734 | MET | `results/WP7/S1_acceptance.json` | `A1/v2x/met` | json | 1 |
-| 735 | MET | `results/WP7/S1_acceptance.json` | `A2/v2x/met` | json | 1 |
-| 736 | MET | `results/WP7/S1_acceptance.json` | `A3/v2x/met` | json | 1 |
-| 737 | MET | `results/WP7/S1_acceptance.json` | `A1/cross/met` | json | 1 |
-| 738 | MET | `results/WP7/S1_acceptance.json` | `A2/cross/met` | json | 1 |
-| 739 | MET | `results/WP7/S1_acceptance.json` | `A3/cross/met` | json | 1 |
-| 740 | MET | `results/WP7/S1_acceptance.json` | `A1/lidar_interim/met` | json | 1 |
-| 741 | MET | `results/WP7/S1_acceptance.json` | `A2/lidar_interim/met` | json | 1 |
-| 742 | MET | `results/WP7/S1_acceptance.json` | `A3/lidar_interim/met` | json | 1 |
-| 743 | 5/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/captures_detected` | json | 1 |
-| 744 | 0.00% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/test_window_fpr` | json | 1 |
-| 745 | 0 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/false_alerts_per_hour` | json | 1 |
-| 746 | 7/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/captures_detected` | json | 1 |
-| 747 | 0.83% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/test_window_fpr` | json | 1 |
-| 748 | 30 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
-| 749 | 10/11 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/captures_detected` | json | 1 |
-| 750 | 4.85% | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/test_window_fpr` | json | 1 |
-| 751 | 175 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
-| 752 | 99.73% | `results/WP7/S3_registry.json` | `v2_reference/net_accuracy_random_split/value` | curated | 1 |
-| 753 | 99.60% | `results/WP7/S3_registry.json` | `v2_reference/net_macro_f1_random_split/value` | curated | 1 |
-| 754 | 2.9% | `results/WP7/S3_registry.json` | `v2_reference/net_ocsvm_fa/value` | curated | 1 |
-| 755 | 0.0% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_supervised/value` | curated | 1 |
-| 756 | 5.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_ocsvm/value` | curated | 1 |
-| 757 | 1.2% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_supervised/value` | curated | 1 |
-| 758 | 96.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_ocsvm/value` | curated | 1 |
-| 759 | 91.7% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/accuracy` | json | 1 |
-| 760 | 1.90% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/fpr` | json | 1 |
-| 761 | 84.2% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/recall` | json | 1 |
-| 762 | 26.0% | `results/WP6/s5_test.json` | `system/K/tick_recall_attack_ticks` | json | 1 |
-| 763 | 8 | `results/WP7/S3_registry.json` | `exposure/kitti_gps_test_drives/value` | curated | 1 |
-| 764 | 3 | `results/WP7/S3_registry.json` | `exposure/carhacking_test_blocks/value` | curated | 1 |
-| 765 | 4 | `results/WP7/S3_registry.json` | `exposure/d11_test_subsets/value` | curated | 1 |
-| 766 | 6 | `results/WP7/S3_registry.json` | `exposure/d10_cicids2017_test/value` | curated | 1 |
-| 767 | 3 | `results/WP7/S3_registry.json` | `exposure/d23_cse_cic_ids2018/value` | curated | 1 |
-| 768 | 2 | `results/WP7/S3_registry.json` | `exposure/veremi_test/value` | curated | 1 |
-| 769 | 1 | `results/WP7/S3_registry.json` | `exposure/v2aix_test/value` | curated | 1 |
-| 770 | 2 | `results/WP7/S3_registry.json` | `exposure/comma2k19/value` | curated | 1 |
-| 771 | 3 | `results/WP7/S3_registry.json` | `exposure/fusion_composites/value` | curated | 1 |
-| 772 | 23.3% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/attack_window_recall` | json | 1 |
-| 773 | 35.0% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/fa_clean_rate` | json | 1 |
-| 774 | 4.1% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/fa_clean_runs` | json | 1 |
-| 775 | 26% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/worst_drive_fa` | json | 1 |
-| 776 | 0.60 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/mean_window_auc` | json | 1 |
-| 777 | 0.55 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/bound` | json | 1 |
-| 778 | -8.0 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_K` | json | 1 |
-| 779 | -4.6 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_C` | json | 1 |
-| 780 | 7 | `results/WP1/S8_kitti.json` | `deployed/n_drives` | json | 1 |
-| 781 | 490 | `results/WP1/S8_kitti.json` | `n_test_runs` | json | 1 |
-| 782 | 1,375 | `results/WP2/s7_test.json` | `configs/all/clean_windows` | json | 1 |
-| 783 | 0.6 | `results/WP5/s3b_clean.json` | `envs/Mobile/receiver_hours` | json | 1 |
-| 784 | 3.8 | `results/WP5/s3b_clean.json` | `envs/Stationary/receiver_hours` | json | 1 |
-| 785 | 12.6 | `results/WP6/s5_test.json` | `system/K/clean_hours` | json | 1 |
-| 786 | 7 | `results/WP6/s5_test.json` | `system/K/ci_heldout_event/n_vehicle_groups` | json | 1 |
+| 665 | 0.012 | `results/WP3/S9/acceptance.json` | `R1_false_alarms/fa` | json | 1 |
+| 666 | 0.025 | `results/WP3/S9/acceptance.json` | `R1_false_alarms/worst_drive_fa` | json | 1 |
+| 667 | 0.013 | `results/WP3/S9/acceptance.json` | `R1_false_alarms/lodo_mean_fa` | json | 1 |
+| 668 | 0.036 | `results/WP3/S9/acceptance.json` | `R1_false_alarms/lodo_worst_fa` | json | 1 |
+| 669 | stack FA <= 2.5 % at 1 % total budget and worst test drive <= 5 % | `results/WP3/S9/acceptance.json` | `R1_false_alarms/rule` | json | 1 |
+| 670 | MET | `results/WP3/S9/acceptance.json` | `R1_false_alarms/met` | json | 1 |
+| 671 | 0.276 | `results/WP3/S9/acceptance.json` | `R2_targets_pointdrop_intensity/pointdrop` | json | 1 |
+| 672 | 0.516 | `results/WP3/S9/acceptance.json` | `R2_targets_pointdrop_intensity/intensity_spoof` | json | 1 |
+| 673 | 0.873 | `results/WP3/S9/acceptance.json` | `R2_targets_pointdrop_intensity/pointdrop_best_layer_alone` | json | 1 |
+| 674 | PointDrop >= 30 % and IntensitySpoof >= 50 % in the stack at the 1 % total budget (predicted borderline) | `results/WP3/S9/acceptance.json` | `R2_targets_pointdrop_intensity/rule` | json | 1 |
+| 675 | NOT MET | `results/WP3/S9/acceptance.json` | `R2_targets_pointdrop_intensity/met` | json | 1 |
+| 676 | 0.008 | `results/WP3/S9/acceptance.json` | `R3_single_return_phantoms/far_budget_max` | json | 1 |
+| 677 | 0.178 | `results/WP3/S9/acceptance.json` | `R3_single_return_phantoms/near_replace` | json | 1 |
+| 678 | 0.012 | `results/WP3/S9/acceptance.json` | `R3_single_return_phantoms/fa` | json | 1 |
+| 679 | far / budget calibrated phantoms <= FA + 10 points (physics bound); near replace reported | `results/WP3/S9/acceptance.json` | `R3_single_return_phantoms/rule` | json | 1 |
+| 680 | MET | `results/WP3/S9/acceptance.json` | `R3_single_return_phantoms/met` | json | 1 |
+| 681 | 0.062 | `results/WP3/S9/acceptance.json` | `R4_episodes/false_episode_rate` | json | 1 |
+| 682 | 11.000 | `results/WP3/S9/acceptance.json` | `R4_episodes/sensor_fixed_replace_near_detected` | json | 1 |
+| 683 | 21.000 | `results/WP3/S9/acceptance.json` | `R4_episodes/episodes_per_kind` | json | 1 |
+| 684 | 8.000 | `results/WP3/S9/acceptance.json` | `R4_episodes/world_fixed_replace_near_detected` | json | 1 |
+| 685 | false-episode rate <= 10 % and sensor-fixed near replace >= 50 % of the episodes within 3 s; world-fixed reported (predicted not detected after the first scan) | `results/WP3/S9/acceptance.json` | `R4_episodes/rule` | json | 1 |
+| 686 | MET | `results/WP3/S9/acceptance.json` | `R4_episodes/met` | json | 1 |
+| 687 | 0.000 | `results/WP3/S9/acceptance.json` | `R5_every_layer_earns_its_place/L1_largest_loss_when_removed` | json | 1 |
+| 688 | 0.508 | `results/WP3/S9/acceptance.json` | `R5_every_layer_earns_its_place/L2a` | json | 1 |
+| 689 | 0.276 | `results/WP3/S9/acceptance.json` | `R5_every_layer_earns_its_place/L2c` | json | 1 |
+| 690 | 0.171 | `results/WP3/S9/acceptance.json` | `R5_every_layer_earns_its_place/L2d` | json | 1 |
+| 691 | each headline layer, when removed, lowers some physical-attack detection by >= 3 points (predicted: L1 does not on the single-return set) | `results/WP3/S9/acceptance.json` | `R5_every_layer_earns_its_place/rule` | json | 1 |
+| 692 | NOT MET | `results/WP3/S9/acceptance.json` | `R5_every_layer_earns_its_place/met` | json | 1 |
+| 693 | 0.008 | `results/WP3/S9/acceptance.json` | `R6_wp_file_targets/budget_phantoms_50_400` | json | 1 |
+| 694 | 0.008 | `results/WP3/S9/acceptance.json` | `R6_wp_file_targets/near_sparse` | json | 1 |
+| 695 | WP file: 50-400 added points >= 60 % and near sparse > 50 % at 1 % FA (predicted NOT MET: physics bound) | `results/WP3/S9/acceptance.json` | `R6_wp_file_targets/rule` | json | 1 |
+| 696 | NOT MET | `results/WP3/S9/acceptance.json` | `R6_wp_file_targets/met` | json | 1 |
+| 697 | 0.000 | `results/WP3/S9/acceptance.json` | `R7_freeze_reproduces_test_scores/max_abs_diff` | json | 1 |
+| 698 | 0.000 | `results/WP3/S9/acceptance.json` | `R7_freeze_reproduces_test_scores/alarm_differences` | json | 1 |
+| 699 | 2381.000 | `results/WP3/S9/acceptance.json` | `R7_freeze_reproduces_test_scores/replayed_scans` | json | 1 |
+| 700 | 1526.000 | `results/WP3/S9/acceptance.json` | `R7_freeze_reproduces_test_scores/clean_scans` | json | 1 |
+| 701 | frozen domain replayed from raw scans reproduces the stored test per-layer scores and stack score (<= 1e-9, 0 alarm differences) on all clean test scans and the attacked scans of >= 2 test drives | `results/WP3/S9/acceptance.json` | `R7_freeze_reproduces_test_scores/rule` | json | 1 |
+| 702 | MET | `results/WP3/S9/acceptance.json` | `R7_freeze_reproduces_test_scores/met` | json | 1 |
+| 703 | 469.000 | `results/WP3/S9/acceptance.json` | `R8_tests_cache_cost/tests_passed` | json | 1 |
+| 704 | 0.000 | `results/WP3/S9/acceptance.json` | `R8_tests_cache_cost/tests_failed` | json | 1 |
+| 705 | 0.150 | `results/WP3/S9/acceptance.json` | `R8_tests_cache_cost/extra_cache_gb` | json | 1 |
+| 706 | 1.843 | `results/WP3/S9/acceptance.json` | `R8_tests_cache_cost/scoring_s_per_scan` | json | 1 |
+| 707 | full test suite passes, extra cache <= 2 GB, scoring cost per scan reported | `results/WP3/S9/acceptance.json` | `R8_tests_cache_cost/rule` | json | 1 |
+| 708 | MET | `results/WP3/S9/acceptance.json` | `R8_tests_cache_cost/met` | json | 1 |
+| 709 | 0.204 | `results/WP3/S9/acceptance.json` | `V1_combiner_choice/validation_mean_physical_detection` | json | 1 |
+| 710 | survivors of the clean-FA control: max, split | `results/WP3/S9/acceptance.json` | `V1_combiner_choice/rule` | json | 1 |
+| 711 | CHOSEN max | `results/WP3/S9/acceptance.json` | `V1_combiner_choice/verdict` | json | 1 |
+| 712 | -0.012 | `results/WP3/S9/acceptance.json` | `V2_density_part/gain` | json | 1 |
+| 713 | density part kept only if validation mean physical detection +2 points and worst LODO FA +2 points at most | `results/WP3/S9/acceptance.json` | `V2_density_part/rule` | json | 1 |
+| 714 | NOT KEPT (intensity part only) | `results/WP3/S9/acceptance.json` | `V2_density_part/verdict` | json | 1 |
+| 715 | M1-LiDAR closes PARTIAL when the pre-registered predictions of the physics bound hold and every honest limit is stated | `results/WP3/S9/acceptance.json` | `milestone/rule` | json | 1 |
+| 716 | PARTIAL: R2, R5, R6 NOT MET | `results/WP3/S9/acceptance.json` | `milestone/verdict` | json | 1 |
+| 717 | 2.08% | `results/WP6/s5_test.json` | `system/K/fa_tick` | json | 2 |
+| 718 | [1.3, 3.3] | `results/WP6/s5_test.json` | `acceptance/A1_raw_tick_fa/K_ci` | json | 1 |
+| 719 | 6.70% | `results/WP6/s5_test.json` | `system/C/fa_tick` | json | 1 |
+| 720 | [6.0, 7.7] | `results/WP6/s5_test.json` | `acceptance/A1_raw_tick_fa/C_ci` | json | 1 |
+| 721 | 25.4 | `results/WP6/s5_test.json` | `system/K/events_per_hour` | json | 1 |
+| 722 | [13, 46] | `results/WP6/s5_test.json` | `acceptance/A2_events_per_clean_hour/K_ci` | json | 1 |
+| 723 | 31.0 | `results/WP6/s5_test.json` | `system/C/events_per_hour` | json | 1 |
+| 724 | [29, 33] | `results/WP6/s5_test.json` | `acceptance/A2_events_per_clean_hour/C_ci` | json | 1 |
+| 725 | 54.1 | `results/WP6/s5_test.json` | `system/K/correlator_off/events_per_hour` | json | 1 |
+| 726 | 119.9 | `results/WP6/s5_test.json` | `system/C/correlator_off/events_per_hour` | json | 1 |
+| 727 | 21.6 | `results/WP6/s5_test.json` | `system/K/clean_response_per_hour/WARN` | json | 1 |
+| 728 | 3.8 | `results/WP6/s5_test.json` | `system/K/clean_response_per_hour/DEGRADE` | json | 1 |
+| 729 | 0.0 | `results/WP6/s5_test.json` | `system/K/clean_response_per_hour/SAFE_STOP` | json | 1 |
+| 730 | 13.4 | `results/WP6/s5_test.json` | `system/C/clean_response_per_hour/WARN` | json | 1 |
+| 731 | 16.3 | `results/WP6/s5_test.json` | `system/C/clean_response_per_hour/DEGRADE` | json | 1 |
+| 732 | 1.2 | `results/WP6/s5_test.json` | `system/C/clean_response_per_hour/SAFE_STOP` | json | 1 |
+| 733 | 60.2% | `results/WP6/s5_test.json` | `system/K/mean_event_detection_single` | json | 2 |
+| 734 | [45, 73] | `results/WP6/s5_test.json` | `system/K/ci_single_event/mean` | json | 1 |
+| 735 | 96.0% | `results/WP6/s5_test.json` | `system/C/mean_event_detection_single` | json | 1 |
+| 736 | 58.8% | `results/WP6/s5_test.json` | `system/K/mean_event_detection_heldout` | json | 1 |
+| 737 | [44, 71] | `results/WP6/s5_test.json` | `system/K/ci_heldout_event/mean` | json | 1 |
+| 738 | 90.6% | `results/WP6/s5_test.json` | `system/C/mean_event_detection_heldout` | json | 1 |
+| 739 | 86.7% | `results/WP6/s5_test.json` | `system/K/blame_single_pooled/correct` | json | 1 |
+| 740 | 13.2% | `results/WP6/s5_test.json` | `system/K/blame_single_pooled/wrong` | json | 1 |
+| 741 | 0.1% | `results/WP6/s5_test.json` | `system/K/blame_single_pooled/undecided` | json | 1 |
+| 742 | 85.5% | `results/WP6/s5_test.json` | `system/C/blame_single_pooled/correct` | json | 1 |
+| 743 | 13.7% | `results/WP6/s5_test.json` | `system/C/blame_single_pooled/wrong` | json | 1 |
+| 744 | 0.8% | `results/WP6/s5_test.json` | `system/C/blame_single_pooled/undecided` | json | 1 |
+| 745 | 10,467 | `results/WP6/s5_test.json` | `system/K/explanations/with_explanation` | json | 1 |
+| 746 | 10,467 | `results/WP6/s5_test.json` | `system/K/explanations/events` | json | 1 |
+| 747 | 18,454 | `results/WP6/s5_test.json` | `system/C/explanations/with_explanation` | json | 1 |
+| 748 | 18,454 | `results/WP6/s5_test.json` | `system/C/explanations/events` | json | 1 |
+| 749 | 56% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/gps` | json | 1 |
+| 750 | 64.5% | `results/WP6/s5_test.json` | `system/K/ablation/without gps/mean_event_detection_single` | json | 1 |
+| 751 | 33% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/cross` | json | 1 |
+| 752 | 60.4% | `results/WP6/s5_test.json` | `system/K/ablation/without cross/mean_event_detection_single` | json | 1 |
+| 753 | 10% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/lidar` | json | 1 |
+| 754 | 68.5% | `results/WP6/s5_test.json` | `system/K/ablation/without lidar/mean_event_detection_single` | json | 2 |
+| 755 | 69% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/can` | json | 1 |
+| 756 | 50.3% | `results/WP6/s5_test.json` | `system/K/ablation/without can/mean_event_detection_single` | json | 1 |
+| 757 | 44% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/network` | json | 1 |
+| 758 | 63.6% | `results/WP6/s5_test.json` | `system/K/ablation/without network/mean_event_detection_single` | json | 1 |
+| 759 | 79% | `results/WP6/s5_test.json` | `system/K/event_detection_by_attacked_domain/v2x` | json | 1 |
+| 760 | 32.1% | `results/WP6/s5_test.json` | `system/K/ablation/without v2x/mean_event_detection_single` | json | 1 |
+| 761 | >= 0.60 | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_K/rule` | json | 1 |
+| 762 | 0.611 | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_K/value` | json | 1 |
+| 763 | MET | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_K/met` | json | 1 |
+| 764 | >= 0.60 | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_C/rule` | json | 1 |
+| 765 | 0.862 | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_C/value` | json | 1 |
+| 766 | MET | `results/WP6/s4_acceptance.json` | `Z1_heldout_detection_C/met` | json | 1 |
+| 767 | <= 0.030 and <= S3 + 0.010 | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_K/rule` | json | 1 |
+| 768 | 0.027 | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_K/value` | json | 1 |
+| 769 | MET | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_K/met` | json | 1 |
+| 770 | <= 0.030 and <= S3 + 0.010 | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_C/rule` | json | 1 |
+| 771 | 0.048 | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_C/value` | json | 1 |
+| 772 | NOT MET | `results/WP6/s4_acceptance.json` | `Z2_fa_tick_C/met` | json | 1 |
+| 773 | heldout >= seen - 15 points | `results/WP6/s4_acceptance.json` | `Z3_zero_day_gap_K_points/rule` | json | 1 |
+| 774 | 23.691 | `results/WP6/s4_acceptance.json` | `Z3_zero_day_gap_K_points/value` | json | 1 |
+| 775 | NOT MET | `results/WP6/s4_acceptance.json` | `Z3_zero_day_gap_K_points/met` | json | 1 |
+| 776 | >= 3 of 4 domains: rules >= L3 on held-out types (tick level) | `results/WP6/s4_acceptance.json` | `Z4_physics_ge_l3/rule` | json | 1 |
+| 777 | NOT MET | `results/WP6/s4_acceptance.json` | `Z4_physics_ge_l3/met` | json | 1 |
+| 778 | kept iff K: held-out +3 points and FA +0.5 points at most | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/rule` | json | 1 |
+| 779 | NOT MET | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/met` | json | 1 |
+| 780 | MET | `results/WP7/S1_acceptance.json` | `A1/gps/met` | json | 1 |
+| 781 | MET | `results/WP7/S1_acceptance.json` | `A2/gps/met` | json | 1 |
+| 782 | MET | `results/WP7/S1_acceptance.json` | `A3/gps/met` | json | 1 |
+| 783 | MET | `results/WP7/S1_acceptance.json` | `A1/can/met` | json | 1 |
+| 784 | MET | `results/WP7/S1_acceptance.json` | `A2/can/met` | json | 1 |
+| 785 | MET | `results/WP7/S1_acceptance.json` | `A3/can/met` | json | 1 |
+| 786 | MET | `results/WP7/S1_acceptance.json` | `A1/v2x/met` | json | 1 |
+| 787 | MET | `results/WP7/S1_acceptance.json` | `A2/v2x/met` | json | 1 |
+| 788 | MET | `results/WP7/S1_acceptance.json` | `A3/v2x/met` | json | 1 |
+| 789 | MET | `results/WP7/S1_acceptance.json` | `A1/cross/met` | json | 1 |
+| 790 | MET | `results/WP7/S1_acceptance.json` | `A2/cross/met` | json | 1 |
+| 791 | MET | `results/WP7/S1_acceptance.json` | `A3/cross/met` | json | 1 |
+| 792 | MET | `results/WP7/S1_acceptance.json` | `A1/lidar_interim/met` | json | 1 |
+| 793 | MET | `results/WP7/S1_acceptance.json` | `A2/lidar_interim/met` | json | 1 |
+| 794 | MET | `results/WP7/S1_acceptance.json` | `A3/lidar_interim/met` | json | 1 |
+| 795 | 5/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/captures_detected` | json | 1 |
+| 796 | 0.00% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/test_window_fpr` | json | 1 |
+| 797 | 0 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/false_alerts_per_hour` | json | 1 |
+| 798 | 7/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/captures_detected` | json | 1 |
+| 799 | 0.83% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/test_window_fpr` | json | 1 |
+| 800 | 30 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
+| 801 | 10/11 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/captures_detected` | json | 1 |
+| 802 | 4.85% | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/test_window_fpr` | json | 1 |
+| 803 | 175 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
+| 804 | 99.73% | `results/WP7/S3_registry.json` | `v2_reference/net_accuracy_random_split/value` | curated | 1 |
+| 805 | 99.60% | `results/WP7/S3_registry.json` | `v2_reference/net_macro_f1_random_split/value` | curated | 1 |
+| 806 | 2.9% | `results/WP7/S3_registry.json` | `v2_reference/net_ocsvm_fa/value` | curated | 1 |
+| 807 | 0.0% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_supervised/value` | curated | 1 |
+| 808 | 5.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_ocsvm/value` | curated | 1 |
+| 809 | 1.2% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_supervised/value` | curated | 1 |
+| 810 | 96.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_ocsvm/value` | curated | 1 |
+| 811 | 91.7% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/accuracy` | json | 1 |
+| 812 | 1.90% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/fpr` | json | 1 |
+| 813 | 84.2% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/recall` | json | 1 |
+| 814 | 26.0% | `results/WP6/s5_test.json` | `system/K/tick_recall_attack_ticks` | json | 1 |
+| 815 | 8 | `results/WP7/S3_registry.json` | `exposure/kitti_gps_test_drives/value` | curated | 1 |
+| 816 | 3 | `results/WP7/S3_registry.json` | `exposure/carhacking_test_blocks/value` | curated | 1 |
+| 817 | 4 | `results/WP7/S3_registry.json` | `exposure/d11_test_subsets/value` | curated | 1 |
+| 818 | 6 | `results/WP7/S3_registry.json` | `exposure/d10_cicids2017_test/value` | curated | 1 |
+| 819 | 3 | `results/WP7/S3_registry.json` | `exposure/d23_cse_cic_ids2018/value` | curated | 1 |
+| 820 | 2 | `results/WP7/S3_registry.json` | `exposure/veremi_test/value` | curated | 1 |
+| 821 | 1 | `results/WP7/S3_registry.json` | `exposure/v2aix_test/value` | curated | 1 |
+| 822 | 2 | `results/WP7/S3_registry.json` | `exposure/comma2k19/value` | curated | 1 |
+| 823 | 3 | `results/WP7/S3_registry.json` | `exposure/fusion_composites/value` | curated | 1 |
+| 824 | 23.3% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/attack_window_recall` | json | 1 |
+| 825 | 35.0% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/fa_clean_rate` | json | 1 |
+| 826 | 4.1% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/fa_clean_runs` | json | 1 |
+| 827 | 26% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/worst_drive_fa` | json | 1 |
+| 828 | 0.60 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/mean_window_auc` | json | 1 |
+| 829 | 0.55 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/bound` | json | 1 |
+| 830 | -8.0 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_K` | json | 1 |
+| 831 | -4.6 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_C` | json | 1 |
+| 832 | 7 | `results/WP1/S8_kitti.json` | `deployed/n_drives` | json | 1 |
+| 833 | 490 | `results/WP1/S8_kitti.json` | `n_test_runs` | json | 1 |
+| 834 | 1,375 | `results/WP2/s7_test.json` | `configs/all/clean_windows` | json | 1 |
+| 835 | 0.6 | `results/WP5/s3b_clean.json` | `envs/Mobile/receiver_hours` | json | 1 |
+| 836 | 3.8 | `results/WP5/s3b_clean.json` | `envs/Stationary/receiver_hours` | json | 1 |
+| 837 | 12.6 | `results/WP6/s5_test.json` | `system/K/clean_hours` | json | 1 |
+| 838 | 7 | `results/WP6/s5_test.json` | `system/K/ci_heldout_event/n_vehicle_groups` | json | 1 |
