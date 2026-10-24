@@ -11,13 +11,13 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | done (M1-CAN partial) | APPROVED | - | 2026-10-22 | M1-CAN closed PARTIAL, see reports/M1_CAN.md; frozen output can/domain.py |
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
-| WP5 V2X | S3b | REVIEW | worker sonnet (medium, T2) | 2026-10-24 | V2AIX real CAMs: B-calibrated FA 1.15% / 0.97% per message (VeReMi calibration 92-95%), injected mean 77.3 / 80.0%, range ok, appearance fails; PARTIAL, see reports/WP5_S3b.md |
+| WP5 V2X | done (M1-V2X partial + V2AIX addendum) | APPROVED | - | 2026-10-24 | S3b APPROVED partial: real-CAM FA 92-95% with VeReMi calibration, ~1% recalibrated |
 | WP6 Cross-domain | S5b | TODO (after M1-LiDAR) | - | 2026-10-24 | S5 / M2 closed NOT MET (1 of 7 rules); addendum S5b after M1-LiDAR |
 | WP7 System | S2 | TODO (waits for M1-LiDAR + M2) | - | 2026-10-24 | S1 + S1b APPROVED |
 
 ## Overall progress (orchestrator updates this at every approval)
 
-**Overall: 49 / 59 steps approved = 83%** (updated 2026-10-24; WP6 S5b addendum added)
+**Overall: 50 / 59 steps approved = 85%** (updated 2026-10-24)
 
 | WP | Steps counted | Approved | % |
 |---|---|---|---|
@@ -26,7 +26,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | S0-S7 (8) | 8 | 100 (M1-CAN partial) |
 | WP3 LiDAR | S1-S7, S9 (8; S0, S8 optional) | 3 | 38 |
 | WP4 Network | S0-S7 (8) | 8 | 100 (M1-NET partial) |
-| WP5 V2X | S0, S0b, S0c, S1, S1b, S2-S6, S3b (11; S7 optional) | 10 | 91 |
+| WP5 V2X | S0, S0b, S0c, S1, S1b, S2-S6, S3b (11; S7 optional) | 11 | 100 (M1-V2X partial + V2AIX addendum) |
 | WP6 Cross-domain | S1, S2, S2b, S3-S5, S5b (7) | 6 | 86 |
 | WP7 System | S1-S4 (4) | 1 | 25 |
 
