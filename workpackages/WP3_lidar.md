@@ -48,3 +48,4 @@ unless S8 adds a camera / radar check.
 
 ## Progress
 - 2026-10-22 S1 done, REVIEW: v2 descriptor and all v2 baseline numbers reproduced exactly on the v3 layer (A1-A7 MET). See reports/WP3_S1.md, notes/WP3_brief.md.
+- 2026-10-24 S4 done, REVIEW: L2a density/intensity (tiles), see reports/WP3_S4.md

@@ -176,3 +176,67 @@ construction (budget_add == budget). No rng draw is added, so placements are ide
 - S2b: lidar/singlereturn.py, phantom(single_return=True): add == replace. VAL: L1 far add 60.0 -> 1.5 %, near add v2 86.2 -> 8.7 %, box cloud v2 65.1 -> 25.7 / L1 45.6 -> 21.0. Far-add was a multi-return artefact (confirmed). Predictions: L1 far-add MET, box cloud within 5 pts NOT MET, v2 add within 10 NOT MET.
 - S3 choice on val: grid ground h0 0.30 (frac 0.42, leak 0.8 %), cluster e0 0.4 e1 0.0 (all settings 57-64 % match; e1>0 only increases oversize). Sanity: a MET (60.4/63.8), b MET (0.13-0.19 m), c MET (1.6 %), d MET (ratio 1.09), e NOT MET (62 % far / 43 % near add), runtime 0.68 s/scan single process.
 - Pitfalls: query_ball_point with per-point radius is too slow (6M neighbours/scan): use shell-wise query_pairs; multiprocessing under `timeout` in Git Bash fails (WinError 5); pgrep is missing in Git Bash.
+
+## 2026-10-22 S4 L2a density / intensity vs range per object - ACCEPTANCE RULE (written before any S4 result)
+
+Supervisor instructions (S3 approved): evaluation attacks = single-return calibrated phantoms (replace == add; budget; near 5-15 / far 15-40 m;
+onset / sustained / persistent) + PointDrop + IntensitySpoof. Old multi-return add and the box cloud are v2-comparison rows only, labelled "physically
+impossible on a single-return sensor" (box cloud shown single-return enforced, as in S2b). Physics stated plainly: a phantom made with the calibrated
+generator matches real density BY CONSTRUCTION at equal angular size, so L2a can only catch uncalibrated / crude spoofs (dense far, sparse near, wrong
+intensity) and removal / intensity attacks; it cannot see a density-matched phantom. Not seeing it is the expected, honest result.
+
+### Method (fixed now)
+- Object = row of the S3 object table. Sensor grid cells of an object (angular footprint): slots = (ring_max - ring_min + 1) * (az_span / 0.1728 + 1)
+  (HDL-64E manual: 64 lasers, 0.1728 deg azimuth step at 10 Hz; 0.08-0.35 deg over 5-20 Hz; vertical ~0.4 deg between lasers).
+- Expected count E = slots * p(range), p from the S2 calibrated return probability (calibration_beta.npz, 0.59-0.73). Density residual
+  u = log((n + 1) / (E + 1)). Intensity statistic = int_mean. Both are turned into an improbability score by the empirical conditional CDF of CLEAN
+  objects (fitted on clean train drives, cells = range bin x slots bin; object filter n >= nmin, 4 <= range <= 60 m): dens_hi = -log10(1 - F) (too dense),
+  dens_lo = -log10(F) (too sparse), int_hi, int_lo likewise. Scan score = max over objects (per-object scores kept for object-level detection).
+- Layers (common.layer.Layer, domain "lidar", layer_id "L2a"): dens_hi, dens_lo, int_hi, int_lo, union = max over the validation-ECDFs of the four
+  scan scores (like L1Union). Threshold = 1 % of clean validation scans, tie-safe (Layer.calibrate). Object-level detection uses the same threshold on the
+  object score (the injected object = the object holding the most phantom points, >= 50 % of them).
+
+### Choices on VALIDATION only (3 drives; fixed procedure)
+1. Near-phantom merging: segmentation variants S3 (e0 = 0.4 m), B (tight link 0.25 m below 20 m range), C (0.15 m below 20 m), D (B + points above 2.2 m
+   ignored). Measured on validation phantoms (stride 12, calibrated, replace + budget, near + far) with the S3 definition of "appears as ONE object".
+   Adopt the variant with the highest near one-object rate if it gains >= 10 points over S3 AND the far rate loses <= 5 points AND car-like objects per scan stay
+   within +-25 % of S3 and oversize clusters <= 5 %; otherwise keep S3 (no further segmentation work).
+2. nmin in {10, 20, 40} (object filter): maximise the MEAN validation detection over {PointDrop, IntensitySpoof, box cloud (single-return), 4 calibrated
+   phantoms} at 1 % scan FA (ties -> larger nmin).
+3. Thresholds: val-only vs LODO. LODO (clean train+val drives, fold = drive, object model refitted per fold, pooled out-of-fold scan scores -> tie-safe 1 %
+   threshold) is adopted as primary if, on the pooled out-of-fold scores at the pooled threshold, the worst drive FA exceeds 3 % (3 x budget); otherwise the
+   val-only threshold stays primary. Both are reported on test.
+
+### Acceptance (test, ONE run; FA = clean test scans)
+- A1 FA: test scan FA of the L2a union <= 2.5 % at the chosen operating point; per-drive FA reported (spread stated, no retune).
+- A2 crude / removal attacks (the layer's job): IntensitySpoof >= 50 %, PointDrop >= 30 %, box cloud (single-return) >= 50 % at 1 % FA (scan level).
+- A3 physics bound: calibrated replace / budget phantoms (near + far) at most FA + 10 points (matched density). A higher number is treated as a generator
+  artefact (unconditional 1.5x density gap) and explained, not as a success. WP-file targets (50-400 added points >= 60 %, near sparse > 50 %) are
+  predicted NOT MET for L2a alone (physics bound) and will be reported as such.
+- A4 object level: for phantom attacks the caught-object rate is reported next to the scan rate (no threshold).
+- A5 harness ablation on top of L1 (L1 union, each L2a part, union, L1 + L2a, via common/evaluate.py, noisy_or combiner chosen now): the combination must
+  not lose more than 3 points of detection against the better single layer on any attack; FA of the combination reported.
+- A6 persistent episodes (calibrated budget / replace near + far, 30 scans, 21 per class on test; v2 rolling-log-odds rule W = 10, threshold = 99th percentile of
+  the statistic on clean validation sequences): detection within 3 s and median delay reported with the false-episode rate on clean test sequences. Predicted at
+  chance for density-matched phantoms.
+- A7 tests pass (full suite), cache <= 3 GB, L2a scoring cost per scan reported.
+
+### 2026-10-22 S4 choice 1 result (results/WP3/S4/variants.json, validation, 47 scans, 94 phantoms per band)
+Near one-object: S3 53.2 %, B 58.5, C 62.8, D 59.6; far: 51.1 / 48.9 / 52.1 / 48.9. Best gain (C) = +9.6 points < 10 required: rule => S3 kept (variant_choice.json). Merging of near phantoms stays open (documented miss); L2a works on the angular footprint of whatever cluster results.
+
+### 2026-10-22 S4 dev round 1 (validation; results/WP3/S4/dev.json, first version) - model-form fix
+First dev run: the empirical-tail score is capped at ~log10(2n) per cell and many CLEAN validation scans reach the cap (val objects outside the train range), so the scan maxima tie at the cap and the 1 % threshold cannot separate: IntensitySpoof 1 % / PointDrop 1.6 % / phantoms 0.5-1 % (= FA) for nmin 10, 20; IntensitySpoof 61 % only for nmin 40. Fix (validation-only reasoning, no test table read): beyond the reference extremes the score keeps growing with the excess in units of the cell inter-quartile range (density.tail_scores). nmin and LODO decisions re-run with the same pre-declared rules.
+
+### 2026-10-22 S4 dev round 2 (validation) - clusters are the wrong unit; tiles (split by angular footprint)
+After tail extension + n-conditioned intensity (nmin 10/20/40 on S3 clusters): IntensitySpoof 18 / 17 / 49 %, PointDrop 1 %, box cloud 5-6 %, phantoms 0.5-1 % at FA 0.7 %. Diagnosis (tmp debug on val): the injected object is a MERGED giant cluster (main phantom object: 1,100-25,000 points, ring span of the whole scene) for 7 of 12 inspected near phantoms and for box clouds, so object footprint scores are meaningless; sector attacks (PointDrop, IntensitySpoof) change a tiny part of a giant cluster. Supervisor allows splitting by angular footprint: L2a unit becomes the TILE = (cluster, 2 deg azimuth, group of 8 lasers (3.2 deg), 2 m range cell), >= 8 returns. Fixed slots per tile (8 x 2/0.1728), E = slots x p(range), same conditional-ECDF model. The segmentation-variant choice (S3 kept) is unchanged; the tile is applied on top of the S3 clusters. The object/cluster results above (dev round 1-2) are kept as "cluster-level L2a" in the report. Cache rebuilt as ../data_extra/cache_v3/WP3/S4/S3_t (pickles with objs + tiles); old S4/S3 kept for the cluster-level numbers. Nothing from test used.
+
+### 2026-10-22/24 S4 dev rounds 3-4 (validation; results/WP3/S4/dev.json, logs/dev3.log, dev4.log) - FROZEN design before the test build
+Round 3 (tiles, max only, tile nmin 8/16/32): IntensitySpoof 8 %, PointDrop 1 %, box cloud 6 %, phantoms ~1 % (FA 0.7 %). Max over ~1500 tiles per scan is dominated by clean outliers; a sector attack moves many tiles a little. Round 4 adds the count statistics cnt_* (number of tiles with improbability >= 2, ie. p < 1 %) to the union (four max + four counts, 8 stats):
+val detection (1 % scan budget, nmin 8 / 16 / 32): IntensitySpoof 48.6 / 38.4 / 22.7 %, PointDrop 1.1 / 0.5 / 1.1 %, box cloud 4.3 / 3.8 / 3.8 %, phantoms 0.5-1.6 % (= FA), multi-return add near ~21 % (comparison). FA_val 0.7-0.9 %. => nmin = 8 (rule: highest mean of the 7 choice attacks).
+Why box cloud and PointDrop stay low: the box cloud spreads <= 1500 points over a 4 x 1.8 x 1.5 m volume (several range cells, ~8-100 returns per 2 deg x 3.2 deg tile) - per tile not denser than a real wall; PointDrop removes returns so thin tiles fall below the 8-return validity threshold and vanish instead of looking sparse (selection effect).
+LODO decision: pooled OOF FA 0.86 %, worst drive 13.6 % (> 3 %) => primary threshold = LODO (rule). Design frozen; test attack tables built next (att_test, ep_test), then ONE final run.
+### Sat Oct 24 08:33:12 WCAST 2026 S4 VERDICT run started (test, once)
+Run 1 crashed (KeyError cnt_* in tile-level code, before any output written); fixed object_raw to use the four per-tile max statistics only (counts exist only per scan); rerun of the same deterministic pipeline.
+
+### 2026-10-24 S4 VERDICT (test once; results/WP3/S4/final.json, S4_tables.md, reports/WP3_S4.md)
+LODO primary: clean test FA 1.63 % (A1 MET). IntensitySpoof 56.5 (MET), PointDrop 1.2 and box cloud 3.9 (NOT MET), calibrated phantoms 1.0-1.2 % (A3 MET, physics bound), multi-return add near 29.2 (comparison). Tile-level phantom detection 0.0 %. Episodes at chance (false-episode rate 16.7 % vs 0-5/21 detected). Val-only threshold FA 20.4 % on test (count statistics drift). Harness (val-only layer, pre-declared) A5 NOT MET. Pitfalls: giant merged clusters; tiles lose the attacked region when removal drops them below 8 returns; background launch in Git Bash needs nohup ... & in a single call.

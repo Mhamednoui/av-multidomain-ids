@@ -1,0 +1,172 @@
+{
+ "name": "harness_L1_L2a",
+ "budget": 0.01,
+ "layers": {
+  "L1": {
+   "threshold": 0.9891304347826088,
+   "budget": 0.01,
+   "false_alarm_rate": 0.016307893020221786,
+   "detection": 0.10043572984749455,
+   "detection_by_attack": {
+    "IntensitySpoof": 0.013725490196078431,
+    "PointDrop": 0.013725490196078431,
+    "cmp_boxcloud": 0.1607843137254902,
+    "cmp_mradd_far": 0.6254901960784314,
+    "cmp_mradd_near": 0.013725490196078431,
+    "ph_budget_far": 0.01764705882352941,
+    "ph_budget_near": 0.013725490196078431,
+    "ph_replace_far": 0.03137254901960784,
+    "ph_replace_near": 0.013725490196078431
+   },
+   "auc": 0.5584152991485788,
+   "delay": {
+    "n_segments": 510,
+    "detected_fraction": 0.6980392156862745,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 6123,
+   "n_test_attack": 4590
+  },
+  "L2a": {
+   "threshold": 0.9818840579710146,
+   "budget": 0.01,
+   "false_alarm_rate": 0.2035225048923679,
+   "detection": 0.2814814814814815,
+   "detection_by_attack": {
+    "IntensitySpoof": 0.6803921568627451,
+    "PointDrop": 0.16666666666666666,
+    "cmp_boxcloud": 0.22745098039215686,
+    "cmp_mradd_far": 0.22549019607843138,
+    "cmp_mradd_near": 0.4392156862745098,
+    "ph_budget_far": 0.20392156862745098,
+    "ph_budget_near": 0.1980392156862745,
+    "ph_replace_far": 0.2019607843137255,
+    "ph_replace_near": 0.19019607843137254
+   },
+   "auc": 0.5518421879152473,
+   "delay": {
+    "n_segments": 510,
+    "detected_fraction": 0.7901960784313725,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 6123,
+   "n_test_attack": 4590
+  }
+ },
+ "ablation": {
+  "all": {
+   "threshold": 0.7417575005264614,
+   "budget": 0.01,
+   "false_alarm_rate": 0.21330724070450097,
+   "detection": 0.3542483660130719,
+   "detection_by_attack": {
+    "IntensitySpoof": 0.6647058823529411,
+    "PointDrop": 0.17647058823529413,
+    "cmp_boxcloud": 0.3411764705882353,
+    "cmp_mradd_far": 0.7176470588235294,
+    "cmp_mradd_near": 0.4372549019607843,
+    "ph_budget_far": 0.21764705882352942,
+    "ph_budget_near": 0.20784313725490197,
+    "ph_replace_far": 0.22549019607843138,
+    "ph_replace_near": 0.2
+   },
+   "auc": 0.5938842203548086,
+   "delay": {
+    "n_segments": 510,
+    "detected_fraction": 0.9411764705882353,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 6123,
+   "n_test_attack": 4590,
+   "method": "noisy_or",
+   "method_selection": {}
+  },
+  "only_L1": {
+   "threshold": 0.9891304347826088,
+   "budget": 0.01,
+   "false_alarm_rate": 0.016307893020221786,
+   "detection": 0.10043572984749455,
+   "detection_by_attack": {
+    "IntensitySpoof": 0.013725490196078431,
+    "PointDrop": 0.013725490196078431,
+    "cmp_boxcloud": 0.1607843137254902,
+    "cmp_mradd_far": 0.6254901960784314,
+    "cmp_mradd_near": 0.013725490196078431,
+    "ph_budget_far": 0.01764705882352941,
+    "ph_budget_near": 0.013725490196078431,
+    "ph_replace_far": 0.03137254901960784,
+    "ph_replace_near": 0.013725490196078431
+   },
+   "auc": 0.5584152991485788,
+   "delay": {
+    "n_segments": 510,
+    "detected_fraction": 0.6980392156862745,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 6123,
+   "n_test_attack": 4590
+  },
+  "only_L2a": {
+   "threshold": 0.9818840579710146,
+   "budget": 0.01,
+   "false_alarm_rate": 0.2035225048923679,
+   "detection": 0.2814814814814815,
+   "detection_by_attack": {
+    "IntensitySpoof": 0.6803921568627451,
+    "PointDrop": 0.16666666666666666,
+    "cmp_boxcloud": 0.22745098039215686,
+    "cmp_mradd_far": 0.22549019607843138,
+    "cmp_mradd_near": 0.4392156862745098,
+    "ph_budget_far": 0.20392156862745098,
+    "ph_budget_near": 0.1980392156862745,
+    "ph_replace_far": 0.2019607843137255,
+    "ph_replace_near": 0.19019607843137254
+   },
+   "auc": 0.5518421879152473,
+   "delay": {
+    "n_segments": 510,
+    "detected_fraction": 0.7901960784313725,
+    "median_delay_s": 0.0,
+    "mean_delay_s": 0.0
+   },
+   "n_test": 6123,
+   "n_test_attack": 4590
+  }
+ },
+ "layer_names": [
+  "L1",
+  "L2a"
+ ],
+ "combined": {
+  "threshold": 0.7417575005264614,
+  "budget": 0.01,
+  "false_alarm_rate": 0.21330724070450097,
+  "detection": 0.3542483660130719,
+  "detection_by_attack": {
+   "IntensitySpoof": 0.6647058823529411,
+   "PointDrop": 0.17647058823529413,
+   "cmp_boxcloud": 0.3411764705882353,
+   "cmp_mradd_far": 0.7176470588235294,
+   "cmp_mradd_near": 0.4372549019607843,
+   "ph_budget_far": 0.21764705882352942,
+   "ph_budget_near": 0.20784313725490197,
+   "ph_replace_far": 0.22549019607843138,
+   "ph_replace_near": 0.2
+  },
+  "auc": 0.5938842203548086,
+  "delay": {
+   "n_segments": 510,
+   "detected_fraction": 0.9411764705882353,
+   "median_delay_s": 0.0,
+   "mean_delay_s": 0.0
+  },
+  "n_test": 6123,
+  "n_test_attack": 4590,
+  "method": "noisy_or",
+  "method_selection": {}
+ }
+}

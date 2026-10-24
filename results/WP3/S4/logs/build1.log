@@ -1,0 +1,27 @@
+26 jobs {'variant': 'S3', 'params': {}, 'reason': 'best near one-object rate C 62.8% vs S3 53.2% = +9.6 points < 10 required: S3 kept (rule written before)'}
+clean 0029 430 373s cache 0.52 GB
+clean 0070 420 505s cache 0.53 GB
+clean 0028 430 722s cache 0.54 GB
+clean 0019 481 763s cache 0.54 GB
+clean 0015 297 784s cache 0.55 GB
+clean 0011 233 1097s cache 0.55 GB
+clean 0095 268 1463s cache 0.55 GB
+clean 0106 227 1638s cache 0.56 GB
+clean 0039 395 1648s cache 0.56 GB
+clean 0027 188 1936s cache 0.56 GB
+att_val 0011 702 1994s cache 0.58 GB
+clean 0005 154 2046s cache 0.58 GB
+clean 0013 144 2232s cache 0.58 GB
+clean 0035 131 2302s cache 0.58 GB
+clean 0017 114 2433s cache 0.59 GB
+clean 0001 108 2576s cache 0.59 GB
+clean 0046 125 2636s cache 0.59 GB
+clean 0113 87 2784s cache 0.59 GB
+clean 0079 100 2789s cache 0.59 GB
+att_val 0027 567 2879s cache 0.60 GB
+att_val 0035 396 2895s cache 0.61 GB
+clean 0020 86 2937s cache 0.61 GB
+clean 0060 78 2942s cache 0.61 GB
+clean 0048 22 2972s cache 0.61 GB
+clean 0002 77 2994s cache 0.61 GB
+clean 0052 78 3014s cache 0.61 GB

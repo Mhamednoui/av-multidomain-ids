@@ -66,7 +66,7 @@ def eps_of(rng_pts, e0, e1):
     return e0 + e1 * rng_pts
 
 
-def cluster(xyz, rho, e0, e1, min_pts, shell=10.0):
+def cluster(xyz, rho, e0, e1, min_pts, shell=10.0, e_near=0.0, r_near=20.0):
     """Connected components with a range-dependent link radius; labels of points in clusters with >= min_pts points, else -1.
     Links: all pairs closer than e0 (any range) plus, inside each 10 m range shell, pairs closer than eps(upper edge of the
     shell) = e0 + e1 * r (the radius grows with range, one tree per shell keeps the pair count small)."""
@@ -82,6 +82,10 @@ def cluster(xyz, rho, e0, e1, min_pts, shell=10.0):
                 if len(pr):
                     edges.append(idx[pr])
     pairs = np.vstack(edges)
+    if e_near > 0:      # S4: tighter link between two points that are both near (dense returns, avoids merging with structure)
+        d = np.linalg.norm(xyz[pairs[:, 0]] - xyz[pairs[:, 1]], axis=1)
+        far = np.maximum(rho[pairs[:, 0]], rho[pairs[:, 1]]) >= r_near
+        pairs = pairs[far | (d <= e_near)]
     _, lab = connected_components(coo_matrix((np.ones(len(pairs)), (pairs[:, 0], pairs[:, 1])), shape=(n, n)), directed=False)
     size = np.bincount(lab)
     return np.where(size[lab] >= min_pts, lab, -1)
@@ -127,7 +131,8 @@ def segment(pts, table, params=None, return_labels=False):
     if len(sel) < prm["min_pts"]:
         out = pd.DataFrame(columns=COLUMNS)
         return (out, labels, h) if return_labels else out
-    lab = cluster(pts[sel, :3].astype(np.float64), rho_xy[sel], prm["e0"], prm["e1"], prm["min_pts"])
+    lab = cluster(pts[sel, :3].astype(np.float64), rho_xy[sel], prm["e0"], prm["e1"], prm["min_pts"],
+                  e_near=prm.get("e_near", 0.0), r_near=prm.get("r_near", 20.0))
     keep = lab >= 0
     sel, lab = sel[keep], lab[keep]
     asg = table.assign(pts)

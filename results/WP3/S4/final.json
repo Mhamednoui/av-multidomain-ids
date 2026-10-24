@@ -1,0 +1,914 @@
+{
+ "nmin": 8,
+ "primary": "lodo",
+ "dev": {
+  "nmin": {
+   "8": {
+    "IntensitySpoof": 0.4864864864864865,
+    "PointDrop": 0.010810810810810811,
+    "cmp_boxcloud": 0.043243243243243246,
+    "cmp_mradd_far": 0.03783783783783784,
+    "cmp_mradd_near": 0.20540540540540542,
+    "ph_budget_far": 0.005405405405405406,
+    "ph_budget_near": 0.005405405405405406,
+    "ph_replace_far": 0.005405405405405406,
+    "ph_replace_near": 0.016216216216216217,
+    "FA_val": 0.009057971014492754,
+    "mean_choice": 0.08185328185328185
+   },
+   "16": {
+    "IntensitySpoof": 0.3837837837837838,
+    "PointDrop": 0.005405405405405406,
+    "cmp_boxcloud": 0.03783783783783784,
+    "cmp_mradd_far": 0.03783783783783784,
+    "cmp_mradd_near": 0.21081081081081082,
+    "ph_budget_far": 0.005405405405405406,
+    "ph_budget_near": 0.005405405405405406,
+    "ph_replace_far": 0.005405405405405406,
+    "ph_replace_near": 0.005405405405405406,
+    "FA_val": 0.007246376811594203,
+    "mean_choice": 0.06409266409266409
+   },
+   "32": {
+    "IntensitySpoof": 0.22702702702702704,
+    "PointDrop": 0.010810810810810811,
+    "cmp_boxcloud": 0.03783783783783784,
+    "cmp_mradd_far": 0.043243243243243246,
+    "cmp_mradd_near": 0.21081081081081082,
+    "ph_budget_far": 0.010810810810810811,
+    "ph_budget_near": 0.010810810810810811,
+    "ph_replace_far": 0.010810810810810811,
+    "ph_replace_near": 0.005405405405405406,
+    "FA_val": 0.009057971014492754,
+    "mean_choice": 0.04478764478764479
+   }
+  },
+  "nmin_chosen": 8,
+  "lodo": {
+   "pooled_fa": 0.008598726114649681,
+   "per_drive_fa": {
+    "0002": 0.0,
+    "0011": 0.0,
+    "0013": 0.006944444444444444,
+    "0015": 0.0,
+    "0017": 0.0,
+    "0019": 0.0,
+    "0020": 0.0,
+    "0027": 0.05319148936170213,
+    "0029": 0.009302325581395349,
+    "0035": 0.03816793893129771,
+    "0046": 0.016,
+    "0048": 0.13636363636363635,
+    "0060": 0.0,
+    "0070": 0.002380952380952381,
+    "0106": 0.004405286343612335,
+    "0113": 0.0
+   },
+   "worst_drive_fa": 0.13636363636363635,
+   "n_scans": 3140
+  },
+  "primary": "lodo"
+ },
+ "val_only": {
+  "threshold": 0.9818840579710146,
+  "fa_test": 0.2035225048923679,
+  "fa_test_per_drive": {
+   "0001": 0.25,
+   "0005": 0.13636363636363635,
+   "0028": 0.018604651162790697,
+   "0039": 0.1468354430379747,
+   "0052": 0.05128205128205128,
+   "0079": 0.22,
+   "0095": 0.6417910447761194
+  },
+  "attacks": {
+   "ph_replace_near": {
+    "dens_hi": 0.021568627450980392,
+    "dens_lo": 0.011764705882352941,
+    "int_hi": 0.00196078431372549,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.24313725490196078,
+    "cnt_dens_lo": 0.0058823529411764705,
+    "cnt_int_hi": 0.01568627450980392,
+    "cnt_int_lo": 0.0,
+    "union": 0.19019607843137254,
+    "n": 510
+   },
+   "ph_replace_far": {
+    "dens_hi": 0.023529411764705882,
+    "dens_lo": 0.01568627450980392,
+    "int_hi": 0.00196078431372549,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.24313725490196078,
+    "cnt_dens_lo": 0.00784313725490196,
+    "cnt_int_hi": 0.013725490196078431,
+    "cnt_int_lo": 0.0,
+    "union": 0.2019607843137255,
+    "n": 510
+   },
+   "ph_budget_near": {
+    "dens_hi": 0.021568627450980392,
+    "dens_lo": 0.01568627450980392,
+    "int_hi": 0.00196078431372549,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.24509803921568626,
+    "cnt_dens_lo": 0.00784313725490196,
+    "cnt_int_hi": 0.013725490196078431,
+    "cnt_int_lo": 0.0,
+    "union": 0.1980392156862745,
+    "n": 510
+   },
+   "ph_budget_far": {
+    "dens_hi": 0.023529411764705882,
+    "dens_lo": 0.01568627450980392,
+    "int_hi": 0.00196078431372549,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.24313725490196078,
+    "cnt_dens_lo": 0.00784313725490196,
+    "cnt_int_hi": 0.013725490196078431,
+    "cnt_int_lo": 0.0,
+    "union": 0.20392156862745098,
+    "n": 510
+   },
+   "PointDrop": {
+    "dens_hi": 0.021568627450980392,
+    "dens_lo": 0.00980392156862745,
+    "int_hi": 0.00196078431372549,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.21176470588235294,
+    "cnt_dens_lo": 0.00196078431372549,
+    "cnt_int_hi": 0.013725490196078431,
+    "cnt_int_lo": 0.0,
+    "union": 0.16666666666666666,
+    "n": 510
+   },
+   "IntensitySpoof": {
+    "dens_hi": 0.023529411764705882,
+    "dens_lo": 0.01568627450980392,
+    "int_hi": 0.07058823529411765,
+    "int_lo": 0.00392156862745098,
+    "cnt_dens_hi": 0.24509803921568626,
+    "cnt_dens_lo": 0.00784313725490196,
+    "cnt_int_hi": 0.6411764705882353,
+    "cnt_int_lo": 0.0,
+    "union": 0.6803921568627451,
+    "n": 510
+   },
+   "cmp_boxcloud": {
+    "dens_hi": 0.0784313725490196,
+    "dens_lo": 0.01568627450980392,
+    "int_hi": 0.00196078431372549,
+    "int_lo": 0.0058823529411764705,
+    "cnt_dens_hi": 0.2568627450980392,
+    "cnt_dens_lo": 0.00980392156862745,
+    "cnt_int_hi": 0.013725490196078431,
+    "cnt_int_lo": 0.0,
+    "union": 0.22745098039215686,
+    "n": 510
+   },
+   "cmp_mradd_near": {
+    "dens_hi": 0.307843137254902,
+    "dens_lo": 0.01568627450980392,
+    "int_hi": 0.00196078431372549,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.2901960784313726,
+    "cnt_dens_lo": 0.00980392156862745,
+    "cnt_int_hi": 0.013725490196078431,
+    "cnt_int_lo": 0.0,
+    "union": 0.4392156862745098,
+    "n": 510
+   },
+   "cmp_mradd_far": {
+    "dens_hi": 0.056862745098039215,
+    "dens_lo": 0.01568627450980392,
+    "int_hi": 0.00196078431372549,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.24901960784313726,
+    "cnt_dens_lo": 0.00784313725490196,
+    "cnt_int_hi": 0.01568627450980392,
+    "cnt_int_lo": 0.0,
+    "union": 0.22549019607843138,
+    "n": 510
+   }
+  },
+  "parts_fa": {
+   "dens_hi": 0.023483365949119372,
+   "dens_lo": 0.01304631441617743,
+   "int_hi": 0.0019569471624266144,
+   "int_lo": 0.007175472928897586,
+   "cnt_dens_hi": 0.2491846053489889,
+   "cnt_dens_lo": 0.008480104370515329,
+   "cnt_int_hi": 0.01304631441617743,
+   "cnt_int_lo": 0.0
+  },
+  "object_level": {
+   "ph_replace_near": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 483,
+    "n_phantom_tiles": 18027,
+    "tile_detection": 0.0,
+    "scan_with_phantom_tile_caught": 0.0
+   },
+   "ph_replace_far": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 442,
+    "n_phantom_tiles": 2443,
+    "tile_detection": 0.0,
+    "scan_with_phantom_tile_caught": 0.0
+   },
+   "ph_budget_near": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 469,
+    "n_phantom_tiles": 2922,
+    "tile_detection": 0.0,
+    "scan_with_phantom_tile_caught": 0.0
+   },
+   "ph_budget_far": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 438,
+    "n_phantom_tiles": 1759,
+    "tile_detection": 0.0,
+    "scan_with_phantom_tile_caught": 0.0
+   },
+   "cmp_boxcloud": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 493,
+    "n_phantom_tiles": 7086,
+    "tile_detection": 0.0011289867344058708,
+    "scan_with_phantom_tile_caught": 0.013725490196078431
+   },
+   "cmp_mradd_near": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 477,
+    "n_phantom_tiles": 18537,
+    "tile_detection": 0.004909100717483951,
+    "scan_with_phantom_tile_caught": 0.08431372549019608
+   },
+   "cmp_mradd_far": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 433,
+    "n_phantom_tiles": 2245,
+    "tile_detection": 0.00044543429844097997,
+    "scan_with_phantom_tile_caught": 0.00196078431372549
+   }
+  },
+  "episodes": {
+   "stat_threshold": 2.7270289443011224,
+   "false_episode_rate_test_clean": 0.5625,
+   "n_clean_windows": 48,
+   "kinds": {
+    "ep_budget_far": {
+     "episodes": 21,
+     "detected_3s": 16,
+     "median_delay_s_of_alarmed": 0.4128,
+     "single_scan_alarm_rate": 0.32063492063492066
+    },
+    "ep_budget_near": {
+     "episodes": 21,
+     "detected_3s": 13,
+     "median_delay_s_of_alarmed": 0.1032,
+     "single_scan_alarm_rate": 0.2492063492063492
+    },
+    "ep_replace_far": {
+     "episodes": 21,
+     "detected_3s": 14,
+     "median_delay_s_of_alarmed": 0.9288,
+     "single_scan_alarm_rate": 0.20476190476190476
+    },
+    "ep_replace_near": {
+     "episodes": 21,
+     "detected_3s": 13,
+     "median_delay_s_of_alarmed": 0.2064,
+     "single_scan_alarm_rate": 0.20634920634920634
+    }
+   }
+  },
+  "scoring_ms_per_scan": 1.6266867294858969
+ },
+ "lodo": {
+  "threshold": 0.987579617834395,
+  "fa_test": 0.016307893020221786,
+  "fa_test_per_drive": {
+   "0001": 0.0,
+   "0005": 0.0,
+   "0028": 0.018604651162790697,
+   "0039": 0.027848101265822784,
+   "0052": 0.0,
+   "0079": 0.01,
+   "0095": 0.018656716417910446
+  },
+  "attacks": {
+   "ph_replace_near": {
+    "dens_hi": 0.00980392156862745,
+    "dens_lo": 0.0196078431372549,
+    "int_hi": 0.0,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.03333333333333333,
+    "cnt_dens_lo": 0.023529411764705882,
+    "cnt_int_hi": 0.025490196078431372,
+    "cnt_int_lo": 0.0,
+    "union": 0.00980392156862745,
+    "n": 510
+   },
+   "ph_replace_far": {
+    "dens_hi": 0.00980392156862745,
+    "dens_lo": 0.023529411764705882,
+    "int_hi": 0.0,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.03529411764705882,
+    "cnt_dens_lo": 0.01764705882352941,
+    "cnt_int_hi": 0.023529411764705882,
+    "cnt_int_lo": 0.0,
+    "union": 0.011764705882352941,
+    "n": 510
+   },
+   "ph_budget_near": {
+    "dens_hi": 0.00980392156862745,
+    "dens_lo": 0.025490196078431372,
+    "int_hi": 0.0,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.03333333333333333,
+    "cnt_dens_lo": 0.0196078431372549,
+    "cnt_int_hi": 0.023529411764705882,
+    "cnt_int_lo": 0.0,
+    "union": 0.011764705882352941,
+    "n": 510
+   },
+   "ph_budget_far": {
+    "dens_hi": 0.00980392156862745,
+    "dens_lo": 0.023529411764705882,
+    "int_hi": 0.0,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.03529411764705882,
+    "cnt_dens_lo": 0.0196078431372549,
+    "cnt_int_hi": 0.023529411764705882,
+    "cnt_int_lo": 0.0,
+    "union": 0.011764705882352941,
+    "n": 510
+   },
+   "PointDrop": {
+    "dens_hi": 0.00980392156862745,
+    "dens_lo": 0.01764705882352941,
+    "int_hi": 0.0,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.0196078431372549,
+    "cnt_dens_lo": 0.025490196078431372,
+    "cnt_int_hi": 0.01764705882352941,
+    "cnt_int_lo": 0.0,
+    "union": 0.011764705882352941,
+    "n": 510
+   },
+   "IntensitySpoof": {
+    "dens_hi": 0.00980392156862745,
+    "dens_lo": 0.023529411764705882,
+    "int_hi": 0.06666666666666667,
+    "int_lo": 0.00392156862745098,
+    "cnt_dens_hi": 0.03529411764705882,
+    "cnt_dens_lo": 0.0196078431372549,
+    "cnt_int_hi": 0.7137254901960784,
+    "cnt_int_lo": 0.0,
+    "union": 0.5647058823529412,
+    "n": 510
+   },
+   "cmp_boxcloud": {
+    "dens_hi": 0.06470588235294118,
+    "dens_lo": 0.023529411764705882,
+    "int_hi": 0.0,
+    "int_lo": 0.0058823529411764705,
+    "cnt_dens_hi": 0.027450980392156862,
+    "cnt_dens_lo": 0.027450980392156862,
+    "cnt_int_hi": 0.023529411764705882,
+    "cnt_int_lo": 0.0,
+    "union": 0.0392156862745098,
+    "n": 510
+   },
+   "cmp_mradd_near": {
+    "dens_hi": 0.29215686274509806,
+    "dens_lo": 0.023529411764705882,
+    "int_hi": 0.0,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.043137254901960784,
+    "cnt_dens_lo": 0.025490196078431372,
+    "cnt_int_hi": 0.023529411764705882,
+    "cnt_int_lo": 0.0,
+    "union": 0.29215686274509806,
+    "n": 510
+   },
+   "cmp_mradd_far": {
+    "dens_hi": 0.041176470588235294,
+    "dens_lo": 0.023529411764705882,
+    "int_hi": 0.0,
+    "int_lo": 0.00784313725490196,
+    "cnt_dens_hi": 0.03529411764705882,
+    "cnt_dens_lo": 0.0196078431372549,
+    "cnt_int_hi": 0.023529411764705882,
+    "cnt_int_lo": 0.0,
+    "union": 0.043137254901960784,
+    "n": 510
+   }
+  },
+  "parts_fa": {
+   "dens_hi": 0.011089367253750815,
+   "dens_lo": 0.020221787345075015,
+   "int_hi": 0.0,
+   "int_lo": 0.008480104370515329,
+   "cnt_dens_hi": 0.03457273320287019,
+   "cnt_dens_lo": 0.024135681669928244,
+   "cnt_int_hi": 0.020221787345075015,
+   "cnt_int_lo": 0.0
+  },
+  "object_level": {
+   "ph_replace_near": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 483,
+    "n_phantom_tiles": 18027,
+    "tile_detection": 0.0,
+    "scan_with_phantom_tile_caught": 0.0
+   },
+   "ph_replace_far": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 442,
+    "n_phantom_tiles": 2443,
+    "tile_detection": 0.0,
+    "scan_with_phantom_tile_caught": 0.0
+   },
+   "ph_budget_near": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 469,
+    "n_phantom_tiles": 2922,
+    "tile_detection": 0.0,
+    "scan_with_phantom_tile_caught": 0.0
+   },
+   "ph_budget_far": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 438,
+    "n_phantom_tiles": 1759,
+    "tile_detection": 0.0,
+    "scan_with_phantom_tile_caught": 0.0
+   },
+   "cmp_boxcloud": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 493,
+    "n_phantom_tiles": 7086,
+    "tile_detection": 0.0009878633926051368,
+    "scan_with_phantom_tile_caught": 0.013725490196078431
+   },
+   "cmp_mradd_near": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 477,
+    "n_phantom_tiles": 18537,
+    "tile_detection": 0.004801208394022765,
+    "scan_with_phantom_tile_caught": 0.08431372549019608
+   },
+   "cmp_mradd_far": {
+    "n_scans": 510,
+    "scans_with_phantom_tile": 433,
+    "n_phantom_tiles": 2245,
+    "tile_detection": 0.00044543429844097997,
+    "scan_with_phantom_tile_caught": 0.00196078431372549
+   }
+  },
+  "episodes": {
+   "stat_threshold": 3.3484840319016445,
+   "false_episode_rate_test_clean": 0.16666666666666666,
+   "n_clean_windows": 48,
+   "kinds": {
+    "ep_budget_far": {
+     "episodes": 21,
+     "detected_3s": 5,
+     "median_delay_s_of_alarmed": 0.3096,
+     "single_scan_alarm_rate": 0.026984126984126985
+    },
+    "ep_budget_near": {
+     "episodes": 21,
+     "detected_3s": 2,
+     "median_delay_s_of_alarmed": 1.3932,
+     "single_scan_alarm_rate": 0.014285714285714285
+    },
+    "ep_replace_far": {
+     "episodes": 21,
+     "detected_3s": 2,
+     "median_delay_s_of_alarmed": 1.0836000000000001,
+     "single_scan_alarm_rate": 0.004761904761904762
+    },
+    "ep_replace_near": {
+     "episodes": 21,
+     "detected_3s": 0,
+     "median_delay_s_of_alarmed": null,
+     "single_scan_alarm_rate": 0.004761904761904762
+    }
+   }
+  },
+  "scoring_ms_per_scan": 1.6654845708659172
+ },
+ "harness_L1_L2a": {
+  "layers": {
+   "L1": {
+    "threshold": 0.9891304347826088,
+    "budget": 0.01,
+    "false_alarm_rate": 0.016307893020221786,
+    "detection": 0.10043572984749455,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.013725490196078431,
+     "PointDrop": 0.013725490196078431,
+     "cmp_boxcloud": 0.1607843137254902,
+     "cmp_mradd_far": 0.6254901960784314,
+     "cmp_mradd_near": 0.013725490196078431,
+     "ph_budget_far": 0.01764705882352941,
+     "ph_budget_near": 0.013725490196078431,
+     "ph_replace_far": 0.03137254901960784,
+     "ph_replace_near": 0.013725490196078431
+    },
+    "auc": 0.5584152991485788,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.6980392156862745,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   },
+   "L2a": {
+    "threshold": 0.9818840579710146,
+    "budget": 0.01,
+    "false_alarm_rate": 0.2035225048923679,
+    "detection": 0.2814814814814815,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.6803921568627451,
+     "PointDrop": 0.16666666666666666,
+     "cmp_boxcloud": 0.22745098039215686,
+     "cmp_mradd_far": 0.22549019607843138,
+     "cmp_mradd_near": 0.4392156862745098,
+     "ph_budget_far": 0.20392156862745098,
+     "ph_budget_near": 0.1980392156862745,
+     "ph_replace_far": 0.2019607843137255,
+     "ph_replace_near": 0.19019607843137254
+    },
+    "auc": 0.5518421879152473,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.7901960784313725,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   }
+  },
+  "ablation": {
+   "all": {
+    "threshold": 0.7417575005264614,
+    "budget": 0.01,
+    "false_alarm_rate": 0.21330724070450097,
+    "detection": 0.3542483660130719,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.6647058823529411,
+     "PointDrop": 0.17647058823529413,
+     "cmp_boxcloud": 0.3411764705882353,
+     "cmp_mradd_far": 0.7176470588235294,
+     "cmp_mradd_near": 0.4372549019607843,
+     "ph_budget_far": 0.21764705882352942,
+     "ph_budget_near": 0.20784313725490197,
+     "ph_replace_far": 0.22549019607843138,
+     "ph_replace_near": 0.2
+    },
+    "auc": 0.5938842203548086,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.9411764705882353,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590,
+    "method": "noisy_or",
+    "method_selection": {}
+   },
+   "only_L1": {
+    "threshold": 0.9891304347826088,
+    "budget": 0.01,
+    "false_alarm_rate": 0.016307893020221786,
+    "detection": 0.10043572984749455,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.013725490196078431,
+     "PointDrop": 0.013725490196078431,
+     "cmp_boxcloud": 0.1607843137254902,
+     "cmp_mradd_far": 0.6254901960784314,
+     "cmp_mradd_near": 0.013725490196078431,
+     "ph_budget_far": 0.01764705882352941,
+     "ph_budget_near": 0.013725490196078431,
+     "ph_replace_far": 0.03137254901960784,
+     "ph_replace_near": 0.013725490196078431
+    },
+    "auc": 0.5584152991485788,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.6980392156862745,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   },
+   "only_L2a": {
+    "threshold": 0.9818840579710146,
+    "budget": 0.01,
+    "false_alarm_rate": 0.2035225048923679,
+    "detection": 0.2814814814814815,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.6803921568627451,
+     "PointDrop": 0.16666666666666666,
+     "cmp_boxcloud": 0.22745098039215686,
+     "cmp_mradd_far": 0.22549019607843138,
+     "cmp_mradd_near": 0.4392156862745098,
+     "ph_budget_far": 0.20392156862745098,
+     "ph_budget_near": 0.1980392156862745,
+     "ph_replace_far": 0.2019607843137255,
+     "ph_replace_near": 0.19019607843137254
+    },
+    "auc": 0.5518421879152473,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.7901960784313725,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   }
+  }
+ },
+ "harness_L1_dens_int": {
+  "layers": {
+   "L1": {
+    "threshold": 0.9891304347826088,
+    "budget": 0.01,
+    "false_alarm_rate": 0.016307893020221786,
+    "detection": 0.10043572984749455,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.013725490196078431,
+     "PointDrop": 0.013725490196078431,
+     "cmp_boxcloud": 0.1607843137254902,
+     "cmp_mradd_far": 0.6254901960784314,
+     "cmp_mradd_near": 0.013725490196078431,
+     "ph_budget_far": 0.01764705882352941,
+     "ph_budget_near": 0.013725490196078431,
+     "ph_replace_far": 0.03137254901960784,
+     "ph_replace_near": 0.013725490196078431
+    },
+    "auc": 0.5584152991485788,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.6980392156862745,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   },
+   "L2a_dens": {
+    "threshold": 0.9873188405797103,
+    "budget": 0.01,
+    "false_alarm_rate": 0.20026092628832354,
+    "detection": 0.22440087145969498,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.1980392156862745,
+     "PointDrop": 0.1627450980392157,
+     "cmp_boxcloud": 0.2235294117647059,
+     "cmp_mradd_far": 0.22156862745098038,
+     "cmp_mradd_near": 0.43529411764705883,
+     "ph_budget_far": 0.2,
+     "ph_budget_near": 0.19411764705882353,
+     "ph_replace_far": 0.1980392156862745,
+     "ph_replace_near": 0.18627450980392157
+    },
+    "auc": 0.5150284162371189,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.4725490196078431,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   },
+   "L2a_int": {
+    "threshold": 0.9782608695652175,
+    "budget": 0.01,
+    "false_alarm_rate": 0.010437051532941943,
+    "detection": 0.07930283224400872,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.6196078431372549,
+     "PointDrop": 0.011764705882352941,
+     "cmp_boxcloud": 0.011764705882352941,
+     "cmp_mradd_far": 0.011764705882352941,
+     "cmp_mradd_near": 0.011764705882352941,
+     "ph_budget_far": 0.011764705882352941,
+     "ph_budget_near": 0.011764705882352941,
+     "ph_replace_far": 0.011764705882352941,
+     "ph_replace_near": 0.011764705882352941
+    },
+    "auc": 0.5480625938858548,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.6196078431372549,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   }
+  },
+  "ablation": {
+   "all": {
+    "threshold": 0.7135757109834767,
+    "budget": 0.01,
+    "false_alarm_rate": 0.11285061969993476,
+    "detection": 0.22679738562091503,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.5117647058823529,
+     "PointDrop": 0.08823529411764706,
+     "cmp_boxcloud": 0.2372549019607843,
+     "cmp_mradd_far": 0.5450980392156862,
+     "cmp_mradd_near": 0.1980392156862745,
+     "ph_budget_far": 0.11568627450980393,
+     "ph_budget_near": 0.11176470588235295,
+     "ph_replace_far": 0.12745098039215685,
+     "ph_replace_near": 0.10588235294117647
+    },
+    "auc": 0.5951116113619471,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.7470588235294118,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590,
+    "method": "noisy_or",
+    "method_selection": {}
+   },
+   "only_L1": {
+    "threshold": 0.9891304347826088,
+    "budget": 0.01,
+    "false_alarm_rate": 0.016307893020221786,
+    "detection": 0.10043572984749455,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.013725490196078431,
+     "PointDrop": 0.013725490196078431,
+     "cmp_boxcloud": 0.1607843137254902,
+     "cmp_mradd_far": 0.6254901960784314,
+     "cmp_mradd_near": 0.013725490196078431,
+     "ph_budget_far": 0.01764705882352941,
+     "ph_budget_near": 0.013725490196078431,
+     "ph_replace_far": 0.03137254901960784,
+     "ph_replace_near": 0.013725490196078431
+    },
+    "auc": 0.5584152991485788,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.6980392156862745,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   },
+   "only_L2a_dens": {
+    "threshold": 0.9873188405797103,
+    "budget": 0.01,
+    "false_alarm_rate": 0.20026092628832354,
+    "detection": 0.22440087145969498,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.1980392156862745,
+     "PointDrop": 0.1627450980392157,
+     "cmp_boxcloud": 0.2235294117647059,
+     "cmp_mradd_far": 0.22156862745098038,
+     "cmp_mradd_near": 0.43529411764705883,
+     "ph_budget_far": 0.2,
+     "ph_budget_near": 0.19411764705882353,
+     "ph_replace_far": 0.1980392156862745,
+     "ph_replace_near": 0.18627450980392157
+    },
+    "auc": 0.5150284162371189,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.4725490196078431,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   },
+   "only_L2a_int": {
+    "threshold": 0.9782608695652175,
+    "budget": 0.01,
+    "false_alarm_rate": 0.010437051532941943,
+    "detection": 0.07930283224400872,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.6196078431372549,
+     "PointDrop": 0.011764705882352941,
+     "cmp_boxcloud": 0.011764705882352941,
+     "cmp_mradd_far": 0.011764705882352941,
+     "cmp_mradd_near": 0.011764705882352941,
+     "ph_budget_far": 0.011764705882352941,
+     "ph_budget_near": 0.011764705882352941,
+     "ph_replace_far": 0.011764705882352941,
+     "ph_replace_near": 0.011764705882352941
+    },
+    "auc": 0.5480625938858548,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.6196078431372549,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590
+   },
+   "all_but_L1": {
+    "threshold": 0.7597446696127642,
+    "budget": 0.01,
+    "false_alarm_rate": 0.2035225048923679,
+    "detection": 0.2849673202614379,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.7156862745098039,
+     "PointDrop": 0.16666666666666666,
+     "cmp_boxcloud": 0.2196078431372549,
+     "cmp_mradd_far": 0.2235294117647059,
+     "cmp_mradd_near": 0.4372549019607843,
+     "ph_budget_far": 0.20588235294117646,
+     "ph_budget_near": 0.2,
+     "ph_replace_far": 0.20392156862745098,
+     "ph_replace_near": 0.19215686274509805
+    },
+    "auc": 0.5550562284782,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.807843137254902,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590,
+    "method": "noisy_or"
+   },
+   "all_but_L2a_dens": {
+    "threshold": 0.7298418557376275,
+    "budget": 0.01,
+    "false_alarm_rate": 0.02609262883235486,
+    "detection": 0.1775599128540305,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.6254901960784314,
+     "PointDrop": 0.025490196078431372,
+     "cmp_boxcloud": 0.16862745098039217,
+     "cmp_mradd_far": 0.6313725490196078,
+     "cmp_mradd_near": 0.025490196078431372,
+     "ph_budget_far": 0.029411764705882353,
+     "ph_budget_near": 0.025490196078431372,
+     "ph_replace_far": 0.041176470588235294,
+     "ph_replace_near": 0.025490196078431372
+    },
+    "auc": 0.597765996302123,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.8862745098039215,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590,
+    "method": "noisy_or"
+   },
+   "all_but_L2a_int": {
+    "threshold": 0.7577368037334423,
+    "budget": 0.01,
+    "false_alarm_rate": 0.21135029354207435,
+    "detection": 0.30152505446623096,
+    "detection_by_attack": {
+     "IntensitySpoof": 0.20980392156862746,
+     "PointDrop": 0.17254901960784313,
+     "cmp_boxcloud": 0.3411764705882353,
+     "cmp_mradd_far": 0.7176470588235294,
+     "cmp_mradd_near": 0.43529411764705883,
+     "ph_budget_far": 0.21372549019607842,
+     "ph_budget_near": 0.20392156862745098,
+     "ph_replace_far": 0.2235294117647059,
+     "ph_replace_near": 0.19607843137254902
+    },
+    "auc": 0.560461140316096,
+    "delay": {
+     "n_segments": 510,
+     "detected_fraction": 0.8509803921568627,
+     "median_delay_s": 0.0,
+     "mean_delay_s": 0.0
+    },
+    "n_test": 6123,
+    "n_test_attack": 4590,
+    "method": "noisy_or"
+   }
+  }
+ },
+ "seconds": 121.37586784362793
+}

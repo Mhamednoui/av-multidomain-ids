@@ -1,0 +1,1 @@
+{"variant": "S3", "params": {}, "reason": "best near one-object rate C 62.8% vs S3 53.2% = +9.6 points < 10 required: S3 kept (rule written before)"}
