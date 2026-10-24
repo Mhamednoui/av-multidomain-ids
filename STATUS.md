@@ -17,14 +17,14 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 
 ## Overall progress (orchestrator updates this at every approval)
 
-**Overall: 54 / 59 steps approved = 92%** (updated 2026-10-24)
+**Overall: 55 / 59 steps approved = 93%** (updated 2026-10-24)
 
 | WP | Steps counted | Approved | % |
 |---|---|---|---|
 | WP0 Foundation | S1-S4 (4) | 4 | 100 |
 | WP1 GPS | S0-S8 (9) | 9 | 100 (M1-GPS partial) |
 | WP2 CAN | S0-S7 (8) | 8 | 100 (M1-CAN partial) |
-| WP3 LiDAR | S1-S7, S9 (8; S0, S8 optional) | 6 | 75 |
+| WP3 LiDAR | S1-S7, S9 (8; S0, S8 optional) | 7 | 88 |
 | WP4 Network | S0-S7 (8) | 8 | 100 (M1-NET partial) |
 | WP5 V2X | S0, S0b, S0c, S1, S1b, S2-S6, S3b (11; S7 optional) | 11 | 100 (M1-V2X partial + V2AIX addendum) |
 | WP6 Cross-domain | S1, S2, S2b, S3-S5, S5b (7) | 6 | 86 |
