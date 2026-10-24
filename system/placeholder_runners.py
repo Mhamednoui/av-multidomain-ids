@@ -7,7 +7,7 @@ Score = ECDF calibration of 1 - P(Normal) on the NORMAL VALIDATION scans of the 
 One scan in, one Evidence out; state = descriptor of the previous scan of the drive (the first scan of a drive has no previous: its temporal features are zero, flagged in details).
 Sample: dict {"points": N x 4 float32 (x y z intensity in 0..1), "t": seconds, "sample_id": "<drive>/<file>"}.
 
-NetworkRunner (status "placeholder"): M1-NET is not frozen (WP4 S7 running, no reports/M1_NET.md). Without a domain it emits a neutral Evidence per flow (score 0, no alarm) so the
+NetworkPlaceholderRunner (status "placeholder"; SUPERSEDED in S1b by system/net_runner.py): M1-NET is not frozen (WP4 S7 running, no reports/M1_NET.md). Without a domain it emits a neutral Evidence per flow (score 0, no alarm) so the
 bus, latency log and fusion plumbing can be exercised with the final interface. With `domain` = an object that has score_stream(flows DataFrame) -> (combined list, per-layer dict)
 (network.domain.NetworkDomain's documented interface) it re-scores a rolling buffer and returns the combined Evidence of the new flow with details["final"] as that domain defines it
 (window semantics: the Evidence of a flow is final only when its windows closed). This adapter is written to the DOCUMENTED interface and tested with a stand-in object only.
@@ -97,7 +97,7 @@ class LidarInterimRunner(Runner):
                          sample_id=str(sample.get("sample_id", self.n - 1)))]
 
 
-class NetworkRunner(Runner):
+class NetworkPlaceholderRunner(Runner):
     domain = "network"
     name = "network.runner"
     status = "placeholder"

@@ -109,7 +109,7 @@ T.append(lrow("V2X (12 checks + combiner)", "message", lat["v2x"], "none (new)",
 T.append(lrow("Cross-domain witness step", "grid second (MotionEstimate events, resolving call)", lat["cross_step"], "none (new)", "1 s"))
 T.append(lrow("LiDAR (INTERIM v2 baseline)", "scan", lat["lidar_interim"], V2_REF["lidar"], "0.1 s"))
 nw = bus["network_placeholder_push_ms"]
-T.append(f"| Network (PLACEHOLDER, plumbing only) | flow | {nw['n']} | {nw['median_ms']:.4f} | {nw['p95_ms']:.4f} | {nw['p99_ms']:.4f} | - | - | {V2_REF['network']} | - |")
+T.append(f"| Network placeholder push (S1 plumbing only; the real runner is in S1b) | flow | {nw['n']} | {nw['median_ms']:.4f} | {nw['p95_ms']:.4f} | {nw['p99_ms']:.4f} | - | - | {V2_REF['network']} | - |")
 T.append(f"| Evidence bus publish | record | - | {bus['bus_publish_us_per_record'] / 1000:.4f} | - | - | - | - | fusion {V2_REF['fusion']} (fusion not part of S1) | - |")
 T.append(f"\nCAN amortised cost (total time of all pushes / frames): {can['A4_latency']['amortised_ms_per_frame']:.4f} ms per frame (v2 {V2_REF['can']}).")
 T.append(f"Cross residual-level step (statistic + calibration + blame, no alignment): median {cross['A4_latency']['residual_level_step']['pooled']['median_ms']:.3f} ms.\n")
@@ -157,13 +157,13 @@ R.append("- **How**: the frozen GPS / CAN detectors are whole-run vectorised cau
          "No folder of another WP was touched; optional follow-up in reports/REQUEST_WP7_incremental_entry_points.md.")
 R.append(f"- **Latency** (median / p99 ms, this loaded machine, 3 repetitions, spread in results/WP7/S1_tables.md): GPS fix {med(lat['gps'])} (v2 ~0.8; prefix re-score of 16 layers), CAN frame "
          f"{lat['can_frame']['pooled']['median_ms']:.4f} / {lat['can_frame']['pooled']['p99_ms']:.4f}, amortised {can['A4_latency']['amortised_ms_per_frame']:.3f} per frame (v2 ~0.05), CAN 1 s window {med(lat['can_window'])}, "
-         f"V2X message {med(lat['v2x'])}, cross witness step {med(lat['cross_step'])}, LiDAR interim scan {med(lat['lidar_interim'])} (v2 ~23). Network: placeholder, plumbing only "
-         f"({nw['median_ms']:.4f} ms); bus publish {bus['bus_publish_us_per_record']:.1f} us. Pre-registered real-time check (p99 < sample period): " + ", ".join(f"{k} {'yes' if x else 'NO'}" for k, x in rt.items()) + ".")
+         f"V2X message {med(lat['v2x'])}, cross witness step {med(lat['cross_step'])}, LiDAR interim scan {med(lat['lidar_interim'])} (v2 ~23). Network: placeholder in S1 (plumbing "
+         f"{nw['median_ms']:.4f} ms), replaced by the frozen-domain runner in S1b (section S1b); bus publish {bus['bus_publish_us_per_record']:.1f} us. Pre-registered real-time check (p99 < sample period): " + ", ".join(f"{k} {'yes' if x else 'NO'}" for k, x in rt.items()) + ".")
 R.append("- GPS / CAN / V2X latency grows with the length of the run / capture / track so far (tables in S1_tables.md, section 4): these are upper bounds of an incremental implementation, not per-sample costs of one.")
 R.append("- **Built here**: V2X physics-only domain object (WP5 recipe; reproduces S6 layer thresholds to "
          f"{fit_v2x['threshold_max_abs_diff']:.0e} and the S6 validation FA {fit_v2x['val_FA_msg_wp7']:.6f}), cross runtime-test object (fitted on the WP6 S2b dev cache, in-sample, NOT the WP6 verdict model), LiDAR interim calibration "
          f"(threshold equals WP3 S1 val_fpr_0.01).")
-R.append("- **Not frozen, so labelled**: LiDAR = WP3 S1 retrained v2 baseline (INTERIM); network = PLACEHOLDER (network/domain.py exists but M1-NET is not frozen; adapter written to its documented score_stream interface and tested with a stand-in only).")
+R.append("- **Not frozen, so labelled**: LiDAR = WP3 S1 retrained v2 baseline (INTERIM); network = PLACEHOLDER in S1 (M1-NET was not frozen then); replaced in S1b by a runner over the frozen network domain.")
 R.append("- **Findings**: (1) cross: with bounded buffers the interval means differ by ~1e-13, which flips one ECDF step (3.7e-4 score) when z equals a calibration sample: the default keeps the whole history (bit-identical). "
          "(2) v2x.l3.birth_density counts equal-timestamp births that arrive later: a causal stream cannot; 0 equal timestamps in VeReMi validation (counted by the runner). "
          "(3) I wrote 210 validation runs for the cross level in the rule; the WP6 S2b cache holds " + str(a['A1']['cross']['residual_level_runs']) + " validation-part runs, all were used.")
@@ -202,7 +202,7 @@ R.append("## Problems, surprises, open questions")
 R.append("- GPS / CAN / V2X per-sample cost is far above the v2 numbers because the frozen code has no incremental entry point (prefix re-score). Decision for the supervisor: accept as upper bound, or assign incremental entry points "
          "to the domain owners (reports/REQUEST_WP7_incremental_entry_points.md). Not needed for S2 on short streams.")
 R.append("- The V2X domain object and the cross object are WP7 re-creations of recipes (no saved frozen file existed): if WP5 / WP6 later save official objects, swap them in (runners take the object as argument).")
-R.append("- Network: wire `NetworkRunner(domain=NetworkDomain)` once M1-NET is frozen; the domain's windows close late (details['final']), the runner passes that flag through unchanged.")
+R.append("- Network: wired in S1b to the frozen domain (section S1b); its windows close late (details['final']), the runner emits a flow when its window has closed.")
 R.append("- The CAN wheel-speed MotionEstimates are emitted by the CAN runner (pop_motion); gps / lidar / imu MotionEstimates come from their producers upstream. Feeding them to the cross runner end to end on live streams is S2.\n")
 R.append("## Proposed next step")
 R.append("S2 (simulation v3: all domains as real streams, persistent attacks, coordinated scenarios, first-alert delay) once the supervisor approves S1; it needs the NET and LiDAR domains frozen to be more than a plumbing test.")

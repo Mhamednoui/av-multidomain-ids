@@ -13,7 +13,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | S0c | TODO (next free slot) | - | 2026-10-24 | V2AIX link received from the user; then S3b (receiver-position checks, real CAM FA) |
 | WP6 Cross-domain | S4 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-24 | S3 APPROVED partial (system FA 6.3% vs 3%) |
-| WP7 System | S1b | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-24 | S1 APPROVED; S1b = wire frozen network domain + V2X birth causality count |
+| WP7 System | S1b | REVIEW | worker sonnet (medium, T2) | 2026-10-24 | S1b: network runner over frozen domain, stream == batch exact on D10 val (54,420 flows), 0.68 ms/flow amortised; equal-timestamp births: 0 non-causal pairs on VeReMi/Tampa val+test; reports/WP7_S1.md section S1b |
 
 ## Overall progress (orchestrator updates this at every approval)
 

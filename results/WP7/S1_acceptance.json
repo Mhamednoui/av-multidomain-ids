@@ -97,5 +97,20 @@
   "A5": true,
   "A6": true,
   "S1": true
+ },
+ "S1b": {
+  "net": {
+   "A1": true,
+   "A2": true,
+   "A3": true,
+   "bus": true,
+   "S1b": true
+  },
+  "ties_noncausal_birth_pairs": {
+   "VeReMi val": 0,
+   "VeReMi test": 0,
+   "Tampa val": 0,
+   "Tampa test": 0
+  }
  }
 }

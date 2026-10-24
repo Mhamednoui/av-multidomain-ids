@@ -5,7 +5,7 @@ import numpy as np
 from common.calibration import ECDFCalibrator
 from common.evidence import Evidence
 from lidar.features import describe, temporal
-from system.placeholder_runners import LidarInterimRunner, NetworkRunner
+from system.placeholder_runners import LidarInterimRunner, NetworkPlaceholderRunner
 
 
 class FakeModel:
@@ -57,7 +57,7 @@ def test_lidar_interim_reset_and_truncation():
 
 
 def test_network_placeholder_is_neutral_and_labelled():
-    run = NetworkRunner()
+    run = NetworkPlaceholderRunner()
     out = run.run([{"t": 1.0, "sample_id": "f0"}, {"t": 2.0}], key="cap")
     assert len(out) == 2 and all(isinstance(e, Evidence) and e.domain == "network" and not e.alarm and e.score == 0.0 for e in out)
     assert all(e.details["status"] == "placeholder" for e in out) and run.status == "placeholder"
@@ -70,7 +70,7 @@ def test_network_adapter_uses_documented_interface_with_stand_in():
                     for i, t in enumerate(flows["t"])]
             return comb, {}
 
-    run = NetworkRunner(Stand(), buffer=3)
+    run = NetworkPlaceholderRunner(Stand(), buffer=3)
     out = run.run([{"t": float(k), "sample_id": f"f{k}"} for k in range(5)], key="cap")
     assert [e.sample_id for e in out] == [f"f{k}" for k in range(5)] and all(e.alarm for e in out)
     assert all(e.details["status"] == "placeholder" for e in out)

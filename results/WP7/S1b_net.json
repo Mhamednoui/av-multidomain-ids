@@ -1,0 +1,427 @@
+{
+ "data": {
+  "split": "D10 validation stream, four 30-minute slices",
+  "slices": {
+   "832916": 11006,
+   "833014": 16693,
+   "832867": 13476,
+   "832877": 13245
+  },
+  "domain": "stack H, combiner max (results/WP4/s7_domain)"
+ },
+ "A1_exactness": {
+  "combined": {
+   "n_units": 4,
+   "n_evidence": 54420,
+   "all_identical": true,
+   "mismatches": 0,
+   "alarm_mismatches": 0,
+   "reason_mismatches": 0,
+   "max_abs_score_diff": 0.0,
+   "first_mismatch": null
+  },
+  "per_layer": {
+   "n_units": 4,
+   "n_evidence": 217680,
+   "all_identical": true,
+   "mismatches": 0,
+   "alarm_mismatches": 0,
+   "reason_mismatches": 0,
+   "max_abs_score_diff": 0.0,
+   "first_mismatch": null
+  },
+  "slices": [
+   {
+    "slice": 832916,
+    "flows": 11006,
+    "families": {
+     "BENIGN": 8880,
+     "DoS-SlowHTTPTest": 1418,
+     "DoS-Slowloris": 708
+    },
+    "alarms": 1696,
+    "batch_final_flows": 5837,
+    "identical_combined": true,
+    "identical_layers": true,
+    "max_abs_score_diff": 0.0,
+    "out_of_order": 0
+   },
+   {
+    "slice": 833014,
+    "flows": 16693,
+    "families": {
+     "BENIGN": 16640,
+     "Bot": 53
+    },
+    "alarms": 612,
+    "batch_final_flows": 11767,
+    "identical_combined": true,
+    "identical_layers": true,
+    "max_abs_score_diff": 0.0,
+    "out_of_order": 0
+   },
+   {
+    "slice": 832867,
+    "flows": 13476,
+    "families": {
+     "BENIGN": 12447,
+     "FTP-Patator": 1029
+    },
+    "alarms": 1060,
+    "batch_final_flows": 5488,
+    "identical_combined": true,
+    "identical_layers": true,
+    "max_abs_score_diff": 0.0,
+    "out_of_order": 0
+   },
+   {
+    "slice": 832877,
+    "flows": 13245,
+    "families": {
+     "BENIGN": 12190,
+     "SSH-Patator": 1055
+    },
+    "alarms": 1144,
+    "batch_final_flows": 12675,
+    "identical_combined": true,
+    "identical_layers": true,
+    "max_abs_score_diff": 0.0,
+    "out_of_order": 0
+   }
+  ],
+  "n_flows": 54420,
+  "n_families": 6
+ },
+ "A2_causality_truncation": {
+  "batch_prefix_final_flows_equal_batch_full": [
+   {
+    "slice": 832916,
+    "flows": 3301,
+    "final_flows_compared": 0,
+    "n_stream": 0,
+    "n_batch": 0,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 832916,
+    "flows": 6603,
+    "final_flows_compared": 5837,
+    "n_stream": 5837,
+    "n_batch": 5837,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 832916,
+    "flows": 9905,
+    "final_flows_compared": 5837,
+    "n_stream": 5837,
+    "n_batch": 5837,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 833014,
+    "flows": 5007,
+    "final_flows_compared": 4639,
+    "n_stream": 4639,
+    "n_batch": 4639,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 833014,
+    "flows": 10015,
+    "final_flows_compared": 4639,
+    "n_stream": 4639,
+    "n_batch": 4639,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 833014,
+    "flows": 15023,
+    "final_flows_compared": 11767,
+    "n_stream": 11767,
+    "n_batch": 11767,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "stream_prefix_equals_stream_full": [
+   {
+    "slice": 832916,
+    "flows": 3301,
+    "emitted": 0,
+    "n_stream": 0,
+    "n_batch": 0,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 832916,
+    "flows": 6603,
+    "emitted": 5837,
+    "n_stream": 5837,
+    "n_batch": 5837,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 832916,
+    "flows": 9905,
+    "emitted": 5837,
+    "n_stream": 5837,
+    "n_batch": 5837,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 833014,
+    "flows": 5007,
+    "emitted": 4639,
+    "n_stream": 4639,
+    "n_batch": 4639,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 833014,
+    "flows": 10015,
+    "emitted": 4639,
+    "n_stream": 4639,
+    "n_batch": 4639,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   },
+   {
+    "slice": 833014,
+    "flows": 15023,
+    "emitted": 11767,
+    "n_stream": 11767,
+    "n_batch": 11767,
+    "same_count": true,
+    "mismatches": 0,
+    "alarm_mismatches": 0,
+    "reason_mismatches": 0,
+    "max_abs_score_diff": 0.0,
+    "first_mismatch": null,
+    "identical": true
+   }
+  ],
+  "all_identical": true,
+  "n_checks": 12,
+  "min_delay_note": "Evidence is emitted when a flow of a later 5-minute bin arrives (window semantics of the frozen domain); the delay is flow time, not compute time"
+ },
+ "A3_reset": {
+  "n_stream": 11006,
+  "n_batch": 11006,
+  "same_count": true,
+  "mismatches": 0,
+  "alarm_mismatches": 0,
+  "reason_mismatches": 0,
+  "max_abs_score_diff": 0.0,
+  "first_mismatch": null,
+  "identical": true
+ },
+ "A4_latency": {
+  "per_push_all_calls": {
+   "pooled": {
+    "n": 163260,
+    "median_ms": 0.4641,
+    "p95_ms": 1.2738,
+    "p99_ms": 1.7941820000000006,
+    "mean_ms": 0.6055590689697417,
+    "max_ms": 1371.5994
+   },
+   "per_repetition": [
+    {
+     "n": 54420,
+     "median_ms": 0.4846,
+     "p95_ms": 1.2380049999999996,
+     "p99_ms": 1.7248959999999964,
+     "mean_ms": 0.651518967291437,
+     "max_ms": 1371.5994
+    },
+    {
+     "n": 54420,
+     "median_ms": 0.4587,
+     "p95_ms": 1.3524149999999988,
+     "p99_ms": 1.907304999999999,
+     "mean_ms": 0.6200144652701213,
+     "max_ms": 1171.5002
+    },
+    {
+     "n": 54420,
+     "median_ms": 0.4531,
+     "p95_ms": 1.2340049999999996,
+     "p99_ms": 1.7395859999999987,
+     "mean_ms": 0.5451437743476664,
+     "max_ms": 424.2906
+    }
+   ],
+   "spread_median_ms": {
+    "min": 0.4531,
+    "max": 0.4846
+   },
+   "spread_p95_ms": {
+    "min": 1.2340049999999996,
+    "max": 1.3524149999999988
+   },
+   "spread_p99_ms": {
+    "min": 1.7248959999999964,
+    "max": 1.907304999999999
+   }
+  },
+  "per_emitting_push": {
+   "pooled": {
+    "n": 18,
+    "median_ms": 354.3183,
+    "p95_ms": 1214.5317249999998,
+    "p99_ms": 1340.1858649999997,
+    "mean_ms": 591.1699444444444,
+    "max_ms": 1371.5994
+   },
+   "per_repetition": [
+    {
+     "n": 6,
+     "median_ms": 974.2066,
+     "p95_ms": 1325.403025,
+     "p99_ms": 1362.3601250000002,
+     "mean_ms": 836.2972333333333,
+     "max_ms": 1371.5994
+    },
+    {
+     "n": 6,
+     "median_ms": 686.45215,
+     "p95_ms": 1152.28165,
+     "p99_ms": 1167.65649,
+     "mean_ms": 665.7399333333333,
+     "max_ms": 1171.5002
+    },
+    {
+     "n": 6,
+     "median_ms": 244.29205,
+     "p95_ms": 413.607825,
+     "p99_ms": 422.154045,
+     "mean_ms": 271.47266666666667,
+     "max_ms": 424.2906
+    }
+   ],
+   "spread_median_ms": {
+    "min": 244.29205,
+    "max": 974.2066
+   },
+   "spread_p95_ms": {
+    "min": 413.607825,
+    "max": 1325.403025
+   },
+   "spread_p99_ms": {
+    "min": 422.154045,
+    "max": 1362.3601250000002
+   }
+  },
+  "emitting_by_buffer_flows": [
+   {
+    "size_from": 4639.0,
+    "size_to": 5488.0,
+    "n": 3,
+    "median_ms": 188.2317,
+    "p95_ms": 265.78353
+   },
+   {
+    "size_from": 5488.0,
+    "size_to": 6089.5,
+    "n": 6,
+    "median_ms": 545.7902,
+    "p95_ms": 1151.567225
+   },
+   {
+    "size_from": 6089.5,
+    "size_to": 11767.0,
+    "n": 3,
+    "median_ms": 255.5613,
+    "p95_ms": 319.92551999999995
+   },
+   {
+    "size_from": 11767.0,
+    "size_to": 12675.0,
+    "n": 6,
+    "median_ms": 1092.2408,
+    "p95_ms": 1321.5746
+   }
+  ],
+  "amortised_ms_per_flow_per_repetition": [
+   0.7061272951120909,
+   0.676798283719221,
+   0.6417490371187067
+  ],
+  "flows_per_repetition": 54420,
+  "v2_reference_ms": 1.0,
+  "note": "a push that closes a 5-minute bin re-scores the whole buffer of the capture (all four layers of stack H + combiner) and emits all flows of the closed bins; other pushes only append. Wall-clock includes the python dict handling of the stream; per-flow v2 ~1 ms.",
+  "amortised_ms_per_flow_median": 0.676798283719221
+ },
+ "machine": {
+  "python": "3.9.21",
+  "cpu_count": 12,
+  "platform": "Windows-10-10.0.26300-SP0",
+  "note": "shared machine, other workers running; numbers are an upper envelope of the quiet-machine values"
+ },
+ "seconds": 205.31425285339355
+}

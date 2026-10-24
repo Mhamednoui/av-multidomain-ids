@@ -25,7 +25,8 @@ from system.bus import EvidenceBus
 from system.can_runner import CANRunner
 from system.cross_runner import CrossObject, CrossRunner
 from system.gps_runner import INPUT_COLUMNS, GPSRunner
-from system.placeholder_runners import LidarInterimModel, LidarInterimRunner, NetworkRunner
+from system.net_runner import NetworkRunner
+from system.placeholder_runners import LidarInterimModel, LidarInterimRunner, NetworkPlaceholderRunner
 from system.v2x_runner import HELDOUT, V2XPhysicsDomain, V2XRunner
 from v2x import splitting
 
@@ -73,10 +74,16 @@ def main():
     lr.reset("0011")
     files = scan_files("0011")[:6]
     outs[("lidar", "combined")] = sum(len(lr.push({"points": load(f), "t": 0.1 * j, "sample_id": group_id("0011", f)})) for j, f in enumerate(files))
-    # network placeholder
-    nr = NetworkRunner(bus=bus)
-    nr.reset("cap")
-    outs[("network", "combined")] = sum(len(nr.push({"t": float(j), "sample_id": f"f{j}"})) for j in range(50))
+    # network: S1b runner over the frozen domain, 25 minutes of D10 validation flows (S1 used a placeholder here)
+    from network.domain import RAW_COLUMNS, NetworkDomain
+    from tools.WP4_S3_lib import load as d10_load, stream as d10_stream
+    nv = d10_stream(d10_load("D10"), "val")
+    t0 = float(nv["t"].min())
+    nv = nv[(nv["t"] >= t0 + 3600) & (nv["t"] < t0 + 5100)].sort_values(["t", "row"], kind="stable").reset_index(drop=True)
+    nv["src_ip"], nv["dst_ip"] = "h" + nv["src_id"].astype(str), "h" + nv["dst_id"].astype(str)
+    nr = NetworkRunner(NetworkDomain.load(L.ROOT / "results" / "WP4" / "s7_domain"), bus)
+    nr.reset("d10val")
+    outs[("network", "combined")] = sum(len(nr.push(f)) for f in nv[RAW_COLUMNS].to_dict("records")) + len(nr.flush())
     # ---- checks ----
     counts = bus.counts()
     count_ok = {f"{d}/{l}": (counts.get((d, l), 0) == n) for (d, l), n in outs.items()}
@@ -84,13 +91,12 @@ def main():
     order_ok = all(merged[i].evidence.t <= merged[i + 1].evidence.t for i in range(len(merged) - 1))
     wall_ok = all(bus.records[i].wall_ns <= bus.records[i + 1].wall_ns for i in range(len(bus.records) - 1))
     delay_ok = all(r.delay_ms >= 0 for r in bus.records)
-    fields_ok = all(isinstance(r.evidence, Evidence) and 0.0 <= r.evidence.score <= 1.0 and (r.evidence.reason != "") == r.evidence.alarm and r.evidence.sample_id != "" for r in bus.records
-                    if r.evidence.domain != "network")
+    fields_ok = all(isinstance(r.evidence, Evidence) and 0.0 <= r.evidence.score <= 1.0 and (r.evidence.reason != "") == r.evidence.alarm and r.evidence.sample_id != "" for r in bus.records)
     lab = {}
-    for dom, st in (("lidar", "interim"), ("network", "placeholder")):
+    for dom, st in (("lidar", "interim"),):
         rs = bus.by_domain(dom)
         lab[dom] = bool(rs) and all(r.status == st and r.evidence.details.get("status") == st for r in rs)
-    frozen_unlabelled = all("status" not in r.evidence.details for r in bus.records if r.evidence.domain in ("gps", "can", "v2x", "cross"))
+    frozen_unlabelled = all("status" not in r.evidence.details for r in bus.records if r.evidence.domain in ("gps", "can", "v2x", "cross", "network"))
     # micro-benchmarks
     b2 = EvidenceBus()
     e = Evidence("gps", "combined", "x", 0.0, 0.1, False, "", {}, "s")
@@ -98,16 +104,16 @@ def main():
     for _ in range(20000):
         b2.publish(e, "bench")
     pub_us = (time.perf_counter_ns() - t0) / 20000 / 1e3
-    nr2 = NetworkRunner()
+    nr2 = NetworkPlaceholderRunner()
     nr2.reset("b")
     for j in range(5000):
         nr2.push({"t": float(j), "sample_id": "f"})
     ph = nr2.latency.summary()["all_calls"]
-    res = {"slices": {"gps_runs": 12, "can_seconds": 14, "v2x_messages": 400, "cross_steps": 150, "lidar_scans": 6, "network_flows": 50},
+    res = {"slices": {"gps_runs": 12, "can_seconds": 14, "v2x_messages": 400, "cross_steps": 150, "lidar_scans": 6, "network_flows": "25 min of D10 validation (S1b, frozen domain)"},
            "evidence_on_bus": {f"{d}/{l}": int(n) for (d, l), n in counts.items()}, "runner_outputs": {f"{d}/{l}": int(n) for (d, l), n in outs.items()},
            "A5_counts_equal": count_ok, "A5_merged_order_by_stream_time": order_ok, "A5_wall_clock_monotone": wall_ok, "A5_ingest_before_publish": delay_ok, "A5_contract_fields": fields_ok,
            "A6_labels_on_every_record": lab, "A6_frozen_records_carry_no_status": frozen_unlabelled,
-           "bus_publish_us_per_record": pub_us, "network_placeholder_push_ms": ph,
+           "bus_publish_us_per_record": pub_us, "network_placeholder_push_ms": ph, "note_S1b": "network runner is the frozen-domain runner since S1b; placeholder push cost kept only as plumbing reference",
            "pipeline_delay_ms_median_by_domain": {d: float(np.median([r.delay_ms for r in bus.by_domain(d)])) for d in ("gps", "can", "v2x", "cross", "lidar", "network")}}
     res["A5_met"] = bool(all(count_ok.values()) and order_ok and wall_ok and delay_ok and fields_ok)
     res["A6_met"] = bool(all(lab.values()) and frozen_unlabelled)

@@ -1,0 +1,45 @@
+{
+ "what": "counting of equal-timestamp births (non-causal use in v2x.l3.birth_density); no scoring",
+ "datasets": {
+  "VeReMi val": {
+   "messages": 267553,
+   "tracks_births": 9477,
+   "messages_sharing_t_with_another_message": 0,
+   "tied_birth_groups": 0,
+   "births_in_tied_groups": 0,
+   "noncausal_birth_pairs": 0,
+   "births_with_noncausal_neighbour": 0,
+   "share_of_births_affected": 0.0
+  },
+  "VeReMi test": {
+   "messages": 718851,
+   "tracks_births": 26787,
+   "messages_sharing_t_with_another_message": 0,
+   "tied_birth_groups": 0,
+   "births_in_tied_groups": 0,
+   "noncausal_birth_pairs": 0,
+   "births_with_noncausal_neighbour": 0,
+   "share_of_births_affected": 0.0
+  },
+  "Tampa val": {
+   "messages": 2094,
+   "tracks_births": 10,
+   "messages_sharing_t_with_another_message": 0,
+   "tied_birth_groups": 0,
+   "births_in_tied_groups": 0,
+   "noncausal_birth_pairs": 0,
+   "births_with_noncausal_neighbour": 0,
+   "share_of_births_affected": 0.0
+  },
+  "Tampa test": {
+   "messages": 4225,
+   "tracks_births": 9,
+   "messages_sharing_t_with_another_message": 0,
+   "tied_birth_groups": 0,
+   "births_in_tied_groups": 0,
+   "noncausal_birth_pairs": 0,
+   "births_with_noncausal_neighbour": 0,
+   "share_of_births_affected": 0.0
+  }
+ }
+}

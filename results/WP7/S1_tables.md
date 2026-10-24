@@ -35,8 +35,8 @@ Pooled over the repetitions; the two spread columns give the min - max of the pe
 | V2X (12 checks + combiner) | message | 9432 | 20.658 | 46.891 | 59.758 | 20.474 - 20.791 | 59.522 - 59.998 | none (new) | 0.1 s |
 | Cross-domain witness step | grid second (MotionEstimate events, resolving call) | 504 | 6.301 | 13.720 | 15.927 | 5.814 - 6.635 | 14.693 - 16.895 | none (new) | 1 s |
 | LiDAR (INTERIM v2 baseline) | scan | 54 | 32.140 | 51.608 | 59.572 | 31.282 - 35.408 | 52.174 - 58.268 | ~23 ms per scan | 0.1 s |
-| Network (PLACEHOLDER, plumbing only) | flow | 5000 | 0.0019 | 0.0023 | 0.0026 | - | - | ~1 ms | - |
-| Evidence bus publish | record | - | 0.0072 | - | - | - | - | fusion ~0.3 ms (fusion not part of S1) | - |
+| Network placeholder push (S1 plumbing only; the real runner is in S1b) | flow | 5000 | 0.0011 | 0.0016 | 0.0020 | - | - | ~1 ms | - |
+| Evidence bus publish | record | - | 0.0008 | - | - | - | - | fusion ~0.3 ms (fusion not part of S1) | - |
 
 CAN amortised cost (total time of all pushes / frames): 0.0441 ms per frame (v2 ~0.05 ms per frame).
 Cross residual-level step (statistic + calibration + blame, no alignment): median 0.183 ms.
@@ -96,7 +96,45 @@ Real-time check (pre-registered: p99 < sample period): gps yes; can_window yes; 
 | v2x/combined | 400 | 400 | True |
 | cross/L2 | 150 | 150 | True |
 | lidar/combined | 6 | 6 | True |
-| network/combined | 50 | 50 | True |
+| network/combined | 21728 | 21728 | True |
 
-Merged order by stream time: True; wall clock monotone: True; contract fields: True; labels interim / placeholder on every record: {'lidar': True, 'network': True}; frozen records carry no status: True.
-Median pipeline delay (sample entering its runner to publication), ms: gps 39.515, can 88.841, v2x 18.001, cross 0.274, lidar 36.379, network 0.003.
+Merged order by stream time: True; wall clock monotone: True; contract fields: True; labels interim / placeholder on every record: {'lidar': True}; frozen records carry no status: True.
+Median pipeline delay (sample entering its runner to publication), ms: gps 35.373, can 80.757, v2x 15.874, cross 0.170, lidar 42.573, network 805.469.
+
+## 7. S1b: network runner over the frozen domain (stack H) and equal-timestamp births
+
+| Slice (D10 val, 30 min) | Flows | Families | Alarms (batch) | Combined identical | Layers identical | Max score diff |
+|---|---|---|---|---|---|---|
+| 832916 | 11006 | BENIGN 8880, DoS-SlowHTTPTest 1418, DoS-Slowloris 708 | 1696 | True | True | 0.0e+00 |
+| 833014 | 16693 | BENIGN 16640, Bot 53 | 612 | True | True | 0.0e+00 |
+| 832867 | 13476 | BENIGN 12447, FTP-Patator 1029 | 1060 | True | True | 0.0e+00 |
+| 832877 | 13245 | BENIGN 12190, SSH-Patator 1055 | 1144 | True | True | 0.0e+00 |
+
+Total 54420 flows, 54420 combined + 217680 per-layer Evidence, alarm mismatches 0 / 0, reason mismatches 0, max score diff 0.0e+00.
+Truncation: 12 checks (batch prefix, final flows == batch full; stream prefix == stream full), all identical: True. Reset identical: True.
+
+| Latency (ms) | n | median | p95 | p99 | median spread (reps) | v2 reference |
+|---|---|---|---|---|---|---|
+| push, all calls | 163260 | 0.4641 | 1.2738 | 1.7942 | 0.4531 - 0.4846 | - |
+| push that closes a 5-min bin (re-scores the buffer, emits the flows of the closed bins) | 18 | 354.3183 | 1214.5317 | 1340.1859 | 244.2920 - 974.2066 | - |
+| amortised per flow (total time / flows, 3 repetitions) | 54420 | 0.6768 | - | - | 0.6417 - 0.7061 | ~1 ms |
+
+Emitting push by buffer size (flows already in the capture):
+
+| buffer from | to | n | median ms | p95 ms |
+|---|---|---|---|---|
+| 4639 | 5488 | 3 | 188.2 | 265.8 |
+| 5488 | 6090 | 6 | 545.8 | 1151.6 |
+| 6090 | 11767 | 3 | 255.6 | 319.9 |
+| 11767 | 12675 | 6 | 1092.2 | 1321.6 |
+
+Equal-timestamp births (v2x.l3.birth_density counts births with EQUAL timestamp that come later in the table; counting only, no scoring):
+
+| Dataset split | Messages | Births (tracks) | Messages sharing t with another | Tied birth groups | Non-causal birth pairs | Births affected |
+|---|---|---|---|---|---|---|
+| VeReMi val | 267553 | 9477 | 0 | 0 | 0 | 0 |
+| VeReMi test | 718851 | 26787 | 0 | 0 | 0 | 0 |
+| Tampa val | 2094 | 10 | 0 | 0 | 0 | 0 |
+| Tampa test | 4225 | 9 | 0 | 0 | 0 | 0 |
+
+Bus with the network runner on 25 minutes of D10 validation: A5 True, A6 True; network Evidence on the bus 21728.
