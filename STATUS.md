@@ -11,9 +11,9 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP2 CAN | done (M1-CAN partial) | APPROVED | - | 2026-10-22 | M1-CAN closed PARTIAL, see reports/M1_CAN.md; frozen output can/domain.py |
 | WP3 LiDAR | S4 | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-22 | S3 APPROVED (S2b confirmed add artefact) |
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
-| WP5 V2X | S0c | TODO (next free slot) | - | 2026-10-24 | V2AIX link received from the user; then S3b (receiver-position checks, real CAM FA) |
+| WP5 V2X | S0c | IN PROGRESS | worker sonnet (medium, T2) | 2026-10-24 | V2AIX download + adapter |
 | WP6 Cross-domain | S4 | IN PROGRESS | worker sonnet (high, T3) | 2026-10-24 | S3 APPROVED partial (system FA 6.3% vs 3%) |
-| WP7 System | S1b | REVIEW | worker sonnet (medium, T2) | 2026-10-24 | S1b: network runner over frozen domain, stream == batch exact on D10 val (54,420 flows), 0.68 ms/flow amortised; equal-timestamp births: 0 non-causal pairs on VeReMi/Tampa val+test; reports/WP7_S1.md section S1b |
+| WP7 System | S2 | TODO (waits for M1-LiDAR + M2) | - | 2026-10-24 | S1 + S1b APPROVED |
 
 ## Overall progress (orchestrator updates this at every approval)
 
