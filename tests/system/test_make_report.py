@@ -97,5 +97,7 @@ def test_committed_report_is_current():
     p = ROOT / "RESULTS_v3.md"
     if not p.exists():
         raise Skip("RESULTS_v3.md not generated yet")
-    if p.read_bytes().decode("utf-8") != M.build()["text"]:
+    if p.read_bytes().decode("utf-8").replace("
+", "
+") != M.build()["text"]:
         raise Skip("RESULTS_v3.md is stale: run python make_report.py (an input JSON changed)")
