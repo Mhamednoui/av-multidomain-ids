@@ -249,3 +249,4 @@ State:
 - Progress 58/59 = 98%. WP7 S2 approved, M3 closed NOT MET (8/12). RESULTS_v3.md regenerated and committed (a378290).
 - Only WP7 S4 (publication) remains. User said: do NOT publish/push anything for now. Wait for the user's explicit decision.
 - No workers running, no Python processes left.
+- 2026-10-25: deleted regenerable caches (data_extra/cache_v3, WP2_S2..S7_cache) and the D11 zip (already extracted), about 16.6 GB. Scripts rebuild the caches on demand.
