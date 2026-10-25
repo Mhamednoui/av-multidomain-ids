@@ -13,11 +13,11 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP4 Network | done (M1-NET partial) | APPROVED | - | 2026-10-22 | M1-NET closed PARTIAL, see reports/M1_NET.md; frozen network/domain.py |
 | WP5 V2X | done (M1-V2X partial + V2AIX addendum) | APPROVED | - | 2026-10-24 | S3b APPROVED partial: real-CAM FA 92-95% with VeReMi calibration, ~1% recalibrated |
 | WP6 Cross-domain | done (M2 + addendum, not met) | APPROVED | - | 2026-10-25 | final system v2: fusion.system.load_system(2) |
-| WP7 System | S2 | REVIEW | worker sonnet (high, T3) | 2026-10-25 | simulation v3 on system v2 done: M3 NOT MET (8/12 rows), reports/WP7_S2.md + M3.md, S2_acceptance.json |
+| WP7 System | S2 | APPROVED | worker sonnet (high, T3) | 2026-10-25 | simulation v3 on system v2 done: M3 NOT MET (8/12 rows), reports/WP7_S2.md + M3.md, S2_acceptance.json |
 
 ## Overall progress (orchestrator updates this at every approval)
 
-**Overall: 57 / 59 steps approved = 97%** (updated 2026-10-25)
+**Overall: 58 / 59 steps approved = 98%** (updated 2026-10-25)
 
 | WP | Steps counted | Approved | % |
 |---|---|---|---|
@@ -28,7 +28,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | WP4 Network | S0-S7 (8) | 8 | 100 (M1-NET partial) |
 | WP5 V2X | S0, S0b, S0c, S1, S1b, S2-S6, S3b (11; S7 optional) | 11 | 100 (M1-V2X partial + V2AIX addendum) |
 | WP6 Cross-domain | S1, S2, S2b, S3-S5, S5b (7) | 7 | 100 (M2 not met) |
-| WP7 System | S1-S4 (4) | 2 | 50 |
+| WP7 System | S1-S4 (4) | 3 | 75 |
 
 ## Milestones
 

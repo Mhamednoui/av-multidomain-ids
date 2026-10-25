@@ -424,7 +424,23 @@ The network runner was added in S1b (`results/WP7/S1_acceptance.json`, section S
 
 #### Simulation (WP7 S2)
 
-**PENDING.** The simulation runs all five domains as real streams with coordinated multi-domain scenarios and first-alert delay per block; it waits for M1-LiDAR and the M2 addendum. This section fills itself from the first of these files that exists: `results/WP7/S2_acceptance.json`.
+Filled from `results/WP7/S2_acceptance.json`.
+
+| item | rule | values | verdict |
+|---|---|---|---|
+| A1_stream_integrity | FusionRunner final alarms and events (start, end, blamed, response, explanation) equal SystemV2.run on the same per-domain arrays for every attack composite and every clean timeline (0 mismatches) | composites 213744.000; clean_timelines 32.000; mismatches 0.000 | MET |
+| A2_coverage | every test episode enumerated from the SOURCES (70 per KITTI vehicle type, 32 per comma type, 7 per LiDAR per-scan kind, 21 per LiDAR episode kind, every CAN / V2X / network attack run) is a composite; no difference between expected and built counts | types 134.000; composites 213744.000; differences 0.000 | MET |
+| A3_live_cosimulation | at least 6 composites driven fully live through the runners and the bus equal the replay from the stored domain passes (0 mismatches) | composites 6.000; mismatches 0.000 | MET |
+| A4_timing | per-domain compute latency (median, p95, p99), Evidence delay, real-time ratio and a keeps-up statement, all from measured passes | lidar_median_ms 3978.416; network_evidence_delay_median_s 66.000; network_evidence_delay_max_s 242.000; lidar_ratio_loaded 38.551 | MET |
+| A5_completeness | every reported item exists in S2_results.json (by type, by domain, blame, response, clean hours with CI, timing, v2 side by side) | types_K 86.000; types_C 48.000 | MET |
+| B1_clean_tick_fa | clean raw tick FA <= 3.0% (K and C) | K 0.033; C 0.061 | NOT MET |
+| B2_events_per_clean_hour | alert events per clean hour <= 10 (K and C) | K 18.403; C 27.479 | NOT MET |
+| B3_event_detection_single | K mean event detection over the single-domain attack types >= 70% | K 0.608; types 55.000 | NOT MET |
+| B4_heldout_types | K mean event detection over the S4 held-out types >= 60% | K 0.711; types 12.000 | MET |
+| B5_blame | K blame of detected single-domain events, equal weight per attack type: correct >= 75% and wrong <= 10% (the pooled value is dominated by V2X episodes and is reported next to it) | correct 0.785; wrong 0.097; undecided 0.118; pooled_correct 0.994 | MET |
+| B6_safe_stop_per_clean_hour | SAFE_STOP recommendations per clean hour <= 1 (K and C) | K 0.378; C 1.639; K_variant 0.378; C_variant 0.630 | NOT MET |
+| B7_explanations | 100% of alert events carry the system's explanation | events 201637.000; explained 201637.000 | MET |
+| M3_verdict | M3 = MET only if A1-A5 and B1-B7 all hold | rows_met 8.000; rows 12.000 | NOT MET |
 
 ## 9. v2 side by side, with the comparability caveats
 
@@ -1401,47 +1417,107 @@ Each row is one printed value: the text as printed, the file it was read from an
 | 836 | MET | `results/WP7/S1_acceptance.json` | `A1/lidar_interim/met` | json | 1 |
 | 837 | MET | `results/WP7/S1_acceptance.json` | `A2/lidar_interim/met` | json | 1 |
 | 838 | MET | `results/WP7/S1_acceptance.json` | `A3/lidar_interim/met` | json | 1 |
-| 839 | 5/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/captures_detected` | json | 1 |
-| 840 | 0.00% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/test_window_fpr` | json | 1 |
-| 841 | 0 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/false_alerts_per_hour` | json | 1 |
-| 842 | 7/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/captures_detected` | json | 1 |
-| 843 | 0.83% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/test_window_fpr` | json | 1 |
-| 844 | 30 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
-| 845 | 10/11 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/captures_detected` | json | 1 |
-| 846 | 4.85% | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/test_window_fpr` | json | 1 |
-| 847 | 175 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
-| 848 | 99.73% | `results/WP7/S3_registry.json` | `v2_reference/net_accuracy_random_split/value` | curated | 1 |
-| 849 | 99.60% | `results/WP7/S3_registry.json` | `v2_reference/net_macro_f1_random_split/value` | curated | 1 |
-| 850 | 2.9% | `results/WP7/S3_registry.json` | `v2_reference/net_ocsvm_fa/value` | curated | 1 |
-| 851 | 0.0% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_supervised/value` | curated | 1 |
-| 852 | 5.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_ocsvm/value` | curated | 1 |
-| 853 | 1.2% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_supervised/value` | curated | 1 |
-| 854 | 96.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_ocsvm/value` | curated | 1 |
-| 855 | 91.7% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/accuracy` | json | 1 |
-| 856 | 1.90% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/fpr` | json | 1 |
-| 857 | 84.2% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/recall` | json | 1 |
-| 858 | 26.0% | `results/WP6/s5_test.json` | `system/K/tick_recall_attack_ticks` | json | 1 |
-| 859 | 8 | `results/WP7/S3_registry.json` | `exposure/kitti_gps_test_drives/value` | curated | 1 |
-| 860 | 3 | `results/WP7/S3_registry.json` | `exposure/carhacking_test_blocks/value` | curated | 1 |
-| 861 | 4 | `results/WP7/S3_registry.json` | `exposure/d11_test_subsets/value` | curated | 1 |
-| 862 | 6 | `results/WP7/S3_registry.json` | `exposure/d10_cicids2017_test/value` | curated | 1 |
-| 863 | 3 | `results/WP7/S3_registry.json` | `exposure/d23_cse_cic_ids2018/value` | curated | 1 |
-| 864 | 2 | `results/WP7/S3_registry.json` | `exposure/veremi_test/value` | curated | 1 |
-| 865 | 1 | `results/WP7/S3_registry.json` | `exposure/v2aix_test/value` | curated | 1 |
-| 866 | 2 | `results/WP7/S3_registry.json` | `exposure/comma2k19/value` | curated | 1 |
-| 867 | 3 | `results/WP7/S3_registry.json` | `exposure/fusion_composites/value` | curated | 1 |
-| 868 | 23.3% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/attack_window_recall` | json | 1 |
-| 869 | 35.0% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/fa_clean_rate` | json | 1 |
-| 870 | 4.1% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/fa_clean_runs` | json | 1 |
-| 871 | 26% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/worst_drive_fa` | json | 1 |
-| 872 | 0.60 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/mean_window_auc` | json | 1 |
-| 873 | 0.55 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/bound` | json | 1 |
-| 874 | -8.0 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_K` | json | 1 |
-| 875 | -4.6 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_C` | json | 1 |
-| 876 | 7 | `results/WP1/S8_kitti.json` | `deployed/n_drives` | json | 1 |
-| 877 | 490 | `results/WP1/S8_kitti.json` | `n_test_runs` | json | 1 |
-| 878 | 1,375 | `results/WP2/s7_test.json` | `configs/all/clean_windows` | json | 1 |
-| 879 | 0.6 | `results/WP5/s3b_clean.json` | `envs/Mobile/receiver_hours` | json | 1 |
-| 880 | 3.8 | `results/WP5/s3b_clean.json` | `envs/Stationary/receiver_hours` | json | 1 |
-| 881 | 12.6 | `results/WP6/s5_test.json` | `system/K/clean_hours` | json | 1 |
-| 882 | 7 | `results/WP6/s5_test.json` | `system/K/ci_heldout_event/n_vehicle_groups` | json | 1 |
+| 839 | 213744.000 | `results/WP7/S2_acceptance.json` | `A1_stream_integrity/composites` | json | 1 |
+| 840 | 32.000 | `results/WP7/S2_acceptance.json` | `A1_stream_integrity/clean_timelines` | json | 1 |
+| 841 | 0.000 | `results/WP7/S2_acceptance.json` | `A1_stream_integrity/mismatches` | json | 1 |
+| 842 | FusionRunner final alarms and events (start, end, blamed, response, explanation) equal SystemV2.run on the same per-domain arrays for every attack composite and every clean timeline (0 mismatches) | `results/WP7/S2_acceptance.json` | `A1_stream_integrity/rule` | json | 1 |
+| 843 | MET | `results/WP7/S2_acceptance.json` | `A1_stream_integrity/met` | json | 1 |
+| 844 | 134.000 | `results/WP7/S2_acceptance.json` | `A2_coverage/types` | json | 1 |
+| 845 | 213744.000 | `results/WP7/S2_acceptance.json` | `A2_coverage/composites` | json | 1 |
+| 846 | 0.000 | `results/WP7/S2_acceptance.json` | `A2_coverage/differences` | json | 1 |
+| 847 | every test episode enumerated from the SOURCES (70 per KITTI vehicle type, 32 per comma type, 7 per LiDAR per-scan kind, 21 per LiDAR episode kind, every CAN / V2X / network attack run) is a composite; no difference between expected and built counts | `results/WP7/S2_acceptance.json` | `A2_coverage/rule` | json | 1 |
+| 848 | MET | `results/WP7/S2_acceptance.json` | `A2_coverage/met` | json | 1 |
+| 849 | 6.000 | `results/WP7/S2_acceptance.json` | `A3_live_cosimulation/composites` | json | 1 |
+| 850 | 0.000 | `results/WP7/S2_acceptance.json` | `A3_live_cosimulation/mismatches` | json | 1 |
+| 851 | at least 6 composites driven fully live through the runners and the bus equal the replay from the stored domain passes (0 mismatches) | `results/WP7/S2_acceptance.json` | `A3_live_cosimulation/rule` | json | 1 |
+| 852 | MET | `results/WP7/S2_acceptance.json` | `A3_live_cosimulation/met` | json | 1 |
+| 853 | 3978.416 | `results/WP7/S2_acceptance.json` | `A4_timing/lidar_median_ms` | json | 1 |
+| 854 | 66.000 | `results/WP7/S2_acceptance.json` | `A4_timing/network_evidence_delay_median_s` | json | 1 |
+| 855 | 242.000 | `results/WP7/S2_acceptance.json` | `A4_timing/network_evidence_delay_max_s` | json | 1 |
+| 856 | 38.551 | `results/WP7/S2_acceptance.json` | `A4_timing/lidar_ratio_loaded` | json | 1 |
+| 857 | per-domain compute latency (median, p95, p99), Evidence delay, real-time ratio and a keeps-up statement, all from measured passes | `results/WP7/S2_acceptance.json` | `A4_timing/rule` | json | 1 |
+| 858 | MET | `results/WP7/S2_acceptance.json` | `A4_timing/met` | json | 1 |
+| 859 | 86.000 | `results/WP7/S2_acceptance.json` | `A5_completeness/types_K` | json | 1 |
+| 860 | 48.000 | `results/WP7/S2_acceptance.json` | `A5_completeness/types_C` | json | 1 |
+| 861 | every reported item exists in S2_results.json (by type, by domain, blame, response, clean hours with CI, timing, v2 side by side) | `results/WP7/S2_acceptance.json` | `A5_completeness/rule` | json | 1 |
+| 862 | MET | `results/WP7/S2_acceptance.json` | `A5_completeness/met` | json | 1 |
+| 863 | 0.033 | `results/WP7/S2_acceptance.json` | `B1_clean_tick_fa/K` | json | 1 |
+| 864 | 0.061 | `results/WP7/S2_acceptance.json` | `B1_clean_tick_fa/C` | json | 1 |
+| 865 | clean raw tick FA <= 3.0% (K and C) | `results/WP7/S2_acceptance.json` | `B1_clean_tick_fa/rule` | json | 1 |
+| 866 | NOT MET | `results/WP7/S2_acceptance.json` | `B1_clean_tick_fa/met` | json | 1 |
+| 867 | 18.403 | `results/WP7/S2_acceptance.json` | `B2_events_per_clean_hour/K` | json | 1 |
+| 868 | 27.479 | `results/WP7/S2_acceptance.json` | `B2_events_per_clean_hour/C` | json | 1 |
+| 869 | alert events per clean hour <= 10 (K and C) | `results/WP7/S2_acceptance.json` | `B2_events_per_clean_hour/rule` | json | 1 |
+| 870 | NOT MET | `results/WP7/S2_acceptance.json` | `B2_events_per_clean_hour/met` | json | 1 |
+| 871 | 0.608 | `results/WP7/S2_acceptance.json` | `B3_event_detection_single/K` | json | 1 |
+| 872 | 55.000 | `results/WP7/S2_acceptance.json` | `B3_event_detection_single/types` | json | 1 |
+| 873 | K mean event detection over the single-domain attack types >= 70% | `results/WP7/S2_acceptance.json` | `B3_event_detection_single/rule` | json | 1 |
+| 874 | NOT MET | `results/WP7/S2_acceptance.json` | `B3_event_detection_single/met` | json | 1 |
+| 875 | 0.711 | `results/WP7/S2_acceptance.json` | `B4_heldout_types/K` | json | 1 |
+| 876 | 12.000 | `results/WP7/S2_acceptance.json` | `B4_heldout_types/types` | json | 1 |
+| 877 | K mean event detection over the S4 held-out types >= 60% | `results/WP7/S2_acceptance.json` | `B4_heldout_types/rule` | json | 1 |
+| 878 | MET | `results/WP7/S2_acceptance.json` | `B4_heldout_types/met` | json | 1 |
+| 879 | 0.785 | `results/WP7/S2_acceptance.json` | `B5_blame/correct` | json | 1 |
+| 880 | 0.097 | `results/WP7/S2_acceptance.json` | `B5_blame/wrong` | json | 1 |
+| 881 | 0.118 | `results/WP7/S2_acceptance.json` | `B5_blame/undecided` | json | 1 |
+| 882 | 0.994 | `results/WP7/S2_acceptance.json` | `B5_blame/pooled_correct` | json | 1 |
+| 883 | K blame of detected single-domain events, equal weight per attack type: correct >= 75% and wrong <= 10% (the pooled value is dominated by V2X episodes and is reported next to it) | `results/WP7/S2_acceptance.json` | `B5_blame/rule` | json | 1 |
+| 884 | MET | `results/WP7/S2_acceptance.json` | `B5_blame/met` | json | 1 |
+| 885 | 0.378 | `results/WP7/S2_acceptance.json` | `B6_safe_stop_per_clean_hour/K` | json | 1 |
+| 886 | 1.639 | `results/WP7/S2_acceptance.json` | `B6_safe_stop_per_clean_hour/C` | json | 1 |
+| 887 | 0.378 | `results/WP7/S2_acceptance.json` | `B6_safe_stop_per_clean_hour/K_variant` | json | 1 |
+| 888 | 0.630 | `results/WP7/S2_acceptance.json` | `B6_safe_stop_per_clean_hour/C_variant` | json | 1 |
+| 889 | SAFE_STOP recommendations per clean hour <= 1 (K and C) | `results/WP7/S2_acceptance.json` | `B6_safe_stop_per_clean_hour/rule` | json | 1 |
+| 890 | NOT MET | `results/WP7/S2_acceptance.json` | `B6_safe_stop_per_clean_hour/met` | json | 1 |
+| 891 | 201637.000 | `results/WP7/S2_acceptance.json` | `B7_explanations/events` | json | 1 |
+| 892 | 201637.000 | `results/WP7/S2_acceptance.json` | `B7_explanations/explained` | json | 1 |
+| 893 | 100% of alert events carry the system's explanation | `results/WP7/S2_acceptance.json` | `B7_explanations/rule` | json | 1 |
+| 894 | MET | `results/WP7/S2_acceptance.json` | `B7_explanations/met` | json | 1 |
+| 895 | 8.000 | `results/WP7/S2_acceptance.json` | `M3_verdict/rows_met` | json | 1 |
+| 896 | 12.000 | `results/WP7/S2_acceptance.json` | `M3_verdict/rows` | json | 1 |
+| 897 | M3 = MET only if A1-A5 and B1-B7 all hold | `results/WP7/S2_acceptance.json` | `M3_verdict/rule` | json | 1 |
+| 898 | NOT MET | `results/WP7/S2_acceptance.json` | `M3_verdict/met` | json | 1 |
+| 899 | 5/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/captures_detected` | json | 1 |
+| 900 | 0.00% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/test_window_fpr` | json | 1 |
+| 901 | 0 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.001/false_alerts_per_hour` | json | 1 |
+| 902 | 7/11 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/captures_detected` | json | 1 |
+| 903 | 0.83% | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/test_window_fpr` | json | 1 |
+| 904 | 30 | `results/WP2/s7_others.json` | `v2_road/R1_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
+| 905 | 10/11 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/captures_detected` | json | 1 |
+| 906 | 4.85% | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/test_window_fpr` | json | 1 |
+| 907 | 175 | `results/WP2/s7_others.json` | `v2_road/R2_val_fpr_0.01/false_alerts_per_hour` | json | 1 |
+| 908 | 99.73% | `results/WP7/S3_registry.json` | `v2_reference/net_accuracy_random_split/value` | curated | 1 |
+| 909 | 99.60% | `results/WP7/S3_registry.json` | `v2_reference/net_macro_f1_random_split/value` | curated | 1 |
+| 910 | 2.9% | `results/WP7/S3_registry.json` | `v2_reference/net_ocsvm_fa/value` | curated | 1 |
+| 911 | 0.0% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_supervised/value` | curated | 1 |
+| 912 | 5.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_bot_ocsvm/value` | curated | 1 |
+| 913 | 1.2% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_supervised/value` | curated | 1 |
+| 914 | 96.3% | `results/WP7/S3_registry.json` | `v2_reference/net_unseen_web_ocsvm/value` | curated | 1 |
+| 915 | 91.7% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/accuracy` | json | 1 |
+| 916 | 1.90% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/fpr` | json | 1 |
+| 917 | 84.2% | `results/WP6/s5_test.json` | `v2/simulation_with_correlator/recall` | json | 1 |
+| 918 | 26.0% | `results/WP6/s5_test.json` | `system/K/tick_recall_attack_ticks` | json | 1 |
+| 919 | 8 | `results/WP7/S3_registry.json` | `exposure/kitti_gps_test_drives/value` | curated | 1 |
+| 920 | 3 | `results/WP7/S3_registry.json` | `exposure/carhacking_test_blocks/value` | curated | 1 |
+| 921 | 4 | `results/WP7/S3_registry.json` | `exposure/d11_test_subsets/value` | curated | 1 |
+| 922 | 6 | `results/WP7/S3_registry.json` | `exposure/d10_cicids2017_test/value` | curated | 1 |
+| 923 | 3 | `results/WP7/S3_registry.json` | `exposure/d23_cse_cic_ids2018/value` | curated | 1 |
+| 924 | 2 | `results/WP7/S3_registry.json` | `exposure/veremi_test/value` | curated | 1 |
+| 925 | 1 | `results/WP7/S3_registry.json` | `exposure/v2aix_test/value` | curated | 1 |
+| 926 | 2 | `results/WP7/S3_registry.json` | `exposure/comma2k19/value` | curated | 1 |
+| 927 | 3 | `results/WP7/S3_registry.json` | `exposure/fusion_composites/value` | curated | 1 |
+| 928 | 23.3% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/attack_window_recall` | json | 1 |
+| 929 | 35.0% | `results/WP2/s3_road.json` | `regimes/A/summary/can.l2a_skew/fa_clean_rate` | json | 1 |
+| 930 | 4.1% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/fa_clean_runs` | json | 1 |
+| 931 | 26% | `results/WP1/S8_kitti.json` | `layers_test/opt.map_dist/worst_drive_fa` | json | 1 |
+| 932 | 0.60 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/mean_window_auc` | json | 1 |
+| 933 | 0.55 | `results/WP2/s6_road.json` | `shuffle/can.l4_timing/bound` | json | 1 |
+| 934 | -8.0 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_K` | json | 1 |
+| 935 | -4.6 | `results/WP6/s4_acceptance.json` | `Z5_novelty_layer/delta_heldout_points_C` | json | 1 |
+| 936 | 7 | `results/WP1/S8_kitti.json` | `deployed/n_drives` | json | 1 |
+| 937 | 490 | `results/WP1/S8_kitti.json` | `n_test_runs` | json | 1 |
+| 938 | 1,375 | `results/WP2/s7_test.json` | `configs/all/clean_windows` | json | 1 |
+| 939 | 0.6 | `results/WP5/s3b_clean.json` | `envs/Mobile/receiver_hours` | json | 1 |
+| 940 | 3.8 | `results/WP5/s3b_clean.json` | `envs/Stationary/receiver_hours` | json | 1 |
+| 941 | 12.6 | `results/WP6/s5_test.json` | `system/K/clean_hours` | json | 1 |
+| 942 | 7 | `results/WP6/s5_test.json` | `system/K/ci_heldout_event/n_vehicle_groups` | json | 1 |

@@ -242,3 +242,5 @@ State:
 - Running: WP7 S2 (simulation -> M3, sonnet high). If it was interrupted: resume via SendMessage in this session, or launch a fresh T3 worker telling it to continue from its files (results/WP7/S2*, tools/WP7_S2_*, notes/WP7_system.md).
 - After M3: regenerate RESULTS_v3.md (python make_report.py), update STATUS progress, then WP7 S4 publication = ASK THE USER FIRST (no GitHub push without explicit approval).
 - User items: TOW-IDS (IEEE DataPort login, optional); Tampa ITS DataHub request (optional).
+
+| 2026-10-25 | WP7 | S2 | APPROVED. M3 closed NOT MET (8/12): A1-A5, B4, B5, B7 met; B1 FA 3.31%/6.15%, B2 18.4/27.5 events/h, B3 60.8%, B6 C SAFE_STOP 1.64/h failed. LiDAR not real time (1.98 s/scan). RESULTS_v3.md regenerated (942 values, 0 missing). Next: WP7 S4 publication = ask user. |
