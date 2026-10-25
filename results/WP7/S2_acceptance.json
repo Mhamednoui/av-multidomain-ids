@@ -1,0 +1,92 @@
+{
+ "A1_stream_integrity": {
+  "rule": "FusionRunner final alarms and events (start, end, blamed, response, explanation) equal SystemV2.run on the same per-domain arrays for every attack composite and every clean timeline (0 mismatches)",
+  "met": true,
+  "composites": 213744,
+  "clean_timelines": 32,
+  "mismatches": 0
+ },
+ "A2_coverage": {
+  "rule": "every test episode enumerated from the SOURCES (70 per KITTI vehicle type, 32 per comma type, 7 per LiDAR per-scan kind, 21 per LiDAR episode kind, every CAN / V2X / network attack run) is a composite; no difference between expected and built counts",
+  "met": true,
+  "types": 134,
+  "composites": 213744,
+  "differences": 0
+ },
+ "A3_live_cosimulation": {
+  "rule": "at least 6 composites driven fully live through the runners and the bus equal the replay from the stored domain passes (0 mismatches)",
+  "met": true,
+  "composites": 6,
+  "mismatches": 0
+ },
+ "A4_timing": {
+  "rule": "per-domain compute latency (median, p95, p99), Evidence delay, real-time ratio and a keeps-up statement, all from measured passes",
+  "met": true,
+  "lidar_median_ms": 3978.4164499999997,
+  "network_evidence_delay_median_s": 66.0,
+  "network_evidence_delay_max_s": 242.0,
+  "lidar_ratio_loaded": 38.55054699612403,
+  "lidar_ratio_light": 19.17375944767442,
+  "v2x_ratio": 1.8921448727669627,
+  "gps_ratio": 0.06401128814791404
+ },
+ "A5_completeness": {
+  "rule": "every reported item exists in S2_results.json (by type, by domain, blame, response, clean hours with CI, timing, v2 side by side)",
+  "met": true,
+  "types_K": 86,
+  "types_C": 48
+ },
+ "B1_clean_tick_fa": {
+  "rule": "clean raw tick FA <= 3.0% (K and C)",
+  "met": false,
+  "K": 0.03308823529411765,
+  "C": 0.06148459383753501
+ },
+ "B2_events_per_clean_hour": {
+  "rule": "alert events per clean hour <= 10 (K and C)",
+  "met": false,
+  "K": 18.403361344537814,
+  "C": 27.478991596638654
+ },
+ "B3_event_detection_single": {
+  "rule": "K mean event detection over the single-domain attack types >= 70%",
+  "met": false,
+  "K": 0.6082142778785123,
+  "types": 55
+ },
+ "B4_heldout_types": {
+  "rule": "K mean event detection over the S4 held-out types >= 60%",
+  "met": true,
+  "K": 0.7110342722264676,
+  "types": 12
+ },
+ "B5_blame": {
+  "rule": "K blame of detected single-domain events, equal weight per attack type: correct >= 75% and wrong <= 10% (the pooled value is dominated by V2X episodes and is reported next to it)",
+  "met": true,
+  "correct": 0.7851509053778968,
+  "wrong": 0.09699398974520744,
+  "undecided": 0.11785510487689571,
+  "pooled_correct": 0.9937170081691141,
+  "pooled_wrong": 0.0005756347291454887
+ },
+ "B6_safe_stop_per_clean_hour": {
+  "rule": "SAFE_STOP recommendations per clean hour <= 1 (K and C)",
+  "met": false,
+  "K": 0.37815126050420167,
+  "C": 1.638655462184874,
+  "K_variant": 0.37815126050420167,
+  "C_variant": 0.6302521008403361
+ },
+ "B7_explanations": {
+  "rule": "100% of alert events carry the system's explanation",
+  "met": true,
+  "events": 201637,
+  "explained": 201637
+ },
+ "M3_verdict": {
+  "rule": "M3 = MET only if A1-A5 and B1-B7 all hold",
+  "met": false,
+  "rows_met": 8,
+  "rows": 12
+ }
+}

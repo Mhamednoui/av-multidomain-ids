@@ -1,0 +1,50 @@
+{
+ "gps": {
+  "runs": 350,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "layer_alarm_mismatch": 236
+ },
+ "cross": {
+  "runs": 70,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "blame_mismatch": 0,
+  "absent_pack_nonzero": 0,
+  "ticks_compared": 1512,
+  "pack_vs_stream_len": [
+   [
+    7,
+    8
+   ],
+   [
+    9,
+    10
+   ],
+   [
+    10,
+    11
+   ],
+   [
+    11,
+    12
+   ],
+   [
+    14,
+    15
+   ],
+   [
+    15,
+    16
+   ],
+   [
+    26,
+    27
+   ],
+   [
+    27,
+    28
+   ]
+  ]
+ }
+}

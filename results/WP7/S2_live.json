@@ -1,0 +1,537 @@
+{
+ "n": 6,
+ "mismatches": 0,
+ "composites": [
+  {
+   "equal": true,
+   "parts_equal": {
+    "gps": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "lidar": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "can": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "network": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "v2x": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "cross": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    }
+   },
+   "alarm_ticks": 0,
+   "events": 0,
+   "events_equal": true,
+   "first_known_equal": true,
+   "max_first_known_lag_s": 0.0,
+   "n": 8,
+   "horizon": 10,
+   "id": "live1_K_clean",
+   "family": "K",
+   "what": "('0052', 0, 'none')",
+   "wall_s": 185.35635495185852,
+   "bus_records": 985,
+   "bus_delay_ms": {
+    "gps.runner": {
+     "n": 136,
+     "median": 17.04805,
+     "p99": 20.49772,
+     "max": 20.4986
+    },
+    "lidar.runner": {
+     "n": 390,
+     "median": 1966.059,
+     "p99": 4987.648706,
+     "max": 4987.6547
+    },
+    "v2x.runner": {
+     "n": 416,
+     "median": 4.4201,
+     "p99": 5.708565,
+     "max": 5.7112
+    },
+    "can.runner": {
+     "n": 36,
+     "median": 37.2706,
+     "p99": 43.758955,
+     "max": 43.7592
+    },
+    "cross.runner": {
+     "n": 7,
+     "median": 4.9683,
+     "p99": 5.802122,
+     "max": 5.8421
+    }
+   }
+  },
+  {
+   "equal": true,
+   "parts_equal": {
+    "gps": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "lidar": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "can": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "network": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "v2x": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "cross": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    }
+   },
+   "alarm_ticks": 2,
+   "events": 1,
+   "events_equal": true,
+   "first_known_equal": true,
+   "max_first_known_lag_s": 0.0,
+   "n": 11,
+   "horizon": 13,
+   "id": "live2_K_gps_can",
+   "family": "K",
+   "what": "('0079', 0, 'gps_can')",
+   "wall_s": 164.29461765289307,
+   "bus_records": 1460,
+   "bus_delay_ms": {
+    "gps.runner": {
+     "n": 187,
+     "median": 18.273,
+     "p99": 31.981408000000002,
+     "max": 31.9841
+    },
+    "lidar.runner": {
+     "n": 500,
+     "median": 1613.5488500000001,
+     "p99": 1828.3635689999996,
+     "max": 1869.2047
+    },
+    "v2x.runner": {
+     "n": 715,
+     "median": 4.9134,
+     "p99": 8.364188,
+     "max": 8.3707
+    },
+    "can.runner": {
+     "n": 48,
+     "median": 42.26045,
+     "p99": 48.504271,
+     "max": 48.5046
+    },
+    "cross.runner": {
+     "n": 10,
+     "median": 5.302350000000001,
+     "p99": 5.663873,
+     "max": 5.6783
+    }
+   }
+  },
+  {
+   "equal": true,
+   "parts_equal": {
+    "gps": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "lidar": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "can": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "network": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "v2x": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "cross": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    }
+   },
+   "alarm_ticks": 0,
+   "events": 0,
+   "events_equal": true,
+   "first_known_equal": true,
+   "max_first_known_lag_s": 0.0,
+   "n": 8,
+   "horizon": 8,
+   "id": "live3_K_can_attack",
+   "family": "K",
+   "what": "('0052', 0, 'none')",
+   "wall_s": 184.73151421546936,
+   "bus_records": 826,
+   "bus_delay_ms": {
+    "gps.runner": {
+     "n": 136,
+     "median": 16.671799999999998,
+     "p99": 20.199255,
+     "max": 20.2003
+    },
+    "lidar.runner": {
+     "n": 390,
+     "median": 1993.3136,
+     "p99": 4963.549162,
+     "max": 4963.5552
+    },
+    "v2x.runner": {
+     "n": 273,
+     "median": 4.1811,
+     "p99": 5.975496,
+     "max": 5.9774
+    },
+    "can.runner": {
+     "n": 20,
+     "median": 35.8428,
+     "p99": 42.353586,
+     "max": 42.3537
+    },
+    "cross.runner": {
+     "n": 7,
+     "median": 5.1654,
+     "p99": 5.405241999999999,
+     "max": 5.4079
+    }
+   }
+  },
+  {
+   "equal": true,
+   "parts_equal": {
+    "can": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "network": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "v2x": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "cross": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    }
+   },
+   "alarm_ticks": 10,
+   "events": 2,
+   "events_equal": true,
+   "first_known_equal": false,
+   "max_first_known_lag_s": 1.0,
+   "n": 120,
+   "horizon": 120,
+   "id": "live4_C_gnss_can",
+   "family": "C",
+   "what": "('b0c9d2329ad1606b_2018-08-16--21-52-30', 0, 'gnss_can', 0)",
+   "wall_s": 72.47543406486511,
+   "bus_records": 61151,
+   "bus_delay_ms": {
+    "cross.runner": {
+     "n": 120,
+     "median": 0.25495,
+     "p99": 0.341634,
+     "max": 0.3749
+    },
+    "v2x.runner": {
+     "n": 60827,
+     "median": 11.7431,
+     "p99": 49.053492,
+     "max": 139.0558
+    },
+    "can.runner": {
+     "n": 204,
+     "median": 73.77185,
+     "p99": 119.559765,
+     "max": 119.5613
+    }
+   }
+  },
+  {
+   "equal": true,
+   "parts_equal": {
+    "gps": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "lidar": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "can": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "network": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "v2x": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "cross": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    }
+   },
+   "alarm_ticks": 1,
+   "events": 0,
+   "events_equal": true,
+   "first_known_equal": false,
+   "max_first_known_lag_s": 1.0,
+   "n": 8,
+   "horizon": 10,
+   "id": "live5_K_v2x_attack",
+   "family": "K",
+   "what": "('0052', 0, 'none')",
+   "wall_s": 202.71240615844727,
+   "bus_records": 22851,
+   "bus_delay_ms": {
+    "gps.runner": {
+     "n": 136,
+     "median": 16.8311,
+     "p99": 19.936955,
+     "max": 19.9379
+    },
+    "lidar.runner": {
+     "n": 390,
+     "median": 1991.40495,
+     "p99": 4928.319495000001,
+     "max": 4928.3259
+    },
+    "v2x.runner": {
+     "n": 22282,
+     "median": 8.38875,
+     "p99": 28.512614,
+     "max": 78.8815
+    },
+    "can.runner": {
+     "n": 36,
+     "median": 37.2307,
+     "p99": 43.356989999999996,
+     "max": 43.3572
+    },
+    "cross.runner": {
+     "n": 7,
+     "median": 4.9857,
+     "p99": 5.505584,
+     "max": 5.5157
+    }
+   }
+  },
+  {
+   "equal": true,
+   "parts_equal": {
+    "gps": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "lidar": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "can": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "network": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "v2x": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    },
+    "cross": {
+     "score": true,
+     "count": true,
+     "dom_alarm": true,
+     "layers": true,
+     "layer_alarm": true,
+     "blame": true
+    }
+   },
+   "alarm_ticks": 0,
+   "events": 0,
+   "events_equal": true,
+   "first_known_equal": true,
+   "max_first_known_lag_s": 0.0,
+   "n": 240,
+   "horizon": 240,
+   "id": "live6_net_block",
+   "family": "K",
+   "what": "network 2017-07-05|6",
+   "wall_s": 5.078206777572632,
+   "bus_records": 24295,
+   "bus_delay_ms": {
+    "network.runner": {
+     "n": 24295,
+     "median": 141.0647,
+     "p99": 219.815842,
+     "max": 219.9768
+    }
+   }
+  }
+ ],
+ "wall_s": 831.8301022052765
+}

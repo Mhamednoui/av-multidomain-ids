@@ -40,3 +40,9 @@
 - Tests: tests/system/test_run_all.py, test_make_report.py (test_committed_report_is_current SKIPS when stale). Full suite 440 passed.
 - Pitfalls: non-raw "\b" in patch scripts becomes a backspace; Python 3.9 Path.write_text has no newline=; CAN s7_test per_capture mixes attack and ambient captures; reports/*.md rewriting tools are excluded from run_all.
 - S2 simulation and S4 publication: not started (S2 waits for M1-LiDAR + M2 addendum).
+
+## Update 2026-10-25: S2 simulation v3 built and run, REVIEW (closes M3: NOT MET, 8 of 12 rows)
+- New: system/lidar_runner.py (LidarRunner, frozen LiDAR domain), system/fusion_runner.py (FusionRunner + replay(): 1 Hz fusion with availability times, event timeline, visible_time()), tools/WP7_S2_{lib,lidar,veh,can,net,v2x,sim,sim_main,live,report,finalize,check_can,check_lidar}.py, tests/system/test_{fusion_runner,lidar_runner,s2_sim}.py. Caches ../data_extra/cache_v3/WP7 (288 MB).
+- Results: results/WP7/S2_acceptance.json (make_report slot), S2_results.json, S2_tables.md, S2_live.json, S2_check_*.json; reports/WP7_S2.md, reports/M3.md. Run order: lidar (hours), veh check/k/c, can, net --part i 2, v2x --blocks .. --tag pN, sim_main, live, report (35 min), finalize.
+- Key: clean K FA 3.31%, 18.4 events/h, SAFE_STOP 0.38/h; C 6.15%, 27.5, 1.64; K detection 60.8%, held-out 71.1%; network Evidence 66 s median late; LiDAR 1.98 s/scan (19x too slow); V2X whole stream 1.9x too slow; design variant SAFE_STOP C 0.63/h.
+- Pitfalls: see notes/WP7_system.md "S2 RESULT". make_report not changed; RESULTS_v3.md is stale until the orchestrator runs it.

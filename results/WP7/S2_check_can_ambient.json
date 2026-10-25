@@ -1,0 +1,38 @@
+{
+ "ambient_dyno_drive_benign_anomaly": {
+  "windows": 456,
+  "pack_windows": 433,
+  "max_score_diff": 1.0,
+  "alarm_mismatch": 22,
+  "label_ticks": 0,
+  "pack_label_ticks": 0,
+  "seconds": 456.0
+ },
+ "ambient_dyno_drive_extended_short": {
+  "windows": 359,
+  "pack_windows": 359,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 0,
+  "pack_label_ticks": 0,
+  "seconds": 359.0
+ },
+ "ambient_dyno_reverse": {
+  "windows": 51,
+  "pack_windows": 51,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 0,
+  "pack_label_ticks": 0,
+  "seconds": 51.0
+ },
+ "ambient_highway_street_driving_diagnostics": {
+  "windows": 469,
+  "pack_windows": 469,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 0,
+  "pack_label_ticks": 0,
+  "seconds": 469.0
+ }
+}

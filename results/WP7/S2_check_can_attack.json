@@ -1,0 +1,101 @@
+{
+ "correlated_signal_attack_3": {
+  "windows": 16,
+  "pack_windows": 16,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 13,
+  "pack_label_ticks": 13,
+  "seconds": 16.0
+ },
+ "correlated_signal_attack_3_masquerade": {
+  "windows": 16,
+  "pack_windows": 16,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 13,
+  "pack_label_ticks": 13,
+  "seconds": 16.0
+ },
+ "fuzzing_attack_3": {
+  "windows": 5,
+  "pack_windows": 5,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 2,
+  "pack_label_ticks": 2,
+  "seconds": 5.0
+ },
+ "max_engine_coolant_temp_attack": {
+  "windows": 25,
+  "pack_windows": 25,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 6,
+  "pack_label_ticks": 6,
+  "seconds": 25.0
+ },
+ "max_engine_coolant_temp_attack_masquerade": {
+  "windows": 25,
+  "pack_windows": 25,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 6,
+  "pack_label_ticks": 6,
+  "seconds": 25.0
+ },
+ "max_speedometer_attack_3": {
+  "windows": 86,
+  "pack_windows": 86,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 62,
+  "pack_label_ticks": 62,
+  "seconds": 86.0
+ },
+ "max_speedometer_attack_3_masquerade": {
+  "windows": 86,
+  "pack_windows": 86,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 62,
+  "pack_label_ticks": 62,
+  "seconds": 86.0
+ },
+ "reverse_light_off_attack_3": {
+  "windows": 57,
+  "pack_windows": 57,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 25,
+  "pack_label_ticks": 25,
+  "seconds": 57.0
+ },
+ "reverse_light_off_attack_3_masquerade": {
+  "windows": 57,
+  "pack_windows": 57,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 25,
+  "pack_label_ticks": 25,
+  "seconds": 57.0
+ },
+ "reverse_light_on_attack_3": {
+  "windows": 64,
+  "pack_windows": 64,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 24,
+  "pack_label_ticks": 24,
+  "seconds": 64.0
+ },
+ "reverse_light_on_attack_3_masquerade": {
+  "windows": 64,
+  "pack_windows": 64,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "label_ticks": 24,
+  "pack_label_ticks": 24,
+  "seconds": 64.0
+ }
+}

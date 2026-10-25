@@ -1,0 +1,65 @@
+{
+ "0001": {
+  "scans": 108,
+  "ticks": 12,
+  "max_score_diff": 0.11459667980670929,
+  "max_layer_diff": 0.19808921217918396,
+  "alarm_mismatch": 0,
+  "layer_alarm_mismatch": 0,
+  "compute_s_per_scan_median": 3.0365439
+ },
+ "0005": {
+  "scans": 154,
+  "ticks": 16,
+  "max_score_diff": 0.0,
+  "max_layer_diff": 0.0,
+  "alarm_mismatch": 0,
+  "layer_alarm_mismatch": 0,
+  "compute_s_per_scan_median": 3.81830855
+ },
+ "0028": {
+  "scans": 430,
+  "ticks": 45,
+  "max_score_diff": 0.0,
+  "max_layer_diff": 0.0,
+  "alarm_mismatch": 0,
+  "layer_alarm_mismatch": 0,
+  "compute_s_per_scan_median": 3.73537515
+ },
+ "0039": {
+  "scans": 395,
+  "ticks": 41,
+  "max_score_diff": 0.0,
+  "max_layer_diff": 0.0,
+  "alarm_mismatch": 0,
+  "layer_alarm_mismatch": 0,
+  "compute_s_per_scan_median": 5.3381798
+ },
+ "0052": {
+  "scans": 78,
+  "ticks": 8,
+  "max_score_diff": 0.0,
+  "max_layer_diff": 0.0,
+  "alarm_mismatch": 0,
+  "layer_alarm_mismatch": 0,
+  "compute_s_per_scan_median": 4.81606885
+ },
+ "0079": {
+  "scans": 100,
+  "ticks": 11,
+  "max_score_diff": 0.013444304466247559,
+  "max_layer_diff": 0.0038216710090637207,
+  "alarm_mismatch": 0,
+  "layer_alarm_mismatch": 0,
+  "compute_s_per_scan_median": 4.07049955
+ },
+ "0095": {
+  "scans": 268,
+  "ticks": 28,
+  "max_score_diff": 0.0,
+  "max_layer_diff": 0.04140126705169678,
+  "alarm_mismatch": 0,
+  "layer_alarm_mismatch": 0,
+  "compute_s_per_scan_median": 4.4271772
+ }
+}

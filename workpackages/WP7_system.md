@@ -22,3 +22,4 @@ Owns: `system/`, `tests/system/`, `results/WP7/`, `notes/WP7_system.md`, `report
 ## Progress
 - 2026-10-22 S1 streaming runtime: REVIEW (reports/WP7_S1.md, notes/WP7_brief.md). Stream == batch exact on validation data in GPS, CAN, V2X, cross-domain, LiDAR (interim); network = placeholder until M1-NET.
 - 2026-10-24 S3 (early) run_all.py, make_report.py -> RESULTS_v3.md, README.md: REVIEW (reports/WP7_S3.md). Sections of M1-LiDAR, M2 addendum, M3 simulation are PENDING and fill from results/WP3/S9/acceptance.json, results/WP6/s5b_acceptance.json, results/WP7/S2_acceptance.json. S2 and S4 not started.
+- 2026-10-25 S2 simulation v3 on system v2: REVIEW (reports/WP7_S2.md, reports/M3.md). A1-A5 MET, B1 B2 B3 B6 NOT MET, M3 closed NOT MET (8 of 12). 213,744 attack composites of 134 types (all test episodes) + 32 clean timelines (7.93 h per family) through the runners and the FusionRunner; 6 live composites equal replay.

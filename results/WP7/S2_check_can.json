@@ -1,0 +1,137 @@
+{
+ "correlated_signal_attack_3": {
+  "windows_pack": 16,
+  "windows_stream_ok": 16,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 13,
+  "pack_label_ticks": 13
+ },
+ "correlated_signal_attack_3_masquerade": {
+  "windows_pack": 16,
+  "windows_stream_ok": 16,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 13,
+  "pack_label_ticks": 13
+ },
+ "fuzzing_attack_3": {
+  "windows_pack": 5,
+  "windows_stream_ok": 5,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 2,
+  "pack_label_ticks": 2
+ },
+ "max_engine_coolant_temp_attack": {
+  "windows_pack": 25,
+  "windows_stream_ok": 25,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 6,
+  "pack_label_ticks": 6
+ },
+ "max_engine_coolant_temp_attack_masquerade": {
+  "windows_pack": 25,
+  "windows_stream_ok": 25,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 6,
+  "pack_label_ticks": 6
+ },
+ "max_speedometer_attack_3": {
+  "windows_pack": 86,
+  "windows_stream_ok": 86,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 62,
+  "pack_label_ticks": 62
+ },
+ "max_speedometer_attack_3_masquerade": {
+  "windows_pack": 86,
+  "windows_stream_ok": 86,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 62,
+  "pack_label_ticks": 62
+ },
+ "reverse_light_off_attack_3": {
+  "windows_pack": 57,
+  "windows_stream_ok": 57,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 25,
+  "pack_label_ticks": 25
+ },
+ "reverse_light_off_attack_3_masquerade": {
+  "windows_pack": 57,
+  "windows_stream_ok": 57,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 25,
+  "pack_label_ticks": 25
+ },
+ "reverse_light_on_attack_3": {
+  "windows_pack": 64,
+  "windows_stream_ok": 64,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 24,
+  "pack_label_ticks": 24
+ },
+ "reverse_light_on_attack_3_masquerade": {
+  "windows_pack": 64,
+  "windows_stream_ok": 64,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 24,
+  "pack_label_ticks": 24
+ },
+ "ambient_dyno_drive_benign_anomaly": {
+  "windows_pack": 433,
+  "windows_stream_ok": 433,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 23,
+  "label_ticks": 0,
+  "pack_label_ticks": 0
+ },
+ "ambient_dyno_drive_extended_short": {
+  "windows_pack": 359,
+  "windows_stream_ok": 359,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 0,
+  "pack_label_ticks": 0
+ },
+ "ambient_dyno_reverse": {
+  "windows_pack": 51,
+  "windows_stream_ok": 51,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 0,
+  "pack_label_ticks": 0
+ },
+ "ambient_highway_street_driving_diagnostics": {
+  "windows_pack": 469,
+  "windows_stream_ok": 469,
+  "max_score_diff": 0.0,
+  "alarm_mismatch": 0,
+  "time_gaps_s": 0,
+  "label_ticks": 0,
+  "pack_label_ticks": 0
+ }
+}
