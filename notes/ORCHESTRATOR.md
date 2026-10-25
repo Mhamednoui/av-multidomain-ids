@@ -244,3 +244,8 @@ State:
 - User items: TOW-IDS (IEEE DataPort login, optional); Tampa ITS DataHub request (optional).
 
 | 2026-10-25 | WP7 | S2 | APPROVED. M3 closed NOT MET (8/12): A1-A5, B4, B5, B7 met; B1 FA 3.31%/6.15%, B2 18.4/27.5 events/h, B3 60.8%, B6 C SAFE_STOP 1.64/h failed. LiDAR not real time (1.98 s/scan). RESULTS_v3.md regenerated (942 values, 0 missing). Next: WP7 S4 publication = ask user. |
+
+## HANDOFF 2026-10-25 evening (session closed by user)
+- Progress 58/59 = 98%. WP7 S2 approved, M3 closed NOT MET (8/12). RESULTS_v3.md regenerated and committed (a378290).
+- Only WP7 S4 (publication) remains. User said: do NOT publish/push anything for now. Wait for the user's explicit decision.
+- No workers running, no Python processes left.
