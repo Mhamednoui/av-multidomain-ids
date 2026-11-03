@@ -50,3 +50,9 @@
 2026-11-03T17:22:45+01:00 | S3 | lidar/fast.py, combine31.py, domain31.py, tools/WP8_S3_{lib,build,an,profile}.py, tests/v31/test_fast.py (9 pass) committed; build running
 2026-11-03T17:23:31+01:00 | S5 | report, brief, STATUS REVIEW written; committing; stop
 2026-11-03 | ORCH | S5 approved (3/9) | S1, S3, S4 running
+2026-11-03T17:25:57+01:00 | S4 | start; WP4 caches are empty (deleted): rebuilding D10 stage+final via tools/WP4_s1_build.py D10 (resumable) then a D10-only stage prep; log results/WP8/logs/S4_rebuild.log | running
+2026-11-03T17:28:11+01:00 | S4 | D10 stage+final rebuilt (log results/WP8/logs/S4_rebuild.log); running tools/WP8_S4_prep.py (S3-style stage, D10 only, train+val copy) log results/WP8/logs/S4_prep.log | running
+2026-11-03T17:28:32+01:00 | S1 | after Chunk_4 | written 7543, already present 0, http bytes 571.4 MB, 800 s | files on disk; manifest next
+2026-11-03T17:29:42+01:00 | S1 | manifest Chunk_4 | 7543 files, 1.615 GB, manifest_sha256 955d1c5d2540b01309e3e25f66d78d31d4eea5124d4e99f905be82b62039952f | written to results/WP8/S1/items
+2026-11-03T17:29:42+01:00 | S1 | before Chunk_3 | 7474 members, 1.600 GB on disk, 380.2 MB transfer | https://huggingface.co/datasets/commaai/comma2k19/resolve/main/raw_data/Chunk_3.zip -> C:\Users\nouir\PFE\data_extra\D22_comma2k19\Chunk_3 | fetching (range requests)
+2026-11-03T17:30:09+01:00 | S4 | pre-registration written to notes/WP8_v31.md (definitions, R5/R2/R1 grid, selection, N4 candidates BOT-A..D) BEFORE any score; next network/stream31.py + tests
