@@ -17,3 +17,4 @@
 - V2X: 64 egos (55 V2AIX Mobile val, 9 VeReMi val views): compute <= 0.027 s per stream s (limit 0.5), p99 msg <= 10.6 ms; identical on 61/64 egos; 3 V2AIX egos differ on 6 rows from CAMs received out of generation order (batch sorts by t, stream cannot). V1 MET except literal 0-mismatch (decision for supervisor).
 - Pitfalls: results/WP7/frozen_v2x is untracked in git (used read-only); only 55 of 152 Mobile val recordings have a full ego pose.
 
+- S7 owns the system/ runner wrapper for IncrementalCan and EgoStream.

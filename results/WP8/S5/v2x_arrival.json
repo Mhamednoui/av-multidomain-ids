@@ -1,0 +1,26 @@
+[
+ {
+  "ego": "Mobile/V2X-only/Highway/2024-01-14T13-49-17Z",
+  "messages": 37,
+  "mismatch_rows_vs_arrival_batch": 0,
+  "evidence_alarm_mismatch": 0,
+  "evidence_layer_or_reason_mismatch": 0,
+  "mismatch_rows_vs_time_sorted_batch": 2
+ },
+ {
+  "ego": "Mobile/V2X-with-Sensor-Context/Dusseldorf/2024-01-30T14-33-49Z",
+  "messages": 120,
+  "mismatch_rows_vs_arrival_batch": 0,
+  "evidence_alarm_mismatch": 0,
+  "evidence_layer_or_reason_mismatch": 0,
+  "mismatch_rows_vs_time_sorted_batch": 2
+ },
+ {
+  "ego": "Mobile/V2X-with-Sensor-Context/Highway/2024-01-29T12-10-38Z",
+  "messages": 37,
+  "mismatch_rows_vs_arrival_batch": 0,
+  "evidence_alarm_mismatch": 0,
+  "evidence_layer_or_reason_mismatch": 0,
+  "mismatch_rows_vs_time_sorted_batch": 2
+ }
+]

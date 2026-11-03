@@ -87,6 +87,10 @@
    "egos_exactly_identical": 52
   },
   "met": true,
-  "strict_zero_mismatch_met": false
+  "strict_zero_mismatch_met": false,
+  "equality": {
+   "vs_arrival_order_batch": "0 mismatches on the 3 egos with out-of-order CAMs (tools/WP8_S5_v2x_arrival.py, results/WP8/S5/v2x_arrival.json); all other egos 0 vs the time-sorted batch",
+   "vs_time_sorted_batch": "6 of 5,070 V2AIX messages differ (a stream cannot see the future); documented deviation, not a rule redefinition"
+  }
  }
 }

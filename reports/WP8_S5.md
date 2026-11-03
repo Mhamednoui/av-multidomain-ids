@@ -12,6 +12,8 @@ Date: 2026-11-03    Worker: sonnet (medium), branch v3.1 (tag v3.0 untouched)
 - New code: `can/incremental.py` (IncrementalCan), `v2x/ego_stream.py` (EgoStream), tools `WP8_S5_can.py`, `WP8_S5_v2x.py`, `WP8_S5_report.py`, tests `tests/v31/test_s5_incremental.py` (4 tests).
 - Not done on purpose: no system/ runner wrapper (system/ is WP7's folder); S7 can wrap IncrementalCan / EgoStream in a runner. No threshold, model or rule changed.
 
+- V1 equality: 0 mismatches vs the arrival-order batch (the 3 egos with out-of-order CAMs re-run with the layer code ordering a track by arrival instead of by t: `tools/WP8_S5_v2x_arrival.py`, `results/WP8/S5/v2x_arrival.json`); 6/5,070 messages differ from the time-sorted batch (a stream cannot see the future). Documented deviation, not a rule redefinition.
+
 ## Acceptance rules (notes/WP8_v31.md, S5, written before any result)
 - C1 incremental CAN windows give Evidence identical to the v3 batch code on every V31_val ROAD capture (0 mismatches, max |diff| <= 1e-12).
 - C2 p99 window compute <= 0.15 s on every capture, and p99(windows after 600k frames) / p99(windows before 100k frames) <= 1.5 on the longest ROAD capture.
