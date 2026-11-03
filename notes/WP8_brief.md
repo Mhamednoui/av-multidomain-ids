@@ -36,3 +36,8 @@
 - H31 downloaded: KITTI 13 drives (11.88 GB), comma Chunk_2/4/3 (4.58 GB), V2AIX 674 extracted (0.82 GB); ~17.3 GB on disk; free 88.99 GB. Sizes/CRC/counts match locks; sha256 filled in locks (calib zips left null).
 - Decision 3: no move (V31_val has 21 Civic routes). Decision 4: DATASETS D28 + D02n added.
 - OPEN: calibration zips list 4100 B vs server 4068-4075 B (stopped; orchestrator decides). reports/WP8_S1.md, notes/WP8_S1_download.md.
+
+## S3b (LiDAR numba kernels, worker sonnet) - REVIEW 2026-11-03
+- Code: lidar/fast_nb.py (4 kernels: ring assignment, voxel clustering, range image, ground cells), flag in lidar/fast.py (`fast.set_numba(True)` / env AV_LIDAR_NUMBA=1, default off, numpy fallback), tests/v31/test_fast_nb.py, tools/WP8_S3b_*.py; numba==0.60.0 + llvmlite==0.43.0 in requirements.txt; report reports/WP8_S3b.md.
+- Speed (2,085 V31_val scans, stream push, warm-up excluded): median 73-76 ms, p99 110-135 ms (numpy path 141-178 / 240-294 ms). L1 MET. Warm-up 0.4-0.6 s (cache), first compile ~12 s. 0-2 other python processes during timing; repeated once.
+- Equality vs numpy path of frozen_lidar31: 0 alarm differences, max |diff| 0.0 (all layer raws, stat, score). Scores in results/WP8/scores/S3b/. S2/S7 runners should enable the flag.

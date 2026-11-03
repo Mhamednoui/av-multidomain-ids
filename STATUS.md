@@ -53,7 +53,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP8 v3.1 | S0 | APPROVED | worker opus (medium, T4) | 2026-11-03 | H31 + V31_val locked, rules pre-registered (notes/WP8_v31.md); reports/WP8_S0.md |
 | WP8 v3.1 | S1 | APPROVED | worker haiku (medium, T1) | 2026-11-03 | downloads done (17.3 GB, free 88.99 GB); calib zips resolved (server sizes); reports/WP8_S1.md |
 | WP8 v3.1 | S3 | APPROVED | worker sonnet (high, T3) | 2026-11-03 | LiDAR in-stack: PointDrop 4.3 -> 67.5 % at 1 % (L3 not met; 74.4 % at 1.25 %), FA 0.96 %, other kinds within 2 pts; stream==batch exact; speed 0.14-0.18 s (L1 not met); reports/WP8_S3.md |
-| WP8 v3.1 | S3b | IN PROGRESS | worker sonnet (medium, T2) | 2026-11-03 | LiDAR numba kernels, identical outputs, speed rule L1 |
+| WP8 v3.1 | S3b | REVIEW | worker sonnet (medium, T2) | 2026-11-03 | LiDAR numba kernels: median 73-76 ms, p99 110-135 ms (L1 met), identical outputs (0 alarm diffs, max diff 0.0); reports/WP8_S3b.md |
 | WP8 v3.1 | S4 | APPROVED | worker sonnet (high, T3) | 2026-11-03 | network streaming Evidence: ORCH freeze F1 tick-final (60 s, -0.34) primary, RC5 (delay 0, -2.90) labelled variant; unseen Bot: no gain counts; reports/WP8_S4.md |
 | WP8 v3.1 | S5 | APPROVED | worker sonnet (medium, T2) | 2026-11-03 | CAN incremental windows (exact, p99 41 ms) + V2X single ego (0.03 s/s); reports/WP8_S5.md |
 | WP8 v3.1 | S6 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-03 | blame fixes |

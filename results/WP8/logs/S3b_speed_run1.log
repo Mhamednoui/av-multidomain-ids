@@ -1,0 +1,51 @@
+0001 108 median so far 74.5 ms, python procs 2
+0005 262 median so far 72.8 ms, python procs 2
+0011 495 median so far 68.8 ms, python procs 2
+0027 683 median so far 72.0 ms, python procs 2
+0028 1113 median so far 89.8 ms, python procs 2
+0035 1244 median so far 85.3 ms, python procs 2
+0039 1639 median so far 77.4 ms, python procs 2
+0052 1717 median so far 76.8 ms, python procs 2
+0079 1817 median so far 77.0 ms, python procs 2
+0095 2085 median so far 75.8 ms, python procs 2
+{
+ "tag": "run1",
+ "note": "",
+ "numba": true,
+ "n_scans": 2085,
+ "warmup_s": 0.5604614999999997,
+ "push_ms": {
+  "median": 75.76439999999707,
+  "mean": 79.32910834532377,
+  "p90": 97.61693999999892,
+  "p99": 109.57421599999796,
+  "max": 128.06520000000177
+ },
+ "python_processes_sampled": [
+  1,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2
+ ],
+ "own_process_included": true,
+ "vs_S3_scores": {
+  "n_compared": 2075,
+  "alarm_differences": 8,
+  "max_abs_diff_raw": 0.523410388586282,
+  "max_abs_diff_stat": 0.37938418393529594,
+  "max_abs_diff_score": 0.5607807593491294
+ },
+ "rule_L1": {
+  "median<=100ms": true,
+  "p99<=250ms": true
+ },
+ "equality_met": false
+}
