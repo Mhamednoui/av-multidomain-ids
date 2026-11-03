@@ -1,0 +1,29 @@
+{
+ "n": 150,
+ "n_clean": 75,
+ "frozen_v3_threshold": 0.9967989756722152,
+ "exact": {
+  "L1": 0.0,
+  "L2a": 0.0,
+  "L2c": 0.0,
+  "L2d": 0.0,
+  "stat_max_abs_diff": 0.0,
+  "alarm_differences_vs_v3": 0,
+  "L2a_alarm_agreement_own_threshold": 1.0
+ },
+ "vox": {
+  "L1": 0.0,
+  "L2a": 0.018152866242038157,
+  "L2c": 0.0,
+  "L2d": 0.0,
+  "stat_max_abs_diff": 0.005761843790012877,
+  "alarm_differences_vs_v3": 0,
+  "L2a_alarm_agreement_own_threshold": 1.0
+ },
+ "per_kind_L2a_mean_abs_diff_vox": {
+  "IntensitySpoof": 7.643312101910826e-05,
+  "PointDrop": 0.0,
+  "clean": 0.0,
+  "ph_replace_near": 0.0007261146496815263
+ }
+}

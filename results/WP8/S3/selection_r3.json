@@ -1,0 +1,31 @@
+{
+ "rule": "feasible: FA in [0.5, 1.5] % and every kind >= M0|all4 - 2 points; maximise PointDrop; within 0.5 points G8 order",
+ "n_candidates": 84,
+ "exploratory_B1.25_rows": [],
+ "n_feasible": 6,
+ "feasible": [
+  "tail2h|miss_z20|E7",
+  "tail2h|miss_z20|E8",
+  "tail2h|zmulti|E7",
+  "tail2h|zmulti|E8",
+  "tail2h|zmultig|E7",
+  "tail2h|zmultig|E8"
+ ],
+ "chosen": "tail2h|zmulti|E7",
+ "chosen_cfg": {
+  "name": "tail2h|zmulti|E7",
+  "a": "tail2h",
+  "c": "zmulti",
+  "method": "union",
+  "bud": [
+   "E",
+   "E7"
+  ],
+  "B": 0.01
+ },
+ "within_0.5_points": [
+  "tail2h|zmulti|E7"
+ ],
+ "exploratory_B1.25_best": "tail2h|zmulti|E6@1.25",
+ "exploratory_B1.25_n_feasible": 13
+}

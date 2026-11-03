@@ -1,0 +1,26 @@
+{
+ "tag": "light",
+ "note": "single process, nothing else of mine running",
+ "n_scans": 1113,
+ "push_ms": {
+  "median": 177.79450000000452,
+  "mean": 171.62128032344995,
+  "p90": 215.7601400000033,
+  "p99": 265.0691279999978,
+  "max": 293.2743000000073
+ },
+ "file_read_ms_median": 0.7571999999811396,
+ "stream_vs_batch": {
+  "alarm_mismatches": 0,
+  "max_abs_diff": 0.0,
+  "n_compared": 1113
+ },
+ "rule_L1": {
+  "median<=100ms": false,
+  "p99<=250ms": false
+ },
+ "rule_L2": {
+  "zero_alarm_mismatch": true,
+  "max_diff<=1e-9": true
+ }
+}

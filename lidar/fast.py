@@ -46,11 +46,11 @@ R_MARGIN = 8.0         # m: below it a point cannot be an "unambiguous laser" (m
                        # is outside the 8-80 m ring test: its (k, res, margin) only matter for clustered points (tile ring group)
 
 
-def assign_fast(table, pts, iters=3, keep=None):
+def assign_fast(table, pts, iters=3, keep=None, rho=None):
     """Same output as RingTable.assign (k, res, cm, rho, ab, margin) with the common-mode iterations on the far points only.
     keep (bool mask, optional): points whose final (k, res, margin) are needed; the others get k = -1, res = margin = 0 (L1 statistics and
     tiles need only points at >= R_MARGIN m and clustered points, so with keep = (rho >= R_MARGIN) | clustered the results are identical)."""
-    rho = np.linalg.norm(pts[:, :3], axis=1)
+    rho = np.linalg.norm(pts[:, :3], axis=1) if rho is None else rho
     ab = G.az_bin(pts)
     far = np.flatnonzero((rho >= 15.0) & (rho <= 70.0))           # the only points common_mode() reads (lo=15, hi=70)
     pf, rf, af = pts[far], rho[far], ab[far]
@@ -69,7 +69,7 @@ def assign_fast(table, pts, iters=3, keep=None):
 
 
 FULL_BELOW = 4.0       # m: closer than this all 64 lasers are searched
-W_NEAR, W_FAR, RHO_FAR = 3, 2, 14.0       # lasers each side of the two-stage slope estimate (see _estimate)
+W_NEAR, W_FAR, RHO_FAR, W_ITER = 3, 2, 14.0, 1       # lasers each side of the two-stage slope estimate (see _estimate)
 
 
 def _estimate(table, z, r_):
@@ -97,7 +97,7 @@ def nearest_windowed(table, pts, cm, rho, ab, margin=True, k_prev=None):
     k, res, mar = np.zeros(n, int), np.zeros(n), np.zeros(n)
     z = pts[:, 2].astype(np.float64) - cm[ab]
     ok = rho >= FULL_BELOW
-    for sel, W in ((ok & (rho < RHO_FAR), W_NEAR), (rho >= RHO_FAR, W_FAR)):
+    for sel, W in ((ok & (rho < RHO_FAR), W_NEAR), (rho >= RHO_FAR, W_ITER if k_prev is not None else W_FAR)):
         i = np.flatnonzero(sel)
         if len(i) == 0:
             continue
@@ -262,7 +262,7 @@ class ScanStats:
         lab = cluster_labels(pts, self.prm)
         lab3 = cluster_labels(pts, self.prm, vox=0) if exact else lab
         rho = np.linalg.norm(pts[:, :3], axis=1)
-        asg = assign_fast(self.table, pts, keep=(rho >= R_MARGIN) | (lab >= 0) | (lab3 >= 0))
+        asg = assign_fast(self.table, pts, keep=(rho >= R_MARGIN) | (lab >= 0) | (lab3 >= 0), rho=rho)
         l1 = G.l1_stats(pts, self.table, asg=asg)
         tl = make_tiles(pts, lab, asg["k"])
         return (l1, tl, make_tiles(pts, lab3, asg["k"])) if exact else (l1, tl)

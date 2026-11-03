@@ -1,0 +1,19 @@
+{
+ "rule": "feasible: FA in [0.5, 1.5] % and every kind >= M0|all4 - 2 points; maximise PointDrop; within 0.5 points G8 order",
+ "n_candidates": 240,
+ "n_feasible": 1,
+ "feasible": [
+  "tail2h|miss_w20|W0"
+ ],
+ "chosen": "tail2h|miss_w20|W0",
+ "chosen_cfg": {
+  "name": "tail2h|miss_w20|W0",
+  "a": "tail2h",
+  "c": "miss_w20",
+  "method": "union",
+  "bud": "W0"
+ },
+ "within_0.5_points": [
+  "tail2h|miss_w20|W0"
+ ]
+}

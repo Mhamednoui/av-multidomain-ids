@@ -1,0 +1,15 @@
+{
+ "rule": "feasible: FA in [0.5, 1.5] % and every kind >= M0 - 2 points; maximise PointDrop; within 0.5 points G8 order",
+ "n_feasible": 0,
+ "feasible": [],
+ "fallback": "no feasible candidate; pool = candidates with the most kinds meeting the rule (9)",
+ "chosen": "W0|miss_w20",
+ "chosen_cfg": {
+  "c_stat": "miss_w20",
+  "method": "union",
+  "alpha": "W0"
+ },
+ "within_0.5_points": [
+  "W0|miss_w20"
+ ]
+}

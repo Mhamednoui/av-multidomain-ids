@@ -1,0 +1,26 @@
+{
+ "tag": "load",
+ "note": "other workers running (S1 download/extraction, S5 CAN)",
+ "n_scans": 1113,
+ "push_ms": {
+  "median": 178.1161000000111,
+  "mean": 169.23946972147343,
+  "p90": 206.94951999999773,
+  "p99": 239.6818000000058,
+  "max": 257.76840000000334
+ },
+ "file_read_ms_median": 0.7310999999994294,
+ "stream_vs_batch": {
+  "alarm_mismatches": 0,
+  "max_abs_diff": 0.0,
+  "n_compared": 1113
+ },
+ "rule_L1": {
+  "median<=100ms": false,
+  "p99<=250ms": true
+ },
+ "rule_L2": {
+  "zero_alarm_mismatch": true,
+  "max_diff<=1e-9": true
+ }
+}

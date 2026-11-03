@@ -47,28 +47,31 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tag", default="r3")
     ap.add_argument("--name", default=None)
+    ap.add_argument("--out", default="frozen_lidar31")
+    ap.add_argument("--no-scores", action="store_true")
     a = ap.parse_args()
     sel = json.loads((OUT / f"selection_{a.tag}.json").read_text())
     name = a.name or sel["chosen"]
     cfg = cfg_by_name(a.tag, name)
     frame = pd.read_pickle(OUT / "frame.pkl")
     # ---- scores (rule 6)
-    s_new, s_v3 = lodo_scores(frame, cfg), lodo_scores(frame, cfg_by_name(a.tag, "M0|all4"))
-    z = {}
-    for tag, df in (("v31", s_new), ("v3rule", s_v3)):
-        for c in ("raw_L1", "raw_L2a", "raw_L2c", "raw_L2d", "stat", "score", "alarm"):
-            z[f"{tag}_{c}"] = df[c].to_numpy()
-    z["drive"] = s_new.drive.astype(str).to_numpy()
-    z["i"] = s_new.i.to_numpy()
-    z["kind"] = s_new.kind.astype(str).to_numpy()
-    z["attack"] = s_new.attack.astype(str).to_numpy()
-    z["ep"] = s_new.ep.fillna(-1).to_numpy()
-    z["step"] = s_new.step.fillna(-1).to_numpy()
-    z["label"] = (s_new.kind != "clean").to_numpy().astype(int)
-    z["group"] = np.array([f"{d}/{i}" for d, i in zip(s_new.drive, s_new.i)])
-    L.SCORES.mkdir(parents=True, exist_ok=True)
-    np.savez_compressed(L.SCORES / "lidar_val.npz", **z)
-    print("scores", len(s_new), "->", L.SCORES / "lidar_val.npz")
+    if not a.no_scores:
+        s_new, s_v3 = lodo_scores(frame, cfg), lodo_scores(frame, cfg_by_name(a.tag, "M0|all4"))
+        z = {}
+        for tag, df in (("v31", s_new), ("v3rule", s_v3)):
+            for c in ("raw_L1", "raw_L2a", "raw_L2c", "raw_L2d", "stat", "score", "alarm"):
+                z[f"{tag}_{c}"] = df[c].to_numpy()
+        z["drive"] = s_new.drive.astype(str).to_numpy()
+        z["i"] = s_new.i.to_numpy()
+        z["kind"] = s_new.kind.astype(str).to_numpy()
+        z["attack"] = s_new.attack.astype(str).to_numpy()
+        z["ep"] = s_new.ep.fillna(-1).to_numpy()
+        z["step"] = s_new.step.fillna(-1).to_numpy()
+        z["label"] = (s_new.kind != "clean").to_numpy().astype(int)
+        z["group"] = np.array([f"{d}/{i}" for d, i in zip(s_new.drive, s_new.i)])
+        L.SCORES.mkdir(parents=True, exist_ok=True)
+        np.savez_compressed(L.SCORES / "lidar_val.npz", **z)
+        print("scores", len(s_new), "->", L.SCORES / "lidar_val.npz")
     # ---- frozen domain on all 23 drives
     cs, as_ = A.C_OPTIONS[cfg["c"]], A.A_SETS[cfg["a"]]
     st, ref = A.fit_fold(frame, [], cfg)
@@ -82,8 +85,8 @@ def main():
             "reference_drives": L.DRIVES, "reference_scans": int(len(ref)), "prm": L.PRM,
             "fit": "clean V31 train + validation drives only; no attack label in any fitted object; budgets chosen on V31_val (notes/WP8_v31.md S3)"}
     dom = Domain31(L.table(), L.PRM, iref, stat_ref, st, cs, meta, a_stats=as_)
-    dom.save(OUT / "frozen_lidar31")
-    (OUT / "frozen_lidar31" / "domain31.json").write_text(json.dumps(dict(meta, budgets=[float(b) for b in np.atleast_1d(st.budgets)],
+    dom.save(OUT / a.out)
+    (OUT / a.out / "domain31.json").write_text(json.dumps(dict(meta, budgets=[float(b) for b in np.atleast_1d(st.budgets)],
                                                                           tau=[float(t) for t in st.tau]), indent=1))
     print("frozen", name, "budgets", st.budgets, "tau", st.tau)
 
