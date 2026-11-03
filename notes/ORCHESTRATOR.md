@@ -259,3 +259,4 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
 - Order: S0 -> S1 -> {S3,S4,S5} -> S6 -> S2 -> S7; P1 any time. Max 3 workers. No push/publication without the user.
 - 2026-11-03 running: S0 worker agent a0b28d521c809316f (opus/medium), P1 worker agent a14757c14e74689c5 (sonnet/medium).
 | 2026-11-03 | WP8 | P1 | APPROVED. GPS AUC 0.895 (68.8% det at 1% FA, 74.7% at 5%), LiDAR AUC 0.750 (tamper 0.944, phantoms 0.630); reproduce v3 JSONs. V2X/fusion/CAN-stack/net curves not available (scores lost with caches) -> added WP8 crash-safety rule 6 (keep scores). 1/9. |
+| 2026-11-03 | WP8 | S0 | APPROVED. H31: KITTI 13 fresh drives, comma Chunk_2+Chunk_4 (Civic) fresh, V2AIX 674 fresh recordings (same site/day as calibration), CAN/NET re-used (+small fresh CAN captures). Decisions on 5 questions in notes/WP8_v31.md (M4-9 D10 latency amended to 60/120 s for 1-min timestamps). Launched S1 (T1), S3 (T3), S5 (T2). 2/9. |

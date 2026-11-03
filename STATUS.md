@@ -46,15 +46,15 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 ## v3.1 (branch v3.1, WP8; plan: workpackages/WP8_v31.md; v3 frozen at tag v3.0)
 
-**v3.1 progress: 1 / 9 steps approved = 11%** (updated 2026-11-03)
+**v3.1 progress: 2 / 9 steps approved = 22%** (updated 2026-11-03)
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
-| WP8 v3.1 | S0 | REVIEW | worker opus (medium, T4) | 2026-11-03 | H31 + V31_val locked, rules pre-registered (notes/WP8_v31.md); reports/WP8_S0.md |
-| WP8 v3.1 | S1 | TODO | | | download H31 material |
-| WP8 v3.1 | S3 | TODO | | | LiDAR in-stack + speed |
+| WP8 v3.1 | S0 | APPROVED | worker opus (medium, T4) | 2026-11-03 | H31 + V31_val locked, rules pre-registered (notes/WP8_v31.md); reports/WP8_S0.md |
+| WP8 v3.1 | S1 | IN PROGRESS | worker haiku (medium, T1) | 2026-11-03 | download H31 material |
+| WP8 v3.1 | S3 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-03 | LiDAR in-stack + speed |
 | WP8 v3.1 | S4 | TODO | | | network latency |
-| WP8 v3.1 | S5 | TODO | | | CAN windows + V2X single ego |
+| WP8 v3.1 | S5 | IN PROGRESS | worker sonnet (medium, T2) | 2026-11-03 | CAN windows + V2X single ego |
 | WP8 v3.1 | S6 | TODO | | | blame fixes |
 | WP8 v3.1 | S2 | TODO | | | fusion false alarms |
 | WP8 v3.1 | S7 | TODO | | | final H31 scoring, M4 |
