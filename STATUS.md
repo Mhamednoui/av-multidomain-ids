@@ -53,7 +53,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP8 v3.1 | S0 | APPROVED | worker opus (medium, T4) | 2026-11-03 | H31 + V31_val locked, rules pre-registered (notes/WP8_v31.md); reports/WP8_S0.md |
 | WP8 v3.1 | S1 | IN PROGRESS | worker haiku (medium, T1) | 2026-11-03 | download H31 material |
 | WP8 v3.1 | S3 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-03 | LiDAR in-stack + speed |
-| WP8 v3.1 | S4 | TODO | | | network latency |
+| WP8 v3.1 | S4 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-03 | network latency |
 | WP8 v3.1 | S5 | REVIEW | worker sonnet (medium, T2) | 2026-11-03 | CAN incremental windows (exact, p99 41 ms) + V2X single ego (0.03 s/s); reports/WP8_S5.md |
 | WP8 v3.1 | S6 | TODO | | | blame fixes |
 | WP8 v3.1 | S2 | TODO | | | fusion false alarms |
