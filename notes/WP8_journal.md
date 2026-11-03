@@ -144,3 +144,4 @@
 2026-11-03 | ORCH | S1 approved (6/10) | S3b, S6 running
 2026-11-03T18:43:56+01:00 | S3b | done: report reports/WP8_S3b.md, brief, STATUS S3b -> REVIEW; running full test suite then commit
 2026-11-03 | ORCH | S3b approved (7/10) | S6 running
+2026-11-03T18:48:09+01:00 | S6 | round-1 evaluation start: tools/WP8_S6_eval.py r1 (log results/WP8/logs/S6_eval_r1.log), pre-registration + amendment A committed before | output results/WP8/S6/r1_eval.json

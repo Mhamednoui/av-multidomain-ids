@@ -46,7 +46,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 ## v3.1 (branch v3.1, WP8; plan: workpackages/WP8_v31.md; v3 frozen at tag v3.0)
 
-**v3.1 progress: 7 / 10 steps approved = 70%** (updated 2026-11-03)
+**v3.1 progress: 7 / 10 steps approved = 70% (WP8); WP9 benchmark 0 / 6; overall v3.1+WP9 7 / 16 = 44%** (updated 2026-11-03)
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
@@ -60,3 +60,14 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP8 v3.1 | S2 | TODO | | | fusion false alarms |
 | WP8 v3.1 | S7 | TODO | | | final H31 scoring, M4 |
 | WP8 v3.1 | P1 | APPROVED | worker sonnet (medium, T2) | 2026-11-03 | paper curves / AUC from saved v3 outputs |
+
+## WP9 benchmark track (plan: workpackages/WP9_benchmark.md; deadline 2026-11-30)
+
+| WP | Step | State | Assigned to | Date | Note |
+|---|---|---|---|---|---|
+| WP9 bench | B0 | IN PROGRESS | worker sonnet (medium, T2) | 2026-11-03 | literature bar + leak-free split proposal |
+| WP9 bench | B1 | TODO | | | CAN |
+| WP9 bench | B2 | TODO | | | network |
+| WP9 bench | B3 | TODO | | | V2X |
+| WP9 bench | B4 | TODO | | | GPS + LiDAR |
+| WP9 bench | B5 | TODO | | | final scoring + comparison |
