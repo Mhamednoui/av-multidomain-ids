@@ -1,0 +1,247 @@
+{
+ "_note": "S1 list (WP8 S0). HTTP range requests through the zip directory, only the listed members; python -I; keep >= 15 GB free; verify bytes + CRC32 against member_list, then record sha256 in the locks.",
+ "items": [
+  {
+   "what": "KITTI 2011_09_26_drive_0009",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0009/2011_09_26_drive_0009_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0009.json",
+   "n_members": 895,
+   "transfer": 822605164,
+   "on_disk": 822605164,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0009_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_26_drive_0023",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0023/2011_09_26_drive_0023_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0023.json",
+   "n_members": 953,
+   "transfer": 884272335,
+   "on_disk": 884272335,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0023_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_26_drive_0032",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0032/2011_09_26_drive_0032_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0032.json",
+   "n_members": 785,
+   "transfer": 737008276,
+   "on_disk": 737008276,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0032_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_26_drive_0056",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0056/2011_09_26_drive_0056_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0056.json",
+   "n_members": 593,
+   "transfer": 575646937,
+   "on_disk": 575646937,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0056_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_26_drive_0061",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0061/2011_09_26_drive_0061_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0061.json",
+   "n_members": 1411,
+   "transfer": 1386119167,
+   "on_disk": 1386119167,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0061_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_26_drive_0064",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0064/2011_09_26_drive_0064_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0064.json",
+   "n_members": 1145,
+   "transfer": 1117682834,
+   "on_disk": 1117682834,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0064_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_26_drive_0084",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0084/2011_09_26_drive_0084_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0084.json",
+   "n_members": 771,
+   "transfer": 725458761,
+   "on_disk": 725458761,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0084_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_26_drive_0093",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0093/2011_09_26_drive_0093_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0093.json",
+   "n_members": 871,
+   "transfer": 815435838,
+   "on_disk": 815435838,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0093_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_26_drive_0101",
+   "stratum": "same_day_2011_09_26",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0101/2011_09_26_drive_0101_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_26_drive_0101.json",
+   "n_members": 1877,
+   "transfer": 1730599602,
+   "on_disk": 1730599602,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_26_drive_0101_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_29_drive_0004",
+   "stratum": "other_day",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_drive_0004/2011_09_29_drive_0004_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_29_drive_0004.json",
+   "n_members": 683,
+   "transfer": 650638822,
+   "on_disk": 650638822,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_29_drive_0004_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_29_drive_0026",
+   "stratum": "other_day",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_drive_0026/2011_09_29_drive_0026_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_29_drive_0026.json",
+   "n_members": 321,
+   "transfer": 281781232,
+   "on_disk": 281781232,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_29_drive_0026_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_09_30_drive_0016",
+   "stratum": "other_day",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_30_drive_0016/2011_09_30_drive_0016_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_09_30_drive_0016.json",
+   "n_members": 563,
+   "transfer": 561124381,
+   "on_disk": 561124381,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_09_30_drive_0016_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI 2011_10_03_drive_0047",
+   "stratum": "other_day",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_10_03_drive_0047/2011_10_03_drive_0047_sync.zip",
+   "keep": "velodyne_points/ + oxts/ members only (HTTP range requests)",
+   "member_list": "results/WP8/S0/remote/2011_10_03_drive_0047.json",
+   "n_members": 1679,
+   "transfer": 1595804505,
+   "on_disk": 1595804505,
+   "target": "../data_extra/D04b_kitti_raw_v31/2011_10_03_drive_0047_sync/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI calib",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_calib.zip",
+   "keep": "all",
+   "transfer": 4100,
+   "on_disk": 4100,
+   "target": "../data_extra/D04b_kitti_raw_v31/calib/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI calib",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_calib.zip",
+   "keep": "all",
+   "transfer": 4100,
+   "on_disk": 4100,
+   "target": "../data_extra/D04b_kitti_raw_v31/calib/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI calib",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_30_calib.zip",
+   "keep": "all",
+   "transfer": 4100,
+   "on_disk": 4100,
+   "target": "../data_extra/D04b_kitti_raw_v31/calib/",
+   "lock": "H31"
+  },
+  {
+   "what": "KITTI calib",
+   "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_10_03_calib.zip",
+   "keep": "all",
+   "transfer": 4100,
+   "on_disk": 4100,
+   "target": "../data_extra/D04b_kitti_raw_v31/calib/",
+   "lock": "H31"
+  },
+  {
+   "what": "comma2k19 Chunk_2 (rav4)",
+   "url": "https://huggingface.co/datasets/commaai/comma2k19/resolve/main/raw_data/Chunk_2.zip",
+   "keep": "processed_log/CAN, processed_log/GNSS, processed_log/IMU, global_pose (as WP6 S1)",
+   "member_list": "results/WP8/S0/remote/comma_Chunk_2.json",
+   "n_members": 7074,
+   "transfer": 367247769,
+   "on_disk": 1368012272,
+   "target": "../data_extra/D22_comma2k19/Chunk_2/",
+   "lock": "H31"
+  },
+  {
+   "what": "comma2k19 Chunk_4 (civic)",
+   "url": "https://huggingface.co/datasets/commaai/comma2k19/resolve/main/raw_data/Chunk_4.zip",
+   "keep": "processed_log/CAN, processed_log/GNSS, processed_log/IMU, global_pose (as WP6 S1)",
+   "member_list": "results/WP8/S0/remote/comma_Chunk_4.json",
+   "n_members": 7543,
+   "transfer": 372533032,
+   "on_disk": 1614796296,
+   "target": "../data_extra/D22_comma2k19/Chunk_4/",
+   "lock": "H31"
+  },
+  {
+   "what": "comma2k19 Chunk_3 (civic)",
+   "url": "https://huggingface.co/datasets/commaai/comma2k19/resolve/main/raw_data/Chunk_3.zip",
+   "keep": "processed_log/CAN, processed_log/GNSS, processed_log/IMU, global_pose (as WP6 S1)",
+   "member_list": "results/WP8/S0/remote/comma_Chunk_3.json",
+   "n_members": 7474,
+   "transfer": 380199629,
+   "on_disk": 1600478120,
+   "target": "../data_extra/D22_comma2k19/Chunk_3/",
+   "lock": "V31_val"
+  },
+  {
+   "what": "V2AIX 674 recordings (local extraction)",
+   "url": "../data_extra/D13_v2aix/v2aix_json.zip",
+   "keep": "listed members",
+   "n_members": 674,
+   "transfer": 0,
+   "on_disk": 824660443,
+   "target": "../data_extra/D13_v2aix/extracted_v31/",
+   "lock": "H31"
+  }
+ ],
+ "totals": {
+  "transfer": 13004174684,
+  "on_disk": 17292141385,
+  "kitti_same_day_2011_09_26": 8794828914,
+  "kitti_other_day": 3089348940,
+  "free_now": 109079744512
+ }
+}
