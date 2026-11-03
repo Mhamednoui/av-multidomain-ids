@@ -17,8 +17,15 @@ from lidar.sequence import EPISODE_SCANS, rolling_logodds
 
 A_STATS = ["int_hi", "int_lo", "cnt_int_hi", "cnt_int_lo"]
 LAYER_STATS = {"L1": L.L1_KEYS, "L2a": A_STATS, "L2c": ["miss_w20"], "L2d": ["app_cc", "fix_tot"]}
+A_SETS = {"all4": A_STATS, "tail2h": ["int_hi", "int_lo", "cnt_int_hi"], "frac4": ["int_hi", "int_lo", "f_cnt_int_hi", "f_cnt_int_lo"],
+          "tail2": ["int_hi", "int_lo"]}
+E_SHARES = {"E1": (0.05, 0.20, 0.55, 0.20), "E2": (0.05, 0.15, 0.65, 0.15), "E3": (0.05, 0.10, 0.75, 0.10),
+            "E4": (0.05, 0.10, 0.65, 0.20), "E5": (0.05, 0.20, 0.65, 0.10), "E6": (0.05, 0.15, 0.55, 0.25),
+            "E7": (0.05, 0.20, 0.45, 0.30), "E8": (0.05, 0.25, 0.35, 0.35)}
 C_OPTIONS = {"miss_w20": ["miss_w20"], "miss_w10": ["miss_w10"], "miss_g20": ["miss_g20"], "miss_z20": ["miss_z20"],
-             "u(w20,z20)": ["miss_w20", "miss_z20"]}
+             "u(w20,z20)": ["miss_w20", "miss_z20"],
+             "zmulti": ["miss_z10", "miss_z20", "miss_z30", "miss_z45", "miss_z60"],
+             "zmultig": ["miss_z10", "miss_z20", "miss_z30", "miss_z45", "miss_z60", "miss_zg20"]}
 
 
 class IntensityRef:
@@ -85,6 +92,12 @@ def build_frame(parts):
             a = l2a_stats(z["tiles"], len(df), scorer)
             for j, c in enumerate(A_STATS):
                 df[c] = a[:, j]
+            t = z["tiles"]
+            ok = (t.n_points >= 8) & (t.range >= D.R_EDGES[0]) & (t.range <= D.R_EDGES[-1])
+            nv = np.bincount(t.si[ok].to_numpy(), minlength=len(df)).astype(float)
+            df["n_valid_tiles"] = nv
+            df["f_cnt_int_hi"] = df.cnt_int_hi / np.maximum(nv, 1.0)
+            df["f_cnt_int_lo"] = df.cnt_int_lo / np.maximum(nv, 1.0)
             frames.append(df)
     return pd.concat(frames, ignore_index=True)
 
@@ -93,9 +106,9 @@ def rank_ref(ref, x):
     return np.searchsorted(np.sort(ref), np.asarray(x, float), side="left") / len(ref)
 
 
-def layer_raw(ref_df, df, c_stats):
+def layer_raw(ref_df, df, c_stats, a_stats=None):
     """dict layer -> raw score (union rank over the layer statistics against the reference frame ref_df)."""
-    stats = dict(LAYER_STATS, L2c=c_stats)
+    stats = dict(LAYER_STATS, L2c=c_stats, L2a=a_stats or A_STATS)
     out = {}
     for lay in LAYERS:
         out[lay] = np.max([rank_ref(ref_df[s].to_numpy(), df[s].to_numpy()) for s in stats[lay]], axis=0)
@@ -105,30 +118,52 @@ def layer_raw(ref_df, df, c_stats):
 from lidar.combine31 import LAYERS, Union, alpha_budgets, ecdf_rank, waterfill   # noqa: E402
 
 
-def candidates():
-    cs = [("M0_v3_max", "miss_w20", "max", None)]
-    for s in C_OPTIONS:
-        for a in (0.25, 0.40, 0.55, 0.70, 0.85):
-            cs.append((f"alpha{a:.2f}|{s}", s, "union", a))
-    cs.append(("W0|miss_w20", "miss_w20", "union", "W0"))
+def candidates(rnd="r3"):
+    """List of dict(name, a, c, method, bud, B) - bud: None (max rule) | ('alpha', x) | 'W0' | ('E', key). r2: the round-2 grid; r3: round 3."""
+    cs = []
+    if rnd == "r2":
+        for a in A_SETS:
+            cs.append(dict(name=f"M0|{a}", a=a, c="miss_w20", method="max", bud=None, B=0.01))
+            for c in ("miss_w20", "miss_w10", "miss_g20", "miss_z20", "u(w20,z20)"):
+                for al in (0.25, 0.40, 0.55, 0.70, 0.85):
+                    cs.append(dict(name=f"{a}|{c}|alpha{al:.2f}", a=a, c=c, method="union", bud=("alpha", al), B=0.01))
+                cs.append(dict(name=f"{a}|{c}|W0", a=a, c=c, method="union", bud="W0", B=0.01))
+                for e in list(E_SHARES)[:6]:
+                    cs.append(dict(name=f"{a}|{c}|{e}", a=a, c=c, method="union", bud=("E", e), B=0.01))
+        return cs
+    cs.append(dict(name="M0|all4", a="all4", c="miss_w20", method="max", bud=None, B=0.01))
+    for B in (0.01, 0.0125):
+        tag = "" if B == 0.01 else "@1.25"
+        for a in ("tail2h", "frac4"):
+            cs.append(dict(name=f"M0|{a}{tag}", a=a, c="miss_w20", method="max", bud=None, B=B))
+            for c in ("miss_z20", "zmulti", "zmultig"):
+                for al in (0.25, 0.40, 0.55, 0.70, 0.85):
+                    cs.append(dict(name=f"{a}|{c}|alpha{al:.2f}{tag}", a=a, c=c, method="union", bud=("alpha", al), B=B))
+                cs.append(dict(name=f"{a}|{c}|W0{tag}", a=a, c=c, method="union", bud="W0", B=B))
+                for e in E_SHARES:
+                    cs.append(dict(name=f"{a}|{c}|{e}{tag}", a=a, c=c, method="union", bud=("E", e), B=B))
     return cs
 
 
-def fit_fold(frame, hold, c_name, method, alpha, B=0.01):
+def fit_fold(frame, hold, cfg, B=None):
     """Stack fitted on the clean reference scans of all drives except `hold` (list); returns (stack, ref_frame)."""
-    cs = C_OPTIONS[c_name]
+    B = cfg.get("B", 0.01) if B is None else B
+    cs, as_ = C_OPTIONS[cfg["c"]], A_SETS[cfg["a"]]
     ref = frame[(frame.kind == "clean") & (frame.i >= 1) & ~frame.drive.isin(hold)]
-    raw = layer_raw(ref, ref, cs)
-    if method == "max":
+    raw = layer_raw(ref, ref, cs, as_)
+    if cfg["method"] == "max":
         st = Union(B, "max").fit(raw)
     else:
-        if alpha == "W0":
+        bud = cfg["bud"]
+        if bud == "W0":
             R = np.column_stack([ecdf_rank(np.sort(raw[l]), raw[l]) for l in LAYERS])
             b = waterfill(R, B)
+        elif bud[0] == "alpha":
+            b = alpha_budgets(bud[1], B)
         else:
-            b = alpha_budgets(alpha, B)
+            b = np.array(E_SHARES[bud[1]]) * B
         st = Union(b, "union").fit(raw)
-    st.cs, st.ref_frame = cs, ref
+    st.cs, st.as_, st.ref_frame = cs, as_, ref
     return st, ref
 
 
@@ -137,20 +172,20 @@ def episode_eval(stacks_by_fold, frame):
     det, delays, fe = [], [], []
     for d, st in stacks_by_fold.items():
         ref = st.ref_frame.sort_values(["drive", "i"])
-        sc = st.score(layer_raw(st.ref_frame, ref, st.cs))
+        sc = st.score(layer_raw(st.ref_frame, ref, st.cs, st.as_))
         wref = []
         for dd, idx in ref.reset_index(drop=True).groupby("drive").indices.items():
             s = sc[idx]
             wref += [s[a:a + EPISODE_SCANS] for a in range(0, len(s) - EPISODE_SCANS + 1, 10)]
         thr = float(np.quantile(np.concatenate([rolling_logodds(w) for w in wref]), 0.99))
         cl = frame[(frame.kind == "clean") & (frame.drive == d) & (frame.i >= 1)].sort_values("i")
-        scc = st.score(layer_raw(st.ref_frame, cl, st.cs))
+        scc = st.score(layer_raw(st.ref_frame, cl, st.cs, st.as_))
         for a in range(0, len(scc) - EPISODE_SCANS + 1, EPISODE_SCANS):
             fe.append(bool((rolling_logodds(scc[a:a + EPISODE_SCANS]) >= thr).any()))
         ep = frame[(frame.kind == "pdep") & (frame.drive == d)]
         for j, g in ep.groupby("ep"):
             g = g.sort_values("step")
-            s = rolling_logodds(st.score(layer_raw(st.ref_frame, g, st.cs)))
+            s = rolling_logodds(st.score(layer_raw(st.ref_frame, g, st.cs, st.as_)))
             hit = np.flatnonzero(s >= thr)
             ok = len(hit) > 0 and hit[0] + 1 <= EPISODE_SCANS
             det.append(bool(ok))
@@ -159,27 +194,27 @@ def episode_eval(stacks_by_fold, frame):
     return det, delays, fe
 
 
-def evaluate(frame, name, c_name, method, alpha, with_episodes=False, B=0.01):
+def evaluate(frame, cfg, with_episodes=False):
     """LODO over V31_val drives: pooled clean FA, per-drive FA, detection per attack kind (+ per-scan alarm vectors)."""
-    out = {"name": name}
+    out = {"name": cfg["name"], "cfg": {k: (list(v) if isinstance(v, tuple) else v) for k, v in cfg.items()}}
     fa_all, fa_drive = [], {}
     det_alarm = {k: [] for k in L.ATTACKS}
     det_drive = {k: [] for k in L.ATTACKS}
     stacks = {}
     for d in L.VAL:
-        st, ref = fit_fold(frame, [d], c_name, method, alpha, B)
+        st, ref = fit_fold(frame, [d], cfg)
         stacks[d] = st
         cl = frame[(frame.kind == "clean") & (frame.drive == d) & (frame.i >= 1)]
-        a = st.alarm(layer_raw(ref, cl, st.cs))
+        a = st.alarm(layer_raw(ref, cl, st.cs, st.as_))
         fa_all.append(a)
         fa_drive[d] = float(a.mean())
         at = frame[(frame.kind == "att") & (frame.drive == d)]
-        aa = st.alarm(layer_raw(ref, at, st.cs))
+        aa = st.alarm(layer_raw(ref, at, st.cs, st.as_))
         for k in L.ATTACKS:
             m = (at.attack == k).to_numpy()
             det_alarm[k].append(aa[m])
             det_drive[k].append((int(aa[m].sum()), int(m.sum())))
-        if method == "union":
+        if cfg["method"] == "union":
             out.setdefault("budgets_by_fold", {})[d] = [float(x) for x in st.budgets]
     fa = np.concatenate(fa_all)
     out["fa"] = float(fa.mean())

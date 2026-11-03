@@ -31,19 +31,22 @@ PHYSICS = {
 
 
 class Domain31:
-    def __init__(self, table, prm, intensity_ref, stat_ref, union, c_stats, meta):
+    def __init__(self, table, prm, intensity_ref, stat_ref, union, c_stats, meta, a_stats=None):
         self.table, self.prm, self.meta = table, prm, meta
         self.iref, self.scorer = intensity_ref, IntensityScorer(intensity_ref)
         self.stat_ref = {k: np.sort(np.asarray(v, float)) for k, v in stat_ref.items()}
         self.union, self.c_stats = union, list(c_stats)
-        self.layer_stats = dict(LAYER_STATS, L2c=self.c_stats)
+        self.a_stats = list(a_stats) if a_stats is not None else list(A_STATS)
+        self.layer_stats = dict(LAYER_STATS, L2c=self.c_stats, L2a=self.a_stats)
         self.stats = ScanStats(table, prm)
 
     # ---- raw scores from the statistic records (shared by batch evaluation and the stream) ------------------
-    def raw_from_records(self, l1, a, pair):
-        """dict layer -> raw score of ONE scan. l1: array of the 5 L1 statistics, a: array of the 4 L2a statistics, pair: dict or None."""
+    def raw_from_records(self, l1, a, pair, n_valid=0):
+        """dict layer -> raw score of ONE scan. l1: array of the 5 L1 statistics, a: array of the 4 L2a statistics, pair: dict or None,
+        n_valid: number of scored tiles (scale-free count statistics f_cnt_*)."""
         v = dict(zip(G.STAT_NAMES, l1))
         v.update(zip(A_STATS, a))
+        v["f_cnt_int_hi"], v["f_cnt_int_lo"] = a[2] / max(n_valid, 1.0), a[3] / max(n_valid, 1.0)
         if pair is not None:
             v.update(pair)
         raw = {}
@@ -82,7 +85,7 @@ class Domain31:
         folder = Path(folder)
         folder.mkdir(parents=True, exist_ok=True)
         parts = {"schema": SCHEMA_VERSION, "table": self.table.to_dict(), "prm": self.prm, "iref": {"nmin": self.iref.nmin, "i": self.iref.i},
-                 "stat_ref": self.stat_ref, "union": self.union, "c_stats": self.c_stats, "meta": self.meta}
+                 "stat_ref": self.stat_ref, "union": self.union, "c_stats": self.c_stats, "a_stats": self.a_stats, "meta": self.meta}
         with open(folder / "domain31.pkl", "wb") as fh:
             pickle.dump(parts, fh, protocol=4)
 
@@ -93,7 +96,7 @@ class Domain31:
         assert p["schema"] == SCHEMA_VERSION
         ir = type("IntensityCells", (), {})()
         ir.nmin, ir.i = p["iref"]["nmin"], p["iref"]["i"]
-        return cls(G.RingTable.from_dict(p["table"]), p["prm"], ir, p["stat_ref"], p["union"], p["c_stats"], p["meta"])
+        return cls(G.RingTable.from_dict(p["table"]), p["prm"], ir, p["stat_ref"], p["union"], p["c_stats"], p["meta"], p["a_stats"])
 
 
 class Stream31:
@@ -109,7 +112,7 @@ class Stream31:
         d = self.d
         l1, tl, pair, cur = d.stats.compute(pts, pose, self.prev)
         a = d.scorer.scan_stats(tl["range"].to_numpy(), tl["n_points"].to_numpy(), tl["int_mean"].to_numpy())
-        raw = d.raw_from_records(l1, a, pair)
+        raw = d.raw_from_records(l1, a, pair, d.scorer.n_valid(tl["range"].to_numpy(), tl["n_points"].to_numpy()))
         out = d.evidence(raw, t, sample_id if sample_id is not None else self.n, first=self.prev is None)
         self.prev = PrevScan(pts, pose, img=cur)
         self.n += 1

@@ -217,6 +217,10 @@ class IntensityScorer:
         iqr = max(q3 - q1, 1e-6)
         return -np.log10(1 - F) + np.maximum(x - ref[-1], 0.0) / iqr, -np.log10(F) + np.maximum(ref[0] - x, 0.0) / iqr
 
+    def n_valid(self, rng, n):
+        """Number of tiles the intensity model scores (the denominator of the scale-free count statistics)."""
+        return int(((n >= self.nmin) & (rng >= D.R_EDGES[0]) & (rng <= D.R_EDGES[-1])).sum())
+
     def scan_stats(self, rng, n, im):
         """(int_hi, int_lo, cnt_int_hi, cnt_int_lo) of one scan from its tile arrays (range, n_points, mean intensity)."""
         m = (n >= self.nmin) & (rng >= D.R_EDGES[0]) & (rng <= D.R_EDGES[-1])

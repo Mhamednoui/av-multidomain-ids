@@ -82,3 +82,13 @@
 2026-11-03T17:48:57+01:00 | S4 | added Stream31Final (tick-final emission = candidate F1) + test; running tools/WP8_S4_final_check.py, log results/WP8/logs/S4_final_check.log
 2026-11-03T17:54:13+01:00 | S4 | DONE: report reports/WP8_S4.md, brief, STATUS S4 -> REVIEW; committing; stop
 2026-11-03T18:00 | ORCH | S4 approved, F1 primary / RC5 variant (decision in notes/WP8_v31.md) | S1, S3 running
+2026-11-03T17:55:34+01:00 | S1 | after 2011_09_26_drive_0032 | written 785, already present 0, http bytes 739.1 MB, 1074 s | files on disk; manifest next
+2026-11-03T17:55:37+01:00 | S1 | manifest 2011_09_26_drive_0032 | 785 files, 0.737 GB, manifest_sha256 85a5f766f86a65ba83f53647ed12db230d3913e964acc454b7f7a9ab36c232ab | written to results/WP8/S1/items
+2026-11-03T17:55:37+01:00 | S1 | before 2011_09_26_drive_0056 | 593 members, 0.576 GB on disk, 575.6 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0056/2011_09_26_drive_0056_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T17:57:37+01:00 | S1 | after 2011_09_30_drive_0016 | written 563, already present 0, http bytes 563.5 MB, 722 s | files on disk; manifest next
+2026-11-03T17:57:42+01:00 | S1 | manifest 2011_09_30_drive_0016 | 563 files, 0.561 GB, manifest_sha256 625725250d587fb02873af0e3ba29b79d0e20a233b14d3147a65a0019aa6fef3 | written to results/WP8/S1/items
+2026-11-03T17:57:42+01:00 | S1 | before 2011_10_03_drive_0047 | 1679 members, 1.596 GB on disk, 1595.8 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_10_03_drive_0047/2011_10_03_drive_0047_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T18:01:48+01:00 | S1 | after 2011_09_26_drive_0064 | written 1145, already present 0, http bytes 1120.3 MB, 1525 s | files on disk; manifest next
+2026-11-03T18:01:53+01:00 | S1 | manifest 2011_09_26_drive_0064 | 1145 files, 1.118 GB, manifest_sha256 80494b61f7ea45ceaa040b0bf3005a299036f8bd83a7ab176337758ceab54d66 | written to results/WP8/S1/items
+2026-11-03T18:01:53+01:00 | S1 | before 2011_09_26_drive_0093 | 871 members, 0.815 GB on disk, 815.4 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0093/2011_09_26_drive_0093_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T18:02:31+01:00 | S3 | r3 build done (0 failed); running tools/WP8_S3_eval.py --tag r3 (plan already logged and committed), log results/WP8/logs/S3_eval_r3.log
