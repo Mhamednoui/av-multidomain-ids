@@ -257,3 +257,4 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
 ## HANDOFF (v3.1, keep updated)
 - Resume: read STATUS.md v3.1 section + tail of notes/WP8_journal.md. Workers resume from journal + files on disk (SendMessage the same agent if this session is alive, else a fresh worker of the same tier told to continue from the journal).
 - Order: S0 -> S1 -> {S3,S4,S5} -> S6 -> S2 -> S7; P1 any time. Max 3 workers. No push/publication without the user.
+- 2026-11-03 running: S0 worker agent a0b28d521c809316f (opus/medium), P1 worker agent a14757c14e74689c5 (sonnet/medium).
