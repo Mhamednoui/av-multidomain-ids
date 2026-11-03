@@ -161,37 +161,41 @@
    "what": "KITTI calib",
    "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_calib.zip",
    "keep": "all",
-   "transfer": 4100,
-   "on_disk": 4100,
+   "transfer": 4068,
+   "on_disk": 4068,
    "target": "../data_extra/D04b_kitti_raw_v31/calib/",
-   "lock": "H31"
+   "lock": "H31",
+   "note": "size corrected to server value 2026-11-03, S0 value was an estimate"
   },
   {
    "what": "KITTI calib",
    "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_calib.zip",
    "keep": "all",
-   "transfer": 4100,
-   "on_disk": 4100,
+   "transfer": 4071,
+   "on_disk": 4071,
    "target": "../data_extra/D04b_kitti_raw_v31/calib/",
-   "lock": "H31"
+   "lock": "H31",
+   "note": "size corrected to server value 2026-11-03, S0 value was an estimate"
   },
   {
    "what": "KITTI calib",
    "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_30_calib.zip",
    "keep": "all",
-   "transfer": 4100,
-   "on_disk": 4100,
+   "transfer": 4073,
+   "on_disk": 4073,
    "target": "../data_extra/D04b_kitti_raw_v31/calib/",
-   "lock": "H31"
+   "lock": "H31",
+   "note": "size corrected to server value 2026-11-03, S0 value was an estimate"
   },
   {
    "what": "KITTI calib",
    "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_10_03_calib.zip",
    "keep": "all",
-   "transfer": 4100,
-   "on_disk": 4100,
+   "transfer": 4075,
+   "on_disk": 4075,
    "target": "../data_extra/D04b_kitti_raw_v31/calib/",
-   "lock": "H31"
+   "lock": "H31",
+   "note": "size corrected to server value 2026-11-03, S0 value was an estimate"
   },
   {
    "what": "comma2k19 Chunk_2 (rav4)",

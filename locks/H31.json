@@ -243,19 +243,19 @@
    "calibration_zips": [
     {
      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_calib.zip",
-     "sha256": null
+     "sha256": "e0108cfd000cf802c14ed94fba38601185c792e5640abba015a34b7a85b812e0"
     },
     {
      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_calib.zip",
-     "sha256": null
+     "sha256": "260fb836916ac3cbbab7104e253531239a0191b87c411fa60b99178abbb8c40d"
     },
     {
      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_30_calib.zip",
-     "sha256": null
+     "sha256": "2ed01563b616baec14f25659671bd9a77810bd87752d709d184fe304ff7258e3"
     },
     {
      "url": "https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_10_03_calib.zip",
-     "sha256": null
+     "sha256": "67f1f4dcfff4370f8ad1ccaf4fb013fca3f02abd650115f318ce9b1d0991a58c"
     }
    ],
    "attack_seeds": "GPS runs: gps/stream.py generator, 10 phase offsets per drive, seed [31, int(drive)]; LiDAR: lidar.phantom (single_return=True), PointDrop, IntensitySpoof, episodes, seed [31, 3, int(drive)]; cross / system composites seed [31, 7, int(drive), ord(family[0])]"

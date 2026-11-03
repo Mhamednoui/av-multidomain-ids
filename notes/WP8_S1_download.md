@@ -35,3 +35,10 @@
 
 ## Next
 - Decision on the calibration zips (problem 1); then sha256 for the 4 calibration zips and their extraction.
+
+## Calibration zips: resolved (orchestrator decision, 2026-11-03)
+- S1 list sizes corrected to the server values (4068 / 4071 / 4073 / 4075 B), with a note in the list.
+- Extracted to calib/<day>/<day>/ (zip's own folder): calib_cam_to_cam.txt, calib_imu_to_velo.txt, calib_velo_to_cam.txt.
+- Content check: 12 of 12 files parse; expected keys present; all values numeric.
+- Comparison with v3 calibration: none found on disk (search of the PFE tree), so nothing to compare.
+- Lock locks/H31.json calibration_zips sha256 filled (zip sha256 of the 4 zips).

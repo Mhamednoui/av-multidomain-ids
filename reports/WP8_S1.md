@@ -17,8 +17,7 @@ Status: REVIEW, with one open decision (calibration zips). Details: notes/WP8_S1
 - G1 guard: tools/WP8_lib.py assert_not_h31, tests/v31/test_h31_guard.py (6 pass).
 
 ## Problems and open questions
-1. Calibration zips (4): the list says 4100 B; the server gives 4068, 4071, 4073, 4075 B. Not extracted, no lock
-   value. Question for the orchestrator: correct the list to the server sizes, and then extract and lock them?
+1. Calibration zips: RESOLVED (orchestrator decision). List sizes corrected to server values; extracted; parsed 12/12; no v3 copy to compare; lock sha256 filled.
 2. One KITTI argument typo stopped one process after drive 0084 (no data affected); the missing drive was fetched
    separately.
 3. HTTP totals exceed the list's transfer because of block-cache overhead (KITTI 11.66 GB, comma 1.71 GB).
