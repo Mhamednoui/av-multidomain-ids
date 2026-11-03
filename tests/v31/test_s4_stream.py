@@ -11,7 +11,7 @@ sys.path.insert(0, str(ROOT))
 sys.path.insert(0, str(ROOT / "tests" / "network"))
 from network import l2a
 from network.domain import NetworkDomain
-from network.stream31 import LAYERS, RunningState, Stream31, reference_running
+from network.stream31 import LAYERS, RunningState, Stream31, Stream31Final, reference_running
 from test_domain import _flows, _fitted  # noqa: E402
 
 
@@ -112,3 +112,30 @@ def test_frozen_v3_domain_unchanged_by_stream31():
     c2, _ = D.score_stream(fl)
     assert [e.score for e in c1] == [e.score for e in c2]
     assert S2.scan is not [L for L in D.layers if L.name == "net.scan"][0]
+
+
+def test_final_emission_equals_v3_cell_statistics_and_batch():
+    D, rng = _fitted(4)
+    F = Stream31Final.from_frozen(D)
+    F.calibrate(D.prepare(_flows(rng, range(1700, 1740))))
+    st = D.prepare(_flows(rng, range(1800, 1830), scan=True))
+    st["t"] = st["t"].astype(float)
+    s_b, a_b, X_b, raw_b = F.score_table(st)
+    # final statistics of the batch path equal the v3 cell values (trw bin = 1 tick)
+    sc, br, tr = F.scan, F.brute, l2a.Trw(W=1)
+    st2 = st.assign(minute=(st["t"] // 60).astype("int64"))
+    assert np.allclose(raw_b["net.scan"], sc.stream_scores(st2)) and np.allclose(raw_b["net.bruteforce"], br.stream_scores(st2)) and np.allclose(raw_b["net.trw"], tr.stream_scores(st2))
+    # stream: Evidence arrives only when the next tick starts; same scores / alarms as the batch path
+    F.reset()
+    recs = st[["ts", "src_ip", "dst_ip", "dst_port", "protocol"] + [c for c in st.columns if c.startswith(("Tot", "Flow", "FIN", "SYN", "RST", "PSH", "ACK", "URG", "ECE"))]].to_dict("records")
+    got, emitted_at = {}, {}
+    for i, r in enumerate(recs):
+        for e in F.push(r):
+            got[int(e.sample_id)] = e
+            emitted_at[int(e.sample_id)] = r["ts"]
+    for e in F.flush():
+        got[int(e.sample_id)] = e
+        emitted_at[int(e.sample_id)] = recs[-1]["ts"]
+    assert sorted(got) == list(range(len(recs)))
+    assert max(abs(got[i].score - s_b[i]) for i in range(len(recs))) <= 1e-12 and all(got[i].alarm == bool(a_b[i]) for i in range(len(recs)))
+    assert all(emitted_at[i] - recs[i]["ts"] >= 0 and emitted_at[i] // 60 <= recs[i]["ts"] // 60 + 60 for i in range(len(recs)))

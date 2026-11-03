@@ -325,3 +325,81 @@ def reference_running(rows, tick_s=60.0, w_scan=1, w_brute=1, trw_bin=5, carry=F
         pk = lambda j, k: max([out[m][j] for m in range(i) if qs[m] == qs[i] - 1 and ((rows[m][1], rows[m][2]), rows[m][1], tuple(rows[m][1:5]), rows[m][1])[j] == k] or [0.0])
         res.append(tuple(max(out[i][j], pk(j, keys[j])) for j in range(4)))
     return res
+
+
+# ====================================================================== minute-final emission (candidate F1 of the S4 round 2)
+class Stream31Final(Stream31):
+    """Tick-final emission: the v3 cell statistics with a trw bin of one tick, delivered when the cell's tick has closed (the first flow of a later tick arrives, or flush()). Flows are buffered
+    for at most one tick, so the Evidence delay is the tick (60 s on D10) instead of the 5-minute bin plus the prefix re-score of the v3 runner; no whole-buffer re-score: the stateful part is the same
+    O(1) RunningState, and the final value of a cell is the maximum of the running values of its flows (the running values are nondecreasing inside a tick)."""
+
+    def __init__(self, scan, brute, tcp, tick_s=60.0, w_scan=1, w_brute=1, budget=BUDGET_DOMAIN):
+        super().__init__(scan, brute, tcp, tick_s=tick_s, w_scan=w_scan, w_brute=w_brute, trw_bin=1, carry=False, budget=budget)
+        self.buf = []
+
+    @classmethod
+    def from_frozen(cls, dom: NetworkDomain, **params):
+        base = Stream31.from_frozen(dom, trw_bin=1)
+        c = cls(base.scan, base.brute, base.tcp, **params)
+        c.cal["net.tcp_flags"], c.thr["net.tcp_flags"] = base.cal["net.tcp_flags"], base.thr["net.tcp_flags"]
+        return c
+
+    # ------------------------------------------------------------------ batch path
+    @staticmethod
+    def _cell_max(vals, *key_cols):
+        k = pd.DataFrame({str(i): np.asarray(c) for i, c in enumerate(key_cols)})
+        return pd.Series(np.asarray(vals, float)).groupby([k[c] for c in k.columns]).transform("max").to_numpy()
+
+    def final_counts(self, df):
+        n_ports, n_hosts, n_br, peak = self.running_counts(df)
+        q = np.floor(df["t"].to_numpy(float) / self.params["tick_s"]).astype("int64")
+        s, d, p, pr = (df[c].to_numpy() for c in ("src_id", "dst_id", "dst_port", "protocol"))
+        return (self._cell_max(n_ports, s, d, q), self._cell_max(n_hosts, s, q), self._cell_max(n_br, s, d, p, pr, q), self._cell_max(peak, s, q))
+
+    def raw_table(self, df):
+        return self.raw_from(self.final_counts(df), df["dst_port"].to_numpy(), self.raw_tcp(df))
+
+    # ------------------------------------------------------------------ streaming path
+    def reset(self):
+        super().reset()
+        self.buf = []
+
+    def push(self, flow, sample_id=None, per_layer=False):
+        t = float(pd.Timestamp(flow["ts"]).value / 1e9) if not isinstance(flow["ts"], (int, float, np.integer, np.floating)) else float(flow["ts"])
+        q = int(np.floor(t / self.params["tick_s"]))
+        out = self.flush() if self.buf and q > self.buf[-1]["q"] else []
+        one = pd.DataFrame([{c: flow[c] for c in RAW_COLUMNS if c in flow}])
+        for c in ("dst_port", "protocol"):
+            one[c] = pd.to_numeric(one[c], errors="coerce").fillna(-1).astype("int64")
+        port, proto = int(one["dst_port"].iloc[0]), int(one["protocol"].iloc[0])
+        f = self.state.push(q, flow["src_ip"], flow["dst_ip"], port, proto, float(flow["Tot Fwd Pkts"]), float(flow["Tot Bwd Pkts"]), float(flow["TotLen Fwd Pkts"]), float(flow["TotLen Bwd Pkts"]))
+        self.buf.append({"q": q, "t": t, "one": one, "f": f, "src": flow["src_ip"], "dst": flow["dst_ip"], "port": port, "proto": proto,
+                         "sid": str(self.state.n - 1 if sample_id is None else sample_id)})
+        return out
+
+    def flush(self):
+        """Emit the Evidence of the buffered tick (called by push on a tick change and at the end of the capture)."""
+        b, self.buf = self.buf, []
+        if not b:
+            return []
+        mx = [dict(), dict(), dict(), dict()]
+        keys = lambda r: ((r["src"], r["dst"]), r["src"], (r["src"], r["dst"], r["port"], r["proto"]), r["src"])
+        for r in b:
+            for j, k in enumerate(keys(r)):
+                if r["f"][j] > mx[j].get(k, -1.0):
+                    mx[j][k] = r["f"][j]
+        fin = [np.array([mx[j][keys(r)[j]] for r in b], float) for j in range(4)]
+        one = pd.concat([r["one"] for r in b], ignore_index=True)
+        raw = self.raw_from(fin, np.array([r["port"] for r in b]), self.raw_tcp(one))
+        X = self.matrix(raw)
+        s = X.max(axis=1)
+        out = []
+        for i, r in enumerate(b):
+            alarm = bool(s[i] >= self.comb_thr)
+            reason = ""
+            if alarm:
+                fired = sorted([(X[i, j], n) for j, n in enumerate(LAYERS) if X[i, j] >= self.thr[n]], reverse=True)
+                reason = ("Network alarm: " + "; ".join(f"{EXPLAIN.get(n, n)} (layer {n}, score {sc:.3f})" for sc, n in fired[:3]) + ".") if fired else "Network alarm: no single layer fired."
+            out.append(Evidence(domain="network", layer="combined", name="network.combined", t=r["t"], score=float(s[i]), alarm=alarm, reason=reason,
+                                details={"method": "max", "layer_scores": {n: float(X[i, j]) for j, n in enumerate(LAYERS)}, "final": True, "emitted_at_tick_close": True}, sample_id=r["sid"]))
+        return out

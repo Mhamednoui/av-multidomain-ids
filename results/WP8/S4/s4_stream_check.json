@@ -1,0 +1,57 @@
+{
+ "candidate": "RC5",
+ "slice_flows": 25000,
+ "slices": {
+  "2017-07-04": {
+   "flows": 25000,
+   "families": {
+    "BENIGN": 23582,
+    "FTP-Patator": 1418
+   },
+   "max_abs_score_diff_stream_vs_batch": 0.0,
+   "alarm_mismatches": 0,
+   "alarms": 1451,
+   "prefix_equal_full": true,
+   "evidence_t_equals_flow_ts": true
+  },
+  "2017-07-05": {
+   "flows": 25000,
+   "families": {
+    "BENIGN": 19392,
+    "DoS-Hulk": 3482,
+    "DoS-SlowHTTPTest": 1418,
+    "DoS-Slowloris": 708
+   },
+   "max_abs_score_diff_stream_vs_batch": 0.0,
+   "alarm_mismatches": 0,
+   "alarms": 4548,
+   "prefix_equal_full": true,
+   "evidence_t_equals_flow_ts": true
+  },
+  "2017-07-07": {
+   "flows": 25000,
+   "families": {
+    "BENIGN": 24954,
+    "Bot": 46
+   },
+   "max_abs_score_diff_stream_vs_batch": 0.0,
+   "alarm_mismatches": 0,
+   "alarms": 779,
+   "prefix_equal_full": true,
+   "evidence_t_equals_flow_ts": true
+  }
+ },
+ "push_ms": {
+  "n": 75000,
+  "median": 2.7462000000024744,
+  "p95": 3.919709999983923,
+  "p99": 5.137915000022409,
+  "max": 116.22700000000918
+ },
+ "N3_p99_le_1000ms": true,
+ "machine": {
+  "cpu_percent_system": 34.9,
+  "cores": 12
+ },
+ "v3_reference": "v3 stall at each bin close: 1.4 s median / 7.7 s max (reports/M3.md, results/WP7/S1b_net.json A4)"
+}

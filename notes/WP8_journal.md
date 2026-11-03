@@ -79,3 +79,5 @@
 2026-11-03T17:45:34+01:00 | S1 | after v2aix_h31 | extracted 674, present 0, 6 s | checking manifest
 2026-11-03T17:45:34+01:00 | S1 | manifest v2aix_h31 | 674 recordings verified (sha256 + CRC32 vs lock), data folder only | done
 2026-11-03T17:45:34+01:00 | S1 | end fetch Chunk_2 Chunk_4 Chunk_3 v2aix_h31 | done
+2026-11-03T17:48:57+01:00 | S4 | added Stream31Final (tick-final emission = candidate F1) + test; running tools/WP8_S4_final_check.py, log results/WP8/logs/S4_final_check.log
+2026-11-03T17:54:13+01:00 | S4 | DONE: report reports/WP8_S4.md, brief, STATUS S4 -> REVIEW; committing; stop

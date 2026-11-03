@@ -1,0 +1,372 @@
+{
+ "n_val_flows": 502291,
+ "n_bot_published": 109,
+ "n_bot_corrected": 265,
+ "relabelled_benign_flows": 156,
+ "A_layers_H": {
+  "net.tcp_flags": {
+   "auc_bot_vs_benign": 0.5651041456020255,
+   "median_calibrated_bot": 0.4545714230780851,
+   "share_bot_above_layer_threshold": 0.0,
+   "p95_benign_calibrated": 0.9432592555970303,
+   "layer_threshold": 0.9899224614573292,
+   "median_raw_bot": 0.40725968685554265,
+   "median_raw_benign": 0.40725968685554265,
+   "p99_raw_benign": 2.4115433919935603
+  },
+  "net.scan": {
+   "auc_bot_vs_benign": 0.3562003959591873,
+   "median_calibrated_bot": 0.307830486408095,
+   "share_bot_above_layer_threshold": 0.0,
+   "p95_benign_calibrated": 0.9483982783861655,
+   "layer_threshold": 0.9851624793656288,
+   "median_raw_bot": 1.088662603949081,
+   "median_raw_benign": 1.8154316913087316,
+   "p99_raw_benign": 4.389174141701328
+  },
+  "net.trw": {
+   "auc_bot_vs_benign": 0.44010261162366776,
+   "median_calibrated_bot": 0.0,
+   "share_bot_above_layer_threshold": 0.05504587155963303,
+   "p95_benign_calibrated": 0.92336511232514,
+   "layer_threshold": 0.9875136303584133,
+   "median_raw_bot": 0.0,
+   "median_raw_benign": 0.0,
+   "p99_raw_benign": 22.180709777918253
+  },
+  "net.bruteforce": {
+   "auc_bot_vs_benign": 0.16465461623666514,
+   "median_calibrated_bot": 0.13486707482208435,
+   "share_bot_above_layer_threshold": 0.0,
+   "p95_benign_calibrated": 0.9470579025865408,
+   "layer_threshold": 0.9890984599411664,
+   "median_raw_bot": -1.4753224507667102,
+   "median_raw_benign": -0.5740312677277188,
+   "p99_raw_benign": 0.8615249285502875
+  }
+ },
+ "A_shape_duplicates": {
+  "bot_shapes": 3,
+  "bot_flows_with_shape_found_in_benign_headline": 1.0,
+  "benign_flows_with_a_bot_shape": 120,
+  "benign_flows_with_a_bot_shape_src_in_victims": 116,
+  "benign_with_bot_shape_dst_is_c2": 116,
+  "bot_flows": 109,
+  "max_precision_of_an_exact_shape_detector": 0.4759825327510917,
+  "note": "benign flows with the Bot shape between the Bot hosts and the C2 are the documented label noise (WP4 S6): the beacon traffic inside the Friday benign-labelled files"
+ },
+ "A_groups_published": [
+  {
+   "src": "192.168.10.15",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 31,
+   "active_minutes": 22,
+   "median_gap_min": 1.0,
+   "span_min": 26,
+   "flows_per_active_minute": 1.4090909090909092
+  },
+  {
+   "src": "192.168.10.8",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 31,
+   "active_minutes": 22,
+   "median_gap_min": 1.0,
+   "span_min": 26,
+   "flows_per_active_minute": 1.4090909090909092
+  },
+  {
+   "src": "192.168.10.14",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 15,
+   "active_minutes": 15,
+   "median_gap_min": 2.0,
+   "span_min": 25,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "192.168.10.5",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 15,
+   "active_minutes": 15,
+   "median_gap_min": 2.0,
+   "span_min": 25,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "192.168.10.9",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 15,
+   "active_minutes": 15,
+   "median_gap_min": 2.0,
+   "span_min": 25,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "192.168.10.17",
+   "dst": "52.7.235.158",
+   "port": 8080,
+   "flows": 2,
+   "active_minutes": 2,
+   "median_gap_min": 1.0,
+   "span_min": 2,
+   "flows_per_active_minute": 1.0
+  }
+ ],
+ "A_groups_corrected": [
+  {
+   "src": "192.168.10.15",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 75,
+   "active_minutes": 55,
+   "median_gap_min": 1.0,
+   "span_min": 335,
+   "flows_per_active_minute": 1.3636363636363635
+  },
+  {
+   "src": "192.168.10.8",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 74,
+   "active_minutes": 55,
+   "median_gap_min": 1.0,
+   "span_min": 335,
+   "flows_per_active_minute": 1.3454545454545455
+  },
+  {
+   "src": "192.168.10.14",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 38,
+   "active_minutes": 38,
+   "median_gap_min": 2.0,
+   "span_min": 333,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "192.168.10.9",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 38,
+   "active_minutes": 38,
+   "median_gap_min": 2.0,
+   "span_min": 333,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "192.168.10.5",
+   "dst": "205.174.165.73",
+   "port": 8080,
+   "flows": 33,
+   "active_minutes": 33,
+   "median_gap_min": 2.0,
+   "span_min": 333,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "192.168.10.17",
+   "dst": "52.7.235.158",
+   "port": 8080,
+   "flows": 2,
+   "active_minutes": 2,
+   "median_gap_min": 1.0,
+   "span_min": 2,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "205.174.165.73",
+   "dst": "192.168.10.5",
+   "port": 53885,
+   "flows": 1,
+   "active_minutes": 1,
+   "median_gap_min": null,
+   "span_min": 1,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "205.174.165.73",
+   "dst": "192.168.10.5",
+   "port": 53888,
+   "flows": 1,
+   "active_minutes": 1,
+   "median_gap_min": null,
+   "span_min": 1,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "205.174.165.73",
+   "dst": "192.168.10.5",
+   "port": 53892,
+   "flows": 1,
+   "active_minutes": 1,
+   "median_gap_min": null,
+   "span_min": 1,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "205.174.165.73",
+   "dst": "192.168.10.5",
+   "port": 53896,
+   "flows": 1,
+   "active_minutes": 1,
+   "median_gap_min": null,
+   "span_min": 1,
+   "flows_per_active_minute": 1.0
+  },
+  {
+   "src": "205.174.165.73",
+   "dst": "192.168.10.5",
+   "port": 53899,
+   "flows": 1,
+   "active_minutes": 1,
+   "median_gap_min": null,
+   "span_min": 1,
+   "flows_per_active_minute": 1.0
+  }
+ ],
+ "B_candidates": {
+  "H_reference": {
+   "fa": 0.0095996176632965,
+   "macro": 0.582567672276777,
+   "bot": 0.05504587155963303
+  },
+  "BOT-A": {
+   "alone": {
+    "fa": 0.009844071446424794,
+    "bot_published": 0.27522935779816515,
+    "bot_corrected": 0.11320754716981132,
+    "auc_bot_vs_benign": 0.6184301596851942,
+    "groups_hit": 3,
+    "groups": 6,
+    "precision_on_alarmed_bot_or_benign": 0.008301051466519093
+   },
+   "added_to_H": {
+    "fa": 0.007561587246653867,
+    "macro": 0.4224479118844915,
+    "macro_diff_vs_H_points": -16.01197603922855,
+    "bot_published": 0.05504587155963303,
+    "bot_corrected": 0.022641509433962263,
+    "detection": {
+     "Bot": 0.05504587155963303,
+     "DDoS-LOIC-HTTP": 1.0,
+     "DoS-GoldenEye": 0.00641025641025641,
+     "DoS-Hulk": 1.0,
+     "DoS-SlowHTTPTest": 0.48660084626234135,
+     "DoS-Slowloris": 0.09887005649717515,
+     "FTP-Patator": 1.0,
+     "SSH-Patator": 0.0,
+     "PortScan": 1.0,
+     "Web-BruteForce": 0.0,
+     "Web-XSS": 0.0
+    },
+    "threshold": 0.9973961552089257
+   },
+   "counts_for_N4": false
+  },
+  "BOT-B": {
+   "alone": {
+    "fa": 0.0,
+    "bot_published": 0.0,
+    "bot_corrected": 0.0,
+    "auc_bot_vs_benign": 0.389111822877069,
+    "groups_hit": 0,
+    "groups": 6,
+    "precision_on_alarmed_bot_or_benign": 0.0
+   },
+   "added_to_H": {
+    "fa": 0.009995138391054639,
+    "macro": 0.582567672276777,
+    "macro_diff_vs_H_points": 0.0,
+    "bot_published": 0.05504587155963303,
+    "bot_corrected": 0.15471698113207547,
+    "detection": {
+     "Bot": 0.05504587155963303,
+     "DDoS-LOIC-HTTP": 1.0,
+     "DoS-GoldenEye": 0.00641025641025641,
+     "DoS-Hulk": 1.0,
+     "DoS-SlowHTTPTest": 0.9739069111424542,
+     "DoS-Slowloris": 0.3728813559322034,
+     "FTP-Patator": 1.0,
+     "SSH-Patator": 1.0,
+     "PortScan": 1.0,
+     "Web-BruteForce": 0.0,
+     "Web-XSS": 0.0
+    },
+    "threshold": 0.9957014587573509
+   },
+   "counts_for_N4": false
+  },
+  "BOT-C": {
+   "alone": {
+    "fa": 0.009948444971805415,
+    "bot_published": 0.7155963302752294,
+    "bot_corrected": 0.5962264150943396,
+    "auc_bot_vs_benign": 0.8048458748002019,
+    "groups_hit": 5,
+    "groups": 6,
+    "precision_on_alarmed_bot_or_benign": 0.02108108108108108
+   },
+   "added_to_H": {
+    "fa": 0.008358122045611231,
+    "macro": 0.5576575541463199,
+    "macro_diff_vs_H_points": -2.491011813045707,
+    "bot_published": 0.05504587155963303,
+    "bot_corrected": 0.022641509433962263,
+    "detection": {
+     "Bot": 0.05504587155963303,
+     "DDoS-LOIC-HTTP": 1.0,
+     "DoS-GoldenEye": 0.00641025641025641,
+     "DoS-Hulk": 1.0,
+     "DoS-SlowHTTPTest": 0.9739069111424542,
+     "DoS-Slowloris": 0.09887005649717515,
+     "FTP-Patator": 1.0,
+     "SSH-Patator": 1.0,
+     "PortScan": 1.0,
+     "Web-BruteForce": 0.0,
+     "Web-XSS": 0.0
+    },
+    "threshold": 0.9970418345569757
+   },
+   "counts_for_N4": false
+  },
+  "BOT-D": {
+   "alone": {
+    "fa": 0.009948444971805415,
+    "bot_published": 0.7155963302752294,
+    "bot_corrected": 0.5962264150943396,
+    "auc_bot_vs_benign": 0.794267320656763,
+    "groups_hit": 5,
+    "groups": 6,
+    "precision_on_alarmed_bot_or_benign": 0.02108108108108108
+   },
+   "added_to_H": {
+    "fa": 0.008358122045611231,
+    "macro": 0.5576575541463199,
+    "macro_diff_vs_H_points": -2.491011813045707,
+    "bot_published": 0.05504587155963303,
+    "bot_corrected": 0.022641509433962263,
+    "detection": {
+     "Bot": 0.05504587155963303,
+     "DDoS-LOIC-HTTP": 1.0,
+     "DoS-GoldenEye": 0.00641025641025641,
+     "DoS-Hulk": 1.0,
+     "DoS-SlowHTTPTest": 0.9739069111424542,
+     "DoS-Slowloris": 0.09887005649717515,
+     "FTP-Patator": 1.0,
+     "SSH-Patator": 1.0,
+     "PortScan": 1.0,
+     "Web-BruteForce": 0.0,
+     "Web-XSS": 0.0
+    },
+    "threshold": 0.9970418345569757
+   },
+   "counts_for_N4": false
+  }
+ },
+ "B_note": "BOT-C uses the byte count of the flows of a group (the fixed shape of the Ares beacon): shape-dependent by construction, reported but never counted for N4. BOT-A / BOT-B use only counts of active minutes, gaps and sources: no port, address or size identity."
+}

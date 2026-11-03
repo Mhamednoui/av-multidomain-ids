@@ -18,3 +18,11 @@
 - Pitfalls: results/WP7/frozen_v2x is untracked in git (used read-only); only 55 of 152 Mobile val recordings have a full ego pose.
 
 - S7 owns the system/ runner wrapper for IncrementalCan and EgoStream.
+
+## S4 (network streaming Evidence + unseen Bot, worker sonnet) - REVIEW 2026-11-03
+- Code: network/stream31.py (RunningState, Stream31 = Evidence at arrival, Stream31Final = at tick close), tools/WP8_S4_{prep,eval,stream_check,final_check,bot,report}.py, tests/v31/test_s4_{stream,regression}.py; results results/WP8/S4/, scores results/WP8/scores/S4/ (git add -f, npz ignored); report reports/WP8_S4.md. v3 files untouched; WP4 caches were deleted -> D10 rebuilt (counts equal), only train+val loaded.
+- Val (D10, 11 families): v3 macro 58.3 / FA 0.96 (reproduced exactly from the stored WP4 S7 val view). Running statistics alone (R5/R2/R1) fail N2 (-7.6/-11.8/-11.2). With one-tick carry RC5: 55.4 (-2.90 paired, margin 0.10, CI excludes 0), FA 0.93, delay 0 -> chosen by the pre-registered rule. F1 (tick-final, TRW 1 min): 57.9 (-0.34), delay 60 s median / 76 s max (v3 flow level 120 / 307 s).
+- N3: RC5 push p99 5.1 ms (v3 stall 1.4 s); stream == batch exact on real val slices. Sub-minute ticks not validated (only D23 has seconds, H31).
+- Bot: nothing counts; Bot sits in the benign bulk of every H layer, shape also on 120 benign-labelled flows (precision <= 47.6 %); beacon 27.5 % alone, size regularity 71.6 % alone (shape-dependent, 2.1 % precision), added to H at 1 % budget Bot stays 5.5 %.
+- Open for supervisor: RC5 vs F1 for S7; fusion network ECDF / tick model must be recalibrated (S2/S7). Pitfall: results/WP4/s1_clean_D10.json is rewritten by the WP4 build (key order only): restore with git checkout.
+

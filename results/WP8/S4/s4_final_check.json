@@ -1,0 +1,45 @@
+{
+ "reproduces_F1": {
+  "max_abs_score_diff_vs_eval_F1": 2.971989221389748e-08,
+  "alarm_mismatches_vs_eval_F1": 0,
+  "macro": 0.5791411470230536,
+  "fa": 0.009602364335017042,
+  "combined_threshold": 0.9959706325859641
+ },
+ "slices": {
+  "2017-07-04": {
+   "flows": 25000,
+   "all_emitted": true,
+   "max_abs_score_diff_stream_vs_batch": 0.0,
+   "alarm_mismatches": 0,
+   "delay_median_s": 60.0,
+   "delay_max_s": 6960.0
+  },
+  "2017-07-05": {
+   "flows": 25000,
+   "all_emitted": true,
+   "max_abs_score_diff_stream_vs_batch": 0.0,
+   "alarm_mismatches": 0,
+   "delay_median_s": 60.0,
+   "delay_max_s": 1680.0
+  },
+  "2017-07-07": {
+   "flows": 25000,
+   "all_emitted": true,
+   "max_abs_score_diff_stream_vs_batch": 0.0,
+   "alarm_mismatches": 0,
+   "delay_median_s": 60.0,
+   "delay_max_s": 4920.0
+  }
+ },
+ "push_ms": {
+  "n": 75003,
+  "median": 0.8821999999995,
+  "p99": 2.271500000005915,
+  "max": 764.6441999999922
+ },
+ "delay_s_all_slices": {
+  "median": 60.0,
+  "max": 6960.0
+ }
+}
