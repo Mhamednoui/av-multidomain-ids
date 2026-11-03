@@ -143,3 +143,4 @@
 2026-11-03T18:43:22+01:00 | S6 | K builder done (23 drive pickles in data_extra/cache_v3/WP8/S6, log results/WP8/logs/S6_kitti.log); running comma builder tools/WP8_S6_comma.py in background, log results/WP8/logs/S6_comma.log
 2026-11-03 | ORCH | S1 approved (6/10) | S3b, S6 running
 2026-11-03T18:43:56+01:00 | S3b | done: report reports/WP8_S3b.md, brief, STATUS S3b -> REVIEW; running full test suite then commit
+2026-11-03 | ORCH | S3b approved (7/10) | S6 running
