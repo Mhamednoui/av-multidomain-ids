@@ -140,3 +140,5 @@
 2026-11-03T18:42:10+01:00 | S1 | after calib_2011_10_03 | zip 4075 B, sha256 67f1f4dcfff4370f8ad1ccaf4fb013fca3f02abd650115f318ce9b1d0991a58c, members ['2011_10_03/calib_cam_to_cam.txt', '2011_10_03/calib_imu_to_velo.txt', '2011_10_03/calib_velo_to_cam.txt'] | extracted; manifest written
 2026-11-03T18:42:10+01:00 | S1 | end fetch calib_2011_09_26 calib_2011_09_29 calib_2011_09_30 calib_2011_10_03 | done
 2026-11-03T18:43:04+01:00 | S1 | calib zips done: list sizes corrected (note), 4 zips extracted to calib/<day>/<day>/, 12/12 files parse, no v3 copy to compare, H31 lock calib sha256 filled | commit, S1 stays REVIEW
+2026-11-03T18:43:22+01:00 | S6 | K builder done (23 drive pickles in data_extra/cache_v3/WP8/S6, log results/WP8/logs/S6_kitti.log); running comma builder tools/WP8_S6_comma.py in background, log results/WP8/logs/S6_comma.log
+2026-11-03 | ORCH | S1 approved (6/10) | S3b, S6 running
