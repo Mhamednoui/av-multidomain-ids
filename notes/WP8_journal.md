@@ -81,3 +81,4 @@
 2026-11-03T17:45:34+01:00 | S1 | end fetch Chunk_2 Chunk_4 Chunk_3 v2aix_h31 | done
 2026-11-03T17:48:57+01:00 | S4 | added Stream31Final (tick-final emission = candidate F1) + test; running tools/WP8_S4_final_check.py, log results/WP8/logs/S4_final_check.log
 2026-11-03T17:54:13+01:00 | S4 | DONE: report reports/WP8_S4.md, brief, STATUS S4 -> REVIEW; committing; stop
+2026-11-03T18:00 | ORCH | S4 approved, F1 primary / RC5 variant (decision in notes/WP8_v31.md) | S1, S3 running
