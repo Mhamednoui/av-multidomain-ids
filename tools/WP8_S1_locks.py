@@ -182,8 +182,10 @@ def main():
         v31["domains"]["comma"]["civic_chunk3"]["sha256"] = sha_fill[("comma", "civic_chunk3")]
         v31["domains"]["comma"]["civic_chunk3"]["sha256_note"] = (
             "sha256 of the per-file manifest results/WP8/S1/items/Chunk_3.json (same rule as the KITTI drives)")
-        H31.write_text(json.dumps(h31, indent=2, ensure_ascii=False), encoding="utf-8")
-        V31.write_text(json.dumps(v31, indent=2, ensure_ascii=False), encoding="utf-8")
+        # same layout as the committed locks: 1-space indent, LF line endings
+        for path, obj in ((H31, h31), (V31, v31)):
+            with open(path, "w", encoding="utf-8", newline="\n") as f:
+                f.write(json.dumps(obj, indent=1, ensure_ascii=False) + "\n")
         journal("locks filled", "H31.json drives + rav4 + civic sha256; V31_val civic_chunk3 sha256; "
                                 "calibration zips left null (stopped)")
 

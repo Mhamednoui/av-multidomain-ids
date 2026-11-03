@@ -31,3 +31,8 @@
 - Code: lidar/fast.py (v3-identical statistics, one ring assignment, voxel clustering flag), lidar/combine31.py (union with per-layer budgets), lidar/domain31.py (Domain31, stream), tools/WP8_S3_*.py, tests/v31/test_{fast,domain31}.py; results results/WP8/S3/, scores results/WP8/scores/S3/lidar_val.npz; report reports/WP8_S3.md. v3 lidar files untouched; suite 514 pass; run_all --check OK.
 - Protocol: layer references leave-one-drive-out (stricter than v3 S9): v3 rule gives FA 2.70 % and PointDrop 4.3 % there. Chosen by the registered rule (3 logged rounds): tail2h|zmulti|E7, B = 1 %: FA 0.96 %, PointDrop 67.5 % [64.0, 70.0], episodes 23/30, IS 61.2, near replace 23.6, all kinds within 2 points. L3 NOT MET (70 / 80 %); B = 1.25 %: 74.4 % (frozen_lidar31_B125, supervisor decision). L2 MET (exact). L1 speed NOT MET: median 0.14-0.18 s, p99 0.24-0.27 s (v3 1.2-1.8 s).
 - Pitfalls: exact v3 clustering = 2.4 s on dense scans (voxel 0.1 flag replaces it); L2a count statistics are drive dependent (drive 0027); sensor-fixed PointDrop is invisible after the onset scan; frozen domain 58 MB not committed (sha256 in report); parts/ and frame.pkl not committed (rebuild 16 min + 2 min).
+
+## S1 (download, worker haiku) - REVIEW 2026-11-03
+- H31 downloaded: KITTI 13 drives (11.88 GB), comma Chunk_2/4/3 (4.58 GB), V2AIX 674 extracted (0.82 GB); ~17.3 GB on disk; free 88.99 GB. Sizes/CRC/counts match locks; sha256 filled in locks (calib zips left null).
+- Decision 3: no move (V31_val has 21 Civic routes). Decision 4: DATASETS D28 + D02n added.
+- OPEN: calibration zips list 4100 B vs server 4068-4075 B (stopped; orchestrator decides). reports/WP8_S1.md, notes/WP8_S1_download.md.

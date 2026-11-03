@@ -32,8 +32,8 @@
      "bytes_transfer": 822605164,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0009.json",
      "member_list_sha256": "216f22c0fea56358ee0ed3a8ba5625496b87c82299b48deb10f276f41ce4e764",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "5128e8552294c4553073cbf1fe42880b41afd6c378bfa451e573a9f45752b1a6",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_26_drive_0023",
@@ -49,8 +49,8 @@
      "bytes_transfer": 884272335,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0023.json",
      "member_list_sha256": "6f00bb20cfd0eeffdd55c7b71cd32cbacdfd5f7a37fe0ff98c7d5bf147cbc55c",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "a88924e803a64719e389775a365927d4704b464d623ccbff27b1bdd430bd8bc0",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_26_drive_0032",
@@ -66,8 +66,8 @@
      "bytes_transfer": 737008276,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0032.json",
      "member_list_sha256": "70f0e3161cdede22cc71bf216a7df7357e582eb70d5731c67308046a1472bfbe",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "85a5f766f86a65ba83f53647ed12db230d3913e964acc454b7f7a9ab36c232ab",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_26_drive_0056",
@@ -83,8 +83,8 @@
      "bytes_transfer": 575646937,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0056.json",
      "member_list_sha256": "d77bbf4fbe121deda298ed9687306e4a0ca9d1a1f1e89d75d94be0b500ec31fb",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "5eed3ef7c7f797319d729ac6f9d907961d420d447eff01cc503f6a1a7cbfd8fd",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_26_drive_0061",
@@ -100,8 +100,8 @@
      "bytes_transfer": 1386119167,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0061.json",
      "member_list_sha256": "f2f798bca5dad61ca6bfddb162ed47922dfd9901c18c5b4b4bf71871e004589c",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "326b6454d8674800767ff9e2aca2543ebecee476cf607816b47ebcaaf4630cdc",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_26_drive_0064",
@@ -117,8 +117,8 @@
      "bytes_transfer": 1117682834,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0064.json",
      "member_list_sha256": "9e5fe823c105121fb3df11ac7d888ecbb9d0f4dca929da80124506242c0a4196",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "80494b61f7ea45ceaa040b0bf3005a299036f8bd83a7ab176337758ceab54d66",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_26_drive_0084",
@@ -134,8 +134,8 @@
      "bytes_transfer": 725458761,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0084.json",
      "member_list_sha256": "87c384413720c37948ffcf0b139de0235e8d9eb79708be34b6ed900d58800118",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "dede20a1d0a43124097a6600fea8a29611940aebdfe301ce72b4747a2ace7b1f",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_26_drive_0093",
@@ -151,8 +151,8 @@
      "bytes_transfer": 815435838,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0093.json",
      "member_list_sha256": "e0df16a3a0f9146b3fc230c1694e65a157e851408b9974284596ab8da6dbf570",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "a1ed60278f9dcd3c1cc4a6d8f925feee681281c03249e3d4ff5a4118de08197a",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_26_drive_0101",
@@ -168,8 +168,8 @@
      "bytes_transfer": 1730599602,
      "member_list": "results/WP8/S0/remote/2011_09_26_drive_0101.json",
      "member_list_sha256": "1ea4798ed4f58317cb2c7e3d56443f6e6221163c30275504cf1e559f903a614e",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "b27f4f70bfb33872648e83c23a24bf936878b7ee63764d3b3126bffddd8d10df",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_29_drive_0004",
@@ -185,8 +185,8 @@
      "bytes_transfer": 650638822,
      "member_list": "results/WP8/S0/remote/2011_09_29_drive_0004.json",
      "member_list_sha256": "d27bb76ec4160af85bc2b6d0db7779c97955cb9e066ea5efcb9559cc6cb3d117",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "c6b54d541fdd54bc616ad11a9e019abe7256af74a6e3350f387e250d7766f35a",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_29_drive_0026",
@@ -202,8 +202,8 @@
      "bytes_transfer": 281781232,
      "member_list": "results/WP8/S0/remote/2011_09_29_drive_0026.json",
      "member_list_sha256": "d292466bcf91528b55b8d8373fafd908b4e7e580aa4a4757553d1364b1aa4d64",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "4e10c911445f9d076dda99d3f8fa21b7a1303d44c93ff50fc75ccee214d4d11f",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_09_30_drive_0016",
@@ -219,8 +219,8 @@
      "bytes_transfer": 561124381,
      "member_list": "results/WP8/S0/remote/2011_09_30_drive_0016.json",
      "member_list_sha256": "70de717a69ecda3cd57cb53a23b9183251609fc0893c0fd10dc5aba351e25a96",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "625725250d587fb02873af0e3ba29b79d0e20a233b14d3147a65a0019aa6fef3",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     },
     {
      "drive": "2011_10_03_drive_0047",
@@ -236,8 +236,8 @@
      "bytes_transfer": 1595804505,
      "member_list": "results/WP8/S0/remote/2011_10_03_drive_0047.json",
      "member_list_sha256": "396ff0e93436965e0f753b6922a7f999c71f858902152400c8a026402f712874",
-     "sha256": null,
-     "sha256_note": "per-member sha256 filled in S1 (CRC32 per member in member_list)"
+     "sha256": "5f5c73c5e5c90c8ffd0f3e2b07d51e8b0818aeac2cc7ea8f4b13124a35119046",
+     "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/<drive>.json (lines path<TAB>bytes<TAB>file sha256, sorted); files: velodyne_points + oxts, bytes and CRC32 checked against the member list"
     }
    ],
    "calibration_zips": [
@@ -306,8 +306,8 @@
     "member_list": "results/WP8/S0/remote/comma_Chunk_2.json",
     "member_list_sha256": "0a5cecc65a1f4ef0c6af9b645fd7d9971f7ee09d35cb63c93da02da7e58e9a0d",
     "role": "H31 primary C (routes after every v3 route in time)",
-    "sha256": null,
-    "sha256_note": "per-member sha256 filled in S1"
+    "sha256": "693758eb69f699db67010a9c86fa46871f7c3b7a8de89bdac41c8690964ead87",
+    "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/Chunk_<k>.json (same rule as the KITTI drives)"
    },
    "civic": {
     "chunk": 4,
@@ -341,8 +341,8 @@
     "member_list": "results/WP8/S0/remote/comma_Chunk_4.json",
     "member_list_sha256": "b39b78013a934b703809ec255792485cd957d2dd29604f8e12e7f4bc40fa95b7",
     "role": "H31 cross-vehicle stratum (zero-shot primary; per-deployment calibrated variant from V31_val Chunk_3)",
-    "sha256": null,
-    "sha256_note": "per-member sha256 filled in S1"
+    "sha256": "955d1c5d2540b01309e3e25f66d78d31d4eea5124d4e99f905be82b62039952f",
+    "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/Chunk_<k>.json (same rule as the KITTI drives)"
    },
    "note": "Civic CAN wheel speed is not at 0xAA (Toyota decoder in crossdomain/comma.py): the Civic decoder must be written on V31_val Chunk_3 only; if it cannot be verified there, the Civic stratum reports GNSS / IMU / CAN-speed edges only."
   },

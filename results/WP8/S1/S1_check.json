@@ -1,0 +1,158 @@
+{
+ "kitti": [
+  {
+   "drive": "2011_09_26_drive_0009",
+   "files": 895,
+   "bytes": 822605164,
+   "velodyne_bins": 443,
+   "oxts_txt": 447,
+   "manifest_sha256": "5128e8552294c4553073cbf1fe42880b41afd6c378bfa451e573a9f45752b1a6"
+  },
+  {
+   "drive": "2011_09_26_drive_0023",
+   "files": 953,
+   "bytes": 884272335,
+   "velodyne_bins": 474,
+   "oxts_txt": 474,
+   "manifest_sha256": "a88924e803a64719e389775a365927d4704b464d623ccbff27b1bdd430bd8bc0"
+  },
+  {
+   "drive": "2011_09_26_drive_0032",
+   "files": 785,
+   "bytes": 737008276,
+   "velodyne_bins": 390,
+   "oxts_txt": 390,
+   "manifest_sha256": "85a5f766f86a65ba83f53647ed12db230d3913e964acc454b7f7a9ab36c232ab"
+  },
+  {
+   "drive": "2011_09_26_drive_0056",
+   "files": 593,
+   "bytes": 575646937,
+   "velodyne_bins": 294,
+   "oxts_txt": 294,
+   "manifest_sha256": "5eed3ef7c7f797319d729ac6f9d907961d420d447eff01cc503f6a1a7cbfd8fd"
+  },
+  {
+   "drive": "2011_09_26_drive_0061",
+   "files": 1411,
+   "bytes": 1386119167,
+   "velodyne_bins": 703,
+   "oxts_txt": 703,
+   "manifest_sha256": "326b6454d8674800767ff9e2aca2543ebecee476cf607816b47ebcaaf4630cdc"
+  },
+  {
+   "drive": "2011_09_26_drive_0064",
+   "files": 1145,
+   "bytes": 1117682834,
+   "velodyne_bins": 570,
+   "oxts_txt": 570,
+   "manifest_sha256": "80494b61f7ea45ceaa040b0bf3005a299036f8bd83a7ab176337758ceab54d66"
+  },
+  {
+   "drive": "2011_09_26_drive_0084",
+   "files": 771,
+   "bytes": 725458761,
+   "velodyne_bins": 383,
+   "oxts_txt": 383,
+   "manifest_sha256": "dede20a1d0a43124097a6600fea8a29611940aebdfe301ce72b4747a2ace7b1f"
+  },
+  {
+   "drive": "2011_09_26_drive_0093",
+   "files": 871,
+   "bytes": 815435838,
+   "velodyne_bins": 433,
+   "oxts_txt": 433,
+   "manifest_sha256": "a1ed60278f9dcd3c1cc4a6d8f925feee681281c03249e3d4ff5a4118de08197a"
+  },
+  {
+   "drive": "2011_09_26_drive_0101",
+   "files": 1877,
+   "bytes": 1730599602,
+   "velodyne_bins": 936,
+   "oxts_txt": 936,
+   "manifest_sha256": "b27f4f70bfb33872648e83c23a24bf936878b7ee63764d3b3126bffddd8d10df"
+  },
+  {
+   "drive": "2011_09_29_drive_0004",
+   "files": 683,
+   "bytes": 650638822,
+   "velodyne_bins": 339,
+   "oxts_txt": 339,
+   "manifest_sha256": "c6b54d541fdd54bc616ad11a9e019abe7256af74a6e3350f387e250d7766f35a"
+  },
+  {
+   "drive": "2011_09_29_drive_0026",
+   "files": 321,
+   "bytes": 281781232,
+   "velodyne_bins": 158,
+   "oxts_txt": 158,
+   "manifest_sha256": "4e10c911445f9d076dda99d3f8fa21b7a1303d44c93ff50fc75ccee214d4d11f"
+  },
+  {
+   "drive": "2011_09_30_drive_0016",
+   "files": 563,
+   "bytes": 561124381,
+   "velodyne_bins": 279,
+   "oxts_txt": 279,
+   "manifest_sha256": "625725250d587fb02873af0e3ba29b79d0e20a233b14d3147a65a0019aa6fef3"
+  },
+  {
+   "drive": "2011_10_03_drive_0047",
+   "files": 1679,
+   "bytes": 1595804505,
+   "velodyne_bins": 837,
+   "oxts_txt": 837,
+   "manifest_sha256": "5f5c73c5e5c90c8ffd0f3e2b07d51e8b0818aeac2cc7ea8f4b13124a35119046"
+  }
+ ],
+ "comma": [
+  {
+   "chunk": "Chunk_2",
+   "files": 7074,
+   "bytes": 1368012272,
+   "routes": 21,
+   "segments": 194,
+   "manifest_sha256": "693758eb69f699db67010a9c86fa46871f7c3b7a8de89bdac41c8690964ead87",
+   "http_bytes": 553668480
+  },
+  {
+   "chunk": "Chunk_4",
+   "files": 7543,
+   "bytes": 1614796296,
+   "routes": 16,
+   "segments": 205,
+   "manifest_sha256": "955d1c5d2540b01309e3e25f66d78d31d4eea5124d4e99f905be82b62039952f",
+   "http_bytes": 571377250
+  },
+  {
+   "chunk": "Chunk_3",
+   "files": 7474,
+   "bytes": 1600478120,
+   "routes": 21,
+   "segments": 202,
+   "manifest_sha256": "e5ffaa1f81ba3b0617eb691ce7bc217764e5068a5a51fecb2ceda3aeacd74d74",
+   "http_bytes": 583078534
+  }
+ ],
+ "civic_decision": {
+  "v31_val_civic_routes": 21,
+  "v31_val_civic_routes_on_disk": 21,
+  "v31_val_civic_dongles": [
+   "99c94dc769b5d96e"
+  ],
+  "h31_civic_routes": 16,
+  "overlap_h31_v31_routes": [],
+  "any_civic_route_in_v31_val": true,
+  "dongle_is_civic": true,
+  "outcome": "no move: V31_val already holds Civic routes (Chunk_3, dongle 99c94dc769b5d96e)"
+ },
+ "v2aix": {
+  "recordings": 674,
+  "members_sha256_ok": true
+ },
+ "free_gb_now": 88.99,
+ "problems": [],
+ "calibration_zips": "not checked: stopped on size (list 4100 B, server 4068/4071/4073/4075 B)",
+ "date": "2026-11-03",
+ "ok": true
+}

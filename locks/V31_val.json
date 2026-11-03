@@ -181,8 +181,8 @@
     "member_list": "results/WP8/S0/remote/comma_Chunk_3.json",
     "member_list_sha256": "0fedf610747978a440c735a91fd955e3b0b7822eb848e02f7367090607588c62",
     "role": "clean calibration / decoder development for the Civic stratum only (labels never used)",
-    "sha256": null,
-    "sha256_note": "per-member sha256 filled in S1"
+    "sha256": "e5ffaa1f81ba3b0617eb691ce7bc217764e5068a5a51fecb2ceda3aeacd74d74",
+    "sha256_note": "sha256 of the per-file manifest results/WP8/S1/items/Chunk_3.json (same rule as the KITTI drives)"
    }
   },
   "can": {
