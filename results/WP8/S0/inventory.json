@@ -1,0 +1,4550 @@
+{
+ "v2aix": {
+  "zip_members_by_top": {
+   "json/Mobile": 424,
+   "json/Stationary": 1803,
+   "json/README.txt": 1
+  },
+  "scenarios_by_stratum": {
+   "Mobile/V2X-only/Aachen": {
+    "n": 5,
+    "bytes": 14423621,
+    "n_extracted": 5,
+    "n_in_split": 5,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Mobile/V2X-only/Highway": {
+    "n": 329,
+    "bytes": 422316720,
+    "n_extracted": 305,
+    "n_in_split": 297,
+    "n_unused": 24,
+    "bytes_unused": 17831834
+   },
+   "Mobile/V2X-only/Rural": {
+    "n": 2,
+    "bytes": 36630608,
+    "n_extracted": 2,
+    "n_in_split": 2,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Mobile/V2X-with-Sensor-Context/Aachen": {
+    "n": 24,
+    "bytes": 811693863,
+    "n_extracted": 24,
+    "n_in_split": 18,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Mobile/V2X-with-Sensor-Context/Cologne": {
+    "n": 16,
+    "bytes": 409469004,
+    "n_extracted": 16,
+    "n_in_split": 16,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Mobile/V2X-with-Sensor-Context/Dusseldorf": {
+    "n": 13,
+    "bytes": 248704780,
+    "n_extracted": 13,
+    "n_in_split": 13,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Mobile/V2X-with-Sensor-Context/Highway": {
+    "n": 22,
+    "bytes": 212572352,
+    "n_extracted": 22,
+    "n_in_split": 22,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Mobile/V2X-with-Sensor-Context/Rural": {
+    "n": 5,
+    "bytes": 143277842,
+    "n_extracted": 5,
+    "n_in_split": 5,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Stationary/V2X-only/Aachen-Heinrichsallee": {
+    "n": 150,
+    "bytes": 44737228,
+    "n_extracted": 150,
+    "n_in_split": 148,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Stationary/V2X-only/Aachen-Monheimsallee": {
+    "n": 84,
+    "bytes": 63364630,
+    "n_extracted": 84,
+    "n_in_split": 82,
+    "n_unused": 0,
+    "bytes_unused": 0
+   },
+   "Stationary/V2X-only/Aachen-Ponttor": {
+    "n": 720,
+    "bytes": 813121591,
+    "n_extracted": 305,
+    "n_in_split": 303,
+    "n_unused": 415,
+    "bytes_unused": 485672685
+   },
+   "Stationary/V2X-only/Aachen-Theaterstrasse": {
+    "n": 529,
+    "bytes": 665149760,
+    "n_extracted": 305,
+    "n_in_split": 303,
+    "n_unused": 224,
+    "bytes_unused": 264975053
+   },
+   "Stationary/V2X-with-Sensor-Context/A44-Jackerath": {
+    "n": 315,
+    "bytes": 1938368572,
+    "n_extracted": 304,
+    "n_in_split": 301,
+    "n_unused": 11,
+    "bytes_unused": 56180871
+   }
+  },
+  "unused": [
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-14T10-11-47Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-14T10-11-47Z.json",
+    "bytes": 514087,
+    "crc32": "a0db6e00"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-14T10-17-03Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-14T10-17-03Z.json",
+    "bytes": 1078306,
+    "crc32": "8c1aa2ac"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-14T10-18-27Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-14T10-18-27Z.json",
+    "bytes": 367317,
+    "crc32": "075ee829"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-14T12-55-11Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-14T12-55-11Z.json",
+    "bytes": 2120605,
+    "crc32": "f378198f"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-14T13-05-18Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-14T13-05-18Z.json",
+    "bytes": 297999,
+    "crc32": "bc919b90"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-14T13-16-29Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-14T13-16-29Z.json",
+    "bytes": 634461,
+    "crc32": "060c8a4f"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-14T14-17-59Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-14T14-17-59Z.json",
+    "bytes": 365492,
+    "crc32": "6e1cf994"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-21T11-51-12Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-21T11-51-12Z.json",
+    "bytes": 372969,
+    "crc32": "c7978591"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-21T12-19-00Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-21T12-19-00Z.json",
+    "bytes": 596348,
+    "crc32": "905a78fb"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-21T12-25-41Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-21T12-25-41Z.json",
+    "bytes": 759617,
+    "crc32": "47dc9b2b"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-21T12-34-39Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-21T12-34-39Z.json",
+    "bytes": 698311,
+    "crc32": "54951d4e"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-21T12-47-00Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-21T12-47-00Z.json",
+    "bytes": 240261,
+    "crc32": "d56fb85f"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-21T13-04-56Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-21T13-04-56Z.json",
+    "bytes": 392002,
+    "crc32": "b987e8ff"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-01-21T15-10-15Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-01-21T15-10-15Z.json",
+    "bytes": 478950,
+    "crc32": "a2b45049"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-21T15-52-03Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-21T15-52-03Z.json",
+    "bytes": 488734,
+    "crc32": "201b179e"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-21T16-00-52Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-21T16-00-52Z.json",
+    "bytes": 1751114,
+    "crc32": "c1b66fcf"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-21T16-44-09Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-21T16-44-09Z.json",
+    "bytes": 770757,
+    "crc32": "5bcebe2d"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-21T18-29-31Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-21T18-29-31Z.json",
+    "bytes": 540836,
+    "crc32": "ffaa493a"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-25T13-03-43Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-25T13-03-43Z.json",
+    "bytes": 305540,
+    "crc32": "cdfad09f"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-25T13-53-27Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-25T13-53-27Z.json",
+    "bytes": 600297,
+    "crc32": "04a943db"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-25T15-50-02Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-25T15-50-02Z.json",
+    "bytes": 326539,
+    "crc32": "fc14affd"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-25T15-59-29Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-25T15-59-29Z.json",
+    "bytes": 853799,
+    "crc32": "4eccc65e"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-25T16-24-37Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-25T16-24-37Z.json",
+    "bytes": 224975,
+    "crc32": "4ae9b4af"
+   },
+   {
+    "rid": "Mobile/V2X-only/Highway/2024-02-25T17-11-34Z",
+    "member": "json/Mobile/V2X-only/Highway/scenarios/2024-02-25T17-11-34Z.json",
+    "bytes": 3052518,
+    "crc32": "e02f221e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T08-32-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T08-32-38Z.json",
+    "bytes": 1285518,
+    "crc32": "7a5d79a5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T08-34-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T08-34-49Z.json",
+    "bytes": 22700,
+    "crc32": "f734f829"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T10-07-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T10-07-10Z.json",
+    "bytes": 1888202,
+    "crc32": "46edf72b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T10-52-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T10-52-52Z.json",
+    "bytes": 32195,
+    "crc32": "c0906588"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T11-09-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T11-09-49Z.json",
+    "bytes": 657266,
+    "crc32": "29755359"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T11-20-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T11-20-16Z.json",
+    "bytes": 680766,
+    "crc32": "a6a71ed5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T11-28-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T11-28-04Z.json",
+    "bytes": 41782,
+    "crc32": "fcc0d555"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T11-42-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T11-42-56Z.json",
+    "bytes": 1159728,
+    "crc32": "47cc0c90"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T11-55-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T11-55-06Z.json",
+    "bytes": 2461442,
+    "crc32": "deae3e57"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T12-18-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T12-18-57Z.json",
+    "bytes": 418462,
+    "crc32": "901c7a2c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T12-29-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T12-29-08Z.json",
+    "bytes": 1675529,
+    "crc32": "08e18c55"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T12-31-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T12-31-16Z.json",
+    "bytes": 379612,
+    "crc32": "90e600b3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T13-48-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T13-48-56Z.json",
+    "bytes": 757337,
+    "crc32": "66493660"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T14-07-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T14-07-07Z.json",
+    "bytes": 531335,
+    "crc32": "8f255cf7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T14-17-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T14-17-03Z.json",
+    "bytes": 4279225,
+    "crc32": "8a92ef9e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T14-22-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T14-22-42Z.json",
+    "bytes": 1368709,
+    "crc32": "6f471762"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T14-24-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T14-24-30Z.json",
+    "bytes": 1204114,
+    "crc32": "b29315c5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T15-29-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T15-29-43Z.json",
+    "bytes": 21263,
+    "crc32": "270312bb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T15-32-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T15-32-45Z.json",
+    "bytes": 2058228,
+    "crc32": "f739cfa9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T16-33-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T16-33-40Z.json",
+    "bytes": 259327,
+    "crc32": "1c649c68"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T17-08-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T17-08-48Z.json",
+    "bytes": 1049011,
+    "crc32": "f49302d0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T17-39-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T17-39-06Z.json",
+    "bytes": 1656847,
+    "crc32": "e413e575"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T17-42-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T17-42-48Z.json",
+    "bytes": 480584,
+    "crc32": "57eb42b4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T19-19-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T19-19-55Z.json",
+    "bytes": 1429164,
+    "crc32": "97fd40f4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T19-24-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T19-24-12Z.json",
+    "bytes": 346810,
+    "crc32": "143956b5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T19-32-15Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T19-32-15Z.json",
+    "bytes": 1447383,
+    "crc32": "ca8053f2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T21-43-14Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T21-43-14Z.json",
+    "bytes": 808634,
+    "crc32": "6ec22354"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-13T23-11-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-13T23-11-25Z.json",
+    "bytes": 1859783,
+    "crc32": "ad4d817c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T06-41-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T06-41-10Z.json",
+    "bytes": 1166079,
+    "crc32": "46ebd264"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T06-45-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T06-45-03Z.json",
+    "bytes": 1117256,
+    "crc32": "d3f4fbd1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T08-37-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T08-37-40Z.json",
+    "bytes": 1543147,
+    "crc32": "a6a35125"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T09-02-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T09-02-09Z.json",
+    "bytes": 963259,
+    "crc32": "6e73d1f6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T09-05-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T09-05-08Z.json",
+    "bytes": 917658,
+    "crc32": "b29ddd46"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T09-21-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T09-21-30Z.json",
+    "bytes": 176082,
+    "crc32": "5465f1ee"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T09-29-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T09-29-31Z.json",
+    "bytes": 764291,
+    "crc32": "fc23111e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T10-27-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T10-27-23Z.json",
+    "bytes": 291609,
+    "crc32": "86d86f93"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T11-42-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T11-42-32Z.json",
+    "bytes": 556075,
+    "crc32": "383c6dfd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T12-13-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T12-13-33Z.json",
+    "bytes": 1596804,
+    "crc32": "6a172df9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T14-30-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T14-30-54Z.json",
+    "bytes": 760423,
+    "crc32": "4c5f49f3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T14-54-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T14-54-02Z.json",
+    "bytes": 773450,
+    "crc32": "41fb7322"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T17-44-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T17-44-07Z.json",
+    "bytes": 2430338,
+    "crc32": "0eb3f88b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T17-53-34Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T17-53-34Z.json",
+    "bytes": 379688,
+    "crc32": "3ce3deaf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T17-57-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T17-57-02Z.json",
+    "bytes": 462239,
+    "crc32": "3d71ad3c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T19-26-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T19-26-39Z.json",
+    "bytes": 320350,
+    "crc32": "779c9211"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T19-34-59Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T19-34-59Z.json",
+    "bytes": 519438,
+    "crc32": "46c782d7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T19-59-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T19-59-48Z.json",
+    "bytes": 663286,
+    "crc32": "f11ccec6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-14T21-35-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-14T21-35-08Z.json",
+    "bytes": 734375,
+    "crc32": "4e0a6243"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T04-02-46Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T04-02-46Z.json",
+    "bytes": 342916,
+    "crc32": "4cbf0911"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T06-44-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T06-44-44Z.json",
+    "bytes": 845364,
+    "crc32": "1d9f10bf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T07-04-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T07-04-08Z.json",
+    "bytes": 315157,
+    "crc32": "63574454"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T07-34-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T07-34-16Z.json",
+    "bytes": 13241,
+    "crc32": "d43d29c0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T07-35-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T07-35-39Z.json",
+    "bytes": 743463,
+    "crc32": "c7c161ad"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T08-45-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T08-45-40Z.json",
+    "bytes": 1615870,
+    "crc32": "ff80200f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T09-49-59Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T09-49-59Z.json",
+    "bytes": 2402767,
+    "crc32": "1dd4bc82"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T10-06-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T10-06-30Z.json",
+    "bytes": 426346,
+    "crc32": "58dcf6d1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T11-26-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T11-26-39Z.json",
+    "bytes": 511443,
+    "crc32": "054ba238"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T11-29-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T11-29-54Z.json",
+    "bytes": 259889,
+    "crc32": "812b4c3d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T11-57-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T11-57-52Z.json",
+    "bytes": 306529,
+    "crc32": "0218890f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T12-03-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T12-03-53Z.json",
+    "bytes": 242265,
+    "crc32": "578b13b9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T12-46-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T12-46-53Z.json",
+    "bytes": 656303,
+    "crc32": "cbe1b669"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T12-53-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T12-53-58Z.json",
+    "bytes": 1300621,
+    "crc32": "318ceb58"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T13-13-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T13-13-49Z.json",
+    "bytes": 581501,
+    "crc32": "67135311"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T15-15-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T15-15-37Z.json",
+    "bytes": 557897,
+    "crc32": "b1729518"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T15-23-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T15-23-23Z.json",
+    "bytes": 1540555,
+    "crc32": "e1bde14c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T15-27-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T15-27-11Z.json",
+    "bytes": 1340376,
+    "crc32": "299804a8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T15-36-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T15-36-37Z.json",
+    "bytes": 14688,
+    "crc32": "6482dd37"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T15-45-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T15-45-26Z.json",
+    "bytes": 1147489,
+    "crc32": "0bdee054"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T16-26-15Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T16-26-15Z.json",
+    "bytes": 1135680,
+    "crc32": "6354757f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T16-44-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T16-44-22Z.json",
+    "bytes": 2384773,
+    "crc32": "401810de"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T17-03-41Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T17-03-41Z.json",
+    "bytes": 1778323,
+    "crc32": "31fe4eb4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T17-07-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T17-07-40Z.json",
+    "bytes": 267484,
+    "crc32": "760aab4a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T17-10-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T17-10-55Z.json",
+    "bytes": 463362,
+    "crc32": "cef13251"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T17-12-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T17-12-32Z.json",
+    "bytes": 1100193,
+    "crc32": "2804b786"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T19-48-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T19-48-11Z.json",
+    "bytes": 730530,
+    "crc32": "92b6d8d5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T19-57-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T19-57-58Z.json",
+    "bytes": 598673,
+    "crc32": "1efff9e4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T20-44-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T20-44-45Z.json",
+    "bytes": 892268,
+    "crc32": "d930f9c6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-15T21-47-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-15T21-47-16Z.json",
+    "bytes": 1405161,
+    "crc32": "d551a777"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T03-59-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T03-59-45Z.json",
+    "bytes": 501214,
+    "crc32": "4f6fa351"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T06-44-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T06-44-11Z.json",
+    "bytes": 1161053,
+    "crc32": "a4b8949b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T07-25-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T07-25-10Z.json",
+    "bytes": 1347219,
+    "crc32": "9062bac0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T07-54-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T07-54-52Z.json",
+    "bytes": 3907037,
+    "crc32": "032dfad0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T09-13-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T09-13-52Z.json",
+    "bytes": 1575093,
+    "crc32": "acd5b0fa"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T09-23-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T09-23-51Z.json",
+    "bytes": 1618090,
+    "crc32": "5a5be8c0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T11-47-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T11-47-20Z.json",
+    "bytes": 477974,
+    "crc32": "358f5531"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T12-08-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T12-08-31Z.json",
+    "bytes": 454078,
+    "crc32": "b8e36265"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T12-32-27Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T12-32-27Z.json",
+    "bytes": 787949,
+    "crc32": "ce2fece6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T12-37-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T12-37-53Z.json",
+    "bytes": 19794,
+    "crc32": "1ed4c893"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T12-55-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T12-55-06Z.json",
+    "bytes": 990425,
+    "crc32": "63985bb2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T14-04-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T14-04-25Z.json",
+    "bytes": 894110,
+    "crc32": "2ac61afd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T14-05-28Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T14-05-28Z.json",
+    "bytes": 2487837,
+    "crc32": "2877a23c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T14-42-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T14-42-52Z.json",
+    "bytes": 852152,
+    "crc32": "85b3db22"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T14-57-59Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T14-57-59Z.json",
+    "bytes": 1351317,
+    "crc32": "5ca22330"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T15-14-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T15-14-22Z.json",
+    "bytes": 852351,
+    "crc32": "c5b91390"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T15-23-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T15-23-54Z.json",
+    "bytes": 1036973,
+    "crc32": "e4b1f6e3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T16-07-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T16-07-31Z.json",
+    "bytes": 1713542,
+    "crc32": "b1f3d66a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T17-18-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T17-18-17Z.json",
+    "bytes": 1036054,
+    "crc32": "b024ee05"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T17-54-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T17-54-53Z.json",
+    "bytes": 400089,
+    "crc32": "f37203ba"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T18-27-28Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T18-27-28Z.json",
+    "bytes": 913141,
+    "crc32": "7ba072e3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-16T20-05-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-16T20-05-16Z.json",
+    "bytes": 913970,
+    "crc32": "d8e1a38e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-17T21-03-46Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-17T21-03-46Z.json",
+    "bytes": 1173263,
+    "crc32": "18f83cd6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-17T22-47-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-17T22-47-49Z.json",
+    "bytes": 640866,
+    "crc32": "a2311fc1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T06-53-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T06-53-02Z.json",
+    "bytes": 1017724,
+    "crc32": "3198b932"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T07-30-01Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T07-30-01Z.json",
+    "bytes": 758634,
+    "crc32": "1ed56376"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T07-43-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T07-43-30Z.json",
+    "bytes": 400341,
+    "crc32": "6e493a90"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T07-50-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T07-50-57Z.json",
+    "bytes": 435373,
+    "crc32": "d70c5b94"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T07-55-34Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T07-55-34Z.json",
+    "bytes": 1927577,
+    "crc32": "e64be233"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T08-49-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T08-49-39Z.json",
+    "bytes": 322600,
+    "crc32": "95470616"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T12-08-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T12-08-25Z.json",
+    "bytes": 701658,
+    "crc32": "3564ba83"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T12-19-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T12-19-17Z.json",
+    "bytes": 1037462,
+    "crc32": "aab119c7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T12-44-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T12-44-23Z.json",
+    "bytes": 2295612,
+    "crc32": "e48e2515"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T12-48-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T12-48-08Z.json",
+    "bytes": 1227610,
+    "crc32": "a9d072ef"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T13-00-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T13-00-00Z.json",
+    "bytes": 1526110,
+    "crc32": "64d44a5b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T13-50-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T13-50-42Z.json",
+    "bytes": 172254,
+    "crc32": "6f18746a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T13-56-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T13-56-57Z.json",
+    "bytes": 346665,
+    "crc32": "aca5638f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T14-09-05Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T14-09-05Z.json",
+    "bytes": 1531485,
+    "crc32": "5e165e2c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T14-48-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T14-48-51Z.json",
+    "bytes": 767429,
+    "crc32": "ce004d45"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T15-51-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T15-51-06Z.json",
+    "bytes": 1498692,
+    "crc32": "c29ba7ab"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T15-58-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T15-58-54Z.json",
+    "bytes": 2291870,
+    "crc32": "86fcf662"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T16-17-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T16-17-38Z.json",
+    "bytes": 419422,
+    "crc32": "d589eccf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T16-58-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T16-58-22Z.json",
+    "bytes": 302138,
+    "crc32": "f3781177"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T17-15-27Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T17-15-27Z.json",
+    "bytes": 1274972,
+    "crc32": "8100720a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T18-06-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T18-06-55Z.json",
+    "bytes": 593864,
+    "crc32": "189dc447"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T18-23-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T18-23-29Z.json",
+    "bytes": 252445,
+    "crc32": "af3d8db3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T18-58-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T18-58-58Z.json",
+    "bytes": 491947,
+    "crc32": "3d0a360b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T20-29-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T20-29-55Z.json",
+    "bytes": 1142377,
+    "crc32": "43e56d4b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-18T20-52-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-18T20-52-42Z.json",
+    "bytes": 173788,
+    "crc32": "e06a931f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T05-18-46Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T05-18-46Z.json",
+    "bytes": 911413,
+    "crc32": "eabae5dc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T06-54-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T06-54-19Z.json",
+    "bytes": 1318059,
+    "crc32": "7f7be7df"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T07-20-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T07-20-32Z.json",
+    "bytes": 931382,
+    "crc32": "c8567277"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T07-26-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T07-26-33Z.json",
+    "bytes": 467038,
+    "crc32": "97c813e8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T08-08-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T08-08-06Z.json",
+    "bytes": 781784,
+    "crc32": "d28a3dd1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T08-49-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T08-49-53Z.json",
+    "bytes": 926207,
+    "crc32": "76a6b52f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T08-57-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T08-57-48Z.json",
+    "bytes": 793063,
+    "crc32": "8656bb19"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T09-16-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T09-16-30Z.json",
+    "bytes": 301866,
+    "crc32": "71e1bc51"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T09-22-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T09-22-31Z.json",
+    "bytes": 274216,
+    "crc32": "c7a0ffe5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T10-35-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T10-35-38Z.json",
+    "bytes": 1901653,
+    "crc32": "30ad8324"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T10-47-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T10-47-26Z.json",
+    "bytes": 654945,
+    "crc32": "eb281a2c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T10-56-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T10-56-51Z.json",
+    "bytes": 276114,
+    "crc32": "eae9a580"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T11-28-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T11-28-24Z.json",
+    "bytes": 306375,
+    "crc32": "5e2993f3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T12-35-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T12-35-07Z.json",
+    "bytes": 3758160,
+    "crc32": "eb614812"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T13-08-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T13-08-40Z.json",
+    "bytes": 558374,
+    "crc32": "edf76c90"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T13-31-15Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T13-31-15Z.json",
+    "bytes": 923631,
+    "crc32": "2dc47c96"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T14-02-59Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T14-02-59Z.json",
+    "bytes": 1499446,
+    "crc32": "aaa66007"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T14-50-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T14-50-43Z.json",
+    "bytes": 185038,
+    "crc32": "f2c750e3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T15-03-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T15-03-45Z.json",
+    "bytes": 274437,
+    "crc32": "c8752a08"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T15-08-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T15-08-56Z.json",
+    "bytes": 248124,
+    "crc32": "fe464ef3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T15-29-36Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T15-29-36Z.json",
+    "bytes": 32223,
+    "crc32": "4f968b57"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T16-05-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T16-05-40Z.json",
+    "bytes": 21262,
+    "crc32": "d543b150"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T16-17-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T16-17-00Z.json",
+    "bytes": 20544,
+    "crc32": "8edef963"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T17-00-01Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T17-00-01Z.json",
+    "bytes": 346614,
+    "crc32": "13df821c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T17-49-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T17-49-29Z.json",
+    "bytes": 1907337,
+    "crc32": "e618d1a1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T17-56-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T17-56-33Z.json",
+    "bytes": 436963,
+    "crc32": "e683f34f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T18-20-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T18-20-31Z.json",
+    "bytes": 2429988,
+    "crc32": "5a7c26c7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T18-33-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T18-33-11Z.json",
+    "bytes": 577997,
+    "crc32": "978d6e44"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T18-42-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T18-42-58Z.json",
+    "bytes": 342231,
+    "crc32": "0c736758"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T18-47-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T18-47-57Z.json",
+    "bytes": 1521164,
+    "crc32": "1f128f9b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T19-16-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T19-16-24Z.json",
+    "bytes": 1086699,
+    "crc32": "d5a3a220"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T20-17-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T20-17-04Z.json",
+    "bytes": 751808,
+    "crc32": "621c5ef6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T20-30-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T20-30-24Z.json",
+    "bytes": 503891,
+    "crc32": "44e56710"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T21-41-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T21-41-44Z.json",
+    "bytes": 705300,
+    "crc32": "c8c35051"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T22-06-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T22-06-55Z.json",
+    "bytes": 445426,
+    "crc32": "15b24419"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-19T22-48-01Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-19T22-48-01Z.json",
+    "bytes": 170551,
+    "crc32": "127a9539"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T07-16-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T07-16-52Z.json",
+    "bytes": 957387,
+    "crc32": "7ed55fb5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T08-14-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T08-14-55Z.json",
+    "bytes": 973114,
+    "crc32": "bc2d3be7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T10-07-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T10-07-13Z.json",
+    "bytes": 2435088,
+    "crc32": "21c5035f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T10-44-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T10-44-20Z.json",
+    "bytes": 2033444,
+    "crc32": "1947c9fc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T11-24-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T11-24-11Z.json",
+    "bytes": 40340,
+    "crc32": "0c548796"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T11-41-14Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T11-41-14Z.json",
+    "bytes": 792895,
+    "crc32": "79d10fbe"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T11-42-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T11-42-31Z.json",
+    "bytes": 32199,
+    "crc32": "85a79625"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T12-09-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T12-09-44Z.json",
+    "bytes": 3933584,
+    "crc32": "23cc91be"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T12-36-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T12-36-20Z.json",
+    "bytes": 200754,
+    "crc32": "04f53ba4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T12-41-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T12-41-58Z.json",
+    "bytes": 1678647,
+    "crc32": "a42a0866"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T12-48-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T12-48-58Z.json",
+    "bytes": 3209324,
+    "crc32": "0fa9cc14"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T13-14-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T13-14-48Z.json",
+    "bytes": 1927839,
+    "crc32": "1968eaa5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T13-20-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T13-20-03Z.json",
+    "bytes": 1070389,
+    "crc32": "e2347ca5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T13-28-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T13-28-56Z.json",
+    "bytes": 166221,
+    "crc32": "102569c9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T13-29-41Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T13-29-41Z.json",
+    "bytes": 431510,
+    "crc32": "9e28952c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T13-32-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T13-32-31Z.json",
+    "bytes": 326903,
+    "crc32": "d9bff2c8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T13-36-05Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T13-36-05Z.json",
+    "bytes": 700849,
+    "crc32": "30b12238"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T14-23-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T14-23-25Z.json",
+    "bytes": 834150,
+    "crc32": "5fc1181e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T14-45-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T14-45-54Z.json",
+    "bytes": 476902,
+    "crc32": "4c16320c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T15-22-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T15-22-03Z.json",
+    "bytes": 660346,
+    "crc32": "5321a0a1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T16-07-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T16-07-44Z.json",
+    "bytes": 2606857,
+    "crc32": "d4e82ac3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T16-11-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T16-11-20Z.json",
+    "bytes": 2449389,
+    "crc32": "c9749da6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T16-58-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T16-58-43Z.json",
+    "bytes": 2096261,
+    "crc32": "f74bf65c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T17-03-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T17-03-42Z.json",
+    "bytes": 1989342,
+    "crc32": "6476b3c1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T17-26-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T17-26-23Z.json",
+    "bytes": 750405,
+    "crc32": "332bb224"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T18-08-36Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T18-08-36Z.json",
+    "bytes": 3519530,
+    "crc32": "71271e97"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T18-31-14Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T18-31-14Z.json",
+    "bytes": 360721,
+    "crc32": "a5d8c3cb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T18-35-36Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T18-35-36Z.json",
+    "bytes": 236741,
+    "crc32": "57584663"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T19-09-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T19-09-33Z.json",
+    "bytes": 214800,
+    "crc32": "a072b7f7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T20-04-50Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T20-04-50Z.json",
+    "bytes": 2525494,
+    "crc32": "645dd911"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T20-27-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T20-27-19Z.json",
+    "bytes": 659096,
+    "crc32": "d534a4e5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T21-21-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T21-21-19Z.json",
+    "bytes": 2502529,
+    "crc32": "f8c9e4a9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T22-10-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T22-10-02Z.json",
+    "bytes": 272525,
+    "crc32": "b645d97d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-20T22-50-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-20T22-50-45Z.json",
+    "bytes": 343923,
+    "crc32": "425c70d1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T00-43-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T00-43-06Z.json",
+    "bytes": 1400912,
+    "crc32": "9554a3a8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T01-20-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T01-20-49Z.json",
+    "bytes": 592937,
+    "crc32": "9d35e965"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T07-22-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T07-22-16Z.json",
+    "bytes": 2313725,
+    "crc32": "e9819fc8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T07-33-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T07-33-45Z.json",
+    "bytes": 1281822,
+    "crc32": "758cc4ad"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T10-26-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T10-26-31Z.json",
+    "bytes": 846529,
+    "crc32": "5ac09c6a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T10-56-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T10-56-56Z.json",
+    "bytes": 930488,
+    "crc32": "ee5097bb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T13-26-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T13-26-42Z.json",
+    "bytes": 1896141,
+    "crc32": "afd7fd79"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T13-33-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T13-33-09Z.json",
+    "bytes": 122624,
+    "crc32": "f8a21adc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T14-54-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T14-54-57Z.json",
+    "bytes": 790361,
+    "crc32": "15191191"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T15-20-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T15-20-37Z.json",
+    "bytes": 403344,
+    "crc32": "56ebfdfa"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T15-22-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T15-22-11Z.json",
+    "bytes": 32233,
+    "crc32": "a6ccd401"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T15-35-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T15-35-37Z.json",
+    "bytes": 1110622,
+    "crc32": "67518e0b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T15-36-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T15-36-55Z.json",
+    "bytes": 807635,
+    "crc32": "7551dc13"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-21T16-39-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-21T16-39-51Z.json",
+    "bytes": 2676045,
+    "crc32": "00f5f572"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T07-19-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T07-19-12Z.json",
+    "bytes": 1478284,
+    "crc32": "2d640831"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T07-46-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T07-46-23Z.json",
+    "bytes": 12429,
+    "crc32": "2882ce7e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T11-37-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T11-37-29Z.json",
+    "bytes": 593006,
+    "crc32": "f387615a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T12-16-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T12-16-00Z.json",
+    "bytes": 2308135,
+    "crc32": "2ab20bf8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T13-20-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T13-20-10Z.json",
+    "bytes": 783246,
+    "crc32": "65281baf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T13-52-01Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T13-52-01Z.json",
+    "bytes": 708393,
+    "crc32": "7f7882ed"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T14-00-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T14-00-23Z.json",
+    "bytes": 1391475,
+    "crc32": "cdde4f2e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T14-02-21Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T14-02-21Z.json",
+    "bytes": 840495,
+    "crc32": "26ed31fa"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T14-51-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T14-51-12Z.json",
+    "bytes": 945201,
+    "crc32": "130fe343"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T15-08-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T15-08-11Z.json",
+    "bytes": 828225,
+    "crc32": "fa9751b1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T15-40-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T15-40-48Z.json",
+    "bytes": 239439,
+    "crc32": "8e2b2910"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T16-15-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T16-15-12Z.json",
+    "bytes": 701029,
+    "crc32": "73c3d053"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T16-26-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T16-26-16Z.json",
+    "bytes": 403215,
+    "crc32": "544bc2c3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T16-38-50Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T16-38-50Z.json",
+    "bytes": 1196433,
+    "crc32": "e78623c5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T17-05-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T17-05-52Z.json",
+    "bytes": 5674489,
+    "crc32": "d655ec7a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T17-42-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T17-42-20Z.json",
+    "bytes": 1196938,
+    "crc32": "78e56b43"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T17-46-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T17-46-02Z.json",
+    "bytes": 457493,
+    "crc32": "4e4d58dd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T17-48-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T17-48-08Z.json",
+    "bytes": 905292,
+    "crc32": "9112306f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T19-10-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T19-10-29Z.json",
+    "bytes": 1158807,
+    "crc32": "43e2c397"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T19-14-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T19-14-31Z.json",
+    "bytes": 2335137,
+    "crc32": "d55d6112"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T19-23-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T19-23-25Z.json",
+    "bytes": 688140,
+    "crc32": "230ca49a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T19-43-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T19-43-16Z.json",
+    "bytes": 1121798,
+    "crc32": "1a5d2caf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T19-45-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T19-45-22Z.json",
+    "bytes": 1426326,
+    "crc32": "a9f0954f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T20-45-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T20-45-38Z.json",
+    "bytes": 781818,
+    "crc32": "40fa58e0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T21-42-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T21-42-49Z.json",
+    "bytes": 797448,
+    "crc32": "ef84f53c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-22T22-56-59Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-22T22-56-59Z.json",
+    "bytes": 697045,
+    "crc32": "1b30d7bc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T06-47-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T06-47-51Z.json",
+    "bytes": 1196846,
+    "crc32": "67fd793e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T07-17-46Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T07-17-46Z.json",
+    "bytes": 1445162,
+    "crc32": "e776681d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T07-35-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T07-35-40Z.json",
+    "bytes": 2325140,
+    "crc32": "9df4ee36"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T07-57-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T07-57-52Z.json",
+    "bytes": 1441704,
+    "crc32": "77d8274e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T08-02-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T08-02-04Z.json",
+    "bytes": 2340592,
+    "crc32": "c6811ee4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T10-28-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T10-28-12Z.json",
+    "bytes": 2445049,
+    "crc32": "1b29d96a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T10-49-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T10-49-55Z.json",
+    "bytes": 2345007,
+    "crc32": "32e85cf6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T11-09-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T11-09-57Z.json",
+    "bytes": 786121,
+    "crc32": "fb708273"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T11-59-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T11-59-23Z.json",
+    "bytes": 791974,
+    "crc32": "af7a2270"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T13-32-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T13-32-52Z.json",
+    "bytes": 921607,
+    "crc32": "7cde16e7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T15-25-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T15-25-48Z.json",
+    "bytes": 661189,
+    "crc32": "c56594ab"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T15-37-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T15-37-39Z.json",
+    "bytes": 1068661,
+    "crc32": "b6d1d478"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T15-38-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T15-38-57Z.json",
+    "bytes": 21972,
+    "crc32": "5c73dc85"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T15-41-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T15-41-32Z.json",
+    "bytes": 5209171,
+    "crc32": "dd6e6707"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T15-50-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T15-50-40Z.json",
+    "bytes": 451431,
+    "crc32": "0452c537"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T16-05-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T16-05-18Z.json",
+    "bytes": 675327,
+    "crc32": "7fdc5876"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T16-25-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T16-25-24Z.json",
+    "bytes": 769639,
+    "crc32": "2930d65f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T16-58-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T16-58-56Z.json",
+    "bytes": 1834314,
+    "crc32": "0a431764"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T17-11-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T17-11-24Z.json",
+    "bytes": 381403,
+    "crc32": "5dfc0e7b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T17-43-21Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T17-43-21Z.json",
+    "bytes": 393535,
+    "crc32": "7c40612d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T18-12-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T18-12-17Z.json",
+    "bytes": 1379987,
+    "crc32": "a4ab5399"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T18-22-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T18-22-06Z.json",
+    "bytes": 721320,
+    "crc32": "c848bff7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T19-11-28Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T19-11-28Z.json",
+    "bytes": 2608813,
+    "crc32": "65cbf251"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-23T20-20-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-23T20-20-26Z.json",
+    "bytes": 379755,
+    "crc32": "e7333bab"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T06-20-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T06-20-07Z.json",
+    "bytes": 2365375,
+    "crc32": "bb446cd9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T06-25-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T06-25-54Z.json",
+    "bytes": 219388,
+    "crc32": "815e77fc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T06-50-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T06-50-42Z.json",
+    "bytes": 845664,
+    "crc32": "934cd373"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T06-52-05Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T06-52-05Z.json",
+    "bytes": 784976,
+    "crc32": "772a3bc1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T06-53-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T06-53-00Z.json",
+    "bytes": 33660,
+    "crc32": "7062b480"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T07-07-36Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T07-07-36Z.json",
+    "bytes": 51243,
+    "crc32": "d72b234c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T07-16-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T07-16-43Z.json",
+    "bytes": 392095,
+    "crc32": "d7a7068c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T07-24-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T07-24-19Z.json",
+    "bytes": 1027187,
+    "crc32": "eb988765"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T07-26-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T07-26-26Z.json",
+    "bytes": 2360943,
+    "crc32": "9453be07"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T07-45-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T07-45-58Z.json",
+    "bytes": 745585,
+    "crc32": "5cbe746e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T08-02-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T08-02-32Z.json",
+    "bytes": 822460,
+    "crc32": "8a6a2ee2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T09-11-27Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T09-11-27Z.json",
+    "bytes": 900771,
+    "crc32": "5ab6727b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T10-27-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T10-27-40Z.json",
+    "bytes": 1278127,
+    "crc32": "d97c20e3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T10-35-05Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T10-35-05Z.json",
+    "bytes": 13226,
+    "crc32": "36c665b0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T10-36-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T10-36-02Z.json",
+    "bytes": 2110751,
+    "crc32": "c8c47496"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T11-06-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T11-06-18Z.json",
+    "bytes": 2447952,
+    "crc32": "f2d15f2b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T11-19-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T11-19-44Z.json",
+    "bytes": 784292,
+    "crc32": "b29a41c1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T11-47-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T11-47-37Z.json",
+    "bytes": 2529860,
+    "crc32": "232b3846"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T11-59-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T11-59-12Z.json",
+    "bytes": 643503,
+    "crc32": "5bd576d5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T12-20-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T12-20-02Z.json",
+    "bytes": 1690063,
+    "crc32": "22cb8b63"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T12-23-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T12-23-33Z.json",
+    "bytes": 519596,
+    "crc32": "79ec508a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T12-36-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T12-36-33Z.json",
+    "bytes": 1103903,
+    "crc32": "cf1e04a7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T14-08-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T14-08-38Z.json",
+    "bytes": 3335378,
+    "crc32": "4660b935"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T14-29-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T14-29-37Z.json",
+    "bytes": 2496856,
+    "crc32": "7598b592"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T14-34-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T14-34-58Z.json",
+    "bytes": 2360364,
+    "crc32": "7941fe89"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T14-55-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T14-55-23Z.json",
+    "bytes": 375726,
+    "crc32": "cab2c51d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T14-57-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T14-57-20Z.json",
+    "bytes": 2627506,
+    "crc32": "0ff0bc4b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T16-12-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T16-12-55Z.json",
+    "bytes": 1481499,
+    "crc32": "94dcf90f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T16-27-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T16-27-55Z.json",
+    "bytes": 979377,
+    "crc32": "b1f697a8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T16-29-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T16-29-56Z.json",
+    "bytes": 343409,
+    "crc32": "b0ea9a08"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T16-47-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T16-47-32Z.json",
+    "bytes": 2571684,
+    "crc32": "188f07f8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T17-02-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T17-02-13Z.json",
+    "bytes": 82101,
+    "crc32": "1497487f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T17-02-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T17-02-47Z.json",
+    "bytes": 1277728,
+    "crc32": "ef4f8959"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T17-06-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T17-06-33Z.json",
+    "bytes": 961393,
+    "crc32": "17ebbe85"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T17-20-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T17-20-30Z.json",
+    "bytes": 40334,
+    "crc32": "55dcda11"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T17-57-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T17-57-13Z.json",
+    "bytes": 331417,
+    "crc32": "eed07ffb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T18-46-05Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T18-46-05Z.json",
+    "bytes": 252419,
+    "crc32": "90e477ce"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T19-40-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T19-40-33Z.json",
+    "bytes": 1364557,
+    "crc32": "6ad8e6fe"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T19-50-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T19-50-09Z.json",
+    "bytes": 1468802,
+    "crc32": "c185d5b6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-24T20-55-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-24T20-55-57Z.json",
+    "bytes": 263604,
+    "crc32": "8bde5783"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T07-33-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T07-33-11Z.json",
+    "bytes": 431432,
+    "crc32": "255ccea5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T07-49-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T07-49-04Z.json",
+    "bytes": 1042632,
+    "crc32": "4b09c032"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T08-15-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T08-15-03Z.json",
+    "bytes": 281537,
+    "crc32": "5fa67327"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T08-25-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T08-25-13Z.json",
+    "bytes": 2356032,
+    "crc32": "d57c4306"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T09-02-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T09-02-17Z.json",
+    "bytes": 174521,
+    "crc32": "7f5e8002"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T09-23-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T09-23-39Z.json",
+    "bytes": 2378474,
+    "crc32": "c9417090"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T10-12-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T10-12-49Z.json",
+    "bytes": 2224445,
+    "crc32": "6dfa3fac"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T11-36-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T11-36-12Z.json",
+    "bytes": 1529429,
+    "crc32": "dadcae51"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T11-42-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T11-42-25Z.json",
+    "bytes": 1679948,
+    "crc32": "443b8f45"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T11-51-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T11-51-52Z.json",
+    "bytes": 574580,
+    "crc32": "eefa69a6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T12-17-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T12-17-08Z.json",
+    "bytes": 1094469,
+    "crc32": "8343fc8a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T12-59-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T12-59-23Z.json",
+    "bytes": 2308615,
+    "crc32": "e414bafc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T13-08-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T13-08-43Z.json",
+    "bytes": 482340,
+    "crc32": "ef348469"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T14-07-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T14-07-51Z.json",
+    "bytes": 606078,
+    "crc32": "3ea31ee0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T14-45-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T14-45-53Z.json",
+    "bytes": 676274,
+    "crc32": "37901021"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T14-57-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T14-57-57Z.json",
+    "bytes": 756545,
+    "crc32": "5a195774"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T15-09-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T15-09-23Z.json",
+    "bytes": 563048,
+    "crc32": "555b2d0a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T15-11-34Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T15-11-34Z.json",
+    "bytes": 786718,
+    "crc32": "188e3bdc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T16-22-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T16-22-10Z.json",
+    "bytes": 2421584,
+    "crc32": "7ddd672a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T16-29-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T16-29-23Z.json",
+    "bytes": 1345720,
+    "crc32": "88b0a997"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T16-37-46Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T16-37-46Z.json",
+    "bytes": 3692101,
+    "crc32": "a0af29ae"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T16-41-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T16-41-29Z.json",
+    "bytes": 730573,
+    "crc32": "2dba015c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T16-50-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T16-50-06Z.json",
+    "bytes": 889845,
+    "crc32": "52b5d553"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T16-52-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T16-52-04Z.json",
+    "bytes": 365313,
+    "crc32": "69ce9af4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T17-05-27Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T17-05-27Z.json",
+    "bytes": 739448,
+    "crc32": "98ec3b91"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T17-36-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T17-36-30Z.json",
+    "bytes": 2728578,
+    "crc32": "299ae69f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-25T18-30-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-25T18-30-08Z.json",
+    "bytes": 519845,
+    "crc32": "ad1fc54b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T00-40-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T00-40-20Z.json",
+    "bytes": 634990,
+    "crc32": "6b3fed0d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T04-20-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T04-20-02Z.json",
+    "bytes": 587756,
+    "crc32": "4f862200"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T05-35-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T05-35-19Z.json",
+    "bytes": 1280696,
+    "crc32": "1d0f5fef"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T05-38-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T05-38-03Z.json",
+    "bytes": 1809956,
+    "crc32": "393f9c62"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T06-04-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T06-04-58Z.json",
+    "bytes": 901417,
+    "crc32": "601177da"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T06-56-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T06-56-38Z.json",
+    "bytes": 3334051,
+    "crc32": "e19bfb2d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T10-29-34Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T10-29-34Z.json",
+    "bytes": 2659204,
+    "crc32": "925b9ae1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T11-21-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T11-21-33Z.json",
+    "bytes": 899162,
+    "crc32": "60aa4c40"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T11-23-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T11-23-22Z.json",
+    "bytes": 2266990,
+    "crc32": "9fc810cb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T11-36-46Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T11-36-46Z.json",
+    "bytes": 948559,
+    "crc32": "c948187c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T11-50-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T11-50-30Z.json",
+    "bytes": 427293,
+    "crc32": "8abbb2b8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T12-20-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T12-20-00Z.json",
+    "bytes": 610092,
+    "crc32": "285fbf90"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T13-27-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T13-27-03Z.json",
+    "bytes": 1591677,
+    "crc32": "782ff4ec"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T13-49-36Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T13-49-36Z.json",
+    "bytes": 250110,
+    "crc32": "4634c7c1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T15-27-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T15-27-54Z.json",
+    "bytes": 2489266,
+    "crc32": "ecb42937"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T15-33-35Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T15-33-35Z.json",
+    "bytes": 899815,
+    "crc32": "791fd862"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T15-46-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T15-46-33Z.json",
+    "bytes": 419098,
+    "crc32": "4b13a957"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T16-09-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T16-09-19Z.json",
+    "bytes": 451327,
+    "crc32": "5a563a0a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T16-11-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T16-11-09Z.json",
+    "bytes": 57943,
+    "crc32": "8bd4c97f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T16-34-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T16-34-47Z.json",
+    "bytes": 1521121,
+    "crc32": "03c77cc0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T17-38-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T17-38-24Z.json",
+    "bytes": 577282,
+    "crc32": "f0d78829"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T17-47-35Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T17-47-35Z.json",
+    "bytes": 34364923,
+    "crc32": "752e01c0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T19-13-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T19-13-08Z.json",
+    "bytes": 394041,
+    "crc32": "8fbe82ca"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T19-34-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T19-34-17Z.json",
+    "bytes": 471355,
+    "crc32": "8a27dbfe"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T20-54-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T20-54-08Z.json",
+    "bytes": 244750,
+    "crc32": "929c28cb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T21-01-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T21-01-02Z.json",
+    "bytes": 2216487,
+    "crc32": "f4a22f8f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T22-34-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T22-34-44Z.json",
+    "bytes": 12409,
+    "crc32": "ccd20d8e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-26T22-57-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-26T22-57-54Z.json",
+    "bytes": 2362173,
+    "crc32": "9646683e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T01-38-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T01-38-03Z.json",
+    "bytes": 828080,
+    "crc32": "a97c47e1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T01-43-21Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T01-43-21Z.json",
+    "bytes": 1272850,
+    "crc32": "2db12530"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T06-41-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T06-41-23Z.json",
+    "bytes": 1006733,
+    "crc32": "7c470998"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T06-45-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T06-45-06Z.json",
+    "bytes": 980872,
+    "crc32": "4954440b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T07-36-50Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T07-36-50Z.json",
+    "bytes": 739553,
+    "crc32": "21abeece"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T10-45-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T10-45-56Z.json",
+    "bytes": 1760992,
+    "crc32": "dce5e1f8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T11-46-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T11-46-06Z.json",
+    "bytes": 2244069,
+    "crc32": "10e8227f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T12-11-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T12-11-26Z.json",
+    "bytes": 1061890,
+    "crc32": "93ef9b3d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T12-21-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T12-21-43Z.json",
+    "bytes": 2390698,
+    "crc32": "5af4591f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T12-32-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T12-32-47Z.json",
+    "bytes": 2100453,
+    "crc32": "3a7bf720"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T12-47-36Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T12-47-36Z.json",
+    "bytes": 2345700,
+    "crc32": "61622b31"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T12-57-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T12-57-13Z.json",
+    "bytes": 339814,
+    "crc32": "00a2e51c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T14-41-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T14-41-42Z.json",
+    "bytes": 573128,
+    "crc32": "fe86c178"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T15-06-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T15-06-58Z.json",
+    "bytes": 1273442,
+    "crc32": "df537f30"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T15-15-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T15-15-58Z.json",
+    "bytes": 1872821,
+    "crc32": "f34e762f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T15-28-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T15-28-58Z.json",
+    "bytes": 3326420,
+    "crc32": "99c0ddf6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T15-49-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T15-49-30Z.json",
+    "bytes": 44680,
+    "crc32": "08c87859"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T15-58-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T15-58-48Z.json",
+    "bytes": 192751,
+    "crc32": "6185360b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T16-41-34Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T16-41-34Z.json",
+    "bytes": 696763,
+    "crc32": "26618043"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T17-49-01Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T17-49-01Z.json",
+    "bytes": 3421582,
+    "crc32": "c9489b04"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T18-51-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T18-51-43Z.json",
+    "bytes": 710803,
+    "crc32": "c754733d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T20-28-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T20-28-30Z.json",
+    "bytes": 553382,
+    "crc32": "655f5553"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T20-47-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T20-47-31Z.json",
+    "bytes": 2365877,
+    "crc32": "2a3e5fef"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T21-52-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T21-52-16Z.json",
+    "bytes": 1715915,
+    "crc32": "1f313669"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T22-10-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T22-10-42Z.json",
+    "bytes": 1237509,
+    "crc32": "9062056d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T23-34-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T23-34-11Z.json",
+    "bytes": 516668,
+    "crc32": "2163105c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-27T23-43-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-27T23-43-20Z.json",
+    "bytes": 1862952,
+    "crc32": "d7be1cc8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T01-00-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T01-00-29Z.json",
+    "bytes": 811568,
+    "crc32": "deb10aba"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T01-02-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T01-02-45Z.json",
+    "bytes": 568830,
+    "crc32": "fe15b140"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T01-11-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T01-11-23Z.json",
+    "bytes": 842873,
+    "crc32": "f158e5a2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T02-14-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T02-14-58Z.json",
+    "bytes": 247221,
+    "crc32": "66ea6033"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T02-41-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T02-41-32Z.json",
+    "bytes": 359170,
+    "crc32": "ea2b10d5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T03-06-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T03-06-00Z.json",
+    "bytes": 340777,
+    "crc32": "ea2d3d0e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T07-29-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T07-29-32Z.json",
+    "bytes": 2395248,
+    "crc32": "dda6be50"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T08-40-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T08-40-09Z.json",
+    "bytes": 659848,
+    "crc32": "fcb19e96"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T08-41-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T08-41-58Z.json",
+    "bytes": 2149404,
+    "crc32": "0048d82e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T08-47-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T08-47-29Z.json",
+    "bytes": 704745,
+    "crc32": "181cfea6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T09-29-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T09-29-26Z.json",
+    "bytes": 1433048,
+    "crc32": "7802fb16"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T11-00-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T11-00-53Z.json",
+    "bytes": 568639,
+    "crc32": "6b2d93af"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T11-02-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T11-02-00Z.json",
+    "bytes": 1463543,
+    "crc32": "016bc856"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T12-22-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T12-22-42Z.json",
+    "bytes": 730805,
+    "crc32": "c8a188e4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T13-25-41Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T13-25-41Z.json",
+    "bytes": 1711317,
+    "crc32": "44c7b0fb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T13-52-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T13-52-38Z.json",
+    "bytes": 797966,
+    "crc32": "bfe3dac4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T13-54-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T13-54-11Z.json",
+    "bytes": 221216,
+    "crc32": "4623c45a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T15-06-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T15-06-57Z.json",
+    "bytes": 891200,
+    "crc32": "c1fd5dc8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T15-16-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T15-16-03Z.json",
+    "bytes": 730523,
+    "crc32": "9b5755d0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T15-36-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T15-36-24Z.json",
+    "bytes": 1275375,
+    "crc32": "7530fdeb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T15-49-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T15-49-11Z.json",
+    "bytes": 19799,
+    "crc32": "1ab7913d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T16-13-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T16-13-17Z.json",
+    "bytes": 1493911,
+    "crc32": "e7591478"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T16-31-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T16-31-00Z.json",
+    "bytes": 771584,
+    "crc32": "90cfbb56"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-28T21-09-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-28T21-09-18Z.json",
+    "bytes": 401720,
+    "crc32": "9e0bbada"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T06-13-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T06-13-47Z.json",
+    "bytes": 853334,
+    "crc32": "b3ff4264"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T06-46-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T06-46-20Z.json",
+    "bytes": 1161461,
+    "crc32": "9be36c0b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T07-14-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T07-14-51Z.json",
+    "bytes": 1105939,
+    "crc32": "72dab81e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T07-31-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T07-31-06Z.json",
+    "bytes": 3376028,
+    "crc32": "14166c86"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T07-38-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T07-38-04Z.json",
+    "bytes": 1607529,
+    "crc32": "c6ed15a1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T07-49-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T07-49-37Z.json",
+    "bytes": 197023,
+    "crc32": "d659a165"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T08-33-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T08-33-51Z.json",
+    "bytes": 809366,
+    "crc32": "56f03077"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T08-37-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T08-37-40Z.json",
+    "bytes": 1310162,
+    "crc32": "b798dac4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Ponttor/2024-01-29T08-48-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Ponttor/scenarios/2024-01-29T08-48-13Z.json",
+    "bytes": 71011,
+    "crc32": "31291342"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T15-35-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T15-35-31Z.json",
+    "bytes": 1941086,
+    "crc32": "781f5f4d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T15-48-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T15-48-07Z.json",
+    "bytes": 2016178,
+    "crc32": "ab8717f0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T17-21-59Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T17-21-59Z.json",
+    "bytes": 19776,
+    "crc32": "d9c977ef"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T17-27-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T17-27-33Z.json",
+    "bytes": 728959,
+    "crc32": "c1f9a67a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T17-41-35Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T17-41-35Z.json",
+    "bytes": 24123,
+    "crc32": "bc27e8e3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T17-51-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T17-51-18Z.json",
+    "bytes": 1688541,
+    "crc32": "3587b396"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T18-40-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T18-40-17Z.json",
+    "bytes": 1108618,
+    "crc32": "2319ea84"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T19-06-46Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T19-06-46Z.json",
+    "bytes": 19772,
+    "crc32": "25485bb4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T19-23-01Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T19-23-01Z.json",
+    "bytes": 38836,
+    "crc32": "940026d4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-29T21-52-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-29T21-52-33Z.json",
+    "bytes": 2081385,
+    "crc32": "cf37fc99"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T05-26-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T05-26-33Z.json",
+    "bytes": 21951,
+    "crc32": "17843494"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T05-40-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T05-40-54Z.json",
+    "bytes": 2016562,
+    "crc32": "fdf44aa2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T05-55-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T05-55-48Z.json",
+    "bytes": 1401275,
+    "crc32": "8552f84f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T06-03-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T06-03-02Z.json",
+    "bytes": 1688085,
+    "crc32": "3238b5ab"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T06-29-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T06-29-24Z.json",
+    "bytes": 21978,
+    "crc32": "3dc07984"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T06-46-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T06-46-25Z.json",
+    "bytes": 12417,
+    "crc32": "016cf460"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T07-11-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T07-11-30Z.json",
+    "bytes": 12419,
+    "crc32": "2940a6c7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T07-59-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T07-59-37Z.json",
+    "bytes": 20522,
+    "crc32": "f88768fd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T08-48-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T08-48-45Z.json",
+    "bytes": 19770,
+    "crc32": "c824f9ad"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T09-08-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T09-08-13Z.json",
+    "bytes": 2531084,
+    "crc32": "bb5ad507"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T09-27-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T09-27-43Z.json",
+    "bytes": 621298,
+    "crc32": "ab328ce1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T09-31-35Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T09-31-35Z.json",
+    "bytes": 533487,
+    "crc32": "64cf0d74"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T09-38-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T09-38-39Z.json",
+    "bytes": 21944,
+    "crc32": "a993c1b7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T10-51-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T10-51-17Z.json",
+    "bytes": 1628304,
+    "crc32": "22e0dd73"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T11-25-32Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T11-25-32Z.json",
+    "bytes": 21965,
+    "crc32": "3c1eaa2a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T11-34-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T11-34-43Z.json",
+    "bytes": 39630,
+    "crc32": "379c2234"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T11-56-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T11-56-18Z.json",
+    "bytes": 2583498,
+    "crc32": "7e6eca40"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T13-59-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T13-59-52Z.json",
+    "bytes": 1590319,
+    "crc32": "0ed0aca7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T15-12-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T15-12-30Z.json",
+    "bytes": 19779,
+    "crc32": "6100479c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T15-30-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T15-30-47Z.json",
+    "bytes": 269863,
+    "crc32": "8896301b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T17-08-34Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T17-08-34Z.json",
+    "bytes": 4154708,
+    "crc32": "af10d878"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T17-16-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T17-16-48Z.json",
+    "bytes": 564896,
+    "crc32": "071e5981"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T17-29-35Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T17-29-35Z.json",
+    "bytes": 3475974,
+    "crc32": "11914156"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T18-12-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T18-12-09Z.json",
+    "bytes": 79271,
+    "crc32": "dc2c5cae"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T18-15-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T18-15-26Z.json",
+    "bytes": 19784,
+    "crc32": "b0bb9d2b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-30T18-36-50Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-30T18-36-50Z.json",
+    "bytes": 2254700,
+    "crc32": "82efd10b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T07-31-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T07-31-19Z.json",
+    "bytes": 2046587,
+    "crc32": "665db385"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T07-42-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T07-42-16Z.json",
+    "bytes": 1690656,
+    "crc32": "94a59330"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T12-48-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T12-48-31Z.json",
+    "bytes": 19768,
+    "crc32": "a8d28327"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T13-27-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T13-27-09Z.json",
+    "bytes": 1844997,
+    "crc32": "524e86b6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T13-57-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T13-57-53Z.json",
+    "bytes": 2214101,
+    "crc32": "c5cb982e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T14-13-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T14-13-56Z.json",
+    "bytes": 570361,
+    "crc32": "7d6ab896"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T14-29-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T14-29-48Z.json",
+    "bytes": 1939748,
+    "crc32": "49be14fb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T15-02-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T15-02-10Z.json",
+    "bytes": 1643579,
+    "crc32": "2aa441c6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T15-18-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T15-18-54Z.json",
+    "bytes": 21947,
+    "crc32": "1c919951"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T16-41-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T16-41-23Z.json",
+    "bytes": 74688,
+    "crc32": "3981b53a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T16-56-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T16-56-43Z.json",
+    "bytes": 393439,
+    "crc32": "b4c561d4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T17-15-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T17-15-26Z.json",
+    "bytes": 20505,
+    "crc32": "ff2e0b22"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T17-23-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T17-23-54Z.json",
+    "bytes": 87060,
+    "crc32": "6b642997"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T17-26-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T17-26-17Z.json",
+    "bytes": 587252,
+    "crc32": "9e3337aa"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T18-25-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T18-25-51Z.json",
+    "bytes": 2981805,
+    "crc32": "ae4b50f6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T18-40-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T18-40-18Z.json",
+    "bytes": 1773559,
+    "crc32": "6c85b5cf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T20-16-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T20-16-44Z.json",
+    "bytes": 2066723,
+    "crc32": "e73e7edd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T21-00-05Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T21-00-05Z.json",
+    "bytes": 1927743,
+    "crc32": "109cf5d4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-01-31T21-46-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-01-31T21-46-47Z.json",
+    "bytes": 1982394,
+    "crc32": "9ccee589"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T04-50-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T04-50-12Z.json",
+    "bytes": 1361032,
+    "crc32": "31a17f34"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T06-12-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T06-12-23Z.json",
+    "bytes": 1412904,
+    "crc32": "571ddac9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T06-37-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T06-37-44Z.json",
+    "bytes": 2131166,
+    "crc32": "2b58ad31"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T07-18-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T07-18-09Z.json",
+    "bytes": 1728023,
+    "crc32": "81e5933d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T09-20-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T09-20-38Z.json",
+    "bytes": 19065,
+    "crc32": "0fc66ba2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T09-47-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T09-47-40Z.json",
+    "bytes": 2107076,
+    "crc32": "4d2a83d7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T09-55-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T09-55-06Z.json",
+    "bytes": 19772,
+    "crc32": "6e43928c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T10-24-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T10-24-08Z.json",
+    "bytes": 4301471,
+    "crc32": "38ca6e05"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T10-49-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T10-49-33Z.json",
+    "bytes": 1472232,
+    "crc32": "fc3aff19"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T11-16-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T11-16-55Z.json",
+    "bytes": 3550400,
+    "crc32": "437f5f2a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T12-24-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T12-24-10Z.json",
+    "bytes": 128140,
+    "crc32": "ad2b8de2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T12-28-50Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T12-28-50Z.json",
+    "bytes": 2166104,
+    "crc32": "4b057b58"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T13-40-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T13-40-43Z.json",
+    "bytes": 31477,
+    "crc32": "2a78b559"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T14-12-56Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T14-12-56Z.json",
+    "bytes": 1554759,
+    "crc32": "0ac1e7ed"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T14-45-21Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T14-45-21Z.json",
+    "bytes": 1270181,
+    "crc32": "78e82795"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T15-03-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T15-03-25Z.json",
+    "bytes": 1974958,
+    "crc32": "a200ffd4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T15-11-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T15-11-04Z.json",
+    "bytes": 925847,
+    "crc32": "cc1a314e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T16-39-41Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T16-39-41Z.json",
+    "bytes": 31460,
+    "crc32": "b05bac7e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T17-07-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T17-07-52Z.json",
+    "bytes": 1836012,
+    "crc32": "517ae30c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T17-38-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T17-38-30Z.json",
+    "bytes": 5619902,
+    "crc32": "390838d2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T17-45-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T17-45-45Z.json",
+    "bytes": 683,
+    "crc32": "96a072bb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T17-59-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T17-59-16Z.json",
+    "bytes": 19784,
+    "crc32": "9ef35b6e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T18-09-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T18-09-40Z.json",
+    "bytes": 20509,
+    "crc32": "deb0b5c5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-01T18-51-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-01T18-51-38Z.json",
+    "bytes": 19789,
+    "crc32": "5c390a2d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T05-59-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T05-59-48Z.json",
+    "bytes": 1690014,
+    "crc32": "480e1c00"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T06-32-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T06-32-09Z.json",
+    "bytes": 19778,
+    "crc32": "46e736cf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T08-34-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T08-34-22Z.json",
+    "bytes": 79982,
+    "crc32": "96632438"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T08-56-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T08-56-13Z.json",
+    "bytes": 2390401,
+    "crc32": "cd1b46b7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T09-02-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T09-02-11Z.json",
+    "bytes": 1894613,
+    "crc32": "cf6ee8ba"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T09-45-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T09-45-40Z.json",
+    "bytes": 1844242,
+    "crc32": "06484c20"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T09-52-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T09-52-31Z.json",
+    "bytes": 1741386,
+    "crc32": "ea59153f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T10-25-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T10-25-48Z.json",
+    "bytes": 1773798,
+    "crc32": "39373bcc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T11-36-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T11-36-18Z.json",
+    "bytes": 21234,
+    "crc32": "16419e6e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T11-43-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T11-43-17Z.json",
+    "bytes": 1258148,
+    "crc32": "75a301c4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T12-08-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T12-08-42Z.json",
+    "bytes": 2166076,
+    "crc32": "17231144"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T12-13-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T12-13-02Z.json",
+    "bytes": 19775,
+    "crc32": "6017d09d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T12-16-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T12-16-07Z.json",
+    "bytes": 1912769,
+    "crc32": "fd92db3d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T13-53-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T13-53-45Z.json",
+    "bytes": 2083571,
+    "crc32": "c998cfd1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T14-26-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T14-26-54Z.json",
+    "bytes": 809331,
+    "crc32": "5f19cfc2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T14-57-09Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T14-57-09Z.json",
+    "bytes": 2002980,
+    "crc32": "009744f8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T15-30-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T15-30-58Z.json",
+    "bytes": 19778,
+    "crc32": "db797d97"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T15-34-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T15-34-12Z.json",
+    "bytes": 1884625,
+    "crc32": "5f0f3a49"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T15-45-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T15-45-54Z.json",
+    "bytes": 170744,
+    "crc32": "0baa0755"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T16-13-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T16-13-03Z.json",
+    "bytes": 2602838,
+    "crc32": "d4db746b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T17-38-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T17-38-22Z.json",
+    "bytes": 43173,
+    "crc32": "0ec8efd2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T17-50-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T17-50-29Z.json",
+    "bytes": 1826968,
+    "crc32": "7789d63f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T18-22-36Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T18-22-36Z.json",
+    "bytes": 797881,
+    "crc32": "e612b34a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T18-47-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T18-47-47Z.json",
+    "bytes": 1025445,
+    "crc32": "96b6a611"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T19-09-41Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T19-09-41Z.json",
+    "bytes": 19783,
+    "crc32": "b1fe7211"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T20-58-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T20-58-52Z.json",
+    "bytes": 1439274,
+    "crc32": "227d3b59"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-02T21-51-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-02T21-51-19Z.json",
+    "bytes": 1992972,
+    "crc32": "9e72a989"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T00-31-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T00-31-44Z.json",
+    "bytes": 1078286,
+    "crc32": "e314163c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T04-29-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T04-29-03Z.json",
+    "bytes": 1307670,
+    "crc32": "d39f0fe2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T07-40-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T07-40-49Z.json",
+    "bytes": 2127770,
+    "crc32": "8959ffa9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T08-39-35Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T08-39-35Z.json",
+    "bytes": 2042991,
+    "crc32": "3cf5a5a6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T09-36-42Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T09-36-42Z.json",
+    "bytes": 19777,
+    "crc32": "3b52af65"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T11-33-35Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T11-33-35Z.json",
+    "bytes": 2423305,
+    "crc32": "7b0c2bef"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T12-17-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T12-17-57Z.json",
+    "bytes": 106913,
+    "crc32": "f084ea5e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T15-32-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T15-32-44Z.json",
+    "bytes": 24849,
+    "crc32": "d45a9dcd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T16-04-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T16-04-00Z.json",
+    "bytes": 1516950,
+    "crc32": "c00938a9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T16-14-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T16-14-43Z.json",
+    "bytes": 19780,
+    "crc32": "a3245d8e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T16-17-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T16-17-38Z.json",
+    "bytes": 2245116,
+    "crc32": "e4ac670a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T16-23-14Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T16-23-14Z.json",
+    "bytes": 2315189,
+    "crc32": "6db806a8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T16-43-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T16-43-39Z.json",
+    "bytes": 60942,
+    "crc32": "c12c79a7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T17-29-38Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T17-29-38Z.json",
+    "bytes": 120689,
+    "crc32": "a9c5f290"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T17-41-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T17-41-08Z.json",
+    "bytes": 66585,
+    "crc32": "3417c074"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T18-10-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T18-10-12Z.json",
+    "bytes": 49168,
+    "crc32": "18985631"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T18-17-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T18-17-49Z.json",
+    "bytes": 500482,
+    "crc32": "1a9a474e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T20-26-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T20-26-10Z.json",
+    "bytes": 2242053,
+    "crc32": "956a8ce1"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T20-34-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T20-34-48Z.json",
+    "bytes": 1875550,
+    "crc32": "821446d9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T22-04-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T22-04-29Z.json",
+    "bytes": 80009,
+    "crc32": "17d736bb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-03T22-44-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-03T22-44-44Z.json",
+    "bytes": 1554803,
+    "crc32": "03d66baa"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T05-25-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T05-25-24Z.json",
+    "bytes": 1383324,
+    "crc32": "00e040bb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T08-15-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T08-15-22Z.json",
+    "bytes": 39570,
+    "crc32": "02a1be44"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T11-00-22Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T11-00-22Z.json",
+    "bytes": 1715865,
+    "crc32": "6047ec36"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T11-14-28Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T11-14-28Z.json",
+    "bytes": 544198,
+    "crc32": "bac3fac6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T13-39-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T13-39-10Z.json",
+    "bytes": 1895214,
+    "crc32": "27eefd6d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T15-09-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T15-09-45Z.json",
+    "bytes": 21937,
+    "crc32": "397c0259"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T15-15-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T15-15-12Z.json",
+    "bytes": 2313429,
+    "crc32": "5cd83f91"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T15-23-19Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T15-23-19Z.json",
+    "bytes": 1825649,
+    "crc32": "7284e41b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-04T16-30-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-04T16-30-08Z.json",
+    "bytes": 1351376,
+    "crc32": "2d3c7352"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T05-03-12Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T05-03-12Z.json",
+    "bytes": 2097533,
+    "crc32": "d134f73a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T05-48-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T05-48-04Z.json",
+    "bytes": 2039521,
+    "crc32": "522b4910"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T06-21-29Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T06-21-29Z.json",
+    "bytes": 19786,
+    "crc32": "3e790d7b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T06-30-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T06-30-26Z.json",
+    "bytes": 12415,
+    "crc32": "853f590d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T06-40-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T06-40-33Z.json",
+    "bytes": 21251,
+    "crc32": "6bc061c4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T06-41-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T06-41-06Z.json",
+    "bytes": 1652834,
+    "crc32": "b902cc88"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T07-35-24Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T07-35-24Z.json",
+    "bytes": 4441043,
+    "crc32": "e4a2ddf5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T08-14-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T08-14-07Z.json",
+    "bytes": 2092555,
+    "crc32": "1c2dd1d6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T08-53-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T08-53-47Z.json",
+    "bytes": 683,
+    "crc32": "9a5addf8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T09-13-05Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T09-13-05Z.json",
+    "bytes": 2748189,
+    "crc32": "5845ef2c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T10-00-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T10-00-13Z.json",
+    "bytes": 889123,
+    "crc32": "9b12c9f4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T10-06-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T10-06-37Z.json",
+    "bytes": 125870,
+    "crc32": "17502e63"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T10-11-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T10-11-52Z.json",
+    "bytes": 40373,
+    "crc32": "c8d4e4f5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T11-09-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T11-09-48Z.json",
+    "bytes": 19777,
+    "crc32": "1d910d8a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T11-25-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T11-25-39Z.json",
+    "bytes": 2075055,
+    "crc32": "e6010bb7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T11-34-27Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T11-34-27Z.json",
+    "bytes": 272759,
+    "crc32": "ede5402b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T14-02-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T14-02-07Z.json",
+    "bytes": 1209529,
+    "crc32": "305ad939"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T14-43-00Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T14-43-00Z.json",
+    "bytes": 1319057,
+    "crc32": "0604c414"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T15-04-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T15-04-18Z.json",
+    "bytes": 1891172,
+    "crc32": "fd6e221d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T15-19-58Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T15-19-58Z.json",
+    "bytes": 1460717,
+    "crc32": "d2ebf958"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T15-40-41Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T15-40-41Z.json",
+    "bytes": 2328763,
+    "crc32": "018a0625"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T15-56-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T15-56-07Z.json",
+    "bytes": 57885,
+    "crc32": "3e38a0bc"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T16-13-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T16-13-57Z.json",
+    "bytes": 658178,
+    "crc32": "ecfd0950"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T16-28-20Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T16-28-20Z.json",
+    "bytes": 1674568,
+    "crc32": "0441c64e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T17-16-10Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T17-16-10Z.json",
+    "bytes": 1270665,
+    "crc32": "3d1444ad"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T17-35-14Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T17-35-14Z.json",
+    "bytes": 779619,
+    "crc32": "7d5e0a9c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T18-40-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T18-40-40Z.json",
+    "bytes": 236447,
+    "crc32": "ba0470ad"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T20-11-16Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T20-11-16Z.json",
+    "bytes": 19781,
+    "crc32": "a0b3d89e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-05T20-34-25Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-05T20-34-25Z.json",
+    "bytes": 1818395,
+    "crc32": "78fb8dbf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T05-35-15Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T05-35-15Z.json",
+    "bytes": 500011,
+    "crc32": "fc43c1bf"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T07-18-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T07-18-04Z.json",
+    "bytes": 2423778,
+    "crc32": "b9124f50"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T08-37-45Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T08-37-45Z.json",
+    "bytes": 80745,
+    "crc32": "e5de4457"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T08-57-50Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T08-57-50Z.json",
+    "bytes": 19787,
+    "crc32": "06d03842"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T09-41-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T09-41-18Z.json",
+    "bytes": 21940,
+    "crc32": "fdf4d2fd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T09-43-08Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T09-43-08Z.json",
+    "bytes": 41758,
+    "crc32": "a4d6d585"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T11-03-49Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T11-03-49Z.json",
+    "bytes": 13957,
+    "crc32": "0112b501"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T11-44-23Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T11-44-23Z.json",
+    "bytes": 2252540,
+    "crc32": "f1683ebb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T13-55-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T13-55-33Z.json",
+    "bytes": 1557682,
+    "crc32": "3e6c5cda"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T14-17-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T14-17-55Z.json",
+    "bytes": 3044539,
+    "crc32": "6fa715a4"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T16-17-17Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T16-17-17Z.json",
+    "bytes": 12424,
+    "crc32": "f2ece0df"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T16-57-35Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T16-57-35Z.json",
+    "bytes": 2609025,
+    "crc32": "aa5661a0"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T17-10-39Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T17-10-39Z.json",
+    "bytes": 19772,
+    "crc32": "0e6e0d8b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T17-45-06Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T17-45-06Z.json",
+    "bytes": 402939,
+    "crc32": "0ce27d4e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T18-15-59Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T18-15-59Z.json",
+    "bytes": 1142006,
+    "crc32": "a39f0b00"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-06T21-14-55Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-06T21-14-55Z.json",
+    "bytes": 43241,
+    "crc32": "ecb29ebd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T05-21-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T05-21-37Z.json",
+    "bytes": 1186272,
+    "crc32": "2fe4f2cd"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T05-42-54Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T05-42-54Z.json",
+    "bytes": 1384560,
+    "crc32": "a4bb65b5"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T06-15-18Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T06-15-18Z.json",
+    "bytes": 1417632,
+    "crc32": "498bb6b3"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T06-28-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T06-28-02Z.json",
+    "bytes": 2285811,
+    "crc32": "3c2d0464"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T07-33-50Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T07-33-50Z.json",
+    "bytes": 2218273,
+    "crc32": "dd9a3bc2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T07-59-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T07-59-48Z.json",
+    "bytes": 78553,
+    "crc32": "a1ac36c7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T08-08-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T08-08-26Z.json",
+    "bytes": 1997209,
+    "crc32": "521f9aa7"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T08-49-40Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T08-49-40Z.json",
+    "bytes": 1018036,
+    "crc32": "32c24b9e"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T09-04-34Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T09-04-34Z.json",
+    "bytes": 1729400,
+    "crc32": "9593d872"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T09-12-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T09-12-47Z.json",
+    "bytes": 2780552,
+    "crc32": "6e1303f9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T09-18-01Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T09-18-01Z.json",
+    "bytes": 4582141,
+    "crc32": "4e0ee279"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T11-37-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T11-37-37Z.json",
+    "bytes": 1824712,
+    "crc32": "8ea9f80f"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T11-59-47Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T11-59-47Z.json",
+    "bytes": 1667651,
+    "crc32": "b19e98da"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T12-21-03Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T12-21-03Z.json",
+    "bytes": 3393151,
+    "crc32": "00be0804"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T12-51-43Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T12-51-43Z.json",
+    "bytes": 21253,
+    "crc32": "c0c6a852"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T13-59-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T13-59-07Z.json",
+    "bytes": 2690856,
+    "crc32": "6011b7ec"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T14-20-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T14-20-37Z.json",
+    "bytes": 20489,
+    "crc32": "2dfe20eb"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T15-33-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T15-33-37Z.json",
+    "bytes": 12421,
+    "crc32": "d68c08ab"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T16-02-51Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T16-02-51Z.json",
+    "bytes": 1602935,
+    "crc32": "86220404"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T16-13-48Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T16-13-48Z.json",
+    "bytes": 1395744,
+    "crc32": "4f62bc6d"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T16-16-57Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T16-16-57Z.json",
+    "bytes": 1069434,
+    "crc32": "0b6e0634"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T16-21-04Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T16-21-04Z.json",
+    "bytes": 1698651,
+    "crc32": "d2cf6512"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T16-32-11Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T16-32-11Z.json",
+    "bytes": 21233,
+    "crc32": "e37e119a"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T17-02-44Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T17-02-44Z.json",
+    "bytes": 213193,
+    "crc32": "9f3c8d9c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T17-03-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T17-03-53Z.json",
+    "bytes": 12421,
+    "crc32": "387100c2"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T17-41-59Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T17-41-59Z.json",
+    "bytes": 60055,
+    "crc32": "9d9c0490"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T18-39-02Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T18-39-02Z.json",
+    "bytes": 19794,
+    "crc32": "6f184cf8"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-07T20-18-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-07T20-18-31Z.json",
+    "bytes": 21955,
+    "crc32": "5613bd1b"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T05-40-52Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T05-40-52Z.json",
+    "bytes": 26395,
+    "crc32": "db01e72c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T07-21-26Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T07-21-26Z.json",
+    "bytes": 4272991,
+    "crc32": "34c9c96c"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T07-27-36Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T07-27-36Z.json",
+    "bytes": 3229035,
+    "crc32": "bd77daf6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T08-46-34Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T08-46-34Z.json",
+    "bytes": 1786442,
+    "crc32": "71ac7a79"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T09-04-31Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T09-04-31Z.json",
+    "bytes": 2196514,
+    "crc32": "86dff1c6"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T11-06-41Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T11-06-41Z.json",
+    "bytes": 19784,
+    "crc32": "c15fcb57"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T11-14-13Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T11-14-13Z.json",
+    "bytes": 5407054,
+    "crc32": "1c0db424"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T11-53-41Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T11-53-41Z.json",
+    "bytes": 15417,
+    "crc32": "d04cd4e9"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T13-26-50Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T13-26-50Z.json",
+    "bytes": 12428,
+    "crc32": "6b2ca034"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T14-15-33Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T14-15-33Z.json",
+    "bytes": 21955,
+    "crc32": "cc555a65"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T16-13-37Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T16-13-37Z.json",
+    "bytes": 1179062,
+    "crc32": "553e88ae"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T16-55-07Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T16-55-07Z.json",
+    "bytes": 1312036,
+    "crc32": "f1b9a444"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-08T18-23-30Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-08T18-23-30Z.json",
+    "bytes": 2294764,
+    "crc32": "db4142ef"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-09T07-18-15Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-09T07-18-15Z.json",
+    "bytes": 12416,
+    "crc32": "c9be7789"
+   },
+   {
+    "rid": "Stationary/V2X-only/Aachen-Theaterstrasse/2024-02-09T07-43-53Z",
+    "member": "json/Stationary/V2X-only/Aachen-Theaterstrasse/scenarios/2024-02-09T07-43-53Z.json",
+    "bytes": 21253,
+    "crc32": "9e7c1e49"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-28T16-06-25Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-28T16-06-25Z.json",
+    "bytes": 2246200,
+    "crc32": "9ce52f62"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-28T16-21-27Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-28T16-21-27Z.json",
+    "bytes": 286048,
+    "crc32": "cc741a3c"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-28T17-55-52Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-28T17-55-52Z.json",
+    "bytes": 10232963,
+    "crc32": "a1a25ae5"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-30T12-26-27Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-30T12-26-27Z.json",
+    "bytes": 79549,
+    "crc32": "c0eb4513"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-30T12-26-56Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-30T12-26-56Z.json",
+    "bytes": 8553765,
+    "crc32": "2ba1adfe"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-30T12-41-29Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-30T12-41-29Z.json",
+    "bytes": 65339,
+    "crc32": "d0b5dd4b"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-30T14-23-27Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-30T14-23-27Z.json",
+    "bytes": 1100427,
+    "crc32": "68703591"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-30T16-05-15Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-30T16-05-15Z.json",
+    "bytes": 8966029,
+    "crc32": "c3e98012"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-30T16-59-18Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-30T16-59-18Z.json",
+    "bytes": 23719192,
+    "crc32": "d2eeec76"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-30T17-40-23Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-30T17-40-23Z.json",
+    "bytes": 67928,
+    "crc32": "d8c43bbb"
+   },
+   {
+    "rid": "Stationary/V2X-with-Sensor-Context/A44-Jackerath/2024-01-31T15-45-47Z",
+    "member": "json/Stationary/V2X-with-Sensor-Context/A44-Jackerath/scenarios/2024-01-31T15-45-47Z.json",
+    "bytes": 863431,
+    "crc32": "6f75bed9"
+   }
+  ]
+ },
+ "road": [
+  {
+   "capture": "ambient_dyno_drive_basic_long",
+   "folder": "ambient",
+   "bytes": 137598512,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_drive_basic_short",
+   "folder": "ambient",
+   "bytes": 48926704,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_drive_benign_anomaly",
+   "folder": "ambient",
+   "bytes": 35489874,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_drive_extended_long",
+   "folder": "ambient",
+   "bytes": 65513568,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_drive_extended_short",
+   "folder": "ambient",
+   "bytes": 36360332,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_drive_radio_infotainment",
+   "folder": "ambient",
+   "bytes": 42911192,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_drive_winter",
+   "folder": "ambient",
+   "bytes": 5250808,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_exercise_all_bits",
+   "folder": "ambient",
+   "bytes": 203293412,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_idle_radio_infotainment",
+   "folder": "ambient",
+   "bytes": 72326628,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_dyno_reverse",
+   "folder": "ambient",
+   "bytes": 5660162,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_highway_street_driving_diagnostics",
+   "folder": "ambient",
+   "bytes": 51738546,
+   "in_v3_split": true
+  },
+  {
+   "capture": "ambient_highway_street_driving_long",
+   "folder": "ambient",
+   "bytes": 405808136,
+   "in_v3_split": true
+  },
+  {
+   "capture": "accelerator_attack_drive_1",
+   "folder": "attacks",
+   "bytes": 9418960,
+   "in_v3_split": false
+  },
+  {
+   "capture": "accelerator_attack_drive_2",
+   "folder": "attacks",
+   "bytes": 7909056,
+   "in_v3_split": false
+  },
+  {
+   "capture": "accelerator_attack_reverse_1",
+   "folder": "attacks",
+   "bytes": 9312562,
+   "in_v3_split": false
+  },
+  {
+   "capture": "accelerator_attack_reverse_2",
+   "folder": "attacks",
+   "bytes": 11472998,
+   "in_v3_split": false
+  },
+  {
+   "capture": "correlated_signal_attack_1",
+   "folder": "attacks",
+   "bytes": 3738052,
+   "in_v3_split": true
+  },
+  {
+   "capture": "correlated_signal_attack_1_masquerade",
+   "folder": "attacks",
+   "bytes": 3642096,
+   "in_v3_split": true
+  },
+  {
+   "capture": "correlated_signal_attack_2",
+   "folder": "attacks",
+   "bytes": 3204222,
+   "in_v3_split": true
+  },
+  {
+   "capture": "correlated_signal_attack_2_masquerade",
+   "folder": "attacks",
+   "bytes": 3105782,
+   "in_v3_split": true
+  },
+  {
+   "capture": "correlated_signal_attack_3",
+   "folder": "attacks",
+   "bytes": 1924134,
+   "in_v3_split": true
+  },
+  {
+   "capture": "correlated_signal_attack_3_masquerade",
+   "folder": "attacks",
+   "bytes": 1865990,
+   "in_v3_split": true
+  },
+  {
+   "capture": "fuzzing_attack_1",
+   "folder": "attacks",
+   "bytes": 2269732,
+   "in_v3_split": true
+  },
+  {
+   "capture": "fuzzing_attack_2",
+   "folder": "attacks",
+   "bytes": 1488146,
+   "in_v3_split": true
+  },
+  {
+   "capture": "fuzzing_attack_3",
+   "folder": "attacks",
+   "bytes": 608948,
+   "in_v3_split": true
+  },
+  {
+   "capture": "max_engine_coolant_temp_attack",
+   "folder": "attacks",
+   "bytes": 2848458,
+   "in_v3_split": true
+  },
+  {
+   "capture": "max_engine_coolant_temp_attack_masquerade",
+   "folder": "attacks",
+   "bytes": 2846526,
+   "in_v3_split": true
+  },
+  {
+   "capture": "max_speedometer_attack_1",
+   "folder": "attacks",
+   "bytes": 9816262,
+   "in_v3_split": true
+  },
+  {
+   "capture": "max_speedometer_attack_1_masquerade",
+   "folder": "attacks",
+   "bytes": 9703838,
+   "in_v3_split": true
+  },
+  {
+   "capture": "max_speedometer_attack_2",
+   "folder": "attacks",
+   "bytes": 6711124,
+   "in_v3_split": true
+  },
+  {
+   "capture": "max_speedometer_attack_2_masquerade",
+   "folder": "attacks",
+   "bytes": 6566684,
+   "in_v3_split": true
+  },
+  {
+   "capture": "max_speedometer_attack_3",
+   "folder": "attacks",
+   "bytes": 9823346,
+   "in_v3_split": true
+  },
+  {
+   "capture": "max_speedometer_attack_3_masquerade",
+   "folder": "attacks",
+   "bytes": 9542424,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_off_attack_1",
+   "folder": "attacks",
+   "bytes": 3123492,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_off_attack_1_masquerade",
+   "folder": "attacks",
+   "bytes": 3092580,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_off_attack_2",
+   "folder": "attacks",
+   "bytes": 4582888,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_off_attack_2_masquerade",
+   "folder": "attacks",
+   "bytes": 4473822,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_off_attack_3",
+   "folder": "attacks",
+   "bytes": 6479330,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_off_attack_3_masquerade",
+   "folder": "attacks",
+   "bytes": 6367366,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_on_attack_1",
+   "folder": "attacks",
+   "bytes": 6128902,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_on_attack_1_masquerade",
+   "folder": "attacks",
+   "bytes": 6037316,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_on_attack_2",
+   "folder": "attacks",
+   "bytes": 8093470,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_on_attack_2_masquerade",
+   "folder": "attacks",
+   "bytes": 7923776,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_on_attack_3",
+   "folder": "attacks",
+   "bytes": 7178392,
+   "in_v3_split": true
+  },
+  {
+   "capture": "reverse_light_on_attack_3_masquerade",
+   "folder": "attacks",
+   "bytes": 7070246,
+   "in_v3_split": true
+  }
+ ],
+ "kitti_on_disk": [
+  {
+   "drive": "2011_09_26_drive_0002_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0005_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0011_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0013_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0017_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0019_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0020_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0027_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0028_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0029_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0035_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0039_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0046_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0048_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0052_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0060_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0070_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0079_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0095_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0106_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0113_sync",
+   "base": "data_extra\\kitti_raw"
+  },
+  {
+   "drive": "2011_09_26_drive_0001_sync",
+   "base": "codes\\data\\Depth"
+  },
+  {
+   "drive": "2011_09_26_drive_0015_sync",
+   "base": "codes\\data\\Depth"
+  }
+ ],
+ "comma_chunk1_routes": [
+  "b0c9d2329ad1606b_2018-07-27--06-03-57",
+  "b0c9d2329ad1606b_2018-07-27--06-50-48",
+  "b0c9d2329ad1606b_2018-07-29--11-17-20",
+  "b0c9d2329ad1606b_2018-07-29--12-02-42",
+  "b0c9d2329ad1606b_2018-07-29--16-37-17",
+  "b0c9d2329ad1606b_2018-07-30--13-03-07",
+  "b0c9d2329ad1606b_2018-07-30--13-44-30",
+  "b0c9d2329ad1606b_2018-07-31--20-50-28",
+  "b0c9d2329ad1606b_2018-08-01--21-13-49",
+  "b0c9d2329ad1606b_2018-08-02--08-34-47",
+  "b0c9d2329ad1606b_2018-08-02--16-41-38",
+  "b0c9d2329ad1606b_2018-08-03--10-35-16",
+  "b0c9d2329ad1606b_2018-08-06--10-04-53",
+  "b0c9d2329ad1606b_2018-08-10--22-42-26",
+  "b0c9d2329ad1606b_2018-08-14--10-32-01",
+  "b0c9d2329ad1606b_2018-08-14--20-41-07",
+  "b0c9d2329ad1606b_2018-08-15--09-01-03",
+  "b0c9d2329ad1606b_2018-08-16--21-52-30",
+  "b0c9d2329ad1606b_2018-08-17--12-07-08",
+  "b0c9d2329ad1606b_2018-08-17--14-17-47",
+  "b0c9d2329ad1606b_2018-08-17--14-55-39"
+ ]
+}
