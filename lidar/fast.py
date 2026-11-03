@@ -234,6 +234,17 @@ class IntensityScorer:
         return np.array([hi.max(), lo.max(), float((hi >= D.CNT_LEVEL).sum()), float((lo >= D.CNT_LEVEL).sum())])
 
 
+def z_stats(cur, pred):
+    """Extra L2c statistics (v3.1): the Poisson-shortfall rule of background.miss_stats (miss_z20) at windows of 10, 30, 45, 60 degrees over all
+    rings, and per group of 8 rings at 20 degrees. Same helper functions and thresholds as v3 (background._zmiss, EMIN_ALL, EMIN_G)."""
+    co, ce = cur.cnt, pred.cnt
+    out = {}
+    for w in (10, 30, 45, 60):
+        out[f"miss_z{w}"] = B._zmiss(B.window_sums(co.sum(0), w), B.window_sums(ce.sum(0), w), B.EMIN_ALL)
+    out["miss_zg20"] = B._zmiss(B.window_sums(co.reshape(8, 8, B.NAZ).sum(1), 20), B.window_sums(ce.reshape(8, 8, B.NAZ).sum(1), 20), B.EMIN_G)
+    return out
+
+
 class ScanStats:
     """Statistics of one scan for the four headline layers.
     compute(pts, pose, prev) -> (l1 dict-array, tile DataFrame, pair-row dict or None); prev = PrevScan (see below) or None."""
@@ -259,6 +270,7 @@ class ScanStats:
         cur = ImgFast(pts, self.edges)
         row = B.miss_stats(cur, pred)
         row.update(T.track_stats(cur, pred, raw))
+        row.update(z_stats(cur, pred))
         row["disp"] = float(np.hypot(*(np.asarray(pose[:2], float) - prev.pose[:2])))
         return row, cur
 

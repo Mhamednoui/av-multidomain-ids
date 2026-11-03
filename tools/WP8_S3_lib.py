@@ -25,7 +25,7 @@ V31 = json.loads((ROOT / "locks" / "V31_val.json").read_text())["domains"]["kitt
 TRAIN, VAL = list(V31["train"]), list(V31["val"])
 DRIVES = sorted(TRAIN + VAL)
 PAIR_KEYS = ["miss_w10", "miss_g10", "miss_w20", "miss_g20", "miss_z20", "miss_tot", "app_tot", "app_cc", "fix_tot", "fix_cc",
-             "van_tot", "van_cc", "disp"]
+             "van_tot", "van_cc", "disp", "miss_z10", "miss_z30", "miss_z45", "miss_z60", "miss_zg20"]
 L1_KEYS = list(G.STAT_NAMES)
 PRM = {"ground": "grid", "h0": 0.3, "e0": 0.4, "e1": 0.0, "vox": 0.1}               # v3 segment_params + the v3.1 voxel flag
 ATTACKS = ["ph_replace_near", "ph_replace_far", "ph_budget_near", "ph_budget_far", "PointDrop", "IntensitySpoof", "cmp_boxcloud",

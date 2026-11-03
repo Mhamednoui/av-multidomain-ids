@@ -67,3 +67,15 @@
 2026-11-03T17:37:59+01:00 | S3 | eval first pass: LODO at layer level gives M0 FA 2.70% (drive 0027 16.6%: L2a cnt_* drive shift) and M0 PointDrop 4.3% (v3 test 27.6%); checking pipeline vs frozen v3 on 150 scans: tools/WP8_S3_equiv.py log results/WP8/logs/S3_equiv.log
 2026-11-03T17:39:06+01:00 | S4 | round 1+2 done (RC5 chosen by rule: macro -2.90, delay 0; F1 fallback -0.34, 60 s); running tools/WP8_S4_stream_check.py RC5 (stream==batch on real val slices, N3 timing), log results/WP8/logs/S4_stream_check.log | running
 2026-11-03T17:39:46+01:00 | S3 | round 1 results saved as candidates_r1/selection_r1.json (no feasible candidate); round 2 logged in notes; launching eval tag r2 (144 candidates), log results/WP8/logs/S3_eval_r2.log
+2026-11-03T17:42:41+01:00 | S4 | launching tools/WP8_S4_bot.py (Part A explanation + BOT-A..D on val), log results/WP8/logs/S4_bot.log | running
+2026-11-03T17:44:24+01:00 | S3 | round 2 done (r2 json); round 3 logged in notes (multi-window z stats for L2c); parts moved to parts_r1, rerunning tools/WP8_S3_build.py --procs 3 -> results/WP8/logs/S3_build_r3.log (16 min)
+2026-11-03T17:45:13+01:00 | S1 | after Chunk_3 | written 7474, already present 0, http bytes 583.1 MB, 926 s | files on disk; manifest next
+2026-11-03T17:45:17+01:00 | S4 | stream check done (E1 real exact, push p99 5.1 ms), Bot analysis done (nothing counts); running full test suite + run_all --check (logs results/WP8/logs/S4_tests.log, S4_check.log); next tables + report
+2026-11-03T17:45:27+01:00 | S1 | manifest Chunk_3 | 7474 files, 1.600 GB, manifest_sha256 e5ffaa1f81ba3b0617eb691ce7bc217764e5068a5a51fecb2ceda3aeacd74d74 | written to results/WP8/S1/items
+2026-11-03T17:45:27+01:00 | S1 | before v2aix_h31 | local zip C:\Users\nouir\PFE\data_extra\D13_v2aix\v2aix_json.zip (sha256 check) -> C:\Users\nouir\PFE\data_extra\D13_v2aix\extracted_v31, 674 recordings, extraction only, never committed | hashing zip
+2026-11-03T17:45:27+01:00 | S1 | after 2011_09_26_drive_0101 | written 1877, already present 0, http bytes 1733.8 MB, 2331 s | files on disk; manifest next
+2026-11-03T17:45:33+01:00 | S1 | manifest 2011_09_26_drive_0101 | 1877 files, 1.731 GB, manifest_sha256 b27f4f70bfb33872648e83c23a24bf936878b7ee63764d3b3126bffddd8d10df | written to results/WP8/S1/items
+2026-11-03T17:45:33+01:00 | S1 | before 2011_09_30_drive_0016 | 563 members, 0.561 GB on disk, 561.1 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_30_drive_0016/2011_09_30_drive_0016_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T17:45:34+01:00 | S1 | after v2aix_h31 | extracted 674, present 0, 6 s | checking manifest
+2026-11-03T17:45:34+01:00 | S1 | manifest v2aix_h31 | 674 recordings verified (sha256 + CRC32 vs lock), data folder only | done
+2026-11-03T17:45:34+01:00 | S1 | end fetch Chunk_2 Chunk_4 Chunk_3 v2aix_h31 | done

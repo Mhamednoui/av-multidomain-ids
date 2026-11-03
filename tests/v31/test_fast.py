@@ -71,7 +71,8 @@ def test_pair_statistics_equal_v3_pair_row():
     ss = ScanStats(table, {"ground": "grid", "h0": 0.3, "e0": 0.4, "e1": 0.0})
     for pts, prev, pose in _scans():
         row, _ = ss.pair(PrevScan(prev, pose[0]), pts, pose[1])
-        assert row == pair_row(prev, pose[0], pts, pose[1], ss.edges)
+        ref = pair_row(prev, pose[0], pts, pose[1], ss.edges)
+        assert all(row[k] == v for k, v in ref.items()) and set(row) - set(ref) == {"miss_z10", "miss_z30", "miss_z45", "miss_z60", "miss_zg20"}
 
 
 def test_voxel_labels_are_a_valid_clustering_close_to_exact():
