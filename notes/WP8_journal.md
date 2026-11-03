@@ -106,3 +106,25 @@
 2026-11-03T18:23:42+01:00 | S1 | manifest 2011_09_26_drive_0084 | 771 files, 0.725 GB, manifest_sha256 dede20a1d0a43124097a6600fea8a29611940aebdfe301ce72b4747a2ace7b1f | written to results/WP8/S1/items
 2026-11-03T18:24:03+01:00 | S3 | done: report reports/WP8_S3.md, brief, STATUS S3 -> REVIEW, suite 514 pass, run_all --check OK | committing, stop
 2026-11-03T18:30 | ORCH | S3 approved; S3b + S6 launched; decisions in notes/WP8_v31.md | S1 downloading
+2026-11-03T18:25:32+01:00 | S3b | start: reading fast.py, speed tool; plan numba kernels in lidar/fast_nb.py
+2026-11-03T18:27:54+01:00 | S1 | after 2011_10_03_drive_0047 | written 1679, already present 0, http bytes 1598.6 MB, 1810 s | files on disk; manifest next
+2026-11-03T18:28:03+01:00 | S1 | manifest 2011_10_03_drive_0047 | 1679 files, 1.596 GB, manifest_sha256 5f5c73c5e5c90c8ffd0f3e2b07d51e8b0818aeac2cc7ea8f4b13124a35119046 | written to results/WP8/S1/items
+2026-11-03T18:28:03+01:00 | S1 | end fetch 2011_09_26_drive_0101 2011_09_30_drive_0016 2011_10_03_drive_0047 | done
+2026-11-03T18:28:28+01:00 | S3b | wrote lidar/fast_nb.py + dispatch in fast.py; next kernel-level equality check on a few scans (tools/WP8_S3b_kern.py)
+2026-11-03T18:29:20+01:00 | S1 | after 2011_09_29_drive_0004 | written 683, already present 0, http bytes 653.3 MB, 557 s | files on disk; manifest next
+2026-11-03T18:29:24+01:00 | S1 | manifest 2011_09_29_drive_0004 | 683 files, 0.651 GB, manifest_sha256 c6b54d541fdd54bc616ad11a9e019abe7256af74a6e3350f387e250d7766f35a | written to results/WP8/S1/items
+2026-11-03T18:29:24+01:00 | S1 | end fetch 2011_09_26_drive_0061 2011_09_26_drive_0064 2011_09_26_drive_0093 2011_09_29_drive_0004 | done
+2026-11-03T18:30:23+01:00 | S3b | kernels equal at kernel level (89 scans, 0 mismatches); running full speed+equality: tools/WP8_S3b_speed.py --tag run1, log results/WP8/logs/S3b_speed_run1.log
+2026-11-03T18:30:34+01:00 | S1 | process A crashed after drive 0084 (KeyError: my argument typo 2011_09_26_drive_0026; the real drive is 2011_09_29_drive_0026, not yet downloaded). No data affected; launching 2011_09_29_drive_0026 alone | log results/WP8/logs/S1_kitti_D.log
+2026-11-03T18:30:35+01:00 | S1 | start fetch 2011_09_29_drive_0026 | running
+2026-11-03T18:30:35+01:00 | S1 | before 2011_09_29_drive_0026 | 321 members, 0.282 GB on disk, 281.8 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_drive_0026/2011_09_29_drive_0026_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T18:33:32+01:00 | S1 | after 2011_09_29_drive_0026 | written 321, already present 0, http bytes 284.1 MB, 176 s | files on disk; manifest next
+2026-11-03T18:33:34+01:00 | S1 | manifest 2011_09_29_drive_0026 | 321 files, 0.282 GB, manifest_sha256 4e10c911445f9d076dda99d3f8fa21b7a1303d44c93ff50fc75ccee214d4d11f | written to results/WP8/S1/items
+2026-11-03T18:33:34+01:00 | S1 | end fetch 2011_09_29_drive_0026 | done
+2026-11-03T18:33:49+01:00 | S1 | locks filled | H31.json drives + rav4 + civic sha256; V31_val civic_chunk3 sha256; calibration zips left null (stopped)
+2026-11-03T18:33:54+01:00 | S3b | run1 numba: median 75.8 ms p99 109.6 ms; S3 npz not the right comparator (LODO refs) -> running numpy path same frozen domain: --numpy --tag np1, log results/WP8/logs/S3b_speed_np1.log, then compare
+2026-11-03T18:34:29+01:00 | S1 | locks filled | H31.json drives + rav4 + civic sha256; V31_val civic_chunk3 sha256; calibration zips left null (stopped)
+2026-11-03T18:37:54+01:00 | S6 | worker start: read rules/brief/M2/M3/WP6 brief/crossdomain+fusion code; plan = hypothesis-based channel-level blame (crossdomain/blame31.py), K accelerometer-anchored inertial edges, reduced vehicle-block evaluation on V31_val; writing round-1 pre-registration to notes/WP8_v31.md | commit pre-registration BEFORE any S6 number
+2026-11-03T18:39:29+01:00 | S6 | round-1 pre-registration + v3 fixture committed (git log head) | next: data builders tools/WP8_S6_build_kitti.py / _comma.py
+2026-11-03T18:40:34+01:00 | S6 | test run tools/WP8_S6_kitti.py on drive 0001 (builder only, no blame numbers) | then all 23 drives in background log results/WP8/logs/S6_kitti.log
+2026-11-03T18:40:39+01:00 | S3b | equality numba vs numpy: 0 alarm diffs, max diff 0.0 on 2085 scans (and first 1113); repeat timing run2 (tag run2), log results/WP8/logs/S3b_speed_run2.log

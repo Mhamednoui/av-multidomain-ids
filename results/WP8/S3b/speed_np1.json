@@ -1,0 +1,41 @@
+{
+ "tag": "np1",
+ "note": "",
+ "numba": false,
+ "n_scans": 2085,
+ "warmup_s": 0.0,
+ "push_ms": {
+  "median": 168.39279999999235,
+  "mean": 180.9093666666667,
+  "p90": 252.35206000000974,
+  "p99": 293.95073200000945,
+  "max": 342.58699999999465
+ },
+ "python_processes_sampled": [
+  1,
+  2,
+  2,
+  3,
+  3,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2
+ ],
+ "own_process_included": true,
+ "vs_S3_scores": {
+  "n_compared": 2075,
+  "alarm_differences": 8,
+  "max_abs_diff_raw": 0.523410388586282,
+  "max_abs_diff_stat": 0.37938418393529594,
+  "max_abs_diff_score": 0.5607807593491294
+ },
+ "rule_L1": {
+  "median<=100ms": false,
+  "p99<=250ms": false
+ },
+ "equality_met": false
+}

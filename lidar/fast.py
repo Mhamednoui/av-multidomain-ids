@@ -21,6 +21,19 @@ from lidar import objects as O
 from lidar import segment as S
 from lidar import track as T
 from lidar.s4_build import tiles as make_tiles
+import os
+
+USE_NUMBA = os.environ.get("AV_LIDAR_NUMBA", "0") == "1"       # S3b: compiled kernels of lidar.fast_nb (identical outputs; numpy path otherwise)
+
+
+def set_numba(flag=True):
+    """Switch the compiled kernels on / off (falls back to numpy when numba is not importable)."""
+    global USE_NUMBA
+    if flag:
+        from lidar import fast_nb
+        flag = fast_nb.AVAILABLE
+    USE_NUMBA = bool(flag)
+    return USE_NUMBA
 
 
 def common_mode_fast(res, rho, ab, lo=15.0, hi=70.0, gate=0.06, min_n=8):
@@ -52,6 +65,10 @@ def assign_fast(table, pts, iters=3, keep=None, rho=None):
     tiles need only points at >= R_MARGIN m and clustered points, so with keep = (rho >= R_MARGIN) | clustered the results are identical)."""
     rho = np.linalg.norm(pts[:, :3], axis=1) if rho is None else rho
     ab = G.az_bin(pts)
+    if USE_NUMBA:
+        from lidar import fast_nb
+        k, res, cm, mar = fast_nb.assign_nb(table, pts, ab, rho, keep, G._smooth_circ, iters)
+        return {"k": k, "res": res, "cm": cm, "rho": rho, "ab": ab, "margin": mar}
     far = np.flatnonzero((rho >= 15.0) & (rho <= 70.0))           # the only points common_mode() reads (lo=15, hi=70)
     pf, rf, af = pts[far], rho[far], ab[far]
     cm = np.zeros(G.NBIN)
@@ -119,15 +136,21 @@ def nearest_windowed(table, pts, cm, rho, ab, margin=True, k_prev=None):
 def ground_height_fast(pts, extent=60.0):
     """lidar.objects.ground_height with the cell minima from a radix sort instead of np.minimum.at (identical values)."""
     n = int(2 * extent / O.CELL)
-    ix = np.clip(((pts[:, 0] + extent) / O.CELL).astype(int), 0, n - 1)
-    iy = np.clip(((pts[:, 1] + extent) / O.CELL).astype(int), 0, n - 1)
-    flat = ix * n + iy
-    o = np.argsort(flat.astype(np.uint16), kind="stable")          # n * n = 3600
-    fs, zs = flat[o], pts[o, 2]
-    st = np.r_[0, np.flatnonzero(np.diff(fs)) + 1]
-    grid = np.full(n * n, np.inf)
-    grid[fs[st]] = np.minimum.reduceat(zs, st)
-    grid = grid.reshape(n, n)
+    if USE_NUMBA:
+        from lidar import fast_nb
+        grid, flat = fast_nb.ground_min_nb(pts, extent, O.CELL, n)
+        grid = grid.reshape(n, n)
+        ix, iy = flat // n, flat % n
+    else:
+        ix = np.clip(((pts[:, 0] + extent) / O.CELL).astype(int), 0, n - 1)
+        iy = np.clip(((pts[:, 1] + extent) / O.CELL).astype(int), 0, n - 1)
+        flat = ix * n + iy
+        o = np.argsort(flat.astype(np.uint16), kind="stable")          # n * n = 3600
+        fs, zs = flat[o], pts[o, 2]
+        st = np.r_[0, np.flatnonzero(np.diff(fs)) + 1]
+        grid = np.full(n * n, np.inf)
+        grid[fs[st]] = np.minimum.reduceat(zs, st)
+        grid = grid.reshape(n, n)
     fill = np.nanmedian(grid[np.isfinite(grid)]) if np.isfinite(grid).any() else -1.7
     grid[~np.isfinite(grid)] = fill + 5.0
     return minimum_filter(grid, size=5, mode="nearest")[ix, iy]
@@ -138,6 +161,9 @@ VOX = 0.1              # m: voxel of the reduced clustering (v3.1; 0 = the exact
 
 def _cluster_vox(xyz, e0, min_pts, vox):
     """Euclidean clusters of the voxel centroids (link radius e0), mapped back to the points; clusters with < min_pts POINTS dropped."""
+    if USE_NUMBA:
+        from lidar import fast_nb
+        return fast_nb.cluster_vox_nb(np.ascontiguousarray(xyz, np.float64), float(e0), int(min_pts), float(vox))
     q = np.floor(xyz / vox).astype(np.int64)
     key = (q[:, 0] + 4096) * 16777216 + (q[:, 1] + 4096) * 4096 + (q[:, 2] + 64)
     _, inv = np.unique(key, return_inverse=True)
@@ -179,6 +205,12 @@ class ImgFast(B.Img):
     """lidar.background.Img with the nearest-return images from one 16-bit radix sort instead of two float argsorts (identical arrays)."""
 
     def __init__(self, pts, edges):
+        if USE_NUMBA:
+            from lidar import fast_nb
+            cnt, amin, nmin = fast_nb.img_nb(np.ascontiguousarray(pts, np.float32), np.asarray(edges, np.float64), B.R_LO, B.R_HI, B.NAZ, B.NK,
+                                             B.BIG, B.GROUND_Z)
+            self.cnt, self.amin, self.nmin = cnt.reshape(B.NK, B.NAZ), amin.reshape(B.NK, B.NAZ), nmin.reshape(B.NK, B.NAZ)
+            return
         x, y, z = pts[:, 0].astype(np.float64), pts[:, 1].astype(np.float64), pts[:, 2].astype(np.float64)
         rho = np.hypot(x, y)
         keep = (rho >= B.R_LO) & (rho <= B.R_HI)

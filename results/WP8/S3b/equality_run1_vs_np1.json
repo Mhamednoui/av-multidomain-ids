@@ -1,0 +1,28 @@
+{
+ "numba": "run1",
+ "numpy": "np1",
+ "all_scans": {
+  "n": 2085,
+  "alarm_differences": 0,
+  "max_abs_diff_L1": 0.0,
+  "max_abs_diff_L2a": 0.0,
+  "max_abs_diff_L2c": 0.0,
+  "max_abs_diff_L2d": 0.0,
+  "max_abs_diff_stat": 0.0,
+  "max_abs_diff_score": 0.0,
+  "max_abs_diff_all": 0.0,
+  "met": true
+ },
+ "first_1113_scans": {
+  "n": 1113,
+  "alarm_differences": 0,
+  "max_abs_diff_L1": 0.0,
+  "max_abs_diff_L2a": 0.0,
+  "max_abs_diff_L2c": 0.0,
+  "max_abs_diff_L2d": 0.0,
+  "max_abs_diff_stat": 0.0,
+  "max_abs_diff_score": 0.0,
+  "max_abs_diff_all": 0.0,
+  "met": true
+ }
+}

@@ -1,0 +1,41 @@
+{
+ "tag": "run1",
+ "note": "",
+ "numba": true,
+ "n_scans": 2085,
+ "warmup_s": 0.5604614999999997,
+ "push_ms": {
+  "median": 75.76439999999707,
+  "mean": 79.32910834532377,
+  "p90": 97.61693999999892,
+  "p99": 109.57421599999796,
+  "max": 128.06520000000177
+ },
+ "python_processes_sampled": [
+  1,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2,
+  2
+ ],
+ "own_process_included": true,
+ "vs_S3_scores": {
+  "n_compared": 2075,
+  "alarm_differences": 8,
+  "max_abs_diff_raw": 0.523410388586282,
+  "max_abs_diff_stat": 0.37938418393529594,
+  "max_abs_diff_score": 0.5607807593491294
+ },
+ "rule_L1": {
+  "median<=100ms": true,
+  "p99<=250ms": true
+ },
+ "equality_met": false
+}
