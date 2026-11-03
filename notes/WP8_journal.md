@@ -14,3 +14,26 @@
 2026-11-03T16:54:44+01:00 | S0 | run test suite tests/run_tests.py, log results/WP8/logs/S0_tests.log | -
 2026-11-03T16:56:57+01:00 | S0 | tests 484 passed / 0 failed / 3 skipped; report reports/WP8_S0.md, brief, STATUS S0 -> REVIEW | committed, stop
 2026-11-03T01:00 | ORCH | S0 approved, amendments in notes/WP8_v31.md; S1, S3, S5 launched | -
+2026-11-03T16:58 | S3 | worker start: reading context (WP3 brief, S9, M1_LiDAR) | next: understand lidar code
+2026-11-03T16:58:40+01:00 | S5 | worker start: reading briefs/code | next: CAN runner
+2026-11-03T17:02:26+01:00 | S1 | worker start (haiku): read RULES 3/3.4, WP8 plan, S1 list, locks, S0 remote lists; Decision 3 pre-check: V31_val civic_chunk3 has 21 Civic routes (dongle 99c94dc769b5d96e) | writing tools/WP8_S1_fetch.py (range fetch + per-member CRC, resumable), then run
+2026-11-03T17:02:56+01:00 | S3 | profiled v3 domain (1.16 s/scan: ring assign x3 ~0.9 s, object rows 0.1 s, pair 0.05); writing lidar/fast.py (shared assign, labels without object table) | next: stats equality test vs v3
+2026-11-03T17:03:05+01:00 | S5 | wrote can/incremental.py + tools/WP8_S5_can.py; smoke test on fuzzing_attack_2 | then full val run
+2026-11-03T17:03:13+01:00 | S1 | start fetch calib_2011_09_26 calib_2011_09_29 calib_2011_09_30 calib_2011_10_03 | running
+2026-11-03T17:03:13+01:00 | S1 | before calib_2011_09_26 | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_calib.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31\calib\2011_09_26 | downloading (resumable)
+2026-11-03T17:03:13+01:00 | S1 | STOP calib_2011_09_26 | zip size 4068 differs from list 4100
+2026-11-03T17:03:16+01:00 | S5 | smoke exact (0 diff); launching full val run: tools/WP8_S5_can.py, log results/WP8/logs/S5_can_val.log | resumable (parts)
+2026-11-03T17:03:33+01:00 | S1 | DECISION: calib zips STOPPED (list says 4100 B, server Content-Length 4068 for 2011_09_26; 4071/4073/4075 for the other days): list sizes are estimates, not substituted; zips kept unextracted, no lock change; reported to orchestrator | launching KITTI drives and comma chunks + V2AIX in background (logs results/WP8/logs/S1_kitti.log, S1_comma.log)
+2026-11-03T17:03:34+01:00 | S1 | start fetch Chunk_2 Chunk_4 Chunk_3 v2aix_h31 | running
+2026-11-03T17:03:34+01:00 | S1 | before Chunk_2 | 7074 members, 1.368 GB on disk, 367.2 MB transfer | https://huggingface.co/datasets/commaai/comma2k19/resolve/main/raw_data/Chunk_2.zip -> C:\Users\nouir\PFE\data_extra\D22_comma2k19\Chunk_2 | fetching (range requests)
+2026-11-03T17:03:34+01:00 | S1 | start fetch 2011_09_26_drive_0009 2011_09_26_drive_0023 2011_09_26_drive_0032 2011_09_26_drive_0056 2011_09_26_drive_0061 2011_09_26_drive_0064 2011_09_26_drive_0084 2011_09_26_drive_0093 2011_09_26_drive_0101 2011_09_29_drive_0004 2011_09_29_drive_0026 2011_09_30_drive_0016 2011_10_03_drive_0047 | running
+2026-11-03T17:03:34+01:00 | S1 | before 2011_09_26_drive_0009 | 895 members, 0.823 GB on disk, 822.6 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0009/2011_09_26_drive_0009_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T17:06:27+01:00 | S5 | CAN val run finished? check; v2x/ego_stream.py + tools/WP8_S5_v2x.py written, smoke next (--max-v2aix 2)
+2026-11-03T17:06:35+01:00 | S1 | KITTI run stopped by worker (own process) to split into 3 parallel processes (per-connection rate ~1.5-2 MB/s); each drive resumes per member | launching kitti A/B/C, logs results/WP8/logs/S1_kitti_A|B|C.log
+2026-11-03T17:06:35+01:00 | S1 | start fetch 2011_09_26_drive_0061 2011_09_26_drive_0064 2011_09_26_drive_0093 2011_09_29_drive_0004 | running
+2026-11-03T17:06:35+01:00 | S1 | start fetch 2011_09_26_drive_0009 2011_09_26_drive_0023 2011_09_26_drive_0032 2011_09_26_drive_0056 2011_09_26_drive_0084 2011_09_26_drive_0026 | running
+2026-11-03T17:06:35+01:00 | S1 | start fetch 2011_09_26_drive_0101 2011_09_30_drive_0016 2011_10_03_drive_0047 | running
+2026-11-03T17:06:35+01:00 | S1 | before 2011_09_26_drive_0061 | 1411 members, 1.386 GB on disk, 1386.1 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0061/2011_09_26_drive_0061_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T17:06:35+01:00 | S1 | before 2011_09_26_drive_0101 | 1877 members, 1.731 GB on disk, 1730.6 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0101/2011_09_26_drive_0101_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T17:06:35+01:00 | S1 | before 2011_09_26_drive_0009 | 895 members, 0.823 GB on disk, 822.6 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0009/2011_09_26_drive_0009_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T17:07:22+01:00 | S5 | CAN val done (11 captures, see parts); V2X smoke exact; launching full V2X then CAN long (timing growth): log results/WP8/logs/S5_v2x_long.log
