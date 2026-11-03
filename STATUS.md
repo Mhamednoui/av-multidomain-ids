@@ -37,7 +37,7 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 | M0 foundation | closed 2026-10-19 |
 | M1 GPS / CAN / LiDAR / NET / V2X | ALL CLOSED PARTIAL (last: LiDAR 2026-10-25) |
 | M2 cross-domain + fusion | closed NOT MET 2026-10-24; addendum S5b 2026-10-25 also NOT MET (3/7 rules) |
-| M3 system | open |
+| M3 system | closed NOT MET 2026-10-25 (8/12 rows) |
 | M4 publication | open (needs the user's approval) |
 
 ## Supervisor decisions
