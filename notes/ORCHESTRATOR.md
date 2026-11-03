@@ -250,3 +250,10 @@ State:
 - Only WP7 S4 (publication) remains. User said: do NOT publish/push anything for now. Wait for the user's explicit decision.
 - No workers running, no Python processes left.
 - 2026-10-25: deleted regenerable caches (data_extra/cache_v3, WP2_S2..S7_cache) and the D11 zip (already extracted), about 16.6 GB. Scripts rebuild the caches on demand.
+
+## v3.1 (2026-11-03)
+User: "do v3.1, work with agents, follow old rules, optimise tokens/context, scalable, fail safe, log everything". Decisions: tag v3.0, branch v3.1, WP8 plan in workpackages/WP8_v31.md (crash-safety section binding). No pumping: validation-only tuning, ONE scoring on fresh hold-out H31 defined and locked in S0 before any work; domains without fresh material are labelled re-used test. Launched S0 (T4: design + pre-registration is the step with most leakage risk) and P1 (T2, re-analysis only) in parallel.
+
+## HANDOFF (v3.1, keep updated)
+- Resume: read STATUS.md v3.1 section + tail of notes/WP8_journal.md. Workers resume from journal + files on disk (SendMessage the same agent if this session is alive, else a fresh worker of the same tier told to continue from the journal).
+- Order: S0 -> S1 -> {S3,S4,S5} -> S6 -> S2 -> S7; P1 any time. Max 3 workers. No push/publication without the user.

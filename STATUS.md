@@ -43,3 +43,19 @@ States: `BLOCKED` (waits for another WP) Â· `TODO` (next step ready to assign) Â
 ## Supervisor decisions
 
 Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, user decisions).
+
+## v3.1 (branch v3.1, WP8; plan: workpackages/WP8_v31.md; v3 frozen at tag v3.0)
+
+**v3.1 progress: 0 / 9 steps approved = 0%** (updated 2026-11-03)
+
+| WP | Step | State | Assigned to | Date | Note |
+|---|---|---|---|---|---|
+| WP8 v3.1 | S0 | IN PROGRESS | worker opus (medium, T4) | 2026-11-03 | fresh hold-out H31 + pre-registered rules |
+| WP8 v3.1 | S1 | TODO | | | download H31 material |
+| WP8 v3.1 | S3 | TODO | | | LiDAR in-stack + speed |
+| WP8 v3.1 | S4 | TODO | | | network latency |
+| WP8 v3.1 | S5 | TODO | | | CAN windows + V2X single ego |
+| WP8 v3.1 | S6 | TODO | | | blame fixes |
+| WP8 v3.1 | S2 | TODO | | | fusion false alarms |
+| WP8 v3.1 | S7 | TODO | | | final H31 scoring, M4 |
+| WP8 v3.1 | P1 | IN PROGRESS | worker sonnet (medium, T2) | 2026-11-03 | paper curves / AUC from saved v3 outputs |
