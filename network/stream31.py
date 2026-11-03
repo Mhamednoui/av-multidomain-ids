@@ -40,8 +40,8 @@ STEP = l2a.TRW_STEP
 class RunningState:
     """Stateful part of the running statistics. push() returns (ports, hosts, n_brute, peak) of the arriving flow. Arrival order must be nondecreasing in tick."""
 
-    def __init__(self, tick_s=60.0, w_scan=1, w_brute=1, trw_bin=5, sweep_every=200_000):
-        self.tick_s, self.w_scan, self.w_brute, self.trw_bin, self.sweep_every = float(tick_s), int(w_scan), int(w_brute), int(trw_bin), sweep_every
+    def __init__(self, tick_s=60.0, w_scan=1, w_brute=1, trw_bin=5, sweep_every=200_000, carry=False):
+        self.tick_s, self.w_scan, self.w_brute, self.trw_bin, self.sweep_every, self.carry = float(tick_s), int(w_scan), int(w_brute), int(trw_bin), sweep_every, bool(carry)
         self.reset()
 
     def reset(self):
@@ -54,6 +54,9 @@ class RunningState:
         self.last_q = None
         self.out_of_order = 0
         self.n = 0
+        self.cur_q = None
+        self.cur = ({}, {}, {}, {})       # carry: own-statistic peaks of the current tick, by key (ports, hosts, brute, trw)
+        self.prev = ({}, {}, {}, {})      # ... of the previous tick
 
     # ------------------------------------------------------------------ distinct-item window
     @staticmethod
@@ -134,15 +137,28 @@ class RunningState:
                 w[0] += STEP if failed else -STEP
                 if w[0] > w[1]:
                     w[1] = w[0]
-        return n_ports, n_hosts, n_br, w[1]
+        if not self.carry:
+            return n_ports, n_hosts, n_br, w[1]
+        if q != self.cur_q:
+            self.prev = self.cur if self.cur_q is not None and q == self.cur_q + 1 else ({}, {}, {}, {})
+            self.cur, self.cur_q = ({}, {}, {}, {}), q
+        own = (n_ports, n_hosts, n_br, w[1])
+        keys = ((src, dst), src, c, src)
+        out = []
+        for j in range(4):
+            cj = self.cur[j]
+            if own[j] > cj.get(keys[j], -1.0):
+                cj[keys[j]] = own[j]
+            out.append(max(own[j], self.prev[j].get(keys[j], 0.0)))
+        return tuple(out)
 
 
 class Stream31:
     """Running-statistic network domain (stack H). Build with Stream31.from_frozen(NetworkDomain.load(...)), then calibrate(benign_val_table), then push(flow) / score_table(table)."""
 
-    def __init__(self, scan, brute, tcp, tick_s=60.0, w_scan=1, w_brute=1, trw_bin=5, budget=BUDGET_DOMAIN):
+    def __init__(self, scan, brute, tcp, tick_s=60.0, w_scan=1, w_brute=1, trw_bin=5, carry=False, budget=BUDGET_DOMAIN):
         self.scan, self.brute, self.tcp = scan, brute, tcp
-        self.params = dict(tick_s=tick_s, w_scan=w_scan, w_brute=w_brute, trw_bin=trw_bin)
+        self.params = dict(tick_s=tick_s, w_scan=w_scan, w_brute=w_brute, trw_bin=trw_bin, carry=carry)
         self.state = RunningState(**self.params)
         self.budget = budget
         self.cal, self.thr, self.comb_thr = {}, {}, None
@@ -265,7 +281,7 @@ class Stream31:
 
 
 # ====================================================================== independent reference (quadratic, tests only)
-def reference_running(rows, tick_s=60.0, w_scan=1, w_brute=1, trw_bin=5):
+def reference_running(rows, tick_s=60.0, w_scan=1, w_brute=1, trw_bin=5, carry=False):
     """Direct definition of the running counts, O(n^2), written independently of RunningState. rows: list of (t, src, dst, port, proto, fwd, bwd, lenf, lenb) in arrival order.
     Returns a list of (n_ports, n_hosts, n_brute, peak)."""
     out = []
@@ -299,4 +315,13 @@ def reference_running(rows, tick_s=60.0, w_scan=1, w_brute=1, trw_bin=5):
                 walk += STEP if failed else -STEP
                 peak = max(peak, walk)
         out.append((len(ports), len(hosts), nb, peak))
-    return out
+    if not carry:
+        return out
+    # carry: statistic = max(own, peak of the own statistic of the same key over the flows of the PREVIOUS tick)
+    res = []
+    for i, r in enumerate(rows):
+        _, src, dst, port, proto = r[:5]
+        keys = ((src, dst), src, (src, dst, port, proto), src)
+        pk = lambda j, k: max([out[m][j] for m in range(i) if qs[m] == qs[i] - 1 and ((rows[m][1], rows[m][2]), rows[m][1], tuple(rows[m][1:5]), rows[m][1])[j] == k] or [0.0])
+        res.append(tuple(max(out[i][j], pk(j, keys[j])) for j in range(4)))
+    return res

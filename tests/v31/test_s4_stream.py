@@ -35,6 +35,17 @@ def test_running_equals_reference():
         assert [tuple(g) for g in got] == [tuple(r) for r in ref], (seed, w_scan, w_brute, trw_bin)
 
 
+def test_running_carry_equals_reference():
+    for seed, (w_scan, w_brute, trw_bin) in enumerate([(1, 1, 5), (1, 1, 1), (2, 3, 2)]):
+        rows = _rows(20 + seed, n=400, ticks=12)
+        ref = reference_running(rows, 60.0, w_scan, w_brute, trw_bin, carry=True)
+        st = RunningState(60.0, w_scan, w_brute, trw_bin, sweep_every=29, carry=True)
+        got = [st.push(int(r[0] // 60), *r[1:]) for r in rows]
+        assert [tuple(g) for g in got] == [tuple(r) for r in ref], (seed, w_scan, w_brute, trw_bin)
+        base = reference_running(rows, 60.0, w_scan, w_brute, trw_bin)
+        assert all(a[j] >= b[j] for a, b in zip(got, base) for j in range(4))        # carry never lowers a statistic
+
+
 def _table(rows, W=1):
     d = pd.DataFrame(rows, columns=["t", "src_id", "dst_id", "dst_port", "protocol", "Tot Fwd Pkts", "Tot Bwd Pkts", "TotLen Fwd Pkts", "TotLen Bwd Pkts"])
     d["minute"] = (d["t"] // 60).astype("int64")
