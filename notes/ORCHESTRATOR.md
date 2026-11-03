@@ -269,3 +269,4 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
 | 2026-11-03 | WP8 | S1 | APPROVED. 17.3 GB (KITTI 13 drives, comma Chunk_2/3/4, V2AIX 674 rec. extracted, calib), hashes match locks; calib sizes corrected to server values (S0 estimate); no Civic move needed. 6/10. |
 | 2026-11-03 | WP8 | S3b | APPROVED. numba kernels: median 73-76 ms, p99 110-135 ms (L1 met), 0 alarm diffs / max diff 0.0 vs numpy path on 2,085 val scans. S2/S7 must enable set_numba(True). 7/10. |
 | 2026-11-03 | WP9 | - | User: needs "solid IDS, good detection, one of the best" by 2026-11-30. Decision: add benchmark track WP9 (standard datasets, seen attack types, leak-free splits, test once) next to the zero-shot results; B0 literature bar first. No leaky numbers. |
+- 2026-11-03 running: S6 agent a47db614755578e49 (sonnet high), WP9 B0 agent a3025ccebef6551ed (sonnet medium). Next: S2 after S6; B1-B4 after B0 (max 3 workers).
