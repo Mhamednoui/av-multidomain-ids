@@ -105,3 +105,4 @@
 2026-11-03T18:23:38+01:00 | S1 | after 2011_09_26_drive_0084 | written 771, already present 0, http bytes 728.0 MB, 1014 s | files on disk; manifest next
 2026-11-03T18:23:42+01:00 | S1 | manifest 2011_09_26_drive_0084 | 771 files, 0.725 GB, manifest_sha256 dede20a1d0a43124097a6600fea8a29611940aebdfe301ce72b4747a2ace7b1f | written to results/WP8/S1/items
 2026-11-03T18:24:03+01:00 | S3 | done: report reports/WP8_S3.md, brief, STATUS S3 -> REVIEW, suite 514 pass, run_all --check OK | committing, stop
+2026-11-03T18:30 | ORCH | S3 approved; S3b + S6 launched; decisions in notes/WP8_v31.md | S1 downloading
