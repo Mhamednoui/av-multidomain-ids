@@ -1,0 +1,32 @@
+{
+ "windows_batch": 444,
+ "windows_inc": 444,
+ "id_mismatch": 0,
+ "alarm_mismatch": 0,
+ "reason_mismatch": 0,
+ "t_mismatch": 0,
+ "max_abs_diff": 0.0,
+ "detail_mismatch": 0,
+ "motion_batch": 444,
+ "motion_inc": 444,
+ "motion_max_diff": 0.0,
+ "motion_mismatch": 0,
+ "name": "ambient_dyno_drive_basic_short",
+ "frames": 1063624,
+ "seconds": 444.75060999393463,
+ "t_batch_s": 0.9596960544586182,
+ "t_inc_total_s": 45.082706928253174,
+ "window_ms": {
+  "median": 21.310599999999624,
+  "p99": 34.61111000000071,
+  "max": 50.547800000000365
+ },
+ "p99_s": 0.03461111000000071,
+ "growth": {
+  "p99_before_100k_ms": 30.46560300000023,
+  "p99_after_600k_ms": 29.396028000000598,
+  "ratio": 0.9648923738683385,
+  "n_early": 40,
+  "n_late": 194
+ }
+}

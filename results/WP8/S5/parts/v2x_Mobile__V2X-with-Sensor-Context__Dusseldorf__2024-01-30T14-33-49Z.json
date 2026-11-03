@@ -1,0 +1,52 @@
+{
+ "messages": 120,
+ "stream_s": 59.487502336502075,
+ "compute_s": 0.5050106000000056,
+ "compute_per_stream_s": 0.008489356254080389,
+ "msg_ms": {
+  "median": 4.04814999999914,
+  "p99": 8.151861000000979,
+  "max": 10.344599999999815
+ },
+ "push_ms_p99": 7.844200000000507,
+ "raw_mismatch": {
+  "v2x.beacon_rate": 2,
+  "v2x.field_ranges": 0,
+  "v2x.pos_speed": 2,
+  "v2x.pos_heading": 0,
+  "v2x.speed_change": 2,
+  "v2x.implied_speed": 2,
+  "v2x.heading_rate": 0,
+  "v2x.accel_consistency": 2,
+  "v2x.overlap": 0,
+  "v2x.kf_nis": 2,
+  "v2x.kf_cusum_hi": 2,
+  "v2x.track_birth": 0
+ },
+ "raw_mismatch_total": 14,
+ "mismatch_rows": 2,
+ "mismatch_rows_unexplained": 0,
+ "raw_max_abs_diff": {
+  "v2x.beacon_rate": 99.47089946269989,
+  "v2x.field_ranges": 0.0,
+  "v2x.pos_speed": 0.09920394420623779,
+  "v2x.pos_heading": 0.0,
+  "v2x.speed_change": 0.22411344945430756,
+  "v2x.implied_speed": 0.03421587869524956,
+  "v2x.heading_rate": 0.0,
+  "v2x.accel_consistency": 0.6571428775787354,
+  "v2x.overlap": 0.0,
+  "v2x.kf_nis": 8.320313453674316,
+  "v2x.kf_cusum_hi": 32.25465774536133,
+  "v2x.track_birth": 0.0
+ },
+ "evidence_score_max_abs_diff": 0.0650576734850643,
+ "evidence_alarm_mismatch": 1,
+ "evidence_layer_or_reason_mismatch": 4,
+ "ties": 0,
+ "reordered": 1,
+ "ctx_rows_median": 1.0,
+ "alarms": 101,
+ "source": "v2aix",
+ "ego": "Mobile/V2X-with-Sensor-Context/Dusseldorf/2024-01-30T14-33-49Z"
+}

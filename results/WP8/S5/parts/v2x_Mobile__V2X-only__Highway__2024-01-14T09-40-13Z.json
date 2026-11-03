@@ -1,0 +1,52 @@
+{
+ "messages": 56,
+ "stream_s": 14.684400796890259,
+ "compute_s": 0.27013329999999414,
+ "compute_per_stream_s": 0.0183959361867323,
+ "msg_ms": {
+  "median": 3.9576999999990647,
+  "p99": 7.7984350000015485,
+  "max": 8.218800000001636
+ },
+ "push_ms_p99": 7.296140000000054,
+ "raw_mismatch": {
+  "v2x.beacon_rate": 0,
+  "v2x.field_ranges": 0,
+  "v2x.pos_speed": 0,
+  "v2x.pos_heading": 0,
+  "v2x.speed_change": 0,
+  "v2x.implied_speed": 0,
+  "v2x.heading_rate": 0,
+  "v2x.accel_consistency": 0,
+  "v2x.overlap": 0,
+  "v2x.kf_nis": 0,
+  "v2x.kf_cusum_hi": 0,
+  "v2x.track_birth": 0
+ },
+ "raw_mismatch_total": 0,
+ "mismatch_rows": 0,
+ "mismatch_rows_unexplained": 0,
+ "raw_max_abs_diff": {
+  "v2x.beacon_rate": 0.0,
+  "v2x.field_ranges": 0.0,
+  "v2x.pos_speed": 0.0,
+  "v2x.pos_heading": 0.0,
+  "v2x.speed_change": 0.0,
+  "v2x.implied_speed": 0.0,
+  "v2x.heading_rate": 0.0,
+  "v2x.accel_consistency": 0.0,
+  "v2x.overlap": 0.0,
+  "v2x.kf_nis": 0.0,
+  "v2x.kf_cusum_hi": 0.0,
+  "v2x.track_birth": 0.0
+ },
+ "evidence_score_max_abs_diff": 0.0,
+ "evidence_alarm_mismatch": 0,
+ "evidence_layer_or_reason_mismatch": 0,
+ "ties": 0,
+ "reordered": 0,
+ "ctx_rows_median": 1.0,
+ "alarms": 56,
+ "source": "v2aix",
+ "ego": "Mobile/V2X-only/Highway/2024-01-14T09-40-13Z"
+}

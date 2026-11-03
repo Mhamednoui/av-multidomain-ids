@@ -1,0 +1,66 @@
+[
+ {
+  "windows_batch": 1250,
+  "windows_inc": 1250,
+  "id_mismatch": 0,
+  "alarm_mismatch": 0,
+  "reason_mismatch": 0,
+  "t_mismatch": 0,
+  "max_abs_diff": 0.0,
+  "detail_mismatch": 0,
+  "motion_batch": 1250,
+  "motion_inc": 1250,
+  "motion_max_diff": 0.0,
+  "motion_mismatch": 0,
+  "name": "ambient_dyno_drive_basic_long",
+  "frames": 2991272,
+  "seconds": 1250.9435288906097,
+  "t_batch_s": 3.0032687187194824,
+  "t_inc_total_s": 122.56373310089111,
+  "window_ms": {
+   "median": 21.06429999997772,
+   "p99": 28.65675999993982,
+   "max": 36.62259999998696
+  },
+  "p99_s": 0.02865675999993982,
+  "growth": {
+   "p99_before_100k_ms": 24.287186000011616,
+   "p99_after_600k_ms": 28.806393999931284,
+   "ratio": 1.186073759220912,
+   "n_early": 40,
+   "n_late": 1000
+  }
+ },
+ {
+  "windows_batch": 3740,
+  "windows_inc": 3740,
+  "id_mismatch": 0,
+  "alarm_mismatch": 0,
+  "reason_mismatch": 0,
+  "t_mismatch": 0,
+  "max_abs_diff": 0.0,
+  "detail_mismatch": 0,
+  "motion_batch": 3764,
+  "motion_inc": 3764,
+  "motion_max_diff": 0.0,
+  "motion_mismatch": 0,
+  "name": "ambient_highway_street_driving_long",
+  "frames": 8821916,
+  "seconds": 3764.3175909519196,
+  "t_batch_s": 19.312691688537598,
+  "t_inc_total_s": 367.25762367248535,
+  "window_ms": {
+   "median": 21.143199999983153,
+   "p99": 30.32484199999797,
+   "max": 50.362099999986754
+  },
+  "p99_s": 0.03032484199999797,
+  "growth": {
+   "p99_before_100k_ms": 33.508485000001755,
+   "p99_after_600k_ms": 30.4256319999979,
+   "ratio": 0.9079978399499802,
+   "n_early": 40,
+   "n_late": 3489
+  }
+ }
+]

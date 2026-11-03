@@ -66,12 +66,12 @@ def run_ego(dom, df, batch_raws, use_recv, clock):
         lay_mis += int(e1.details["layer_scores"] != e2.details["layer_scores"]) + int(e1.reason != e2.reason)
     bad_rows = np.flatnonzero(np.any([raw[c] != np.asarray(batch_raws[c], np.float32) for c in LAYER_NAMES], axis=0))
     trk = df["track"].to_numpy()
-    expl = set()                                  # a message older than the previous one of its track: batch sorts by t (needs the future); explained rows = it and the next message of that track
+    expl = set()                                  # a message older than the previous one of its track: batch sorts by t (needs the future); explained rows = it and the message of that track received just before it
     for i, tr in es.reordered_rows:
         expl.add(i)
-        nxt = np.flatnonzero(trk[i + 1:] == tr)
-        if len(nxt):
-            expl.add(i + 1 + int(nxt[0]))
+        before = np.flatnonzero(trk[:i] == tr)          # in t order the late message sits before the message received just ahead of it
+        if len(before):
+            expl.add(int(before[-1]))
     unexplained = int(sum(1 for i in bad_rows if i not in expl))
     d_raw = {c: float(np.max(np.abs(raw[c].astype(np.float64) - np.asarray(batch_raws[c], np.float64)))) for c in LAYER_NAMES}
     mism = {c: int((raw[c] != np.asarray(batch_raws[c], np.float32)).sum()) for c in LAYER_NAMES}

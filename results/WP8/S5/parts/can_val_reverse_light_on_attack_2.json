@@ -1,0 +1,25 @@
+{
+ "windows_batch": 72,
+ "windows_inc": 72,
+ "id_mismatch": 0,
+ "alarm_mismatch": 0,
+ "reason_mismatch": 0,
+ "t_mismatch": 0,
+ "max_abs_diff": 0.0,
+ "detail_mismatch": 0,
+ "motion_batch": 72,
+ "motion_inc": 72,
+ "motion_max_diff": 0.0,
+ "motion_mismatch": 0,
+ "name": "reverse_light_on_attack_2",
+ "frames": 175945,
+ "seconds": 72.02090501785278,
+ "t_batch_s": 0.16154146194458008,
+ "t_inc_total_s": 8.219220638275146,
+ "window_ms": {
+  "median": 22.250999999997134,
+  "p99": 37.85534000000439,
+  "max": 39.285300000003076
+ },
+ "p99_s": 0.03785534000000439
+}

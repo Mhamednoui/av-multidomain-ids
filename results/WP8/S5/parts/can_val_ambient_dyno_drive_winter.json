@@ -1,0 +1,25 @@
+{
+ "windows_batch": 47,
+ "windows_inc": 47,
+ "id_mismatch": 0,
+ "alarm_mismatch": 0,
+ "reason_mismatch": 0,
+ "t_mismatch": 0,
+ "max_abs_diff": 0.0,
+ "detail_mismatch": 0,
+ "motion_batch": 47,
+ "motion_inc": 47,
+ "motion_max_diff": 0.0,
+ "motion_mismatch": 0,
+ "name": "ambient_dyno_drive_winter",
+ "frames": 114148,
+ "seconds": 47.73052203655243,
+ "t_batch_s": 0.1050112247467041,
+ "t_inc_total_s": 4.692079305648804,
+ "window_ms": {
+  "median": 20.923299999999756,
+  "p99": 28.726514999999253,
+  "max": 28.829700000002845
+ },
+ "p99_s": 0.02872651499999925
+}

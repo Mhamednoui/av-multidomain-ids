@@ -1,0 +1,92 @@
+{
+ "C1": {
+  "captures_val": 11,
+  "captures_long_train": 2,
+  "windows_compared": 5892,
+  "frames": 13994219,
+  "mismatches": 0,
+  "max_abs_diff": 0.0,
+  "met": true
+ },
+ "C2": {
+  "p99_ms_per_capture": {
+   "ambient_dyno_drive_basic_short": 34.61,
+   "ambient_dyno_drive_winter": 28.73,
+   "correlated_signal_attack_2": 27.98,
+   "correlated_signal_attack_2_masquerade": 30.07,
+   "fuzzing_attack_2": 33.98,
+   "max_speedometer_attack_2": 40.81,
+   "max_speedometer_attack_2_masquerade": 38.35,
+   "reverse_light_off_attack_2": 23.71,
+   "reverse_light_off_attack_2_masquerade": 24.07,
+   "reverse_light_on_attack_2": 37.86,
+   "reverse_light_on_attack_2_masquerade": 28.2,
+   "ambient_dyno_drive_basic_long": 28.66,
+   "ambient_highway_street_driving_long": 30.32
+  },
+  "max_p99_ms": 40.81006900000233,
+  "growth": {
+   "ambient_dyno_drive_basic_long": {
+    "p99_before_100k_ms": 24.287186000011616,
+    "p99_after_600k_ms": 28.806393999931284,
+    "ratio": 1.186073759220912,
+    "n_early": 40,
+    "n_late": 1000
+   },
+   "ambient_highway_street_driving_long": {
+    "p99_before_100k_ms": 33.508485000001755,
+    "p99_after_600k_ms": 30.4256319999979,
+    "ratio": 0.9079978399499802,
+    "n_early": 40,
+    "n_late": 3489
+   }
+  },
+  "longest_capture": "ambient_highway_street_driving_long",
+  "met": true,
+  "v3_reference": "v3 prefix re-score: 0.14 s median below 100k frames, 2.3 s above 600k frames (reports/WP7_S2.md)"
+ },
+ "V1": {
+  "veremi": {
+   "egos": 9,
+   "messages": 1374,
+   "stream_s_total": 749.1554330964555,
+   "compute_per_stream_s_max": 0.016283389561586963,
+   "compute_per_stream_s_p95": 0.013726308453933312,
+   "share_egos_le_0.5": 1.0,
+   "egos_with_span_lt_5s": 0,
+   "egos_le_0.5_unfloored": 1.0,
+   "msg_ms_p99_max": 7.261366000000743,
+   "msg_ms_median": 3.5930999999997937,
+   "raw_mismatch_rows": 0,
+   "raw_mismatch_rows_unexplained": 0,
+   "reordered_messages": 0,
+   "egos_with_reordered": 0,
+   "ties": 0,
+   "evidence_alarm_mismatch": 0,
+   "evidence_score_max_abs_diff_exact_egos": 0.0,
+   "egos_exactly_identical": 9
+  },
+  "v2aix": {
+   "egos": 55,
+   "messages": 5070,
+   "stream_s_total": 2203.295886516571,
+   "compute_per_stream_s_max": 0.026593147394200406,
+   "compute_per_stream_s_p95": 0.023254129744212555,
+   "share_egos_le_0.5": 1.0,
+   "egos_with_span_lt_5s": 13,
+   "egos_le_0.5_unfloored": 0.9636363636363636,
+   "msg_ms_p99_max": 10.553299000000859,
+   "msg_ms_median": 3.7298000000021148,
+   "raw_mismatch_rows": 6,
+   "raw_mismatch_rows_unexplained": 0,
+   "reordered_messages": 3,
+   "egos_with_reordered": 3,
+   "ties": 16,
+   "evidence_alarm_mismatch": 13,
+   "evidence_score_max_abs_diff_exact_egos": 0.0,
+   "egos_exactly_identical": 52
+  },
+  "met": true,
+  "strict_zero_mismatch_met": false
+ }
+}

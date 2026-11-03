@@ -1,0 +1,52 @@
+{
+ "messages": 37,
+ "stream_s": 34.94655776023865,
+ "compute_s": 0.1808276999999947,
+ "compute_per_stream_s": 0.005174406625127929,
+ "msg_ms": {
+  "median": 4.351199999998556,
+  "p99": 9.326248000000561,
+  "max": 9.369700000000591
+ },
+ "push_ms_p99": 8.742344000000202,
+ "raw_mismatch": {
+  "v2x.beacon_rate": 2,
+  "v2x.field_ranges": 0,
+  "v2x.pos_speed": 2,
+  "v2x.pos_heading": 2,
+  "v2x.speed_change": 0,
+  "v2x.implied_speed": 2,
+  "v2x.heading_rate": 2,
+  "v2x.accel_consistency": 2,
+  "v2x.overlap": 0,
+  "v2x.kf_nis": 2,
+  "v2x.kf_cusum_hi": 2,
+  "v2x.track_birth": 0
+ },
+ "raw_mismatch_total": 16,
+ "mismatch_rows": 2,
+ "mismatch_rows_unexplained": 0,
+ "raw_max_abs_diff": {
+  "v2x.beacon_rate": 99.4736841917038,
+  "v2x.field_ranges": 0.0,
+  "v2x.pos_speed": 0.2770567834377289,
+  "v2x.pos_heading": 0.014158079400658607,
+  "v2x.speed_change": 0.0,
+  "v2x.implied_speed": 0.4274027645587921,
+  "v2x.heading_rate": 0.0016138340579345822,
+  "v2x.accel_consistency": 0.20000000298023224,
+  "v2x.overlap": 0.0,
+  "v2x.kf_nis": 12.31196403503418,
+  "v2x.kf_cusum_hi": 2.824234962463379,
+  "v2x.track_birth": 0.0
+ },
+ "evidence_score_max_abs_diff": 4.07433600302376e-06,
+ "evidence_alarm_mismatch": 0,
+ "evidence_layer_or_reason_mismatch": 4,
+ "ties": 0,
+ "reordered": 1,
+ "ctx_rows_median": 1.0,
+ "alarms": 37,
+ "source": "v2aix",
+ "ego": "Mobile/V2X-only/Highway/2024-01-14T13-49-17Z"
+}

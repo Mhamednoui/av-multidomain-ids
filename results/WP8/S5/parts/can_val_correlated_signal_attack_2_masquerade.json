@@ -1,0 +1,25 @@
+{
+ "windows_batch": 28,
+ "windows_inc": 28,
+ "id_mismatch": 0,
+ "alarm_mismatch": 0,
+ "reason_mismatch": 0,
+ "t_mismatch": 0,
+ "max_abs_diff": 0.0,
+ "detail_mismatch": 0,
+ "motion_batch": 28,
+ "motion_inc": 28,
+ "motion_max_diff": 0.0,
+ "motion_mismatch": 0,
+ "name": "correlated_signal_attack_2_masquerade",
+ "frames": 67517,
+ "seconds": 28.226892948150635,
+ "t_batch_s": 0.10952472686767578,
+ "t_inc_total_s": 2.824125051498413,
+ "window_ms": {
+  "median": 21.0671999999974,
+  "p99": 30.06587000000407,
+  "max": 31.94840000000454
+ },
+ "p99_s": 0.03006587000000407
+}

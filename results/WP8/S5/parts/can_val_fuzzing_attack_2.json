@@ -1,0 +1,25 @@
+{
+ "windows_batch": 13,
+ "windows_inc": 13,
+ "id_mismatch": 0,
+ "alarm_mismatch": 0,
+ "reason_mismatch": 0,
+ "t_mismatch": 0,
+ "max_abs_diff": 0.0,
+ "detail_mismatch": 0,
+ "motion_batch": 13,
+ "motion_inc": 13,
+ "motion_max_diff": 0.0,
+ "motion_mismatch": 0,
+ "name": "fuzzing_attack_2",
+ "frames": 32351,
+ "seconds": 13.365329027175903,
+ "t_batch_s": 0.10355472564697266,
+ "t_inc_total_s": 1.6164453029632568,
+ "window_ms": {
+  "median": 22.16869999999993,
+  "p99": 33.98000099999987,
+  "max": 34.069199999999796
+ },
+ "p99_s": 0.033980000999999864
+}
