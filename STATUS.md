@@ -50,7 +50,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
-| WP8 v3.1 | S0 | IN PROGRESS | worker opus (medium, T4) | 2026-11-03 | fresh hold-out H31 + pre-registered rules |
+| WP8 v3.1 | S0 | REVIEW | worker opus (medium, T4) | 2026-11-03 | H31 + V31_val locked, rules pre-registered (notes/WP8_v31.md); reports/WP8_S0.md |
 | WP8 v3.1 | S1 | TODO | | | download H31 material |
 | WP8 v3.1 | S3 | TODO | | | LiDAR in-stack + speed |
 | WP8 v3.1 | S4 | TODO | | | network latency |
