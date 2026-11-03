@@ -1,0 +1,32 @@
+{
+ "domain": "gps",
+ "sources": "results/WP1/cache/s8_raw.pkl (raw layer scores, 7 KITTI test drives, 11,074 rows), results/WP1/frozen_gps (calibrators, noisy-or log, threshold), results/WP1/S8_dev.json (CUSUM selection); cross-check results/WP1/S8_kitti.json",
+ "unit": "row level (one GPS fix); positives = spoofed rows after onset, negatives = all label-0 rows (clean runs and pre-onset rows); groups = 7 test drives, bootstrap 1000 x over drives",
+ "check_vs_saved": {
+  "auc_here": 0.8952701665740905,
+  "auc_saved_S8_kitti": 0.8952701665740905,
+  "fa_rows_here": 0.011977840994160802,
+  "fa_rows_saved": 0.011977840994160802,
+  "row_det_here": {
+   "drift": 0.49147286821705427,
+   "accel_drift": 0.5613577023498695,
+   "jump": 1.0,
+   "freeze": 0.8721518987341772,
+   "doppler_spoof": 0.5648148148148148,
+   "meaconing": 0.6392757660167131
+  },
+  "row_det_saved": {
+   "drift": 0.49147286821705427,
+   "accel_drift": 0.5613577023498695,
+   "jump": 1.0,
+   "freeze": 0.8721518987341772,
+   "doppler_spoof": 0.5648148148148148,
+   "meaconing": 0.6392757660167131
+  }
+ },
+ "operating_point": {
+  "threshold_calibrated": 0.9899715539270046,
+  "fa_rows": 0.011977840994160802
+ },
+ "label": "re-analysis of v3 test outputs (no refit)"
+}

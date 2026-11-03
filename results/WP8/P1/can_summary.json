@@ -1,0 +1,8 @@
+{
+ "domain": "can",
+ "sources": "results/WP2/s3_road_windows_test_A.csv.gz, results/WP2/s3_carhacking_windows_test.csv.gz (S3 raw window tables: L1 rule columns + L2a skew); headline stack numbers from results/WP2/s7_test.json",
+ "unit": "1 s window; negatives = clean-capture windows (clean==True); positives = windows with y==1; groups = captures; bootstrap 1000 x over captures (clean and attack captures resampled within their own kind)",
+ "not_available": "final v3 stack scores (L3c per-signal predictors, L3d reverse-light rule; combiner max): only in deleted caches data_extra/WP2_S7_cache",
+ "operating_point": "none marked: the S3 table holds raw rule values, the v3 operating point of the stack is on L1+L3c+L3d (ROAD test: clean-window FA 3.20%, masquerade 5/5, plain 6/6; results/WP2/s7_test.json)",
+ "label": "re-analysis of v3 test outputs (no refit)"
+}

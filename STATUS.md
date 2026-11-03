@@ -58,4 +58,4 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP8 v3.1 | S6 | TODO | | | blame fixes |
 | WP8 v3.1 | S2 | TODO | | | fusion false alarms |
 | WP8 v3.1 | S7 | TODO | | | final H31 scoring, M4 |
-| WP8 v3.1 | P1 | IN PROGRESS | worker sonnet (medium, T2) | 2026-11-03 | paper curves / AUC from saved v3 outputs |
+| WP8 v3.1 | P1 | REVIEW | worker sonnet (medium, T2) | 2026-11-03 | paper curves / AUC from saved v3 outputs |

@@ -1,0 +1,6 @@
+{
+ "domain": "net",
+ "label": "re-analysis of v3 test outputs (no refit)",
+ "sources": "results/WP4/s7_d10.json",
+ "rows": 84
+}

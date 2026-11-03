@@ -1,0 +1,2349 @@
+set,curve,fpr,tpr
+ROAD test (run 1 table),raw_can.l1_id_allow,0.0,0.0
+ROAD test (run 1 table),raw_can.l1_id_allow,0.0,0.007633587786259555
+ROAD test (run 1 table),raw_can.l1_id_allow,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_id_allow,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_dlc,0.0,0.0
+ROAD test (run 1 table),raw_can.l1_dlc,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_dlc,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.0,0.0
+ROAD test (run 1 table),raw_can.l1_period,0.000689179875947632,0.0
+ROAD test (run 1 table),raw_can.l1_period,0.00344589937973816,0.0
+ROAD test (run 1 table),raw_can.l1_period,0.006202618883528577,0.0
+ROAD test (run 1 table),raw_can.l1_period,0.008959338387319105,0.0
+ROAD test (run 1 table),raw_can.l1_period,0.012405237767057153,0.0
+ROAD test (run 1 table),raw_can.l1_period,0.015161957270847681,0.0
+ROAD test (run 1 table),raw_can.l1_period,0.01791867677463821,0.0
+ROAD test (run 1 table),raw_can.l1_period,0.020675396278428626,0.003816793893129722
+ROAD test (run 1 table),raw_can.l1_period,0.020675396278428626,0.01908396946564883
+ROAD test (run 1 table),raw_can.l1_period,0.02205375603032389,0.026717557251908386
+ROAD test (run 1 table),raw_can.l1_period,0.024810475534114418,0.026717557251908386
+ROAD test (run 1 table),raw_can.l1_period,0.028256374913852467,0.026717557251908386
+ROAD test (run 1 table),raw_can.l1_period,0.031013094417642995,0.026717557251908386
+ROAD test (run 1 table),raw_can.l1_period,0.03376981392143352,0.026717557251908386
+ROAD test (run 1 table),raw_can.l1_period,0.03721571330117157,0.03053435114503822
+ROAD test (run 1 table),raw_can.l1_period,0.03928325292901447,0.03053435114503822
+ROAD test (run 1 table),raw_can.l1_period,0.042039972432804995,0.03053435114503822
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.03816793893129766
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.06106870229007633
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.0725190839694656
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.09160305343511455
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.10687022900763354
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.1297709923664122
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.13740458015267176
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.15267175572519087
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.17557251908396942
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.19465648854961837
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.2022900763358778
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.22137404580152675
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.23664122137404575
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.25190839694656486
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.2709923664122137
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.2862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.3015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.316793893129771
+ROAD test (run 1 table),raw_can.l1_period,0.04341833218470026,0.33587786259541985
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.34732824427480913
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.36259541984732824
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.38167938931297707
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.3969465648854962
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.4122137404580153
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.4274809160305344
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.44656488549618323
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.46183206106870234
+ROAD test (run 1 table),raw_can.l1_period,0.04410751206064778,0.47709923664122134
+ROAD test (run 1 table),raw_can.l1_period,0.04755341144038594,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_period,0.048931771192281204,0.4847328244274809
+ROAD test (run 1 table),raw_can.l1_period,0.048931771192281204,0.5
+ROAD test (run 1 table),raw_can.l1_period,0.048931771192281204,0.5152671755725191
+ROAD test (run 1 table),raw_can.l1_period,0.05168849069607162,0.5190839694656488
+ROAD test (run 1 table),raw_can.l1_period,0.05168849069607162,0.5343511450381679
+ROAD test (run 1 table),raw_can.l1_period,0.05237767057201925,0.5458015267175573
+ROAD test (run 1 table),raw_can.l1_period,0.05444521019986215,0.5534351145038168
+ROAD test (run 1 table),raw_can.l1_period,0.056512749827705044,0.5610687022900763
+ROAD test (run 1 table),raw_can.l1_period,0.05858028945554794,0.5610687022900763
+ROAD test (run 1 table),raw_can.l1_period,0.06133700895933836,0.5610687022900763
+ROAD test (run 1 table),raw_can.l1_period,0.06202618883528599,0.5763358778625954
+ROAD test (run 1 table),raw_can.l1_period,0.06409372846312889,0.5801526717557253
+ROAD test (run 1 table),raw_can.l1_period,0.06478290833907652,0.5916030534351144
+ROAD test (run 1 table),raw_can.l1_period,0.06478290833907652,0.6106870229007634
+ROAD test (run 1 table),raw_can.l1_period,0.06753962784286693,0.6145038167938932
+ROAD test (run 1 table),raw_can.l1_period,0.0689179875947622,0.6183206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.07236388697450036,0.6183206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.07512060647829089,0.6183206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.0778773259820813,0.6183206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.08063404548587183,0.6183206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.08132322536181946,0.633587786259542
+ROAD test (run 1 table),raw_can.l1_period,0.08270158511371473,0.6412213740458015
+ROAD test (run 1 table),raw_can.l1_period,0.08407994486560988,0.6488549618320612
+ROAD test (run 1 table),raw_can.l1_period,0.08752584424534804,0.6488549618320612
+ROAD test (run 1 table),raw_can.l1_period,0.09028256374913857,0.6488549618320612
+ROAD test (run 1 table),raw_can.l1_period,0.09303928325292898,0.6488549618320612
+ROAD test (run 1 table),raw_can.l1_period,0.09579600275671951,0.6488549618320612
+ROAD test (run 1 table),raw_can.l1_period,0.09855272226051004,0.6526717557251909
+ROAD test (run 1 table),raw_can.l1_period,0.10130944176430046,0.6526717557251909
+ROAD test (run 1 table),raw_can.l1_period,0.10337698139214335,0.6564885496183206
+ROAD test (run 1 table),raw_can.l1_period,0.10682288077188151,0.6603053435114503
+ROAD test (run 1 table),raw_can.l1_period,0.10820124052377667,0.6641221374045801
+ROAD test (run 1 table),raw_can.l1_period,0.11095796002756719,0.6641221374045801
+ROAD test (run 1 table),raw_can.l1_period,0.11302549965541009,0.66793893129771
+ROAD test (run 1 table),raw_can.l1_period,0.1157822191592005,0.6717557251908397
+ROAD test (run 1 table),raw_can.l1_period,0.11853893866299103,0.6717557251908397
+ROAD test (run 1 table),raw_can.l1_period,0.12060647829083393,0.6755725190839694
+ROAD test (run 1 table),raw_can.l1_period,0.12336319779462435,0.6793893129770993
+ROAD test (run 1 table),raw_can.l1_period,0.12474155754651961,0.6870229007633588
+ROAD test (run 1 table),raw_can.l1_period,0.12611991729841487,0.6946564885496183
+ROAD test (run 1 table),raw_can.l1_period,0.12818745692625777,0.7022900763358779
+ROAD test (run 1 table),raw_can.l1_period,0.1288766368022054,0.7137404580152672
+ROAD test (run 1 table),raw_can.l1_period,0.13163335630599582,0.7137404580152672
+ROAD test (run 1 table),raw_can.l1_period,0.13370089593383871,0.7175572519083969
+ROAD test (run 1 table),raw_can.l1_period,0.13507925568573398,0.7290076335877862
+ROAD test (run 1 table),raw_can.l1_period,0.13714679531357687,0.732824427480916
+ROAD test (run 1 table),raw_can.l1_period,0.13921433494141966,0.7366412213740459
+ROAD test (run 1 table),raw_can.l1_period,0.14266023432115782,0.7366412213740459
+ROAD test (run 1 table),raw_can.l1_period,0.14610613370089598,0.7366412213740459
+ROAD test (run 1 table),raw_can.l1_period,0.14748449345279113,0.7404580152671756
+ROAD test (run 1 table),raw_can.l1_period,0.14955203308063403,0.7442748091603053
+ROAD test (run 1 table),raw_can.l1_period,0.1529979324603722,0.7442748091603053
+ROAD test (run 1 table),raw_can.l1_period,0.1557546519641626,0.7480916030534351
+ROAD test (run 1 table),raw_can.l1_period,0.15713301171605787,0.7519083969465649
+ROAD test (run 1 table),raw_can.l1_period,0.15920055134390076,0.7595419847328244
+ROAD test (run 1 table),raw_can.l1_period,0.16126809097174366,0.7633587786259541
+ROAD test (run 1 table),raw_can.l1_period,0.16402481047553408,0.7633587786259541
+ROAD test (run 1 table),raw_can.l1_period,0.1667815299793246,0.7633587786259541
+ROAD test (run 1 table),raw_can.l1_period,0.17022742935906277,0.7633587786259541
+ROAD test (run 1 table),raw_can.l1_period,0.17298414886285318,0.7633587786259541
+ROAD test (run 1 table),raw_can.l1_period,0.17436250861474845,0.7709923664122138
+ROAD test (run 1 table),raw_can.l1_period,0.1778084079944866,0.7709923664122138
+ROAD test (run 1 table),raw_can.l1_period,0.18056512749827702,0.7709923664122138
+ROAD test (run 1 table),raw_can.l1_period,0.18332184700206755,0.7709923664122138
+ROAD test (run 1 table),raw_can.l1_period,0.18538938662991045,0.7748091603053435
+ROAD test (run 1 table),raw_can.l1_period,0.1888352860096485,0.7748091603053435
+ROAD test (run 1 table),raw_can.l1_period,0.1909028256374914,0.7786259541984732
+ROAD test (run 1 table),raw_can.l1_period,0.19365954514128192,0.7786259541984732
+ROAD test (run 1 table),raw_can.l1_period,0.19710544452101997,0.7786259541984732
+ROAD test (run 1 table),raw_can.l1_period,0.19917298414886286,0.7824427480916031
+ROAD test (run 1 table),raw_can.l1_period,0.2019297036526534,0.7824427480916031
+ROAD test (run 1 table),raw_can.l1_period,0.20537560303239144,0.7824427480916031
+ROAD test (run 1 table),raw_can.l1_period,0.20813232253618197,0.7824427480916031
+ROAD test (run 1 table),raw_can.l1_period,0.21088904203997239,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.21295658166781528,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.21640248104755344,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.21915920055134386,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.22191592005513439,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.22536181943487255,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.22811853893866296,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.2308752584424535,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.23363197794624402,0.7862595419847328
+ROAD test (run 1 table),raw_can.l1_period,0.23638869745003444,0.7900763358778626
+ROAD test (run 1 table),raw_can.l1_period,0.23914541695382496,0.7900763358778626
+ROAD test (run 1 table),raw_can.l1_period,0.2419021364576155,0.7900763358778626
+ROAD test (run 1 table),raw_can.l1_period,0.24534803583735354,0.7900763358778626
+ROAD test (run 1 table),raw_can.l1_period,0.24810475534114407,0.7900763358778626
+ROAD test (run 1 table),raw_can.l1_period,0.25017229496898685,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.2529290144727774,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.25637491385251554,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.25913163335630596,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.2618883528600965,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.26533425223983464,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.26809097174362506,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.2708476912474156,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.2736044107512061,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.27705031013094417,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.2798070296347347,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.2825637491385251,0.7938931297709924
+ROAD test (run 1 table),raw_can.l1_period,0.28532046864231564,0.7977099236641221
+ROAD test (run 1 table),raw_can.l1_period,0.28807718814610617,0.7977099236641221
+ROAD test (run 1 table),raw_can.l1_period,0.2908339076498966,0.7977099236641221
+ROAD test (run 1 table),raw_can.l1_period,0.29427980702963474,0.7977099236641221
+ROAD test (run 1 table),raw_can.l1_period,0.29703652653342527,0.7977099236641221
+ROAD test (run 1 table),raw_can.l1_period,0.29910406616126806,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.3018607856650586,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.30530668504479674,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.30806340454858716,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.3108201240523777,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.31426602343211574,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.31702274293590627,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.3197794624396968,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.3225361819434872,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.32598208132322537,0.8015267175572519
+ROAD test (run 1 table),raw_can.l1_period,0.32804962095106827,0.8053435114503817
+ROAD test (run 1 table),raw_can.l1_period,0.3308063404548587,0.8053435114503817
+ROAD test (run 1 table),raw_can.l1_period,0.33425223983459684,0.8053435114503817
+ROAD test (run 1 table),raw_can.l1_period,0.33631977946243974,0.8091603053435115
+ROAD test (run 1 table),raw_can.l1_period,0.33907649896623016,0.8091603053435115
+ROAD test (run 1 table),raw_can.l1_period,0.34114403859407305,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.3445899379738112,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.34734665747760163,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.35010337698139216,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.35423845623707784,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.35630599586492073,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.35906271536871126,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.3625086147484493,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.36526533425223984,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.36802205375603037,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.3707787732598208,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.37422467263955894,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.37698139214334947,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.3797381116471399,0.8129770992366412
+ROAD test (run 1 table),raw_can.l1_period,0.3818056512749828,0.8206106870229007
+ROAD test (run 1 table),raw_can.l1_period,0.3845623707787733,0.8206106870229007
+ROAD test (run 1 table),raw_can.l1_period,0.3873190902825637,0.8206106870229007
+ROAD test (run 1 table),raw_can.l1_period,0.39007580978635426,0.8206106870229007
+ROAD test (run 1 table),raw_can.l1_period,0.3935217091660923,0.8206106870229007
+ROAD test (run 1 table),raw_can.l1_period,0.3955892487939352,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.3983459682977257,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.4017918676774638,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.4045485871812543,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.40730530668504483,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.41006202618883525,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.4135079255685734,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.41626464507236394,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.41902136457615435,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.4224672639558925,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.42522398345968293,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.42798070296347346,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.430737422467264,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.43418332184700204,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.43694004135079256,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.4396967608545831,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.44314266023432114,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.44589937973811167,0.8244274809160306
+ROAD test (run 1 table),raw_can.l1_period,0.44796691936595456,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_period,0.4514128187456926,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_period,0.45416953824948314,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_period,0.45692625775327356,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_period,0.4596829772570641,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_period,0.46312887663680224,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_period,0.46588559614059266,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_period,0.4686423156443832,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_period,0.4713990351481737,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.47415575465196413,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.47691247415575466,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.4796691936595452,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.48311509303928324,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.48587181254307377,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.4886285320468642,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.49414197105444524,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.49483115093039287,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.4975878704341833,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.5003445899379738,0.83206106870229
+ROAD test (run 1 table),raw_can.l1_period,0.5037904893177119,0.8358778625954199
+ROAD test (run 1 table),raw_can.l1_period,0.5058580289455548,0.8396946564885497
+ROAD test (run 1 table),raw_can.l1_period,0.5079255685733977,0.8396946564885497
+ROAD test (run 1 table),raw_can.l1_period,0.5099931082012406,0.8473282442748091
+ROAD test (run 1 table),raw_can.l1_period,0.5127498277050311,0.8473282442748091
+ROAD test (run 1 table),raw_can.l1_period,0.5155065472088215,0.8473282442748091
+ROAD test (run 1 table),raw_can.l1_period,0.5182632667126119,0.8473282442748091
+ROAD test (run 1 table),raw_can.l1_period,0.5217091660923501,0.8473282442748091
+ROAD test (run 1 table),raw_can.l1_period,0.5244658855961406,0.8473282442748091
+ROAD test (run 1 table),raw_can.l1_period,0.5272226050999311,0.8473282442748091
+ROAD test (run 1 table),raw_can.l1_period,0.5306685044796692,0.8473282442748091
+ROAD test (run 1 table),raw_can.l1_period,0.5327360441075121,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5354927636113025,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5396278428669883,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5423845623707788,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5451412818745693,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5472088215024121,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5506547208821502,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5534114403859407,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5561681598897312,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5596140592694694,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5623707787732598,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5651274982770503,0.851145038167939
+ROAD test (run 1 table),raw_can.l1_period,0.5671950379048931,0.8549618320610687
+ROAD test (run 1 table),raw_can.l1_period,0.5699517574086836,0.8587786259541985
+ROAD test (run 1 table),raw_can.l1_period,0.5727084769124742,0.8587786259541985
+ROAD test (run 1 table),raw_can.l1_period,0.5747760165403171,0.8625954198473282
+ROAD test (run 1 table),raw_can.l1_period,0.5782219159200551,0.8625954198473282
+ROAD test (run 1 table),raw_can.l1_period,0.5809786354238456,0.8625954198473282
+ROAD test (run 1 table),raw_can.l1_period,0.5823569951757408,0.8702290076335878
+ROAD test (run 1 table),raw_can.l1_period,0.5851137146795313,0.8740458015267176
+ROAD test (run 1 table),raw_can.l1_period,0.5878704341833219,0.8740458015267176
+ROAD test (run 1 table),raw_can.l1_period,0.5906271536871124,0.8740458015267176
+ROAD test (run 1 table),raw_can.l1_period,0.5933838731909028,0.8740458015267176
+ROAD test (run 1 table),raw_can.l1_period,0.596829772570641,0.8740458015267176
+ROAD test (run 1 table),raw_can.l1_period,0.5995864920744314,0.8740458015267176
+ROAD test (run 1 table),raw_can.l1_period,0.6016540317022743,0.8778625954198473
+ROAD test (run 1 table),raw_can.l1_period,0.6050999310820124,0.8778625954198473
+ROAD test (run 1 table),raw_can.l1_period,0.607856650585803,0.8778625954198473
+ROAD test (run 1 table),raw_can.l1_period,0.6106133700895934,0.8778625954198473
+ROAD test (run 1 table),raw_can.l1_period,0.6133700895933838,0.8778625954198473
+ROAD test (run 1 table),raw_can.l1_period,0.6161268090971743,0.8816793893129771
+ROAD test (run 1 table),raw_can.l1_period,0.6188835286009648,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.6209510682288077,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.6243969676085459,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.6271536871123363,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.6299104066161267,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.6326671261199173,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.6361130254996554,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.638869745003446,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.6416264645072364,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.645761543762922,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.647829083390765,0.8854961832061069
+ROAD test (run 1 table),raw_can.l1_period,0.6498966230186078,0.8893129770992366
+ROAD test (run 1 table),raw_can.l1_period,0.6526533425223984,0.8893129770992366
+ROAD test (run 1 table),raw_can.l1_period,0.6560992419021365,0.8893129770992366
+ROAD test (run 1 table),raw_can.l1_period,0.658855961405927,0.8893129770992366
+ROAD test (run 1 table),raw_can.l1_period,0.6602343211578222,0.8969465648854962
+ROAD test (run 1 table),raw_can.l1_period,0.6609235010337697,0.9122137404580153
+ROAD test (run 1 table),raw_can.l1_period,0.6650585802894555,0.916030534351145
+ROAD test (run 1 table),raw_can.l1_period,0.6657477601654032,0.916030534351145
+ROAD test (run 1 table),raw_can.l1_period,0.667815299793246,0.9198473282442748
+ROAD test (run 1 table),raw_can.l1_period,0.6705720192970366,0.9236641221374046
+ROAD test (run 1 table),raw_can.l1_period,0.673328738800827,0.9236641221374046
+ROAD test (run 1 table),raw_can.l1_period,0.6760854583046175,0.9236641221374046
+ROAD test (run 1 table),raw_can.l1_period,0.6788421778084079,0.9274809160305344
+ROAD test (run 1 table),raw_can.l1_period,0.6815988973121985,0.9274809160305344
+ROAD test (run 1 table),raw_can.l1_period,0.6829772570640937,0.9389312977099237
+ROAD test (run 1 table),raw_can.l1_period,0.6857339765678843,0.9389312977099237
+ROAD test (run 1 table),raw_can.l1_period,0.6884906960716748,0.9389312977099237
+ROAD test (run 1 table),raw_can.l1_period,0.6905582356995176,0.9427480916030534
+ROAD test (run 1 table),raw_can.l1_period,0.6926257753273604,0.9465648854961832
+ROAD test (run 1 table),raw_can.l1_period,0.6953824948311509,0.950381679389313
+ROAD test (run 1 table),raw_can.l1_period,0.6981392143349414,0.950381679389313
+ROAD test (run 1 table),raw_can.l1_period,0.7008959338387319,0.950381679389313
+ROAD test (run 1 table),raw_can.l1_period,0.7036526533425225,0.9541984732824428
+ROAD test (run 1 table),raw_can.l1_period,0.7064093728463129,0.9541984732824428
+ROAD test (run 1 table),raw_can.l1_period,0.7098552722260509,0.9541984732824428
+ROAD test (run 1 table),raw_can.l1_period,0.7119228118538938,0.9541984732824428
+ROAD test (run 1 table),raw_can.l1_period,0.7146795313576844,0.9580152671755725
+ROAD test (run 1 table),raw_can.l1_period,0.7174362508614749,0.9580152671755725
+ROAD test (run 1 table),raw_can.l1_period,0.7195037904893178,0.9618320610687023
+ROAD test (run 1 table),raw_can.l1_period,0.7229496898690558,0.9618320610687023
+ROAD test (run 1 table),raw_can.l1_period,0.7257064093728463,0.9618320610687023
+ROAD test (run 1 table),raw_can.l1_period,0.7284631288766368,0.9618320610687023
+ROAD test (run 1 table),raw_can.l1_period,0.7312198483804273,0.9618320610687023
+ROAD test (run 1 table),raw_can.l1_period,0.7346657477601655,0.9618320610687023
+ROAD test (run 1 table),raw_can.l1_period,0.7367332873880083,0.9656488549618321
+ROAD test (run 1 table),raw_can.l1_period,0.7388008270158511,0.9694656488549618
+ROAD test (run 1 table),raw_can.l1_period,0.7422467263955892,0.9694656488549618
+ROAD test (run 1 table),raw_can.l1_period,0.7450034458993797,0.9694656488549618
+ROAD test (run 1 table),raw_can.l1_period,0.7477601654031703,0.9694656488549618
+ROAD test (run 1 table),raw_can.l1_period,0.7498277050310131,0.9732824427480916
+ROAD test (run 1 table),raw_can.l1_period,0.7525844245348036,0.9770992366412213
+ROAD test (run 1 table),raw_can.l1_period,0.7553411440385941,0.9770992366412213
+ROAD test (run 1 table),raw_can.l1_period,0.7574086836664369,0.9809160305343512
+ROAD test (run 1 table),raw_can.l1_period,0.760854583046175,0.9809160305343512
+ROAD test (run 1 table),raw_can.l1_period,0.7629221226740179,0.9847328244274809
+ROAD test (run 1 table),raw_can.l1_period,0.7656788421778085,0.9847328244274809
+ROAD test (run 1 table),raw_can.l1_period,0.7684355616815989,0.9885496183206107
+ROAD test (run 1 table),raw_can.l1_period,0.7705031013094418,0.9923664122137404
+ROAD test (run 1 table),raw_can.l1_period,0.7732598208132322,0.9923664122137404
+ROAD test (run 1 table),raw_can.l1_period,0.7760165403170227,0.9923664122137404
+ROAD test (run 1 table),raw_can.l1_period,0.7794624396967609,0.9923664122137404
+ROAD test (run 1 table),raw_can.l1_period,0.7822191592005514,0.9923664122137404
+ROAD test (run 1 table),raw_can.l1_period,0.7842866988283942,0.9961832061068703
+ROAD test (run 1 table),raw_can.l1_period,0.7877325982081324,0.9961832061068703
+ROAD test (run 1 table),raw_can.l1_period,0.7904893177119228,0.9961832061068703
+ROAD test (run 1 table),raw_can.l1_period,0.7932460372157133,0.9961832061068703
+ROAD test (run 1 table),raw_can.l1_period,0.7960027567195038,0.9961832061068703
+ROAD test (run 1 table),raw_can.l1_period,0.7994486560992419,0.9961832061068703
+ROAD test (run 1 table),raw_can.l1_period,0.8015161957270848,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8042729152308753,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8077188146106133,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8104755341144039,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8132322536181944,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8159889731219848,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.819434872501723,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8221915920055134,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8249483115093039,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8283942108890421,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8311509303928325,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.833907649896623,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8373535492763611,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8401102687801516,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8428669882839421,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8456237077877327,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8490696071674707,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8518263266712612,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8545830461750517,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8580289455547898,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8607856650585803,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8635423845623708,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8662991040661613,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8697450034458993,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8725017229496899,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8752584424534804,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8793935217091661,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.881461061337009,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8842177808407995,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8869745003445899,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8904203997243281,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8931771192281186,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.895933838731909,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.8993797381116472,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9021364576154376,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9048931771192281,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9076498966230186,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9110957960027567,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9138525155065472,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9166092350103376,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9200551343900758,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9228118538938663,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9255685733976567,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9290144727773949,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9317711922811854,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9345279117849759,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9372846312887664,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9407305306685044,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.943487250172295,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9462439696760855,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9496898690558235,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9524465885596141,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9552033080634046,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.957960027567195,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9614059269469332,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9641626464507236,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9669193659545141,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9703652653342523,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9731219848380427,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9758787043418332,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9786354238456237,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9820813232253618,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9848380427291523,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9875947622329428,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9910406616126809,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9937973811164714,1.0
+ROAD test (run 1 table),raw_can.l1_period,0.9965541006202618,1.0
+ROAD test (run 1 table),raw_can.l1_period,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_period,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.003816793893129722
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.007633587786259555
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.011450381679389277
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.01908396946564883
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.057251908396946605
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.16412213740458015
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.3129770992366412
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.4427480916030534
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.46183206106870234
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.46564885496183206
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.4694656488549618
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.4732824427480916
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.47709923664122134
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.000689179875947632,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.002756719503790528,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.00344589937973816,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.004824259131633313,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.005513439007580945,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.006891798759476209,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.008959338387319105,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.010337698139214369,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.011026878015162,0.48091603053435117
+ROAD test (run 1 table),raw_can.l1_bus_load,0.013783597518952417,0.4885496183206107
+ROAD test (run 1 table),raw_can.l1_bus_load,0.020675396278428626,0.5
+ROAD test (run 1 table),raw_can.l1_bus_load,0.02549965541006205,0.5
+ROAD test (run 1 table),raw_can.l1_bus_load,0.03928325292901447,0.5
+ROAD test (run 1 table),raw_can.l1_bus_load,0.060647829083390725,0.5
+ROAD test (run 1 table),raw_can.l1_bus_load,0.0909717436250862,0.5
+ROAD test (run 1 table),raw_can.l1_bus_load,0.13439007580978635,0.5038167938931297
+ROAD test (run 1 table),raw_can.l1_bus_load,0.21088904203997239,0.5152671755725191
+ROAD test (run 1 table),raw_can.l1_bus_load,0.315644383184011,0.5267175572519084
+ROAD test (run 1 table),raw_can.l1_bus_load,0.47208821502412135,0.5610687022900763
+ROAD test (run 1 table),raw_can.l1_bus_load,0.6354238456237078,0.6870229007633588
+ROAD test (run 1 table),raw_can.l1_bus_load,0.7649896623018608,0.8282442748091603
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8035837353549277,0.9770992366412213
+ROAD test (run 1 table),raw_can.l1_bus_load,0.813921433494142,0.9961832061068703
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8159889731219848,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8173673328738801,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.819434872501723,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8221915920055134,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8235699517574087,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8242591316333563,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8249483115093039,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8256374913852516,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8263266712611992,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8270158511371468,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8277050310130944,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8283942108890421,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8290833907649897,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8304617505168849,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8311509303928325,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8318401102687801,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.833907649896623,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8359751895244659,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8380427291523087,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8490696071674707,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8566505858028945,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8580289455547898,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8587181254307374,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8594073053066851,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8600964851826327,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8607856650585803,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.861474844934528,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8621640248104755,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8628532046864231,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8635423845623708,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8656099241902137,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8669882839421089,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8718125430737422,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8725017229496899,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8731909028256375,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8738800827015851,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8745692625775328,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8752584424534804,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.875947622329428,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8766368022053757,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8780151619572708,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8787043418332184,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8793935217091661,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8800827015851137,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.881461061337009,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8828394210889042,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8842177808407995,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8855961405926946,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8869745003445899,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8883528600964852,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8890420399724328,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8897312198483804,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8911095796002757,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8931771192281186,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8952446588559614,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.8986905582356995,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9007580978635423,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9076498966230186,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9159200551343901,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.937973811164714,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9565816678152999,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9676085458304617,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9710544452101999,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.972432804962095,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9731219848380427,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.974500344589938,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9758787043418332,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9765678842177808,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9793246037215714,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9807029634734665,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.983459682977257,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9848380427291523,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9862164024810476,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9869055823569952,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9875947622329428,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9882839421088904,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9896623018607856,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9910406616126809,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9917298414886285,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9924190213645762,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9931082012405238,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9937973811164714,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.994486560992419,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9951757408683667,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9965541006202618,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9979324603721571,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9986216402481047,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,0.9993108201240524,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_bus_load,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_flood,0.0,0.0
+ROAD test (run 1 table),raw_can.l1_flood,0.0,0.003816793893129722
+ROAD test (run 1 table),raw_can.l1_flood,0.3597518952446589,0.34732824427480913
+ROAD test (run 1 table),raw_can.l1_flood,0.9807029634734665,1.0
+ROAD test (run 1 table),raw_can.l1_flood,1.0,1.0
+ROAD test (run 1 table),raw_can.l1_flood,1.0,1.0
+ROAD test (run 1 table),raw_can.l2a_skew,0.0,0.0
+ROAD test (run 1 table),raw_can.l2a_skew,0.0,0.003816793893129722
+ROAD test (run 1 table),raw_can.l2a_skew,0.0,0.01908396946564883
+ROAD test (run 1 table),raw_can.l2a_skew,0.0,0.03435114503816794
+ROAD test (run 1 table),raw_can.l2a_skew,0.0,0.04961832061068705
+ROAD test (run 1 table),raw_can.l2a_skew,0.0,0.06870229007633588
+ROAD test (run 1 table),raw_can.l2a_skew,0.0,0.08396946564885499
+ROAD test (run 1 table),raw_can.l2a_skew,0.0,0.0992366412213741
+ROAD test (run 1 table),raw_can.l2a_skew,0.00344589937973816,0.0992366412213741
+ROAD test (run 1 table),raw_can.l2a_skew,0.005513439007580945,0.10305343511450382
+ROAD test (run 1 table),raw_can.l2a_skew,0.007580978635423841,0.10687022900763354
+ROAD test (run 1 table),raw_can.l2a_skew,0.009648518263266737,0.11068702290076338
+ROAD test (run 1 table),raw_can.l2a_skew,0.012405237767057153,0.1145038167938931
+ROAD test (run 1 table),raw_can.l2a_skew,0.015161957270847681,0.1145038167938931
+ROAD test (run 1 table),raw_can.l2a_skew,0.016540317022742945,0.12213740458015265
+ROAD test (run 1 table),raw_can.l2a_skew,0.019986216402480994,0.12213740458015265
+ROAD test (run 1 table),raw_can.l2a_skew,0.02205375603032389,0.12595419847328249
+ROAD test (run 1 table),raw_can.l2a_skew,0.024810475534114418,0.12595419847328249
+ROAD test (run 1 table),raw_can.l2a_skew,0.026878015161957314,0.1297709923664122
+ROAD test (run 1 table),raw_can.l2a_skew,0.02963473466574773,0.13358778625954193
+ROAD test (run 1 table),raw_can.l2a_skew,0.03170227429359063,0.13740458015267176
+ROAD test (run 1 table),raw_can.l2a_skew,0.03376981392143352,0.14122137404580148
+ROAD test (run 1 table),raw_can.l2a_skew,0.03721571330117157,0.14122137404580148
+ROAD test (run 1 table),raw_can.l2a_skew,0.03928325292901447,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.042039972432804995,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.04479669193659541,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.04824259131633357,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.0509993108201241,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.053756030323914517,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.057201929703652676,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.05995864920744309,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.06271536871123362,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.06616126809097178,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.0689179875947622,0.14503816793893132
+ROAD test (run 1 table),raw_can.l2a_skew,0.0709855272226051,0.14885496183206104
+ROAD test (run 1 table),raw_can.l2a_skew,0.07374224672639562,0.14885496183206104
+ROAD test (run 1 table),raw_can.l2a_skew,0.07649896623018604,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.07925568573397657,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.0820124052377671,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.08545830461750514,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.08821502412129567,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.0909717436250862,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.09372846312887662,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.09717436250861478,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.09993108201240519,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.10268780151619572,0.15267175572519087
+ROAD test (run 1 table),raw_can.l2a_skew,0.10544452101998625,0.1564885496183206
+ROAD test (run 1 table),raw_can.l2a_skew,0.10820124052377667,0.1564885496183206
+ROAD test (run 1 table),raw_can.l2a_skew,0.11026878015161956,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.11302549965541009,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.11647139903514814,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.11922811853893867,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.1219848380427292,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.12543073742246724,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.12818745692625777,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.1309441764300483,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.13370089593383871,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.13714679531357687,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.1399035148173673,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.14266023432115782,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.14610613370089598,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.1488628532046864,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.15161957270847692,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.15506547208821497,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.1578221915920055,0.16030534351145043
+ROAD test (run 1 table),raw_can.l2a_skew,0.1598897312198484,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.16264645072363892,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.16609235010337697,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.1688490696071675,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.17160578911095792,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.17505168849069608,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.1778084079944866,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.18056512749827702,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.18332184700206755,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.1867677463818056,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.18952446588559613,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.19228118538938666,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.1957270847691247,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.19848380427291523,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.20124052377670576,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.20399724328049618,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.20744314266023434,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.21019986216402486,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.21295658166781528,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.21640248104755344,0.16412213740458015
+ROAD test (run 1 table),raw_can.l2a_skew,0.21847002067539623,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.22122674017918675,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.2246726395589249,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.22742935906271533,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.23018607856650586,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.2329427980702964,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.23638869745003444,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.23914541695382496,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.2419021364576155,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.24534803583735354,0.16793893129770987
+ROAD test (run 1 table),raw_can.l2a_skew,0.24741557546519644,0.1717557251908397
+ROAD test (run 1 table),raw_can.l2a_skew,0.24948311509303933,0.17557251908396942
+ROAD test (run 1 table),raw_can.l2a_skew,0.25223983459682975,0.17557251908396942
+ROAD test (run 1 table),raw_can.l2a_skew,0.2549965541006203,0.17938931297709926
+ROAD test (run 1 table),raw_can.l2a_skew,0.2577532736044108,0.17938931297709926
+ROAD test (run 1 table),raw_can.l2a_skew,0.2598208132322536,0.18320610687022898
+ROAD test (run 1 table),raw_can.l2a_skew,0.26326671261199175,0.18320610687022898
+ROAD test (run 1 table),raw_can.l2a_skew,0.26533425223983464,0.1870229007633588
+ROAD test (run 1 table),raw_can.l2a_skew,0.26809097174362506,0.1870229007633588
+ROAD test (run 1 table),raw_can.l2a_skew,0.2708476912474156,0.1870229007633588
+ROAD test (run 1 table),raw_can.l2a_skew,0.2736044107512061,0.19083969465648853
+ROAD test (run 1 table),raw_can.l2a_skew,0.27636113025499653,0.19083969465648853
+ROAD test (run 1 table),raw_can.l2a_skew,0.27911784975878706,0.19083969465648853
+ROAD test (run 1 table),raw_can.l2a_skew,0.2818745692625775,0.19465648854961837
+ROAD test (run 1 table),raw_can.l2a_skew,0.284631288766368,0.19465648854961837
+ROAD test (run 1 table),raw_can.l2a_skew,0.28738800827015853,0.19465648854961837
+ROAD test (run 1 table),raw_can.l2a_skew,0.28945554789800143,0.1984732824427481
+ROAD test (run 1 table),raw_can.l2a_skew,0.2929014472777395,0.1984732824427481
+ROAD test (run 1 table),raw_can.l2a_skew,0.2949689869055824,0.2022900763358778
+ROAD test (run 1 table),raw_can.l2a_skew,0.2977257064093728,0.2022900763358778
+ROAD test (run 1 table),raw_can.l2a_skew,0.30117160578911095,0.2022900763358778
+ROAD test (run 1 table),raw_can.l2a_skew,0.3039283252929015,0.2022900763358778
+ROAD test (run 1 table),raw_can.l2a_skew,0.30599586492074426,0.20610687022900764
+ROAD test (run 1 table),raw_can.l2a_skew,0.3087525844245348,0.20992366412213737
+ROAD test (run 1 table),raw_can.l2a_skew,0.3108201240523777,0.2137404580152672
+ROAD test (run 1 table),raw_can.l2a_skew,0.31426602343211574,0.2137404580152672
+ROAD test (run 1 table),raw_can.l2a_skew,0.315644383184011,0.21755725190839692
+ROAD test (run 1 table),raw_can.l2a_skew,0.31909028256374916,0.21755725190839692
+ROAD test (run 1 table),raw_can.l2a_skew,0.3218470020675396,0.21755725190839692
+ROAD test (run 1 table),raw_can.l2a_skew,0.3246037215713301,0.21755725190839692
+ROAD test (run 1 table),raw_can.l2a_skew,0.32804962095106827,0.21755725190839692
+ROAD test (run 1 table),raw_can.l2a_skew,0.33011716057891105,0.22137404580152675
+ROAD test (run 1 table),raw_can.l2a_skew,0.33218470020675395,0.22519083969465647
+ROAD test (run 1 table),raw_can.l2a_skew,0.3349414197105445,0.22519083969465647
+ROAD test (run 1 table),raw_can.l2a_skew,0.3383873190902825,0.22519083969465647
+ROAD test (run 1 table),raw_can.l2a_skew,0.34114403859407305,0.22519083969465647
+ROAD test (run 1 table),raw_can.l2a_skew,0.34321157822191595,0.2290076335877863
+ROAD test (run 1 table),raw_can.l2a_skew,0.346657477601654,0.2290076335877863
+ROAD test (run 1 table),raw_can.l2a_skew,0.3487250172294969,0.23282442748091603
+ROAD test (run 1 table),raw_can.l2a_skew,0.3514817367332874,0.23282442748091603
+ROAD test (run 1 table),raw_can.l2a_skew,0.3535492763611302,0.23664122137404575
+ROAD test (run 1 table),raw_can.l2a_skew,0.35699517574086836,0.23664122137404575
+ROAD test (run 1 table),raw_can.l2a_skew,0.3597518952446589,0.23664122137404575
+ROAD test (run 1 table),raw_can.l2a_skew,0.3625086147484493,0.23664122137404575
+ROAD test (run 1 table),raw_can.l2a_skew,0.36526533425223984,0.24045801526717558
+ROAD test (run 1 table),raw_can.l2a_skew,0.36802205375603037,0.24045801526717558
+ROAD test (run 1 table),raw_can.l2a_skew,0.3707787732598208,0.24045801526717558
+ROAD test (run 1 table),raw_can.l2a_skew,0.3735354927636113,0.24045801526717558
+ROAD test (run 1 table),raw_can.l2a_skew,0.37629221226740184,0.2442748091603053
+ROAD test (run 1 table),raw_can.l2a_skew,0.37904893177119225,0.2442748091603053
+ROAD test (run 1 table),raw_can.l2a_skew,0.3818056512749828,0.2442748091603053
+ROAD test (run 1 table),raw_can.l2a_skew,0.38525155065472083,0.2442748091603053
+ROAD test (run 1 table),raw_can.l2a_skew,0.38800827015851136,0.2442748091603053
+ROAD test (run 1 table),raw_can.l2a_skew,0.39007580978635426,0.24809160305343514
+ROAD test (run 1 table),raw_can.l2a_skew,0.3935217091660923,0.24809160305343514
+ROAD test (run 1 table),raw_can.l2a_skew,0.39627842866988283,0.24809160305343514
+ROAD test (run 1 table),raw_can.l2a_skew,0.39903514817367336,0.24809160305343514
+ROAD test (run 1 table),raw_can.l2a_skew,0.4017918676774638,0.24809160305343514
+ROAD test (run 1 table),raw_can.l2a_skew,0.40523776705720194,0.24809160305343514
+ROAD test (run 1 table),raw_can.l2a_skew,0.40799448656099246,0.24809160305343514
+ROAD test (run 1 table),raw_can.l2a_skew,0.4107512060647829,0.24809160305343514
+ROAD test (run 1 table),raw_can.l2a_skew,0.4135079255685734,0.25190839694656486
+ROAD test (run 1 table),raw_can.l2a_skew,0.41626464507236394,0.25190839694656486
+ROAD test (run 1 table),raw_can.l2a_skew,0.41902136457615435,0.25190839694656486
+ROAD test (run 1 table),raw_can.l2a_skew,0.4217780840799449,0.25190839694656486
+ROAD test (run 1 table),raw_can.l2a_skew,0.42522398345968293,0.25190839694656486
+ROAD test (run 1 table),raw_can.l2a_skew,0.4272915230875258,0.2557251908396947
+ROAD test (run 1 table),raw_can.l2a_skew,0.43004824259131635,0.2557251908396947
+ROAD test (run 1 table),raw_can.l2a_skew,0.4334941419710544,0.2557251908396947
+ROAD test (run 1 table),raw_can.l2a_skew,0.43625086147484493,0.2557251908396947
+ROAD test (run 1 table),raw_can.l2a_skew,0.43900758097863546,0.2557251908396947
+ROAD test (run 1 table),raw_can.l2a_skew,0.4417643004824259,0.2557251908396947
+ROAD test (run 1 table),raw_can.l2a_skew,0.44521019986216404,0.2557251908396947
+ROAD test (run 1 table),raw_can.l2a_skew,0.4465885596140593,0.26335877862595425
+ROAD test (run 1 table),raw_can.l2a_skew,0.4486560992419021,0.26717557251908397
+ROAD test (run 1 table),raw_can.l2a_skew,0.45210199862164024,0.26717557251908397
+ROAD test (run 1 table),raw_can.l2a_skew,0.45485871812543077,0.26717557251908397
+ROAD test (run 1 table),raw_can.l2a_skew,0.4576154376292212,0.26717557251908397
+ROAD test (run 1 table),raw_can.l2a_skew,0.4603721571330117,0.2748091603053435
+ROAD test (run 1 table),raw_can.l2a_skew,0.46106133700895935,0.2824427480916031
+ROAD test (run 1 table),raw_can.l2a_skew,0.4638180565127499,0.2824427480916031
+ROAD test (run 1 table),raw_can.l2a_skew,0.4645072363886974,0.2977099236641222
+ROAD test (run 1 table),raw_can.l2a_skew,0.4672639558924879,0.2977099236641222
+ROAD test (run 1 table),raw_can.l2a_skew,0.47002067539627845,0.2977099236641222
+ROAD test (run 1 table),raw_can.l2a_skew,0.4713990351481737,0.30534351145038163
+ROAD test (run 1 table),raw_can.l2a_skew,0.47484493452791177,0.30534351145038163
+ROAD test (run 1 table),raw_can.l2a_skew,0.47622329427980703,0.3129770992366412
+ROAD test (run 1 table),raw_can.l2a_skew,0.4776016540317023,0.32061068702290074
+ROAD test (run 1 table),raw_can.l2a_skew,0.4803583735354927,0.32061068702290074
+ROAD test (run 1 table),raw_can.l2a_skew,0.48380427291523087,0.32061068702290074
+ROAD test (run 1 table),raw_can.l2a_skew,0.48518263266712613,0.3282442748091603
+ROAD test (run 1 table),raw_can.l2a_skew,0.48793935217091666,0.3282442748091603
+ROAD test (run 1 table),raw_can.l2a_skew,0.49000689179875945,0.33587786259541985
+ROAD test (run 1 table),raw_can.l2a_skew,0.49276361130255,0.33587786259541985
+ROAD test (run 1 table),raw_can.l2a_skew,0.49414197105444524,0.3435114503816794
+ROAD test (run 1 table),raw_can.l2a_skew,0.49689869055823566,0.3435114503816794
+ROAD test (run 1 table),raw_can.l2a_skew,0.5003445899379738,0.3435114503816794
+ROAD test (run 1 table),raw_can.l2a_skew,0.5031013094417642,0.3435114503816794
+ROAD test (run 1 table),raw_can.l2a_skew,0.5044796691936595,0.35114503816793896
+ROAD test (run 1 table),raw_can.l2a_skew,0.5079255685733977,0.35114503816793896
+ROAD test (run 1 table),raw_can.l2a_skew,0.5086147484493453,0.36259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.5113714679531358,0.36259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.5141281874569262,0.36259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.5175740868366644,0.36259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.5196416264645072,0.3702290076335878
+ROAD test (run 1 table),raw_can.l2a_skew,0.5217091660923501,0.37786259541984735
+ROAD test (run 1 table),raw_can.l2a_skew,0.523776705720193,0.37786259541984735
+ROAD test (run 1 table),raw_can.l2a_skew,0.5265334252239835,0.37786259541984735
+ROAD test (run 1 table),raw_can.l2a_skew,0.529290144727774,0.37786259541984735
+ROAD test (run 1 table),raw_can.l2a_skew,0.5327360441075121,0.37786259541984735
+ROAD test (run 1 table),raw_can.l2a_skew,0.5354927636113025,0.37786259541984735
+ROAD test (run 1 table),raw_can.l2a_skew,0.5361819434872501,0.39312977099236646
+ROAD test (run 1 table),raw_can.l2a_skew,0.5389386629910407,0.39312977099236646
+ROAD test (run 1 table),raw_can.l2a_skew,0.5403170227429359,0.4007633587786259
+ROAD test (run 1 table),raw_can.l2a_skew,0.5423845623707788,0.40839694656488545
+ROAD test (run 1 table),raw_can.l2a_skew,0.5430737422467264,0.416030534351145
+ROAD test (run 1 table),raw_can.l2a_skew,0.5444521019986217,0.4312977099236641
+ROAD test (run 1 table),raw_can.l2a_skew,0.5458304617505169,0.4389312977099237
+ROAD test (run 1 table),raw_can.l2a_skew,0.5472088215024121,0.44656488549618323
+ROAD test (run 1 table),raw_can.l2a_skew,0.5472088215024121,0.4580152671755725
+ROAD test (run 1 table),raw_can.l2a_skew,0.5485871812543074,0.4694656488549618
+ROAD test (run 1 table),raw_can.l2a_skew,0.5499655410062025,0.47709923664122134
+ROAD test (run 1 table),raw_can.l2a_skew,0.5520330806340454,0.4847328244274809
+ROAD test (run 1 table),raw_can.l2a_skew,0.554789800137836,0.4847328244274809
+ROAD test (run 1 table),raw_can.l2a_skew,0.5561681598897312,0.49236641221374045
+ROAD test (run 1 table),raw_can.l2a_skew,0.5589248793935218,0.49236641221374045
+ROAD test (run 1 table),raw_can.l2a_skew,0.5616815988973122,0.49236641221374045
+ROAD test (run 1 table),raw_can.l2a_skew,0.5637491385251551,0.5
+ROAD test (run 1 table),raw_can.l2a_skew,0.5658166781529979,0.5038167938931297
+ROAD test (run 1 table),raw_can.l2a_skew,0.5678842177808407,0.5076335877862596
+ROAD test (run 1 table),raw_can.l2a_skew,0.5713301171605789,0.5076335877862596
+ROAD test (run 1 table),raw_can.l2a_skew,0.5740868366643694,0.5076335877862596
+ROAD test (run 1 table),raw_can.l2a_skew,0.57684355616816,0.5076335877862596
+ROAD test (run 1 table),raw_can.l2a_skew,0.5782219159200551,0.5152671755725191
+ROAD test (run 1 table),raw_can.l2a_skew,0.580289455547898,0.5229007633587786
+ROAD test (run 1 table),raw_can.l2a_skew,0.5837353549276361,0.5229007633587786
+ROAD test (run 1 table),raw_can.l2a_skew,0.585802894555479,0.5229007633587786
+ROAD test (run 1 table),raw_can.l2a_skew,0.5885596140592695,0.5267175572519084
+ROAD test (run 1 table),raw_can.l2a_skew,0.59131633356306,0.5267175572519084
+ROAD test (run 1 table),raw_can.l2a_skew,0.5926946933149553,0.5343511450381679
+ROAD test (run 1 table),raw_can.l2a_skew,0.5947622329427981,0.5419847328244275
+ROAD test (run 1 table),raw_can.l2a_skew,0.5975189524465885,0.5419847328244275
+ROAD test (run 1 table),raw_can.l2a_skew,0.5995864920744314,0.5458015267175573
+ROAD test (run 1 table),raw_can.l2a_skew,0.6023432115782219,0.5458015267175573
+ROAD test (run 1 table),raw_can.l2a_skew,0.6050999310820124,0.549618320610687
+ROAD test (run 1 table),raw_can.l2a_skew,0.607856650585803,0.549618320610687
+ROAD test (run 1 table),raw_can.l2a_skew,0.6099241902136457,0.5572519083969465
+ROAD test (run 1 table),raw_can.l2a_skew,0.611302549965541,0.5648854961832062
+ROAD test (run 1 table),raw_can.l2a_skew,0.6126809097174363,0.5725190839694656
+ROAD test (run 1 table),raw_can.l2a_skew,0.6154376292212267,0.5725190839694656
+ROAD test (run 1 table),raw_can.l2a_skew,0.6175051688490696,0.5801526717557253
+ROAD test (run 1 table),raw_can.l2a_skew,0.6209510682288077,0.5801526717557253
+ROAD test (run 1 table),raw_can.l2a_skew,0.6216402481047554,0.5877862595419847
+ROAD test (run 1 table),raw_can.l2a_skew,0.6243969676085459,0.5877862595419847
+ROAD test (run 1 table),raw_can.l2a_skew,0.6271536871123363,0.5916030534351144
+ROAD test (run 1 table),raw_can.l2a_skew,0.6285320468642316,0.5992366412213741
+ROAD test (run 1 table),raw_can.l2a_skew,0.631288766368022,0.5992366412213741
+ROAD test (run 1 table),raw_can.l2a_skew,0.6354238456237078,0.5992366412213741
+ROAD test (run 1 table),raw_can.l2a_skew,0.6361130254996554,0.6068702290076335
+ROAD test (run 1 table),raw_can.l2a_skew,0.6416264645072364,0.6068702290076335
+ROAD test (run 1 table),raw_can.l2a_skew,0.6416264645072364,0.6068702290076335
+ROAD test (run 1 table),raw_can.l2a_skew,0.6443831840110269,0.6106870229007634
+ROAD test (run 1 table),raw_can.l2a_skew,0.647829083390765,0.6145038167938932
+ROAD test (run 1 table),raw_can.l2a_skew,0.6492074431426602,0.6145038167938932
+ROAD test (run 1 table),raw_can.l2a_skew,0.6547208821502413,0.6145038167938932
+ROAD test (run 1 table),raw_can.l2a_skew,0.6554100620261889,0.6145038167938932
+ROAD test (run 1 table),raw_can.l2a_skew,0.6574776016540317,0.6221374045801527
+ROAD test (run 1 table),raw_can.l2a_skew,0.6595451412818746,0.6221374045801527
+ROAD test (run 1 table),raw_can.l2a_skew,0.6643694004135079,0.6221374045801527
+ROAD test (run 1 table),raw_can.l2a_skew,0.667815299793246,0.6221374045801527
+ROAD test (run 1 table),raw_can.l2a_skew,0.6712611991729842,0.6221374045801527
+ROAD test (run 1 table),raw_can.l2a_skew,0.6747070985527223,0.6221374045801527
+ROAD test (run 1 table),raw_can.l2a_skew,0.6747070985527223,0.6221374045801527
+ROAD test (run 1 table),raw_can.l2a_skew,0.6795313576843556,0.6221374045801527
+ROAD test (run 1 table),raw_can.l2a_skew,0.6795313576843556,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.6829772570640937,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.6864231564438319,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.6905582356995176,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.6940041350792556,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.6946933149552033,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.6981392143349414,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.7015851137146796,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.7050310130944176,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.7091660923501033,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.7091660923501033,0.6259541984732824
+ROAD test (run 1 table),raw_can.l2a_skew,0.7119228118538938,0.633587786259542
+ROAD test (run 1 table),raw_can.l2a_skew,0.715368711233632,0.633587786259542
+ROAD test (run 1 table),raw_can.l2a_skew,0.7167470709855273,0.633587786259542
+ROAD test (run 1 table),raw_can.l2a_skew,0.7208821502412129,0.633587786259542
+ROAD test (run 1 table),raw_can.l2a_skew,0.7229496898690558,0.633587786259542
+ROAD test (run 1 table),raw_can.l2a_skew,0.7257064093728463,0.633587786259542
+ROAD test (run 1 table),raw_can.l2a_skew,0.7305306685044797,0.633587786259542
+ROAD test (run 1 table),raw_can.l2a_skew,0.7325982081323226,0.633587786259542
+ROAD test (run 1 table),raw_can.l2a_skew,0.7346657477601655,0.6374045801526718
+ROAD test (run 1 table),raw_can.l2a_skew,0.7374224672639559,0.6374045801526718
+ROAD test (run 1 table),raw_can.l2a_skew,0.7401791867677463,0.6450381679389313
+ROAD test (run 1 table),raw_can.l2a_skew,0.7415575465196416,0.6450381679389313
+ROAD test (run 1 table),raw_can.l2a_skew,0.7450034458993797,0.6450381679389313
+ROAD test (run 1 table),raw_can.l2a_skew,0.746381805651275,0.6526717557251909
+ROAD test (run 1 table),raw_can.l2a_skew,0.7484493452791179,0.6603053435114503
+ROAD test (run 1 table),raw_can.l2a_skew,0.7505168849069608,0.6603053435114503
+ROAD test (run 1 table),raw_can.l2a_skew,0.7532736044107512,0.6603053435114503
+ROAD test (run 1 table),raw_can.l2a_skew,0.7553411440385941,0.66793893129771
+ROAD test (run 1 table),raw_can.l2a_skew,0.7580978635423845,0.66793893129771
+ROAD test (run 1 table),raw_can.l2a_skew,0.7594762232942798,0.6755725190839694
+ROAD test (run 1 table),raw_can.l2a_skew,0.7622329427980703,0.6793893129770993
+ROAD test (run 1 table),raw_can.l2a_skew,0.7636113025499656,0.6908396946564885
+ROAD test (run 1 table),raw_can.l2a_skew,0.7649896623018608,0.6984732824427481
+ROAD test (run 1 table),raw_can.l2a_skew,0.7656788421778085,0.7061068702290076
+ROAD test (run 1 table),raw_can.l2a_skew,0.7670572019297036,0.7213740458015268
+ROAD test (run 1 table),raw_can.l2a_skew,0.7691247415575465,0.7213740458015268
+ROAD test (run 1 table),raw_can.l2a_skew,0.7698139214334941,0.732824427480916
+ROAD test (run 1 table),raw_can.l2a_skew,0.7711922811853894,0.7404580152671756
+ROAD test (run 1 table),raw_can.l2a_skew,0.771881461061337,0.7557251908396947
+ROAD test (run 1 table),raw_can.l2a_skew,0.7732598208132322,0.7633587786259541
+ROAD test (run 1 table),raw_can.l2a_skew,0.7746381805651275,0.7709923664122138
+ROAD test (run 1 table),raw_can.l2a_skew,0.777394900068918,0.7748091603053435
+ROAD test (run 1 table),raw_can.l2a_skew,0.7801516195727085,0.7748091603053435
+ROAD test (run 1 table),raw_can.l2a_skew,0.7808407994486561,0.7862595419847328
+ROAD test (run 1 table),raw_can.l2a_skew,0.7835975189524466,0.7862595419847328
+ROAD test (run 1 table),raw_can.l2a_skew,0.7863542384562371,0.7900763358778626
+ROAD test (run 1 table),raw_can.l2a_skew,0.7870434183321847,0.8015267175572519
+ROAD test (run 1 table),raw_can.l2a_skew,0.7891109579600275,0.8053435114503817
+ROAD test (run 1 table),raw_can.l2a_skew,0.791867677463818,0.8091603053435115
+ROAD test (run 1 table),raw_can.l2a_skew,0.7953135768435562,0.8091603053435115
+ROAD test (run 1 table),raw_can.l2a_skew,0.7973811164713991,0.8091603053435115
+ROAD test (run 1 table),raw_can.l2a_skew,0.8001378359751895,0.8129770992366412
+ROAD test (run 1 table),raw_can.l2a_skew,0.80289455547898,0.8129770992366412
+ROAD test (run 1 table),raw_can.l2a_skew,0.8063404548587181,0.8129770992366412
+ROAD test (run 1 table),raw_can.l2a_skew,0.808407994486561,0.8129770992366412
+ROAD test (run 1 table),raw_can.l2a_skew,0.8118538938662991,0.8129770992366412
+ROAD test (run 1 table),raw_can.l2a_skew,0.813921433494142,0.816793893129771
+ROAD test (run 1 table),raw_can.l2a_skew,0.8152997932460372,0.8244274809160306
+ROAD test (run 1 table),raw_can.l2a_skew,0.8173673328738801,0.83206106870229
+ROAD test (run 1 table),raw_can.l2a_skew,0.819434872501723,0.8358778625954199
+ROAD test (run 1 table),raw_can.l2a_skew,0.8208132322536181,0.8435114503816794
+ROAD test (run 1 table),raw_can.l2a_skew,0.8235699517574087,0.8435114503816794
+ROAD test (run 1 table),raw_can.l2a_skew,0.8256374913852516,0.851145038167939
+ROAD test (run 1 table),raw_can.l2a_skew,0.8283942108890421,0.851145038167939
+ROAD test (run 1 table),raw_can.l2a_skew,0.8311509303928325,0.8549618320610687
+ROAD test (run 1 table),raw_can.l2a_skew,0.8318401102687801,0.866412213740458
+ROAD test (run 1 table),raw_can.l2a_skew,0.8332184700206754,0.8740458015267176
+ROAD test (run 1 table),raw_can.l2a_skew,0.8352860096485183,0.8778625954198473
+ROAD test (run 1 table),raw_can.l2a_skew,0.8373535492763611,0.8816793893129771
+ROAD test (run 1 table),raw_can.l2a_skew,0.8401102687801516,0.8854961832061069
+ROAD test (run 1 table),raw_can.l2a_skew,0.8414886285320469,0.8931297709923665
+ROAD test (run 1 table),raw_can.l2a_skew,0.844934527911785,0.8931297709923665
+ROAD test (run 1 table),raw_can.l2a_skew,0.8470020675396278,0.8969465648854962
+ROAD test (run 1 table),raw_can.l2a_skew,0.8497587870434183,0.8969465648854962
+ROAD test (run 1 table),raw_can.l2a_skew,0.8518263266712612,0.9007633587786259
+ROAD test (run 1 table),raw_can.l2a_skew,0.853893866299104,0.9083969465648855
+ROAD test (run 1 table),raw_can.l2a_skew,0.8566505858028945,0.9083969465648855
+ROAD test (run 1 table),raw_can.l2a_skew,0.8594073053066851,0.9083969465648855
+ROAD test (run 1 table),raw_can.l2a_skew,0.8628532046864231,0.9083969465648855
+ROAD test (run 1 table),raw_can.l2a_skew,0.8662991040661613,0.9083969465648855
+ROAD test (run 1 table),raw_can.l2a_skew,0.870434183321847,0.9083969465648855
+ROAD test (run 1 table),raw_can.l2a_skew,0.8718125430737422,0.9083969465648855
+ROAD test (run 1 table),raw_can.l2a_skew,0.8745692625775328,0.9083969465648855
+ROAD test (run 1 table),raw_can.l2a_skew,0.8773259820813233,0.9122137404580153
+ROAD test (run 1 table),raw_can.l2a_skew,0.8800827015851137,0.9122137404580153
+ROAD test (run 1 table),raw_can.l2a_skew,0.8828394210889042,0.9122137404580153
+ROAD test (run 1 table),raw_can.l2a_skew,0.8855961405926946,0.9122137404580153
+ROAD test (run 1 table),raw_can.l2a_skew,0.8883528600964852,0.916030534351145
+ROAD test (run 1 table),raw_can.l2a_skew,0.8897312198483804,0.9198473282442748
+ROAD test (run 1 table),raw_can.l2a_skew,0.8938662991040661,0.9198473282442748
+ROAD test (run 1 table),raw_can.l2a_skew,0.895933838731909,0.9198473282442748
+ROAD test (run 1 table),raw_can.l2a_skew,0.8973121984838043,0.9274809160305344
+ROAD test (run 1 table),raw_can.l2a_skew,0.9000689179875948,0.9274809160305344
+ROAD test (run 1 table),raw_can.l2a_skew,0.9035148173673329,0.9312977099236641
+ROAD test (run 1 table),raw_can.l2a_skew,0.9048931771192281,0.9389312977099237
+ROAD test (run 1 table),raw_can.l2a_skew,0.906960716747071,0.9389312977099237
+ROAD test (run 1 table),raw_can.l2a_skew,0.9097174362508614,0.9427480916030534
+ROAD test (run 1 table),raw_can.l2a_skew,0.9117849758787043,0.9465648854961832
+ROAD test (run 1 table),raw_can.l2a_skew,1.0,1.0
+ROAD test (run 1 table),raw_can.l2a_skew,1.0,1.0
+Car-Hacking test,raw_can.l1_id_allow,0.0,0.0
+Car-Hacking test,raw_can.l1_id_allow,0.0,0.5829918032786885
+Car-Hacking test,raw_can.l1_id_allow,1.0,1.0
+Car-Hacking test,raw_can.l1_id_allow,1.0,1.0
+Car-Hacking test,raw_can.l1_dlc,0.0,0.0
+Car-Hacking test,raw_can.l1_dlc,0.0,0.020491803278688492
+Car-Hacking test,raw_can.l1_dlc,1.0,1.0
+Car-Hacking test,raw_can.l1_dlc,1.0,1.0
+Car-Hacking test,raw_can.l1_period,0.0,0.0
+Car-Hacking test,raw_can.l1_period,0.0,0.0010245901639344135
+Car-Hacking test,raw_can.l1_period,0.0,0.004098360655737654
+Car-Hacking test,raw_can.l1_period,0.0,0.0071721311475410054
+Car-Hacking test,raw_can.l1_period,0.0,0.010245901639344246
+Car-Hacking test,raw_can.l1_period,0.0,0.013319672131147486
+Car-Hacking test,raw_can.l1_period,0.0,0.016393442622950838
+Car-Hacking test,raw_can.l1_period,0.0,0.020491803278688492
+Car-Hacking test,raw_can.l1_period,0.0,0.023565573770491843
+Car-Hacking test,raw_can.l1_period,0.0,0.026639344262295084
+Car-Hacking test,raw_can.l1_period,0.0,0.029713114754098324
+Car-Hacking test,raw_can.l1_period,0.0,0.032786885245901676
+Car-Hacking test,raw_can.l1_period,0.0,0.03688524590163933
+Car-Hacking test,raw_can.l1_period,0.0,0.03995901639344257
+Car-Hacking test,raw_can.l1_period,0.0,0.04303278688524592
+Car-Hacking test,raw_can.l1_period,0.0,0.04610655737704916
+Car-Hacking test,raw_can.l1_period,0.0,0.049180327868852514
+Car-Hacking test,raw_can.l1_period,0.0,0.05327868852459017
+Car-Hacking test,raw_can.l1_period,0.0,0.05635245901639341
+Car-Hacking test,raw_can.l1_period,0.0,0.05942622950819676
+Car-Hacking test,raw_can.l1_period,0.0,0.0625
+Car-Hacking test,raw_can.l1_period,0.0,0.06557377049180324
+Car-Hacking test,raw_can.l1_period,0.0,0.069672131147541
+Car-Hacking test,raw_can.l1_period,0.0,0.07274590163934425
+Car-Hacking test,raw_can.l1_period,0.0,0.07581967213114749
+Car-Hacking test,raw_can.l1_period,0.0,0.07889344262295084
+Car-Hacking test,raw_can.l1_period,0.0,0.08196721311475408
+Car-Hacking test,raw_can.l1_period,0.0,0.08606557377049184
+Car-Hacking test,raw_can.l1_period,0.0,0.08913934426229508
+Car-Hacking test,raw_can.l1_period,0.0,0.09221311475409832
+Car-Hacking test,raw_can.l1_period,0.0,0.09528688524590168
+Car-Hacking test,raw_can.l1_period,0.0,0.09836065573770492
+Car-Hacking test,raw_can.l1_period,0.0,0.10245901639344257
+Car-Hacking test,raw_can.l1_period,0.0,0.10553278688524592
+Car-Hacking test,raw_can.l1_period,0.0,0.10860655737704916
+Car-Hacking test,raw_can.l1_period,0.0,0.11168032786885251
+Car-Hacking test,raw_can.l1_period,0.0,0.11475409836065575
+Car-Hacking test,raw_can.l1_period,0.0,0.11885245901639341
+Car-Hacking test,raw_can.l1_period,0.0,0.12192622950819676
+Car-Hacking test,raw_can.l1_period,0.0,0.125
+Car-Hacking test,raw_can.l1_period,0.0,0.12807377049180324
+Car-Hacking test,raw_can.l1_period,0.0,0.1311475409836066
+Car-Hacking test,raw_can.l1_period,0.0,0.13524590163934425
+Car-Hacking test,raw_can.l1_period,0.0,0.1383196721311475
+Car-Hacking test,raw_can.l1_period,0.0,0.14139344262295084
+Car-Hacking test,raw_can.l1_period,0.0,0.14446721311475408
+Car-Hacking test,raw_can.l1_period,0.0,0.14754098360655743
+Car-Hacking test,raw_can.l1_period,0.0,0.15061475409836067
+Car-Hacking test,raw_can.l1_period,0.0,0.15471311475409832
+Car-Hacking test,raw_can.l1_period,0.0,0.15778688524590168
+Car-Hacking test,raw_can.l1_period,0.0,0.16086065573770492
+Car-Hacking test,raw_can.l1_period,0.0,0.16393442622950816
+Car-Hacking test,raw_can.l1_period,0.0,0.1670081967213115
+Car-Hacking test,raw_can.l1_period,0.0,0.17110655737704916
+Car-Hacking test,raw_can.l1_period,0.0,0.1741803278688525
+Car-Hacking test,raw_can.l1_period,0.0,0.17725409836065575
+Car-Hacking test,raw_can.l1_period,0.0,0.180327868852459
+Car-Hacking test,raw_can.l1_period,0.0,0.18340163934426235
+Car-Hacking test,raw_can.l1_period,0.0,0.1875
+Car-Hacking test,raw_can.l1_period,0.0,0.19057377049180324
+Car-Hacking test,raw_can.l1_period,0.0,0.194672131147541
+Car-Hacking test,raw_can.l1_period,0.0,0.19672131147540983
+Car-Hacking test,raw_can.l1_period,0.0,0.19979508196721307
+Car-Hacking test,raw_can.l1_period,0.0,0.20389344262295084
+Car-Hacking test,raw_can.l1_period,0.0,0.20696721311475408
+Car-Hacking test,raw_can.l1_period,0.0,0.21004098360655743
+Car-Hacking test,raw_can.l1_period,0.0,0.21311475409836067
+Car-Hacking test,raw_can.l1_period,0.0,0.2161885245901639
+Car-Hacking test,raw_can.l1_period,0.0,0.22028688524590168
+Car-Hacking test,raw_can.l1_period,0.0,0.22336065573770492
+Car-Hacking test,raw_can.l1_period,0.0,0.22643442622950816
+Car-Hacking test,raw_can.l1_period,0.0,0.2295081967213115
+Car-Hacking test,raw_can.l1_period,0.0,0.23258196721311475
+Car-Hacking test,raw_can.l1_period,0.0,0.2366803278688525
+Car-Hacking test,raw_can.l1_period,0.0,0.23975409836065575
+Car-Hacking test,raw_can.l1_period,0.0,0.242827868852459
+Car-Hacking test,raw_can.l1_period,0.0,0.24590163934426235
+Car-Hacking test,raw_can.l1_period,0.0,0.2489754098360656
+Car-Hacking test,raw_can.l1_period,0.0,0.25307377049180324
+Car-Hacking test,raw_can.l1_period,0.0,0.2561475409836066
+Car-Hacking test,raw_can.l1_period,0.0,0.25922131147540983
+Car-Hacking test,raw_can.l1_period,0.0,0.2622950819672131
+Car-Hacking test,raw_can.l1_period,0.0,0.2653688524590164
+Car-Hacking test,raw_can.l1_period,0.0,0.2694672131147541
+Car-Hacking test,raw_can.l1_period,0.0,0.27254098360655743
+Car-Hacking test,raw_can.l1_period,0.0,0.27561475409836067
+Car-Hacking test,raw_can.l1_period,0.0,0.2786885245901639
+Car-Hacking test,raw_can.l1_period,0.0,0.28176229508196726
+Car-Hacking test,raw_can.l1_period,0.0,0.2858606557377049
+Car-Hacking test,raw_can.l1_period,0.0,0.28893442622950816
+Car-Hacking test,raw_can.l1_period,0.0,0.2920081967213115
+Car-Hacking test,raw_can.l1_period,0.0,0.29508196721311475
+Car-Hacking test,raw_can.l1_period,0.0,0.298155737704918
+Car-Hacking test,raw_can.l1_period,0.0,0.30122950819672134
+Car-Hacking test,raw_can.l1_period,0.0,0.305327868852459
+Car-Hacking test,raw_can.l1_period,0.0,0.30840163934426235
+Car-Hacking test,raw_can.l1_period,0.0,0.3114754098360656
+Car-Hacking test,raw_can.l1_period,0.0,0.3145491803278688
+Car-Hacking test,raw_can.l1_period,0.0,0.3176229508196722
+Car-Hacking test,raw_can.l1_period,0.0,0.32172131147540983
+Car-Hacking test,raw_can.l1_period,0.0,0.3247950819672131
+Car-Hacking test,raw_can.l1_period,0.0,0.3278688524590164
+Car-Hacking test,raw_can.l1_period,0.0,0.33094262295081966
+Car-Hacking test,raw_can.l1_period,0.0,0.3340163934426229
+Car-Hacking test,raw_can.l1_period,0.0,0.33811475409836067
+Car-Hacking test,raw_can.l1_period,0.0,0.3411885245901639
+Car-Hacking test,raw_can.l1_period,0.0,0.34426229508196726
+Car-Hacking test,raw_can.l1_period,0.0,0.3473360655737705
+Car-Hacking test,raw_can.l1_period,0.0,0.35040983606557374
+Car-Hacking test,raw_can.l1_period,0.0,0.3545081967213115
+Car-Hacking test,raw_can.l1_period,0.0,0.35758196721311475
+Car-Hacking test,raw_can.l1_period,0.0,0.360655737704918
+Car-Hacking test,raw_can.l1_period,0.0,0.36372950819672134
+Car-Hacking test,raw_can.l1_period,0.0,0.3668032786885246
+Car-Hacking test,raw_can.l1_period,0.0,0.37090163934426235
+Car-Hacking test,raw_can.l1_period,0.0,0.3739754098360656
+Car-Hacking test,raw_can.l1_period,0.0,0.3770491803278688
+Car-Hacking test,raw_can.l1_period,0.0,0.3801229508196722
+Car-Hacking test,raw_can.l1_period,0.0,0.3831967213114754
+Car-Hacking test,raw_can.l1_period,0.0,0.3872950819672131
+Car-Hacking test,raw_can.l1_period,0.0,0.3903688524590164
+Car-Hacking test,raw_can.l1_period,0.0,0.39344262295081966
+Car-Hacking test,raw_can.l1_period,0.0,0.3965163934426229
+Car-Hacking test,raw_can.l1_period,0.0,0.39959016393442626
+Car-Hacking test,raw_can.l1_period,0.0,0.4036885245901639
+Car-Hacking test,raw_can.l1_period,0.0,0.40676229508196726
+Car-Hacking test,raw_can.l1_period,0.0,0.4098360655737705
+Car-Hacking test,raw_can.l1_period,0.0,0.41290983606557374
+Car-Hacking test,raw_can.l1_period,0.0,0.4159836065573771
+Car-Hacking test,raw_can.l1_period,0.0,0.42008196721311475
+Car-Hacking test,raw_can.l1_period,0.0,0.423155737704918
+Car-Hacking test,raw_can.l1_period,0.0,0.42622950819672134
+Car-Hacking test,raw_can.l1_period,0.0,0.4293032786885246
+Car-Hacking test,raw_can.l1_period,0.0,0.4323770491803278
+Car-Hacking test,raw_can.l1_period,0.0,0.4364754098360656
+Car-Hacking test,raw_can.l1_period,0.0,0.4395491803278688
+Car-Hacking test,raw_can.l1_period,0.0,0.4426229508196722
+Car-Hacking test,raw_can.l1_period,0.0,0.4456967213114754
+Car-Hacking test,raw_can.l1_period,0.0,0.44877049180327866
+Car-Hacking test,raw_can.l1_period,0.0,0.451844262295082
+Car-Hacking test,raw_can.l1_period,0.0,0.45594262295081966
+Car-Hacking test,raw_can.l1_period,0.0,0.4590163934426229
+Car-Hacking test,raw_can.l1_period,0.0,0.46209016393442626
+Car-Hacking test,raw_can.l1_period,0.0,0.4651639344262295
+Car-Hacking test,raw_can.l1_period,0.0,0.46823770491803274
+Car-Hacking test,raw_can.l1_period,0.0,0.4723360655737705
+Car-Hacking test,raw_can.l1_period,0.0,0.47540983606557374
+Car-Hacking test,raw_can.l1_period,0.0,0.4784836065573771
+Car-Hacking test,raw_can.l1_period,0.0,0.48155737704918034
+Car-Hacking test,raw_can.l1_period,0.0,0.4846311475409836
+Car-Hacking test,raw_can.l1_period,0.0,0.48872950819672134
+Car-Hacking test,raw_can.l1_period,0.0,0.4918032786885246
+Car-Hacking test,raw_can.l1_period,0.0,0.4948770491803278
+Car-Hacking test,raw_can.l1_period,0.0,0.4979508196721312
+Car-Hacking test,raw_can.l1_period,0.0,0.5010245901639344
+Car-Hacking test,raw_can.l1_period,0.0,0.5051229508196722
+Car-Hacking test,raw_can.l1_period,0.0,0.5081967213114754
+Car-Hacking test,raw_can.l1_period,0.0,0.5112704918032787
+Car-Hacking test,raw_can.l1_period,0.0,0.514344262295082
+Car-Hacking test,raw_can.l1_period,0.0,0.5174180327868853
+Car-Hacking test,raw_can.l1_period,0.0,0.521516393442623
+Car-Hacking test,raw_can.l1_period,0.0,0.5245901639344263
+Car-Hacking test,raw_can.l1_period,0.0,0.5276639344262295
+Car-Hacking test,raw_can.l1_period,0.0,0.5307377049180328
+Car-Hacking test,raw_can.l1_period,0.0,0.5338114754098361
+Car-Hacking test,raw_can.l1_period,0.0,0.5379098360655737
+Car-Hacking test,raw_can.l1_period,0.0,0.540983606557377
+Car-Hacking test,raw_can.l1_period,0.0,0.5440573770491803
+Car-Hacking test,raw_can.l1_period,0.0,0.5471311475409837
+Car-Hacking test,raw_can.l1_period,0.0,0.5502049180327868
+Car-Hacking test,raw_can.l1_period,0.0,0.5543032786885246
+Car-Hacking test,raw_can.l1_period,0.0,0.5573770491803278
+Car-Hacking test,raw_can.l1_period,0.0,0.5604508196721312
+Car-Hacking test,raw_can.l1_period,0.0,0.5635245901639344
+Car-Hacking test,raw_can.l1_period,0.0,0.5665983606557377
+Car-Hacking test,raw_can.l1_period,0.0,0.5706967213114754
+Car-Hacking test,raw_can.l1_period,0.0,0.5737704918032787
+Car-Hacking test,raw_can.l1_period,0.0,0.576844262295082
+Car-Hacking test,raw_can.l1_period,0.0,0.5799180327868853
+Car-Hacking test,raw_can.l1_period,0.0,0.5829918032786885
+Car-Hacking test,raw_can.l1_period,0.0,0.5860655737704918
+Car-Hacking test,raw_can.l1_period,0.0,0.5901639344262295
+Car-Hacking test,raw_can.l1_period,0.0,0.5932377049180328
+Car-Hacking test,raw_can.l1_period,0.0,0.5963114754098361
+Car-Hacking test,raw_can.l1_period,0.0,0.5993852459016393
+Car-Hacking test,raw_can.l1_period,0.0,0.6024590163934427
+Car-Hacking test,raw_can.l1_period,0.0,0.6065573770491803
+Car-Hacking test,raw_can.l1_period,0.0,0.6096311475409837
+Car-Hacking test,raw_can.l1_period,0.0,0.6127049180327868
+Car-Hacking test,raw_can.l1_period,0.0,0.6157786885245902
+Car-Hacking test,raw_can.l1_period,0.0,0.6188524590163935
+Car-Hacking test,raw_can.l1_period,0.0,0.6229508196721312
+Car-Hacking test,raw_can.l1_period,0.0,0.6260245901639344
+Car-Hacking test,raw_can.l1_period,0.0,0.6290983606557377
+Car-Hacking test,raw_can.l1_period,0.0,0.632172131147541
+Car-Hacking test,raw_can.l1_period,0.0,0.6352459016393442
+Car-Hacking test,raw_can.l1_period,0.0,0.639344262295082
+Car-Hacking test,raw_can.l1_period,0.0,0.6424180327868853
+Car-Hacking test,raw_can.l1_period,0.0,0.6454918032786885
+Car-Hacking test,raw_can.l1_period,0.0,0.6485655737704918
+Car-Hacking test,raw_can.l1_period,0.0,0.6516393442622951
+Car-Hacking test,raw_can.l1_period,0.0,0.6557377049180328
+Car-Hacking test,raw_can.l1_period,0.0,0.6588114754098361
+Car-Hacking test,raw_can.l1_period,0.0,0.6618852459016393
+Car-Hacking test,raw_can.l1_period,0.0,0.6649590163934427
+Car-Hacking test,raw_can.l1_period,0.0,0.6680327868852459
+Car-Hacking test,raw_can.l1_period,0.0,0.6721311475409837
+Car-Hacking test,raw_can.l1_period,0.0,0.6752049180327868
+Car-Hacking test,raw_can.l1_period,0.0,0.6782786885245902
+Car-Hacking test,raw_can.l1_period,0.0,0.6813524590163935
+Car-Hacking test,raw_can.l1_period,0.0,0.6844262295081966
+Car-Hacking test,raw_can.l1_period,0.0,0.6885245901639344
+Car-Hacking test,raw_can.l1_period,0.0,0.6915983606557377
+Car-Hacking test,raw_can.l1_period,0.0,0.694672131147541
+Car-Hacking test,raw_can.l1_period,0.0,0.6977459016393442
+Car-Hacking test,raw_can.l1_period,0.0,0.7008196721311475
+Car-Hacking test,raw_can.l1_period,0.0,0.7049180327868853
+Car-Hacking test,raw_can.l1_period,0.0,0.7079918032786885
+Car-Hacking test,raw_can.l1_period,0.0,0.7110655737704918
+Car-Hacking test,raw_can.l1_period,0.0,0.7141393442622951
+Car-Hacking test,raw_can.l1_period,0.0,0.7172131147540983
+Car-Hacking test,raw_can.l1_period,0.0,0.7213114754098361
+Car-Hacking test,raw_can.l1_period,0.0,0.7243852459016393
+Car-Hacking test,raw_can.l1_period,0.0,0.7274590163934427
+Car-Hacking test,raw_can.l1_period,0.0,0.7305327868852459
+Car-Hacking test,raw_can.l1_period,0.0,0.7336065573770492
+Car-Hacking test,raw_can.l1_period,0.0,0.7366803278688525
+Car-Hacking test,raw_can.l1_period,0.0,0.7407786885245902
+Car-Hacking test,raw_can.l1_period,0.0,0.7438524590163935
+Car-Hacking test,raw_can.l1_period,0.0,0.7469262295081966
+Car-Hacking test,raw_can.l1_period,0.0,0.75
+Car-Hacking test,raw_can.l1_period,0.0,0.7530737704918032
+Car-Hacking test,raw_can.l1_period,0.0,0.757172131147541
+Car-Hacking test,raw_can.l1_period,0.0,0.7602459016393442
+Car-Hacking test,raw_can.l1_period,0.0,0.7633196721311475
+Car-Hacking test,raw_can.l1_period,0.0,0.7663934426229508
+Car-Hacking test,raw_can.l1_period,0.0,0.7694672131147541
+Car-Hacking test,raw_can.l1_period,0.0,0.7735655737704918
+Car-Hacking test,raw_can.l1_period,0.0,0.7766393442622951
+Car-Hacking test,raw_can.l1_period,0.0,0.7797131147540983
+Car-Hacking test,raw_can.l1_period,0.0,0.7827868852459017
+Car-Hacking test,raw_can.l1_period,0.0,0.7858606557377049
+Car-Hacking test,raw_can.l1_period,0.0,0.7899590163934427
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.7920081967213115
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.7950819672131147
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.798155737704918
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8012295081967213
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.805327868852459
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8084016393442623
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8114754098360656
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8145491803278688
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8176229508196722
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8217213114754098
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8247950819672132
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8278688524590164
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8309426229508197
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.834016393442623
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8381147540983607
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8411885245901639
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8442622950819672
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8473360655737705
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8504098360655737
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8545081967213115
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8575819672131147
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.860655737704918
+Car-Hacking test,raw_can.l1_period,0.0033333333333332993,0.8637295081967213
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8657786885245902
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8698770491803278
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8729508196721312
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8760245901639344
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8790983606557377
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.882172131147541
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8852459016393442
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.889344262295082
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8924180327868853
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8954918032786885
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.8985655737704918
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.9016393442622951
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.9057377049180328
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.9088114754098361
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.9118852459016393
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.9149590163934427
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.9180327868852459
+Car-Hacking test,raw_can.l1_period,0.00666666666666671,0.9221311475409836
+Car-Hacking test,raw_can.l1_period,0.013333333333333308,0.923155737704918
+Car-Hacking test,raw_can.l1_period,0.013333333333333308,0.9262295081967213
+Car-Hacking test,raw_can.l1_period,0.013333333333333308,0.9293032786885246
+Car-Hacking test,raw_can.l1_period,0.013333333333333308,0.9323770491803278
+Car-Hacking test,raw_can.l1_period,0.01666666666666672,0.9354508196721312
+Car-Hacking test,raw_can.l1_period,0.01666666666666672,0.9385245901639344
+Car-Hacking test,raw_can.l1_period,0.01666666666666672,0.9415983606557377
+Car-Hacking test,raw_can.l1_period,0.020000000000000018,0.9436475409836066
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9456967213114754
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9497950819672131
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9528688524590164
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9559426229508197
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9590163934426229
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9620901639344263
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9672131147540983
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9692622950819673
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9723360655737705
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9754098360655737
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9784836065573771
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.985655737704918
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.985655737704918
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9887295081967213
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9918032786885246
+Car-Hacking test,raw_can.l1_period,0.023333333333333317,0.9948770491803278
+Car-Hacking test,raw_can.l1_period,0.033333333333333326,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.050000000000000044,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.053333333333333344,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.06666666666666665,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.07333333333333336,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.08666666666666667,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.09666666666666668,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.10999999999999999,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.1166666666666667,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.1333333333333333,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.13666666666666671,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.15000000000000002,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.16000000000000003,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.17000000000000004,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.18000000000000005,0.9959016393442623
+Car-Hacking test,raw_can.l1_period,0.18666666666666665,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.20333333333333337,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.20999999999999996,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.21999999999999997,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.2366666666666667,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.24,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.2533333333333333,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.27,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.2733333333333333,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.2833333333333333,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.29333333333333333,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.30666666666666664,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.31666666666666665,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.32666666666666666,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.3433333333333334,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.3466666666666667,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.36,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.37,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.3833333333333333,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.39,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.4,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.42000000000000004,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.42333333333333334,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.43333333333333335,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.44333333333333336,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.45666666666666667,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.4666666666666667,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.4766666666666667,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.4866666666666667,0.9969262295081968
+Car-Hacking test,raw_can.l1_period,0.5,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5033333333333334,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5166666666666666,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.53,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5366666666666666,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5466666666666666,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5566666666666666,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5700000000000001,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5800000000000001,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5900000000000001,0.9979508196721312
+Car-Hacking test,raw_can.l1_period,0.5966666666666667,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.6066666666666667,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.6166666666666667,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.63,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.6433333333333333,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.65,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.6599999999999999,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.6699999999999999,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.6833333333333333,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.7,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.71,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.7166666666666667,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.7233333333333334,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.74,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.7466666666666666,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.7566666666666666,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.7666666666666666,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.78,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.7933333333333333,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8133333333333334,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8233333333333334,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.83,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8433333333333333,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8533333333333333,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8633333333333333,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8733333333333333,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8833333333333333,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.8966666666666667,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.9066666666666666,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.9166666666666666,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.9266666666666666,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.94,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.95,0.9989754098360656
+Car-Hacking test,raw_can.l1_period,0.9566666666666667,1.0
+Car-Hacking test,raw_can.l1_period,0.9666666666666667,1.0
+Car-Hacking test,raw_can.l1_period,0.9766666666666667,1.0
+Car-Hacking test,raw_can.l1_period,0.9866666666666667,1.0
+Car-Hacking test,raw_can.l1_period,1.0,1.0
+Car-Hacking test,raw_can.l1_period,1.0,1.0
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.0
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.0010245901639344135
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.004098360655737654
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.0071721311475410054
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.010245901639344246
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.013319672131147486
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.016393442622950838
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.020491803278688492
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.023565573770491843
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.026639344262295084
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.029713114754098324
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.032786885245901676
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.03688524590163933
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.03995901639344257
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.04303278688524592
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.04610655737704916
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.049180327868852514
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.05327868852459017
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.05635245901639341
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.05942622950819676
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.06352459016393441
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.06557377049180324
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.069672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.07274590163934425
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.07581967213114749
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.07889344262295084
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.08196721311475408
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.08606557377049184
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.08913934426229508
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.09221311475409832
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.09528688524590168
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.09836065573770492
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.10245901639344257
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.10553278688524592
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.10860655737704916
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.11168032786885251
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.11475409836065575
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.11885245901639341
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.12192622950819676
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.125
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.12807377049180324
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.1311475409836066
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.13524590163934425
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.1383196721311475
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.14139344262295084
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.14446721311475408
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.14754098360655743
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.15061475409836067
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.15471311475409832
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.15778688524590168
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.16086065573770492
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.16393442622950816
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.1670081967213115
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.17213114754098358
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.1741803278688525
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.17725409836065575
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.180327868852459
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.18340163934426235
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.1875
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.19057377049180324
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.1936475409836066
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.19672131147540983
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.19979508196721307
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.20389344262295084
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.20696721311475408
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.21004098360655743
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.21311475409836067
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2161885245901639
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.22028688524590168
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.22336065573770492
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.22643442622950816
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2295081967213115
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.23258196721311475
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2366803278688525
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.23975409836065575
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.242827868852459
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.24590163934426235
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.25
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.25307377049180324
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2561475409836066
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.25922131147540983
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2622950819672131
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2653688524590164
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2694672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.27254098360655743
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.27561475409836067
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2786885245901639
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.28176229508196726
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.2858606557377049
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.28893442622950816
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.29405737704918034
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.29508196721311475
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.298155737704918
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.30122950819672134
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.305327868852459
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.30840163934426235
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3114754098360656
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3145491803278688
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3176229508196722
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.32172131147540983
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3247950819672131
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3278688524590164
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.33094262295081966
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3340163934426229
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.33811475409836067
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3411885245901639
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3452868852459017
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3473360655737705
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.35040983606557374
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.35655737704918034
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.35758196721311475
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.360655737704918
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.36372950819672134
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3668032786885246
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.37090163934426235
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3739754098360656
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3770491803278688
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3811475409836066
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.38422131147540983
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3872950819672131
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3903688524590164
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.39344262295081966
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.3965163934426229
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.39959016393442626
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.4036885245901639
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.40676229508196726
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.4098360655737705
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.41290983606557374
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.4159836065573771
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.42008196721311475
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.423155737704918
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.42622950819672134
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.4293032786885246
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.4323770491803278
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.4364754098360656
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.4395491803278688
+Car-Hacking test,raw_can.l1_bus_load,0.0,0.4426229508196722
+Car-Hacking test,raw_can.l1_bus_load,0.00666666666666671,0.4436475409836066
+Car-Hacking test,raw_can.l1_bus_load,0.16000000000000003,0.4436475409836066
+Car-Hacking test,raw_can.l1_bus_load,0.6133333333333333,0.444672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.62,0.444672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.8133333333333334,0.444672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.8133333333333334,0.444672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.91,0.4456967213114754
+Car-Hacking test,raw_can.l1_bus_load,0.9166666666666666,0.4456967213114754
+Car-Hacking test,raw_can.l1_bus_load,0.9633333333333334,0.44672131147540983
+Car-Hacking test,raw_can.l1_bus_load,0.9833333333333333,0.44672131147540983
+Car-Hacking test,raw_can.l1_bus_load,0.9833333333333333,0.44774590163934425
+Car-Hacking test,raw_can.l1_bus_load,0.9833333333333333,0.4508196721311475
+Car-Hacking test,raw_can.l1_bus_load,0.9866666666666667,0.45389344262295084
+Car-Hacking test,raw_can.l1_bus_load,0.9866666666666667,0.4569672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.9866666666666667,0.46004098360655743
+Car-Hacking test,raw_can.l1_bus_load,0.9866666666666667,0.46311475409836067
+Car-Hacking test,raw_can.l1_bus_load,0.9866666666666667,0.4661885245901639
+Car-Hacking test,raw_can.l1_bus_load,0.9866666666666667,0.4702868852459017
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.4723360655737705
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.47540983606557374
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.4784836065573771
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.48258196721311475
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.485655737704918
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.48872950819672134
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.4918032786885246
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.4948770491803278
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.4979508196721312
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.5020491803278688
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.5051229508196722
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.5081967213114754
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.5112704918032787
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.514344262295082
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.5184426229508197
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.521516393442623
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.5245901639344263
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.5276639344262295
+Car-Hacking test,raw_can.l1_bus_load,0.99,0.5307377049180328
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5338114754098361
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5368852459016393
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5399590163934427
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5430327868852459
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5461065573770492
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5502049180327868
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5532786885245902
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5563524590163935
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5594262295081966
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5625
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5665983606557377
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.569672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5727459016393442
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5758196721311475
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5788934426229508
+Car-Hacking test,raw_can.l1_bus_load,0.9933333333333333,0.5819672131147541
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.5850409836065573
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.5881147540983607
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.5911885245901639
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.5942622950819672
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.5973360655737705
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.6014344262295082
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.6045081967213115
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.6075819672131147
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.610655737704918
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.6137295081967213
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.617827868852459
+Car-Hacking test,raw_can.l1_bus_load,0.9966666666666667,0.6209016393442623
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6229508196721312
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6260245901639344
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6290983606557377
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6331967213114754
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6362704918032787
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.639344262295082
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6424180327868853
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6454918032786885
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6495901639344263
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6526639344262295
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6557377049180328
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6588114754098361
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6618852459016393
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.665983606557377
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6690573770491803
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6721311475409837
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6752049180327868
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6782786885245902
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6823770491803278
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6854508196721312
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6885245901639344
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6915983606557377
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.694672131147541
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.6987704918032787
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.701844262295082
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7049180327868853
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7079918032786885
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7110655737704918
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7141393442622951
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7182377049180328
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7213114754098361
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7243852459016393
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7274590163934427
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7305327868852459
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7346311475409837
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7377049180327868
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7407786885245902
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7438524590163935
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7469262295081966
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7510245901639344
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7540983606557377
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.757172131147541
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7602459016393442
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7633196721311475
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7674180327868853
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7704918032786885
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7735655737704918
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7766393442622951
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7797131147540983
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7838114754098361
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7868852459016393
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7899590163934427
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7930327868852459
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.7961065573770492
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8002049180327868
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8032786885245902
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8063524590163934
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8094262295081968
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8125
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8165983606557377
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.819672131147541
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8227459016393442
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8258196721311475
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8288934426229508
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8329918032786885
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8360655737704918
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8391393442622951
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8422131147540983
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8452868852459017
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8493852459016393
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8524590163934427
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8555327868852459
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8586065573770492
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8616803278688525
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8647540983606558
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8688524590163934
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8719262295081968
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.875
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8780737704918032
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8811475409836066
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8852459016393442
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8883196721311475
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8913934426229508
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8944672131147541
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.8975409836065573
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9016393442622951
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9047131147540983
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9077868852459017
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9108606557377049
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9139344262295082
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9180327868852459
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9221311475409836
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9241803278688525
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9272540983606558
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.930327868852459
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9344262295081968
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9375
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9405737704918032
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9436475409836066
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9467213114754098
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9508196721311475
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9538934426229508
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9569672131147541
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9620901639344263
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9631147540983607
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9672131147540983
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9702868852459017
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9733606557377049
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9764344262295082
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9795081967213115
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9836065573770492
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9866803278688525
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9897540983606558
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.992827868852459
+Car-Hacking test,raw_can.l1_bus_load,1.0,0.9969262295081968
+Car-Hacking test,raw_can.l1_bus_load,1.0,1.0
+Car-Hacking test,raw_can.l1_bus_load,1.0,1.0
+Car-Hacking test,raw_can.l1_flood,0.0,0.0
+Car-Hacking test,raw_can.l1_flood,0.0,0.0010245901639344135
+Car-Hacking test,raw_can.l1_flood,0.0,0.002049180327868827
+Car-Hacking test,raw_can.l1_flood,0.0,0.0030737704918032405
+Car-Hacking test,raw_can.l1_flood,0.0,0.004098360655737654
+Car-Hacking test,raw_can.l1_flood,0.0,0.0051229508196721785
+Car-Hacking test,raw_can.l1_flood,0.0,0.006147540983606592
+Car-Hacking test,raw_can.l1_flood,0.0,0.0071721311475410054
+Car-Hacking test,raw_can.l1_flood,0.0,0.008196721311475419
+Car-Hacking test,raw_can.l1_flood,0.0,0.009221311475409832
+Car-Hacking test,raw_can.l1_flood,0.0,0.010245901639344246
+Car-Hacking test,raw_can.l1_flood,0.0,0.01127049180327866
+Car-Hacking test,raw_can.l1_flood,0.0,0.012295081967213073
+Car-Hacking test,raw_can.l1_flood,0.0,0.013319672131147486
+Car-Hacking test,raw_can.l1_flood,0.0,0.014344262295082011
+Car-Hacking test,raw_can.l1_flood,0.0,0.015368852459016424
+Car-Hacking test,raw_can.l1_flood,0.0,0.016393442622950838
+Car-Hacking test,raw_can.l1_flood,0.0,0.01741803278688525
+Car-Hacking test,raw_can.l1_flood,0.0,0.018442622950819665
+Car-Hacking test,raw_can.l1_flood,0.0,0.01946721311475408
+Car-Hacking test,raw_can.l1_flood,0.0,0.020491803278688492
+Car-Hacking test,raw_can.l1_flood,0.0,0.021516393442622905
+Car-Hacking test,raw_can.l1_flood,0.0,0.02254098360655743
+Car-Hacking test,raw_can.l1_flood,0.0,0.023565573770491843
+Car-Hacking test,raw_can.l1_flood,0.0,0.024590163934426257
+Car-Hacking test,raw_can.l1_flood,0.0,0.02561475409836067
+Car-Hacking test,raw_can.l1_flood,0.0,0.026639344262295084
+Car-Hacking test,raw_can.l1_flood,0.0,0.027663934426229497
+Car-Hacking test,raw_can.l1_flood,0.0,0.02868852459016391
+Car-Hacking test,raw_can.l1_flood,0.0,0.029713114754098324
+Car-Hacking test,raw_can.l1_flood,0.0,0.030737704918032738
+Car-Hacking test,raw_can.l1_flood,0.0,0.03176229508196726
+Car-Hacking test,raw_can.l1_flood,0.0,0.032786885245901676
+Car-Hacking test,raw_can.l1_flood,0.0,0.03381147540983609
+Car-Hacking test,raw_can.l1_flood,0.0,0.0348360655737705
+Car-Hacking test,raw_can.l1_flood,0.0,0.035860655737704916
+Car-Hacking test,raw_can.l1_flood,0.0,0.03688524590163933
+Car-Hacking test,raw_can.l1_flood,0.0,0.03893442622950816
+Car-Hacking test,raw_can.l1_flood,0.0,0.03995901639344257
+Car-Hacking test,raw_can.l1_flood,0.0,0.040983606557377095
+Car-Hacking test,raw_can.l1_flood,0.0,0.04200819672131151
+Car-Hacking test,raw_can.l1_flood,0.0,0.04303278688524592
+Car-Hacking test,raw_can.l1_flood,0.0,0.044057377049180335
+Car-Hacking test,raw_can.l1_flood,0.0,0.04508196721311475
+Car-Hacking test,raw_can.l1_flood,0.0,0.04610655737704916
+Car-Hacking test,raw_can.l1_flood,0.0,0.047131147540983576
+Car-Hacking test,raw_can.l1_flood,0.0,0.04815573770491799
+Car-Hacking test,raw_can.l1_flood,0.0,0.049180327868852514
+Car-Hacking test,raw_can.l1_flood,0.0,0.05020491803278693
+Car-Hacking test,raw_can.l1_flood,0.0,0.05122950819672134
+Car-Hacking test,raw_can.l1_flood,0.0,0.052254098360655754
+Car-Hacking test,raw_can.l1_flood,0.0,0.05327868852459017
+Car-Hacking test,raw_can.l1_flood,0.0,0.05430327868852458
+Car-Hacking test,raw_can.l1_flood,0.0,0.055327868852458995
+Car-Hacking test,raw_can.l1_flood,0.0,0.05635245901639341
+Car-Hacking test,raw_can.l1_flood,0.0,0.05737704918032782
+Car-Hacking test,raw_can.l1_flood,0.0,0.058401639344262346
+Car-Hacking test,raw_can.l1_flood,0.0,0.05942622950819676
+Car-Hacking test,raw_can.l1_flood,0.0,0.06045081967213117
+Car-Hacking test,raw_can.l1_flood,0.0,0.061475409836065587
+Car-Hacking test,raw_can.l1_flood,0.0,0.0625
+Car-Hacking test,raw_can.l1_flood,0.0,0.06352459016393441
+Car-Hacking test,raw_can.l1_flood,0.0,0.06454918032786883
+Car-Hacking test,raw_can.l1_flood,0.0,0.06557377049180324
+Car-Hacking test,raw_can.l1_flood,0.0,0.06659836065573765
+Car-Hacking test,raw_can.l1_flood,0.0,0.06762295081967218
+Car-Hacking test,raw_can.l1_flood,0.0,0.06864754098360659
+Car-Hacking test,raw_can.l1_flood,0.0,0.069672131147541
+Car-Hacking test,raw_can.l1_flood,0.0,0.07069672131147542
+Car-Hacking test,raw_can.l1_flood,0.0,0.07172131147540983
+Car-Hacking test,raw_can.l1_flood,0.0,0.07274590163934425
+Car-Hacking test,raw_can.l1_flood,0.0,0.07377049180327866
+Car-Hacking test,raw_can.l1_flood,0.0,0.07479508196721307
+Car-Hacking test,raw_can.l1_flood,0.0,0.07581967213114749
+Car-Hacking test,raw_can.l1_flood,0.0,0.07684426229508201
+Car-Hacking test,raw_can.l1_flood,0.0,0.07786885245901642
+Car-Hacking test,raw_can.l1_flood,0.0,0.07889344262295084
+Car-Hacking test,raw_can.l1_flood,0.0,0.07991803278688525
+Car-Hacking test,raw_can.l1_flood,0.0,0.08094262295081966
+Car-Hacking test,raw_can.l1_flood,0.0,0.08196721311475408
+Car-Hacking test,raw_can.l1_flood,0.0,0.08299180327868849
+Car-Hacking test,raw_can.l1_flood,0.0,0.08504098360655743
+Car-Hacking test,raw_can.l1_flood,0.0,0.08606557377049184
+Car-Hacking test,raw_can.l1_flood,0.0,0.08709016393442626
+Car-Hacking test,raw_can.l1_flood,0.0,0.08811475409836067
+Car-Hacking test,raw_can.l1_flood,0.0,0.08913934426229508
+Car-Hacking test,raw_can.l1_flood,0.0,0.0901639344262295
+Car-Hacking test,raw_can.l1_flood,0.0,0.09118852459016391
+Car-Hacking test,raw_can.l1_flood,0.0,0.09221311475409832
+Car-Hacking test,raw_can.l1_flood,0.0,0.09323770491803274
+Car-Hacking test,raw_can.l1_flood,0.0,0.09528688524590168
+Car-Hacking test,raw_can.l1_flood,0.0,0.09631147540983609
+Car-Hacking test,raw_can.l1_flood,0.0,0.0973360655737705
+Car-Hacking test,raw_can.l1_flood,0.0,0.09938524590163933
+Car-Hacking test,raw_can.l1_flood,0.0,0.10040983606557374
+Car-Hacking test,raw_can.l1_flood,0.0,0.10143442622950816
+Car-Hacking test,raw_can.l1_flood,0.0,0.10245901639344257
+Car-Hacking test,raw_can.l1_flood,0.0,0.10553278688524592
+Car-Hacking test,raw_can.l1_flood,0.0,0.10655737704918034
+Car-Hacking test,raw_can.l1_flood,0.0,0.10758196721311475
+Car-Hacking test,raw_can.l1_flood,0.0,0.10860655737704916
+Car-Hacking test,raw_can.l1_flood,0.0,0.10963114754098358
+Car-Hacking test,raw_can.l1_flood,0.0,0.11065573770491799
+Car-Hacking test,raw_can.l1_flood,0.0,0.11270491803278693
+Car-Hacking test,raw_can.l1_flood,0.0,0.11475409836065575
+Car-Hacking test,raw_can.l1_flood,0.0,0.11577868852459017
+Car-Hacking test,raw_can.l1_flood,0.0,0.11680327868852458
+Car-Hacking test,raw_can.l1_flood,0.0,0.117827868852459
+Car-Hacking test,raw_can.l1_flood,0.0,0.11885245901639341
+Car-Hacking test,raw_can.l1_flood,0.0,0.11987704918032782
+Car-Hacking test,raw_can.l1_flood,0.0,0.12192622950819676
+Car-Hacking test,raw_can.l1_flood,0.0,0.12397540983606559
+Car-Hacking test,raw_can.l1_flood,0.0,0.12704918032786883
+Car-Hacking test,raw_can.l1_flood,0.0,0.12807377049180324
+Car-Hacking test,raw_can.l1_flood,0.0,0.13012295081967218
+Car-Hacking test,raw_can.l1_flood,0.0,0.1311475409836066
+Car-Hacking test,raw_can.l1_flood,0.0,0.132172131147541
+Car-Hacking test,raw_can.l1_flood,0.0,0.13319672131147542
+Car-Hacking test,raw_can.l1_flood,0.0,0.13524590163934425
+Car-Hacking test,raw_can.l1_flood,0.0,0.13627049180327866
+Car-Hacking test,raw_can.l1_flood,0.0,0.13729508196721307
+Car-Hacking test,raw_can.l1_flood,0.0,0.139344262295082
+Car-Hacking test,raw_can.l1_flood,0.0,0.14036885245901642
+Car-Hacking test,raw_can.l1_flood,0.0,0.14139344262295084
+Car-Hacking test,raw_can.l1_flood,0.0,0.14241803278688525
+Car-Hacking test,raw_can.l1_flood,0.0,0.14344262295081966
+Car-Hacking test,raw_can.l1_flood,0.0,0.14446721311475408
+Car-Hacking test,raw_can.l1_flood,0.0,0.1454918032786885
+Car-Hacking test,raw_can.l1_flood,0.0,0.1465163934426229
+Car-Hacking test,raw_can.l1_flood,0.0,0.14754098360655743
+Car-Hacking test,raw_can.l1_flood,0.0,0.14856557377049184
+Car-Hacking test,raw_can.l1_flood,0.0,0.15061475409836067
+Car-Hacking test,raw_can.l1_flood,0.0,0.15163934426229508
+Car-Hacking test,raw_can.l1_flood,0.0,0.1526639344262295
+Car-Hacking test,raw_can.l1_flood,0.0,0.1536885245901639
+Car-Hacking test,raw_can.l1_flood,0.0,0.15573770491803274
+Car-Hacking test,raw_can.l1_flood,0.0,0.15676229508196726
+Car-Hacking test,raw_can.l1_flood,0.0,0.15778688524590168
+Car-Hacking test,raw_can.l1_flood,0.0,0.1588114754098361
+Car-Hacking test,raw_can.l1_flood,0.0,0.1598360655737705
+Car-Hacking test,raw_can.l1_flood,0.0,0.16188524590163933
+Car-Hacking test,raw_can.l1_flood,0.0,0.16290983606557374
+Car-Hacking test,raw_can.l1_flood,0.0,0.16393442622950816
+Car-Hacking test,raw_can.l1_flood,0.0,0.16495901639344257
+Car-Hacking test,raw_can.l1_flood,0.0,0.1659836065573771
+Car-Hacking test,raw_can.l1_flood,0.0,0.16803278688524592
+Car-Hacking test,raw_can.l1_flood,0.0,0.16905737704918034
+Car-Hacking test,raw_can.l1_flood,0.0,0.17008196721311475
+Car-Hacking test,raw_can.l1_flood,0.0,0.17110655737704916
+Car-Hacking test,raw_can.l1_flood,0.0,0.173155737704918
+Car-Hacking test,raw_can.l1_flood,0.0,0.1741803278688525
+Car-Hacking test,raw_can.l1_flood,0.0,0.17520491803278693
+Car-Hacking test,raw_can.l1_flood,0.0,0.17622950819672134
+Car-Hacking test,raw_can.l1_flood,0.0,0.17725409836065575
+Car-Hacking test,raw_can.l1_flood,0.0,0.17827868852459017
+Car-Hacking test,raw_can.l1_flood,0.0,0.17930327868852458
+Car-Hacking test,raw_can.l1_flood,0.0,0.1813524590163934
+Car-Hacking test,raw_can.l1_flood,0.0,0.18237704918032782
+Car-Hacking test,raw_can.l1_flood,0.0,0.18340163934426235
+Car-Hacking test,raw_can.l1_flood,0.0,0.18442622950819676
+Car-Hacking test,raw_can.l1_flood,0.0,0.18545081967213117
+Car-Hacking test,raw_can.l1_flood,0.0,0.1875
+Car-Hacking test,raw_can.l1_flood,0.0,0.1885245901639344
+Car-Hacking test,raw_can.l1_flood,0.0,0.18954918032786883
+Car-Hacking test,raw_can.l1_flood,0.0,0.19057377049180324
+Car-Hacking test,raw_can.l1_flood,0.0,0.19159836065573765
+Car-Hacking test,raw_can.l1_flood,0.0,0.19262295081967218
+Car-Hacking test,raw_can.l1_flood,0.0,0.194672131147541
+Car-Hacking test,raw_can.l1_flood,0.0,0.19569672131147542
+Car-Hacking test,raw_can.l1_flood,0.0,0.19672131147540983
+Car-Hacking test,raw_can.l1_flood,0.0,0.19877049180327866
+Car-Hacking test,raw_can.l1_flood,0.0,0.19979508196721307
+Car-Hacking test,raw_can.l1_flood,0.0,0.2008196721311475
+Car-Hacking test,raw_can.l1_flood,0.0,0.20389344262295084
+Car-Hacking test,raw_can.l1_flood,0.0,0.20491803278688525
+Car-Hacking test,raw_can.l1_flood,0.0,0.20696721311475408
+Car-Hacking test,raw_can.l1_flood,0.0,0.2079918032786885
+Car-Hacking test,raw_can.l1_flood,0.0,0.2090163934426229
+Car-Hacking test,raw_can.l1_flood,0.0,0.21004098360655743
+Car-Hacking test,raw_can.l1_flood,0.0,0.21106557377049184
+Car-Hacking test,raw_can.l1_flood,0.0,0.21209016393442626
+Car-Hacking test,raw_can.l1_flood,0.0,0.21311475409836067
+Car-Hacking test,raw_can.l1_flood,0.0,0.21413934426229508
+Car-Hacking test,raw_can.l1_flood,0.0,0.2151639344262295
+Car-Hacking test,raw_can.l1_flood,0.0,0.2161885245901639
+Car-Hacking test,raw_can.l1_flood,0.0,0.21721311475409832
+Car-Hacking test,raw_can.l1_flood,0.0,0.21823770491803274
+Car-Hacking test,raw_can.l1_flood,0.0,0.22028688524590168
+Car-Hacking test,raw_can.l1_flood,0.0,0.2213114754098361
+Car-Hacking test,raw_can.l1_flood,0.0,0.2223360655737705
+Car-Hacking test,raw_can.l1_flood,0.0,0.22336065573770492
+Car-Hacking test,raw_can.l1_flood,0.0,0.22438524590163933
+Car-Hacking test,raw_can.l1_flood,0.0,0.22540983606557374
+Car-Hacking test,raw_can.l1_flood,0.0,0.22643442622950816
+Car-Hacking test,raw_can.l1_flood,0.0,0.22745901639344257
+Car-Hacking test,raw_can.l1_flood,0.0,0.2295081967213115
+Car-Hacking test,raw_can.l1_flood,0.0,0.23053278688524592
+Car-Hacking test,raw_can.l1_flood,0.0,0.23258196721311475
+Car-Hacking test,raw_can.l1_flood,0.0,0.23360655737704916
+Car-Hacking test,raw_can.l1_flood,0.0,0.23463114754098358
+Car-Hacking test,raw_can.l1_flood,0.0,0.235655737704918
+Car-Hacking test,raw_can.l1_flood,0.0,0.2366803278688525
+Car-Hacking test,raw_can.l1_flood,0.0,0.23770491803278693
+Car-Hacking test,raw_can.l1_flood,0.0,0.23975409836065575
+Car-Hacking test,raw_can.l1_flood,0.0,0.24180327868852458
+Car-Hacking test,raw_can.l1_flood,0.0,0.242827868852459
+Car-Hacking test,raw_can.l1_flood,0.0,0.2438524590163934
+Car-Hacking test,raw_can.l1_flood,0.0,0.24487704918032782
+Car-Hacking test,raw_can.l1_flood,0.0,0.24590163934426235
+Car-Hacking test,raw_can.l1_flood,0.0,0.24692622950819676
+Car-Hacking test,raw_can.l1_flood,0.0,0.2489754098360656
+Car-Hacking test,raw_can.l1_flood,0.0,0.2510245901639344
+Car-Hacking test,raw_can.l1_flood,0.0,0.2520491803278688
+Car-Hacking test,raw_can.l1_flood,0.0,0.25307377049180324
+Car-Hacking test,raw_can.l1_flood,0.0,0.25409836065573765
+Car-Hacking test,raw_can.l1_flood,0.0,0.2561475409836066
+Car-Hacking test,raw_can.l1_flood,0.0,0.257172131147541
+Car-Hacking test,raw_can.l1_flood,0.0,0.2581967213114754
+Car-Hacking test,raw_can.l1_flood,0.0,0.25922131147540983
+Car-Hacking test,raw_can.l1_flood,0.0,0.2622950819672131
+Car-Hacking test,raw_can.l1_flood,0.0,0.2633196721311475
+Car-Hacking test,raw_can.l1_flood,0.0,0.264344262295082
+Car-Hacking test,raw_can.l1_flood,0.0,0.26741803278688525
+Car-Hacking test,raw_can.l1_flood,0.0,0.26844262295081966
+Car-Hacking test,raw_can.l1_flood,0.0,0.2694672131147541
+Car-Hacking test,raw_can.l1_flood,0.0,0.2715163934426229
+Car-Hacking test,raw_can.l1_flood,0.0,0.27254098360655743
+Car-Hacking test,raw_can.l1_flood,0.0,0.27459016393442626
+Car-Hacking test,raw_can.l1_flood,0.0,0.2766393442622951
+Car-Hacking test,raw_can.l1_flood,0.0,0.2776639344262295
+Car-Hacking test,raw_can.l1_flood,0.0,0.2786885245901639
+Car-Hacking test,raw_can.l1_flood,0.0,0.2797131147540983
+Car-Hacking test,raw_can.l1_flood,0.0,0.28176229508196726
+Car-Hacking test,raw_can.l1_flood,0.0,0.2827868852459017
+Car-Hacking test,raw_can.l1_flood,0.0,0.28688524590163933
+Car-Hacking test,raw_can.l1_flood,0.9866666666666667,0.4590163934426229
+Car-Hacking test,raw_can.l1_flood,0.9866666666666667,0.4723360655737705
+Car-Hacking test,raw_can.l1_flood,0.99,0.4805327868852459
+Car-Hacking test,raw_can.l1_flood,0.99,0.4948770491803278
+Car-Hacking test,raw_can.l1_flood,0.99,0.5061475409836065
+Car-Hacking test,raw_can.l1_flood,0.99,0.5153688524590163
+Car-Hacking test,raw_can.l1_flood,0.9933333333333333,0.5266393442622951
+Car-Hacking test,raw_can.l1_flood,0.9933333333333333,0.5399590163934427
+Car-Hacking test,raw_can.l1_flood,0.9933333333333333,0.5543032786885246
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.5625
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.5758196721311475
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.5881147540983607
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.5983606557377049
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.6075819672131147
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.6229508196721312
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.6331967213114754
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.6413934426229508
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.646516393442623
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.6567622950819672
+Car-Hacking test,raw_can.l1_flood,0.9966666666666667,0.6629098360655737
+Car-Hacking test,raw_can.l1_flood,1.0,0.6690573770491803
+Car-Hacking test,raw_can.l1_flood,1.0,0.6752049180327868
+Car-Hacking test,raw_can.l1_flood,1.0,0.6813524590163935
+Car-Hacking test,raw_can.l1_flood,1.0,0.6915983606557377
+Car-Hacking test,raw_can.l1_flood,1.0,0.6936475409836065
+Car-Hacking test,raw_can.l1_flood,1.0,0.7008196721311475
+Car-Hacking test,raw_can.l1_flood,1.0,0.7038934426229508
+Car-Hacking test,raw_can.l1_flood,1.0,0.7120901639344263
+Car-Hacking test,raw_can.l1_flood,1.0,0.7182377049180328
+Car-Hacking test,raw_can.l1_flood,1.0,0.7295081967213115
+Car-Hacking test,raw_can.l1_flood,1.0,0.735655737704918
+Car-Hacking test,raw_can.l1_flood,1.0,0.7387295081967213
+Car-Hacking test,raw_can.l1_flood,1.0,0.7510245901639344
+Car-Hacking test,raw_can.l1_flood,1.0,0.7551229508196722
+Car-Hacking test,raw_can.l1_flood,1.0,0.7602459016393442
+Car-Hacking test,raw_can.l1_flood,1.0,0.7622950819672132
+Car-Hacking test,raw_can.l1_flood,1.0,0.7704918032786885
+Car-Hacking test,raw_can.l1_flood,1.0,0.7766393442622951
+Car-Hacking test,raw_can.l1_flood,1.0,0.7797131147540983
+Car-Hacking test,raw_can.l1_flood,1.0,0.7827868852459017
+Car-Hacking test,raw_can.l1_flood,1.0,0.7848360655737705
+Car-Hacking test,raw_can.l1_flood,1.0,0.790983606557377
+Car-Hacking test,raw_can.l1_flood,1.0,0.7930327868852459
+Car-Hacking test,raw_can.l1_flood,1.0,0.798155737704918
+Car-Hacking test,raw_can.l1_flood,1.0,0.8073770491803278
+Car-Hacking test,raw_can.l1_flood,1.0,0.8135245901639344
+Car-Hacking test,raw_can.l1_flood,1.0,0.819672131147541
+Car-Hacking test,raw_can.l1_flood,1.0,0.8227459016393442
+Car-Hacking test,raw_can.l1_flood,1.0,0.8278688524590164
+Car-Hacking test,raw_can.l1_flood,1.0,0.8319672131147541
+Car-Hacking test,raw_can.l1_flood,1.0,0.834016393442623
+Car-Hacking test,raw_can.l1_flood,1.0,0.8350409836065573
+Car-Hacking test,raw_can.l1_flood,1.0,0.8411885245901639
+Car-Hacking test,raw_can.l1_flood,1.0,0.8463114754098361
+Car-Hacking test,raw_can.l1_flood,1.0,0.8514344262295082
+Car-Hacking test,raw_can.l1_flood,1.0,0.8545081967213115
+Car-Hacking test,raw_can.l1_flood,1.0,0.8596311475409836
+Car-Hacking test,raw_can.l1_flood,1.0,0.8627049180327868
+Car-Hacking test,raw_can.l1_flood,1.0,0.8688524590163934
+Car-Hacking test,raw_can.l1_flood,1.0,0.8729508196721312
+Car-Hacking test,raw_can.l1_flood,1.0,0.875
+Car-Hacking test,raw_can.l1_flood,1.0,0.8760245901639344
+Car-Hacking test,raw_can.l1_flood,1.0,0.8801229508196722
+Car-Hacking test,raw_can.l1_flood,1.0,0.8842213114754098
+Car-Hacking test,raw_can.l1_flood,1.0,0.8862704918032787
+Car-Hacking test,raw_can.l1_flood,1.0,0.8883196721311475
+Car-Hacking test,raw_can.l1_flood,1.0,0.8924180327868853
+Car-Hacking test,raw_can.l1_flood,1.0,0.8954918032786885
+Car-Hacking test,raw_can.l1_flood,1.0,0.8985655737704918
+Car-Hacking test,raw_can.l1_flood,1.0,0.9006147540983607
+Car-Hacking test,raw_can.l1_flood,1.0,0.9067622950819672
+Car-Hacking test,raw_can.l1_flood,1.0,0.9077868852459017
+Car-Hacking test,raw_can.l1_flood,1.0,0.9098360655737705
+Car-Hacking test,raw_can.l1_flood,1.0,0.9108606557377049
+Car-Hacking test,raw_can.l1_flood,1.0,0.9129098360655737
+Car-Hacking test,raw_can.l1_flood,1.0,0.9149590163934427
+Car-Hacking test,raw_can.l1_flood,1.0,0.9159836065573771
+Car-Hacking test,raw_can.l1_flood,1.0,0.9170081967213115
+Car-Hacking test,raw_can.l1_flood,1.0,0.9241803278688525
+Car-Hacking test,raw_can.l1_flood,1.0,0.9262295081967213
+Car-Hacking test,raw_can.l1_flood,1.0,0.9272540983606558
+Car-Hacking test,raw_can.l1_flood,1.0,0.9313524590163934
+Car-Hacking test,raw_can.l1_flood,1.0,0.9385245901639344
+Car-Hacking test,raw_can.l1_flood,1.0,0.9487704918032787
+Car-Hacking test,raw_can.l1_flood,1.0,0.9590163934426229
+Car-Hacking test,raw_can.l1_flood,1.0,0.9723360655737705
+Car-Hacking test,raw_can.l1_flood,1.0,0.9805327868852459
+Car-Hacking test,raw_can.l1_flood,1.0,0.985655737704918
+Car-Hacking test,raw_can.l1_flood,1.0,0.9897540983606558
+Car-Hacking test,raw_can.l1_flood,1.0,0.9938524590163934
+Car-Hacking test,raw_can.l1_flood,1.0,0.9979508196721312
+Car-Hacking test,raw_can.l1_flood,1.0,0.9989754098360656
+Car-Hacking test,raw_can.l1_flood,1.0,1.0
+Car-Hacking test,raw_can.l1_flood,1.0,1.0
+Car-Hacking test,raw_can.l2a_skew,0.0,0.0
+Car-Hacking test,raw_can.l2a_skew,0.0,0.002049180327868827
+Car-Hacking test,raw_can.l2a_skew,0.0,0.0051229508196721785
+Car-Hacking test,raw_can.l2a_skew,0.0,0.0071721311475410054
+Car-Hacking test,raw_can.l2a_skew,0.013333333333333308,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.020000000000000018,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.026666666666666616,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.043333333333333335,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.050000000000000044,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.06000000000000005,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.07666666666666666,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.08333333333333337,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.09333333333333338,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.10666666666666669,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.11333333333333329,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.1233333333333333,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.1333333333333333,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.16000000000000003,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.16666666666666663,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.17666666666666664,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.18666666666666665,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.19999999999999996,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.21666666666666667,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.21999999999999997,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.22999999999999998,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.2533333333333333,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.2533333333333333,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.2633333333333333,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.28,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.29666666666666663,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.31333333333333335,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.32999999999999996,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.33666666666666667,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.3466666666666667,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.36,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.37,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.38,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.39,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.4,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.41333333333333333,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.42333333333333334,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.43333333333333335,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.44333333333333336,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.45333333333333337,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.4633333333333334,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.4766666666666667,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.4866666666666667,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.4966666666666667,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.5066666666666666,0.008196721311475419
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.009221311475409832
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.013319672131147486
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.016393442622950838
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.01946721311475408
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.02254098360655743
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.02561475409836067
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.029713114754098324
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.032786885245901676
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.035860655737704916
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.03893442622950816
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.04200819672131151
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.04610655737704916
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.052254098360655754
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.052254098360655754
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.055327868852458995
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.061475409836065587
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.0625
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.06557377049180324
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.06864754098360659
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.07172131147540983
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.07581967213114749
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.07991803278688525
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.08196721311475408
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.08504098360655743
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.08913934426229508
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.09118852459016391
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.09528688524590168
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.09836065573770492
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.10143442622950816
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.10450819672131151
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.10860655737704916
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.11168032786885251
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.11680327868852458
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.117827868852459
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.12090163934426235
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.12397540983606559
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.12807377049180324
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.1311475409836066
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.13422131147540983
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.13729508196721307
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.14446721311475408
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.14754098360655743
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.15061475409836067
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.1536885245901639
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.15676229508196726
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.1598360655737705
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.1659836065573771
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.1670081967213115
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.17213114754098358
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.173155737704918
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.17622950819672134
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.18340163934426235
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.18340163934426235
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.18954918032786883
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.18954918032786883
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.19569672131147542
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.19979508196721307
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.19979508196721307
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.20286885245901642
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.20696721311475408
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.2090163934426229
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.21311475409836067
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.21823770491803274
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.21926229508196726
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.22438524590163933
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.22540983606557374
+Car-Hacking test,raw_can.l2a_skew,0.5133333333333333,0.23155737704918034
+Car-Hacking test,raw_can.l2a_skew,0.52,0.23155737704918034
+Car-Hacking test,raw_can.l2a_skew,0.5266666666666666,0.23258196721311475
+Car-Hacking test,raw_can.l2a_skew,0.5266666666666666,0.23770491803278693
+Car-Hacking test,raw_can.l2a_skew,0.5266666666666666,0.23770491803278693
+Car-Hacking test,raw_can.l2a_skew,0.5433333333333333,0.23770491803278693
+Car-Hacking test,raw_can.l2a_skew,0.5533333333333333,0.23770491803278693
+Car-Hacking test,raw_can.l2a_skew,0.56,0.23770491803278693
+Car-Hacking test,raw_can.l2a_skew,0.5700000000000001,0.23770491803278693
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.23770491803278693
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.242827868852459
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.242827868852459
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.24590163934426235
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.2510245901639344
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.2551229508196722
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.25922131147540983
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.25922131147540983
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.2633196721311475
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.26639344262295084
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.26844262295081966
+Car-Hacking test,raw_can.l2a_skew,0.5866666666666667,0.2715163934426229
+Car-Hacking test,raw_can.l2a_skew,0.6033333333333333,0.2715163934426229
+Car-Hacking test,raw_can.l2a_skew,0.62,0.2715163934426229
+Car-Hacking test,raw_can.l2a_skew,0.62,0.2715163934426229
+Car-Hacking test,raw_can.l2a_skew,0.6366666666666667,0.2715163934426229
+Car-Hacking test,raw_can.l2a_skew,0.6533333333333333,0.2715163934426229
+Car-Hacking test,raw_can.l2a_skew,0.6533333333333333,0.2715163934426229
+Car-Hacking test,raw_can.l2a_skew,0.6599999999999999,0.27356557377049184
+Car-Hacking test,raw_can.l2a_skew,0.6599999999999999,0.27561475409836067
+Car-Hacking test,raw_can.l2a_skew,0.6599999999999999,0.2797131147540983
+Car-Hacking test,raw_can.l2a_skew,0.6599999999999999,0.28176229508196726
+Car-Hacking test,raw_can.l2a_skew,0.6599999999999999,0.2858606557377049
+Car-Hacking test,raw_can.l2a_skew,0.6599999999999999,0.28893442622950816
+Car-Hacking test,raw_can.l2a_skew,0.6699999999999999,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.6766666666666667,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.6866666666666666,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.7066666666666667,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.7133333333333334,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.73,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.73,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.74,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.7566666666666666,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.77,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.7766666666666666,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.7866666666666666,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.8033333333333333,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.8133333333333334,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.83,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.8466666666666667,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.8466666666666667,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.86,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.8766666666666667,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.8933333333333333,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.91,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.9233333333333333,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.9233333333333333,0.28995901639344257
+Car-Hacking test,raw_can.l2a_skew,0.9233333333333333,0.29610655737704916
+Car-Hacking test,raw_can.l2a_skew,0.9233333333333333,0.29610655737704916
+Car-Hacking test,raw_can.l2a_skew,0.9233333333333333,0.3002049180327869
+Car-Hacking test,raw_can.l2a_skew,0.9233333333333333,0.30327868852459017
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.305327868852459
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3145491803278688
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3145491803278688
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3206967213114754
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.326844262295082
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3329918032786885
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3391393442622951
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3422131147540983
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.34426229508196726
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.35245901639344257
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.35655737704918034
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.35758196721311475
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.360655737704918
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.36577868852459017
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3668032786885246
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.37090163934426235
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3739754098360656
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3770491803278688
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3801229508196722
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3831967213114754
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3872950819672131
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3903688524590164
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.39344262295081966
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.3965163934426229
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.39959016393442626
+Car-Hacking test,raw_can.l2a_skew,0.9266666666666666,0.4036885245901639
+Car-Hacking test,raw_can.l2a_skew,0.9333333333333333,0.4047131147540983
+Car-Hacking test,raw_can.l2a_skew,0.9333333333333333,0.4077868852459017
+Car-Hacking test,raw_can.l2a_skew,0.9333333333333333,0.4108606557377049
+Car-Hacking test,raw_can.l2a_skew,0.9433333333333334,0.4108606557377049
+Car-Hacking test,raw_can.l2a_skew,0.9433333333333334,0.41495901639344257
+Car-Hacking test,raw_can.l2a_skew,0.9433333333333334,0.4180327868852459
+Car-Hacking test,raw_can.l2a_skew,0.9433333333333334,0.42110655737704916
+Car-Hacking test,raw_can.l2a_skew,0.95,0.423155737704918
+Car-Hacking test,raw_can.l2a_skew,0.95,0.4252049180327869
+Car-Hacking test,raw_can.l2a_skew,0.96,0.42725409836065575
+Car-Hacking test,raw_can.l2a_skew,0.96,0.4293032786885246
+Car-Hacking test,raw_can.l2a_skew,0.97,0.4293032786885246
+Car-Hacking test,raw_can.l2a_skew,0.97,0.4323770491803278
+Car-Hacking test,raw_can.l2a_skew,0.9766666666666667,0.43340163934426235
+Car-Hacking test,raw_can.l2a_skew,0.9766666666666667,0.4375
+Car-Hacking test,raw_can.l2a_skew,0.9866666666666667,0.4375
+Car-Hacking test,raw_can.l2a_skew,0.9933333333333333,0.4385245901639344
+Car-Hacking test,raw_can.l2a_skew,0.9933333333333333,0.44159836065573765
+Car-Hacking test,raw_can.l2a_skew,1.0,0.4426229508196722
+Car-Hacking test,raw_can.l2a_skew,1.0,0.4456967213114754
+Car-Hacking test,raw_can.l2a_skew,1.0,0.4497950819672131
+Car-Hacking test,raw_can.l2a_skew,1.0,0.4528688524590164
+Car-Hacking test,raw_can.l2a_skew,1.0,0.4569672131147541
+Car-Hacking test,raw_can.l2a_skew,1.0,0.46311475409836067
+Car-Hacking test,raw_can.l2a_skew,1.0,0.4672131147540983
+Car-Hacking test,raw_can.l2a_skew,1.0,0.46926229508196726
+Car-Hacking test,raw_can.l2a_skew,1.0,0.47438524590163933
+Car-Hacking test,raw_can.l2a_skew,1.0,0.47643442622950816
+Car-Hacking test,raw_can.l2a_skew,1.0,0.4784836065573771
+Car-Hacking test,raw_can.l2a_skew,1.0,0.48360655737704916
+Car-Hacking test,raw_can.l2a_skew,1.0,0.485655737704918
+Car-Hacking test,raw_can.l2a_skew,1.0,0.49077868852459017
+Car-Hacking test,raw_can.l2a_skew,1.0,0.492827868852459
+Car-Hacking test,raw_can.l2a_skew,1.0,0.49692622950819676
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5020491803278688
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5020491803278688
+Car-Hacking test,raw_can.l2a_skew,1.0,0.507172131147541
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5081967213114754
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5112704918032787
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5184426229508197
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5184426229508197
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5276639344262295
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5276639344262295
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5327868852459017
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5389344262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5430327868852459
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5440573770491803
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5512295081967213
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5512295081967213
+Car-Hacking test,raw_can.l2a_skew,1.0,0.555327868852459
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5573770491803278
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5676229508196722
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5676229508196722
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5727459016393442
+Car-Hacking test,raw_can.l2a_skew,1.0,0.576844262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.576844262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5819672131147541
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5870901639344263
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5870901639344263
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5901639344262295
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5932377049180328
+Car-Hacking test,raw_can.l2a_skew,1.0,0.5963114754098361
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6004098360655737
+Car-Hacking test,raw_can.l2a_skew,1.0,0.603483606557377
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6075819672131147
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6096311475409837
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6127049180327868
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6209016393442623
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6229508196721312
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6270491803278688
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6290983606557377
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6342213114754098
+Car-Hacking test,raw_can.l2a_skew,1.0,0.639344262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.639344262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6434426229508197
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6485655737704918
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6557377049180328
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6557377049180328
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6588114754098361
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6629098360655737
+Car-Hacking test,raw_can.l2a_skew,1.0,0.665983606557377
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6700819672131147
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6721311475409837
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6752049180327868
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6782786885245902
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6834016393442623
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6854508196721312
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6885245901639344
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6915983606557377
+Car-Hacking test,raw_can.l2a_skew,1.0,0.694672131147541
+Car-Hacking test,raw_can.l2a_skew,1.0,0.6997950819672132
+Car-Hacking test,raw_can.l2a_skew,1.0,0.701844262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7059426229508197
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7079918032786885
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7131147540983607
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7141393442622951
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7182377049180328
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7233606557377049
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7243852459016393
+Car-Hacking test,raw_can.l2a_skew,1.0,0.728483606557377
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7315573770491803
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7346311475409837
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7397540983606558
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7459016393442623
+Car-Hacking test,raw_can.l2a_skew,1.0,0.75
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7510245901639344
+Car-Hacking test,raw_can.l2a_skew,1.0,0.757172131147541
+Car-Hacking test,raw_can.l2a_skew,1.0,0.757172131147541
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7602459016393442
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7633196721311475
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7694672131147541
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7756147540983607
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7766393442622951
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7797131147540983
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7838114754098361
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7868852459016393
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7920081967213115
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7930327868852459
+Car-Hacking test,raw_can.l2a_skew,1.0,0.7961065573770492
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8002049180327868
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8043032786885246
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8073770491803278
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8094262295081968
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8145491803278688
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8165983606557377
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8217213114754098
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8237704918032787
+Car-Hacking test,raw_can.l2a_skew,1.0,0.826844262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8288934426229508
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8350409836065573
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8411885245901639
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8442622950819672
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8452868852459017
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8514344262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8586065573770492
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8586065573770492
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8616803278688525
+Car-Hacking test,raw_can.l2a_skew,1.0,0.867827868852459
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8688524590163934
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8719262295081968
+Car-Hacking test,raw_can.l2a_skew,1.0,0.875
+Car-Hacking test,raw_can.l2a_skew,1.0,0.882172131147541
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8852459016393442
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8903688524590164
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8924180327868853
+Car-Hacking test,raw_can.l2a_skew,1.0,0.8985655737704918
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9016393442622951
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9047131147540983
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9077868852459017
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9108606557377049
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9139344262295082
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9180327868852459
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9211065573770492
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9241803278688525
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9282786885245902
+Car-Hacking test,raw_can.l2a_skew,1.0,0.930327868852459
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9375
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9375
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9436475409836066
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9436475409836066
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9497950819672131
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9508196721311475
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9579918032786885
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9610655737704918
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9631147540983607
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9672131147540983
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9713114754098361
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9733606557377049
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9774590163934426
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9815573770491803
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9836065573770492
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9866803278688525
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9897540983606558
+Car-Hacking test,raw_can.l2a_skew,1.0,0.9938524590163934
+Car-Hacking test,raw_can.l2a_skew,1.0,1.0
+Car-Hacking test,raw_can.l2a_skew,1.0,1.0

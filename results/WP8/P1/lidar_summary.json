@@ -1,0 +1,37 @@
+{
+ "domain": "lidar",
+ "sources": "results/WP3/S9/test_scores.csv.gz (11,156 test scans, 7 KITTI test drives), threshold/FA from results/WP3/S9/final.json headline",
+ "unit": "scan level; negatives = 1,526 clean test scans; positives = scan-level attacked scans (510 per attack); groups = 7 test drives, bootstrap 1000 x over drives",
+ "check_vs_saved": {
+  "fa_here": 0.011795543905635648,
+  "fa_saved": 0.011795543905635648,
+  "auc_here": {
+   "IntensitySpoof": 0.9141302392516639,
+   "PointDrop": 0.9748586590599543,
+   "cmp_boxcloud": 0.6485827358466323,
+   "cmp_mradd_far": 0.8397771952817824,
+   "cmp_mradd_near": 0.851430755788554,
+   "ph_budget_far": 0.52820779688022,
+   "ph_budget_near": 0.6064811245599158,
+   "ph_replace_far": 0.5488795518207283,
+   "ph_replace_near": 0.834780150592347
+  },
+  "auc_saved": {
+   "ph_replace_near": 0.8347962120628067,
+   "ph_replace_far": 0.54889882558528,
+   "ph_budget_near": 0.6065383033947523,
+   "ph_budget_far": 0.5282277131035901,
+   "PointDrop": 0.9748573741423174,
+   "IntensitySpoof": 0.9141463007221238,
+   "cmp_boxcloud": 0.6486065068229128,
+   "cmp_mradd_near": 0.8514410351296482,
+   "cmp_mradd_far": 0.8397752679053273
+  },
+  "alarm_equals_score_ge_threshold": false
+ },
+ "operating_point": {
+  "threshold": 0.9967989756722152,
+  "fa": 0.011795543905635648
+ },
+ "label": "re-analysis of v3 test outputs (no refit)"
+}
