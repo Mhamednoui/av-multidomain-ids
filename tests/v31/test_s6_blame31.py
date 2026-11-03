@@ -49,7 +49,7 @@ def test_comma_position_channel_fault_is_decided_and_two_channel_tie_needs_the_p
     tie = _state(g, alarm=[("gnss_vel", "can_v"), ("gnss_vel", "wheel_v"), ("gnss_pos", "can_v"), ("gnss_pos", "wheel_v")], agree=[("can_v", "wheel_v")])
     assert B.Blame31(g, B.EQUAL_COST).diagnose(tie)[0] == B.UNDECIDED
     assert B.Blame31(g, B.PRIOR_COST).diagnose(tie)[0] == "gps"
-    yaw = _state(g, alarm=[("gnss_vel", "can_v"), ("gnss_vel", "wheel_v"), ("gnss_pos", "can_v"), ("gnss_pos", "wheel_v"), ("gnss_vel", "gyro")], agree=[("can_v", "wheel_v")])
+    yaw = _state(g, alarm=[("gnss_vel", "can_v"), ("gnss_vel", "wheel_v"), ("gnss_pos", "can_v"), ("gnss_pos", "wheel_v"), ("gnss_yaw", "gyro")], agree=[("can_v", "wheel_v")])
     assert B.Blame31(g, B.EQUAL_COST).diagnose(yaw)[0] == "gps"
 
 
@@ -102,3 +102,11 @@ def test_inertial_model_flags_a_ramp_and_not_a_clean_run():
     s2[:, 0] += np.minimum(np.arange(len(s2)) * 0.4, 6.0)
     al2, _ = m.edges(s2, A, alarm)
     assert al2[26:30, 0].all() and not al2[26:30, 1:].any()
+
+
+def test_speed_spoof_with_agreeing_yaw_edge_is_not_contradicted():
+    g = B.graph_c()
+    st = _state(g, alarm=[("gnss_vel", "can_v"), ("gnss_vel", "wheel_v"), ("gnss_pos", "can_v"), ("gnss_pos", "wheel_v")], agree=[("can_v", "wheel_v"), ("gnss_yaw", "gyro")])
+    assert B.Blame31(g, B.PRIOR_COST).diagnose(st)[0] == "gps"
+    only_doppler = _state(g, alarm=[("gnss_vel", "can_v"), ("gnss_vel", "wheel_v")], agree=[("can_v", "wheel_v"), ("gnss_pos", "can_v"), ("gnss_pos", "wheel_v"), ("gnss_yaw", "gyro")])
+    assert B.Blame31(g, B.EQUAL_COST).diagnose(only_doppler)[0] == "gps"      # a superset with a spurious second sensor does not block the verdict

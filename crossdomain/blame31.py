@@ -8,7 +8,7 @@ Inputs: per tick the per-edge alarm / observed flags of the (frozen v3) cross la
 Outputs: per tick the blamed domain ("gps", "can", "lidar", "imu"), "undecided" or None (no alarm edge); the v3 cross layer, its alarms and the detection are not touched.
 Cost model (fixed a priori, notes/WP8_v31.md "S6 round 1"): cost(H) = sensor cost of every sensor touched by H + 0.5 per extra faulty channel of a faulty sensor
 + 6 per alarming edge with no faulty endpoint + 3 per agreeing edge with exactly one faulty endpoint + 0.5 per agreeing edge with two faulty endpoints (a coordinated lie).
-The best hypothesis is decided only when the best hypothesis on a different DOMAIN set costs >= `margin` (1.0) more.
+The best hypothesis is decided only when the best hypothesis with a different BLAMED domain (first domain of its set in attack-surface order) costs >= `margin` (1.0) more (round 2; round 1 compared domain sets).
 Inertial edges: u_s(k) = s(k) - V(k) (speed minus integrated accelerometer); D_s(k) = mean(u_s last 3 ticks) - mean(u_s anchor ticks), anchor = 3 ticks starting 12 ticks before the first alarm
 of the episode; the edge (s, ins) alarms when |D_s| >= tau * sigma_s(delta), sigma and tau fitted on clean TRAIN runs only (robust sd by delta bin, 99.9th percentile).
 References: Preparata, Metze, Chien 1967 (system-level diagnosis); Gertler 1998 (fault detection and diagnosis with structured residuals); Blanke et al. 2016 (diagnosis and fault-tolerant control).
@@ -62,6 +62,7 @@ class Blame31:
         self.g, self.margin = graph, margin
         sc = np.array([sensor_cost[s] for s in graph.sensors])
         self.base = (graph.touched * sc[None, :]).sum(axis=1) + C_CHAN * np.maximum(graph.n_chan - 1, 0).sum(axis=1)
+        self.top = np.array([next((d for d in DOMAIN_ORDER if d in ds), "") for ds in graph.dom_sets])      # blamed domain of every hypothesis
         self._memo = {}
 
     def diagnose(self, state):
@@ -78,10 +79,11 @@ class Blame31:
                     + C_COLL * (ag[None, :] & g.both).sum(axis=1))
             i = int(np.argmin(cost))
             ds = g.dom_sets[i]
-            other = np.array([g.dom_sets[j] != ds for j in range(len(cost))])
+            top = self.top[i]
+            other = self.top != top
             gap = (cost[other].min() - cost[i]) if other.any() else np.inf
             if gap >= self.margin - 1e-9:
-                out = (next(d for d in DOMAIN_ORDER if d in ds), float(cost[i]), ds)
+                out = (top, float(cost[i]), ds)
             else:
                 out = (UNDECIDED, float(cost[i]), ds)
         self._memo[key] = out
@@ -127,9 +129,9 @@ K_NODES = ["gps_v", "gps_lat", "lidar_v", "lidar_lat", "lidar_yaw", "can_v", "co
 K_SENSOR = {"gps_v": "gps", "gps_lat": "gps", "lidar_v": "lidar", "lidar_lat": "lidar", "lidar_yaw": "lidar", "can_v": "can", "compass": "imu", "gyro": "imu", "ins_v": "imu"}
 K_EDGES = [("gps_v", "lidar_v"), ("gps_v", "can_v"), ("lidar_v", "can_v"), ("gps_lat", "lidar_lat"), ("compass", "lidar_yaw"), ("compass", "gyro"), ("gyro", "lidar_yaw")]
 K_INERTIAL = [("gps_v", "ins_v"), ("lidar_v", "ins_v"), ("can_v", "ins_v")]
-C_NODES = ["gnss_vel", "gnss_pos", "can_v", "wheel_v", "gyro"]
-C_SENSOR = {"gnss_vel": "gps", "gnss_pos": "gps", "can_v": "can", "wheel_v": "can", "gyro": "imu"}
-C_EDGES = [("gnss_vel", "can_v"), ("gnss_vel", "wheel_v"), ("can_v", "wheel_v"), ("gnss_pos", "can_v"), ("gnss_pos", "wheel_v"), ("gnss_vel", "gyro")]
+C_NODES = ["gnss_vel", "gnss_pos", "gnss_yaw", "can_v", "wheel_v", "gyro"]
+C_SENSOR = {"gnss_vel": "gps", "gnss_pos": "gps", "gnss_yaw": "gps", "can_v": "can", "wheel_v": "can", "gyro": "imu"}
+C_EDGES = [("gnss_vel", "can_v"), ("gnss_vel", "wheel_v"), ("can_v", "wheel_v"), ("gnss_pos", "can_v"), ("gnss_pos", "wheel_v"), ("gnss_yaw", "gyro")]
 
 
 def graph_k(inertial):
@@ -151,9 +153,16 @@ def inertial_u(speed, A):
     return np.asarray(speed, float) - np.cumsum(np.asarray(A, float))[:, None]
 
 
+def _nanmean(x):
+    """Mean over the finite ticks per column (NaN when none): the first grid tick of a displacement-based speed is NaN."""
+    ok = np.isfinite(x)
+    n = ok.sum(axis=0)
+    return np.where(n > 0, np.where(ok, x, 0.0).sum(axis=0) / np.maximum(n, 1), np.nan)
+
+
 def deviation(u, a, k):
     """D at tick k for an anchor starting at a: mean of the last SMOOTH ticks minus mean of the anchor ticks (needs k - SMOOTH + 1 >= a + ANCHOR_N)."""
-    return u[k - SMOOTH + 1:k + 1].mean(axis=0) - u[a:a + ANCHOR_N].mean(axis=0)
+    return _nanmean(u[k - SMOOTH + 1:k + 1]) - _nanmean(u[a:a + ANCHOR_N])
 
 
 class InertialModel:
