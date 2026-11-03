@@ -26,3 +26,8 @@
 - Bot: nothing counts; Bot sits in the benign bulk of every H layer, shape also on 120 benign-labelled flows (precision <= 47.6 %); beacon 27.5 % alone, size regularity 71.6 % alone (shape-dependent, 2.1 % precision), added to H at 1 % budget Bot stays 5.5 %.
 - Open for supervisor: RC5 vs F1 for S7; fusion network ECDF / tick model must be recalibrated (S2/S7). Pitfall: results/WP4/s1_clean_D10.json is rewritten by the WP4 build (key order only): restore with git checkout.
 
+
+## S3 (LiDAR in-stack + speed, worker sonnet) - REVIEW 2026-11-03
+- Code: lidar/fast.py (v3-identical statistics, one ring assignment, voxel clustering flag), lidar/combine31.py (union with per-layer budgets), lidar/domain31.py (Domain31, stream), tools/WP8_S3_*.py, tests/v31/test_{fast,domain31}.py; results results/WP8/S3/, scores results/WP8/scores/S3/lidar_val.npz; report reports/WP8_S3.md. v3 lidar files untouched; suite 514 pass; run_all --check OK.
+- Protocol: layer references leave-one-drive-out (stricter than v3 S9): v3 rule gives FA 2.70 % and PointDrop 4.3 % there. Chosen by the registered rule (3 logged rounds): tail2h|zmulti|E7, B = 1 %: FA 0.96 %, PointDrop 67.5 % [64.0, 70.0], episodes 23/30, IS 61.2, near replace 23.6, all kinds within 2 points. L3 NOT MET (70 / 80 %); B = 1.25 %: 74.4 % (frozen_lidar31_B125, supervisor decision). L2 MET (exact). L1 speed NOT MET: median 0.14-0.18 s, p99 0.24-0.27 s (v3 1.2-1.8 s).
+- Pitfalls: exact v3 clustering = 2.4 s on dense scans (voxel 0.1 flag replaces it); L2a count statistics are drive dependent (drive 0027); sensor-fixed PointDrop is invisible after the onset scan; frozen domain 58 MB not committed (sha256 in report); parts/ and frame.pkl not committed (rebuild 16 min + 2 min).

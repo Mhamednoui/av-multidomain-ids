@@ -99,3 +99,9 @@
 2026-11-03T18:06:43+01:00 | S1 | before 2011_09_26_drive_0084 | 771 members, 0.725 GB on disk, 725.5 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_26_drive_0084/2011_09_26_drive_0084_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
 2026-11-03T18:11:42+01:00 | S3 | assign window W_ITER=1 (exact on 144 scans), rerunning speed light: tools/WP8_S3_speed.py --tag light log results/WP8/logs/S3_speed_light.log
 2026-11-03T18:19:30+01:00 | S3 | speed measured (median 141-178 ms depending on machine load, L1 not met; stream==batch exact on 1113 scans); extra.json written; running full test suite (log results/WP8/logs/S3_tests.log) and run_all --check
+2026-11-03T18:19:57+01:00 | S1 | after 2011_09_26_drive_0093 | written 871, already present 0, http bytes 818.1 MB, 1083 s | files on disk; manifest next
+2026-11-03T18:20:02+01:00 | S1 | manifest 2011_09_26_drive_0093 | 871 files, 0.815 GB, manifest_sha256 a1ed60278f9dcd3c1cc4a6d8f925feee681281c03249e3d4ff5a4118de08197a | written to results/WP8/S1/items
+2026-11-03T18:20:02+01:00 | S1 | before 2011_09_29_drive_0004 | 683 members, 0.651 GB on disk, 650.6 MB transfer | https://s3.eu-central-1.amazonaws.com/avg-kitti/raw_data/2011_09_29_drive_0004/2011_09_29_drive_0004_sync.zip -> C:\Users\nouir\PFE\data_extra\D04b_kitti_raw_v31 | fetching (range requests)
+2026-11-03T18:23:38+01:00 | S1 | after 2011_09_26_drive_0084 | written 771, already present 0, http bytes 728.0 MB, 1014 s | files on disk; manifest next
+2026-11-03T18:23:42+01:00 | S1 | manifest 2011_09_26_drive_0084 | 771 files, 0.725 GB, manifest_sha256 dede20a1d0a43124097a6600fea8a29611940aebdfe301ce72b4747a2ace7b1f | written to results/WP8/S1/items
+2026-11-03T18:24:03+01:00 | S3 | done: report reports/WP8_S3.md, brief, STATUS S3 -> REVIEW, suite 514 pass, run_all --check OK | committing, stop
