@@ -160,9 +160,20 @@ def _nanmean(x):
     return np.where(n > 0, np.where(ok, x, 0.0).sum(axis=0) / np.maximum(n, 1), np.nan)
 
 
+def _anchor(u, a):
+    """Per column mean of the first ANCHOR_N finite ticks at or after a (round 3: the CAN grid speed is NaN on the first ticks)."""
+    out = np.full(u.shape[1], np.nan)
+    for j in range(u.shape[1]):
+        x = u[a:, j]
+        x = x[np.isfinite(x)][:ANCHOR_N]
+        if len(x):
+            out[j] = x.mean()
+    return out
+
+
 def deviation(u, a, k):
     """D at tick k for an anchor starting at a: mean of the last SMOOTH ticks minus mean of the anchor ticks (needs k - SMOOTH + 1 >= a + ANCHOR_N)."""
-    return _nanmean(u[k - SMOOTH + 1:k + 1]) - _nanmean(u[a:a + ANCHOR_N])
+    return _nanmean(u[k - SMOOTH + 1:k + 1]) - _anchor(u, a)
 
 
 class InertialModel:

@@ -110,3 +110,9 @@ def test_speed_spoof_with_agreeing_yaw_edge_is_not_contradicted():
     assert B.Blame31(g, B.PRIOR_COST).diagnose(st)[0] == "gps"
     only_doppler = _state(g, alarm=[("gnss_vel", "can_v"), ("gnss_vel", "wheel_v")], agree=[("can_v", "wheel_v"), ("gnss_pos", "can_v"), ("gnss_pos", "wheel_v"), ("gnss_yaw", "gyro")])
     assert B.Blame31(g, B.EQUAL_COST).diagnose(only_doppler)[0] == "gps"      # a superset with a spurious second sensor does not block the verdict
+
+
+def test_anchor_skips_nan_ticks():
+    u = np.array([[np.nan, 1.0], [np.nan, 1.0], [np.nan, 1.0], [2.0, 1.0], [2.0, 1.0], [2.0, 1.0], [5.0, 1.0], [5.0, 1.0]])
+    d = B.deviation(u, 0, 7)
+    assert np.allclose(d, [3.0, 0.0])
