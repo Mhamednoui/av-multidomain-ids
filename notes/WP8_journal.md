@@ -564,3 +564,7 @@
 2026-11-04T17:45:11+01:00 | S7 | V2AIX dry run on v3 test recordings (V31_val), not H31 | 12 per environment
 2026-11-04T17:45:11+01:00 | S7 | V2AIX H31: start | 24 recordings, 24 same site-day as a v3 train recording; out results/WP8/S7/v2aix.json
 2026-11-04T17:45:38+01:00 | S7 | V2AIX H31: done | FA physics Mobile 0.0000, egos 3
+2026-11-04T17:45:53+01:00 | B3 | features built (train 1.36M, val 325k; tracker refit sa=1.99); launching candidate fits: log results/WP9/logs/B3_fit.log cmd: python -I -u -W ignore tools/WP9_B3_fit.py --select
+2026-11-04T17:45:55+01:00 | B3 | fit xgb_A_plaus_d6: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T17:46:14+01:00 | S7 | freeze.json written | 610 code files, parent commit 35e62750
+2026-11-04T17:46:22+01:00 | S7 | FREEZE committed: results/WP8/S7/freeze.json (sha256 of 39 artefact files + 610 code files, parent commit 35e6275); no H31 file opened before this commit; next: verify H31 sha256 vs locks, then odometry / LiDAR / CAN / network / V2X / V2AIX builds, then ONE scoring
