@@ -272,3 +272,4 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
 - 2026-11-03 running: S6 agent a47db614755578e49 (sonnet high), WP9 B0 agent a3025ccebef6551ed (sonnet medium). Next: S2 after S6; B1-B4 after B0 (max 3 workers).
 | 2026-11-04 | WP8 | S6 | APPROVED (partial). Blame A1: comma GNSS 77% correct / 0% wrong (v3 100% undecided), K 79/5; B1 gps_can NOT MET (known limit), A3 labelled variant. Launched S2 (T4 opus: fusion design). 8/16 overall. |
 - 2026-11-04 running: S2 agent af263e9016720dc83 (opus medium), WP9 B0 agent a3025ccebef6551ed (sonnet medium).
+| 2026-11-04 | WP9 | B0 | APPROVED. Bar + decisions in notes/WP9_brief.md (corrected CICIDS labels if no login, ROAD coolant = unseen row, VeReMi split by run). Launched B1 CAN, B2 network (T3). 9/16. |
