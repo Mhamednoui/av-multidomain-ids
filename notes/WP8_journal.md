@@ -519,3 +519,4 @@
 2026-11-04T17:19:01+01:00 | B1 | test d11_set_04: DONE results/WP9/B1_d11_set_04_test.json; exposure registered
 2026-11-04T17:20:09+01:00 | S7 | step 0 done: system/runners31.py + tests/v31/test_s7_runners.py (6 pass); next: write S7 tools, dry-run on V31_val, freeze.json, commit BEFORE any H31 file | log notes
 2026-11-04T17:23:46+01:00 | B1 | DONE: all test scored once, report reports/WP9_B1.md, STATUS B1 -> REVIEW; committing
+2026-11-04T17:24:12+01:00 | B2 | CSECICIDS2018_improved.zip downloaded sha256 7f7b6f80...f6e (10,426,851,729 B), no login; reading members straight from the zip (no extraction)

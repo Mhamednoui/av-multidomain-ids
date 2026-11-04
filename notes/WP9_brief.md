@@ -23,3 +23,4 @@
   D11 (4 sets): test_01 window F1 mean 0.80 at the 1% budget (post-hoc F1-optimal thr 0.96/0.57/0.99/0.98), unknown vehicle (test_02/04) FPR 100%; test_03/04 are UNSEEN-attack rows (B0 proposal corrected).
   Controls: global shuffled-label fails for ROAD and most D11 units; within-capture permutation AUC 0.7-0.9 (regime shortcut learnable); same-segment AUC still 0.93-1.00. Unit differs from the literature (frame): no "better" claim.
 
+- ORCH on B1 (2026-11-04): approved. Headline per pre-registered rule (1% val budget). D11 F1 at the val-F1-optimal threshold (0.964/0.571/0.985/0.979) may be reported as a SECONDARY operating point, labelled "threshold chosen on validation for max F1 (literature convention); reported after the 1% test result; same single test scoring". Shuffled-label failure (capture regime predicts attack-bearing) must be stated in every table that uses ROAD / D11 seen rows. Unknown-vehicle FPR 100% = v3 finding (on-vehicle calibration needed).
