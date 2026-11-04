@@ -1,0 +1,407 @@
+{
+ "classes": [
+  "Normal",
+  "DoS",
+  "Fuzzy",
+  "RPM",
+  "Gear"
+ ],
+ "train_windows": [
+  2964,
+  1134,
+  1265,
+  923,
+  920
+ ],
+ "val_windows": [
+  847,
+  232,
+  269,
+  175,
+  170
+ ],
+ "candidates": {
+  "W_xgb_a_generic": {
+   "kind": "W",
+   "thr": 0.2720345258712769,
+   "val_macro_f1": 0.9951386952885419,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 0.9976359338061466,
+   "val_auc": 0.9996552984947569,
+   "val_macro_f1_argmax": 0.9951386952885419,
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 63
+  },
+  "W_xgb_b_generic": {
+   "kind": "W",
+   "thr": 0.22805207967758181,
+   "val_macro_f1": 0.9951386952885419,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 0.9976359338061466,
+   "val_auc": 0.9998674224979834,
+   "val_macro_f1_argmax": 0.9951386952885419,
+   "params": {
+    "max_depth": 5,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 63
+  },
+  "W_xgb_c_generic": {
+   "kind": "W",
+   "thr": 0.21469914913177493,
+   "val_macro_f1": 0.9951386952885419,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 0.9976359338061466,
+   "val_auc": 0.9998018315233015,
+   "val_macro_f1_argmax": 0.9951386952885419,
+   "params": {
+    "max_depth": 7,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 2
+   },
+   "n_trees": 122
+  },
+  "W_rf_generic": {
+   "kind": "W",
+   "thr": 0.41821098327636724,
+   "val_macro_f1": 0.9949608343019989,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 1.0,
+   "val_auc": 1.0,
+   "val_macro_f1_argmax": 0.9949608343019989,
+   "params": "rf300",
+   "n_trees": null
+  },
+  "W_xgb_a_ids": {
+   "kind": "W",
+   "thr": 0.19790613651275638,
+   "val_macro_f1": 0.9951386952885419,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 0.9976359338061466,
+   "val_auc": 0.9998883557877755,
+   "val_macro_f1_argmax": 0.9951386952885419,
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 63
+  },
+  "W_xgb_b_ids": {
+   "kind": "W",
+   "thr": 0.1226586699485779,
+   "val_macro_f1": 0.9956302648967007,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 0.9988179669030733,
+   "val_auc": 0.9998953335510395,
+   "val_macro_f1_argmax": 0.9956302648967007,
+   "params": {
+    "max_depth": 5,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 65
+  },
+  "W_xgb_c_ids": {
+   "kind": "W",
+   "thr": 0.21923243999481204,
+   "val_macro_f1": 0.9951386952885419,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 0.9976359338061466,
+   "val_auc": 0.9998646313926778,
+   "val_macro_f1_argmax": 0.9951386952885419,
+   "params": {
+    "max_depth": 7,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 2
+   },
+   "n_trees": 131
+  },
+  "W_rf_ids": {
+   "kind": "W",
+   "thr": 0.26416039466857916,
+   "val_macro_f1": 0.9958956907002982,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 1.0,
+   "val_auc": 0.9999999999999999,
+   "val_macro_f1_argmax": 0.9958956907002982,
+   "params": "rf300",
+   "n_trees": null
+  },
+  "Fa": {
+   "kind": "F",
+   "thr": 0.14624649286270144,
+   "val_macro_f1": 0.9953151065378801,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 1.0,
+   "val_auc": 1.0,
+   "val_macro_f1_argmax": 0.9953151065378801,
+   "params": {
+    "max_depth": 6,
+    "learning_rate": 0.15,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 144
+  },
+  "Fb": {
+   "kind": "F",
+   "thr": 0.3733276724815369,
+   "val_macro_f1": 0.9966013171418784,
+   "val_fpr": 0.008264462809917356,
+   "val_recall_any": 1.0,
+   "val_auc": 1.0,
+   "val_macro_f1_argmax": 0.9966013171418784,
+   "params": {
+    "max_depth": 9,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 144
+  },
+  "F_noid": {
+   "kind": "F",
+   "thr": 0.15443921089172366,
+   "val_macro_f1": 0.995249412148181,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 1.0,
+   "val_auc": 1.0,
+   "val_macro_f1_argmax": 0.995249412148181,
+   "params": {
+    "max_depth": 6,
+    "learning_rate": 0.15,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 236
+  },
+  "E": {
+   "kind": "E",
+   "thr": 0.9746162891387941,
+   "val_macro_f1": 0.9961206053732745,
+   "val_fpr": 0.009445100354191263,
+   "val_recall_any": 1.0,
+   "val_auc": 1.0,
+   "parts": [
+    "Fb",
+    "W_rf_ids"
+   ]
+  }
+ },
+ "dataset": "carhacking",
+ "set": null,
+ "chosen": "W_rf_generic",
+ "chosen_vehicle_agnostic": "W_xgb_a_generic",
+ "chosen_val": {
+  "macro_f1": 0.9949608343019989,
+  "macro_f1_argmax": 0.9949608343019989,
+  "fpr": 0.009445100354191263,
+  "recall_any": 1.0,
+  "auc": 1.0,
+  "f1_attack_binary": 0.9952941176470588,
+  "precision_binary": 0.990632318501171,
+  "per_class_recall": {
+   "0": 0.9905548996458088,
+   "1": 1.0,
+   "2": 1.0,
+   "3": 1.0,
+   "4": 0.9941176470588236
+  },
+  "per_class_f1": {
+   "0": 0.9952550415183867,
+   "1": 1.0,
+   "2": 0.9853479853479854,
+   "3": 0.9971509971509972,
+   "4": 0.9970501474926253
+  },
+  "per_class_n": {
+   "0": 847,
+   "1": 232,
+   "2": 269,
+   "3": 175,
+   "4": 170
+  },
+  "per_class_alarm_recall": {
+   "0": null,
+   "1": 1.0,
+   "2": 1.0,
+   "3": 1.0,
+   "4": 1.0
+  },
+  "recall_unseen_any": null,
+  "n_unseen": 0,
+  "n_windows": 1693,
+  "ci95": {
+   "macro_f1": [
+    0.9852505407754221,
+    1.0
+   ],
+   "macro_f1_argmax": [
+    0.9852505407754221,
+    1.0
+   ],
+   "fpr": [
+    0.0,
+    0.018847623252246273
+   ],
+   "recall_any": [
+    1.0,
+    1.0
+   ],
+   "auc": [
+    0.9999999999999999,
+    1.0
+   ],
+   "f1_attack_binary": [
+    0.9845938472174215,
+    1.0
+   ]
+  },
+  "ci95_per_class_recall": {
+   "0": [
+    0.9811523767477537,
+    1.0
+   ],
+   "1": [
+    1.0,
+    1.0
+   ],
+   "2": [
+    1.0,
+    1.0
+   ],
+   "3": [
+    1.0,
+    1.0
+   ],
+   "4": [
+    0.9776953396707628,
+    1.0
+   ]
+  },
+  "n_groups": 55
+ },
+ "controls": {
+  "Fb": {
+   "unit": "frame",
+   "shuffled_auc_frame": 0.4879546484726012,
+   "shuffled_auc_window_max": 0.631236375917227,
+   "pass": true
+  },
+  "W_rf_generic": {
+   "unit": "window",
+   "shuffled_auc_window": 0.48678272082527396,
+   "pass": true
+  },
+  "W_rf_ids": {
+   "unit": "window",
+   "shuffled_auc_window": 0.43574875586481,
+   "pass": true
+  },
+  "W_xgb_a_generic": {
+   "unit": "window",
+   "shuffled_auc_window": 0.44221993351587163,
+   "pass": true
+  }
+ },
+ "importance": {
+  "Fb": {
+   "dt_id_ratio": 0.27908576086419123,
+   "id": 0.2213690668780465,
+   "bytes_changed": 0.15293572335855557,
+   "b7": 0.09639986024334957,
+   "dt_id": 0.07349484292203888,
+   "n_id_win": 0.07184751796136124,
+   "b0": 0.038488841880914566,
+   "b5": 0.02341654204043065
+  },
+  "W_rf_generic": {
+   "unknown_id": 0.1040781099027788,
+   "nid_max": 0.08559253393516741,
+   "byte_std7": 0.07031054312291923,
+   "nid_mean": 0.06312869201736439,
+   "byte_mean7": 0.05697543744520724,
+   "id_entropy": 0.04818103118038515,
+   "byte_mean3": 0.04495223637333885,
+   "byte_std3": 0.04449942520605321
+  },
+  "W_rf_ids": {
+   "unknown_id": 0.07903673795408131,
+   "cnt_790": 0.07521410506967055,
+   "cnt_other": 0.06938673890721196,
+   "cnt_1087": 0.061592328955735354,
+   "nid_max": 0.052487873424704935,
+   "nid_mean": 0.044885820252759646,
+   "ratio_min": 0.04264433687969871,
+   "nuniq_mean": 0.040905404370739626
+  },
+  "W_xgb_a_generic": {
+   "ratio_std": 0.1742295429705955,
+   "byte_std7": 0.15788343897875873,
+   "nid_max": 0.14819278368556035,
+   "n_ids": 0.13441853396060077,
+   "nuniq_mean": 0.06271941105572482,
+   "byte_mean7": 0.06265332458890263,
+   "byte_std3": 0.061431891911820156,
+   "ratio_min": 0.03759832312374757
+  }
+ },
+ "period_ids": 38,
+ "id_list": [
+  2,
+  160,
+  161,
+  304,
+  305,
+  320,
+  339,
+  399,
+  497,
+  608,
+  672,
+  688,
+  704,
+  790,
+  809,
+  848,
+  880,
+  1072,
+  1087,
+  1088,
+  1201,
+  1264,
+  1349,
+  1440,
+  1442,
+  1520,
+  1680,
+  1706,
+  1999
+ ],
+ "n_frames_train_sample": 1799845,
+ "ablation_noid_val_macro_f1": 0.995249412148181,
+ "selection_rule": "max validation macro-F1 at the validation 1% FA budget; ties within 0.002 -> simpler (SIMPLICITY order)",
+ "lock": "C:\\Users\\nouir\\PFE\\codes_v3\\locks\\WP9_carhacking.json",
+ "bundle": "C:\\Users\\nouir\\PFE\\data_extra\\cache_v3\\WP9\\B1\\models\\carhacking\\bundle.pkl"
+}

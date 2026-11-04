@@ -315,7 +315,7 @@ def macro_f1(y, pred, classes_idx):
 
 def decide(s, c, thr):
     """Alarm if attack score s >= thr; class = c (1..K) on alarm, 0 otherwise."""
-    return np.where(s >= thr, c, 0)
+    return np.where(np.asarray(s, dtype=np.float64) >= thr, c, 0)   # float64: a float32 compare would round thr down onto a tie
 
 
 def auc_binary(y_bin, s):

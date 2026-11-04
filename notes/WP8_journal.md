@@ -465,3 +465,14 @@
 2026-11-04T16:47:34+01:00 | B1 | found float32 threshold-rounding bug in summarize/decide (FPR 1.06% vs 1% budget), fixed to float64; carhacking fit will be re-run; launching road fit (bg) log results/WP9/logs/B1_fit_road.log
 2026-11-04T16:47:37+01:00 | B1 | fit road: start (K+1=10); log results/WP9/logs/B1_fit_road.log
 2026-11-04T16:47:47+01:00 | B1 | build d11: done (236 segments)
+2026-11-04T16:49:07+01:00 | S2 | round-1 evaluation start (48fc9af): tools/WP8_S2_sim.py --tag r1 (background), log results/WP8/logs/S2_sim_r1.log, pre-registration 8bf6910 | output results/WP8/S2/r1_eval.json
+2026-11-04T16:49:15+01:00 | B1 | fit carhacking: done, chosen W_rf_generic; results/WP9/B1_carhacking_selection.json
+2026-11-04T16:49:21+01:00 | B1 | rerunning fit carhacking after float64 decide fix (run1 log kept as ..._run1_buggy_decide.log; no test read)
+2026-11-04T16:49:23+01:00 | B1 | fit carhacking: start (K+1=5); log results/WP9/logs/B1_fit_carhacking.log
+2026-11-04T16:50:57+01:00 | B2 | start val-only runs (cand,select,control) D10o T,G,B: tools/WP9_B2_driver.sh D10o cand select control (log results/WP9/logs/B2_D10o_val.log); resumable (parts/ json skip) | test stage NOT included
+2026-11-04T16:51:27+01:00 | B1 | fit road: done, chosen Fb; results/WP9/B1_road_selection.json
+2026-11-04T16:53:06+01:00 | B1 | road fit done (selection json written; controls: Fb frame shuffled AUC 0.28 FAIL, W_rf_ids 0.73 FAIL -> reported); launching d11 fits set_01..04 sequentially (bg), logs results/WP9/logs/B1_fit_d11_set_0N.log
+2026-11-04T16:53:09+01:00 | B1 | fit d11_set_01: start (K+1=5); log results/WP9/logs/B1_fit_d11_set_01.log
+2026-11-04T16:55:21+01:00 | B1 | fit d11_set_01: done, chosen W_xgb_a_ids; results/WP9/B1_d11_set_01_selection.json
+2026-11-04T16:55:24+01:00 | B1 | fit d11_set_02: start (K+1=7); log results/WP9/logs/B1_fit_d11_set_02.log
+2026-11-04T16:58:17+01:00 | B1 | fit carhacking: done, chosen W_rf_generic; results/WP9/B1_carhacking_selection.json
