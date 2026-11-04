@@ -1,0 +1,3 @@
+[     1s] K fitted 0.9980205859065717 3.5
+[     2s] C fitted 0.99689970547202
+[    13s] done {'V3': {'B1': False, 'B3': False, 'B2': False, 'C3': True, 'B4': True, 'n_met': 2}, 'A1': {'B1': False, 'B3': True, 'B2': False, 'C3': True, 'B4': True, 'n_met': 3}, 'A2': {'B1': False, 'B3': False, 'B2': False, 'C3': True, 'B4': True, 'n_met': 2}, 'A3': {'B1': False, 'B3': False, 'B2': False, 'C3': True, 'B4': True, 'n_met': 2}}

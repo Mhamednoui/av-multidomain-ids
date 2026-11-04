@@ -1,0 +1,23 @@
+[     0s] skip 0002
+[     0s] skip 0013
+[     0s] skip 0015
+[     0s] skip 0017
+[     0s] skip 0019
+[     0s] skip 0020
+[     0s] skip 0029
+[     0s] skip 0046
+[     0s] done 0048 train 0 records
+[     1s] done 0060 train 10 records
+[     2s] done 0070 train 10 records
+[     3s] done 0106 train 10 records
+[     3s] done 0113 train 10 records
+[     3s] skip 0001
+[     5s] done 0005 val 120 records
+[     8s] done 0011 val 120 records
+[    10s] done 0027 val 120 records
+[    14s] done 0028 val 120 records
+[    16s] done 0035 val 120 records
+[    19s] done 0039 val 120 records
+[    21s] done 0052 val 120 records
+[    23s] done 0079 val 120 records
+[    26s] done 0095 val 120 records

@@ -41,3 +41,9 @@
 - Code: lidar/fast_nb.py (4 kernels: ring assignment, voxel clustering, range image, ground cells), flag in lidar/fast.py (`fast.set_numba(True)` / env AV_LIDAR_NUMBA=1, default off, numpy fallback), tests/v31/test_fast_nb.py, tools/WP8_S3b_*.py; numba==0.60.0 + llvmlite==0.43.0 in requirements.txt; report reports/WP8_S3b.md.
 - Speed (2,085 V31_val scans, stream push, warm-up excluded): median 73-76 ms, p99 110-135 ms (numpy path 141-178 / 240-294 ms). L1 MET. Warm-up 0.4-0.6 s (cache), first compile ~12 s. 0-2 other python processes during timing; repeated once.
 - Equality vs numpy path of frozen_lidar31: 0 alarm differences, max |diff| 0.0 (all layer raws, stat, score). Scores in results/WP8/scores/S3b/. S2/S7 runners should enable the flag.
+
+## S6 (blame fixes, worker sonnet) - REVIEW 2026-11-04
+- Code: crossdomain/blame31.py (channel-graph hypothesis blame, selected_blamers() = A1; A3 = inertial alternative), tools/WP8_S6_{kitti,comma,eval,table,fixture}.py, tests/v31/test_s6_{blame31,regression}.py; results results/WP8/S6/{r1,r2,r3}_eval.json, scores results/WP8/scores/S6/; report reports/WP8_S6.md. v3 files untouched (git diff v3.0 empty); load_system(2) fixture exact.
+- V31_val vehicle block (3 logged rounds): comma GNSS drift/meaconing/doppler A1 77 % [69, 86] correct / 0 % wrong (v3 100 % undecided) B2 MET; K B3 A1 79 / 5 MET; C3, B4 met; B1 gps_can NOT MET (v3 17 / 60, A1 7 / 75, A3 43 [27, 57] / 41 [22, 60]).
+- Pitfalls: gps_can == lone LiDAR fault in the speed graph (needs the accelerometer, little time in 8-50 s runs); prior flips lone LiDAR faults and makes comma can_bus 100 % wrong (A2); filler-induced wrong blame is S7; sim accelerometer noise is an assumption.
+

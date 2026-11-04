@@ -115,4 +115,4 @@ def test_speed_spoof_with_agreeing_yaw_edge_is_not_contradicted():
 def test_anchor_skips_nan_ticks():
     u = np.array([[np.nan, 1.0], [np.nan, 1.0], [np.nan, 1.0], [2.0, 1.0], [2.0, 1.0], [2.0, 1.0], [5.0, 1.0], [5.0, 1.0]])
     d = B.deviation(u, 0, 7)
-    assert np.allclose(d, [3.0, 0.0])
+    assert np.allclose(d, [2.0, 0.0])

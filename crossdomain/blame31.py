@@ -253,3 +253,12 @@ def blame_run(blamer, graph_edges_alarm, graph_edges_observed, cross_alarm, extr
     for i in np.flatnonzero(ca):
         res[i] = UNDECIDED if out[i] is None else out[i]
     return res
+
+
+# ------------------------------------------------------------------------------------------------ selected v3.1 configuration
+SELECTED = "A1"            # S6 round 3, registered selection rule (most rules met): channel graph, equal sensor costs, no inertial edges; A3 = labelled alternative (see reports/WP8_S6.md)
+
+
+def selected_blamers():
+    """{"K": Blame31, "C": Blame31} of the S6 selection (A1). Alternative for K: Blame31(graph_k(True), PRIOR_COST) with InertialModel edges (A3)."""
+    return {"K": Blame31(graph_k(False), EQUAL_COST), "C": Blame31(graph_c(), EQUAL_COST)}

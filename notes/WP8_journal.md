@@ -151,3 +151,5 @@
 2026-11-04T16:24:27+01:00 | S6 | resumed after usage reset; r2 numbers exist (results/WP8/S6/r2_eval.json); found CAN inertial anchor all-NaN (CAN grid speed NaN on ticks 0-2): writing round-3 plan before running r3
 2026-11-04T16:24:42+01:00 | S6 | round-3 evaluation start: tools/WP8_S6_eval.py r3 (log results/WP8/logs/S6_eval_r3.log), plan committed before
 2026-11-04T16:25:27+01:00 | S6 | round 3 done (A1 selected by rule; A3 alternative); writing report/brief/STATUS; running full test suite log results/WP8/logs/S6_tests.log
+2026-11-04T16:28:49+01:00 | B0 | literature md+json written and committed (CAN, network, V2X, GPS, LiDAR); next: B0_splits_proposal.md, report, STATUS
+2026-11-04T16:28:50+01:00 | S6 | DONE: report reports/WP8_S6.md, brief, STATUS S6 -> REVIEW, suite 529 pass; committing, stop
