@@ -1,0 +1,16 @@
+{
+ "tag": "d11_set_04",
+ "units": {
+  "Fb": {
+   "unit": "frame",
+   "within_capture_shuffled_auc": 0.43696114920560736,
+   "pass_0.42_0.58": true
+  },
+  "W_xgb_c_generic": {
+   "unit": "window",
+   "within_capture_shuffled_auc": 0.8804691183404055,
+   "pass_0.42_0.58": false
+  }
+ },
+ "note": "labels permuted within each training segment; validation only"
+}

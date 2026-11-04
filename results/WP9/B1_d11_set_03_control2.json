@@ -1,0 +1,11 @@
+{
+ "tag": "d11_set_03",
+ "units": {
+  "F_noid": {
+   "unit": "frame",
+   "within_capture_shuffled_auc": 0.8078165423326776,
+   "pass_0.42_0.58": false
+  }
+ },
+ "note": "labels permuted within each training segment; validation only"
+}

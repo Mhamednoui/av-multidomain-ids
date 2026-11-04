@@ -1,0 +1,11 @@
+{
+ "tag": "carhacking",
+ "units": {
+  "W_rf_generic": {
+   "unit": "window",
+   "within_capture_shuffled_auc": 0.8877375579503238,
+   "pass_0.42_0.58": false
+  }
+ },
+ "note": "labels permuted within each training segment; validation only"
+}

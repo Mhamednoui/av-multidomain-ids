@@ -1,0 +1,362 @@
+{
+ "carhacking": {
+  "scored_on": "2026-11-04T17:00:10+01:00",
+  "models": [
+   "W_rf_generic"
+  ],
+  "test_subsets": {
+   "test_blocks": [
+    "DoS/000",
+    "DoS/004",
+    "DoS/007",
+    "DoS/013",
+    "DoS/020",
+    "DoS/024",
+    "DoS/029",
+    "DoS/033",
+    "DoS/035",
+    "DoS/038",
+    "DoS/044",
+    "Fuzzy/001",
+    "Fuzzy/003",
+    "Fuzzy/007",
+    "Fuzzy/010",
+    "Fuzzy/012",
+    "Fuzzy/020",
+    "Fuzzy/022",
+    "Fuzzy/024",
+    "Fuzzy/026",
+    "Fuzzy/036",
+    "Fuzzy/042",
+    "Fuzzy/044",
+    "Fuzzy/049",
+    "RPM/005",
+    "RPM/008",
+    "RPM/012",
+    "RPM/016",
+    "RPM/020",
+    "RPM/022",
+    "RPM/025",
+    "RPM/027",
+    "RPM/030",
+    "RPM/034",
+    "RPM/037",
+    "RPM/039",
+    "RPM/043",
+    "RPM/045",
+    "Gear/001",
+    "Gear/010",
+    "Gear/014",
+    "Gear/016",
+    "Gear/020",
+    "Gear/022",
+    "Gear/026",
+    "Gear/028",
+    "Gear/030",
+    "Gear/033",
+    "Gear/035",
+    "Gear/037",
+    "Gear/039",
+    "Gear/043"
+   ],
+   "normal_run_test": [
+    "normal_run/test"
+   ]
+  },
+  "times_scored_by_B1": 1,
+  "selection_json": "results/WP9/B1_carhacking_selection.json",
+  "scores": "results/WP9/scores/B1/carhacking_test.npz",
+  "results": "results/WP9/B1_carhacking_test.json"
+ },
+ "road": {
+  "scored_on": "2026-11-04T17:02:29+01:00",
+  "models": [
+   "Fb"
+  ],
+  "test_subsets": {
+   "test": [
+    "ambient_dyno_drive_benign_anomaly",
+    "ambient_dyno_drive_extended_short",
+    "ambient_dyno_reverse",
+    "ambient_highway_street_driving_diagnostics",
+    "correlated_signal_attack_3",
+    "correlated_signal_attack_3_masquerade",
+    "fuzzing_attack_3",
+    "max_speedometer_attack_3",
+    "max_speedometer_attack_3_masquerade",
+    "reverse_light_off_attack_3",
+    "reverse_light_off_attack_3_masquerade",
+    "reverse_light_on_attack_3",
+    "reverse_light_on_attack_3_masquerade"
+   ],
+   "unseen_family": [
+    "max_engine_coolant_temp_attack",
+    "max_engine_coolant_temp_attack_masquerade"
+   ]
+  },
+  "times_scored_by_B1": 1,
+  "selection_json": "results/WP9/B1_road_selection.json",
+  "scores": "results/WP9/scores/B1/road_test.npz",
+  "results": "results/WP9/B1_road_test.json"
+ },
+ "d11_set_01": {
+  "scored_on": "2026-11-04T17:10:22+01:00",
+  "models": [
+   "W_xgb_a_ids",
+   "W_xgb_a_generic"
+  ],
+  "test_subsets": {
+   "test_01": [
+    "set_01/test_01_known_vehicle_known_attack/DoS-3",
+    "set_01/test_01_known_vehicle_known_attack/DoS-4",
+    "set_01/test_01_known_vehicle_known_attack/force-neutral-3",
+    "set_01/test_01_known_vehicle_known_attack/force-neutral-4",
+    "set_01/test_01_known_vehicle_known_attack/rpm-3",
+    "set_01/test_01_known_vehicle_known_attack/rpm-4",
+    "set_01/test_01_known_vehicle_known_attack/standstill-3",
+    "set_01/test_01_known_vehicle_known_attack/standstill-4"
+   ],
+   "test_02": [
+    "set_01/test_02_unknown_vehicle_known_attack/DoS-3",
+    "set_01/test_02_unknown_vehicle_known_attack/DoS-4",
+    "set_01/test_02_unknown_vehicle_known_attack/force-neutral-3",
+    "set_01/test_02_unknown_vehicle_known_attack/force-neutral-4",
+    "set_01/test_02_unknown_vehicle_known_attack/rpm-3",
+    "set_01/test_02_unknown_vehicle_known_attack/rpm-4",
+    "set_01/test_02_unknown_vehicle_known_attack/standstill-3",
+    "set_01/test_02_unknown_vehicle_known_attack/standstill-4"
+   ],
+   "test_03": [
+    "set_01/test_03_known_vehicle_unknown_attack/double-3",
+    "set_01/test_03_known_vehicle_unknown_attack/double-4",
+    "set_01/test_03_known_vehicle_unknown_attack/fuzzing-3",
+    "set_01/test_03_known_vehicle_unknown_attack/fuzzing-4",
+    "set_01/test_03_known_vehicle_unknown_attack/interval-3",
+    "set_01/test_03_known_vehicle_unknown_attack/interval-4",
+    "set_01/test_03_known_vehicle_unknown_attack/speed-3",
+    "set_01/test_03_known_vehicle_unknown_attack/speed-4",
+    "set_01/test_03_known_vehicle_unknown_attack/systematic-3",
+    "set_01/test_03_known_vehicle_unknown_attack/systematic-4",
+    "set_01/test_03_known_vehicle_unknown_attack/triple-3",
+    "set_01/test_03_known_vehicle_unknown_attack/triple-4"
+   ],
+   "test_04": [
+    "set_01/test_04_unknown_vehicle_unknown_attack/double-3",
+    "set_01/test_04_unknown_vehicle_unknown_attack/double-4",
+    "set_01/test_04_unknown_vehicle_unknown_attack/fuzzing-3",
+    "set_01/test_04_unknown_vehicle_unknown_attack/fuzzing-4",
+    "set_01/test_04_unknown_vehicle_unknown_attack/interval-3",
+    "set_01/test_04_unknown_vehicle_unknown_attack/interval-4",
+    "set_01/test_04_unknown_vehicle_unknown_attack/speed-3",
+    "set_01/test_04_unknown_vehicle_unknown_attack/speed-4",
+    "set_01/test_04_unknown_vehicle_unknown_attack/systematic-3",
+    "set_01/test_04_unknown_vehicle_unknown_attack/systematic-4",
+    "set_01/test_04_unknown_vehicle_unknown_attack/triple-3",
+    "set_01/test_04_unknown_vehicle_unknown_attack/triple-4"
+   ]
+  },
+  "times_scored_by_B1": 1,
+  "selection_json": "results/WP9/B1_d11_set_01_selection.json",
+  "scores": "results/WP9/scores/B1/d11_set_01_test.npz",
+  "results": "results/WP9/B1_d11_set_01_test.json"
+ },
+ "d11_set_02": {
+  "scored_on": "2026-11-04T17:13:50+01:00",
+  "models": [
+   "E",
+   "W_xgb_c_generic"
+  ],
+  "test_subsets": {
+   "test_01": [
+    "set_02/test_01_known_vehicle_known_attack/double-3",
+    "set_02/test_01_known_vehicle_known_attack/double-4",
+    "set_02/test_01_known_vehicle_known_attack/fuzzing-3",
+    "set_02/test_01_known_vehicle_known_attack/fuzzing-4",
+    "set_02/test_01_known_vehicle_known_attack/interval-3",
+    "set_02/test_01_known_vehicle_known_attack/interval-4",
+    "set_02/test_01_known_vehicle_known_attack/speed-3",
+    "set_02/test_01_known_vehicle_known_attack/speed-4",
+    "set_02/test_01_known_vehicle_known_attack/systematic-3",
+    "set_02/test_01_known_vehicle_known_attack/systematic-4",
+    "set_02/test_01_known_vehicle_known_attack/triple-3",
+    "set_02/test_01_known_vehicle_known_attack/triple-4"
+   ],
+   "test_02": [
+    "set_02/test_02_unknown_vehicle_known_attack/double-3",
+    "set_02/test_02_unknown_vehicle_known_attack/double-4",
+    "set_02/test_02_unknown_vehicle_known_attack/fuzzing-3",
+    "set_02/test_02_unknown_vehicle_known_attack/fuzzing-4",
+    "set_02/test_02_unknown_vehicle_known_attack/interval-3",
+    "set_02/test_02_unknown_vehicle_known_attack/interval-4",
+    "set_02/test_02_unknown_vehicle_known_attack/speed-3",
+    "set_02/test_02_unknown_vehicle_known_attack/speed-4",
+    "set_02/test_02_unknown_vehicle_known_attack/systematic-3",
+    "set_02/test_02_unknown_vehicle_known_attack/systematic-4",
+    "set_02/test_02_unknown_vehicle_known_attack/triple-3",
+    "set_02/test_02_unknown_vehicle_known_attack/triple-4"
+   ],
+   "test_03": [
+    "set_02/test_03_known_vehicle_unknown_attack/DoS-3",
+    "set_02/test_03_known_vehicle_unknown_attack/DoS-4",
+    "set_02/test_03_known_vehicle_unknown_attack/force-neutral-3",
+    "set_02/test_03_known_vehicle_unknown_attack/force-neutral-4",
+    "set_02/test_03_known_vehicle_unknown_attack/rpm-3",
+    "set_02/test_03_known_vehicle_unknown_attack/rpm-4",
+    "set_02/test_03_known_vehicle_unknown_attack/standstill-3",
+    "set_02/test_03_known_vehicle_unknown_attack/standstill-4"
+   ],
+   "test_04": [
+    "set_02/test_04_unknown_vehicle_unknown_attack/DoS-3",
+    "set_02/test_04_unknown_vehicle_unknown_attack/DoS-4",
+    "set_02/test_04_unknown_vehicle_unknown_attack/force-neutral-3",
+    "set_02/test_04_unknown_vehicle_unknown_attack/force-neutral-4",
+    "set_02/test_04_unknown_vehicle_unknown_attack/rpm-3",
+    "set_02/test_04_unknown_vehicle_unknown_attack/rpm-4",
+    "set_02/test_04_unknown_vehicle_unknown_attack/standstill-3",
+    "set_02/test_04_unknown_vehicle_unknown_attack/standstill-4"
+   ]
+  },
+  "times_scored_by_B1": 1,
+  "selection_json": "results/WP9/B1_d11_set_02_selection.json",
+  "scores": "results/WP9/scores/B1/d11_set_02_test.npz",
+  "results": "results/WP9/B1_d11_set_02_test.json"
+ },
+ "d11_set_03": {
+  "scored_on": "2026-11-04T17:16:35+01:00",
+  "models": [
+   "F_noid",
+   "W_rf_generic"
+  ],
+  "test_subsets": {
+   "test_01": [
+    "set_03/test_01_known_vehicle_known_attack/DoS-1",
+    "set_03/test_01_known_vehicle_known_attack/DoS-2",
+    "set_03/test_01_known_vehicle_known_attack/double-1",
+    "set_03/test_01_known_vehicle_known_attack/double-2",
+    "set_03/test_01_known_vehicle_known_attack/force-neutral-1",
+    "set_03/test_01_known_vehicle_known_attack/force-neutral-2",
+    "set_03/test_01_known_vehicle_known_attack/fuzzing-1",
+    "set_03/test_01_known_vehicle_known_attack/fuzzing-2",
+    "set_03/test_01_known_vehicle_known_attack/triple-1",
+    "set_03/test_01_known_vehicle_known_attack/triple-2"
+   ],
+   "test_02": [
+    "set_03/test_02_unknown_vehicle_known_attack/DoS-1",
+    "set_03/test_02_unknown_vehicle_known_attack/DoS-2",
+    "set_03/test_02_unknown_vehicle_known_attack/double-1",
+    "set_03/test_02_unknown_vehicle_known_attack/double-2",
+    "set_03/test_02_unknown_vehicle_known_attack/force-neutral-1",
+    "set_03/test_02_unknown_vehicle_known_attack/force-neutral-2",
+    "set_03/test_02_unknown_vehicle_known_attack/fuzzing-1",
+    "set_03/test_02_unknown_vehicle_known_attack/fuzzing-2",
+    "set_03/test_02_unknown_vehicle_known_attack/triple-1",
+    "set_03/test_02_unknown_vehicle_known_attack/triple-2"
+   ],
+   "test_03": [
+    "set_03/test_03_known_vehicle_unknown_attack/interval-1",
+    "set_03/test_03_known_vehicle_unknown_attack/interval-2",
+    "set_03/test_03_known_vehicle_unknown_attack/rpm-1",
+    "set_03/test_03_known_vehicle_unknown_attack/rpm-2",
+    "set_03/test_03_known_vehicle_unknown_attack/rpm-accessory-1",
+    "set_03/test_03_known_vehicle_unknown_attack/rpm-accessory-2",
+    "set_03/test_03_known_vehicle_unknown_attack/speed-1",
+    "set_03/test_03_known_vehicle_unknown_attack/speed-2",
+    "set_03/test_03_known_vehicle_unknown_attack/speed-accessory-1",
+    "set_03/test_03_known_vehicle_unknown_attack/speed-accessory-2",
+    "set_03/test_03_known_vehicle_unknown_attack/standstill-1",
+    "set_03/test_03_known_vehicle_unknown_attack/standstill-2",
+    "set_03/test_03_known_vehicle_unknown_attack/systematic-1",
+    "set_03/test_03_known_vehicle_unknown_attack/systematic-2"
+   ],
+   "test_04": [
+    "set_03/test_04_unknown_vehicle_unknown_attack/interval-1",
+    "set_03/test_04_unknown_vehicle_unknown_attack/interval-2",
+    "set_03/test_04_unknown_vehicle_unknown_attack/rpm-1",
+    "set_03/test_04_unknown_vehicle_unknown_attack/rpm-2",
+    "set_03/test_04_unknown_vehicle_unknown_attack/rpm-accessory-1",
+    "set_03/test_04_unknown_vehicle_unknown_attack/rpm-accessory-2",
+    "set_03/test_04_unknown_vehicle_unknown_attack/speed-1",
+    "set_03/test_04_unknown_vehicle_unknown_attack/speed-2",
+    "set_03/test_04_unknown_vehicle_unknown_attack/speed-accessory-1",
+    "set_03/test_04_unknown_vehicle_unknown_attack/speed-accessory-2",
+    "set_03/test_04_unknown_vehicle_unknown_attack/standstill-1",
+    "set_03/test_04_unknown_vehicle_unknown_attack/standstill-2",
+    "set_03/test_04_unknown_vehicle_unknown_attack/systematic-1",
+    "set_03/test_04_unknown_vehicle_unknown_attack/systematic-2"
+   ]
+  },
+  "times_scored_by_B1": 1,
+  "selection_json": "results/WP9/B1_d11_set_03_selection.json",
+  "scores": "results/WP9/scores/B1/d11_set_03_test.npz",
+  "results": "results/WP9/B1_d11_set_03_test.json"
+ },
+ "d11_set_04": {
+  "scored_on": "2026-11-04T17:19:01+01:00",
+  "models": [
+   "E",
+   "W_xgb_c_generic"
+  ],
+  "test_subsets": {
+   "test_01": [
+    "set_04/test_01_known_vehicle_known_attack/interval-1",
+    "set_04/test_01_known_vehicle_known_attack/interval-2",
+    "set_04/test_01_known_vehicle_known_attack/rpm-1",
+    "set_04/test_01_known_vehicle_known_attack/rpm-2",
+    "set_04/test_01_known_vehicle_known_attack/rpm-accessory-1",
+    "set_04/test_01_known_vehicle_known_attack/rpm-accessory-2",
+    "set_04/test_01_known_vehicle_known_attack/speed-1",
+    "set_04/test_01_known_vehicle_known_attack/speed-2",
+    "set_04/test_01_known_vehicle_known_attack/speed-accessory-1",
+    "set_04/test_01_known_vehicle_known_attack/speed-accessory-2",
+    "set_04/test_01_known_vehicle_known_attack/standstill-1",
+    "set_04/test_01_known_vehicle_known_attack/standstill-2",
+    "set_04/test_01_known_vehicle_known_attack/systematic-1",
+    "set_04/test_01_known_vehicle_known_attack/systematic-2"
+   ],
+   "test_02": [
+    "set_04/test_02_unknown_vehicle_known_attack/interval-1",
+    "set_04/test_02_unknown_vehicle_known_attack/interval-2",
+    "set_04/test_02_unknown_vehicle_known_attack/rpm-1",
+    "set_04/test_02_unknown_vehicle_known_attack/rpm-2",
+    "set_04/test_02_unknown_vehicle_known_attack/rpm-accessory-1",
+    "set_04/test_02_unknown_vehicle_known_attack/rpm-accessory-2",
+    "set_04/test_02_unknown_vehicle_known_attack/speed-1",
+    "set_04/test_02_unknown_vehicle_known_attack/speed-2",
+    "set_04/test_02_unknown_vehicle_known_attack/speed-accessory-1",
+    "set_04/test_02_unknown_vehicle_known_attack/speed-accessory-2",
+    "set_04/test_02_unknown_vehicle_known_attack/standstill-1",
+    "set_04/test_02_unknown_vehicle_known_attack/standstill-2",
+    "set_04/test_02_unknown_vehicle_known_attack/systematic-1",
+    "set_04/test_02_unknown_vehicle_known_attack/systematic-2"
+   ],
+   "test_03": [
+    "set_04/test_03_known_vehicle_unknown_attack/DoS-1",
+    "set_04/test_03_known_vehicle_unknown_attack/DoS-2",
+    "set_04/test_03_known_vehicle_unknown_attack/double-1",
+    "set_04/test_03_known_vehicle_unknown_attack/double-2",
+    "set_04/test_03_known_vehicle_unknown_attack/force-neutral-1",
+    "set_04/test_03_known_vehicle_unknown_attack/force-neutral-2",
+    "set_04/test_03_known_vehicle_unknown_attack/fuzzing-1",
+    "set_04/test_03_known_vehicle_unknown_attack/fuzzing-2",
+    "set_04/test_03_known_vehicle_unknown_attack/triple-1",
+    "set_04/test_03_known_vehicle_unknown_attack/triple-2"
+   ],
+   "test_04": [
+    "set_04/test_04_unknown_vehicle_unknown_attack/DoS-1",
+    "set_04/test_04_unknown_vehicle_unknown_attack/DoS-2",
+    "set_04/test_04_unknown_vehicle_unknown_attack/double-1",
+    "set_04/test_04_unknown_vehicle_unknown_attack/double-2",
+    "set_04/test_04_unknown_vehicle_unknown_attack/force-neutral-1",
+    "set_04/test_04_unknown_vehicle_unknown_attack/force-neutral-2",
+    "set_04/test_04_unknown_vehicle_unknown_attack/fuzzing-1",
+    "set_04/test_04_unknown_vehicle_unknown_attack/fuzzing-2",
+    "set_04/test_04_unknown_vehicle_unknown_attack/triple-1",
+    "set_04/test_04_unknown_vehicle_unknown_attack/triple-2"
+   ]
+  },
+  "times_scored_by_B1": 1,
+  "selection_json": "results/WP9/B1_d11_set_04_selection.json",
+  "scores": "results/WP9/scores/B1/d11_set_04_test.npz",
+  "results": "results/WP9/B1_d11_set_04_test.json"
+ }
+}

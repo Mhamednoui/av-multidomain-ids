@@ -1,0 +1,325 @@
+{
+ "tag": "road",
+ "models": {
+  "Fb": {
+   "thr_from_validation": 0.33510404825210577,
+   "subsets": {
+    "test": {
+     "macro_f1": 0.8285316197084438,
+     "macro_f1_argmax": 0.8285316197084438,
+     "fpr": 0.031978680879413725,
+     "recall_any": 0.8582995951417004,
+     "auc": 0.9727671430921895,
+     "f1_attack_binary": 0.8362919132149902,
+     "precision_binary": 0.8153846153846154,
+     "per_class_recall": {
+      "0": 0.9680213191205863,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 0.9838709677419355,
+      "6": 1.0,
+      "7": 0.48,
+      "8": 1.0,
+      "9": 0.0
+     },
+     "per_class_f1": {
+      "0": 0.9722315155570425,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 0.9919999999999999,
+      "5": 0.991869918699187,
+      "6": 0.9803921568627451,
+      "7": 0.3692307692307692,
+      "8": 0.9795918367346939,
+      "9": 0.0
+     },
+     "per_class_n": {
+      "0": 1501,
+      "1": 12,
+      "2": 12,
+      "3": 1,
+      "4": 62,
+      "5": 62,
+      "6": 25,
+      "7": 25,
+      "8": 24,
+      "9": 24
+     },
+     "per_class_alarm_recall": {
+      "0": null,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 0.52,
+      "8": 1.0,
+      "9": 0.041666666666666664
+     },
+     "recall_unseen_any": null,
+     "n_unseen": 0,
+     "n_windows": 1748,
+     "ci95": {
+      "macro_f1": [
+       0.7235677444064968,
+       0.9964612046080612
+      ],
+      "macro_f1_argmax": [
+       0.7235677444064968,
+       0.9964612046080612
+      ],
+      "fpr": [
+       0.0,
+       0.15721378115420495
+      ],
+      "recall_any": [
+       0.5490196078431373,
+       1.0
+      ],
+      "auc": [
+       0.8894391319003938,
+       1.0
+      ],
+      "f1_attack_binary": [
+       0.5360311977114481,
+       0.9417072962751176
+      ]
+     },
+     "ci95_per_class_recall": {
+      "0": [
+       0.8427862188457951,
+       1.0
+      ],
+      "1": [
+       1.0,
+       1.0
+      ],
+      "2": [
+       1.0,
+       1.0
+      ],
+      "3": [
+       1.0,
+       1.0
+      ],
+      "4": [
+       1.0,
+       1.0
+      ],
+      "5": [
+       0.9838709677419355,
+       0.9838709677419355
+      ],
+      "6": [
+       1.0,
+       1.0
+      ],
+      "7": [
+       0.48,
+       0.48
+      ],
+      "8": [
+       1.0,
+       1.0
+      ],
+      "9": [
+       0.0,
+       0.0
+      ]
+     },
+     "n_groups": 9,
+     "row": "seen attack types",
+     "n_segments": 13,
+     "frame_level_val_budget": {
+      "thr": 0.011138916015625002,
+      "recall": 0.8978105177000205,
+      "fpr": 0.008924971895366724,
+      "precision": 0.42806688911003143,
+      "f1": 0.5797262301146874,
+      "auc": 0.902972342378023,
+      "n_frames": 3308591,
+      "n_attack_frames": 24435
+     }
+    },
+    "unseen_family": {
+     "macro_f1": 0.8571428571428571,
+     "macro_f1_argmax": 0.8571428571428571,
+     "fpr": 0.0,
+     "recall_any": 0.0,
+     "auc": 0.6180555555555556,
+     "f1_attack_binary": 0.0,
+     "precision_binary": 0.0,
+     "per_class_recall": {
+      "0": 1.0
+     },
+     "per_class_f1": {
+      "0": 0.8571428571428571
+     },
+     "per_class_n": {
+      "0": 36
+     },
+     "per_class_alarm_recall": {
+      "0": null
+     },
+     "recall_unseen_any": 0.0,
+     "n_unseen": 12,
+     "n_windows": 48,
+     "ci95": {
+      "macro_f1": [
+       0.8571428571428571,
+       0.8571428571428571
+      ],
+      "macro_f1_argmax": [
+       0.8571428571428571,
+       0.8571428571428571
+      ],
+      "fpr": [
+       0.0,
+       0.0
+      ],
+      "recall_any": [
+       0.0,
+       0.0
+      ],
+      "auc": [
+       0.6180555555555556,
+       0.6180555555555556
+      ],
+      "f1_attack_binary": [
+       0.0,
+       0.0
+      ]
+     },
+     "ci95_per_class_recall": {
+      "0": [
+       1.0,
+       1.0
+      ]
+     },
+     "n_groups": 1,
+     "row": "UNSEEN attack family",
+     "n_segments": 2
+    }
+   },
+   "event_level": [
+    {
+     "capture": "correlated_signal_attack_3",
+     "class": "correlated_signal",
+     "attack_windows": 12,
+     "detected": true,
+     "first_alarm_window": 4,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "correlated_signal_attack_3_masquerade",
+     "class": "correlated_signal_masquerade",
+     "attack_windows": 12,
+     "detected": true,
+     "first_alarm_window": 4,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "fuzzing_attack_3",
+     "class": "fuzzing",
+     "attack_windows": 1,
+     "detected": true,
+     "first_alarm_window": 4,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "max_speedometer_attack_3",
+     "class": "max_speedometer",
+     "attack_windows": 62,
+     "detected": true,
+     "first_alarm_window": 9,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "max_speedometer_attack_3_masquerade",
+     "class": "max_speedometer_masquerade",
+     "attack_windows": 62,
+     "detected": true,
+     "first_alarm_window": 9,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "reverse_light_off_attack_3",
+     "class": "reverse_light_off",
+     "attack_windows": 25,
+     "detected": true,
+     "first_alarm_window": 16,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "reverse_light_off_attack_3_masquerade",
+     "class": "reverse_light_off_masquerade",
+     "attack_windows": 25,
+     "detected": true,
+     "first_alarm_window": 16,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "reverse_light_on_attack_3",
+     "class": "reverse_light_on",
+     "attack_windows": 24,
+     "detected": true,
+     "first_alarm_window": 23,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "reverse_light_on_attack_3_masquerade",
+     "class": "reverse_light_on_masquerade",
+     "attack_windows": 24,
+     "detected": true,
+     "first_alarm_window": 23,
+     "delay_s": 0.0
+    },
+    {
+     "capture": "max_engine_coolant_temp_attack",
+     "class": "max_engine_coolant_temp",
+     "attack_windows": 6,
+     "detected": false,
+     "first_alarm_window": null,
+     "delay_s": null
+    },
+    {
+     "capture": "max_engine_coolant_temp_attack_masquerade",
+     "class": "max_engine_coolant_temp_masquerade",
+     "attack_windows": 6,
+     "detected": false,
+     "first_alarm_window": null,
+     "delay_s": null
+    }
+   ],
+   "fpr_context": {
+    "ambient_captures": 0.01676829268292683,
+    "n_ambient_windows": 1312,
+    "normal_windows_in_attack_captures": 0.13756613756613756,
+    "n_attack_capture_normal_windows": 189
+   },
+   "ambient_fpr_by_capture": {
+    "ambient_dyno_drive_benign_anomaly": 0.0,
+    "ambient_dyno_drive_extended_short": 0.0,
+    "ambient_dyno_reverse": 0.43137254901960786,
+    "ambient_highway_street_driving_diagnostics": 0.0
+   }
+  }
+ },
+ "classes": [
+  "Normal",
+  "correlated_signal",
+  "correlated_signal_masquerade",
+  "fuzzing",
+  "max_speedometer",
+  "max_speedometer_masquerade",
+  "reverse_light_off",
+  "reverse_light_off_masquerade",
+  "reverse_light_on",
+  "reverse_light_on_masquerade"
+ ],
+ "selection": "C:\\Users\\nouir\\PFE\\codes_v3\\results\\WP9\\B1_road_selection.json"
+}

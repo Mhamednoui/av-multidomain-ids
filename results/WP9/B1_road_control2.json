@@ -1,0 +1,11 @@
+{
+ "tag": "road",
+ "units": {
+  "Fb": {
+   "unit": "frame",
+   "within_capture_shuffled_auc": 0.8807844886512759,
+   "pass_0.42_0.58": false
+  }
+ },
+ "note": "labels permuted within each training segment; validation only"
+}
