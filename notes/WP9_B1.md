@@ -44,3 +44,24 @@
 - can-train-and-test: MET if test_01 (set_01) attack-class F1 >= 0.98 at FPR <= 2%, mean over sets 01..04 reported with spread; test_02
   (unknown vehicle) reported without a threshold (the ID-specific features are expected to hurt); test_03 / 04 unseen rows reported.
 - Test is scored once per dataset (per D11 set), after the selection JSON results/WP9/B1_<ds>_selection.json is committed.
+
+## 2026-11-04 execution log and results (all numbers: results/WP9/B1_*.json, B1_tables.md)
+- Locks (committed before training): locks/WP9_carhacking.json (4 files + normal_run; 0 exact duplicate rows), locks/WP9_road.json (41 usable captures,
+  1,435 duplicate rows of 27.4M dropped; accelerator x4 excluded; coolant x2 = unseen), locks/WP9_d11.json (4 sets, 1 duplicate row total).
+- Bugs found and fixed before any test number was seen: (1) float32 vs float64 threshold comparison made FPR 1.06% instead of <= 1% (decide() now float64, unit test added);
+  carhacking fit re-run (run 1 log kept as B1_fit_carhacking_run1_buggy_decide.log). (2) XGBoost Booster loaded from file used all trees instead of the early-stopping best
+  iteration; the validation-reproduction guard in the test script caught it (ROAD), fixed with iteration_range. (3) test script group-array and frame_matrix argument bugs
+  crashed before any output. No test metric existed before the final run of each dataset.
+- Selection (validation, results/WP9/B1_<tag>_selection.json): Car-Hacking W_rf_generic (all candidates tie at val macro-F1 0.995-0.997, simplest chosen);
+  ROAD Fb (frame XGBoost depth 9, 51 trees; val macro-F1 0.873 vs 0.53 best window model); D11 set_01 W_xgb_a_ids, set_02 E, set_03 F_noid, set_04 E.
+- Feature importance: no feature above 50% share, none a capture/time proxy; dominant features are bus-rate / timing (dt_id_ratio, n_id_win, nid_max) and payload bytes: no red flag.
+- Controls: global shuffled-label control passes for Car-Hacking, fails in the band [0.42,0.58] for ROAD F (frame AUC 0.28), many D11 units (0.16-0.86): the noise model's score is
+  not flat on outlier regions (WP2 S6 saw the same). Added control2 (labels permuted inside each training capture / block run): validation AUC 0.88 Car-Hacking, 0.88 ROAD,
+  0.72-0.88 D11 window units, 0.44-0.81 frame units. So the regime of a capture / block predicts "attack-bearing" across captures. Regime diagnostic on test (B1_regime.json):
+  restricted to the SAME segments (normal windows of attack-bearing captures) the detectors still separate: AUC 1.000 Car-Hacking, 0.932 ROAD, 0.99-1.00 D11 test_01 (sets 01, 03, 04), 0.93 set_02;
+  but ROAD FPR on normal windows inside attack captures is 13.8% vs 1.7% on ambient captures: part of the ROAD false-alarm budget problem is windows next to attacks.
+- Acceptance verdicts (rules above): Car-Hacking MET; ROAD NOT MET (macro-F1 0.829 >= 0.75 holds, but test FPR 3.2% > 2% and reverse_light_on masquerade recall 0, reverse_light_off masquerade 0.48);
+  D11 NOT MET at the 1% budget (set_01 test_01 window attack-F1 0.723 < 0.98; mean over sets 0.80); unknown vehicle (test_02 / 04) fails completely (FPR 100%, AUC 0.56-0.90).
+- Post-hoc (declared after seeing budget numbers, not an acceptance basis): validation-F1-optimal threshold: D11 test_01 F1 0.964 / 0.571 / 0.985 / 0.979 (sets 01..04).
+- Limitation to carry to B5: the literature unit is the frame / short window; our unit is the 1 s window (>= 1 injected frame). Frame-expanded metrics (B1_frames.json) are poor because
+  a flagged window flags all of its frames. A per-frame detector (F models) was validated but not scored on test (the selected model was a window model for Car-Hacking).

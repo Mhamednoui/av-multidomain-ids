@@ -64,7 +64,7 @@ def main():
         lines.append("|---|---|---|---|---|---|---|---|---|---|")
         for mname, mm in t["models"].items():
             for sub, v in mm["subsets"].items():
-                lines.append(f"| {mname} | {sub} | {v['row']} | {v['n_windows']} | {v.get('n_groups')} | {ci(v, 'macro_f1')} | "
+                lines.append(f"| {mname} | {sub} | {v['row']} | {v['n_windows']} | {v.get('n_groups')} | {ci(v, 'macro_f1') if v['row'] == 'seen attack types' else 'n/a (unseen row)'} | "
                              f"{ci(v, 'f1_attack_binary')} | {ci(v, 'fpr')} | {ci(v, 'recall_any')} | {ci(v, 'auc')} |")
                 try:
                     reg[f"{tag}|{mname}|{sub}"] = regime_stats(tag, mname, sub, mm["thr_from_validation"])
@@ -99,6 +99,39 @@ def main():
         for key, r in reg.items():
             if key.startswith(tag + "|"):
                 lines.append(f"- {key.split('|', 1)[1]}: " + ", ".join(f"{a}={f(b) if isinstance(b, float) else b}" for a, b in r.items()))
+    fr = json.load(open(OUT / "B1_frames.json")) if (OUT / "B1_frames.json").exists() else {}
+    if fr:
+        lines.append("\n## Frame-expanded metrics (every frame inherits its window decision; CI = segment bootstrap)\n")
+        lines.append("| tag | model | subset | frames | attack frames | precision | recall | F1 (CI) | FPR (CI) | accuracy |")
+        lines.append("|---|---|---|---|---|---|---|---|---|---|")
+        for k, r in fr.items():
+            tg, mn, sb = k.split("|")
+            c = r["ci95"]
+            lines.append(f"| {tg} | {mn} | {sb} | {r['frames']} | {r['attack_frames']} | {f(r['precision'])} | {f(r['recall'])} | "
+                         f"{f(r['f1'])} [{f(c['f1'][0])}, {f(c['f1'][1])}] | {f(r['fpr'])} [{f(c['fpr'][0])}, {f(c['fpr'][1])}] | {f(r['accuracy'])} |")
+    # D11 summary over the four sets
+    lines.append("\n## D11 summary over sets 01..04 (primary = chosen model of each set; agnostic = vehicle-agnostic secondary)\n")
+    lines.append("| test subset | row | model kind | window attack-F1 mean (sd) | window FPR mean (sd) | recall any mean (sd) | AUC mean (sd) | frame-expanded F1 mean (sd) | frame FPR mean (sd) |")
+    lines.append("|---|---|---|---|---|---|---|---|---|")
+    for sub in ["test_01", "test_02", "test_03", "test_04"]:
+        for kind in ("primary", "agnostic"):
+            vals = {k: [] for k in ("f1", "fpr", "rec", "auc", "ff1", "ffpr")}
+            for sn in ("set_01", "set_02", "set_03", "set_04"):
+                tg = f"d11_{sn}"
+                tp = OUT / f"B1_{tg}_test.json"
+                if not tp.exists():
+                    continue
+                sel = json.load(open(OUT / f"B1_{tg}_selection.json"))
+                t = json.load(open(tp))
+                mn = sel["chosen"] if kind == "primary" else sel["chosen_vehicle_agnostic"]
+                v = t["models"][mn]["subsets"][sub]
+                vals["f1"].append(v["f1_attack_binary"]); vals["fpr"].append(v["fpr"]); vals["rec"].append(v["recall_any"]); vals["auc"].append(v["auc"])
+                r = fr.get(f"{tg}|{mn}|{sub}")
+                if r:
+                    vals["ff1"].append(r["f1"]); vals["ffpr"].append(r["fpr"])
+            ms = lambda a: f"{np.mean(a):.3f} ({np.std(a):.3f})" if a else "n/a"
+            row = "seen attack types" if sub in ("test_01", "test_02") else "UNSEEN attack families"
+            lines.append(f"| {sub} | {row} | {kind} | {ms(vals['f1'])} | {ms(vals['fpr'])} | {ms(vals['rec'])} | {ms(vals['auc'])} | {ms(vals['ff1'])} | {ms(vals['ffpr'])} |")
     (OUT / "B1_tables.md").write_text("\n".join(lines) + "\n", encoding="utf-8")
     L.jd(reg, OUT / "B1_regime.json")
     print("written")

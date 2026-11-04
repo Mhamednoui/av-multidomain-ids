@@ -66,7 +66,9 @@
   "times_scored_by_B1": 1,
   "selection_json": "results/WP9/B1_carhacking_selection.json",
   "scores": "results/WP9/scores/B1/carhacking_test.npz",
-  "results": "results/WP9/B1_carhacking_test.json"
+  "results": "results/WP9/B1_carhacking_test.json",
+  "prior_exposure": "Test blocks (v2 block split, same block assignment) were scored earlier by v2 and by WP2 S2/S3/S6 (L1 rules, L2a, L4 timing/payload models) and by WP8 for normal_run (H31 clean false alarms). Those were unsupervised or Car-Hacking-trained layers whose test numbers fed no B1 choice. B1 supervised models: first and only scoring here.",
+  "note": "scored once by B1; the frozen selection JSON was committed before scoring; first test attempts crashed before any output (script bugs) or were stopped by the validation-reproduction guard; no metric was seen from them"
  },
  "road": {
   "scored_on": "2026-11-04T17:02:29+01:00",
@@ -97,7 +99,9 @@
   "times_scored_by_B1": 1,
   "selection_json": "results/WP9/B1_road_selection.json",
   "scores": "results/WP9/scores/B1/road_test.npz",
-  "results": "results/WP9/B1_road_test.json"
+  "results": "results/WP9/B1_road_test.json",
+  "prior_exposure": "ROAD test captures were scored 6 times by WP2 (S2 run1/run2, S3, S4, S5 test, S7) with rule / physics layers (WP2 brief); the coolant capture is in test only. B1 supervised models trained on ROAD train for the first time; B1 scored the test once.",
+  "note": "scored once by B1; the frozen selection JSON was committed before scoring; first test attempts crashed before any output (script bugs) or were stopped by the validation-reproduction guard; no metric was seen from them"
  },
  "d11_set_01": {
   "scored_on": "2026-11-04T17:10:22+01:00",
@@ -158,7 +162,9 @@
   "times_scored_by_B1": 1,
   "selection_json": "results/WP9/B1_d11_set_01_selection.json",
   "scores": "results/WP9/scores/B1/d11_set_01_test.npz",
-  "results": "results/WP9/B1_d11_set_01_test.json"
+  "results": "results/WP9/B1_d11_set_01_test.json",
+  "prior_exposure": "D11 test_01..04 were scored by WP2 S2/S3/S6 with L1 rules, L2a skew and L4 layers (no supervised D11 model fitted to test). B1 supervised models: first and only scoring per set.",
+  "note": "scored once by B1; the frozen selection JSON was committed before scoring; first test attempts crashed before any output (script bugs) or were stopped by the validation-reproduction guard; no metric was seen from them"
  },
  "d11_set_02": {
   "scored_on": "2026-11-04T17:13:50+01:00",
@@ -219,7 +225,9 @@
   "times_scored_by_B1": 1,
   "selection_json": "results/WP9/B1_d11_set_02_selection.json",
   "scores": "results/WP9/scores/B1/d11_set_02_test.npz",
-  "results": "results/WP9/B1_d11_set_02_test.json"
+  "results": "results/WP9/B1_d11_set_02_test.json",
+  "prior_exposure": "D11 test_01..04 were scored by WP2 S2/S3/S6 with L1 rules, L2a skew and L4 layers (no supervised D11 model fitted to test). B1 supervised models: first and only scoring per set.",
+  "note": "scored once by B1; the frozen selection JSON was committed before scoring; first test attempts crashed before any output (script bugs) or were stopped by the validation-reproduction guard; no metric was seen from them"
  },
  "d11_set_03": {
   "scored_on": "2026-11-04T17:16:35+01:00",
@@ -288,7 +296,9 @@
   "times_scored_by_B1": 1,
   "selection_json": "results/WP9/B1_d11_set_03_selection.json",
   "scores": "results/WP9/scores/B1/d11_set_03_test.npz",
-  "results": "results/WP9/B1_d11_set_03_test.json"
+  "results": "results/WP9/B1_d11_set_03_test.json",
+  "prior_exposure": "D11 test_01..04 were scored by WP2 S2/S3/S6 with L1 rules, L2a skew and L4 layers (no supervised D11 model fitted to test). B1 supervised models: first and only scoring per set.",
+  "note": "scored once by B1; the frozen selection JSON was committed before scoring; first test attempts crashed before any output (script bugs) or were stopped by the validation-reproduction guard; no metric was seen from them"
  },
  "d11_set_04": {
   "scored_on": "2026-11-04T17:19:01+01:00",
@@ -357,6 +367,13 @@
   "times_scored_by_B1": 1,
   "selection_json": "results/WP9/B1_d11_set_04_selection.json",
   "scores": "results/WP9/scores/B1/d11_set_04_test.npz",
-  "results": "results/WP9/B1_d11_set_04_test.json"
+  "results": "results/WP9/B1_d11_set_04_test.json",
+  "prior_exposure": "D11 test_01..04 were scored by WP2 S2/S3/S6 with L1 rules, L2a skew and L4 layers (no supervised D11 model fitted to test). B1 supervised models: first and only scoring per set.",
+  "note": "scored once by B1; the frozen selection JSON was committed before scoring; first test attempts crashed before any output (script bugs) or were stopped by the validation-reproduction guard; no metric was seen from them"
+ },
+ "_post_hoc_analyses": {
+  "B1_f1op.json": "validation-F1-optimal threshold applied to the same saved test scores (declared after the 1% budget numbers were seen; not an acceptance basis)",
+  "B1_frames.json": "frame-expanded metrics of the same saved window decisions",
+  "B1_regime.json": "regime diagnostic of the same saved scores"
  }
 }

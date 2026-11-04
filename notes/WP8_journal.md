@@ -503,3 +503,19 @@
 2026-11-04T17:10:22+01:00 | B1 | test d11_set_01: DONE results/WP9/B1_d11_set_01_test.json; exposure registered
 2026-11-04T17:10:25+01:00 | B1 | test d11_set_02: START scoring test once with ['E', 'W_xgb_c_generic'] (selection json committed before)
 2026-11-04T17:10:46+01:00 | B2 | queued D10e val-only runs (cand select control, T G B) to start after D10o finishes: log results/WP9/logs/B2_D10e_val.log
+2026-11-04T17:11:28+01:00 | B1 | control2 road: done results/WP9/B1_road_control2.json
+2026-11-04T17:11:30+01:00 | B1 | control2 d11_set_01: start units ['W_xgb_a_ids']
+2026-11-04T17:11:40+01:00 | B1 | control2 d11_set_01: done results/WP9/B1_d11_set_01_control2.json
+2026-11-04T17:11:43+01:00 | B1 | control2 d11_set_02: start units ['Fb', 'W_xgb_c_ids']
+2026-11-04T17:12:48+01:00 | B1 | control2 d11_set_02: done results/WP9/B1_d11_set_02_control2.json
+2026-11-04T17:12:51+01:00 | B1 | control2 d11_set_03: start units ['F_noid']
+2026-11-04T17:13:43+01:00 | B1 | control2 d11_set_03: done results/WP9/B1_d11_set_03_control2.json
+2026-11-04T17:13:46+01:00 | B1 | control2 d11_set_04: start units ['Fb', 'W_xgb_c_generic']
+2026-11-04T17:13:50+01:00 | B1 | test d11_set_02: DONE results/WP9/B1_d11_set_02_test.json; exposure registered
+2026-11-04T17:13:52+01:00 | B1 | test d11_set_03: START scoring test once with ['F_noid', 'W_rf_generic'] (selection json committed before)
+2026-11-04T17:15:06+01:00 | B1 | control2 d11_set_04: done results/WP9/B1_d11_set_04_control2.json
+2026-11-04T17:16:35+01:00 | B1 | test d11_set_03: DONE results/WP9/B1_d11_set_03_test.json; exposure registered
+2026-11-04T17:16:37+01:00 | B1 | test d11_set_04: START scoring test once with ['E', 'W_xgb_c_generic'] (selection json committed before)
+2026-11-04T17:19:01+01:00 | B1 | test d11_set_04: DONE results/WP9/B1_d11_set_04_test.json; exposure registered
+2026-11-04T17:20:09+01:00 | S7 | step 0 done: system/runners31.py + tests/v31/test_s7_runners.py (6 pass); next: write S7 tools, dry-run on V31_val, freeze.json, commit BEFORE any H31 file | log notes
+2026-11-04T17:23:46+01:00 | B1 | DONE: all test scored once, report reports/WP9_B1.md, STATUS B1 -> REVIEW; committing

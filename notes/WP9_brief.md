@@ -18,3 +18,8 @@
 
 ## Steps state
 - B0 approved 2026-11-04. B1 (CAN), B2 (network) launched 2026-11-04. B3 (V2X), B4 (GPS+LiDAR) next.
+- B1 CAN (2026-11-04, REVIEW; reports/WP9_B1.md): 1 s window unit, locks in locks/WP9_{carhacking,road,d11}.json, test scored once. Car-Hacking block split: macro-F1 0.999 [0.998,1.000], FPR 0.000 (normal_run 0.012): MET, equal to the leaky bar (not better).
+  ROAD capture split: 10-class macro-F1 0.829 [0.724,0.996], FPR 3.2%, 9/9 attack captures alarmed, masquerade reverse_light_on/off recall 0.00/0.48, coolant (unseen) 0/2: NOT MET.
+  D11 (4 sets): test_01 window F1 mean 0.80 at the 1% budget (post-hoc F1-optimal thr 0.96/0.57/0.99/0.98), unknown vehicle (test_02/04) FPR 100%; test_03/04 are UNSEEN-attack rows (B0 proposal corrected).
+  Controls: global shuffled-label fails for ROAD and most D11 units; within-capture permutation AUC 0.7-0.9 (regime shortcut learnable); same-segment AUC still 0.93-1.00. Unit differs from the literature (frame): no "better" claim.
+
