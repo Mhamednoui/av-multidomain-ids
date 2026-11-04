@@ -24,3 +24,13 @@ Metric definitions: primary macro-F1 over BENIGN + attack classes with >= 20 tes
 Controls: shuffled-label control (labels permuted in train, same config, scored on VALIDATION only, 3 seeds): acceptable if macro-F1 stays below benign-prevalence baseline + 0.05 and AUC <= 0.55.
 Red flag (stop and report): one feature > 40% of total gain, or a port/timestamp-like proxy (ports and times are not features; Init-Win bytes and TTL-like columns are checked via the 60-clean variant).
 Acceptance: B2 is a measurement, not a target; a result below the bar is reported as is. Test is scored once per (dataset, label set, protocol) with the model selected on that protocol's validation.
+
+## 2026-11-04 clarifications before any model result
+- Splits locked and committed: locks/WP9_D10o.json (original labels), locks/WP9_D10e.json (Engelen 2021 corrected labels; "Attempted" flows relabelled BENIGN as the authors recommend,
+  counts in results/WP9/B2_build_D10e.json). Corrected set download: https://intrusion-detection.distrinet-research.be/WTMC2021/Dataset/dataset.zip (no login, 333,841,436 B,
+  sha256 4d535da19795d85376ae1397d161329e3b06fc47d9a5a68cd9be2cd7ecee0f2a, folder ../data_extra/D10e_cicids2017_wtmc2021/, read with python -I).
+- Eligible classes for macro-F1 (both for selection on val and for the reported test): class has >= 20 flows in the train part AND >= 20 in the evaluated part. Classes that fail are listed, not averaged.
+- Candidate models (fixed now): XGB depth 6 / 76 features, XGB depth 6 / 60 clean, XGB depth 10 / 76, RF / 76, RF / 60 clean. Train = all attack flows + 250k random benign flows (seed 0);
+  val and test are complete. Selection = best val macro-F1 (eligible classes). The selected config is retrained on train only and scored once on test.
+- Shuffled-label control (3 seeds, on VALIDATION only; the test is never touched by it): pass if val AUC <= 0.55 and val macro-F1 < half of the real val macro-F1.
+- Bar for comparison: group-split RF 0.778 (13 classes, all windows) and the 0.89 non-padded-subset headline (not like for like).
