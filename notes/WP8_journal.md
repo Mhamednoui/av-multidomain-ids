@@ -182,3 +182,4 @@
 2026-11-04T16:39:09+01:00 | B1 | lock road: parse ambient_dyno_reverse
 2026-11-04T16:39:09+01:00 | B1 | lock road: parse ambient_highway_street_driving_diagnostics
 2026-11-04T16:39:14+01:00 | B1 | lock road: parse ambient_highway_street_driving_long
+2026-11-04T16:39:18+01:00 | S2 | round-1 pre-registration committed (8bf6910) | next: fusion/system31.py + tools/WP8_S2_build.py
