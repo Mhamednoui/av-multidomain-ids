@@ -32,18 +32,20 @@ def load_model(mdir, name, bundle):
     return b
 
 
-def predict(model, X, K1):
+def predict(model, X, K1, n_trees=None):
+    """RF: predict_proba. XGBoost Booster: only the first n_trees trees (= best early-stopping iteration + 1, as in the fit)."""
     if hasattr(model, "predict_proba"):
         return model.predict_proba(np.nan_to_num(X, nan=-1)).astype(np.float32)
     out = np.empty((len(X), K1), np.float32)
+    kw = {"iteration_range": (0, int(n_trees))} if n_trees else {}
     for a in range(0, len(X), 1_000_000):
-        out[a:a + 1_000_000] = model.predict(xgb.DMatrix(X[a:a + 1_000_000]))
+        out[a:a + 1_000_000] = model.predict(xgb.DMatrix(X[a:a + 1_000_000]), **kw)
     return out
 
 
 class Scorer:
-    def __init__(self, bundle, mdir):
-        self.b, self.mdir = bundle, mdir
+    def __init__(self, bundle, mdir, ntrees):
+        self.b, self.mdir, self.nt = bundle, mdir, ntrees
         self.K1 = bundle["K1"]
         self.models = {}
 
@@ -65,11 +67,11 @@ class Scorer:
             return ((uF + uW) / 2).astype(np.float32), np.where(uW >= uF, cW, cF), fr
         if name.startswith("W_"):
             sl = slice(0, self.b["ng"]) if self.b["fs"][name] == "generic" else slice(0, None)
-            P = predict(self.get(name), w["W"][:, sl], K1)
+            P = predict(self.get(name), w["W"][:, sl], K1, self.nt.get(name))
             s, c = FIT.sc(P)
             return s, c, None
         cols = self.b["cols"][name]
-        P = predict(self.get(name), L.frame_matrix(S, *self.pl, cols), K1)
+        P = predict(self.get(name), L.frame_matrix(S, *self.pl[:2], cols), K1, self.nt.get(name))
         sf, cf = FIT.sc(P)
         sw, cw = L.window_scores_from_frames(w["wid"], w["W"].shape[0], sf, cf)
         return sw, cw, (sf, cf)
@@ -82,7 +84,7 @@ def run_segments(sc_, name, segs, pl, K1, frames=False):
         w = L.segment_windows(S, *pl, K1)
         s, c, fr = sc_.seg_scores(name, S, w, frames)
         v = w["valid"]
-        d = {"seg": i["seg"], "group": i["group"], "y": w["y"][v], "s": s[v], "c": c[v], "wid": np.flatnonzero(v),
+        d = {"seg": i["seg"], "group": np.full(int(v.sum()), i["group"]), "y": w["y"][v], "s": s[v], "c": c[v], "wid": np.flatnonzero(v),
              "n_att": w["n_att"][v]}
         if fr is not None and frames:
             d["frame_s"] = fr[0].astype(np.float16)
@@ -127,7 +129,7 @@ def main():
     pl = (*L.period_lookup(bundle["period"]), bundle["id_list"])
     names = [sel["chosen"]] + ([sel["chosen_vehicle_agnostic"]] if ds == "d11" and sel["chosen_vehicle_agnostic"] != sel["chosen"] else [])
     L.journal(f"test {tag}: START scoring test once with {names} (selection json committed before)")
-    sc_ = Scorer(bundle, mdir)
+    sc_ = Scorer(bundle, mdir, {n: c.get("n_trees") for n, c in sel["candidates"].items()})
     # ---- consistency: reproduce validation window scores of the chosen model
     va = FIT.load_parts(ds, idx, ("val",))
     vr = {}

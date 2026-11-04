@@ -1,0 +1,409 @@
+{
+ "classes": [
+  "Normal",
+  "interval",
+  "rpm",
+  "speed",
+  "standstill",
+  "systematic"
+ ],
+ "train_windows": [
+  3185,
+  5,
+  3,
+  2,
+  2,
+  15
+ ],
+ "val_windows": [
+  2828,
+  6,
+  17,
+  2,
+  2,
+  3
+ ],
+ "candidates": {
+  "W_xgb_a_generic": {
+   "kind": "W",
+   "thr": 0.008824467658996584,
+   "val_macro_f1": 0.35140456324550057,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.8333333333333334,
+   "val_auc": 0.9064945780292316,
+   "val_macro_f1_argmax": 0.35140456324550057,
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 55
+  },
+  "W_xgb_b_generic": {
+   "kind": "W",
+   "thr": 0.008824706077575685,
+   "val_macro_f1": 0.35140456324550057,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.8333333333333334,
+   "val_auc": 0.9064945780292315,
+   "val_macro_f1_argmax": 0.35140456324550057,
+   "params": {
+    "max_depth": 5,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 55
+  },
+  "W_xgb_c_generic": {
+   "kind": "W",
+   "thr": 0.010149478912353517,
+   "val_macro_f1": 0.4228278377833468,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.8333333333333334,
+   "val_auc": 0.9286421499292787,
+   "val_macro_f1_argmax": 0.4228278377833468,
+   "params": {
+    "max_depth": 7,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 2
+   },
+   "n_trees": 114
+  },
+  "W_rf_generic": {
+   "kind": "W",
+   "thr": 0.04665619134902955,
+   "val_macro_f1": 0.3588473133534314,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.6333333333333333,
+   "val_auc": 0.9226544082979726,
+   "val_macro_f1_argmax": 0.3588473133534314,
+   "params": "rf300",
+   "n_trees": null
+  },
+  "W_xgb_a_ids": {
+   "kind": "W",
+   "thr": 0.0063715577125549325,
+   "val_macro_f1": 0.36410297594391333,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.8333333333333334,
+   "val_auc": 0.9252416313059877,
+   "val_macro_f1_argmax": 0.36410297594391333,
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 56
+  },
+  "W_xgb_b_ids": {
+   "kind": "W",
+   "thr": 0.0063715577125549325,
+   "val_macro_f1": 0.36410297594391333,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.8333333333333334,
+   "val_auc": 0.9252416313059877,
+   "val_macro_f1_argmax": 0.36410297594391333,
+   "params": {
+    "max_depth": 5,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 56
+  },
+  "W_xgb_c_ids": {
+   "kind": "W",
+   "thr": 0.007860004901885988,
+   "val_macro_f1": 0.36775120943085643,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.8333333333333334,
+   "val_auc": 0.9167904290429043,
+   "val_macro_f1_argmax": 0.36775120943085643,
+   "params": {
+    "max_depth": 7,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 2
+   },
+   "n_trees": 118
+  },
+  "W_rf_ids": {
+   "kind": "W",
+   "thr": 0.039977014064788825,
+   "val_macro_f1": 0.3045203588681849,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.7666666666666667,
+   "val_auc": 0.9224658180103725,
+   "val_macro_f1_argmax": 0.3045203588681849,
+   "params": "rf300",
+   "n_trees": null
+  },
+  "Fa": {
+   "kind": "F",
+   "thr": 0.27165997028350836,
+   "val_macro_f1": 0.46110867992094345,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.9333333333333333,
+   "val_auc": 0.9955209806694956,
+   "val_macro_f1_argmax": 0.46110867992094345,
+   "params": {
+    "max_depth": 6,
+    "learning_rate": 0.15,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 49
+  },
+  "Fb": {
+   "kind": "F",
+   "thr": 0.2270215153694153,
+   "val_macro_f1": 0.545408196829156,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.9333333333333333,
+   "val_auc": 0.9951909476661952,
+   "val_macro_f1_argmax": 0.545408196829156,
+   "params": {
+    "max_depth": 9,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 74
+  },
+  "F_noid": {
+   "kind": "F",
+   "thr": 0.29260182380676275,
+   "val_macro_f1": 0.5568646264499262,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.9666666666666667,
+   "val_auc": 0.9971004243281472,
+   "val_macro_f1_argmax": 0.5568646264499262,
+   "params": {
+    "max_depth": 6,
+    "learning_rate": 0.15,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 50
+  },
+  "E": {
+   "kind": "E",
+   "thr": 0.9809052348136903,
+   "val_macro_f1": 0.5851525288348983,
+   "val_fpr": 0.009900990099009901,
+   "val_recall_any": 0.8333333333333334,
+   "val_auc": 0.9746699669966996,
+   "parts": [
+    "Fb",
+    "W_xgb_c_generic"
+   ]
+  }
+ },
+ "dataset": "d11",
+ "set": "set_04",
+ "chosen": "E",
+ "chosen_vehicle_agnostic": "W_xgb_c_generic",
+ "chosen_val": {
+  "macro_f1": 0.5851525288348983,
+  "macro_f1_argmax": 0.5851525288348983,
+  "fpr": 0.009900990099009901,
+  "recall_any": 0.8333333333333334,
+  "auc": 0.9746699669966996,
+  "f1_attack_binary": 0.6024096385542169,
+  "precision_binary": 0.4716981132075472,
+  "per_class_recall": {
+   "0": 0.9900990099009901,
+   "1": 0.5,
+   "2": 0.35294117647058826,
+   "3": 1.0,
+   "4": 1.0,
+   "5": 1.0
+  },
+  "per_class_f1": {
+   "0": 0.9941416651872892,
+   "1": 0.21428571428571427,
+   "2": 0.5217391304347826,
+   "3": 0.23529411764705882,
+   "4": 1.0,
+   "5": 0.5454545454545454
+  },
+  "per_class_n": {
+   "0": 2828,
+   "1": 6,
+   "2": 17,
+   "3": 2,
+   "4": 2,
+   "5": 3
+  },
+  "per_class_alarm_recall": {
+   "0": null,
+   "1": 1.0,
+   "2": 0.7058823529411765,
+   "3": 1.0,
+   "4": 1.0,
+   "5": 1.0
+  },
+  "recall_unseen_any": null,
+  "n_unseen": 0,
+  "n_windows": 2858,
+  "ci95": {
+   "macro_f1": [
+    0.47570422981469607,
+    0.8783899961453835
+   ],
+   "macro_f1_argmax": [
+    0.47570422981469607,
+    0.8783899961453835
+   ],
+   "fpr": [
+    0.0022421835889500754,
+    0.029309642139454074
+   ],
+   "recall_any": [
+    0.7308759652509652,
+    1.0
+   ],
+   "auc": [
+    0.9549684643719084,
+    1.0
+   ],
+   "f1_attack_binary": [
+    0.21954716981132075,
+    0.8399419026870008
+   ]
+  },
+  "ci95_per_class_recall": {
+   "0": [
+    0.9706903578605459,
+    0.9977578164110499
+   ],
+   "1": [
+    0.5,
+    0.5
+   ],
+   "2": [
+    0.35294117647058826,
+    0.35294117647058826
+   ],
+   "3": [
+    1.0,
+    1.0
+   ],
+   "4": [
+    1.0,
+    1.0
+   ],
+   "5": [
+    1.0,
+    1.0
+   ]
+  },
+  "n_groups": 9
+ },
+ "controls": {
+  "Fb": {
+   "unit": "frame",
+   "shuffled_auc_frame": 0.21240206676013038,
+   "shuffled_auc_window_max": 0.5558345120226308,
+   "pass": false
+  },
+  "W_xgb_c_generic": {
+   "unit": "window",
+   "shuffled_auc_window": 0.52006129184347,
+   "pass": true
+  }
+ },
+ "importance": {
+  "Fb": {
+   "dt_id_ratio": 0.38525332355679764,
+   "n_unique_win": 0.2055998591673949,
+   "id_known": 0.10799689041926136,
+   "dt_id": 0.09375334791235077,
+   "n_id_win": 0.0667142984459021,
+   "b7": 0.04522874694712498,
+   "b1": 0.02880574392744076,
+   "b0": 0.025240912591814286
+  },
+  "W_xgb_c_generic": {
+   "n": 0.2531808694103342,
+   "n_ids": 0.12441592653048224,
+   "ratio_min": 0.11038468566059023,
+   "byte_std7": 0.10674891799863641,
+   "id_entropy": 0.06090872359293844,
+   "dt_mean": 0.05196666971176343,
+   "ratio_lo": 0.047494475899038394,
+   "max_id_share": 0.04307725472923734
+  }
+ },
+ "period_ids": 54,
+ "id_list": [
+  2,
+  112,
+  117,
+  128,
+  208,
+  209,
+  210,
+  211,
+  212,
+  320,
+  321,
+  324,
+  328,
+  329,
+  336,
+  338,
+  340,
+  342,
+  352,
+  353,
+  354,
+  355,
+  356,
+  554,
+  604,
+  640,
+  641,
+  642,
+  805,
+  864,
+  865,
+  866,
+  872,
+  880,
+  881,
+  882,
+  884,
+  885,
+  886,
+  888,
+  977,
+  1398,
+  1632,
+  1743,
+  1744,
+  1745,
+  1785,
+  1786,
+  1787,
+  1788
+ ],
+ "n_frames_train_sample": 1212361,
+ "ablation_noid_val_macro_f1": 0.5568646264499262,
+ "selection_rule": "max validation macro-F1 at the validation 1% FA budget; ties within 0.002 -> simpler (SIMPLICITY order)",
+ "lock": "C:\\Users\\nouir\\PFE\\codes_v3\\locks\\WP9_d11.json",
+ "bundle": "C:\\Users\\nouir\\PFE\\data_extra\\cache_v3\\WP9\\B1\\models\\d11_set_04\\bundle.pkl"
+}

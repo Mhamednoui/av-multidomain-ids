@@ -476,3 +476,20 @@
 2026-11-04T16:55:21+01:00 | B1 | fit d11_set_01: done, chosen W_xgb_a_ids; results/WP9/B1_d11_set_01_selection.json
 2026-11-04T16:55:24+01:00 | B1 | fit d11_set_02: start (K+1=7); log results/WP9/logs/B1_fit_d11_set_02.log
 2026-11-04T16:58:17+01:00 | B1 | fit carhacking: done, chosen W_rf_generic; results/WP9/B1_carhacking_selection.json
+2026-11-04T16:58:27+01:00 | B1 | selection jsons carhacking+road committed; running test scoring ONCE: carhacking then road (bg) logs results/WP9/logs/B1_test_<ds>.log
+2026-11-04T16:58:30+01:00 | B1 | test carhacking: START scoring test once with ['W_rf_generic'] (selection json committed before)
+2026-11-04T16:58:45+01:00 | B1 | test road: START scoring test once with ['Fb'] (selection json committed before)
+2026-11-04T16:59:14+01:00 | B1 | fit d11_set_02: done, chosen E; results/WP9/B1_d11_set_02_selection.json
+2026-11-04T16:59:15+01:00 | B1 | fit d11_set_03: start (K+1=6); log results/WP9/logs/B1_fit_d11_set_03.log
+2026-11-04T16:59:33+01:00 | S2 | round 1 done: chosen MX|L100|b2|m2w5|g15|d0|k1, acceptance MET (results/WP8/S2/r1_eval.json); next: reproducibility re-run (tag r1chk, log results/WP8/logs/S2_sim_r1chk.log) + freeze (tools/WP8_S2_freeze.py, log results/WP8/logs/S2_freeze.log)
+2026-11-04T16:59:50+01:00 | B1 | test script bugs fixed (group array, frame_matrix args; first carhacking attempt crashed in aggregation before any output, road in val reproduction); rerunning test carhacking, road
+2026-11-04T16:59:53+01:00 | B1 | test carhacking: START scoring test once with ['W_rf_generic'] (selection json committed before)
+2026-11-04T17:00:10+01:00 | B1 | test carhacking: DONE results/WP9/B1_carhacking_test.json; exposure registered
+2026-11-04T17:00:12+01:00 | B1 | test road: START scoring test once with ['Fb'] (selection json committed before)
+2026-11-04T17:02:04+01:00 | B1 | carhacking test DONE (results/WP9/B1_carhacking_test.json); road test aborted by the validation-reproduction guard (xgb booster used all trees, not best iteration): fixed with iteration_range, rerunning road test
+2026-11-04T17:02:06+01:00 | B1 | test road: START scoring test once with ['Fb'] (selection json committed before)
+2026-11-04T17:02:29+01:00 | B1 | test road: DONE results/WP9/B1_road_test.json; exposure registered
+2026-11-04T17:04:05+01:00 | B1 | fit d11_set_03: done, chosen F_noid; results/WP9/B1_d11_set_03_selection.json
+2026-11-04T17:04:07+01:00 | B1 | fit d11_set_04: start (K+1=6); log results/WP9/logs/B1_fit_d11_set_04.log
+2026-11-04T17:05:00+01:00 | S2 | r1chk reproduces r1 exactly; freeze done (sha256 a8994883...); round-1 result written to notes; running full test suite (log results/WP8/logs/S2_tests.log) + run_all --check
+2026-11-04T17:07:13+01:00 | B1 | fit d11_set_04: done, chosen E; results/WP9/B1_d11_set_04_selection.json

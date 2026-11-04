@@ -1,0 +1,414 @@
+{
+ "classes": [
+  "Normal",
+  "DoS",
+  "force-neutral",
+  "rpm",
+  "standstill"
+ ],
+ "train_windows": [
+  3921,
+  8,
+  21,
+  10,
+  8
+ ],
+ "val_windows": [
+  3321,
+  21,
+  7,
+  6,
+  5
+ ],
+ "candidates": {
+  "W_xgb_a_generic": {
+   "kind": "W",
+   "thr": 0.0026420950889587407,
+   "val_macro_f1": 0.5714106828775234,
+   "val_fpr": 0.006323396567299007,
+   "val_recall_any": 1.0,
+   "val_auc": 0.9999227912507045,
+   "val_macro_f1_argmax": 0.5714106828775234,
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 66
+  },
+  "W_xgb_b_generic": {
+   "kind": "W",
+   "thr": 0.0004951953887939454,
+   "val_macro_f1": 0.4938714028190634,
+   "val_fpr": 0.00993676603432701,
+   "val_recall_any": 1.0,
+   "val_auc": 0.9999613956253521,
+   "val_macro_f1_argmax": 0.4938714028190634,
+   "params": {
+    "max_depth": 5,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 112
+  },
+  "W_xgb_c_generic": {
+   "kind": "W",
+   "thr": 0.0011540651321411135,
+   "val_macro_f1": 0.45859732137535125,
+   "val_fpr": 0.00993676603432701,
+   "val_recall_any": 1.0,
+   "val_auc": 1.0,
+   "val_macro_f1_argmax": 0.45859732137535125,
+   "params": {
+    "max_depth": 7,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 2
+   },
+   "n_trees": 193
+  },
+  "W_rf_generic": {
+   "kind": "W",
+   "thr": 0.009997665882110597,
+   "val_macro_f1": 0.48085284363087355,
+   "val_fpr": 0.00993676603432701,
+   "val_recall_any": 1.0,
+   "val_auc": 1.0,
+   "val_macro_f1_argmax": 0.48085284363087355,
+   "params": "rf300",
+   "n_trees": null
+  },
+  "W_xgb_a_ids": {
+   "kind": "W",
+   "thr": 0.000600576400756836,
+   "val_macro_f1": 0.5962653836672167,
+   "val_fpr": 0.00993676603432701,
+   "val_recall_any": 1.0,
+   "val_auc": 0.9999922791250704,
+   "val_macro_f1_argmax": 0.5962653836672167,
+   "params": {
+    "max_depth": 3,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 112
+  },
+  "W_xgb_b_ids": {
+   "kind": "W",
+   "thr": 0.0006307959556579591,
+   "val_macro_f1": 0.5800353420789779,
+   "val_fpr": 0.00993676603432701,
+   "val_recall_any": 1.0,
+   "val_auc": 0.9999613956253521,
+   "val_macro_f1_argmax": 0.5800353420789779,
+   "params": {
+    "max_depth": 5,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 1
+   },
+   "n_trees": 108
+  },
+  "W_xgb_c_ids": {
+   "kind": "W",
+   "thr": 0.0012890100479125979,
+   "val_macro_f1": 0.5673161373660542,
+   "val_fpr": 0.009334537789822343,
+   "val_recall_any": 1.0,
+   "val_auc": 1.0,
+   "val_macro_f1_argmax": 0.5673161373660542,
+   "params": {
+    "max_depth": 7,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "colsample_bytree": 0.6,
+    "min_child_weight": 2
+   },
+   "n_trees": 193
+  },
+  "W_rf_ids": {
+   "kind": "W",
+   "thr": 0.013273417949676515,
+   "val_macro_f1": 0.5126804871289976,
+   "val_fpr": 0.00993676603432701,
+   "val_recall_any": 1.0,
+   "val_auc": 0.999984558250141,
+   "val_macro_f1_argmax": 0.5126804871289976,
+   "params": "rf300",
+   "n_trees": null
+  },
+  "Fa": {
+   "kind": "F",
+   "thr": 0.03465062379837037,
+   "val_macro_f1": 0.4166894009873948,
+   "val_fpr": 0.006925624811803674,
+   "val_recall_any": 1.0,
+   "val_auc": 0.9998533033763386,
+   "val_macro_f1_argmax": 0.4166894009873948,
+   "params": {
+    "max_depth": 6,
+    "learning_rate": 0.15,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 24
+  },
+  "Fb": {
+   "kind": "F",
+   "thr": 0.04347312450408936,
+   "val_macro_f1": 0.412022961914069,
+   "val_fpr": 0.009033423667570008,
+   "val_recall_any": 1.0,
+   "val_auc": 0.99983014075155,
+   "val_macro_f1_argmax": 0.412022961914069,
+   "params": {
+    "max_depth": 9,
+    "learning_rate": 0.1,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 33
+  },
+  "F_noid": {
+   "kind": "F",
+   "thr": 0.06151592731475831,
+   "val_macro_f1": 0.3259244387024687,
+   "val_fpr": 0.00993676603432701,
+   "val_recall_any": 1.0,
+   "val_auc": 0.9999459538754932,
+   "val_macro_f1_argmax": 0.3259244387024687,
+   "params": {
+    "max_depth": 6,
+    "learning_rate": 0.15,
+    "subsample": 0.8,
+    "colsample_bytree": 0.8,
+    "min_child_weight": 3
+   },
+   "n_trees": 21
+  },
+  "E": {
+   "kind": "E",
+   "thr": 0.9667268991470338,
+   "val_macro_f1": 0.5514440068536157,
+   "val_fpr": 0.00993676603432701,
+   "val_recall_any": 1.0,
+   "val_auc": 0.9999922791250705,
+   "parts": [
+    "Fa",
+    "W_xgb_a_ids"
+   ]
+  }
+ },
+ "dataset": "d11",
+ "set": "set_01",
+ "chosen": "W_xgb_a_ids",
+ "chosen_vehicle_agnostic": "W_xgb_a_generic",
+ "chosen_val": {
+  "macro_f1": 0.5962653836672167,
+  "macro_f1_argmax": 0.5962653836672167,
+  "fpr": 0.00993676603432701,
+  "recall_any": 1.0,
+  "auc": 0.9999922791250704,
+  "f1_attack_binary": 0.7027027027027027,
+  "precision_binary": 0.5416666666666666,
+  "per_class_recall": {
+   "0": 0.990063233965673,
+   "1": 0.9523809523809523,
+   "2": 1.0,
+   "3": 0.0,
+   "4": 1.0
+  },
+  "per_class_f1": {
+   "0": 0.9950068088969587,
+   "1": 0.9302325581395349,
+   "2": 0.8235294117647058,
+   "3": 0.0,
+   "4": 0.23255813953488372
+  },
+  "per_class_n": {
+   "0": 3321,
+   "1": 21,
+   "2": 7,
+   "3": 6,
+   "4": 5
+  },
+  "per_class_alarm_recall": {
+   "0": null,
+   "1": 1.0,
+   "2": 1.0,
+   "3": 1.0,
+   "4": 1.0
+  },
+  "recall_unseen_any": null,
+  "n_unseen": 0,
+  "n_windows": 3360,
+  "ci95": {
+   "macro_f1": [
+    0.46623843782117164,
+    0.985551504765891
+   ],
+   "macro_f1_argmax": [
+    0.46623843782117164,
+    0.985551504765891
+   ],
+   "fpr": [
+    0.0012559780741419415,
+    0.028320971004720162
+   ],
+   "recall_any": [
+    1.0,
+    1.0
+   ],
+   "auc": [
+    0.9999614693455369,
+    1.0
+   ],
+   "f1_attack_binary": [
+    0.3823529411764706,
+    0.9693251533742331
+   ]
+  },
+  "ci95_per_class_recall": {
+   "0": [
+    0.9716790289952798,
+    0.998744021925858
+   ],
+   "1": [
+    0.9523809523809523,
+    0.9523809523809523
+   ],
+   "2": [
+    1.0,
+    1.0
+   ],
+   "3": [
+    0.0,
+    0.0
+   ],
+   "4": [
+    1.0,
+    1.0
+   ]
+  },
+  "n_groups": 6
+ },
+ "controls": {
+  "Fa": {
+   "unit": "frame",
+   "shuffled_auc_frame": 0.32533040924262296,
+   "shuffled_auc_window_max": 0.8528401238428338,
+   "pass": false
+  },
+  "W_xgb_a_generic": {
+   "unit": "window",
+   "shuffled_auc_window": 0.27252372238822103,
+   "pass": false
+  },
+  "W_xgb_a_ids": {
+   "unit": "window",
+   "shuffled_auc_window": 0.16273674132752725,
+   "pass": false
+  }
+ },
+ "importance": {
+  "Fa": {
+   "n_id_win": 0.32081754266042883,
+   "dt_id_ratio": 0.21814697024922966,
+   "id": 0.2087631734894512,
+   "b0": 0.11149889156194283,
+   "dt_id": 0.08209389851229291,
+   "id_known": 0.02664464980140662,
+   "b1": 0.019383642601658615,
+   "bytes_changed": 0.004410569669469651
+  },
+  "W_xgb_a_generic": {
+   "nid_max": 0.2967462893545688,
+   "n": 0.20608704966416547,
+   "ratio_std": 0.10916292932913164,
+   "byte_std0": 0.09602260400550881,
+   "byte_mean0": 0.05884987628628886,
+   "byte_std7": 0.055226718890119326,
+   "ratio_min": 0.03248648890794913,
+   "ratio_lo": 0.029519566697973725
+  },
+  "W_xgb_a_ids": {
+   "nid_max": 0.2733099738642482,
+   "n": 0.2038905025172178,
+   "cnt_501": 0.15660141378187295,
+   "byte_std0": 0.11452080015265734,
+   "byte_mean0": 0.07445151908591789,
+   "cnt_201": 0.06726708775464096,
+   "ratio_std": 0.024916747726071744,
+   "byte_std7": 0.021194352893776896
+  }
+ },
+ "period_ids": 51,
+ "id_list": [
+  193,
+  197,
+  201,
+  241,
+  249,
+  288,
+  298,
+  308,
+  312,
+  381,
+  383,
+  388,
+  401,
+  409,
+  413,
+  417,
+  451,
+  455,
+  461,
+  481,
+  485,
+  489,
+  497,
+  499,
+  501,
+  707,
+  761,
+  820,
+  840,
+  842,
+  961,
+  969,
+  977,
+  1001,
+  1005,
+  1009,
+  1017,
+  1019,
+  1217,
+  1225,
+  1233,
+  1249,
+  1257,
+  1265,
+  1280,
+  1300,
+  1322,
+  1905,
+  1906,
+  1907,
+  1919
+ ],
+ "n_frames_train_sample": 1220944,
+ "ablation_noid_val_macro_f1": 0.3259244387024687,
+ "selection_rule": "max validation macro-F1 at the validation 1% FA budget; ties within 0.002 -> simpler (SIMPLICITY order)",
+ "lock": "C:\\Users\\nouir\\PFE\\codes_v3\\locks\\WP9_d11.json",
+ "bundle": "C:\\Users\\nouir\\PFE\\data_extra\\cache_v3\\WP9\\B1\\models\\d11_set_01\\bundle.pkl"
+}
