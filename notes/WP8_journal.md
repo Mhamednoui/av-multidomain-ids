@@ -154,3 +154,4 @@
 2026-11-04T16:28:49+01:00 | B0 | literature md+json written and committed (CAN, network, V2X, GPS, LiDAR); next: B0_splits_proposal.md, report, STATUS
 2026-11-04T16:28:50+01:00 | S6 | DONE: report reports/WP8_S6.md, brief, STATUS S6 -> REVIEW, suite 529 pass; committing, stop
 2026-11-04 | ORCH | S6 approved (A1 freeze); S2 launched | B0 running
+2026-11-04T16:29:45+01:00 | B0 | done: report reports/WP9_B0.md, STATUS B0 -> REVIEW, committed

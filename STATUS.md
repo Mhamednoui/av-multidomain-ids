@@ -65,7 +65,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
-| WP9 bench | B0 | IN PROGRESS | worker sonnet (medium, T2) | 2026-11-03 | literature bar + leak-free split proposal |
+| WP9 bench | B0 | REVIEW | worker sonnet (medium, T2) | 2026-11-04 | literature bar + leak-free split proposal; reports/WP9_B0.md, results/WP9/ |
 | WP9 bench | B1 | TODO | | | CAN |
 | WP9 bench | B2 | TODO | | | network |
 | WP9 bench | B3 | TODO | | | V2X |
