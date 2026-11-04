@@ -155,3 +155,30 @@
 2026-11-04T16:28:50+01:00 | S6 | DONE: report reports/WP8_S6.md, brief, STATUS S6 -> REVIEW, suite 529 pass; committing, stop
 2026-11-04 | ORCH | S6 approved (A1 freeze); S2 launched | B0 running
 2026-11-04T16:29:45+01:00 | B0 | done: report reports/WP9_B0.md, STATUS B0 -> REVIEW, committed
+2026-11-04T16:30:56+01:00 | B1 | start: reading WP9/RULES/briefs, then plan CAN benchmark (Car-Hacking, ROAD, D11) | next: inspect can/ adapters + split files
+2026-11-04T16:31:12+01:00 | B2 | start: reading rules/briefs; checking corrected CICIDS2017 availability | next: inspect data, lock splits
+2026-11-04T16:31:55+01:00 | B2 | download start: WTMC2021 dataset.zip (334MB) -> ../data_extra/D10e_cicids2017_wtmc2021/raw, CNS2022 CSECICIDS2018_improved.zip (9.7GB) -> ../data_extra/D23e_cse-cic-ids2018_improved_cns2022/raw; resumable curl -C -; logs results/WP9/logs/B2_dl_*.log | no login needed (open http)
+2026-11-04T16:33:54+01:00 | B1 | plan: tools/WP9_B1_lib.py (parse+dedup+features), WP9_B1_lock.py (locks/WP9_{carhacking,road,d11}.json), then build/fit/test; correction to proposal: D11 test_03/04 = UNSEEN attack families (not seen rows) | next: write lib and lock tool
+2026-11-04T16:35:09+01:00 | B2 | design+rules written notes/WP9_B2.md (committed); downloads running; next: inspect WTMC2021 zip when done
+2026-11-04T16:35:32+01:00 | S2 | worker start: read rules/brief/S0-S6 decisions/M3/WP7_S2; plan = V31_val composites (WP7 S2 construction) from saved v3.1 domain outputs, 2-fold group cross-fitting, fusion/system31.py; inspecting data structure (no fusion number) then writing round-1 pre-registration | commit pre-registration BEFORE any S2 number
+2026-11-04T16:36:09+01:00 | B1 | launching lock tool carhacking, road, d11 sequentially in background: log results/WP9/logs/B1_lock.log (resumable; parsed cache data_extra/cache_v3/WP9/B1/parsed)
+2026-11-04T16:37:23+01:00 | B1 | lock carhacking: parse DoS
+2026-11-04T16:37:31+01:00 | B1 | lock carhacking: parse Fuzzy
+2026-11-04T16:37:39+01:00 | B1 | lock carhacking: parse RPM
+2026-11-04T16:37:49+01:00 | B1 | lock carhacking: parse Gear
+2026-11-04T16:37:59+01:00 | B1 | lock carhacking: parse normal_run
+2026-11-04T16:38:04+01:00 | B1 | lock carhacking: written locks/WP9_carhacking.json
+2026-11-04T16:38:05+01:00 | B1 | lock road: parse ambient_dyno_drive_basic_long
+2026-11-04T16:38:19+01:00 | B1 | lock road: parse ambient_dyno_drive_basic_short
+2026-11-04T16:38:24+01:00 | B1 | lock road: parse ambient_dyno_drive_benign_anomaly
+2026-11-04T16:38:27+01:00 | B1 | lock road: parse ambient_dyno_drive_extended_long
+2026-11-04T16:38:33+01:00 | B1 | lock road: parse ambient_dyno_drive_extended_short
+2026-11-04T16:38:36+01:00 | B2 | build D10o table: tools/WP9_B2_build.py D10o (log results/WP9/logs/B2_build_D10o.log) | -> cache WP9/B2/D10o.pkl
+2026-11-04T16:38:36+01:00 | B2 | build D10e table: tools/WP9_B2_build.py D10e (log results/WP9/logs/B2_build_D10e.log) | -> cache WP9/B2/D10e.pkl
+2026-11-04T16:38:36+01:00 | B1 | lock road: parse ambient_dyno_drive_radio_infotainment
+2026-11-04T16:38:41+01:00 | B1 | lock road: parse ambient_dyno_drive_winter
+2026-11-04T16:38:41+01:00 | B1 | lock road: parse ambient_dyno_exercise_all_bits
+2026-11-04T16:39:02+01:00 | B1 | lock road: parse ambient_dyno_idle_radio_infotainment
+2026-11-04T16:39:09+01:00 | B1 | lock road: parse ambient_dyno_reverse
+2026-11-04T16:39:09+01:00 | B1 | lock road: parse ambient_highway_street_driving_diagnostics
+2026-11-04T16:39:14+01:00 | B1 | lock road: parse ambient_highway_street_driving_long
