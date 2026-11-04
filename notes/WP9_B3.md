@@ -65,3 +65,7 @@
 - R1 (bar): MET if at (H) on test the prevalence-matched F1 of each of the five DoS-family types is >= 0.93 AND test FPR (genuine messages) <= 2%.
 - R2 (all classes): MET if at (H) the mean alarm recall over the 19 attack classes (class 12 included, flagged) is >= 0.80 AND test FPR <= 2% (v3 stack WP5 S6: 83.0% on 13 seen classes, scored rows).
 - Everything else is descriptive. No "better than" claim against the bar: its split is within-dataset 70/30 per vehicle with an unstated dedup; ours is block-disjoint.
+
+### Amendment 2026-11-04 (before any model was fitted)
+- Random Forest size: min_samples_leaf 20, max_samples 0.3 (100 trees, max_features sqrt) instead of 5 / 0.5: 20-class leaf arrays make the larger forest several GB. Nothing else changed.
+- Windows of the feature table: count-based (10 messages, l4.WINDOW), as the WP5 S5 recipe; the time-window variant is not a candidate.
