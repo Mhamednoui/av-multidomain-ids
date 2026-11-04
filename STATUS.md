@@ -46,7 +46,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 ## v3.1 (branch v3.1, WP8; plan: workpackages/WP8_v31.md; v3 frozen at tag v3.0)
 
-**v3.1 progress: 8 / 10 steps approved = 80% (WP8); WP9 benchmark 1 / 6; overall v3.1+WP9 9 / 16 = 56%** (updated 2026-11-03)
+**v3.1 progress: 9 / 10 steps approved = 90% (WP8); WP9 benchmark 1 / 6; overall v3.1+WP9 10 / 16 = 63%** (updated 2026-11-03)
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
@@ -57,8 +57,8 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP8 v3.1 | S4 | APPROVED | worker sonnet (high, T3) | 2026-11-03 | network streaming Evidence: ORCH freeze F1 tick-final (60 s, -0.34) primary, RC5 (delay 0, -2.90) labelled variant; unseen Bot: no gain counts; reports/WP8_S4.md |
 | WP8 v3.1 | S5 | APPROVED | worker sonnet (medium, T2) | 2026-11-03 | CAN incremental windows (exact, p99 41 ms) + V2X single ego (0.03 s/s); reports/WP8_S5.md |
 | WP8 v3.1 | S6 | APPROVED | worker sonnet (high, T3) | 2026-11-04 | blame: channel-graph hypothesis blame (A1 selected): comma GNSS correct 77 % / wrong 0 % (B2 met), K B3 met, B1 gps_can NOT MET (A3 inertial alt 43 / 41 %); regression exact; reports/WP8_S6.md |
-| WP8 v3.1 | S2 | REVIEW | worker opus (medium, T4) | 2026-11-04 | V31_val all S2 rows MET: chosen MX/L100/b2 (equal split = max), K FA 1.92 %, 5.09 ev/h, det 78.2 %; frozen_system31 sha256 a8994883; reports/WP8_S2.md |
-| WP8 v3.1 | S7 | TODO | | | final H31 scoring, M4 |
+| WP8 v3.1 | S2 | APPROVED | worker opus (medium, T4) | 2026-11-04 | V31_val all S2 rows MET: chosen MX/L100/b2 (equal split = max), K FA 1.92 %, 5.09 ev/h, det 78.2 %; frozen_system31 sha256 a8994883; reports/WP8_S2.md |
+| WP8 v3.1 | S7 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-04 | final H31 scoring, M4 |
 | WP8 v3.1 | P1 | APPROVED | worker sonnet (medium, T2) | 2026-11-03 | paper curves / AUC from saved v3 outputs |
 
 ## WP9 benchmark track (plan: workpackages/WP9_benchmark.md; deadline 2026-11-30)

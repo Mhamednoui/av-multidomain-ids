@@ -498,3 +498,8 @@
 2026-11-04T17:09:34+01:00 | S2 | DONE: report reports/WP8_S2.md, brief, STATUS S2 -> REVIEW, suite 542 pass, run_all --check OK; committing, stop
 2026-11-04T17:09:34+01:00 | B1 | launching control2 (within-capture label permutation, validation only) for all tags, log results/WP9/logs/B1_control2.log
 2026-11-04T17:09:36+01:00 | B1 | control2 carhacking: start units ['W_rf_generic']
+2026-11-04T17:09:52+01:00 | B1 | control2 carhacking: done results/WP9/B1_carhacking_control2.json
+2026-11-04T17:09:54+01:00 | B1 | control2 road: start units ['Fb']
+2026-11-04T17:10:22+01:00 | B1 | test d11_set_01: DONE results/WP9/B1_d11_set_01_test.json; exposure registered
+2026-11-04T17:10:25+01:00 | B1 | test d11_set_02: START scoring test once with ['E', 'W_xgb_c_generic'] (selection json committed before)
+2026-11-04T17:10:46+01:00 | B2 | queued D10e val-only runs (cand select control, T G B) to start after D10o finishes: log results/WP9/logs/B2_D10e_val.log
