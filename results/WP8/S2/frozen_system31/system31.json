@@ -1,0 +1,102 @@
+{
+ "version": "v3.1 S2",
+ "how_to_load": "fusion.system31.load_system31() -> {'K': SystemV31, 'C': SystemV31}; SystemV31.run(parts)",
+ "key": "MX|L100|b2|m2w5|g15|d0|k1",
+ "sha256_pkl": "a8994883b00405896043e76c2d07102de61bbb1471eac7cdae4ec207d11aaa2f",
+ "systems": {
+  "K": {
+   "version": "v3.1-S2",
+   "entries": [
+    "gps",
+    "lidar",
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "method": "wsplit",
+   "budget": 0.02,
+   "threshold": 0.9954545454545456,
+   "blame": "A1",
+   "weights": {
+    "gps": 1.0,
+    "lidar": 1.0,
+    "can": 1.0,
+    "network": 1.0,
+    "v2x": 1.0,
+    "cross": 1.0
+   },
+   "correlator": {
+    "m": 2,
+    "w": 5,
+    "gap": 15,
+    "dedup": false,
+    "k_corr": 1,
+    "min_domains": 2,
+    "blame_rule": "majority_decided",
+    "corroborators": null
+   },
+   "meta": {
+    "step": "WP8 S2",
+    "selection": "r1",
+    "key": "MX|L100|b2|m2w5|g15|d0|k1",
+    "fit": "all V31_val clean groups (entry ECDFs) + all 19 clean timelines (threshold)",
+    "inputs": "gps = frozen v3 GPS combined score / alarm; lidar = frozen_lidar31 combined score (tick max over the scans of the second), own alarm = any scan alarm; can = IncrementalCan combined; network = F1 (Stream31Final, minute max of the host's flows, held one minute); v2x = EgoStream combined (tick max, count = messages heard); cross = max edge score of the cross layer fitted on TRAIN (tools/WP8_S6_eval.fit_k / fit_c), own alarm = any edge >= tau, blame = A1."
+   }
+  },
+  "C": {
+   "version": "v3.1-S2",
+   "entries": [
+    "can",
+    "network",
+    "v2x",
+    "cross"
+   ],
+   "method": "wsplit",
+   "budget": 0.02,
+   "threshold": 0.9940476190476192,
+   "blame": "A1",
+   "weights": {
+    "can": 1.0,
+    "network": 1.0,
+    "v2x": 1.0,
+    "cross": 1.0
+   },
+   "correlator": {
+    "m": 2,
+    "w": 5,
+    "gap": 15,
+    "dedup": false,
+    "k_corr": 1,
+    "min_domains": 2,
+    "blame_rule": "majority_decided",
+    "corroborators": null
+   },
+   "meta": {
+    "step": "WP8 S2",
+    "selection": "r1",
+    "key": "MX|L100|b2|m2w5|g15|d0|k1",
+    "fit": "all V31_val clean groups (entry ECDFs) + all 19 clean timelines (threshold)",
+    "inputs": "gps = frozen v3 GPS combined score / alarm; lidar = frozen_lidar31 combined score (tick max over the scans of the second), own alarm = any scan alarm; can = IncrementalCan combined; network = F1 (Stream31Final, minute max of the host's flows, held one minute); v2x = EgoStream combined (tick max, count = messages heard); cross = max edge score of the cross layer fitted on TRAIN (tools/WP8_S6_eval.fit_k / fit_c), own alarm = any edge >= tau, blame = A1."
+   }
+  }
+ },
+ "in_sample_check": {
+  "K": {
+   "label": "in-sample (calibration fitted on the same V31_val clean data); not a validation number",
+   "threshold": 0.9954545454545456,
+   "fa_tick": 0.01804245283018868,
+   "events_per_hour": 4.528301886792453,
+   "safe_stop_per_hour": 0.0,
+   "det_single": 0.7286792452830189
+  },
+  "C": {
+   "label": "in-sample (calibration fitted on the same V31_val clean data); not a validation number",
+   "threshold": 0.9940476190476192,
+   "fa_tick": 0.01981132075471698,
+   "events_per_hour": 4.952830188679245,
+   "safe_stop_per_hour": 0.0,
+   "det_single": 0.8779220779220779
+  }
+ }
+}

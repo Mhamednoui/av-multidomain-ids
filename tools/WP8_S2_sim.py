@@ -117,8 +117,8 @@ class Sources:
         for key, s in K.items():
             d = key[0]
             self.K[key] = {"n": s["n"], "label": s["label"], "group": d,
-                           "gps": {"X": cg[d].transform(s["gps_score"]), "own": s["gps_alarm"], "label": s["label"]},
-                           "cross": {"X": cc[d].transform(s["cross_score"]), "own": s["cross_alarm"], "label": s["label"], "blame_A1": s["blame_A1"],
+                           "gps": {"X": cg[d].transform(s["gps_score"]), "own": s["gps_alarm"], "label": s["label"], "raw": s["gps_score"]},
+                           "cross": {"X": cc[d].transform(s["cross_score"]), "own": s["cross_alarm"], "label": s["label"], "raw": s["cross_score"], "blame_A1": s["blame_A1"],
                                      "blame_V3": s["blame_V3"], "blame_A3": s["blame_A3"]}}
         pc2 = defaultdict(list)
         for (r, w, f, rep), s in C.items():
@@ -129,7 +129,7 @@ class Sources:
         for key, s in C.items():
             r = key[0]
             self.C[key] = {"n": s["n"], "label": s["label"], "group": r,
-                           "cross": {"X": cc2[r].transform(s["cross_score"]), "own": s["cross_alarm"], "label": s["label"], "blame_A1": s["blame_A1"],
+                           "cross": {"X": cc2[r].transform(s["cross_score"]), "own": s["cross_alarm"], "label": s["label"], "raw": s["cross_score"], "blame_A1": s["blame_A1"],
                                      "blame_V3": s["blame_V3"], "blame_A3": s["blame_A1"]}}
         self.cal_full = {"K": {"gps": cg[None], "cross": cc[None]}, "C": {"cross": cc2[None]}}
         self.cal_meta["gps_cross_groups"] = {"K": sorted(pg), "C": sorted(pc2)}
@@ -161,7 +161,8 @@ class Sources:
 
     def lidar_ticks(self, d, off, n, overlay=None):
         """Ticks [0, n) of drive d's scans with t in [off + k, off + k + 1); overlay = boolean row mask of attacked rows replacing the clean rows of the same scan index."""
-        out = {"X": np.zeros(n), "own": np.zeros(n, bool), "label": np.zeros(n, bool), "X_L125": np.zeros(n), "own_L125": np.zeros(n, bool), "present": np.zeros(n, bool)}
+        out = {"X": np.zeros(n), "own": np.zeros(n, bool), "label": np.zeros(n, bool), "X_L125": np.zeros(n), "own_L125": np.zeros(n, bool), "present": np.zeros(n, bool),
+               "raw": np.zeros(n), "raw_L125": np.zeros(n)}
         a = self.scan[d]["L100"]
         clean = np.flatnonzero(a["kind"] == "clean")
         rows = clean
@@ -175,6 +176,7 @@ class Sources:
         for var, sx in (("L100", ""), ("L125", "_L125")):
             x = self.scan[d][var]
             np.maximum.at(out["X" + sx], kk, x["c"][r])
+            np.maximum.at(out["raw" + sx], kk, x["score"][r].astype(float))
             out["own" + sx][kk[x["alarm"][r]]] = True
         att = a["kind"][r] != "clean"
         out["label"][kk[att]] = True
@@ -192,7 +194,7 @@ class Sources:
                 pools[s["group"]] = s["score"][:on[0]] if len(on) else s["score"]
         cal = logo_cals(pools)
         self.cal_full["K"]["can"] = self.cal_full["C"]["can"] = cal[None]
-        self.CAN = [{**s, "X": cal[s["group"]].transform(s["score"]), "own": s["dom_alarm"]} for s in self.can]
+        self.CAN = [{**s, "X": cal[s["group"]].transform(s["score"]), "own": s["dom_alarm"], "raw": s["score"]} for s in self.can]
 
     # ---- V2X (density transform alpha 1, as v3)
     def _v2x(self):
@@ -212,7 +214,8 @@ class Sources:
             cal[g] = ECDFCalibrator().fit(v)
         self.v2x_density_full, self.cal_full["K"]["v2x"] = G[None], cal[None]
         self.cal_full["C"]["v2x"] = cal[None]
-        self.V2X = [{**s, "X": cal[s["group"]].transform(G[s["group"]].transform(s["score"], s["count"])), "own": s["dom_alarm"]} for s in self.v2x]
+        self.V2X = [{**s, "X": cal[s["group"]].transform(G[s["group"]].transform(s["score"], s["count"])), "own": s["dom_alarm"], "raw": s["score"], "cnt": s["count"]}
+                    for s in self.v2x]
 
     # ---- network (F1 headline, RC5 variant)
     def _net(self):
@@ -230,12 +233,13 @@ class Sources:
             f1, rc = s["F1"], s["RC5"]
             self.NET.append({"name": s["name"], "group": s["name"], "day": d, "kind": s["kind"], "n": s["n"], "host_flows": s["host_flows"],
                              "X": cals["F1"][d].transform(f1["score"]), "own": f1["dom_alarm"], "label": f1["label"], "fam": f1["fam"],
-                             "X_RC5": cals["RC5"][d].transform(rc["score"]), "own_RC5": rc["dom_alarm"], "label_RC5": rc["label"]})
+                             "X_RC5": cals["RC5"][d].transform(rc["score"]), "own_RC5": rc["dom_alarm"], "label_RC5": rc["label"], "raw": f1["score"], "raw_RC5": rc["score"]})
 
 
 # ================================================================================================================ composites
-PART_KEYS = {"gps": ("X", "own", "label"), "cross": ("X", "own", "label", "blame_A1", "blame_V3", "blame_A3"), "lidar": ("X", "own", "label", "X_L125", "own_L125"),
-             "can": ("X", "own", "label"), "v2x": ("X", "own", "label"), "network": ("X", "own", "label", "X_RC5", "own_RC5", "label_RC5")}
+PART_KEYS = {"gps": ("X", "own", "label", "raw"), "cross": ("X", "own", "label", "raw", "blame_A1", "blame_V3", "blame_A3"),
+             "lidar": ("X", "own", "label", "X_L125", "own_L125", "raw", "raw_L125"), "can": ("X", "own", "label", "raw"), "v2x": ("X", "own", "label", "raw", "cnt"),
+             "network": ("X", "own", "label", "X_RC5", "own_RC5", "label_RC5", "raw", "raw_RC5")}
 
 
 def zero(key, n):
@@ -314,7 +318,7 @@ class Builder:
                 self.place(P, d, pos, v[d], 0, m, label=False)
             if self.fam == "K":
                 lt = self.S.lidar_ticks(key[0], key[1] / PHASES, m)
-                for kk in ("X", "own", "X_L125", "own_L125"):
+                for kk in ("X", "own", "X_L125", "own_L125", "raw", "raw_L125"):
                     P["lidar"][kk][pos:pos + m] = lt[kk][:m]
             pos += m
 
@@ -517,7 +521,7 @@ def summarise(eps, own, names, blame, label, onset, onset_true, dk_list, corr_va
         if s is None:
             continue
         conf.append((ticks, s))
-    out = {"events": len(conf), "alarm_ticks": int(sum(len(t) for t, _ in eps)), "detected": False}
+    out = {"events": len(conf), "alarm_ticks": int(sum(len(t) for t, _, _ in eps)), "detected": False}
     ss = {dk: 0 for dk in dk_list}
     worst = {dk: 0 for dk in dk_list}
     ev_info = []

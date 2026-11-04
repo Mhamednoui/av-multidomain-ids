@@ -47,3 +47,9 @@
 - V31_val vehicle block (3 logged rounds): comma GNSS drift/meaconing/doppler A1 77 % [69, 86] correct / 0 % wrong (v3 100 % undecided) B2 MET; K B3 A1 79 / 5 MET; C3, B4 met; B1 gps_can NOT MET (v3 17 / 60, A1 7 / 75, A3 43 [27, 57] / 41 [22, 60]).
 - Pitfalls: gps_can == lone LiDAR fault in the speed graph (needs the accelerometer, little time in 8-50 s runs); prior flips lone LiDAR faults and makes comma can_bus 100 % wrong (A2); filler-induced wrong blame is S7; sim accelerometer noise is an assumption.
 
+
+## S2 (fusion false alarms, worker opus) - REVIEW 2026-11-04
+- Code: fusion/system31.py (SystemV31, Correlator31, tick_blame31, load_system31), tools/WP8_S2_{build,sim,freeze}.py, tests/v31/test_s2_{system31,regression}.py; results results/WP8/S2/ (r1_eval, r1_grid, r1chk_eval), frozen results/WP8/S2/frozen_system31/ (sha256 a8994883...), scores results/WP8/scores/S2/; report reports/WP8_S2.md. v3 fusion files untouched; suite 542 pass.
+- V31_val, LOGO entry ECDFs + LOTO thresholds, 648 candidates, one round: chosen MX|L100|b2|m2w5|g15|d0|k1 (equal per-domain split of 2 % = max; v3 persistence; tick_blame31 + A1). K FA 1.92 % [1.38, 3.45], 5.09 events/h, SAFE_STOP 0, detection 78.2 % [76.1, 80.0] (R0 v3 recipe 53.3 %), held-out 82.4 %, blame 79.9 / 7.0; C FA 1.85 %, 4.95/h, 88.1 %. All S2 rows MET.
+- Comma GNSS system blame fixed (drift 73/10, meaconing 64/0, doppler 94/0 vs v3 blame 0 % correct). LiDAR weak in system (PointDrop episodes 0/30): M4-8 expected NOT met. FA CI upper > 3 % (drift risk); clean SAFE_STOP 0 for every candidate (bound not exercised).
+- Pitfalls: frozen_lidar31 references contain the val drives (use LODO scores on val); noisy_or over 6 entries dilutes one strong domain; tests/v31/test_s6_regression diff check narrowed to modified v3 files.

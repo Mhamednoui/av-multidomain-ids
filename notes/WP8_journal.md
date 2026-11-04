@@ -493,3 +493,8 @@
 2026-11-04T17:04:07+01:00 | B1 | fit d11_set_04: start (K+1=6); log results/WP9/logs/B1_fit_d11_set_04.log
 2026-11-04T17:05:00+01:00 | S2 | r1chk reproduces r1 exactly; freeze done (sha256 a8994883...); round-1 result written to notes; running full test suite (log results/WP8/logs/S2_tests.log) + run_all --check
 2026-11-04T17:07:13+01:00 | B1 | fit d11_set_04: done, chosen E; results/WP9/B1_d11_set_04_selection.json
+2026-11-04T17:09:00+01:00 | B1 | d11 selections committed; running d11 tests set_01..04 once (bg) logs results/WP9/logs/B1_test_d11_set_0N.log
+2026-11-04T17:09:02+01:00 | B1 | test d11_set_01: START scoring test once with ['W_xgb_a_ids', 'W_xgb_a_generic'] (selection json committed before)
+2026-11-04T17:09:34+01:00 | S2 | DONE: report reports/WP8_S2.md, brief, STATUS S2 -> REVIEW, suite 542 pass, run_all --check OK; committing, stop
+2026-11-04T17:09:34+01:00 | B1 | launching control2 (within-capture label permutation, validation only) for all tags, log results/WP9/logs/B1_control2.log
+2026-11-04T17:09:36+01:00 | B1 | control2 carhacking: start units ['W_rf_generic']

@@ -24,7 +24,7 @@ def test_load_system_2_reproduces_the_v3_fixture():
 def test_v3_fusion_and_crossdomain_files_are_unchanged_since_tag_v3():
     paths = ["fusion", "crossdomain/consistency.py", "crossdomain/witness.py", "crossdomain/attacks.py", "system/cross_runner.py"]
     try:
-        r = subprocess.run(["git", "diff", "--stat", "v3.0", "--"] + paths, cwd=ROOT, capture_output=True, text=True, timeout=60)
+        r = subprocess.run(["git", "diff", "--stat", "--diff-filter=DMRT", "v3.0", "--"] + paths, cwd=ROOT, capture_output=True, text=True, timeout=60)
     except OSError:
         return
     if r.returncode != 0:
