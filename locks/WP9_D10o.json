@@ -1,0 +1,353 @@
+{
+ "table": "D10o",
+ "rows": 2233825,
+ "salt": 20261104,
+ "definition": "tools/WP9_B2_splits.py + notes/WP9_B2.md (2026-11-04)",
+ "table_file_sha256": "8e8d0c545fe0bf8f8a0cbf58a97aee7139ad258829308cdc4c075fcd2b6cc954",
+ "protocols": {
+  "T": {
+   "parts": {
+    "train": {
+     "rows": 1033971,
+     "families": {
+      "BENIGN": 892778,
+      "DoS-Hulk": 68073,
+      "DDoS-LOIC-HTTP": 58750,
+      "DoS-Slowloris": 2710,
+      "FTP-Patator": 2699,
+      "DoS-GoldenEye": 2628,
+      "DoS-SlowHTTPTest": 1553,
+      "PortScan": 1468,
+      "SSH-Patator": 1396,
+      "Bot": 925,
+      "Web-BruteForce": 664,
+      "Web-XSS": 286,
+      "Web-SQLi": 21,
+      "Infiltration": 20
+     }
+    },
+    "val": {
+     "rows": 287459,
+     "families": {
+      "BENIGN": 255074,
+      "DoS-Hulk": 18229,
+      "DDoS-LOIC-HTTP": 12010,
+      "FTP-Patator": 702,
+      "DoS-Slowloris": 413,
+      "SSH-Patator": 406,
+      "Web-BruteForce": 190,
+      "PortScan": 189,
+      "DoS-SlowHTTPTest": 89,
+      "Bot": 86,
+      "Web-XSS": 66,
+      "Infiltration": 5
+     }
+    },
+    "test": {
+     "rows": 296975,
+     "families": {
+      "BENIGN": 263416,
+      "DoS-Hulk": 17677,
+      "DDoS-LOIC-HTTP": 12729,
+      "DoS-SlowHTTPTest": 880,
+      "FTP-Patator": 751,
+      "DoS-Slowloris": 455,
+      "SSH-Patator": 396,
+      "DoS-GoldenEye": 312,
+      "Web-BruteForce": 194,
+      "Bot": 84,
+      "Web-XSS": 63,
+      "Heartbleed": 11,
+      "Infiltration": 5,
+      "PortScan": 2
+     }
+    },
+    "gap": {
+     "rows": 145725,
+     "families": {
+      "BENIGN": 85492,
+      "DoS-Hulk": 34408,
+      "DDoS-LOIC-HTTP": 18877,
+      "DoS-GoldenEye": 4000,
+      "DoS-SlowHTTPTest": 1637,
+      "DoS-Slowloris": 631,
+      "FTP-Patator": 303,
+      "SSH-Patator": 149,
+      "Web-BruteForce": 110,
+      "Web-XSS": 105,
+      "Bot": 13
+     }
+    },
+    "reserve": {
+     "rows": 469695,
+     "families": {
+      "BENIGN": 400831,
+      "DoS-Hulk": 34328,
+      "DDoS-LOIC-HTTP": 25647,
+      "DoS-GoldenEye": 3346,
+      "FTP-Patator": 1478,
+      "DoS-Slowloris": 1174,
+      "DoS-SlowHTTPTest": 1069,
+      "SSH-Patator": 872,
+      "Web-BruteForce": 312,
+      "Bot": 308,
+      "PortScan": 192,
+      "Web-XSS": 132,
+      "Infiltration": 6
+     }
+    }
+   },
+   "part_sha256": "6668b2292aa332e4bb43c2bef727a483ed7847242f4f1c83bb51dc830f732864",
+   "v3_split_overlap": {
+    "train": {
+     "train": 1030943,
+     "gap": 1894,
+     "test": 1134,
+     "val": 0
+    },
+    "val": {
+     "train": 174249,
+     "val": 71147,
+     "gap": 42063,
+     "test": 0
+    },
+    "test": {
+     "val": 296975,
+     "gap": 0,
+     "test": 0,
+     "train": 0
+    },
+    "gap": {
+     "train": 54294,
+     "gap": 48793,
+     "val": 42638,
+     "test": 0
+    },
+    "reserve": {
+     "test": 469695,
+     "gap": 0,
+     "train": 0,
+     "val": 0
+    }
+   }
+  },
+  "G": {
+   "parts": {
+    "train": {
+     "rows": 1558367,
+     "families": {
+      "BENIGN": 1323435,
+      "DoS-Hulk": 120114,
+      "DDoS-LOIC-HTTP": 89898,
+      "DoS-GoldenEye": 7199,
+      "FTP-Patator": 4296,
+      "DoS-Slowloris": 3693,
+      "DoS-SlowHTTPTest": 3641,
+      "SSH-Patator": 2201,
+      "PortScan": 1337,
+      "Web-BruteForce": 1047,
+      "Bot": 995,
+      "Web-XSS": 451,
+      "Infiltration": 36,
+      "Web-SQLi": 13,
+      "Heartbleed": 11
+     }
+    },
+    "val": {
+     "rows": 248433,
+     "families": {
+      "BENIGN": 212163,
+      "DoS-Hulk": 18656,
+      "DDoS-LOIC-HTTP": 13762,
+      "DoS-GoldenEye": 1110,
+      "DoS-Slowloris": 615,
+      "FTP-Patator": 605,
+      "DoS-SlowHTTPTest": 581,
+      "SSH-Patator": 368,
+      "PortScan": 181,
+      "Bot": 156,
+      "Web-BruteForce": 156,
+      "Web-XSS": 77,
+      "Web-SQLi": 3
+     }
+    },
+    "test": {
+     "rows": 427025,
+     "families": {
+      "BENIGN": 361993,
+      "DoS-Hulk": 33945,
+      "DDoS-LOIC-HTTP": 24353,
+      "DoS-GoldenEye": 1977,
+      "DoS-Slowloris": 1075,
+      "FTP-Patator": 1032,
+      "DoS-SlowHTTPTest": 1006,
+      "SSH-Patator": 650,
+      "PortScan": 333,
+      "Web-BruteForce": 267,
+      "Bot": 265,
+      "Web-XSS": 124,
+      "Web-SQLi": 5
+     }
+    },
+    "gap": {
+     "rows": 0,
+     "families": {}
+    },
+    "reserve": {
+     "rows": 0,
+     "families": {}
+    }
+   },
+   "part_sha256": "7a7ebb852eb0c7d18e01ee967a4d44270bdc48d5d123d783e1f2d89620213cd4",
+   "v3_split_overlap": {
+    "train": {
+     "train": 879192,
+     "test": 328334,
+     "val": 286133,
+     "gap": 64708
+    },
+    "val": {
+     "train": 139633,
+     "test": 52427,
+     "val": 46158,
+     "gap": 10215
+    },
+    "test": {
+     "train": 240661,
+     "test": 90068,
+     "val": 78469,
+     "gap": 17827
+    },
+    "gap": {
+     "gap": 0,
+     "test": 0,
+     "train": 0,
+     "val": 0
+    },
+    "reserve": {
+     "gap": 0,
+     "test": 0,
+     "train": 0,
+     "val": 0
+    }
+   }
+  },
+  "B": {
+   "parts": {
+    "train": {
+     "rows": 1340625,
+     "families": {
+      "BENIGN": 1200622,
+      "DoS-Hulk": 58396,
+      "DDoS-LOIC-HTTP": 58382,
+      "DoS-GoldenEye": 6940,
+      "FTP-Patator": 4154,
+      "DoS-Slowloris": 3866,
+      "DoS-SlowHTTPTest": 2615,
+      "SSH-Patator": 1884,
+      "PortScan": 1463,
+      "Bot": 1032,
+      "Web-BruteForce": 941,
+      "Web-XSS": 283,
+      "Web-SQLi": 21,
+      "Infiltration": 20,
+      "Heartbleed": 6
+     }
+    },
+    "val": {
+     "rows": 222456,
+     "families": {
+      "BENIGN": 157460,
+      "DoS-Hulk": 35888,
+      "DDoS-LOIC-HTTP": 26301,
+      "DoS-SlowHTTPTest": 1492,
+      "FTP-Patator": 370,
+      "DoS-Slowloris": 261,
+      "SSH-Patator": 193,
+      "Web-BruteForce": 151,
+      "Bot": 134,
+      "Web-XSS": 130,
+      "PortScan": 74,
+      "Infiltration": 1,
+      "Heartbleed": 1
+     }
+    },
+    "test": {
+     "rows": 413657,
+     "families": {
+      "BENIGN": 317176,
+      "DoS-Hulk": 58082,
+      "DDoS-LOIC-HTTP": 30396,
+      "DoS-GoldenEye": 3346,
+      "DoS-SlowHTTPTest": 1121,
+      "FTP-Patator": 1030,
+      "SSH-Patator": 891,
+      "DoS-Slowloris": 843,
+      "Web-BruteForce": 266,
+      "PortScan": 215,
+      "Bot": 139,
+      "Web-XSS": 138,
+      "Infiltration": 12,
+      "Heartbleed": 2
+     }
+    },
+    "gap": {
+     "rows": 257087,
+     "families": {
+      "BENIGN": 222333,
+      "DoS-Hulk": 20349,
+      "DDoS-LOIC-HTTP": 12934,
+      "DoS-Slowloris": 413,
+      "FTP-Patator": 379,
+      "SSH-Patator": 251,
+      "Web-BruteForce": 112,
+      "Bot": 111,
+      "Web-XSS": 101,
+      "PortScan": 99,
+      "Infiltration": 3,
+      "Heartbleed": 2
+     }
+    },
+    "reserve": {
+     "rows": 0,
+     "families": {}
+    }
+   },
+   "part_sha256": "2d8a6f3c94cb2254c12d806cefb990ec9b8f4e7a956eb676f5f11a0bdb0939eb",
+   "v3_split_overlap": {
+    "train": {
+     "train": 663483,
+     "test": 332286,
+     "val": 277247,
+     "gap": 67609
+    },
+    "val": {
+     "train": 136993,
+     "test": 41490,
+     "val": 33462,
+     "gap": 10511
+    },
+    "test": {
+     "train": 303683,
+     "test": 56087,
+     "val": 44463,
+     "gap": 9424
+    },
+    "gap": {
+     "train": 155327,
+     "val": 55588,
+     "test": 40966,
+     "gap": 5206
+    },
+    "reserve": {
+     "gap": 0,
+     "test": 0,
+     "train": 0,
+     "val": 0
+    }
+   }
+  }
+ },
+ "boot_group_sha256": "41cc4a234c7c1f0bef7b7e0cf78e1d77d5dc79688ff9262d4d14e1d71867e301",
+ "parts_file": "../data_extra/cache_v3/WP9/B2/D10o_parts.npz"
+}

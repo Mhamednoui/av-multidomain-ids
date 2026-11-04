@@ -1,0 +1,261 @@
+{
+ "table": "D10e",
+ "rows": 1713890,
+ "salt": 20261104,
+ "definition": "tools/WP9_B2_splits.py + notes/WP9_B2.md (2026-11-04)",
+ "table_file_sha256": "8647262bd47a71e1a2ba4c737f306019976fd9df8f8a74d61c941e67f5706aa1",
+ "protocols": {
+  "T": {
+   "parts": {
+    "train": {
+     "rows": 815059,
+     "families": {
+      "BENIGN": 690872,
+      "DoS-Hulk": 71470,
+      "DDoS-LOIC-HTTP": 42877,
+      "DoS-GoldenEye": 2576,
+      "DoS-Slowloris": 1834,
+      "FTP-Patator": 1788,
+      "SSH-Patator": 1193,
+      "PortScan": 1143,
+      "DoS-SlowHTTPTest": 1069,
+      "Bot": 113,
+      "Web-BruteForce": 69,
+      "Web-XSS": 27,
+      "Infiltration": 16,
+      "Web-SQLi": 12
+     }
+    },
+    "val": {
+     "rows": 217265,
+     "families": {
+      "BENIGN": 191775,
+      "DoS-Hulk": 13890,
+      "DDoS-LOIC-HTTP": 9581,
+      "DoS-GoldenEye": 862,
+      "FTP-Patator": 435,
+      "SSH-Patator": 383,
+      "PortScan": 119,
+      "DoS-Slowloris": 97,
+      "Bot": 86,
+      "DoS-SlowHTTPTest": 19,
+      "Web-BruteForce": 14,
+      "Infiltration": 4
+     }
+    },
+    "test": {
+     "rows": 218975,
+     "families": {
+      "BENIGN": 192518,
+      "DoS-Hulk": 15619,
+      "DDoS-LOIC-HTTP": 9281,
+      "FTP-Patator": 522,
+      "SSH-Patator": 429,
+      "DoS-Slowloris": 374,
+      "Bot": 155,
+      "DoS-SlowHTTPTest": 35,
+      "Web-BruteForce": 22,
+      "Heartbleed": 11,
+      "PortScan": 5,
+      "Infiltration": 4
+     }
+    },
+    "gap": {
+     "rows": 118860,
+     "families": {
+      "BENIGN": 74827,
+      "DoS-Hulk": 25810,
+      "DDoS-LOIC-HTTP": 14577,
+      "DoS-GoldenEye": 2301,
+      "DoS-Slowloris": 482,
+      "DoS-SlowHTTPTest": 387,
+      "FTP-Patator": 200,
+      "SSH-Patator": 148,
+      "PortScan": 65,
+      "Bot": 49,
+      "Web-BruteForce": 12,
+      "Infiltration": 2
+     }
+    },
+    "reserve": {
+     "rows": 343731,
+     "families": {
+      "BENIGN": 287928,
+      "DoS-Hulk": 31680,
+      "DDoS-LOIC-HTTP": 18807,
+      "DoS-GoldenEye": 1828,
+      "FTP-Patator": 1028,
+      "SSH-Patator": 827,
+      "DoS-Slowloris": 809,
+      "Bot": 335,
+      "PortScan": 228,
+      "DoS-SlowHTTPTest": 221,
+      "Web-BruteForce": 34,
+      "Infiltration": 6
+     }
+    }
+   },
+   "part_sha256": "8c559e7921307489be1fb1fd25a5ffa8a994e86dad2ccc7c77b3d840d967cc5b",
+   "v3_split_overlap": null
+  },
+  "G": {
+   "parts": {
+    "train": {
+     "rows": 1205429,
+     "families": {
+      "BENIGN": 1011903,
+      "DoS-Hulk": 111170,
+      "DDoS-LOIC-HTTP": 66636,
+      "DoS-GoldenEye": 5311,
+      "FTP-Patator": 2787,
+      "DoS-Slowloris": 2539,
+      "SSH-Patator": 2098,
+      "DoS-SlowHTTPTest": 1194,
+      "PortScan": 1101,
+      "Bot": 514,
+      "Web-BruteForce": 114,
+      "Infiltration": 25,
+      "Web-XSS": 18,
+      "Heartbleed": 11,
+      "Web-SQLi": 8
+     }
+    },
+    "val": {
+     "rows": 188482,
+     "families": {
+      "BENIGN": 157858,
+      "DoS-Hulk": 17612,
+      "DDoS-LOIC-HTTP": 10507,
+      "DoS-GoldenEye": 851,
+      "FTP-Patator": 443,
+      "DoS-Slowloris": 405,
+      "SSH-Patator": 336,
+      "DoS-SlowHTTPTest": 211,
+      "PortScan": 155,
+      "Bot": 78,
+      "Web-BruteForce": 22,
+      "Web-SQLi": 3,
+      "Web-XSS": 1
+     }
+    },
+    "test": {
+     "rows": 319979,
+     "families": {
+      "BENIGN": 268159,
+      "DoS-Hulk": 29687,
+      "DDoS-LOIC-HTTP": 17980,
+      "DoS-GoldenEye": 1405,
+      "FTP-Patator": 743,
+      "DoS-Slowloris": 652,
+      "SSH-Patator": 546,
+      "DoS-SlowHTTPTest": 326,
+      "PortScan": 304,
+      "Bot": 146,
+      "Web-BruteForce": 15,
+      "Web-XSS": 8,
+      "Infiltration": 7,
+      "Web-SQLi": 1
+     }
+    },
+    "gap": {
+     "rows": 0,
+     "families": {}
+    },
+    "reserve": {
+     "rows": 0,
+     "families": {}
+    }
+   },
+   "part_sha256": "2d638200c411fa7a4dd232e6879eba4b7f5c3fc4498a1938be706a36e992bfe2",
+   "v3_split_overlap": null
+  },
+  "B": {
+   "parts": {
+    "train": {
+     "rows": 984397,
+     "families": {
+      "BENIGN": 869896,
+      "DoS-Hulk": 59003,
+      "DDoS-LOIC-HTTP": 41486,
+      "DoS-GoldenEye": 4277,
+      "FTP-Patator": 2699,
+      "DoS-Slowloris": 2487,
+      "SSH-Patator": 1760,
+      "PortScan": 1203,
+      "DoS-SlowHTTPTest": 805,
+      "Bot": 660,
+      "Web-BruteForce": 81,
+      "Infiltration": 13,
+      "Web-XSS": 13,
+      "Web-SQLi": 9,
+      "Heartbleed": 5
+     }
+    },
+    "val": {
+     "rows": 134516,
+     "families": {
+      "BENIGN": 91058,
+      "DoS-Hulk": 27674,
+      "DDoS-LOIC-HTTP": 14691,
+      "DoS-SlowHTTPTest": 687,
+      "FTP-Patator": 200,
+      "SSH-Patator": 143,
+      "PortScan": 15,
+      "Bot": 14,
+      "Web-XSS": 12,
+      "Web-BruteForce": 12,
+      "DoS-Slowloris": 7,
+      "Infiltration": 2,
+      "Heartbleed": 1
+     }
+    },
+    "test": {
+     "rows": 261480,
+     "families": {
+      "BENIGN": 200314,
+      "DoS-Hulk": 36568,
+      "DDoS-LOIC-HTTP": 19508,
+      "DoS-GoldenEye": 2995,
+      "SSH-Patator": 601,
+      "FTP-Patator": 570,
+      "DoS-Slowloris": 481,
+      "DoS-SlowHTTPTest": 225,
+      "PortScan": 149,
+      "Web-BruteForce": 30,
+      "Bot": 28,
+      "Infiltration": 9,
+      "Heartbleed": 2
+     }
+    },
+    "gap": {
+     "rows": 333497,
+     "families": {
+      "BENIGN": 276652,
+      "DoS-Hulk": 35224,
+      "DDoS-LOIC-HTTP": 19438,
+      "DoS-Slowloris": 621,
+      "FTP-Patator": 504,
+      "SSH-Patator": 476,
+      "DoS-GoldenEye": 295,
+      "PortScan": 193,
+      "Bot": 36,
+      "Web-BruteForce": 28,
+      "DoS-SlowHTTPTest": 14,
+      "Infiltration": 8,
+      "Web-SQLi": 3,
+      "Heartbleed": 3,
+      "Web-XSS": 2
+     }
+    },
+    "reserve": {
+     "rows": 0,
+     "families": {}
+    }
+   },
+   "part_sha256": "5dba0f4c8ec73321698c500c05af06270b26dd960ad8a05dda2b01776d1d7393",
+   "v3_split_overlap": null
+  }
+ },
+ "boot_group_sha256": "16dce66b6da06491c0bf0ad5224abd1e66d448a3d8265041196860740e9cd594",
+ "parts_file": "../data_extra/cache_v3/WP9/B2/D10e_parts.npz"
+}

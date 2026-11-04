@@ -460,3 +460,8 @@
 2026-11-04T16:46:15+01:00 | B1 | lock d11: parse set_04/test_04_unknown_vehicle_unknown_attack/triple-1
 2026-11-04T16:46:19+01:00 | B1 | lock d11: parse set_04/test_04_unknown_vehicle_unknown_attack/triple-2
 2026-11-04T16:46:20+01:00 | B1 | lock d11: written locks/WP9_d11.json
+2026-11-04T16:46:27+01:00 | B1 | build d11: start (resumable)
+2026-11-04T16:47:26+01:00 | B2 | splits for D10e -> locks/WP9_D10e.json
+2026-11-04T16:47:34+01:00 | B1 | found float32 threshold-rounding bug in summarize/decide (FPR 1.06% vs 1% budget), fixed to float64; carhacking fit will be re-run; launching road fit (bg) log results/WP9/logs/B1_fit_road.log
+2026-11-04T16:47:37+01:00 | B1 | fit road: start (K+1=10); log results/WP9/logs/B1_fit_road.log
+2026-11-04T16:47:47+01:00 | B1 | build d11: done (236 segments)

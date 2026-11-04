@@ -1,0 +1,22 @@
+{
+ "rows": 2233825,
+ "note": "WP4 cleaned table (results/WP4/s1_clean_D10.json holds the dedup counts)",
+ "family_counts": {
+  "BENIGN": 1897591,
+  "DoS-Hulk": 172715,
+  "DDoS-LOIC-HTTP": 128013,
+  "DoS-GoldenEye": 10286,
+  "FTP-Patator": 5933,
+  "DoS-Slowloris": 5383,
+  "DoS-SlowHTTPTest": 5228,
+  "SSH-Patator": 3219,
+  "PortScan": 1851,
+  "Web-BruteForce": 1470,
+  "Bot": 1416,
+  "Web-XSS": 652,
+  "Infiltration": 36,
+  "Web-SQLi": 21,
+  "Heartbleed": 11
+ },
+ "seconds": 3.4
+}

@@ -1,0 +1,44 @@
+{
+ "raw_rows": {
+  "Friday-WorkingHours.csv": 547915,
+  "Monday-WorkingHours.csv": 371749,
+  "Thursday-WorkingHours.csv": 362368,
+  "Tuesday-WorkingHours.csv": 322003,
+  "Wednesday-WorkingHours.csv": 496779
+ },
+ "rows_total": 2100814,
+ "bad_timestamp": 0,
+ "exact_duplicates": 386698,
+ "conflicting_rows": 226,
+ "kept": 1713890,
+ "attempted_relabelled_benign": {
+  "DoS-SlowHTTPTest": 3369,
+  "DoS-Slowloris": 1731,
+  "Bot": 1470,
+  "Web-BruteForce": 1214,
+  "Web-XSS": 652,
+  "DoS-Hulk": 593,
+  "DoS-GoldenEye": 80,
+  "Infiltration": 16,
+  "FTP-Patator": 11,
+  "SSH-Patator": 8
+ },
+ "family_counts": {
+  "BENIGN": 1437920,
+  "DoS-Hulk": 158469,
+  "DDoS-LOIC-HTTP": 95123,
+  "DoS-GoldenEye": 7567,
+  "FTP-Patator": 3973,
+  "DoS-Slowloris": 3596,
+  "SSH-Patator": 2980,
+  "DoS-SlowHTTPTest": 1731,
+  "PortScan": 1560,
+  "Bot": 738,
+  "Web-BruteForce": 151,
+  "Infiltration": 32,
+  "Web-XSS": 27,
+  "Web-SQLi": 12,
+  "Heartbleed": 11
+ },
+ "seconds": 62.8
+}
