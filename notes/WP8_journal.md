@@ -145,3 +145,7 @@
 2026-11-03T18:43:56+01:00 | S3b | done: report reports/WP8_S3b.md, brief, STATUS S3b -> REVIEW; running full test suite then commit
 2026-11-03 | ORCH | S3b approved (7/10) | S6 running
 2026-11-03T18:48:09+01:00 | S6 | round-1 evaluation start: tools/WP8_S6_eval.py r1 (log results/WP8/logs/S6_eval_r1.log), pre-registration + amendment A committed before | output results/WP8/S6/r1_eval.json
+2026-11-03T18:51:37+01:00 | S6 | round 1 done (no candidate passes; defects a/b/c found); round-2 plan committed in notes/WP8_v31.md | implementing corrections then running r2
+2026-11-03T18:51:58+01:00 | S6 | round-2 evaluation start: tools/WP8_S6_eval.py r2 (log results/WP8/logs/S6_eval_r2.log) | plan + corrections committed before
+2026-11-04T16:24:10+01:00 | B0 | resumed after limit reset; nothing on disk yet; collected CAN refs (can-train-and-test, ROAD, Song/Hoang) in memory; next: network/V2X/GPS/LiDAR searches then write files | commit per dataset
+2026-11-04T16:24:27+01:00 | S6 | resumed after usage reset; r2 numbers exist (results/WP8/S6/r2_eval.json); found CAN inertial anchor all-NaN (CAN grid speed NaN on ticks 0-2): writing round-3 plan before running r3
