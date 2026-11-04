@@ -1,0 +1,61 @@
+{
+ "fusion": {
+  "pass": true,
+  "max_abs_score_diff": 0.0
+ },
+ "gps": {
+  "pass": true,
+  "drives": {
+   "0005": true,
+   "0095": true
+  }
+ },
+ "comma": {
+  "pass": true,
+  "route": "b0c9d2329ad1606b_2018-08-10--22-42-26"
+ },
+ "lidar": {
+  "pass": true,
+  "literal_v3_vs_stored_max_diff": 0.0,
+  "fast_path_v3_vs_stored_vox_max_diff": 0.0,
+  "scans": 24
+ },
+ "can": {
+  "pass": true,
+  "capture": "fuzzing_attack_2",
+  "max_abs_diff": 0.0,
+  "windows": 13
+ },
+ "network": {
+  "pass": true,
+  "candidates": {
+   "v3": {
+    "macro_new": 0.582567672276777,
+    "macro_stored": 0.582567672276777,
+    "fa_new": 0.0095996176632965,
+    "fa_stored": 0.0095996176632965,
+    "detection_equal": true
+   },
+   "F1": {
+    "macro_new": 0.5791411470230536,
+    "macro_stored": 0.5791411470230536,
+    "fa_new": 0.009602364335017042,
+    "fa_stored": 0.009602364335017042,
+    "detection_equal": true
+   },
+   "RC5": {
+    "macro_new": 0.5535342511815717,
+    "macro_stored": 0.5535342511815717,
+    "fa_new": 0.00927551040027247,
+    "fa_stored": 0.00927551040027247,
+    "detection_equal": true
+   }
+  }
+ },
+ "v2x": {
+  "pass": true,
+  "comb_thr_equals_domain_json": true,
+  "veremi_val_sources_equal_S2_cache": true
+ },
+ "all_pass": true
+}

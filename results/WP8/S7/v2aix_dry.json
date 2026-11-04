@@ -1,0 +1,510 @@
+{
+ "exposure": "fresh H31 (per recording); 'same site-day as calibration' for the 672, 2 independent (descriptive)",
+ "recordings": 24,
+ "same_site_day": 24,
+ "independent": [],
+ "envs": {
+  "Mobile": {
+   "val_messages": 11778,
+   "val_recordings": 152,
+   "h31_messages": 360,
+   "h31_recordings": 12,
+   "k_val": {
+    "L1": 20,
+    "L2": 20,
+    "L3": 11,
+    "physics": 16,
+    "physics+range": 15,
+    "range": 23,
+    "range_loc": 23,
+    "appear": 1,
+    "fresh": 1,
+    "physics+fresh": 16,
+    "rx": 23,
+    "physics+rx": 15
+   },
+   "thresholds_B_comb": 0.9987264391237902,
+   "false_alarms": {
+    "physics": {
+     "per_message": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "same_site_day": 0.0,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "A_physics": {
+     "per_message": 0.975,
+     "ci": [
+      0.9313136336580934,
+      0.9944758970311457
+     ],
+     "same_site_day": 0.975,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L1": {
+     "per_message": 0.016666666666666666,
+     "ci": [
+      0.0,
+      0.03077220077220077
+     ],
+     "same_site_day": 0.016666666666666666,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L2": {
+     "per_message": 0.002777777777777778,
+     "ci": [
+      0.0,
+      0.01103222800262166
+     ],
+     "same_site_day": 0.002777777777777778,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L3": {
+     "per_message": 0.002777777777777778,
+     "ci": [
+      0.0,
+      0.0075
+     ],
+     "same_site_day": 0.002777777777777778,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "V31_val_target_per_message": 0.01
+   },
+   "injected": {
+    "1": {
+     "name": "ConstPos",
+     "n_injected": 176,
+     "physics_msg_all": 0.9715909090909091,
+     "ci": [
+      0.9477611940298507,
+      0.9849624060150376
+     ],
+     "physics_msg_scored": null,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "2": {
+     "name": "ConstPosOffset",
+     "n_injected": 104,
+     "physics_msg_all": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "physics_msg_scored": 0.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "3": {
+     "name": "RandomPos",
+     "n_injected": 115,
+     "physics_msg_all": 0.9565217391304348,
+     "ci": [
+      0.95,
+      0.9642857142857143
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "4": {
+     "name": "RandomPosOffset",
+     "n_injected": 186,
+     "physics_msg_all": 0.9731182795698925,
+     "ci": [
+      0.950354609929078,
+      0.9853479853479854
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "5": {
+     "name": "ConstSpeed",
+     "n_injected": 122,
+     "physics_msg_all": 0.1557377049180328,
+     "ci": [
+      0.0,
+      0.26865671641791045
+     ],
+     "physics_msg_scored": 0.1623931623931624,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "6": {
+     "name": "ConstSpeedOffset",
+     "n_injected": 157,
+     "physics_msg_all": 0.8407643312101911,
+     "ci": [
+      0.7838827838827839,
+      0.9454545454545454
+     ],
+     "physics_msg_scored": 0.8627450980392157,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "7": {
+     "name": "RandomSpeed",
+     "n_injected": 159,
+     "physics_msg_all": 0.9685534591194969,
+     "ci": [
+      0.9387755102040817,
+      0.9849624060150376
+     ],
+     "physics_msg_scored": 0.9935483870967742,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "8": {
+     "name": "RandomSpeedOffset",
+     "n_injected": 114,
+     "physics_msg_all": 0.9385964912280702,
+     "ci": [
+      0.9253731343283582,
+      0.9629629629629629
+     ],
+     "physics_msg_scored": 0.981651376146789,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "9": {
+     "name": "EventualStop",
+     "n_injected": 117,
+     "physics_msg_all": 0.042735042735042736,
+     "ci": [
+      0.034482758620689655,
+      0.05714285714285714
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "10": {
+     "name": "Disruptive",
+     "n_injected": 167,
+     "physics_msg_all": 0.9700598802395209,
+     "ci": [
+      0.9477611940298507,
+      0.9849624060150376
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "11": {
+     "name": "DataReplay",
+     "n_injected": 176,
+     "physics_msg_all": 0.9431818181818182,
+     "ci": [
+      0.8582089552238806,
+      0.9745762711864406
+     ],
+     "physics_msg_scored": 0.9707602339181286,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "12": {
+     "name": "DelayedMessages",
+     "n_injected": 141,
+     "physics_msg_all": 0.9574468085106383,
+     "ci": [
+      0.9333333333333333,
+      0.9692982456140351
+     ],
+     "physics_msg_scored": 0.9692307692307692,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "13": {
+     "name": "DoS",
+     "n_injected": 374,
+     "physics_msg_all": 0.058823529411764705,
+     "ci": [
+      0.02032520325203252,
+      0.07570422535211267
+     ],
+     "physics_msg_scored": 0.05962059620596206,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "14": {
+     "name": "DoSRandom",
+     "n_injected": 716,
+     "physics_msg_all": 0.9930167597765364,
+     "ci": [
+      0.9869402985074627,
+      0.9962406015037594
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "15": {
+     "name": "DoSDisruptive",
+     "n_injected": 692,
+     "physics_msg_all": 0.9855491329479769,
+     "ci": [
+      0.9529914529914529,
+      0.9963503649635036
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "16": {
+     "name": "GridSybil",
+     "n_injected": 672,
+     "physics_msg_all": 0.03571428571428571,
+     "ci": [
+      0.02962962962962963,
+      0.0449438202247191
+     ],
+     "physics_msg_scored": 0.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "17": {
+     "name": "DataReplaySybil",
+     "n_injected": 175,
+     "physics_msg_all": 0.7314285714285714,
+     "ci": [
+      0.32727272727272727,
+      0.9166666666666666
+     ],
+     "physics_msg_scored": 0.757396449704142,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "18": {
+     "name": "DoSRandomSybil",
+     "n_injected": 352,
+     "physics_msg_all": 0.7982954545454546,
+     "ci": [
+      0.7407407407407407,
+      0.8134328358208955
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "19": {
+     "name": "DoSDisruptiveSybil",
+     "n_injected": 228,
+     "physics_msg_all": 0.7368421052631579,
+     "ci": [
+      0.6914893617021277,
+      0.781021897810219
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "12b": {
+     "name": "DelayedBurst",
+     "n_injected": 87,
+     "physics_msg_all": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "physics_msg_scored": 0.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "20": {
+     "name": "GhostNearReceiver",
+     "n_injected": 27,
+     "physics_msg_all": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "physics_msg_scored": 0.0,
+     "fa_on_scenario_genuine": 0.0
+    },
+    "21": {
+     "name": "FarPosOffset",
+     "n_injected": 166,
+     "physics_msg_all": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "physics_msg_scored": 0.0,
+     "fa_on_scenario_genuine": 0.0
+    }
+   },
+   "injected_mean_over_types": 0.5935443774100816
+  },
+  "Stationary": {
+   "val_messages": 76932,
+   "val_recordings": 456,
+   "h31_messages": 160,
+   "h31_recordings": 12,
+   "k_val": {
+    "L1": 47,
+    "L2": 15,
+    "L3": 19,
+    "physics": 14,
+    "physics+range": 14,
+    "range": 33,
+    "range_loc": 25,
+    "appear": 1,
+    "fresh": 26,
+    "physics+fresh": 36,
+    "rx": 33,
+    "physics+rx": 14
+   },
+   "thresholds_B_comb": 0.9988171372120835,
+   "false_alarms": {
+    "physics": {
+     "per_message": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "same_site_day": 0.0,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "A_physics": {
+     "per_message": 0.675,
+     "ci": [
+      0.5433030896518646,
+      0.7857266009852216
+     ],
+     "same_site_day": 0.675,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L1": {
+     "per_message": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "same_site_day": 0.0,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L2": {
+     "per_message": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "same_site_day": 0.0,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L3": {
+     "per_message": 0.00625,
+     "ci": [
+      0.0,
+      0.019357980728948468
+     ],
+     "same_site_day": 0.00625,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "V31_val_target_per_message": 0.01
+   },
+   "injected": {
+    "1": {
+     "error": "no sender with enough messages"
+    },
+    "2": {
+     "error": "no sender with enough messages"
+    },
+    "3": {
+     "error": "no sender with enough messages"
+    },
+    "4": {
+     "error": "no sender with enough messages"
+    },
+    "5": {
+     "error": "no sender with enough messages"
+    },
+    "6": {
+     "error": "no sender with enough messages"
+    },
+    "7": {
+     "error": "no sender with enough messages"
+    },
+    "8": {
+     "error": "no sender with enough messages"
+    },
+    "9": {
+     "error": "no sender with enough messages"
+    },
+    "10": {
+     "error": "no sender with enough messages"
+    },
+    "11": {
+     "error": "no sender with enough messages"
+    },
+    "12": {
+     "error": "no sender with enough messages"
+    },
+    "13": {
+     "error": "no sender with enough messages"
+    },
+    "14": {
+     "error": "no sender with enough messages"
+    },
+    "15": {
+     "error": "no sender with enough messages"
+    },
+    "16": {
+     "error": "no sender with enough messages"
+    },
+    "17": {
+     "error": "no sender with enough messages"
+    },
+    "18": {
+     "error": "no sender with enough messages"
+    },
+    "19": {
+     "error": "no sender with enough messages"
+    },
+    "12b": {
+     "error": "no sender with enough messages"
+    },
+    "20": {
+     "error": "no sender with enough messages"
+    },
+    "21": {
+     "error": "no sender with enough messages"
+    }
+   },
+   "injected_mean_over_types": null
+  }
+ },
+ "runtime": {
+  "egos": 3,
+  "compute_per_stream_s_max": 0.028607665460172724,
+  "share_le_0.5": 1.0,
+  "msg_p99_ms_max": 6.178564999999166,
+  "identical_egos": 3,
+  "mismatch_rows_total": 0,
+  "mismatch_rows_unexplained": 0,
+  "messages_total": 109,
+  "evidence_alarm_mismatch": 0,
+  "per_ego": [
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T09-24-29Z",
+    "messages": 82,
+    "stream_s": 13.097643375396729,
+    "compute_per_stream_s": 0.028607665460172724,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   },
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T09-26-45Z",
+    "messages": 20,
+    "stream_s": 2.8824455738067627,
+    "compute_per_stream_s": 0.0273801527137852,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   },
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T09-32-06Z",
+    "messages": 7,
+    "stream_s": 5.977722406387329,
+    "compute_per_stream_s": 0.005188180027708411,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   }
+  ]
+ }
+}

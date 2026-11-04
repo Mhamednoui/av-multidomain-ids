@@ -1,0 +1,16 @@
+{
+ "params": {
+  "sp": 0.05,
+  "sv": 0.02,
+  "sa": 1.9909501125201614
+ },
+ "info": {
+  "n_tracks": 800,
+  "n_messages": 74436,
+  "n_scored": 73636,
+  "neg_loglik_per_message": 2.284609156529398,
+  "nfev": 315,
+  "converged": true
+ },
+ "fit_rows": "B3 train genuine"
+}

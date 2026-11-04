@@ -81,7 +81,7 @@ def same(a, b):
         return a.keys() == b.keys() and all(same(a[k], b[k]) for k in a)
     if isinstance(a, np.ndarray):
         return a.shape == b.shape and (np.array_equal(a, b) if a.dtype != object else all((x == y) or (x is None and y is None) for x, y in zip(a.ravel(), b.ravel())))
-    return a == b
+    return a == b or (isinstance(a, float) and isinstance(b, float) and np.isnan(a) and np.isnan(b))
 
 
 def main():

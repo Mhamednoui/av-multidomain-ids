@@ -542,3 +542,25 @@
 2026-11-04T17:31:24+01:00 | S7 | V2X VeReMi val: start | parts C:\Users\nouir\AppData\Local\Temp\claude\c--Users-nouir-PFE\157466ee-99c5-4ed8-8a90-0a01fa05dcf5\scratchpad\v2x_val\v2x_parts
 2026-11-04T17:31:25+01:00 | S7 | vehicle sources val: start | 10 drives, 8 routes
 2026-11-04T17:31:27+01:00 | S7 | vehicle sources val: done | K runs 1200, C windows 665
+2026-11-04T17:31:52+01:00 | S7 | system simulation valdry: done | results/WP8/S7/system_valdry.json
+2026-11-04T17:32:05+01:00 | S7 | V2X VeReMi val: done | 409 ego series
+2026-11-04T17:32:10+01:00 | B3 | lock + pre-registration committed (locks/WP9_veremi.json, notes/WP9_B3.md) | next: tools/WP9_B3_build.py features (cache ../data_extra/cache_v3/WP9/B3), then fit candidates
+2026-11-04T17:32:33+01:00 | B3 | launch build train+val features (tracker refit ~10 min): log results/WP9/logs/B3_build.log; cmd: python -I -u -W ignore tools/WP9_B3_build.py --parts train val
+2026-11-04T17:34:33+01:00 | S7 | regression check fusion: start | tools/WP8_S7_regress.py
+2026-11-04T17:34:35+01:00 | S7 | regression check fusion: done | pass=True
+2026-11-04T17:34:35+01:00 | S7 | regression check gps: start | tools/WP8_S7_regress.py
+2026-11-04T17:34:43+01:00 | S7 | regression check gps: done | pass=True
+2026-11-04T17:34:43+01:00 | S7 | regression check comma: start | tools/WP8_S7_regress.py
+2026-11-04T17:34:45+01:00 | S7 | regression check comma: done | pass=True
+2026-11-04T17:34:45+01:00 | S7 | regression check lidar: start | tools/WP8_S7_regress.py
+2026-11-04T17:35:37+01:00 | S7 | regression check lidar: done | pass=True
+2026-11-04T17:35:37+01:00 | S7 | regression check can: start | tools/WP8_S7_regress.py
+2026-11-04T17:35:37+01:00 | S7 | regression check can: done | pass=True
+2026-11-04T17:35:37+01:00 | S7 | regression check network: start | tools/WP8_S7_regress.py
+2026-11-04T17:35:37+01:00 | S7 | regression check network: done | pass=True
+2026-11-04T17:35:37+01:00 | S7 | regression check v2x: start | tools/WP8_S7_regress.py
+2026-11-04T17:35:38+01:00 | S7 | regression check v2x: done | pass=True
+2026-11-04T17:40:15+01:00 | S7 | pre-freeze: tools written (lib, odom, kitti, comma, lidar, lidar_check, can, net, v2x, veh, blame, domains, sim, regress, freeze); dry runs on V31_val: net/veh/v2x sources reproduce S4/S2 caches exactly, sim in-sample reproduces frozen_system31 check (K FA 1.80 %, 4.53/h, det 72.87 %), regression R2 all pass (results/WP8/S7/regression.json); running full test suite + run_all --check (logs results/WP8/logs/S7_tests.log, S7_runall_check.log); next: freeze.json hash, commit, then H31 verify
+2026-11-04T17:45:11+01:00 | S7 | V2AIX dry run on v3 test recordings (V31_val), not H31 | 12 per environment
+2026-11-04T17:45:11+01:00 | S7 | V2AIX H31: start | 24 recordings, 24 same site-day as a v3 train recording; out results/WP8/S7/v2aix.json
+2026-11-04T17:45:38+01:00 | S7 | V2AIX H31: done | FA physics Mobile 0.0000, egos 3
