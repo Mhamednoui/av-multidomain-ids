@@ -313,11 +313,9 @@ def macro_f1(y, pred, classes_idx):
     return float(np.mean([out[k][0] for k in present])), out
 
 
-def decide(P, thr):
-    """P: (n, K+1) class probabilities (col 0 = normal). Alarm if 1 - P0 >= thr; class = argmax over attack cols."""
-    s = 1.0 - P[:, 0]
-    pred = np.where(s >= thr, 1 + np.argmax(P[:, 1:], axis=1), 0)
-    return pred, s
+def decide(s, c, thr):
+    """Alarm if attack score s >= thr; class = c (1..K) on alarm, 0 otherwise."""
+    return np.where(s >= thr, c, 0)
 
 
 def auc_binary(y_bin, s):
@@ -327,16 +325,16 @@ def auc_binary(y_bin, s):
     return float(roc_auc_score(y_bin, s))
 
 
-def summarize(y, P, thr, groups=None, seen_idx=None, n_boot=1000, seed=SEED, classes=None):
-    """y: window class (0, 1..K, -1 unseen). Report at threshold thr (alarm = 1-P0 >= thr).
-    macro-F1 over seen classes present; per-class recall; FPR; AUC (attack vs normal); bootstrap over `groups`."""
-    K = P.shape[1] - 1
-    seen_idx = list(range(0, K + 1)) if seen_idx is None else seen_idx
-    pred, s = decide(P, thr)
-    pred_arg = np.argmax(P, axis=1)
+def summarize(y, s, c, thr, pred_arg=None, groups=None, seen_idx=None, n_boot=1000, seed=SEED):
+    """y: window class (0, 1..K, -1 unseen). s: attack score, c: predicted attack class (1..K); alarm = s >= thr.
+    pred_arg: optional plain-argmax prediction (no budget). macro-F1 over seen classes present; per-class recall; FPR;
+    AUC (attack vs normal); bootstrap over `groups` (capture / block run)."""
+    seen_idx = sorted(set(int(k) for k in np.unique(np.r_[y, c, 0]) if k >= 0)) if seen_idx is None else seen_idx
+    pred = decide(s, c, thr)
 
     def stats(ix):
-        yy, pp, ss, pa = y[ix], pred[ix], s[ix], pred_arg[ix]
+        yy, pp, ss = y[ix], pred[ix], s[ix]
+        pa = pred_arg[ix] if pred_arg is not None else pp
         m_idx = [k for k in seen_idx]
         mf, per = macro_f1(yy, pp, m_idx)
         mfa, pera = macro_f1(yy, pa, m_idx)
@@ -353,6 +351,8 @@ def summarize(y, P, thr, groups=None, seen_idx=None, n_boot=1000, seed=SEED, cla
         d["per_class_recall"] = {str(k): (float(v[1]) if v[3] else None) for k, v in per.items()}
         d["per_class_f1"] = {str(k): (float(v[0]) if v[3] else None) for k, v in per.items()}
         d["per_class_n"] = {str(k): v[3] for k, v in per.items()}
+        d["per_class_alarm_recall"] = {str(k): (float(np.mean(pp[yy == k] != 0)) if v[3] and k != 0 else None)
+                                       for k, v in per.items()}
         # unseen windows: any-alarm recall
         un = yy == -1
         d["recall_unseen_any"] = float(np.mean(pp[un] != 0)) if un.any() else None
@@ -407,3 +407,28 @@ def journal(msg: str, step: str = "B1"):
     ts = datetime.datetime.now().astimezone().isoformat(timespec="seconds")
     with open(ROOT / "notes" / "WP8_journal.md", "a", encoding="utf-8") as f:
         f.write(f"{ts} | {step} | {msg}\n")
+
+
+# ------------------------------------------------------------------ segment windows
+def segment_windows(S: dict, pid, pval, id_list, n_classes: int) -> dict:
+    """Window table of one cached segment. valid = non-empty, not the last (partial) window, and either contains an injected
+    frame or contains no frame flagged not-ok (ambiguous frames, ROAD)."""
+    W, names, wid, cnt = window_features(S, pid, pval, id_list)
+    nw = W.shape[0]
+    y, n_att = window_labels(S, wid, nw, n_classes)
+    n_bad = np.bincount(wid[~S["ok"] & (S["cls"] == 0)], minlength=nw)
+    valid = (cnt > 0) & ((n_att > 0) | (n_bad == 0))
+    valid[nw - 1] = False
+    return {"W": W, "names": names, "y": y, "valid": valid, "wid": wid, "cnt": cnt, "n_att": n_att}
+
+
+def window_scores_from_frames(wid, nw, s, c):
+    """Per-window max of frame attack score s and the attack class c of that frame (c: argmax over attack columns, 1-based)."""
+    order = np.lexsort((s, wid))
+    w_sorted = wid[order]
+    last = np.r_[w_sorted[1:] != w_sorted[:-1], True]
+    sw = np.zeros(nw, np.float32)
+    cw = np.ones(nw, np.int16)
+    sw[w_sorted[last]] = s[order][last]
+    cw[w_sorted[last]] = c[order][last]
+    return sw, cw
