@@ -55,15 +55,42 @@ def matrix(d, cols, fill=None):
     return np.nan_to_num(x, nan=fill) if fill is not None else x
 
 
-def train_sample(d, part):
+_XC = {}
+
+
+def mx(d, idx, cols, fill=None):
+    """Feature matrix of rows idx: the full float32 matrix of the table is built once (76 columns) and indexed."""
+    k = id(d)
+    if k not in _XC:
+        _XC.clear()
+        x = d[FEATS].to_numpy(np.float32)
+        _XC[k] = np.where(np.isinf(x), np.nan, x)
+    X = _XC[k]
+    ci = slice(None) if cols is FEATS else [FEATS.index(c) for c in cols]
+    x = X[idx][:, ci] if not isinstance(ci, slice) else X[idx]
+    return np.nan_to_num(x, nan=fill) if fill is not None else x
+
+
+def weights(d):
+    return d["wt"].to_numpy(np.float64) if "wt" in d.columns else np.ones(len(d))
+
+
+CLASS_CAP = {"D23x": 60_000}
+
+
+def train_sample(d, part, table="D10"):
     fam = d["family"].to_numpy()
     tr = np.where(part == 0)[0]
     ben = tr[fam[tr] == "BENIGN"]
-    att = tr[fam[tr] != "BENIGN"]
     rng = np.random.default_rng(0)
     if len(ben) > BENIGN_CAP:
         ben = rng.choice(ben, BENIGN_CAP, replace=False)
-    return np.sort(np.concatenate([ben, att]))
+    cap = CLASS_CAP.get(table, 150_000)
+    keep = [ben]
+    for c in sorted(set(fam[tr]) - {"BENIGN"}):
+        ii = tr[fam[tr] == c]
+        keep.append(rng.choice(ii, cap, replace=False) if len(ii) > cap else ii)
+    return np.sort(np.concatenate(keep))
 
 
 def fit_predict(cand, d, tr_idx, y_tr, classes, ev_sets, seed=SEED, val_idx=None, y_val=None):
@@ -73,29 +100,29 @@ def fit_predict(cand, d, tr_idx, y_tr, classes, ev_sets, seed=SEED, val_idx=None
     w = class_weights(np.array(classes)[y_tr], 0.5)
     if cand["kind"] == "xgb":
         import xgboost as xgb
-        Xtr = matrix(d.iloc[tr_idx], cols)
+        Xtr = mx(d, tr_idx, cols)
         m = xgb.XGBClassifier(n_estimators=300, max_depth=cand["depth"], learning_rate=0.2, subsample=0.8, colsample_bytree=0.7, min_child_weight=1,
                               tree_method="hist", n_jobs=NJOBS, objective="multi:softprob", num_class=ncls, eval_metric="mlogloss",
                               early_stopping_rounds=30 if val_idx is not None else None, random_state=seed)
         kw = {}
         if val_idx is not None:
-            kw["eval_set"] = [(matrix(d.iloc[val_idx], cols), y_val)]
+            kw["eval_set"] = [(mx(d, val_idx, cols), y_val)]
         m.fit(Xtr, y_tr, sample_weight=w, verbose=False, **kw)
         imp = m.get_booster().get_score(importance_type="total_gain")
         tot = sum(imp.values()) or 1.0
         imp = {cols[int(k[1:])]: v / tot for k, v in imp.items()}
         info = {"best_iteration": int(getattr(m, "best_iteration", 299)) + 1}
         n_use = info["best_iteration"] if val_idx is not None else 300
-        predict = lambda idx: m.predict_proba(matrix(d.iloc[idx], cols), iteration_range=(0, n_use))
+        predict = lambda idx: m.predict_proba(mx(d, idx, cols), iteration_range=(0, n_use))
     else:
         from sklearn.ensemble import RandomForestClassifier
-        Xtr = matrix(d.iloc[tr_idx], cols, fill=-1.0)
+        Xtr = mx(d, tr_idx, cols, fill=-1.0)
         m = RandomForestClassifier(n_estimators=150, max_depth=30, min_samples_leaf=2, max_features="sqrt", class_weight="balanced_subsample",
                                    n_jobs=NJOBS, random_state=seed)
         m.fit(Xtr, y_tr)
         imp = dict(zip(cols, m.feature_importances_.tolist()))
         info = {}
-        predict = lambda idx: m.predict_proba(matrix(d.iloc[idx], cols, fill=-1.0))
+        predict = lambda idx: m.predict_proba(mx(d, idx, cols, fill=-1.0))
     imp = dict(sorted(imp.items(), key=lambda kv: -kv[1]))
     out = []
     for idx in ev_sets:
@@ -119,10 +146,10 @@ def eligible(fam_eval, fam_train, classes):
     return [c for c in classes if ce.get(c, 0) >= MIN_N and ct.get(c, 0) >= MIN_N]
 
 
-def conf_counts(y, pred, grp, ncls, ng):
-    """counts[g, true, pred]"""
+def conf_counts(y, pred, grp, ncls, ng, w=None):
+    """counts[g, true, pred] (weighted by w when given)"""
     k = (grp.astype(np.int64) * ncls + y) * ncls + pred
-    return np.bincount(k, minlength=ng * ncls * ncls).reshape(ng, ncls, ncls)
+    return np.bincount(k, weights=w, minlength=ng * ncls * ncls).reshape(ng, ncls, ncls)
 
 
 def f1_from_conf(C, elig_idx):
@@ -135,19 +162,19 @@ def f1_from_conf(C, elig_idx):
     return f1, rec, prec, float(np.mean(f1[elig_idx]))
 
 
-def metrics_basic(y, pr, classes, fam_train, fam_eval):
+def metrics_basic(y, pr, classes, fam_train, fam_eval, w=None):
     """macro-F1 over eligible classes, FPR, binary AUC (score 1 - P(benign))."""
     from sklearn.metrics import roc_auc_score
     ncls = len(classes)
     pred = pr.argmax(1)
-    C = conf_counts(y, pred, np.zeros(len(y), int), ncls, 1)[0]
+    C = conf_counts(y, pred, np.zeros(len(y), int), ncls, 1, w)[0]
     el = [classes.index(c) for c in eligible(fam_eval, fam_train, classes)]
     f1, rec, prec, mf1 = f1_from_conf(C, el)
     ben = y == 0
-    out = {"macro_f1": mf1, "eligible": [classes[i] for i in el], "fpr": float((pred[ben] != 0).mean()) if ben.any() else None,
+    out = {"macro_f1": mf1, "eligible": [classes[i] for i in el], "fpr": float(1 - C[0, 0] / C[0].sum()) if ben.any() else None,
            "per_class_recall": {c: (None if np.isnan(rec[i]) else float(rec[i])) for i, c in enumerate(classes)},
            "per_class_f1": {c: float(f1[i]) for i, c in enumerate(classes)}}
-    out["auc_binary"] = float(roc_auc_score(~ben, 1.0 - pr[:, 0])) if ben.any() and (~ben).any() else None
+    out["auc_binary"] = float(roc_auc_score(~ben, 1.0 - pr[:, 0], sample_weight=w)) if ben.any() and (~ben).any() else None
     return out
 
 
@@ -155,7 +182,7 @@ def prep(table, proto):
     d, part, boot = load(table, proto)
     classes, cmap = encode(d, part)
     fam = d["family"].to_numpy()
-    tr_all = train_sample(d, part)
+    tr_all = train_sample(d, part, table)
     y_tr = np.array([cmap[c] for c in fam[tr_all]])
     va = np.where(part == 1)[0]
     y_va = np.array([cmap.get(c, -1) for c in fam[va]])
@@ -175,7 +202,7 @@ def run_cands(table, proto):
         t0 = time.time()
         is_x = c["kind"] == "xgb"
         (pr,), imp, info = fit_predict(c, d, tr_all, y_tr, classes, [va], val_idx=va[keep] if is_x else None, y_val=y_va[keep] if is_x else None)
-        m = metrics_basic(y_va[keep], pr[keep], classes, fam[tr_all], fam[va][keep])
+        m = metrics_basic(y_va[keep], pr[keep], classes, fam[tr_all], fam[va][keep], weights(d)[va][keep])
         m.update({"cand": c, "importance_top5": dict(list(imp.items())[:5]), "info": info, "seconds": round(time.time() - t0, 1)})
         json.dump(m, open(p + ".tmp", "w"), indent=1)
         os.replace(p + ".tmp", p)
@@ -208,7 +235,7 @@ def run_control(table, proto):
     for seed in (1, 2, 3):
         y_sh = np.random.default_rng(seed).permutation(y_tr)
         (pr,), imp, info = fit_predict(cand, d, tr_all, y_sh, classes, [va], seed=seed, val_idx=va[keep] if is_x else None, y_val=y_va[keep] if is_x else None)
-        m = metrics_basic(y_va[keep], pr[keep], classes, fam[tr_all], fam[va][keep])
+        m = metrics_basic(y_va[keep], pr[keep], classes, fam[tr_all], fam[va][keep], weights(d)[va][keep])
         res.append({"seed": seed, "macro_f1": m["macro_f1"], "auc_binary": m["auc_binary"], "fpr": m["fpr"]})
         log("control", table, proto, res[-1])
     real = sel["val"][cand["id"]]
@@ -236,7 +263,7 @@ def run_test(table, proto):
     y_te = np.array([cmap.get(c, -1) for c in fam[te]])
     np.savez_compressed(os.path.join(SCORES, "%s_%s_val.npz" % (table, proto)), idx=va, y=y_va, family=fam[va], proba=pv.astype(np.float16), classes=cls_arr, boot=boot[va])
     np.savez_compressed(os.path.join(SCORES, "%s_%s_test.npz" % (table, proto)), idx=te, y=y_te, family=fam[te], proba=pt.astype(np.float16), classes=cls_arr, boot=boot[te])
-    rep = report(classes, fam[tr_all], fam[va], pv, fam[te], pt, boot[te])
+    rep = report(classes, fam[tr_all], fam[va], pv, fam[te], pt, boot[te], weights(d)[va], weights(d)[te])
     rep.update({"table": table, "protocol": proto, "cand": cand, "importance_top10": dict(list(imp.items())[:10]), "fit_info": info, "train_rows": int(len(tr_all)),
                 "test_rows": int(len(te)), "scored_once": True, "time": time.strftime("%Y-%m-%dT%H:%M:%S")})
     json.dump(rep, open(p, "w"), indent=1)

@@ -78,6 +78,9 @@ def hash_str(a):
 
 
 def split_G(d):
+    if "flow_h" in d.columns:   # D23x: hash of the CICFlowMeter Flow ID (= 5-tuple string) computed at build time
+        h = (pd.util.hash_array(d["flow_h"].to_numpy().astype(np.int64) + np.int64(SALT)) % np.uint64(100)).astype(int)
+        return np.where(h < 70, 0, np.where(h < 80, 1, 2)).astype(np.int8)
     k = d["src_ip"].astype(str) + "|" + d["dst_ip"].astype(str) + "|" + d["src_port"].astype(str) + "|" + d["dst_port"].astype(str) + "|" + d["protocol"].astype(str)
     h = (hash_str(k.to_numpy()) + np.uint64(SALT)) % np.uint64(100)
     h = (pd.util.hash_array(h.astype(np.int64)) % np.uint64(100)).astype(int)
@@ -129,6 +132,8 @@ def summarise(d, part):
     for i, nm in enumerate(PARTS):
         m = part == i
         out[nm] = {"rows": int(m.sum()), "families": d["family"][m].value_counts().to_dict()}
+        if "wt" in d.columns:
+            out[nm]["weighted_rows"] = float(d["wt"].to_numpy()[m].sum())
     return out
 
 

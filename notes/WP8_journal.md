@@ -520,3 +520,25 @@
 2026-11-04T17:20:09+01:00 | S7 | step 0 done: system/runners31.py + tests/v31/test_s7_runners.py (6 pass); next: write S7 tools, dry-run on V31_val, freeze.json, commit BEFORE any H31 file | log notes
 2026-11-04T17:23:46+01:00 | B1 | DONE: all test scored once, report reports/WP9_B1.md, STATUS B1 -> REVIEW; committing
 2026-11-04T17:24:12+01:00 | B2 | CSECICIDS2018_improved.zip downloaded sha256 7f7b6f80...f6e (10,426,851,729 B), no login; reading members straight from the zip (no extraction)
+2026-11-04T17:26:01+01:00 | S7 | network val: start (v3 batch, F1, RC5) | out C:\Users\nouir\AppData\Local\Temp\claude\c--Users-nouir-PFE\157466ee-99c5-4ed8-8a90-0a01fa05dcf5\scratchpad\net_val
+2026-11-04T17:26:09+01:00 | B2 | D23x build pass1 (stream zip, resumable per member): tools/WP9_B2_build23.py pass1 (log results/WP9/logs/B2_build_D23x.log); then pass2 assemble | benign 1-in-10 by feature hash, weight 10
+2026-11-04T17:26:26+01:00 | S7 | network val: done | v3 macro 0.5826, F1 0.5791, RC5 0.5535
+2026-11-04T17:27:58+01:00 | B2 | run/report tools patched (weights for sampled benign, class cap for D23x, cached feature matrix); D10 numbers unaffected (weights 1, caps not binding)
+2026-11-04T17:28:36+01:00 | B3 | start: reading briefs done; D12 is ONE 24 h timeline (no run/file id recoverable), WP5 time-block split (1800 s) is the run-level equivalent; writing lock + pre-registration | next: tools/WP9_B3_lock.py, notes/WP9_B3.md, commit BEFORE training
+2026-11-04T17:28:58+01:00 | S7 | system simulation valdry: start | material val; chunks results/WP8/S7/parts/sim_valdry_*; log results/WP8/logs/S7_sim_valdry.log
+2026-11-04T17:28:59+01:00 | S7 | sim valdry v31 K: start | chunk sim_valdry_v31_K.pkl
+2026-11-04T17:29:00+01:00 | S7 | sim valdry v31 K: done | chunk sim_valdry_v31_K.pkl
+2026-11-04T17:29:15+01:00 | S7 | sim valdry v31 C: start | chunk sim_valdry_v31_C.pkl
+2026-11-04T17:29:16+01:00 | S7 | sim valdry v31 C: done | chunk sim_valdry_v31_C.pkl
+2026-11-04T17:29:29+01:00 | S7 | sim valdry v31_RC5 K: start | chunk sim_valdry_v31_RC5_K.pkl
+2026-11-04T17:29:30+01:00 | S7 | sim valdry v31_RC5 K: done | chunk sim_valdry_v31_RC5_K.pkl
+2026-11-04T17:29:47+01:00 | S7 | sim valdry v31_RC5 C: start | chunk sim_valdry_v31_RC5_C.pkl
+2026-11-04T17:29:48+01:00 | S7 | sim valdry v31_RC5 C: done | chunk sim_valdry_v31_RC5_C.pkl
+2026-11-04T17:30:01+01:00 | S7 | sim valdry v31_mcSS K: start | chunk sim_valdry_v31_mcSS_K.pkl
+2026-11-04T17:30:02+01:00 | S7 | sim valdry v31_mcSS K: done | chunk sim_valdry_v31_mcSS_K.pkl
+2026-11-04T17:30:18+01:00 | S7 | sim valdry v31_mcSS C: start | chunk sim_valdry_v31_mcSS_C.pkl
+2026-11-04T17:30:18+01:00 | S7 | sim valdry v31_mcSS C: done | chunk sim_valdry_v31_mcSS_C.pkl
+2026-11-04T17:30:51+01:00 | S7 | freeze: fit cross recipe (V31 train only) + b1.5 system | tools/WP8_S7_freeze.py fit
+2026-11-04T17:31:24+01:00 | S7 | V2X VeReMi val: start | parts C:\Users\nouir\AppData\Local\Temp\claude\c--Users-nouir-PFE\157466ee-99c5-4ed8-8a90-0a01fa05dcf5\scratchpad\v2x_val\v2x_parts
+2026-11-04T17:31:25+01:00 | S7 | vehicle sources val: start | 10 drives, 8 routes
+2026-11-04T17:31:27+01:00 | S7 | vehicle sources val: done | K runs 1200, C windows 665
