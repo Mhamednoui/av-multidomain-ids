@@ -1,60 +1,50 @@
 # WP8 brief (<= 60 lines; each worker edits only its own lines)
-
 ## S0 (hold-out + pre-registration, worker opus) - REVIEW 2026-11-03
 - Locks: locks/H31.json (scored ONCE in S7, by v3 and v3.1), locks/V31_val.json (all S2-S6 choices). Rules: notes/WP8_v31.md (G1-G10, S1-S6, M4-1..15), committed 1eca013.
 - H31: KITTI 13 fresh drives (9 same-day + 4 other-day) FRESH; comma Chunk_2 RAV4 + Chunk_4 Civic FRESH; V2AIX 674 unextracted recordings FRESH; CAN / VeReMi re-used + small fresh parts; network RE-USED (exposure 7).
 - V31_val = v3 val + v3 test of KITTI / comma Chunk_1 / V2AIX; CAN / NET / VeReMi only their v3 val splits.
 - S1: results/WP8/S0/S1_download_list.json (13.0 GB transfer, 17.3 GB disk); tools/WP8_S0_*.py; report reports/WP8_S0.md.
 - Pitfalls: V2AIX recordings share site + day with train; Civic wheel speed not at 0xAA; OTIDS / normal_run not in DATASETS.md; never commit V2AIX data or per-message scores.
-
 ## P1 (paper analysis, worker sonnet) - REVIEW 2026-11-03
 - Output results/WP8/P1/ (tables md/csv, ROC png/pdf), tools/WP8_P1_curves.py, reports/WP8_P1.md.
 - GPS AUC 0.895 (row level), det 68.8% @1% FA, 74.7% @5%; LiDAR AUC 0.750 (9 attacks), 18.3% @1%, 38.5% @5%. CAN partial (raw S3 columns). Net: operating-point table only. V2X / fusion: not available without a re-run.
-
 ## S5 (CAN incremental + V2X single ego, worker sonnet) - REVIEW 2026-11-03
 - Code: can/incremental.py (IncrementalCan), v2x/ego_stream.py (EgoStream), tools/WP8_S5_{can,v2x,report}.py, tests/v31/test_s5_incremental.py; results results/WP8/S5/ (S5_acceptance.json, parts/), scores results/WP8/scores/S5/; report reports/WP8_S5.md. v3 frozen files untouched; suite 494 pass.
 - CAN: 13 captures / 14.0 M frames / 5,892 windows, 0 mismatches, max diff 0.0; p99 window 24-41 ms (limit 150); growth ratio 0.91 on the longest (8.8 M frames; limit 1.5). C1, C2 MET.
 - V2X: 64 egos (55 V2AIX Mobile val, 9 VeReMi val views): compute <= 0.027 s per stream s (limit 0.5), p99 msg <= 10.6 ms; identical on 61/64 egos; 3 V2AIX egos differ on 6 rows from CAMs received out of generation order (batch sorts by t, stream cannot). V1 MET except literal 0-mismatch (decision for supervisor).
 - Pitfalls: results/WP7/frozen_v2x is untracked in git (used read-only); only 55 of 152 Mobile val recordings have a full ego pose.
-
 - S7 owns the system/ runner wrapper for IncrementalCan and EgoStream.
-
 ## S4 (network streaming Evidence + unseen Bot, worker sonnet) - REVIEW 2026-11-03
 - Code: network/stream31.py (RunningState, Stream31 = Evidence at arrival, Stream31Final = at tick close), tools/WP8_S4_{prep,eval,stream_check,final_check,bot,report}.py, tests/v31/test_s4_{stream,regression}.py; results results/WP8/S4/, scores results/WP8/scores/S4/ (git add -f, npz ignored); report reports/WP8_S4.md. v3 files untouched; WP4 caches were deleted -> D10 rebuilt (counts equal), only train+val loaded.
 - Val (D10, 11 families): v3 macro 58.3 / FA 0.96 (reproduced exactly from the stored WP4 S7 val view). Running statistics alone (R5/R2/R1) fail N2 (-7.6/-11.8/-11.2). With one-tick carry RC5: 55.4 (-2.90 paired, margin 0.10, CI excludes 0), FA 0.93, delay 0 -> chosen by the pre-registered rule. F1 (tick-final, TRW 1 min): 57.9 (-0.34), delay 60 s median / 76 s max (v3 flow level 120 / 307 s).
 - N3: RC5 push p99 5.1 ms (v3 stall 1.4 s); stream == batch exact on real val slices. Sub-minute ticks not validated (only D23 has seconds, H31).
 - Bot: nothing counts; Bot sits in the benign bulk of every H layer, shape also on 120 benign-labelled flows (precision <= 47.6 %); beacon 27.5 % alone, size regularity 71.6 % alone (shape-dependent, 2.1 % precision), added to H at 1 % budget Bot stays 5.5 %.
 - Open for supervisor: RC5 vs F1 for S7; fusion network ECDF / tick model must be recalibrated (S2/S7). Pitfall: results/WP4/s1_clean_D10.json is rewritten by the WP4 build (key order only): restore with git checkout.
-
-
 ## S3 (LiDAR in-stack + speed, worker sonnet) - REVIEW 2026-11-03
 - Code: lidar/fast.py (v3-identical statistics, one ring assignment, voxel clustering flag), lidar/combine31.py (union with per-layer budgets), lidar/domain31.py (Domain31, stream), tools/WP8_S3_*.py, tests/v31/test_{fast,domain31}.py; results results/WP8/S3/, scores results/WP8/scores/S3/lidar_val.npz; report reports/WP8_S3.md. v3 lidar files untouched; suite 514 pass; run_all --check OK.
 - Protocol: layer references leave-one-drive-out (stricter than v3 S9): v3 rule gives FA 2.70 % and PointDrop 4.3 % there. Chosen by the registered rule (3 logged rounds): tail2h|zmulti|E7, B = 1 %: FA 0.96 %, PointDrop 67.5 % [64.0, 70.0], episodes 23/30, IS 61.2, near replace 23.6, all kinds within 2 points. L3 NOT MET (70 / 80 %); B = 1.25 %: 74.4 % (frozen_lidar31_B125, supervisor decision). L2 MET (exact). L1 speed NOT MET: median 0.14-0.18 s, p99 0.24-0.27 s (v3 1.2-1.8 s).
 - Pitfalls: exact v3 clustering = 2.4 s on dense scans (voxel 0.1 flag replaces it); L2a count statistics are drive dependent (drive 0027); sensor-fixed PointDrop is invisible after the onset scan; frozen domain 58 MB not committed (sha256 in report); parts/ and frame.pkl not committed (rebuild 16 min + 2 min).
-
 ## S1 (download, worker haiku) - REVIEW 2026-11-03
 - H31 downloaded: KITTI 13 drives (11.88 GB), comma Chunk_2/4/3 (4.58 GB), V2AIX 674 extracted (0.82 GB); ~17.3 GB on disk; free 88.99 GB. Sizes/CRC/counts match locks; sha256 filled in locks (calib zips left null).
 - Decision 3: no move (V31_val has 21 Civic routes). Decision 4: DATASETS D28 + D02n added.
 - OPEN: calibration zips list 4100 B vs server 4068-4075 B (stopped; orchestrator decides). reports/WP8_S1.md, notes/WP8_S1_download.md.
-
 ## S3b (LiDAR numba kernels, worker sonnet) - REVIEW 2026-11-03
 - Code: lidar/fast_nb.py (4 kernels: ring assignment, voxel clustering, range image, ground cells), flag in lidar/fast.py (`fast.set_numba(True)` / env AV_LIDAR_NUMBA=1, default off, numpy fallback), tests/v31/test_fast_nb.py, tools/WP8_S3b_*.py; numba==0.60.0 + llvmlite==0.43.0 in requirements.txt; report reports/WP8_S3b.md.
 - Speed (2,085 V31_val scans, stream push, warm-up excluded): median 73-76 ms, p99 110-135 ms (numpy path 141-178 / 240-294 ms). L1 MET. Warm-up 0.4-0.6 s (cache), first compile ~12 s. 0-2 other python processes during timing; repeated once.
 - Equality vs numpy path of frozen_lidar31: 0 alarm differences, max |diff| 0.0 (all layer raws, stat, score). Scores in results/WP8/scores/S3b/. S2/S7 runners should enable the flag.
-
 ## S6 (blame fixes, worker sonnet) - REVIEW 2026-11-04
 - Code: crossdomain/blame31.py (channel-graph hypothesis blame, selected_blamers() = A1; A3 = inertial alternative), tools/WP8_S6_{kitti,comma,eval,table,fixture}.py, tests/v31/test_s6_{blame31,regression}.py; results results/WP8/S6/{r1,r2,r3}_eval.json, scores results/WP8/scores/S6/; report reports/WP8_S6.md. v3 files untouched (git diff v3.0 empty); load_system(2) fixture exact.
 - V31_val vehicle block (3 logged rounds): comma GNSS drift/meaconing/doppler A1 77 % [69, 86] correct / 0 % wrong (v3 100 % undecided) B2 MET; K B3 A1 79 / 5 MET; C3, B4 met; B1 gps_can NOT MET (v3 17 / 60, A1 7 / 75, A3 43 [27, 57] / 41 [22, 60]).
 - Pitfalls: gps_can == lone LiDAR fault in the speed graph (needs the accelerometer, little time in 8-50 s runs); prior flips lone LiDAR faults and makes comma can_bus 100 % wrong (A2); filler-induced wrong blame is S7; sim accelerometer noise is an assumption.
-
-
 ## S2 (fusion false alarms, worker opus) - REVIEW 2026-11-04
 - Code: fusion/system31.py (SystemV31, Correlator31, tick_blame31, load_system31), tools/WP8_S2_{build,sim,freeze}.py, tests/v31/test_s2_{system31,regression}.py; results results/WP8/S2/ (r1_eval, r1_grid, r1chk_eval), frozen results/WP8/S2/frozen_system31/ (sha256 a8994883...), scores results/WP8/scores/S2/; report reports/WP8_S2.md. v3 fusion files untouched; suite 542 pass.
 - V31_val, LOGO entry ECDFs + LOTO thresholds, 648 candidates, one round: chosen MX|L100|b2|m2w5|g15|d0|k1 (equal per-domain split of 2 % = max; v3 persistence; tick_blame31 + A1). K FA 1.92 % [1.38, 3.45], 5.09 events/h, SAFE_STOP 0, detection 78.2 % [76.1, 80.0] (R0 v3 recipe 53.3 %), held-out 82.4 %, blame 79.9 / 7.0; C FA 1.85 %, 4.95/h, 88.1 %. All S2 rows MET.
 - Comma GNSS system blame fixed (drift 73/10, meaconing 64/0, doppler 94/0 vs v3 blame 0 % correct). LiDAR weak in system (PointDrop episodes 0/30): M4-8 expected NOT met. FA CI upper > 3 % (drift risk); clean SAFE_STOP 0 for every candidate (bound not exercised).
 - Pitfalls: frozen_lidar31 references contain the val drives (use LODO scores on val); noisy_or over 6 entries dilutes one strong domain; tests/v31/test_s6_regression diff check narrowed to modified v3 files.
-
 ## S7 (final H31 scoring, M4, worker sonnet) - REVIEW 2026-11-05
 - freeze.json 8aac3dd before any H31 read; H31 sha256 all_ok; R2 regression 7/7. Outputs: reports/M4.md, WP8_S7.md, RESULTS_v31.md, results/WP8/S7/ (m4_verdict.json), scores results/WP8/scores/S7, tools/WP8_S7_*.py, system/runners31.py.
 - M4 NOT MET, 7/18: K clean FA 12.2 % (v3 12.4), C 6.1 %; events/h 24.8 / 22.6 (v3 27.9 / 28.9); drive 0093 alarms GPS 94 % / cross 91 % / LiDAR 86 %; LiDAR PointDrop scan 66 % vs v3 32 % (fresh); comma blame 81/0; K gps_can 13/81; timing under load.
-
+## S8 (post-M4 false-alarm diagnostic + sensor-health gate, worker sonnet) - REVIEW 2026-11-05
+- Root cause: H31 drive 0093 OXTS navigation record never converged (pos_accuracy 19-44 m on every frame, others <= 1.62; lateral velocity 14 m/s; heading off by up to 160 deg); GPS/cross/LiDAR L2d fire because every sim channel + the ego pose derive from OXTS. (a) data defect, not a detector bug. Others (0047/0009 start-up, LiDAR L2a 0009/0064, V2AIX Stationary day shift) = genuine tail, no fix.
+- Fix: system/health31.py gate (pos_acc > 5 m or vel_acc > 0.5 m/s; withholds GPS/cross, masks L2c/L2d; sensor-health, not a verdict), pre-registered (notes/WP8_S8.md, b1d2749). V31_val: fires 0, identical. H31 exposure 2 (NOT fresh): K FA 12.2 -> 4.7 %, events/h 24.8 -> 22.4, SAFE_STOP 6.43 -> 0.88, det 87.1 -> 84.6; LiDAR scan FA 8.4 -> 2.4, PointDrop 66.1 -> 59.4. M4 still NOT MET.
+- Files: reports/WP8_S8.md, results/WP8/S8/*.json, tools/WP8_S8_*.py, tests/v31/test_s8_health.py. Pitfall: gate is exploitable if a spoofer controls receiver accuracy fields (report section 6).

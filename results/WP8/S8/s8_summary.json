@@ -1,0 +1,92 @@
+{
+ "regression_A3_ungated_equals_S7": true,
+ "val_gate_fired_ticks": [
+  0,
+  0
+ ],
+ "val_K": {
+  "fa_ungated": 0.01804245283018868,
+  "fa_gated": 0.01804245283018868,
+  "det_ungated": 0.7286792452830189,
+  "det_gated": 0.7286792452830189
+ },
+ "h31_K": {
+  "fa_ungated": 0.12240896358543417,
+  "fa_gated": 0.04695378151260504,
+  "fa_gated_evaluable": 0.05125558995528036,
+  "events_ungated": 24.831932773109244,
+  "events_gated": 22.436974789915965,
+  "safe_stop_ungated": 6.428571428571428,
+  "safe_stop_gated": 0.8823529411764706,
+  "det_ungated": 0.8711888111888112,
+  "det_gated": 0.8458275058275057,
+  "held_ungated": 0.9083333333333333,
+  "held_gated": 0.8683760683760684,
+  "blind_share": 0.08392857142857142,
+  "health_episodes_per_hour": 5.798319327731093,
+  "paired": {
+   "fa_tick": {
+    "diff": -0.07545518207282913,
+    "ci": [
+     -0.09475148123765637,
+     -0.052905259236973784
+    ]
+   },
+   "events_per_hour": {
+    "diff": -2.3949579831932795,
+    "ci": [
+     -3.7113905772524274,
+     -1.1109195402298893
+    ]
+   },
+   "det_single": {
+    "diff": -0.02536130536130536,
+    "ci": [
+     -0.03911771561771562,
+     -0.012580419580419618
+    ],
+    "types": 55
+   },
+   "det_heldout": {
+    "diff": -0.039957264957264954,
+    "ci": [
+     -0.08974358974358976,
+     0.0
+    ],
+    "types": 12
+   },
+   "blame_correct": {
+    "diff": 0.022023725936807768,
+    "ci": [
+     0.011145421393974668,
+     0.030863167687397712
+    ],
+    "types": 53
+   },
+   "blame_wrong": {
+    "diff": -0.022023725936807768,
+    "ci": [
+     -0.03086316768739772,
+     -0.011145421393974677
+    ],
+    "types": 53
+   }
+  }
+ },
+ "h31_C_unchanged": true,
+ "lidar": {
+  "clean_fa_ungated": 0.08384195309990362,
+  "clean_fa_gated": 0.024253132026983617,
+  "pointdrop_ungated": 0.6610576923076923,
+  "pointdrop_gated": 0.59375,
+  "pointdrop_excl_0093": 0.6379132231404959
+ },
+ "attack_gate_share": {
+  "labelled_ticks": 93990,
+  "labelled_gated": 6369,
+  "share": 0.06776252792850303,
+  "overlap_detection_ungated": 1.0,
+  "overlap_detection_gated": 0.38562091503267976,
+  "n_overlap": 153
+ }
+}

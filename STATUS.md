@@ -60,7 +60,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP8 v3.1 | S2 | APPROVED | worker opus (medium, T4) | 2026-11-04 | V31_val all S2 rows MET: chosen MX/L100/b2 (equal split = max), K FA 1.92 %, 5.09 ev/h, det 78.2 %; frozen_system31 sha256 a8994883; reports/WP8_S2.md |
 | WP8 v3.1 | S7 | APPROVED | worker sonnet (high, T3) | 2026-11-05 | M4 NOT MET (7 of 18 rows): H31 clean FA K 12.2 % / C 6.1 % (drive 0093 anomaly), events/h 24.8 / 22.6; PointDrop scan +34 pts (fresh); comma GNSS blame fixed; reports/M4.md, WP8_S7.md, RESULTS_v31.md |
 | WP8 v3.1 | P1 | APPROVED | worker sonnet (medium, T2) | 2026-11-03 | paper curves / AUC from saved v3 outputs |
-| WP8 v3.1 | S8 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-05 | post-M4 diagnostic: H31 false-alarm root cause (drive 0093, GPS 7.2 % vs 1.4 % val, LiDAR scan FA, V2AIX Stationary); fixes on validation only; any H31 re-run labelled exposure 2 |
+| WP8 v3.1 | S8 | REVIEW | worker sonnet (high, T3) | 2026-11-05 | 0093 = non-converged OXTS record (data defect); pre-registered sensor-health gate (system/health31.py): V31_val no-op, H31 exposure 2 (NOT fresh) K FA 12.2 -> 4.7 %, SAFE_STOP 6.43 -> 0.88/h, det 87.1 -> 84.6; M4 still NOT MET; reports/WP8_S8.md |
 
 ## WP9 benchmark track (plan: workpackages/WP9_benchmark.md; deadline 2026-11-30)
 
