@@ -1,0 +1,22 @@
+{
+ "VeReMi_B3_test": {
+  "scored_on": "2026-11-05T18:17:22+0100",
+  "models": [
+   "xgb_D_noT_d6",
+   "v3_L4_reference"
+  ],
+  "lock": "locks/WP9_veremi.json",
+  "test_blocks": [
+   2,
+   16,
+   24,
+   30,
+   32,
+   35,
+   40,
+   44
+  ],
+  "exposure_count": 1,
+  "note": "first test scoring of these blocks (never WP5/WP8 test); WP5 trained and tuned v3 L4 and its Kalman noise on them as train/val blocks; B3 refits all. H31 reused WP5 test blocks are NOT used in B3."
+ }
+}
