@@ -770,3 +770,16 @@
 2026-11-05T19:22:59+01:00 | B4 | LiDAR test done; generating tables (tools/WP9_B4_report.py), exposure | write reports/WP9_B4.md, brief, STATUS, commit
 2026-11-05T19:24:17+01:00 | B4 | report, brief, STATUS REVIEW written; final commit | stop, handback
 2026-11-05T19:24:46+01:00 | S8 | diagnosis done (drive 0093 = OXTS GNSS/INS reference never converged); writing notes/WP8_S8.md with diagnosis + pre-registered fix rules, then COMMIT before any implementation | implement system/health31.py after commit
+2026-11-05T19:27:56+01:00 | S8 | gate stats on all 36 drives (A1/A2) | tools/WP8_S8_gate_stats.py -> results/WP8/S8/gate_stats.json
+2026-11-05T19:28:44+01:00 | S8 | system sim on V31_val sources (gate no-op check, A1/A3) | python tools/WP8_S8_sim.py --material val (bg, log results/WP8/logs/S8_sim_val.log); chunks results/WP8/S8/parts/sim_s8_val_*
+2026-11-05T19:28:46+01:00 | S8 | system simulation s8_val: start | material val; chunks results/WP8/S8/parts/sim_s8_val_*; log results/WP8/logs/S8_sim_val.log
+2026-11-05T19:28:48+01:00 | S8 | sim s8_val v31_ungated K: start | chunk sim_s8_val_v31_ungated_K.pkl
+2026-11-05T19:28:49+01:00 | S8 | sim s8_val v31_ungated K: done | chunk sim_s8_val_v31_ungated_K.pkl
+2026-11-05T19:29:05+01:00 | S8 | sim s8_val v31_gated K: start | chunk sim_s8_val_v31_gated_K.pkl
+2026-11-05T19:29:05+01:00 | S8 | sim s8_val v31_gated K: done | chunk sim_s8_val_v31_gated_K.pkl
+2026-11-05T19:29:36+01:00 | S8 | sim s8_val v31_ungated C: start | chunk sim_s8_val_v31_ungated_C.pkl
+2026-11-05T19:29:37+01:00 | S8 | sim s8_val v31_ungated C: done | chunk sim_s8_val_v31_ungated_C.pkl
+2026-11-05T19:29:48+01:00 | S8 | sim s8_val v31_gated C: start | chunk sim_s8_val_v31_gated_C.pkl
+2026-11-05T19:29:48+01:00 | S8 | sim s8_val v31_gated C: done | chunk sim_s8_val_v31_gated_C.pkl
+2026-11-05T19:30:29+01:00 | S8 | system simulation s8_val: start | material val; chunks results/WP8/S8/parts/sim_s8_val_*; log results/WP8/logs/S8_sim_val.log
+2026-11-05T19:31:51+01:00 | S8 | system simulation s8_val: done | results/WP8/S8/system_s8_val.json

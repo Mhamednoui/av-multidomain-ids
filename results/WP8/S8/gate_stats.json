@@ -1,0 +1,435 @@
+{
+ "rule": {
+  "pos_acc_max_m": 5.0,
+  "vel_acc_max_mps": 0.5
+ },
+ "drives": {
+  "H31:0004": {
+   "set": "H31",
+   "frames": 339,
+   "degraded_frames": 0,
+   "ticks_all_phases": 352,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.55823382197785,
+   "pos_acc_max": 0.60972534800515,
+   "vel_acc_max": 0.053037722424704
+  },
+  "H31:0009": {
+   "set": "H31",
+   "frames": 447,
+   "degraded_frames": 0,
+   "ticks_all_phases": 462,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.21645322820415,
+   "pos_acc_max": 0.48560065897814,
+   "vel_acc_max": 0.069310893804654
+  },
+  "H31:0016": {
+   "set": "H31",
+   "frames": 279,
+   "degraded_frames": 0,
+   "ticks_all_phases": 290,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.09990495483208,
+   "pos_acc_max": 0.15456390264224,
+   "vel_acc_max": 0.037443290453698
+  },
+  "H31:0023": {
+   "set": "H31",
+   "frames": 474,
+   "degraded_frames": 0,
+   "ticks_all_phases": 491,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.11800423721206,
+   "pos_acc_max": 0.24080074750715,
+   "vel_acc_max": 0.058137767414995
+  },
+  "H31:0026": {
+   "set": "H31",
+   "frames": 158,
+   "degraded_frames": 0,
+   "ticks_all_phases": 164,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.04172529209005,
+   "pos_acc_max": 0.11244998888395,
+   "vel_acc_max": 0.0367695526217
+  },
+  "H31:0032": {
+   "set": "H31",
+   "frames": 390,
+   "degraded_frames": 0,
+   "ticks_all_phases": 404,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.52891587232754,
+   "pos_acc_max": 0.73417300413458,
+   "vel_acc_max": 0.097948966303887
+  },
+  "H31:0047": {
+   "set": "H31",
+   "frames": 837,
+   "degraded_frames": 0,
+   "ticks_all_phases": 867,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.012806248474866,
+   "pos_acc_max": 0.21858865478336,
+   "vel_acc_max": 0.049497474683058
+  },
+  "H31:0056": {
+   "set": "H31",
+   "frames": 294,
+   "degraded_frames": 0,
+   "ticks_all_phases": 303,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.14569145479403,
+   "pos_acc_max": 0.26873406929528,
+   "vel_acc_max": 0.043840620433566
+  },
+  "H31:0061": {
+   "set": "H31",
+   "frames": 703,
+   "degraded_frames": 0,
+   "ticks_all_phases": 727,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.042201895692018,
+   "pos_acc_max": 0.41012437138019,
+   "vel_acc_max": 0.055226805085936
+  },
+  "H31:0064": {
+   "set": "H31",
+   "frames": 570,
+   "degraded_frames": 0,
+   "ticks_all_phases": 589,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.12163058825805,
+   "pos_acc_max": 0.3635519220139,
+   "vel_acc_max": 0.046010868281309
+  },
+  "H31:0084": {
+   "set": "H31",
+   "frames": 383,
+   "degraded_frames": 0,
+   "ticks_all_phases": 396,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.064443773942872,
+   "pos_acc_max": 0.30405920476118,
+   "vel_acc_max": 0.06293647591024
+  },
+  "H31:0093": {
+   "set": "H31",
+   "frames": 433,
+   "degraded_frames": 433,
+   "ticks_all_phases": 448,
+   "gated_ticks": 448,
+   "gated_tick_share": 1.0,
+   "pos_acc_min": 18.673957079312,
+   "pos_acc_max": 44.349402171844,
+   "vel_acc_max": 1.1654634271396
+  },
+  "H31:0101": {
+   "set": "H31",
+   "frames": 936,
+   "degraded_frames": 0,
+   "ticks_all_phases": 967,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.014212670403552,
+   "pos_acc_max": 0.88688668949308,
+   "vel_acc_max": 0.030413812651491
+  },
+  "V31_val:0001": {
+   "set": "V31_val",
+   "frames": 108,
+   "degraded_frames": 0,
+   "ticks_all_phases": 111,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.026907248094147,
+   "pos_acc_max": 0.028425340807104,
+   "vel_acc_max": 0.012727922061358
+  },
+  "V31_val:0005": {
+   "set": "V31_val",
+   "frames": 154,
+   "degraded_frames": 0,
+   "ticks_all_phases": 159,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.30486882425069,
+   "pos_acc_max": 0.51960850647386,
+   "vel_acc_max": 0.077897368376602
+  },
+  "V31_val:0011": {
+   "set": "V31_val",
+   "frames": 233,
+   "degraded_frames": 0,
+   "ticks_all_phases": 241,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.090210864090751,
+   "pos_acc_max": 0.25914667661384,
+   "vel_acc_max": 0.046669047558312
+  },
+  "V31_val:0027": {
+   "set": "V31_val",
+   "frames": 188,
+   "degraded_frames": 0,
+   "ticks_all_phases": 194,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.43740370368802,
+   "pos_acc_max": 0.46524402199276,
+   "vel_acc_max": 0.055865910893854
+  },
+  "V31_val:0028": {
+   "set": "V31_val",
+   "frames": 430,
+   "degraded_frames": 0,
+   "ticks_all_phases": 445,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.44761143863847,
+   "pos_acc_max": 0.52225089755787,
+   "vel_acc_max": 0.059413803110052
+  },
+  "V31_val:0035": {
+   "set": "V31_val",
+   "frames": 131,
+   "degraded_frames": 0,
+   "ticks_all_phases": 135,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.017691806012954,
+   "pos_acc_max": 0.021931712199461,
+   "vel_acc_max": 0.014142135623731
+  },
+  "V31_val:0039": {
+   "set": "V31_val",
+   "frames": 395,
+   "degraded_frames": 0,
+   "ticks_all_phases": 407,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.21431052237349,
+   "pos_acc_max": 0.33025596133908,
+   "vel_acc_max": 0.045967379738245
+  },
+  "V31_val:0052": {
+   "set": "V31_val",
+   "frames": 78,
+   "degraded_frames": 0,
+   "ticks_all_phases": 80,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.091438503924769,
+   "pos_acc_max": 0.10131633629381,
+   "vel_acc_max": 0.027586228448267
+  },
+  "V31_val:0079": {
+   "set": "V31_val",
+   "frames": 100,
+   "degraded_frames": 0,
+   "ticks_all_phases": 103,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.30131876808457,
+   "pos_acc_max": 0.31872872478018,
+   "vel_acc_max": 0.035355339059327
+  },
+  "V31_val:0095": {
+   "set": "V31_val",
+   "frames": 268,
+   "degraded_frames": 0,
+   "ticks_all_phases": 277,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.68753836256605,
+   "pos_acc_max": 1.6216661185337,
+   "vel_acc_max": 0.11985407794481
+  },
+  "train:0002": {
+   "set": "train",
+   "frames": 77,
+   "degraded_frames": 0,
+   "ticks_all_phases": 79,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.028425340807104,
+   "pos_acc_max": 0.032202484376209,
+   "vel_acc_max": 0.015620499351813
+  },
+  "train:0013": {
+   "set": "train",
+   "frames": 144,
+   "degraded_frames": 0,
+   "ticks_all_phases": 149,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.14961617559609,
+   "pos_acc_max": 0.30076070222022,
+   "vel_acc_max": 0.055172456896535
+  },
+  "train:0015": {
+   "set": "train",
+   "frames": 297,
+   "degraded_frames": 0,
+   "ticks_all_phases": 307,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.071589105316382,
+   "pos_acc_max": 0.13228000604778,
+   "vel_acc_max": 0.014866068747319
+  },
+  "train:0017": {
+   "set": "train",
+   "frames": 114,
+   "degraded_frames": 0,
+   "ticks_all_phases": 118,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.052801515129776,
+   "pos_acc_max": 0.060307545133258,
+   "vel_acc_max": 0.013453624047074
+  },
+  "train:0019": {
+   "set": "train",
+   "frames": 481,
+   "degraded_frames": 0,
+   "ticks_all_phases": 498,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.022022715545545,
+   "pos_acc_max": 0.17018225524419,
+   "vel_acc_max": 0.033941125496954
+  },
+  "train:0020": {
+   "set": "train",
+   "frames": 86,
+   "degraded_frames": 0,
+   "ticks_all_phases": 89,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.14354441821262,
+   "pos_acc_max": 0.29920728600754,
+   "vel_acc_max": 0.059413803110052
+  },
+  "train:0029": {
+   "set": "train",
+   "frames": 430,
+   "degraded_frames": 0,
+   "ticks_all_phases": 445,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.5473170927351,
+   "pos_acc_max": 0.74276241154221,
+   "vel_acc_max": 0.033301651610693
+  },
+  "train:0046": {
+   "set": "train",
+   "frames": 125,
+   "degraded_frames": 0,
+   "ticks_all_phases": 129,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.26806902096289,
+   "pos_acc_max": 0.29207704463035,
+   "vel_acc_max": 0.029698484809835
+  },
+  "train:0048": {
+   "set": "train",
+   "frames": 22,
+   "degraded_frames": 0,
+   "ticks_all_phases": 22,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.11469088891451,
+   "pos_acc_max": 0.11751595636338,
+   "vel_acc_max": 0.023345235059858
+  },
+  "train:0060": {
+   "set": "train",
+   "frames": 78,
+   "degraded_frames": 0,
+   "ticks_all_phases": 80,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.014866068747319,
+   "pos_acc_max": 0.016970562748477,
+   "vel_acc_max": 0.011313708498985
+  },
+  "train:0070": {
+   "set": "train",
+   "frames": 420,
+   "degraded_frames": 0,
+   "ticks_all_phases": 434,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.16192899678563,
+   "pos_acc_max": 0.30410853325745,
+   "vel_acc_max": 0.047634021455258
+  },
+  "train:0106": {
+   "set": "train",
+   "frames": 227,
+   "degraded_frames": 0,
+   "ticks_all_phases": 234,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.41794856142832,
+   "pos_acc_max": 1.3564018578578,
+   "vel_acc_max": 0.15570806016388
+  },
+  "train:0113": {
+   "set": "train",
+   "frames": 87,
+   "degraded_frames": 0,
+   "ticks_all_phases": 89,
+   "gated_ticks": 0,
+   "gated_tick_share": 0.0,
+   "pos_acc_min": 0.58094147725911,
+   "pos_acc_max": 0.64505658666508,
+   "vel_acc_max": 0.06576473218983
+  }
+ },
+ "summary_V31_val": {
+  "drives": 10,
+  "drives_gated": 0,
+  "frames": 2085,
+  "degraded_frames": 0,
+  "gated_tick_share": 0.0
+ },
+ "summary_train": {
+  "drives": 13,
+  "drives_gated": 0,
+  "frames": 2588,
+  "degraded_frames": 0,
+  "gated_tick_share": 0.0
+ },
+ "summary_H31": {
+  "drives": 13,
+  "drives_gated": 1,
+  "frames": 6243,
+  "degraded_frames": 433,
+  "gated_tick_share": 0.0693498452012384
+ },
+ "sensitivity_pos_acc_m": {
+  "largest_pos_acc_on_ungated_drives": 1.6216661185337,
+  "gated_drives": [
+   "H31:0093"
+  ],
+  "smallest_pos_acc_of_gated_drives": {
+   "H31:0093": 18.673957079312
+  },
+  "note": "any POS_ACC_MAX between the first and the min of the second value gives the same gated drives and ticks on the 36 drives (velocity rule included or not)"
+ }
+}
