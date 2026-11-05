@@ -763,3 +763,6 @@
 2026-11-05T19:17:35+01:00 | B2 | D23x B test start (log results/WP9/logs/B2_D23x_B_test.log)
 2026-11-05T19:17:44+01:00 | B2 | XGB named controls D23x G, D23x B (log results/WP9/logs/B2_ctl_xgb2.log)
 2026-11-05T19:18:32+01:00 | B4 | LiDAR full model RED FLAG (temporal gain 0.91); amendment 3 = static 211-column candidate; committing record, then fit static (bg) | controls static, commit, test
+2026-11-05T19:18:56+01:00 | S8 | GPS-domain per-layer clean FA per drive (H31 + V31_val; frozen_gps; clean runs only, 10 phases) | tools/WP8_S8_gps_layers.py -> results/WP8/S8/gps_layers.json (bg, log results/WP8/logs/S8_gps_layers.log)
+2026-11-05T19:20:38+01:00 | B4 | LiDAR static fit done (val mean TPR10 0.467); static controls (bg) | commit, then test
+2026-11-05T19:21:07+01:00 | B4 | static LiDAR controls ok (no flag); committing then LiDAR TEST scoring (tools/WP9_B4_lidar_test.py, bg) | tables + report

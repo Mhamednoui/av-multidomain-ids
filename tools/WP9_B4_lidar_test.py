@@ -83,21 +83,27 @@ def macro_f1(meta, s, proba, thr):
 
 def main():
     t0 = time.time()
-    for f in ("B4_lidar_selection.json", "B4_lidar_controls.json"):
+    for f in ("B4_lidar_selection.json", "B4_lidar_controls.json", "B4_lidar_selection_static.json", "B4_lidar_controls_static.json"):
         assert committed(OUT / f), f"{f} must be committed before the test is scored"
-    sel = json.loads((OUT / "B4_lidar_selection.json").read_text())
+    ctl = json.loads((OUT / "B4_lidar_controls_static.json").read_text())
+    assert not ctl["red_flag"], "static candidate is red-flagged: not eligible"
+    full_ctl = json.loads((OUT / "B4_lidar_controls.json").read_text())
+    assert full_ctl["red_flag"], "full model was expected to be flagged (amendment 3); it is never scored here"
+    sel = json.loads((OUT / "B4_lidar_selection_static.json").read_text())
     ch = sel["chosen"]
+    nc = L.N_DESCR
     model_dir = L.CACHE.parent / "lidar_model"
     mva, Xva = L.load("val")
     mtr, Xtr = L.load("train")
     mte, Xte = L.load("test")
+    Xtr, Xva, Xte = Xtr[:, :nc], Xva[:, :nc], Xte[:, :nc]
     assert not set(mte.drive) & (set(mva.drive) | set(mtr.drive))
     print("test rows", len(mte), "clean", int((mte.attack == "clean").sum()), flush=True)
-    res = {"n_test_rows": int(len(mte)), "n_test_clean": int((mte.attack == "clean").sum()), "n_test_scans_attacked": int((mte.attack == "PointDrop").sum()), "ops": OPS, "detectors": {}}
+    res = {"n_test_rows": int(len(mte)), "n_test_clean": int((mte.attack == "clean").sum()), "n_test_scans_attacked": int((mte.attack == "PointDrop").sum()), "ops": OPS, "variant": "static (first 211 columns; the full 429-column model is red-flagged and not test-scored)", "detectors": {}}
     sc = {}
     # ---- supervised (chosen) and phys-only
     m = xgb.XGBClassifier()
-    m.load_model(str(model_dir / "chosen.json"))
+    m.load_model(str(model_dir / "chosen_static.json"))
     nocmp = ~mtr.attack.str.startswith("cmp_").to_numpy()
     mp = fit(ch["params"], ch["weight_power"], Xtr[nocmp], mtr.cls.to_numpy()[nocmp], Xva, mva.cls.to_numpy(), n_rounds=ch["trees"])
     for name, mod in (("supervised", m), ("supervised_phys_only", mp)):

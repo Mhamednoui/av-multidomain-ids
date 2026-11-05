@@ -1,0 +1,106 @@
+{
+ "variant": "static",
+ "rules": {
+  "shuffle_band": [
+   0.42,
+   0.58
+  ],
+  "red_flag": "one feature > 0.40 of total gain, or temporal columns (211:) > 0.70"
+ },
+ "chosen": {
+  "trial": 8,
+  "params": {
+   "max_depth": 8,
+   "learning_rate": 0.2,
+   "subsample": 1.0,
+   "colsample_bytree": 0.5,
+   "min_child_weight": 3,
+   "reg_lambda": 1.0
+  },
+  "weight_power": 0.5,
+  "trees": 15,
+  "val_obj_tpr10_mean": 0.46726726726726725,
+  "val_obj_tpr1_mean": 0.30990990990990996,
+  "val_auc_any": 0.7209116220045182,
+  "tpr10": {
+   "ph_replace_near": 0.42162162162162165,
+   "ph_replace_far": 0.10810810810810811,
+   "ph_budget_near": 0.10810810810810811,
+   "ph_budget_far": 0.10810810810810811,
+   "PointDrop": 0.8648648648648649,
+   "IntensitySpoof": 1.0,
+   "cmp_boxcloud": 0.4648648648648649,
+   "cmp_mradd_near": 0.8756756756756757,
+   "cmp_mradd_far": 0.25405405405405407
+  }
+ },
+ "real_val_auc_any": 0.7209116220045182,
+ "val_auc_per_drive": {
+  "0011": 0.7448699528440907,
+  "0027": 0.7178366296013354,
+  "0035": 0.6992035742035742
+ },
+ "row_shuffle_val_auc": [
+  0.48172544128828276,
+  0.5030724713784822,
+  0.5220860204466762
+ ],
+ "row_shuffle_pass": true,
+ "within_scan_perm_val_auc": [
+  0.5833035221013363,
+  0.5971342927627081,
+  0.5017492902738805,
+  0.5043103212502119,
+  0.5568256781371536
+ ],
+ "within_scan_perm_pass": false,
+ "within_scan_perm_summary": {
+  "min": 0.5017492902738805,
+  "max": 0.5971342927627081,
+  "mean": 0.5486646209050581
+ },
+ "top_gain_share": [
+  [
+   "sect_hifrac_max",
+   0.2321378119915341
+  ],
+  [
+   "sect_2nd_min_ratio",
+   0.1058677871971205
+  ],
+  [
+   "sect_min_ratio",
+   0.09357206227105914
+  ],
+  [
+   "i_high_frac",
+   0.06472055745463631
+  ],
+  [
+   "sect_imean_peak",
+   0.0640894448655043
+  ],
+  [
+   "sect_std_ratio",
+   0.04933439243287088
+  ],
+  [
+   "sect_hifrac_2nd",
+   0.024808767559526552
+  ],
+  [
+   "n_sparse_sect",
+   0.024660538042888185
+  ],
+  [
+   "dr_patch_max_10x50",
+   0.023264937309000384
+  ],
+  [
+   "n_pts",
+   0.015207326223213729
+  ]
+ ],
+ "temporal_gain_share": 0.0,
+ "red_flag": false
+}

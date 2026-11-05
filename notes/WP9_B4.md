@@ -107,3 +107,10 @@
 - Amendment 3 (decided on validation numbers, before any test row is scored): candidate B = STATIC descriptor only (first 211 columns, one scan, no previous scan) with the same 12-trial search, selection criterion and tie rules, controls (shuffle, within-scan permutation restricted to attacked scans, importance flag).
   Eligibility rule: a candidate whose importance flag is raised is not test-scored. If B passes it, B is the supervised row (headline), the full model is reported on validation only ("flagged, not test-scored; release is a supervisor decision"). If B is flagged too, no supervised LiDAR test row is produced and the report says so.
   The phys-only secondary row (cmp_* unseen) is built on the same columns as the eligible model.
+
+## 2026-11-05 LiDAR static candidate on validation (still no test row scored)
+- Static candidate (211 columns, chosen trial 8, depth 8, lr 0.2, 15 trees, weight power 0.5): validation mean TPR@FPR10% 0.467 (@1% 0.310), AUC any-attack 0.721. Validation TPR@10%: ph_replace_near 0.422, ph_replace_far 0.108, ph_budget_near 0.108, ph_budget_far 0.108,
+  PointDrop 0.865, IntensitySpoof 1.0, cmp_boxcloud 0.465, cmp_mradd_near 0.876, cmp_mradd_far 0.254.
+- Controls (results/WP9/B4_lidar_controls_static.json): row-shuffled labels 0.482/0.503/0.522 PASS; within-scan permutation (attacked scans only) 0.583/0.597/0.502/0.504/0.557: two of five seeds just above the band 0.58 = FAIL as written (spread 0.50-0.60, mean 0.55;
+  interpretation: nulls centre slightly above 0.5 because 3 validation drives are few, the real AUC 0.72 is outside the null range); importance: top feature sect_hifrac_max 0.232, temporal block 0 => no red flag. The static candidate is eligible and becomes the supervised row.
+- The full 429-column model stays flagged and is not test-scored. Consequence for the expected result: L1 (NAIVE-ADD pooled TPR@10% >= 0.85) is very unlikely to be met (validation: 0.465 / 0.876 / 0.254).
