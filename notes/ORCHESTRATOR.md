@@ -278,3 +278,5 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
 - 2026-11-04 running: S7 a34beaac5367006c0 (sonnet high; H31 single scoring: if interrupted, resume ONLY from its chunks, never restart scoring), B1 a587cd9fa1959829a, B2 aa9cb986a2f601ad4. Next: B3, B4 when a slot frees; B5 last.
 | 2026-11-04 | WP9 | B1 | APPROVED. Car-Hacking F1 0.999 (= leaky bar, clean split); ROAD 0.829 (bar 0.32-0.75); D11 0.80 at 1% budget (bar 0.98), 0.96-0.985 at val-F1 threshold (secondary, labelled); unknown vehicle FPR 100%; shuffled control fails on ROAD/D11 (capture regime) -> stated. Launched B3. 11/16. |
 - 2026-11-04 running: S7 a34beaac5367006c0, B2 aa9cb986a2f601ad4, B3 aa10cc0d7cdb425b4. Next: B4 when a slot frees; B5 last.
+
+- 2026-11-05 18:40 WP9 B3 APPROVED (review: lock 790ae6f before models, controls e8ce480 before test 76ee2a1, test once, JSON matches reply). Caveats recorded in notes/WP9_brief.md. B4 (GPS+LiDAR, T3) launched. Progress 12/16 = 75%.
