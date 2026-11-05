@@ -94,6 +94,45 @@
     "train": 0
    },
    "scores": "results/WP9/scores/B2/D10o_T_test.npz"
+  },
+  {
+   "table": "D23x",
+   "protocol": "B",
+   "test_rows": 1004186,
+   "lock": "locks/WP9_D23x.json",
+   "part_sha256": "cdca7bc409556c1e31ccfcf6d28827ec4579aaf9bf4db07debcb45d78f261ba7",
+   "scored_at": "2026-11-05T19:20:04",
+   "times_scored": 1,
+   "model": "rf_f76",
+   "relation_to_v3": "different dataset from the v3 D23 table used in WP4 (regenerated flows); the v3 D23 test was never used for model selection in B2",
+   "b2_test_rows_by_v3_split": null,
+   "scores": "results/WP9/scores/B2/D23x_B_test.npz"
+  },
+  {
+   "table": "D23x",
+   "protocol": "G",
+   "test_rows": 1523412,
+   "lock": "locks/WP9_D23x.json",
+   "part_sha256": "e970389453b65f5ed5c44b4ccaf9e9e2dbc84c1990fb69266ccf9c8d8420775f",
+   "scored_at": "2026-11-05T18:50:33",
+   "times_scored": 1,
+   "model": "rf_f76",
+   "relation_to_v3": "different dataset from the v3 D23 table used in WP4 (regenerated flows); the v3 D23 test was never used for model selection in B2",
+   "b2_test_rows_by_v3_split": null,
+   "scores": "results/WP9/scores/B2/D23x_G_test.npz"
+  },
+  {
+   "table": "D23x",
+   "protocol": "T",
+   "test_rows": 947073,
+   "lock": "locks/WP9_D23x.json",
+   "part_sha256": "348b027fb71701008b62bdcea7f2578cde0074d4c12360c8fa90e91bcf301748",
+   "scored_at": "2026-11-05T18:23:57",
+   "times_scored": 1,
+   "model": "rf_f76",
+   "relation_to_v3": "different dataset from the v3 D23 table used in WP4 (regenerated flows); the v3 D23 test was never used for model selection in B2",
+   "b2_test_rows_by_v3_split": null,
+   "scores": "results/WP9/scores/B2/D23x_T_test.npz"
   }
  ]
 }

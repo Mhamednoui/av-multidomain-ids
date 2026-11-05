@@ -1,0 +1,26 @@
+{
+ "cand": {
+  "id": "xgb_d6_f76",
+  "kind": "xgb",
+  "depth": 6,
+  "feats": "f76"
+ },
+ "runs": [
+  {
+   "seed": 1,
+   "macro_f1": 0.09568456504197356,
+   "auc_binary": 0.520609475373099
+  },
+  {
+   "seed": 2,
+   "macro_f1": 0.09549217199151945,
+   "auc_binary": 0.5402409638615796
+  },
+  {
+   "seed": 3,
+   "macro_f1": 0.09568459945108557,
+   "auc_binary": 0.5504951549160686
+  }
+ ],
+ "note": "amendment diagnostic (validation only); the registered control is *_control.json"
+}

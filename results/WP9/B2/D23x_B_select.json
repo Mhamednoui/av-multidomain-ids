@@ -1,0 +1,66 @@
+{
+ "selected": {
+  "id": "rf_f76",
+  "kind": "rf",
+  "feats": "f76"
+ },
+ "eligible_val": [
+  "BENIGN",
+  "Bot",
+  "DDoS-HOIC",
+  "DDoS-LOIC-HTTP",
+  "DDoS-LOIC-UDP",
+  "DoS-GoldenEye",
+  "DoS-Slowloris",
+  "Infiltration-NMAP",
+  "SSH-Patator"
+ ],
+ "val": {
+  "xgb_d6_f76": {
+   "macro_f1": 0.931896065406209,
+   "fpr": 0.0007989357865056945,
+   "auc": 0.9999982276649904,
+   "top_feature": [
+    "PSH Flag Cnt",
+    0.110806301378731
+   ]
+  },
+  "xgb_d6_c60": {
+   "macro_f1": 0.9225351154724637,
+   "fpr": 0.0010704188207553145,
+   "auc": 0.9999937960248632,
+   "top_feature": [
+    "PSH Flag Cnt",
+    0.08435396859089762
+   ]
+  },
+  "xgb_d10_f76": {
+   "macro_f1": 0.9339247373801095,
+   "fpr": 0.0008260840899306787,
+   "auc": 0.999998365880766,
+   "top_feature": [
+    "PSH Flag Cnt",
+    0.11069577252675752
+   ]
+  },
+  "rf_f76": {
+   "macro_f1": 0.9361767184957128,
+   "fpr": 0.0006011410044096666,
+   "auc": 0.9999974082815565,
+   "top_feature": [
+    "Init Fwd Win Byts",
+    0.05416249559920799
+   ]
+  },
+  "rf_c60": {
+   "macro_f1": 0.9261749930293668,
+   "fpr": 0.0008338407480521504,
+   "auc": 0.9999935076102562,
+   "top_feature": [
+    "Bwd Pkt Len Mean",
+    0.03791646075530289
+   ]
+  }
+ },
+ "rule": "max val macro-F1 over eligible classes (>=20 in train and val); tie -> clean60"
+}

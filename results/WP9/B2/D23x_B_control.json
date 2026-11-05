@@ -1,0 +1,38 @@
+{
+ "cand": {
+  "id": "rf_f76",
+  "kind": "rf",
+  "feats": "f76"
+ },
+ "runs": [
+  {
+   "seed": 1,
+   "macro_f1": 0.08579156051317244,
+   "auc_binary": 0.5937913989145003,
+   "fpr": 0.43396563024786405
+  },
+  {
+   "seed": 2,
+   "macro_f1": 0.08593345115214363,
+   "auc_binary": 0.6031484308650864,
+   "fpr": 0.4358504981713679
+  },
+  {
+   "seed": 3,
+   "macro_f1": 0.0871657985850554,
+   "auc_binary": 0.5715311401596572,
+   "fpr": 0.4215200722920537
+  }
+ ],
+ "real_val": {
+  "macro_f1": 0.9361767184957128,
+  "fpr": 0.0006011410044096666,
+  "auc": 0.9999974082815565,
+  "top_feature": [
+   "Init Fwd Win Byts",
+   0.05416249559920799
+  ]
+ },
+ "pass": false,
+ "rule": "max AUC <= 0.55 and mean macro-F1 < 0.5 x real val macro-F1; scored on validation only"
+}

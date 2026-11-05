@@ -797,3 +797,4 @@
 2026-11-05T19:34:44+01:00 | S8 | H31 system re-scoring DONE (exposure 2): K FA 12.24 -> 4.70 %, SAFE_STOP/h 6.43 -> 0.88, det_single 87.1 -> 84.6; A3 ungated == S7 exactly. NEXT: LiDAR domain rows (scan FA / PointDrop) gated vs ungated, then report | tools/WP8_S8_lidar_domain.py
 2026-11-05T19:35:12+01:00 | S8 | committed H31 results; running unit tests tests/v31 (bg, log results/WP8/logs/S8_tests.log) while writing report | tools/WP8_S8_report.py
 2026-11-05T19:37:41+01:00 | S8 | report, brief, STATUS S8 -> REVIEW written; committing | stop
+2026-11-05T19:39:55+01:00 | B2 | DONE: all 9 test sets scored once, report reports/WP9_B2.md, brief, STATUS B2 -> REVIEW; committing, stop
