@@ -46,7 +46,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 ## v3.1 (branch v3.1, WP8; plan: workpackages/WP8_v31.md; v3 frozen at tag v3.0)
 
-**v3.1 progress: 10 / 11 steps approved = 91% (WP8, S8 added); WP9 benchmark 3 / 6; overall v3.1+WP9 13 / 17 = 76%** (updated 2026-11-05 19:20)
+**v3.1 progress: 10 / 11 steps approved = 91% (WP8, S8 added); WP9 benchmark 4 / 6; overall v3.1+WP9 14 / 17 = 82%** (updated 2026-11-05 19:35)
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
