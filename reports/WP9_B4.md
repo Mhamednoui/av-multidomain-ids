@@ -1,0 +1,49 @@
+# WP9 B4: GPS (AV-GPS) + LiDAR (KITTI) seen-attack benchmark
+
+Date: 2026-11-05    Worker: sonnet (high, T3)
+
+## Summary (<= 40 lines)
+- GPS data: the AV-GPS-Dataset (Abrar et al., arXiv 2405.08359) is public on GitHub (no login); a clone was already on disk (D03), nothing was downloaded. Splits locked in locks/WP9_avgps.json before training; H31 overlap 0 (no AV-GPS in H31).
+- Dataset leaks found (they also affect the paper's protocol): file 0 is entirely inside file 1; two spoofed sessions of file 1 are exact copies of two others; the two spoofed sessions of file 3 are 94-96% copies of file 2 sessions. After dedup dataset 3 has only normal sessions, so the paper's third cross-dataset case cannot be formed.
+- GPS Case I (train file-1 sessions 17 / val 8, test = file 2: 2 normal + 3 spoof sessions, 5,184 normal + 1,699 spoof rows; session-cluster CI over 5 sessions): XGBoost on all numeric fields (F_full), val-F1-optimal threshold (S): F1 0.976 [0.690, 0.995], FPR 0.016, AUC 1.000. At the 1% validation budget (H) F1 0.880 [0.285, 0.973], FPR 0.090.
+  Bar (Abrar cross-dataset F1 0.90-0.965): G1 MET at S -> "equal / comparable", NOT "better": other features and split, the interval over 5 sessions contains the whole bar range, and the bar's split is not session-disjoint.
+- The label is predictable WITHOUT any GPS field: a vehicle-state-only model (Velocity, Throttle, Steering, Yaw Rate, Roll, Pitch) has validation AUC 0.997 (the rover is nearly stationary in the spoofed sessions); satellite/HDOP carry only 4.7% of the gain in F_full. Any F1 above ~0.9 on this dataset (ours and the paper's) measures this, not spoof detection under motion.
+- GPS-only views (added by amendment 1 after that control, before any test row): F_pos (position steps + GPS course) H: F1 0.970, FPR 0.013; F_kin_noVS (GPS-vs-odometry consistency) H: F1 0.966, FPR 0.018. At S their thresholds do not transfer (test FPR 0.15-0.18, F1 0.79-0.81): G2 (restated, at S, FPR <= 5%) NOT MET; the original G2 (F_nosat/F_kin, contain vehicle-state fields) is MET but not artefact-free.
+- Case II (train the 5 file-2 sessions, test the 25 file-1 sessions, fixed config, threshold 0.5): F_full F1 0.358, FPR 1.000 (everything alarms); best F_kin F1 0.806 [0.660, 0.935], recall 0.678, FPR 0.001. A model trained on one day/one rover does not transfer.
+- v3 GPS layers (label-free, no training; L1 rules, B2, EKF NIS, EKF-CUSUM, DR-CUSUM, noisy_or_log; calibrated on the validation normals at 1%): F1 0.903 [0.056, 0.985], recall 0.885, FPR 0.025, AUC 0.909 = the 95th percentile of the (10-labeling) session-permutation null: G3 NOT MET. The two latching CUSUMs do all the work (F1 0.93/0.91); one spoof session (171 rows) is missed.
+- LiDAR (KITTI, WP1/WP3 drive split train 13 / val 3 / test 7 drives, locks/WP9_kitti.json, H31 overlap 0): XGBoost 4-class on the descriptor, trained on all 9 attack kinds (seen), thresholds at 10% and 1% of validation clean scans. FIRST model (429 columns incl. 218 scan-to-scan change columns) had validation mean TPR@10% 0.644 but tripped the pre-registered importance red flag
+  (temporal block 91% of gain, top d_n_pts 31%): STOP, not test-scored. Amendment 3 (validation only): static 211-column candidate, no flag, controls pass except a marginal within-scan permutation, validation mean TPR@10% 0.467. It is the supervised row.
+- LiDAR test (7 drives, 1,526 clean + 4,590 attacked scans; drive-cluster CI): at the 10% operating point (test FPR 0.065 [0.033, 0.122]) TPR: IntensitySpoof 1.000, PointDrop 0.816, cmp_mradd_near 0.776, cmp_boxcloud 0.306, cmp_mradd_far 0.196, near single-return phantoms 0.069-0.202, far 0.067 (AUC 0.50 = physics bound).
+  NAIVE-ADD pooled (box cloud + multi-return add, the attack style of the bar) TPR 0.426 [0.320, 0.542] vs rule >= 0.85: L1 NOT MET. At 1% FPR (test 0.0125): IntensitySpoof 0.990, PointDrop 0.639, NAIVE-ADD 0.263, PHYSICAL pooled 0.285.
+- v3.1 stack (LODO scores, tuned on these drives) at the same validation thresholds: NAIVE 0.446, PHYSICAL 0.389 at 10% (paired supervised - v3.1: NAIVE -0.020 [-0.116, 0.087], PHYSICAL -0.019 [-0.033, 0.013]). Supervised better (CI excludes 0) on IntensitySpoof, cmp_boxcloud, cmp_mradd_near; v3.1 better on ph_replace_near (0.514 vs 0.202) and cmp_mradd_far (0.651 vs 0.196). At 1% v3.1's transferred threshold lands at test FPR 0.13%, so that column is not equal-FPR (diagnostic equal-test-FPR table in results/WP9/B4_tables.md: NAIVE 0.234 vs 0.314, PHYSICAL 0.275 vs 0.267).
+- Bar not reached and not comparable: the LiDAR bar (object-level accuracy > 94% on KITTI; nuScenes TPR > 85% at FPR < 10%) is another metric level, other data and other attacks; our scan-level number on our generated attacks is 0.43 for the same attack style. No "better" claim anywhere; single-return phantoms stay at the physics bound for any detector.
+- Files: locks/WP9_avgps.json, locks/WP9_kitti.json, notes/WP9_B4.md (pre-registration and 3 amendments), results/WP9/B4_*.json, B4_tables.md, scores/B4/, tools/WP9_B4_*.py, tests/gps/test_wp9_b4.py (5 pass).
+
+## Goal of the step
+GPS and LiDAR rows of the benchmark table against the published bar of B0, seen attack types, leak-free splits.
+
+## Acceptance rules (written before results: notes/WP9_B4.md, 2026-11-05; amendments dated, all made before the test they concern)
+G1 F_full Case I F1 at S >= 0.90 (MET 0.976). G2 artefact-free view F1 >= 0.80 and FPR <= 5% at S (as first written: F_nosat or F_kin MET; restated by amendment 1 to F_kin_noVS or F_pos: NOT MET). G3 v3 combined AUC > null q95 (NOT MET).
+L1 NAIVE-ADD pooled TPR >= 0.85 at 10% FPR, test FPR <= 15% (NOT MET 0.426). L2 prediction PointDrop and IntensitySpoof >= 0.9 (IntensitySpoof yes, PointDrop 0.816 no), far single-return phantoms <= 0.25 (yes 0.067). L3 supervised "better" only if the paired CI excludes 0 (see table).
+L4 test FPR within 0.5x-1.5x of target: supervised 0.065 / 0.0125 yes; phys-only 0.045 (10%) no; v3.1 0.061 yes, 0.0013 (1%) no. My written predictions: G1 MET (right), G2 NOT MET (right for the restated, wrong for the original wording), G3 NOT MET (right), L1 MET (WRONG: it was not met, because the full model that would reach it was red-flagged), supervised > v3.1 on cmp_* and PD/IS at 10% (partly wrong).
+
+## What was done
+- Code: tools/WP9_B4_lock.py (dedup + locks), WP9_B4_gps_lib/fit/controls/test/v3.py, WP9_B4_lidar_build/lib/fit/controls/v31/test.py, WP9_B4_report.py, WP9_B4_exposure.py, exploration scripts; tests/gps/test_wp9_b4.py. Journal lines in notes/WP8_journal.md (step B4). Commits at each stage (locks+notes before training, selection+controls before each test).
+- GPS: sessions = contiguous rows of one label without Run Time reset/gap; 5 feature sets x depths 3/5/7 (XGBoost, early stopping on validation logloss); thresholds H/S fixed on validation. LiDAR descriptor rows (429 columns) rebuilt from raw KITTI scans (WP3 cache no longer exists): 9 attack kinds of lidar.s4_build.attack_cases, training scans i%2==1 (rng [97,d,i]), validation/test scans i%3==1 (rng [83,d,i] = the S4/WP8 S3 set), clean scans all i>=1.
+- v3.1: results/WP8/S3/frame.pkl (WP8 S3, no H31 scan inside), config tail2h|zmulti|E7, leave-one-drive-out over the 10 V31_val drives; read-only.
+
+## Results (all numbers in results/WP9/B4_tables.md, generated from B4_gps_test.json, B4_gps_v3.json, B4_lidar_test.json)
+See the summary; per-session alarm rates, all feature sets at H and S, per-kind TPR at both operating points with CIs, AUC per kind, 4-class macro-F1 (balanced weighting: 0.719 at 10%, 0.645 at 1%; Phantom class recall 0.22 / 0.11), controls and the full-model validation numbers are in the table file.
+
+## Ablation rows
+GPS: F_full / F_nosat / F_kin / F_kin_noVS / F_pos (what the label needs): GPS-only views reach F1 ~0.97 at H but not at S; vehicle-state alone AUC 0.997. LiDAR: static vs full (temporal) model; supervised with and without the cmp_* kinds (phys-only: NAIVE TPR 0.187 at 10%, 0.005 at 1%, i.e. the naive-add result depends entirely on having seen those attacks; PHYSICAL unchanged 0.373).
+
+## Problems, surprises, open questions
+- Controls that failed as written (stated wherever the numbers are used): GPS row-shuffle band 0.42-0.58 fails for 4 of 5 sets (nulls scatter 0.29-0.71 on 8 clustered validation sessions; centred; real AUC above every null value) and the session-permutation null spans 0.00-0.99; LiDAR within-scan permutation: first design flawed (singleton groups), redone for attacked scans only: 0.50-0.60 (2 of 5 seeds above 0.58). The full LiDAR model failed the importance rule and was not scored.
+- Open decision for the supervisor: the full 429-column LiDAR model (validation 0.644 vs 0.467) is withheld by the red-flag rule; its temporal block is legitimately the onset signal (previous scan clean) but would be useless for sustained attacks. Releasing it for one test scoring would be an amendment of my own rule; I did not do it.
+- The 7 KITTI test drives are not fresh for v3/v3.1 (V31_val material); the v3.1 numbers are tuned-on-these-drives out-of-fold scores. The fresh H31 drives belong to WP8 S7 and were not touched.
+- AV-GPS: 5 test sessions only (CIs span most of [0, 1]), one rover, one location, spoof sessions largely no-fix placeholders with a stationary rover. The bar's own numbers have the same weakness plus dataset copies across folds. This dataset cannot support a claim about spoof detection in motion; KITTI/comma GPS injected-attack rows (WP1) remain the motion evidence, not repeated here.
+- I did not add a KITTI/comma GPS supervised row because AV-GPS was available (task rule); it would be "not the same dataset" anyway.
+
+## Proposed next step
+B5 may quote: GPS "equal at S on an artefact-prone dataset, not artefact-free"; LiDAR "supervised and v3.1 comparable (about 0.4-0.45 pooled TPR at 10% FPR on naive-add attacks), far below the literature bar, which uses other metrics/attacks".

@@ -766,3 +766,6 @@
 2026-11-05T19:18:56+01:00 | S8 | GPS-domain per-layer clean FA per drive (H31 + V31_val; frozen_gps; clean runs only, 10 phases) | tools/WP8_S8_gps_layers.py -> results/WP8/S8/gps_layers.json (bg, log results/WP8/logs/S8_gps_layers.log)
 2026-11-05T19:20:38+01:00 | B4 | LiDAR static fit done (val mean TPR10 0.467); static controls (bg) | commit, then test
 2026-11-05T19:21:07+01:00 | B4 | static LiDAR controls ok (no flag); committing then LiDAR TEST scoring (tools/WP9_B4_lidar_test.py, bg) | tables + report
+2026-11-05T19:21:39+01:00 | S8 | V2AIX Stationary genuine FA per recording / site (H31, scoring-only diagnostic, no per-message files written) | tools/WP8_S8_v2aix_fa.py -> results/WP8/S8/v2aix_fa.json
+2026-11-05T19:22:59+01:00 | B4 | LiDAR test done; generating tables (tools/WP9_B4_report.py), exposure | write reports/WP9_B4.md, brief, STATUS, commit
+2026-11-05T19:24:17+01:00 | B4 | report, brief, STATUS REVIEW written; final commit | stop, handback

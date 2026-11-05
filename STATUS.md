@@ -70,5 +70,5 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP9 bench | B1 | APPROVED | worker sonnet (high, T3) | 2026-11-04 | CAN: Car-Hacking MET (equal to leaky bar), ROAD NOT MET (FPR 3.2%), D11 NOT MET at 1% budget, unknown vehicle fails; reports/WP9_B1.md |
 | WP9 bench | B2 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-04 | network |
 | WP9 bench | B3 | APPROVED | worker sonnet (high, T3) | 2026-11-05 | V2X: DoS-family matched F1 0.992-0.996 (bar 0.93-0.998), all-19 macro-F1 0.917, FPR 1.0%; 2 pre-registered controls fail as written; reports/WP9_B3.md |
-| WP9 bench | B4 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-05 | GPS + LiDAR |
+| WP9 bench | B4 | REVIEW | worker sonnet (high, T3) | 2026-11-05 | GPS: AV-GPS Case I F_full F1 0.976 [0.69,0.995] (bar 0.90-0.965, equal not better; label predictable from vehicle state, AUC 0.997), Case II fails, v3 layers F1 0.90 AUC at null q95; LiDAR: full model red-flagged, static supervised NAIVE-add TPR@10% FPR 0.426 (rule 0.85 NOT MET), v3.1 0.446; reports/WP9_B4.md |
 | WP9 bench | B5 | TODO | | | final scoring + comparison |
