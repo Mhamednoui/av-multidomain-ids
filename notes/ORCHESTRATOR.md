@@ -291,3 +291,12 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
   Note for later: H31 is now exposure 2 for K; no fresh material left for further system claims. Remaining K clean-FA sources: V2X 9.6 %, LiDAR 8.2 %, network 4.8 %, CAN 3.8 % own-alarm shares.
 
 - 2026-11-05 19:55 WP9 B2 APPROVED (locks 0ed1e7b / 99608fd before training; one scoring per test; minor deviation: D23x val files committed with tests, order verified by mtimes + journal; CI bug fixed from saved scores, no rescoring). B5 launched (T3). Progress 16/17 = 94%.
+
+- 2026-11-05 20:15 WP9 B5 APPROVED (check script re-run by orchestrator: PASS, 327 fields). Fixed display typo in reports/M4.md + RESULTS_v31.md (paired K events/h -302.52 -> -3.03, JSON unchanged). v3.1 + WP9 COMPLETE 17/17 = 100%.
+
+## HANDOFF 2026-11-05 20:15
+- State: WP8 (v3.1) 11/11, WP9 benchmark 6/6, all approved, branch v3.1, nothing pushed/published (user: do not publish without explicit approval).
+- Headline files: reports/WP9_final.md (master table + honest claims), reports/M4.md, reports/WP8_S8.md, RESULTS_v31.md, results/WP9/B5/figures/.
+- Honest position: no "better than literature" row; 3 "equal under stricter split" rows (Car-Hacking, VeReMi DoS, AV-GPS Case I); fresh zero-shot gains (LiDAR PointDrop +34 pts, comma GNSS blame 0->80.6 %); M4 NOT MET (false alarms).
+- Fresh hold-out is used up (H31 exposure 2 for K). Further system claims need NEW fresh data.
+- Next candidates (decide with user's goal = conference paper by 2026-11-30): (1) paper draft from WP9_final + M4; (2) improvement work only on benchmark rows that are "below" (D11 known vehicle 0.80 @1 %) with a NEW locked test, or new fresh data.

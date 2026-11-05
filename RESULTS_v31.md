@@ -50,7 +50,7 @@ By attacked domain (event detection of single-domain types; median seconds to vi
 | network | 88.3 % (13.0 s) | 86.7 % (74.0 s) | -1.7 [-10.0, 6.7] |
 | v2x | 92.0 % (2.0 s) | 99.1 % (1.0 s) | +7.0 [5.3, 9.0] |
 
-Paired v3.1 - v3 (same composites; group bootstrap B = 2000, seed 31): fa_tick -0.14 pts [-0.81, 0.32]; events_per_hour -302.52/h [-5.77, 0.46]; det_single +3.72 pts [1.83, 5.81]; det_heldout -4.68 pts [-8.02, 0.50]; blame_correct +0.19 pts [-3.38, 3.60]; blame_wrong +3.18 pts [-0.74, 6.75]
+Paired v3.1 - v3 (same composites; group bootstrap B = 2000, seed 31): fa_tick -0.14 pts [-0.81, 0.32]; events_per_hour -3.03/h [-5.77, 0.46] (display corrected 2026-11-05 by orchestrator; was printed x100; JSON results/WP8/S7/m4_verdict.json diff -3.025); det_single +3.72 pts [1.83, 5.81]; det_heldout -4.68 pts [-8.02, 0.50]; blame_correct +0.19 pts [-3.38, 3.60]; blame_wrong +3.18 pts [-0.74, 6.75]
 
 ### C = comma RAV4 Chunk_2 (21 routes): 2062 attack composites, 16 clean timelines (7.93 h), 46 single-domain types (12 held out)
 
