@@ -280,3 +280,7 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
 - 2026-11-04 running: S7 a34beaac5367006c0, B2 aa9cb986a2f601ad4, B3 aa10cc0d7cdb425b4. Next: B4 when a slot frees; B5 last.
 
 - 2026-11-05 18:40 WP9 B3 APPROVED (review: lock 790ae6f before models, controls e8ce480 before test 76ee2a1, test once, JSON matches reply). Caveats recorded in notes/WP9_brief.md. B4 (GPS+LiDAR, T3) launched. Progress 12/16 = 75%.
+
+- 2026-11-05 19:20 WP8 S7 APPROVED: M4 NOT MET 7/18 (honest). Review: freeze 8aac3dd (11-04 17:46) before first H31 read (journal 17:45 V2AIX H31 start is AFTER freeze file written? -> V2AIX H31 start 17:45:11, freeze commit 17:46:23: freeze.json hashes written at 17:40-17:45 per journal line 563; V2AIX tool code frozen; accepted, noted). Key real gain on fresh data: LiDAR PointDrop per scan +34 pts CI [29.8,37.0]; comma GNSS blame 80.6/0; K detection +3.7 pts CI>0; C SAFE_STOP 0.88/h.
+  Main failure: clean false alarms on H31 (K 12.2 %) dominated by KITTI drive 0093 (both v3 and v3.1) = generalisation failure; GPS FA H31 7.2 % vs val 1.4 %.
+  Decision: add WP8 S8 (T3) = root-cause diagnostic + validation-only fix; H31 now exposure 1 -> any re-run is "re-used hold-out, exposure 2", never called fresh. Progress 13/17 = 76%.

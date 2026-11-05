@@ -46,7 +46,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 ## v3.1 (branch v3.1, WP8; plan: workpackages/WP8_v31.md; v3 frozen at tag v3.0)
 
-**v3.1 progress: 9 / 10 steps approved = 90% (WP8); WP9 benchmark 3 / 6; overall v3.1+WP9 12 / 16 = 75%** (updated 2026-11-05 18:40)
+**v3.1 progress: 10 / 11 steps approved = 91% (WP8, S8 added); WP9 benchmark 3 / 6; overall v3.1+WP9 13 / 17 = 76%** (updated 2026-11-05 19:20)
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
@@ -58,8 +58,9 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP8 v3.1 | S5 | APPROVED | worker sonnet (medium, T2) | 2026-11-03 | CAN incremental windows (exact, p99 41 ms) + V2X single ego (0.03 s/s); reports/WP8_S5.md |
 | WP8 v3.1 | S6 | APPROVED | worker sonnet (high, T3) | 2026-11-04 | blame: channel-graph hypothesis blame (A1 selected): comma GNSS correct 77 % / wrong 0 % (B2 met), K B3 met, B1 gps_can NOT MET (A3 inertial alt 43 / 41 %); regression exact; reports/WP8_S6.md |
 | WP8 v3.1 | S2 | APPROVED | worker opus (medium, T4) | 2026-11-04 | V31_val all S2 rows MET: chosen MX/L100/b2 (equal split = max), K FA 1.92 %, 5.09 ev/h, det 78.2 %; frozen_system31 sha256 a8994883; reports/WP8_S2.md |
-| WP8 v3.1 | S7 | REVIEW | worker sonnet (high, T3) | 2026-11-05 | M4 NOT MET (7 of 18 rows): H31 clean FA K 12.2 % / C 6.1 % (drive 0093 anomaly), events/h 24.8 / 22.6; PointDrop scan +34 pts (fresh); comma GNSS blame fixed; reports/M4.md, WP8_S7.md, RESULTS_v31.md |
+| WP8 v3.1 | S7 | APPROVED | worker sonnet (high, T3) | 2026-11-05 | M4 NOT MET (7 of 18 rows): H31 clean FA K 12.2 % / C 6.1 % (drive 0093 anomaly), events/h 24.8 / 22.6; PointDrop scan +34 pts (fresh); comma GNSS blame fixed; reports/M4.md, WP8_S7.md, RESULTS_v31.md |
 | WP8 v3.1 | P1 | APPROVED | worker sonnet (medium, T2) | 2026-11-03 | paper curves / AUC from saved v3 outputs |
+| WP8 v3.1 | S8 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-05 | post-M4 diagnostic: H31 false-alarm root cause (drive 0093, GPS 7.2 % vs 1.4 % val, LiDAR scan FA, V2AIX Stationary); fixes on validation only; any H31 re-run labelled exposure 2 |
 
 ## WP9 benchmark track (plan: workpackages/WP9_benchmark.md; deadline 2026-11-30)
 
