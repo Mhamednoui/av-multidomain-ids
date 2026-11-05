@@ -643,3 +643,24 @@
 2026-11-05T17:34:12+01:00 | S7 | network test: done | v3 macro 0.6589, F1 0.6589, RC5 0.6276
 2026-11-05T17:34:52+01:00 | B2 | D23x pass2 done (7.6M stored rows); splits -> locks/WP9_D23x.json
 2026-11-05T17:35:27+01:00 | S7 | V2X VeReMi test: start | parts C:\Users\nouir\PFE\data_extra\cache_v3\WP8\S7\v2x_parts
+2026-11-05T17:36:24+01:00 | B2 | D23x lock committed; start D23x val-only runs (cand select control; T G B), log results/WP9/logs/B2_D23x_val.log
+2026-11-05T17:36:40+01:00 | B2 | TEST stage (scored once each) D10o then D10e, protocols T G B: log results/WP9/logs/B2_D10_test.log; run.py refuses rescoring if *_test.json exists; resumable
+2026-11-05T17:36:59+01:00 | S7 | V2X VeReMi test: done | 728 ego series
+2026-11-05T17:38:40+01:00 | S7 | vehicle sources h31: start | 13 drives, 21 routes
+2026-11-05T17:38:49+01:00 | S7 | vehicle sources h31: done | K runs 1560, C windows 1577
+2026-11-05T17:41:00+01:00 | S7 | scored so far (each ONCE, chunks on disk): CAN 17 captures (parts/can_test_*), network D10 test (network.json, net.pkl), VeReMi test ego sources (v2x.pkl), KITTI vehicle records 13 drives, comma Chunk_2 21 routes, kveh/cveh sources; LiDAR running (3 procs, chunks parts/lidar_*). Addendum: tools/WP8_S7_pack.py (CAN pack, format only) hash in freeze_addendum.json. CAN p99 > 150 ms on several captures under 5-process load: labelled idle timing re-run planned (Evidence identical). Starting V2AIX full run (bg, log S7_v2aix.log)
+2026-11-05T17:41:21+01:00 | S7 | V2AIX H31: start | 674 recordings, 672 same site-day as a v3 train recording; out results/WP8/S7/v2aix.json
+2026-11-05T17:45:03+01:00 | S7 | blame rows (M4-12/13): start | tools/WP8_S7_blame.py
+2026-11-05T17:45:55+01:00 | S7 | blame rows: done | results/WP8/S7/blame.json
+2026-11-05T17:46:34+01:00 | S7 | domain rows gps: start | tools/WP8_S7_domains.py
+2026-11-05T17:46:39+01:00 | S7 | domain rows gps: done | 18 rows
+2026-11-05T17:46:39+01:00 | S7 | domain rows cross: start | tools/WP8_S7_domains.py
+2026-11-05T17:46:45+01:00 | S7 | domain rows cross: done | 36 rows
+2026-11-05T17:46:45+01:00 | S7 | domain rows can: start | tools/WP8_S7_domains.py
+2026-11-05T17:46:46+01:00 | S7 | domain rows can: done | 1 rows
+2026-11-05T17:46:46+01:00 | S7 | domain rows network: start | tools/WP8_S7_domains.py
+2026-11-05T17:46:55+01:00 | S7 | V2AIX H31: done | FA physics Mobile 0.0065, egos 7
+2026-11-05T17:46:57+01:00 | S7 | domain rows network: done | 36 rows
+2026-11-05T17:46:57+01:00 | S7 | domain rows v2x: start | tools/WP8_S7_domains.py
+2026-11-05T17:46:59+01:00 | S7 | domain rows v2x: done | 19 rows
+2026-11-05T17:47:41+01:00 | B2 | report fix: bootstrap macro-F1 skipped eligible classes absent in a resample (D10o T CI [0.43,0.83] excluded point 0.838); CIs to be recomputed from saved scores (no rescoring) via tools/WP9_B2_recompute.py

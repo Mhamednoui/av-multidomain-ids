@@ -1,0 +1,298 @@
+{
+ "macro_f1": 0.8935741671423288,
+ "macro_f1_ci": [
+  0.831656493590026,
+  0.9256567214772828
+ ],
+ "macro_f1_all_present_classes": 0.8632992312083035,
+ "eligible": [
+  "BENIGN",
+  "Bot",
+  "DDoS-LOIC-HTTP",
+  "DoS-GoldenEye",
+  "DoS-Hulk",
+  "DoS-SlowHTTPTest",
+  "DoS-Slowloris",
+  "FTP-Patator",
+  "PortScan",
+  "SSH-Patator",
+  "Web-BruteForce",
+  "Web-XSS"
+ ],
+ "not_eligible": {
+  "Heartbleed": {
+   "test": 0,
+   "train": 11
+  },
+  "Infiltration": {
+   "test": 0,
+   "train": 36
+  },
+  "Web-SQLi": {
+   "test": 5,
+   "train": 13
+  }
+ },
+ "unseen_test_classes_dropped": {},
+ "fpr": 0.001182343304981015,
+ "fpr_ci": [
+  0.0009681611444002675,
+  0.0014220882383776778
+ ],
+ "auc_binary": 0.9999914723715286,
+ "auc_binary_ci": [
+  0.9999384588472192,
+  0.9999964666150829
+ ],
+ "macro_auc_vs_benign": 0.9999052807081271,
+ "threshold_val_1pct": 0.0065520405769348145,
+ "detection_at_val_1pct": 0.999938491819412,
+ "detection_at_val_1pct_ci": [
+  0.9997273003248288,
+  1.0
+ ],
+ "fpr_at_val_1pct": 0.012997488901719093,
+ "fpr_at_val_1pct_ci": [
+  0.012356537788586345,
+  0.013580356889080757
+ ],
+ "accuracy": 0.9985738539898132,
+ "n_boot_groups": 251,
+ "per_class": {
+  "BENIGN": {
+   "support": 361993,
+   "weighted_support": 361993.0,
+   "recall": 0.998817656695019,
+   "recall_ci": null,
+   "precision": 0.9999446879710165,
+   "f1": 0.9993808545865132,
+   "eligible": true,
+   "det_at_1pct_fa": null,
+   "auc_vs_benign": null
+  },
+  "Bot": {
+   "support": 265,
+   "weighted_support": 265.0,
+   "recall": 0.9735849056603774,
+   "recall_ci": [
+    0.9383738860291617,
+    0.9950524943798728
+   ],
+   "precision": 0.5608695652173913,
+   "f1": 0.7117241379310345,
+   "eligible": true,
+   "det_at_1pct_fa": 0.9886792452830189,
+   "auc_vs_benign": 0.9994695300320882
+  },
+  "DDoS-LOIC-HTTP": {
+   "support": 24353,
+   "weighted_support": 24353.0,
+   "recall": 0.9998768118917587,
+   "recall_ci": [
+    0.9997373604727512,
+    1.0
+   ],
+   "precision": 0.9997126082850926,
+   "f1": 0.9997947033463355,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999999761219169
+  },
+  "DoS-GoldenEye": {
+   "support": 1977,
+   "weighted_support": 1977.0,
+   "recall": 0.9984825493171472,
+   "recall_ci": [
+    0.9984825493171472,
+    0.9984825493171472
+   ],
+   "precision": 0.9939577039274925,
+   "f1": 0.9962149886449659,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999997624570861
+  },
+  "DoS-Hulk": {
+   "support": 33945,
+   "weighted_support": 33945.0,
+   "recall": 0.9996464869642068,
+   "recall_ci": [
+    0.9918938835666913,
+    1.0
+   ],
+   "precision": 0.9980000588217993,
+   "f1": 0.9988225944132105,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.999999523431775
+  },
+  "DoS-SlowHTTPTest": {
+   "support": 1006,
+   "weighted_support": 1006.0,
+   "recall": 0.9970178926441352,
+   "recall_ci": [
+    0.9953271028037384,
+    0.9979959919839679
+   ],
+   "precision": 0.947119924457035,
+   "f1": 0.9714285714285714,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999726250431816
+  },
+  "DoS-Slowloris": {
+   "support": 1075,
+   "weighted_support": 1075.0,
+   "recall": 0.9953488372093023,
+   "recall_ci": [
+    0.875,
+    1.0
+   ],
+   "precision": 0.9925788497217068,
+   "f1": 0.9939619136089178,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9997425261788758
+  },
+  "FTP-Patator": {
+   "support": 1032,
+   "weighted_support": 1032.0,
+   "recall": 1.0,
+   "recall_ci": [
+    1.0,
+    1.0
+   ],
+   "precision": 0.9961389961389961,
+   "f1": 0.9980657640232108,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999999906311092
+  },
+  "Heartbleed": {
+   "support": 0,
+   "weighted_support": 0.0,
+   "recall": 0.0,
+   "recall_ci": [
+    null,
+    null
+   ],
+   "precision": 0.0,
+   "f1": 0.0,
+   "eligible": false,
+   "det_at_1pct_fa": null,
+   "auc_vs_benign": null
+  },
+  "Infiltration": {
+   "support": 0,
+   "weighted_support": 0.0,
+   "recall": 0.0,
+   "recall_ci": [
+    null,
+    null
+   ],
+   "precision": 0.0,
+   "f1": 0.0,
+   "eligible": false,
+   "det_at_1pct_fa": null,
+   "auc_vs_benign": null
+  },
+  "PortScan": {
+   "support": 333,
+   "weighted_support": 333.0,
+   "recall": 0.975975975975976,
+   "recall_ci": [
+    0.9046703296703297,
+    0.9911894273127754
+   ],
+   "precision": 0.7738095238095238,
+   "f1": 0.8632138114209827,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999079088923368
+  },
+  "SSH-Patator": {
+   "support": 650,
+   "weighted_support": 650.0,
+   "recall": 0.9969230769230769,
+   "recall_ci": [
+    0.9899307566517902,
+    1.0
+   ],
+   "precision": 0.9984591679506933,
+   "f1": 0.9976905311778291,
+   "eligible": true,
+   "det_at_1pct_fa": 0.9984615384615385,
+   "auc_vs_benign": 0.9999953632762554
+  },
+  "Web-BruteForce": {
+   "support": 267,
+   "weighted_support": 267.0,
+   "recall": 0.7602996254681648,
+   "recall_ci": [
+    0.6981132075471698,
+    0.7876859364435429
+   ],
+   "precision": 0.7381818181818182,
+   "f1": 0.7490774907749077,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999945474559687
+  },
+  "Web-SQLi": {
+   "support": 5,
+   "weighted_support": 5.0,
+   "recall": 0.4,
+   "recall_ci": [
+    0.4,
+    0.4
+   ],
+   "precision": 0.6666666666666666,
+   "f1": 0.5,
+   "eligible": false,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": null
+  },
+  "Web-XSS": {
+   "support": 124,
+   "weighted_support": 124.0,
+   "recall": 0.4274193548387097,
+   "recall_ci": [
+    0.39285714285714285,
+    0.45161290322580644
+   ],
+   "precision": 0.4608695652173913,
+   "f1": 0.4435146443514644,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9998763342688056
+  }
+ },
+ "table": "D10o",
+ "protocol": "G",
+ "cand": {
+  "id": "xgb_d10_f76",
+  "kind": "xgb",
+  "depth": 10,
+  "feats": "f76"
+ },
+ "importance_top10": {
+  "Init Bwd Win Byts": 0.0940154558953466,
+  "Idle Mean": 0.08927105975334615,
+  "TotLen Bwd Pkts": 0.08791344731577158,
+  "Bwd Pkt Len Min": 0.060541038588180336,
+  "TotLen Fwd Pkts": 0.049029952198748006,
+  "Tot Bwd Pkts": 0.039305205868591,
+  "Bwd Pkt Len Std": 0.03906851136625357,
+  "Bwd Header Len": 0.037727450918505726,
+  "Bwd Pkt Len Mean": 0.027517194106422622,
+  "Fwd Seg Size Avg": 0.02646883214516002
+ },
+ "fit_info": {
+  "best_iteration": 60
+ },
+ "train_rows": 484932,
+ "test_rows": 427025,
+ "scored_once": true,
+ "time": "2026-11-05T17:50:49",
+ "ci_recomputed_from_saved_scores": "2026-11-05T18:04:37"
+}

@@ -22,7 +22,8 @@ def _macro(C, el):
     fp = C.sum(0) - tp
     fn = C.sum(1) - tp
     f1 = np.where(2 * tp + fp + fn > 0, 2 * tp / np.maximum(2 * tp + fp + fn, 1), 0.0)
-    return f1, float(np.mean(f1[el]))
+    ok = [i for i in el if (tp[i] + fn[i]) > 0]   # eligible classes absent from a bootstrap resample are skipped (point estimate: all present)
+    return f1, float(np.mean(f1[ok])) if ok else np.nan
 
 
 def _ci(v):

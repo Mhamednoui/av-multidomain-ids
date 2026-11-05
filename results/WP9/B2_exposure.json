@@ -1,0 +1,99 @@
+{
+ "note": "B2 is a NEW split, distinct from the v3/WP8 D10 test. Each test part below was scored exactly once with the model selected on its own validation part (tools/WP9_B2_run.py refuses to rescore).",
+ "v3_d10_test_definition": "last 20% (flow count) of every period of every day, WP4 split column 'test' (network/flows.py time_split)",
+ "entries": [
+  {
+   "table": "D10e",
+   "protocol": "B",
+   "test_rows": 261480,
+   "lock": "locks/WP9_D10e.json",
+   "part_sha256": "5dba0f4c8ec73321698c500c05af06270b26dd960ad8a05dda2b01776d1d7393",
+   "scored_at": "2026-11-05T18:04:14",
+   "times_scored": 1,
+   "model": "xgb_d6_f76",
+   "relation_to_v3": "different flow extraction (fixed CICFlowMeter) of the same CICIDS2017 capture days; no row identity with the v3 table",
+   "b2_test_rows_by_v3_split": null,
+   "scores": "results/WP9/scores/B2/D10e_B_test.npz"
+  },
+  {
+   "table": "D10e",
+   "protocol": "G",
+   "test_rows": 319979,
+   "lock": "locks/WP9_D10e.json",
+   "part_sha256": "2d638200c411fa7a4dd232e6879eba4b7f5c3fc4498a1938be706a36e992bfe2",
+   "scored_at": "2026-11-05T18:02:42",
+   "times_scored": 1,
+   "model": "rf_c60",
+   "relation_to_v3": "different flow extraction (fixed CICFlowMeter) of the same CICIDS2017 capture days; no row identity with the v3 table",
+   "b2_test_rows_by_v3_split": null,
+   "scores": "results/WP9/scores/B2/D10e_G_test.npz"
+  },
+  {
+   "table": "D10e",
+   "protocol": "T",
+   "test_rows": 218975,
+   "lock": "locks/WP9_D10e.json",
+   "part_sha256": "8c559e7921307489be1fb1fd25a5ffa8a994e86dad2ccc7c77b3d840d967cc5b",
+   "scored_at": "2026-11-05T18:00:39",
+   "times_scored": 1,
+   "model": "xgb_d6_f76",
+   "relation_to_v3": "different flow extraction (fixed CICFlowMeter) of the same CICIDS2017 capture days; no row identity with the v3 table",
+   "b2_test_rows_by_v3_split": null,
+   "scores": "results/WP9/scores/B2/D10e_T_test.npz"
+  },
+  {
+   "table": "D10o",
+   "protocol": "B",
+   "test_rows": 413657,
+   "lock": "locks/WP9_D10o.json",
+   "part_sha256": "2d8a6f3c94cb2254c12d806cefb990ec9b8f4e7a956eb676f5f11a0bdb0939eb",
+   "scored_at": "2026-11-05T17:55:50",
+   "times_scored": 1,
+   "model": "xgb_d6_f76",
+   "relation_to_v3": "same flows as the v3 (WP4/WP8) D10 table",
+   "b2_test_rows_by_v3_split": {
+    "train": 303683,
+    "test": 56087,
+    "val": 44463,
+    "gap": 9424
+   },
+   "scores": "results/WP9/scores/B2/D10o_B_test.npz"
+  },
+  {
+   "table": "D10o",
+   "protocol": "G",
+   "test_rows": 427025,
+   "lock": "locks/WP9_D10o.json",
+   "part_sha256": "7a7ebb852eb0c7d18e01ee967a4d44270bdc48d5d123d783e1f2d89620213cd4",
+   "scored_at": "2026-11-05T17:50:49",
+   "times_scored": 1,
+   "model": "xgb_d10_f76",
+   "relation_to_v3": "same flows as the v3 (WP4/WP8) D10 table",
+   "b2_test_rows_by_v3_split": {
+    "train": 240661,
+    "test": 90068,
+    "val": 78469,
+    "gap": 17827
+   },
+   "scores": "results/WP9/scores/B2/D10o_G_test.npz"
+  },
+  {
+   "table": "D10o",
+   "protocol": "T",
+   "test_rows": 296975,
+   "lock": "locks/WP9_D10o.json",
+   "part_sha256": "6668b2292aa332e4bb43c2bef727a483ed7847242f4f1c83bb51dc830f732864",
+   "scored_at": "2026-11-05T17:47:23",
+   "times_scored": 1,
+   "model": "xgb_d6_f76",
+   "relation_to_v3": "same flows as the v3 (WP4/WP8) D10 table",
+   "b2_test_rows_by_v3_split": {
+    "val": 296975,
+    "gap": 0,
+    "test": 0,
+    "train": 0
+   },
+   "scores": "results/WP9/scores/B2/D10o_T_test.npz"
+  }
+ ]
+}

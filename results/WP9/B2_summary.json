@@ -1,0 +1,1663 @@
+{
+ "rows": [
+  {
+   "table": "D10e",
+   "protocol": "B",
+   "model": "xgb_d6_f76",
+   "macro_f1": 0.937273447811518,
+   "macro_f1_ci": [
+    0.8957454677851947,
+    0.9948360122078089
+   ],
+   "macro_f1_all_present": 0.9058980455841049,
+   "fpr": 6.989027227255473e-05,
+   "fpr_ci": [
+    2.1114671188821042e-05,
+    0.00013374530045845155
+   ],
+   "auc": 0.9999691708309228,
+   "auc_ci": [
+    0.9995903664141108,
+    0.999999689673115
+   ],
+   "det1": 0.9981852663244286,
+   "det1_ci": [
+    0.976387855705143,
+    1.0
+   ],
+   "fpr1": 0.008891041065527122,
+   "accuracy": 0.9990286063943705,
+   "n_eligible": 11,
+   "val_macro_f1": 0.9566761690683571,
+   "control_pass": true,
+   "control_auc_max": 0.5367959369854861,
+   "control_f1_mean": 0.1358597195680691,
+   "top_feature": [
+    "Bwd Pkt Len Std",
+    0.1373539129156727
+   ],
+   "test_rows": 261480
+  },
+  {
+   "table": "D10e",
+   "protocol": "G",
+   "model": "rf_c60",
+   "macro_f1": 0.995923927888688,
+   "macro_f1_ci": [
+    0.9766198241280677,
+    0.997788307221699
+   ],
+   "macro_f1_all_present": 0.9481374709694425,
+   "fpr": 8.20408787324256e-05,
+   "fpr_ci": [
+    3.732769481391285e-05,
+    0.00014185728819893494
+   ],
+   "auc": 0.9999789599515656,
+   "auc_ci": [
+    0.999891733455453,
+    0.9999998100464549
+   ],
+   "det1": 0.9999421072944809,
+   "det1_ci": [
+    0.9997045419348746,
+    1.0
+   ],
+   "fpr1": 0.010762271637349483,
+   "accuracy": 0.9998499901556039,
+   "n_eligible": 10,
+   "val_macro_f1": 0.9943054067630818,
+   "control_pass": false,
+   "control_auc_max": 0.623913203148047,
+   "control_f1_mean": 0.08558740285134538,
+   "top_feature": [
+    "Fwd Pkt Len Max",
+    0.05208129187626939
+   ],
+   "test_rows": 319979
+  },
+  {
+   "table": "D10e",
+   "protocol": "T",
+   "model": "xgb_d6_f76",
+   "macro_f1": 0.9178039732565766,
+   "macro_f1_ci": [
+    0.8654795576816117,
+    0.999986717919491
+   ],
+   "macro_f1_all_present": 0.8115365841796234,
+   "fpr": 6.233183390647046e-05,
+   "fpr_ci": [
+    1.1343693647153374e-05,
+    0.00013025501232747923
+   ],
+   "auc": 0.9999968542607204,
+   "auc_ci": [
+    0.9994518268920767,
+    0.9999999478550603
+   ],
+   "det1": 0.9999243741964758,
+   "det1_ci": [
+    0.9989116819439198,
+    1.0
+   ],
+   "fpr1": 0.007583706458616856,
+   "accuracy": 0.9997807858826109,
+   "n_eligible": 9,
+   "val_macro_f1": 0.9908700845560046,
+   "control_pass": true,
+   "control_auc_max": 0.5295549851511598,
+   "control_f1_mean": 0.10578520408211671,
+   "top_feature": [
+    "Bwd Pkt Len Std",
+    0.2032685076099345
+   ],
+   "test_rows": 218975
+  },
+  {
+   "table": "D10o",
+   "protocol": "B",
+   "model": "xgb_d6_f76",
+   "macro_f1": 0.8756521250009461,
+   "macro_f1_ci": [
+    0.6974106993909628,
+    0.9524097950481801
+   ],
+   "macro_f1_all_present": 0.8505589642865253,
+   "fpr": 0.0007913587408883149,
+   "fpr_ci": [
+    0.0005295003846465113,
+    0.0010922785497337938
+   ],
+   "auc": 0.9999802663158471,
+   "auc_ci": [
+    0.9997559097597366,
+    0.9999911344914428
+   ],
+   "det1": 0.9998445289746167,
+   "det1_ci": [
+    0.9982581061250692,
+    0.9999535842144888
+   ],
+   "fpr1": 0.00880268368350695,
+   "accuracy": 0.998044273395591,
+   "n_eligible": 12,
+   "val_macro_f1": 0.8614800397456865,
+   "control_pass": true,
+   "control_auc_max": 0.5187745607157199,
+   "control_f1_mean": 0.07637975753793515,
+   "top_feature": [
+    "Init Bwd Win Byts",
+    0.08757273723809106
+   ],
+   "test_rows": 413657
+  },
+  {
+   "table": "D10o",
+   "protocol": "G",
+   "model": "xgb_d10_f76",
+   "macro_f1": 0.8935741671423288,
+   "macro_f1_ci": [
+    0.831656493590026,
+    0.9256567214772828
+   ],
+   "macro_f1_all_present": 0.8632992312083035,
+   "fpr": 0.001182343304981015,
+   "fpr_ci": [
+    0.0009681611444002675,
+    0.0014220882383776778
+   ],
+   "auc": 0.9999914723715286,
+   "auc_ci": [
+    0.9999384588472192,
+    0.9999964666150829
+   ],
+   "det1": 0.999938491819412,
+   "det1_ci": [
+    0.9997273003248288,
+    1.0
+   ],
+   "fpr1": 0.012997488901719093,
+   "accuracy": 0.9985738539898132,
+   "n_eligible": 12,
+   "val_macro_f1": 0.907363474169455,
+   "control_pass": true,
+   "control_auc_max": 0.5249423042261644,
+   "control_f1_mean": 0.08278974092392188,
+   "top_feature": [
+    "Init Bwd Win Byts",
+    0.0940154558953466
+   ],
+   "test_rows": 427025
+  },
+  {
+   "table": "D10o",
+   "protocol": "T",
+   "model": "xgb_d6_f76",
+   "macro_f1": 0.8377002504316722,
+   "macro_f1_ci": [
+    0.718814793635158,
+    0.9050329228089168
+   ],
+   "macro_f1_all_present": 0.7088232888267996,
+   "fpr": 0.0007820329820511507,
+   "fpr_ci": [
+    0.0005889546191113259,
+    0.0009862402513452467
+   ],
+   "auc": 0.9999625198027856,
+   "auc_ci": [
+    0.9996396429382031,
+    0.9999944465175281
+   ],
+   "det1": 0.9993144151663288,
+   "det1_ci": [
+    0.9934011183576742,
+    0.999906520284523
+   ],
+   "fpr1": 0.0067915388586874,
+   "accuracy": 0.9986058916232271,
+   "n_eligible": 11,
+   "val_macro_f1": 0.8234205152316307,
+   "control_pass": true,
+   "control_auc_max": 0.5165164835950109,
+   "control_f1_mean": 0.08776364340400337,
+   "top_feature": [
+    "TotLen Bwd Pkts",
+    0.09596848505758973
+   ],
+   "test_rows": 296975
+  }
+ ],
+ "per_class": {
+  "D10e_B": {
+   "eligible": [
+    "BENIGN",
+    "Bot",
+    "DDoS-LOIC-HTTP",
+    "DoS-GoldenEye",
+    "DoS-Hulk",
+    "DoS-SlowHTTPTest",
+    "DoS-Slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator",
+    "Web-BruteForce"
+   ],
+   "not_eligible": {
+    "Heartbleed": {
+     "test": 2,
+     "train": 5
+    },
+    "Infiltration": {
+     "test": 9,
+     "train": 13
+    },
+    "Web-SQLi": {
+     "test": 0,
+     "train": 9
+    },
+    "Web-XSS": {
+     "test": 0,
+     "train": 13
+    }
+   },
+   "unseen": {},
+   "per_class": {
+    "BENIGN": {
+     "support": 200314,
+     "weighted_support": 200314.0,
+     "recall": 0.9999301097277274,
+     "recall_ci": null,
+     "precision": 0.9988729641044054,
+     "f1": 0.999401257359545,
+     "eligible": true,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Bot": {
+     "support": 28,
+     "weighted_support": 28.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999999999999999
+    },
+    "DDoS-LOIC-HTTP": {
+     "support": 19508,
+     "weighted_support": 19508.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "DoS-GoldenEye": {
+     "support": 2995,
+     "weighted_support": 2995.0,
+     "recall": 0.9953255425709516,
+     "recall_ci": [
+      0.9953255425709516,
+      0.9953255425709516
+     ],
+     "precision": 0.999664654594232,
+     "f1": 0.9974903797891919,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9997979149363212
+    },
+    "DoS-Hulk": {
+     "support": 36568,
+     "weighted_support": 36568.0,
+     "recall": 0.9999179610588492,
+     "recall_ci": [
+      0.9999179610588492,
+      0.9999179610588492
+     ],
+     "precision": 0.99983593557737,
+     "f1": 0.9998769466358578,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999996176152205
+    },
+    "DoS-SlowHTTPTest": {
+     "support": 225,
+     "weighted_support": 225.0,
+     "recall": 0.27111111111111114,
+     "recall_ci": [
+      0.27111111111111114,
+      0.27111111111111114
+     ],
+     "precision": 0.8970588235294118,
+     "f1": 0.41638225255972694,
+     "eligible": true,
+     "det_at_1pct_fa": 0.5066666666666667,
+     "auc_vs_benign": 0.9970969134015152
+    },
+    "DoS-Slowloris": {
+     "support": 481,
+     "weighted_support": 481.0,
+     "recall": 0.9293139293139293,
+     "recall_ci": [
+      0.7222222222222222,
+      0.937365010799136
+     ],
+     "precision": 0.9955456570155902,
+     "f1": 0.9612903225806452,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9998727361867232
+    },
+    "FTP-Patator": {
+     "support": 570,
+     "weighted_support": 570.0,
+     "recall": 0.9929824561403509,
+     "recall_ci": [
+      0.7142857142857143,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.9964788732394366,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "Heartbleed": {
+     "support": 2,
+     "weighted_support": 2.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.5,
+     "f1": 0.6666666666666666,
+     "eligible": false,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": null
+    },
+    "Infiltration": {
+     "support": 9,
+     "weighted_support": 9.0,
+     "recall": 0.6666666666666666,
+     "recall_ci": [
+      0.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.8,
+     "eligible": false,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": null
+    },
+    "PortScan": {
+     "support": 149,
+     "weighted_support": 149.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9430379746835443,
+     "f1": 0.9706840390879479,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999915736320821
+    },
+    "SSH-Patator": {
+     "support": 601,
+     "weighted_support": 601.0,
+     "recall": 0.9700499168053245,
+     "recall_ci": [
+      0.55,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.9847972972972973,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.999996370091635
+    },
+    "Web-BruteForce": {
+     "support": 30,
+     "weighted_support": 30.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.967741935483871,
+     "f1": 0.9836065573770492,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "Web-SQLi": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Web-XSS": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    }
+   }
+  },
+  "D10e_G": {
+   "eligible": [
+    "BENIGN",
+    "Bot",
+    "DDoS-LOIC-HTTP",
+    "DoS-GoldenEye",
+    "DoS-Hulk",
+    "DoS-SlowHTTPTest",
+    "DoS-Slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator"
+   ],
+   "not_eligible": {
+    "Heartbleed": {
+     "test": 0,
+     "train": 11
+    },
+    "Infiltration": {
+     "test": 7,
+     "train": 25
+    },
+    "Web-BruteForce": {
+     "test": 15,
+     "train": 114
+    },
+    "Web-SQLi": {
+     "test": 1,
+     "train": 8
+    },
+    "Web-XSS": {
+     "test": 8,
+     "train": 18
+    }
+   },
+   "unseen": {},
+   "per_class": {
+    "BENIGN": {
+     "support": 268159,
+     "weighted_support": 268159.0,
+     "recall": 0.9999179591212676,
+     "recall_ci": null,
+     "precision": 0.9999179591212676,
+     "f1": 0.9999179591212676,
+     "eligible": true,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Bot": {
+     "support": 146,
+     "weighted_support": 146.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "DDoS-LOIC-HTTP": {
+     "support": 17980,
+     "weighted_support": 17980.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "DoS-GoldenEye": {
+     "support": 1405,
+     "weighted_support": 1405.0,
+     "recall": 0.997864768683274,
+     "recall_ci": [
+      0.997864768683274,
+      0.997864768683274
+     ],
+     "precision": 0.9971550497866287,
+     "f1": 0.9975097829953753,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999997876651472
+    },
+    "DoS-Hulk": {
+     "support": 29687,
+     "weighted_support": 29687.0,
+     "recall": 0.9999326304443023,
+     "recall_ci": [
+      0.9999118632117046,
+      1.0
+     ],
+     "precision": 0.9997642462616193,
+     "f1": 0.999848431263578,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999999962315517
+    },
+    "DoS-SlowHTTPTest": {
+     "support": 326,
+     "weighted_support": 326.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9908814589665653,
+     "f1": 0.9954198473282443,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999999656828449
+    },
+    "DoS-Slowloris": {
+     "support": 652,
+     "weighted_support": 652.0,
+     "recall": 0.995398773006135,
+     "recall_ci": [
+      0.6666666666666666,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.9976940814757879,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999950468906175
+    },
+    "FTP-Patator": {
+     "support": 743,
+     "weighted_support": 743.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "Heartbleed": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Infiltration": {
+     "support": 7,
+     "weighted_support": 7.0,
+     "recall": 0.8571428571428571,
+     "recall_ci": [
+      0.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.9230769230769231,
+     "eligible": false,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": null
+    },
+    "PortScan": {
+     "support": 304,
+     "weighted_support": 304.0,
+     "recall": 0.9802631578947368,
+     "recall_ci": [
+      0.9459274342835987,
+      0.9919386840757809
+     ],
+     "precision": 0.9612903225806452,
+     "f1": 0.9706840390879479,
+     "eligible": true,
+     "det_at_1pct_fa": 0.993421052631579,
+     "auc_vs_benign": 0.9966678130472867
+    },
+    "SSH-Patator": {
+     "support": 546,
+     "weighted_support": 546.0,
+     "recall": 0.9963369963369964,
+     "recall_ci": [
+      0.986605263949014,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.998165137614679,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999999999999999
+    },
+    "Web-BruteForce": {
+     "support": 15,
+     "weighted_support": 15.0,
+     "recall": 0.7333333333333333,
+     "recall_ci": [
+      0.2,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.8461538461538461,
+     "eligible": false,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": null
+    },
+    "Web-SQLi": {
+     "support": 1,
+     "weighted_support": 1.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": false,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": null
+    },
+    "Web-XSS": {
+     "support": 8,
+     "weighted_support": 8.0,
+     "recall": 0.375,
+     "recall_ci": [
+      0.25,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.5454545454545454,
+     "eligible": false,
+     "det_at_1pct_fa": 0.875,
+     "auc_vs_benign": null
+    }
+   }
+  },
+  "D10e_T": {
+   "eligible": [
+    "BENIGN",
+    "Bot",
+    "DDoS-LOIC-HTTP",
+    "DoS-Hulk",
+    "DoS-SlowHTTPTest",
+    "DoS-Slowloris",
+    "FTP-Patator",
+    "SSH-Patator",
+    "Web-BruteForce"
+   ],
+   "not_eligible": {
+    "DoS-GoldenEye": {
+     "test": 0,
+     "train": 2576
+    },
+    "Infiltration": {
+     "test": 4,
+     "train": 16
+    },
+    "PortScan": {
+     "test": 5,
+     "train": 1143
+    },
+    "Web-SQLi": {
+     "test": 0,
+     "train": 12
+    },
+    "Web-XSS": {
+     "test": 0,
+     "train": 27
+    }
+   },
+   "unseen": {
+    "Heartbleed": 11
+   },
+   "per_class": {
+    "BENIGN": {
+     "support": 192518,
+     "weighted_support": 192518.0,
+     "recall": 0.9999376681660935,
+     "recall_ci": null,
+     "precision": 0.9999636388191966,
+     "f1": 0.9999506533240181,
+     "eligible": true,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Bot": {
+     "support": 155,
+     "weighted_support": 155.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9935897435897436,
+     "f1": 0.9967845659163987,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "DDoS-LOIC-HTTP": {
+     "support": 9281,
+     "weighted_support": 9281.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "DoS-GoldenEye": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "DoS-Hulk": {
+     "support": 15619,
+     "weighted_support": 15619.0,
+     "recall": 0.9999359754145591,
+     "recall_ci": [
+      0.9999359754145591,
+      0.9999359754145591
+     ],
+     "precision": 0.9999359754145591,
+     "f1": 0.9999359754145591,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999999996674359
+    },
+    "DoS-SlowHTTPTest": {
+     "support": 35,
+     "weighted_support": 35.0,
+     "recall": 0.2,
+     "recall_ci": [
+      0.2,
+      0.2
+     ],
+     "precision": 0.875,
+     "f1": 0.32558139534883723,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999918374979407
+    },
+    "DoS-Slowloris": {
+     "support": 374,
+     "weighted_support": 374.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9234567901234568,
+     "f1": 0.9602053915275995,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999999861114452
+    },
+    "FTP-Patator": {
+     "support": 522,
+     "weighted_support": 522.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "Infiltration": {
+     "support": 4,
+     "weighted_support": 4.0,
+     "recall": 0.5,
+     "recall_ci": [
+      0.0,
+      0.6666666666666666
+     ],
+     "precision": 1.0,
+     "f1": 0.6666666666666666,
+     "eligible": false,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": null
+    },
+    "PortScan": {
+     "support": 5,
+     "weighted_support": 5.0,
+     "recall": 0.0,
+     "recall_ci": [
+      0.0,
+      0.0
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": 0.6,
+     "auc_vs_benign": null
+    },
+    "SSH-Patator": {
+     "support": 429,
+     "weighted_support": 429.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "Web-BruteForce": {
+     "support": 22,
+     "weighted_support": 22.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9565217391304348,
+     "f1": 0.9777777777777777,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "Web-SQLi": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Web-XSS": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    }
+   }
+  },
+  "D10o_B": {
+   "eligible": [
+    "BENIGN",
+    "Bot",
+    "DDoS-LOIC-HTTP",
+    "DoS-GoldenEye",
+    "DoS-Hulk",
+    "DoS-SlowHTTPTest",
+    "DoS-Slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator",
+    "Web-BruteForce",
+    "Web-XSS"
+   ],
+   "not_eligible": {
+    "Heartbleed": {
+     "test": 2,
+     "train": 6
+    },
+    "Infiltration": {
+     "test": 12,
+     "train": 20
+    },
+    "Web-SQLi": {
+     "test": 0,
+     "train": 21
+    }
+   },
+   "unseen": {},
+   "per_class": {
+    "BENIGN": {
+     "support": 317176,
+     "weighted_support": 317176.0,
+     "recall": 0.9992086412591117,
+     "recall_ci": null,
+     "precision": 0.9993850908173562,
+     "f1": 0.9992968582491455,
+     "eligible": true,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Bot": {
+     "support": 139,
+     "weighted_support": 139.0,
+     "recall": 0.9928057553956835,
+     "recall_ci": [
+      0.9814814814814815,
+      1.0
+     ],
+     "precision": 0.46153846153846156,
+     "f1": 0.6301369863013698,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9998530534666272
+    },
+    "DDoS-LOIC-HTTP": {
+     "support": 30396,
+     "weighted_support": 30396.0,
+     "recall": 0.9999013028030004,
+     "recall_ci": [
+      0.9996938619317313,
+      0.9999580941206051
+     ],
+     "precision": 0.9998355154944404,
+     "f1": 0.9998684080665855,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.999999995539827
+    },
+    "DoS-GoldenEye": {
+     "support": 3346,
+     "weighted_support": 3346.0,
+     "recall": 0.9943215780035863,
+     "recall_ci": [
+      0.9943215780035863,
+      0.9943215780035863
+     ],
+     "precision": 0.95220377790498,
+     "f1": 0.9728070175438597,
+     "eligible": true,
+     "det_at_1pct_fa": 0.9985056784219964,
+     "auc_vs_benign": 0.9999895719367772
+    },
+    "DoS-Hulk": {
+     "support": 58082,
+     "weighted_support": 58082.0,
+     "recall": 0.9947488034158604,
+     "recall_ci": [
+      0.0,
+      0.9971695345265011
+     ],
+     "precision": 0.9995156128362599,
+     "f1": 0.9971265111703642,
+     "eligible": true,
+     "det_at_1pct_fa": 0.9999655659240384,
+     "auc_vs_benign": 0.999666787054497
+    },
+    "DoS-SlowHTTPTest": {
+     "support": 1121,
+     "weighted_support": 1121.0,
+     "recall": 0.9741302408563782,
+     "recall_ci": [
+      0.9741302408563782,
+      0.9741302408563782
+     ],
+     "precision": 0.9537117903930131,
+     "f1": 0.9638128861429832,
+     "eligible": true,
+     "det_at_1pct_fa": 0.9982158786797503,
+     "auc_vs_benign": 0.9998914919593603
+    },
+    "DoS-Slowloris": {
+     "support": 843,
+     "weighted_support": 843.0,
+     "recall": 0.9976275207591934,
+     "recall_ci": [
+      0.0,
+      0.998812351543943
+     ],
+     "precision": 0.9870892018779343,
+     "f1": 0.9923303834808259,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.999991143669694
+    },
+    "FTP-Patator": {
+     "support": 1030,
+     "weighted_support": 1030.0,
+     "recall": 0.9932038834951457,
+     "recall_ci": [
+      0.7450980392156863,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.9965903555772041,
+     "eligible": true,
+     "det_at_1pct_fa": 0.9980582524271845,
+     "auc_vs_benign": 0.9999910649589423
+    },
+    "Heartbleed": {
+     "support": 2,
+     "weighted_support": 2.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 1.0,
+     "eligible": false,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": null
+    },
+    "Infiltration": {
+     "support": 12,
+     "weighted_support": 12.0,
+     "recall": 0.25,
+     "recall_ci": [
+      0.0,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.4,
+     "eligible": false,
+     "det_at_1pct_fa": 0.6666666666666666,
+     "auc_vs_benign": null
+    },
+    "PortScan": {
+     "support": 215,
+     "weighted_support": 215.0,
+     "recall": 0.9720930232558139,
+     "recall_ci": [
+      0.922077922077922,
+      1.0
+     ],
+     "precision": 0.9047619047619048,
+     "f1": 0.9372197309417041,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999994280924508
+    },
+    "SSH-Patator": {
+     "support": 891,
+     "weighted_support": 891.0,
+     "recall": 0.9820426487093153,
+     "recall_ci": [
+      0.9024390243902439,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.9909399773499433,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999998938443209
+    },
+    "Web-BruteForce": {
+     "support": 266,
+     "weighted_support": 266.0,
+     "recall": 0.7744360902255639,
+     "recall_ci": [
+      0.7744360902255639,
+      0.7744360902255639
+     ],
+     "precision": 0.6602564102564102,
+     "f1": 0.71280276816609,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999941566087641
+    },
+    "Web-SQLi": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Web-XSS": {
+     "support": 138,
+     "weighted_support": 138.0,
+     "recall": 0.26811594202898553,
+     "recall_ci": [
+      0.26811594202898553,
+      0.26811594202898553
+     ],
+     "precision": 0.38144329896907214,
+     "f1": 0.3148936170212766,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.999807015206297
+    }
+   }
+  },
+  "D10o_G": {
+   "eligible": [
+    "BENIGN",
+    "Bot",
+    "DDoS-LOIC-HTTP",
+    "DoS-GoldenEye",
+    "DoS-Hulk",
+    "DoS-SlowHTTPTest",
+    "DoS-Slowloris",
+    "FTP-Patator",
+    "PortScan",
+    "SSH-Patator",
+    "Web-BruteForce",
+    "Web-XSS"
+   ],
+   "not_eligible": {
+    "Heartbleed": {
+     "test": 0,
+     "train": 11
+    },
+    "Infiltration": {
+     "test": 0,
+     "train": 36
+    },
+    "Web-SQLi": {
+     "test": 5,
+     "train": 13
+    }
+   },
+   "unseen": {},
+   "per_class": {
+    "BENIGN": {
+     "support": 361993,
+     "weighted_support": 361993.0,
+     "recall": 0.998817656695019,
+     "recall_ci": null,
+     "precision": 0.9999446879710165,
+     "f1": 0.9993808545865132,
+     "eligible": true,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Bot": {
+     "support": 265,
+     "weighted_support": 265.0,
+     "recall": 0.9735849056603774,
+     "recall_ci": [
+      0.9383738860291617,
+      0.9950524943798728
+     ],
+     "precision": 0.5608695652173913,
+     "f1": 0.7117241379310345,
+     "eligible": true,
+     "det_at_1pct_fa": 0.9886792452830189,
+     "auc_vs_benign": 0.9994695300320882
+    },
+    "DDoS-LOIC-HTTP": {
+     "support": 24353,
+     "weighted_support": 24353.0,
+     "recall": 0.9998768118917587,
+     "recall_ci": [
+      0.9997373604727512,
+      1.0
+     ],
+     "precision": 0.9997126082850926,
+     "f1": 0.9997947033463355,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999999761219169
+    },
+    "DoS-GoldenEye": {
+     "support": 1977,
+     "weighted_support": 1977.0,
+     "recall": 0.9984825493171472,
+     "recall_ci": [
+      0.9984825493171472,
+      0.9984825493171472
+     ],
+     "precision": 0.9939577039274925,
+     "f1": 0.9962149886449659,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999997624570861
+    },
+    "DoS-Hulk": {
+     "support": 33945,
+     "weighted_support": 33945.0,
+     "recall": 0.9996464869642068,
+     "recall_ci": [
+      0.9918938835666913,
+      1.0
+     ],
+     "precision": 0.9980000588217993,
+     "f1": 0.9988225944132105,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.999999523431775
+    },
+    "DoS-SlowHTTPTest": {
+     "support": 1006,
+     "weighted_support": 1006.0,
+     "recall": 0.9970178926441352,
+     "recall_ci": [
+      0.9953271028037384,
+      0.9979959919839679
+     ],
+     "precision": 0.947119924457035,
+     "f1": 0.9714285714285714,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999726250431816
+    },
+    "DoS-Slowloris": {
+     "support": 1075,
+     "weighted_support": 1075.0,
+     "recall": 0.9953488372093023,
+     "recall_ci": [
+      0.875,
+      1.0
+     ],
+     "precision": 0.9925788497217068,
+     "f1": 0.9939619136089178,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9997425261788758
+    },
+    "FTP-Patator": {
+     "support": 1032,
+     "weighted_support": 1032.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9961389961389961,
+     "f1": 0.9980657640232108,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999999906311092
+    },
+    "Heartbleed": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Infiltration": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "PortScan": {
+     "support": 333,
+     "weighted_support": 333.0,
+     "recall": 0.975975975975976,
+     "recall_ci": [
+      0.9046703296703297,
+      0.9911894273127754
+     ],
+     "precision": 0.7738095238095238,
+     "f1": 0.8632138114209827,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999079088923368
+    },
+    "SSH-Patator": {
+     "support": 650,
+     "weighted_support": 650.0,
+     "recall": 0.9969230769230769,
+     "recall_ci": [
+      0.9899307566517902,
+      1.0
+     ],
+     "precision": 0.9984591679506933,
+     "f1": 0.9976905311778291,
+     "eligible": true,
+     "det_at_1pct_fa": 0.9984615384615385,
+     "auc_vs_benign": 0.9999953632762554
+    },
+    "Web-BruteForce": {
+     "support": 267,
+     "weighted_support": 267.0,
+     "recall": 0.7602996254681648,
+     "recall_ci": [
+      0.6981132075471698,
+      0.7876859364435429
+     ],
+     "precision": 0.7381818181818182,
+     "f1": 0.7490774907749077,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999945474559687
+    },
+    "Web-SQLi": {
+     "support": 5,
+     "weighted_support": 5.0,
+     "recall": 0.4,
+     "recall_ci": [
+      0.4,
+      0.4
+     ],
+     "precision": 0.6666666666666666,
+     "f1": 0.5,
+     "eligible": false,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": null
+    },
+    "Web-XSS": {
+     "support": 124,
+     "weighted_support": 124.0,
+     "recall": 0.4274193548387097,
+     "recall_ci": [
+      0.39285714285714285,
+      0.45161290322580644
+     ],
+     "precision": 0.4608695652173913,
+     "f1": 0.4435146443514644,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9998763342688056
+    }
+   }
+  },
+  "D10o_T": {
+   "eligible": [
+    "BENIGN",
+    "Bot",
+    "DDoS-LOIC-HTTP",
+    "DoS-GoldenEye",
+    "DoS-Hulk",
+    "DoS-SlowHTTPTest",
+    "DoS-Slowloris",
+    "FTP-Patator",
+    "SSH-Patator",
+    "Web-BruteForce",
+    "Web-XSS"
+   ],
+   "not_eligible": {
+    "Infiltration": {
+     "test": 5,
+     "train": 20
+    },
+    "PortScan": {
+     "test": 2,
+     "train": 1468
+    },
+    "Web-SQLi": {
+     "test": 0,
+     "train": 21
+    }
+   },
+   "unseen": {
+    "Heartbleed": 11
+   },
+   "per_class": {
+    "BENIGN": {
+     "support": 263416,
+     "weighted_support": 263416.0,
+     "recall": 0.9992179670179488,
+     "recall_ci": null,
+     "precision": 0.9996999494851665,
+     "f1": 0.999458900143344,
+     "eligible": true,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Bot": {
+     "support": 84,
+     "weighted_support": 84.0,
+     "recall": 0.2619047619047619,
+     "recall_ci": [
+      0.14285714285714285,
+      0.3333333333333333
+     ],
+     "precision": 0.26506024096385544,
+     "f1": 0.2634730538922156,
+     "eligible": true,
+     "det_at_1pct_fa": 0.7857142857142857,
+     "auc_vs_benign": 0.999112371776238
+    },
+    "DDoS-LOIC-HTTP": {
+     "support": 12729,
+     "weighted_support": 12729.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9993719086127032,
+     "f1": 0.9996858556506715,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.999999988070464
+    },
+    "DoS-GoldenEye": {
+     "support": 312,
+     "weighted_support": 312.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9968051118210862,
+     "f1": 0.9984,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "DoS-Hulk": {
+     "support": 17677,
+     "weighted_support": 17677.0,
+     "recall": 0.999886858629858,
+     "recall_ci": [
+      0.999886858629858,
+      0.999886858629858
+     ],
+     "precision": 0.9973479291276379,
+     "f1": 0.9986157801067826,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999996265358926
+    },
+    "DoS-SlowHTTPTest": {
+     "support": 880,
+     "weighted_support": 880.0,
+     "recall": 0.9613636363636363,
+     "recall_ci": [
+      0.9613636363636363,
+      0.9613636363636363
+     ],
+     "precision": 0.9286498353457738,
+     "f1": 0.9447236180904522,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9998210832088615
+    },
+    "DoS-Slowloris": {
+     "support": 455,
+     "weighted_support": 455.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9191919191919192,
+     "f1": 0.9578947368421052,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999995744832808
+    },
+    "FTP-Patator": {
+     "support": 751,
+     "weighted_support": 751.0,
+     "recall": 1.0,
+     "recall_ci": [
+      1.0,
+      1.0
+     ],
+     "precision": 0.9960212201591512,
+     "f1": 0.9980066445182725,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 1.0
+    },
+    "Infiltration": {
+     "support": 5,
+     "weighted_support": 5.0,
+     "recall": 0.0,
+     "recall_ci": [
+      0.0,
+      0.0
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": 0.4,
+     "auc_vs_benign": null
+    },
+    "PortScan": {
+     "support": 2,
+     "weighted_support": 2.0,
+     "recall": 0.0,
+     "recall_ci": [
+      0.0,
+      0.0
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": 0.0,
+     "auc_vs_benign": null
+    },
+    "SSH-Patator": {
+     "support": 396,
+     "weighted_support": 396.0,
+     "recall": 0.9949494949494949,
+     "recall_ci": [
+      0.9622641509433962,
+      1.0
+     ],
+     "precision": 1.0,
+     "f1": 0.9974683544303797,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999988879593763
+    },
+    "Web-BruteForce": {
+     "support": 194,
+     "weighted_support": 194.0,
+     "recall": 0.6804123711340206,
+     "recall_ci": [
+      0.0,
+      0.6984126984126984
+     ],
+     "precision": 0.7674418604651163,
+     "f1": 0.7213114754098361,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9999124703851288
+    },
+    "Web-SQLi": {
+     "support": 0,
+     "weighted_support": 0.0,
+     "recall": 0.0,
+     "recall_ci": [
+      null,
+      null
+     ],
+     "precision": 0.0,
+     "f1": 0.0,
+     "eligible": false,
+     "det_at_1pct_fa": null,
+     "auc_vs_benign": null
+    },
+    "Web-XSS": {
+     "support": 63,
+     "weighted_support": 63.0,
+     "recall": 0.38095238095238093,
+     "recall_ci": [
+      0.38095238095238093,
+      0.38095238095238093
+     ],
+     "precision": 0.3,
+     "f1": 0.3356643356643357,
+     "eligible": true,
+     "det_at_1pct_fa": 1.0,
+     "auc_vs_benign": 0.9992778638267144
+    }
+   }
+  }
+ }
+}

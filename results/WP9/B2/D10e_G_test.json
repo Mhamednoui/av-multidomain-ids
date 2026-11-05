@@ -1,0 +1,301 @@
+{
+ "macro_f1": 0.995923927888688,
+ "macro_f1_ci": [
+  0.9766198241280677,
+  0.997788307221699
+ ],
+ "macro_f1_all_present_classes": 0.9481374709694425,
+ "eligible": [
+  "BENIGN",
+  "Bot",
+  "DDoS-LOIC-HTTP",
+  "DoS-GoldenEye",
+  "DoS-Hulk",
+  "DoS-SlowHTTPTest",
+  "DoS-Slowloris",
+  "FTP-Patator",
+  "PortScan",
+  "SSH-Patator"
+ ],
+ "not_eligible": {
+  "Heartbleed": {
+   "test": 0,
+   "train": 11
+  },
+  "Infiltration": {
+   "test": 7,
+   "train": 25
+  },
+  "Web-BruteForce": {
+   "test": 15,
+   "train": 114
+  },
+  "Web-SQLi": {
+   "test": 1,
+   "train": 8
+  },
+  "Web-XSS": {
+   "test": 8,
+   "train": 18
+  }
+ },
+ "unseen_test_classes_dropped": {},
+ "fpr": 8.20408787324256e-05,
+ "fpr_ci": [
+  3.732769481391285e-05,
+  0.00014185728819893494
+ ],
+ "auc_binary": 0.9999789599515656,
+ "auc_binary_ci": [
+  0.999891733455453,
+  0.9999998100464549
+ ],
+ "macro_auc_vs_benign": 0.999629178835272,
+ "threshold_val_1pct": 0.01991292417049408,
+ "detection_at_val_1pct": 0.9999421072944809,
+ "detection_at_val_1pct_ci": [
+  0.9997045419348746,
+  1.0
+ ],
+ "fpr_at_val_1pct": 0.010762271637349483,
+ "fpr_at_val_1pct_ci": [
+  0.008680330029974544,
+  0.010290890654754265
+ ],
+ "accuracy": 0.9998499901556039,
+ "n_boot_groups": 250,
+ "per_class": {
+  "BENIGN": {
+   "support": 268159,
+   "weighted_support": 268159.0,
+   "recall": 0.9999179591212676,
+   "recall_ci": null,
+   "precision": 0.9999179591212676,
+   "f1": 0.9999179591212676,
+   "eligible": true,
+   "det_at_1pct_fa": null,
+   "auc_vs_benign": null
+  },
+  "Bot": {
+   "support": 146,
+   "weighted_support": 146.0,
+   "recall": 1.0,
+   "recall_ci": [
+    1.0,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 1.0,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 1.0
+  },
+  "DDoS-LOIC-HTTP": {
+   "support": 17980,
+   "weighted_support": 17980.0,
+   "recall": 1.0,
+   "recall_ci": [
+    1.0,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 1.0,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 1.0
+  },
+  "DoS-GoldenEye": {
+   "support": 1405,
+   "weighted_support": 1405.0,
+   "recall": 0.997864768683274,
+   "recall_ci": [
+    0.997864768683274,
+    0.997864768683274
+   ],
+   "precision": 0.9971550497866287,
+   "f1": 0.9975097829953753,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999997876651472
+  },
+  "DoS-Hulk": {
+   "support": 29687,
+   "weighted_support": 29687.0,
+   "recall": 0.9999326304443023,
+   "recall_ci": [
+    0.9999118632117046,
+    1.0
+   ],
+   "precision": 0.9997642462616193,
+   "f1": 0.999848431263578,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999999962315517
+  },
+  "DoS-SlowHTTPTest": {
+   "support": 326,
+   "weighted_support": 326.0,
+   "recall": 1.0,
+   "recall_ci": [
+    1.0,
+    1.0
+   ],
+   "precision": 0.9908814589665653,
+   "f1": 0.9954198473282443,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999999656828449
+  },
+  "DoS-Slowloris": {
+   "support": 652,
+   "weighted_support": 652.0,
+   "recall": 0.995398773006135,
+   "recall_ci": [
+    0.6666666666666666,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 0.9976940814757879,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999950468906175
+  },
+  "FTP-Patator": {
+   "support": 743,
+   "weighted_support": 743.0,
+   "recall": 1.0,
+   "recall_ci": [
+    1.0,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 1.0,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 1.0
+  },
+  "Heartbleed": {
+   "support": 0,
+   "weighted_support": 0.0,
+   "recall": 0.0,
+   "recall_ci": [
+    null,
+    null
+   ],
+   "precision": 0.0,
+   "f1": 0.0,
+   "eligible": false,
+   "det_at_1pct_fa": null,
+   "auc_vs_benign": null
+  },
+  "Infiltration": {
+   "support": 7,
+   "weighted_support": 7.0,
+   "recall": 0.8571428571428571,
+   "recall_ci": [
+    0.0,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 0.9230769230769231,
+   "eligible": false,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": null
+  },
+  "PortScan": {
+   "support": 304,
+   "weighted_support": 304.0,
+   "recall": 0.9802631578947368,
+   "recall_ci": [
+    0.9459274342835987,
+    0.9919386840757809
+   ],
+   "precision": 0.9612903225806452,
+   "f1": 0.9706840390879479,
+   "eligible": true,
+   "det_at_1pct_fa": 0.993421052631579,
+   "auc_vs_benign": 0.9966678130472867
+  },
+  "SSH-Patator": {
+   "support": 546,
+   "weighted_support": 546.0,
+   "recall": 0.9963369963369964,
+   "recall_ci": [
+    0.986605263949014,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 0.998165137614679,
+   "eligible": true,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": 0.9999999999999999
+  },
+  "Web-BruteForce": {
+   "support": 15,
+   "weighted_support": 15.0,
+   "recall": 0.7333333333333333,
+   "recall_ci": [
+    0.2,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 0.8461538461538461,
+   "eligible": false,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": null
+  },
+  "Web-SQLi": {
+   "support": 1,
+   "weighted_support": 1.0,
+   "recall": 1.0,
+   "recall_ci": [
+    1.0,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 1.0,
+   "eligible": false,
+   "det_at_1pct_fa": 1.0,
+   "auc_vs_benign": null
+  },
+  "Web-XSS": {
+   "support": 8,
+   "weighted_support": 8.0,
+   "recall": 0.375,
+   "recall_ci": [
+    0.25,
+    1.0
+   ],
+   "precision": 1.0,
+   "f1": 0.5454545454545454,
+   "eligible": false,
+   "det_at_1pct_fa": 0.875,
+   "auc_vs_benign": null
+  }
+ },
+ "table": "D10e",
+ "protocol": "G",
+ "cand": {
+  "id": "rf_c60",
+  "kind": "rf",
+  "feats": "c60"
+ },
+ "importance_top10": {
+  "Fwd Pkt Len Max": 0.05208129187626939,
+  "Bwd Pkt Len Mean": 0.045939491105108525,
+  "Pkt Size Avg": 0.03770948394872692,
+  "Pkt Len Max": 0.037595275919594065,
+  "Fwd Pkt Len Std": 0.03752446581621745,
+  "Down/Up Ratio": 0.03686621787716423,
+  "Pkt Len Var": 0.03521514245237589,
+  "Bwd Pkt Len Max": 0.035012938764244356,
+  "Fwd Pkt Len Mean": 0.033630715611556464,
+  "TotLen Fwd Pkts": 0.03311637837315378
+ },
+ "fit_info": {},
+ "train_rows": 443526,
+ "test_rows": 319979,
+ "scored_once": true,
+ "time": "2026-11-05T18:02:42",
+ "ci_recomputed_from_saved_scores": "2026-11-05T18:04:58"
+}

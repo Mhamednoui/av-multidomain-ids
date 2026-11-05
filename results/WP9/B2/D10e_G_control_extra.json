@@ -1,0 +1,48 @@
+{
+ "cand": {
+  "id": "rf_c60",
+  "kind": "rf",
+  "feats": "c60"
+ },
+ "extra_runs": [
+  {
+   "seed": 4,
+   "macro_f1": 0.08566966037037654,
+   "auc_binary": 0.5238120042094894
+  },
+  {
+   "seed": 5,
+   "macro_f1": 0.08597705179187906,
+   "auc_binary": 0.626095150175674
+  },
+  {
+   "seed": 6,
+   "macro_f1": 0.08619099370547709,
+   "auc_binary": 0.5376967818379965
+  },
+  {
+   "seed": 7,
+   "macro_f1": 0.09038539930619625,
+   "auc_binary": 0.4956412320830039
+  },
+  {
+   "seed": 8,
+   "macro_f1": 0.08552470539840179,
+   "auc_binary": 0.48917456709221474
+  },
+  {
+   "seed": 9,
+   "macro_f1": 0.08620208626342613,
+   "auc_binary": 0.5993271434770159
+  },
+  {
+   "seed": 10,
+   "macro_f1": 0.08710733737441398,
+   "auc_binary": 0.6026680198438796
+  }
+ ],
+ "auc_mean_10_seeds": 0.5576086236909108,
+ "auc_std_10_seeds": 0.049149271661252734,
+ "macro_f1_mean_10_seeds": 0.0863819442764207,
+ "note": "amendment diagnostic written after the registered 3-seed control failed; the registered verdict is unchanged"
+}
