@@ -300,3 +300,5 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
 - Honest position: no "better than literature" row; 3 "equal under stricter split" rows (Car-Hacking, VeReMi DoS, AV-GPS Case I); fresh zero-shot gains (LiDAR PointDrop +34 pts, comma GNSS blame 0->80.6 %); M4 NOT MET (false alarms).
 - Fresh hold-out is used up (H31 exposure 2 for K). Further system claims need NEW fresh data.
 - Next candidates (decide with user's goal = conference paper by 2026-11-30): (1) paper draft from WP9_final + M4; (2) improvement work only on benchmark rows that are "below" (D11 known vehicle 0.80 @1 %) with a NEW locked test, or new fresh data.
+
+- 2026-11-05 20:40 PUSHED with the user's explicit approval ("wrap things up, push as v3, dont touch my old ones"): branch v3.1 -> github.com/Mhamednoui/av-multidomain-ids branch `v3`, tags v3.0 + v3.1. Remote `main` untouched (2d00a3d); local PFE_github repo and its unpushed `v2` branch untouched. Pre-push checks: no blob > 20 MB, no secrets, no dataset files, V2AIX only split lists + aggregates. Untracked run logs / parts / frozen_v2x cache left local. Remote name in codes_v3: `github`.
