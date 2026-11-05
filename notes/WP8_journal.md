@@ -769,3 +769,4 @@
 2026-11-05T19:21:39+01:00 | S8 | V2AIX Stationary genuine FA per recording / site (H31, scoring-only diagnostic, no per-message files written) | tools/WP8_S8_v2aix_fa.py -> results/WP8/S8/v2aix_fa.json
 2026-11-05T19:22:59+01:00 | B4 | LiDAR test done; generating tables (tools/WP9_B4_report.py), exposure | write reports/WP9_B4.md, brief, STATUS, commit
 2026-11-05T19:24:17+01:00 | B4 | report, brief, STATUS REVIEW written; final commit | stop, handback
+2026-11-05T19:24:46+01:00 | S8 | diagnosis done (drive 0093 = OXTS GNSS/INS reference never converged); writing notes/WP8_S8.md with diagnosis + pre-registered fix rules, then COMMIT before any implementation | implement system/health31.py after commit

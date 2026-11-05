@@ -1,0 +1,23 @@
+{
+ "set": "V31_val",
+ "ticks": 194,
+ "combined": 0.02577319587628866,
+ "layers": {
+  "gps.max_speed": 0.0,
+  "gps.long_accel": 0.0,
+  "gps.lat_accel": 0.0,
+  "gps.jerk": 0.0,
+  "gps.yaw_rate": 0.0,
+  "gps.vel_pos_consistency": 0.010309278350515464,
+  "gps.dr_resid_10": 0.10309278350515463,
+  "gps.ekf_nis": 0.0,
+  "gps.cusum_ekf": 0.015463917525773196,
+  "gps.cusum_dr": 0.020618556701030927,
+  "gps.lidar_z_1": 0.015463917525773196,
+  "gps.lidar_z_3": 0.0,
+  "gps.lidar_z_10": 0.0,
+  "gps.lidar_resid_1": 0.04639175257731959,
+  "gps.lidar_resid_3": 0.04639175257731959,
+  "gps.lidar_course": 0.015463917525773196
+ }
+}

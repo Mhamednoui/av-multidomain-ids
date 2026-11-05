@@ -1,0 +1,178 @@
+{
+ "Mobile": {
+  "h31": {
+   "recordings": 24,
+   "messages": 1071,
+   "pooled": 0.006535947712418301,
+   "median_rec": 0.0,
+   "p90_rec": 0.028550295857988146,
+   "share_recs_zero_fa": 0.8333333333333334,
+   "share_of_alarms_from_top10pct_recs": 0.7142857142857143
+  },
+  "val": {
+   "recordings": 152,
+   "messages": 11778,
+   "pooled": 0.009848870776023094,
+   "median_rec": 0.0,
+   "p90_rec": 0.014726044106167109,
+   "share_recs_zero_fa": 0.868421052631579,
+   "share_of_alarms_from_top10pct_recs": 0.9568965517241379
+  },
+  "site": [
+   {
+    "site": "Mobile/V2X-only/Highway",
+    "n": 1071,
+    "recs": 24,
+    "physics": 0.00654,
+    "L1": 0.00467,
+    "L2": 0.0028,
+    "L3": 0.01307
+   }
+  ],
+  "worst_site_days": [
+   {
+    "site": "Mobile/V2X-only/Highway",
+    "day": "2024-01-21",
+    "n": 230,
+    "physics": 0.01739
+   },
+   {
+    "site": "Mobile/V2X-only/Highway",
+    "day": "2024-02-25",
+    "n": 304,
+    "physics": 0.00987
+   },
+   {
+    "site": "Mobile/V2X-only/Highway",
+    "day": "2024-01-14",
+    "n": 347,
+    "physics": 0.0
+   },
+   {
+    "site": "Mobile/V2X-only/Highway",
+    "day": "2024-02-21",
+    "n": 190,
+    "physics": 0.0
+   }
+  ],
+  "layers_pooled": {
+   "physics": 0.006535947712418301,
+   "L1": 0.004668534080298786,
+   "L2": 0.0028011204481792717,
+   "L3": 0.013071895424836602
+  },
+  "n_messages_per_rec": {
+   "h31_median": 32.5,
+   "val_median": 34.0
+  }
+ },
+ "Stationary": {
+  "h31": {
+   "recordings": 645,
+   "messages": 46229,
+   "pooled": 0.022561595535270068,
+   "median_rec": 0.0,
+   "p90_rec": 0.05586708203530635,
+   "share_recs_zero_fa": 0.6511627906976745,
+   "share_of_alarms_from_top10pct_recs": 0.6931927133269415
+  },
+  "val": {
+   "recordings": 456,
+   "messages": 76932,
+   "pooled": 0.00993084802162949,
+   "median_rec": 0.0,
+   "p90_rec": 0.03076923076923077,
+   "share_recs_zero_fa": 0.7258771929824561,
+   "share_of_alarms_from_top10pct_recs": 0.8075916230366492
+  },
+  "site": [
+   {
+    "site": "Stationary/V2X-only/Aachen-Ponttor",
+    "n": 27301,
+    "recs": 414,
+    "physics": 0.01956,
+    "L1": 0.00385,
+    "L2": 0.02282,
+    "L3": 0.01011
+   },
+   {
+    "site": "Stationary/V2X-only/Aachen-Theaterstrasse",
+    "n": 14901,
+    "recs": 220,
+    "physics": 0.03221,
+    "L1": 0.00671,
+    "L2": 0.03785,
+    "L3": 0.01564
+   },
+   {
+    "site": "Stationary/V2X-with-Sensor-Context/A44-Jackerath",
+    "n": 4027,
+    "recs": 11,
+    "physics": 0.0072,
+    "L1": 0.00571,
+    "L2": 0.00248,
+    "L3": 0.00348
+   }
+  ],
+  "worst_site_days": [
+   {
+    "site": "Stationary/V2X-only/Aachen-Ponttor",
+    "day": "2024-01-17",
+    "n": 115,
+    "physics": 0.17391
+   },
+   {
+    "site": "Stationary/V2X-only/Aachen-Theaterstrasse",
+    "day": "2024-02-02",
+    "n": 1858,
+    "physics": 0.06028
+   },
+   {
+    "site": "Stationary/V2X-only/Aachen-Theaterstrasse",
+    "day": "2024-02-05",
+    "n": 1896,
+    "physics": 0.05222
+   },
+   {
+    "site": "Stationary/V2X-only/Aachen-Ponttor",
+    "day": "2024-01-21",
+    "n": 790,
+    "physics": 0.0481
+   },
+   {
+    "site": "Stationary/V2X-only/Aachen-Theaterstrasse",
+    "day": "2024-01-30",
+    "n": 1510,
+    "physics": 0.03179
+   },
+   {
+    "site": "Stationary/V2X-only/Aachen-Theaterstrasse",
+    "day": "2024-02-04",
+    "n": 638,
+    "physics": 0.02978
+   },
+   {
+    "site": "Stationary/V2X-only/Aachen-Theaterstrasse",
+    "day": "2024-02-06",
+    "n": 822,
+    "physics": 0.02798
+   },
+   {
+    "site": "Stationary/V2X-only/Aachen-Ponttor",
+    "day": "2024-01-14",
+    "n": 987,
+    "physics": 0.02736
+   }
+  ],
+  "layers_pooled": {
+   "physics": 0.022561595535270068,
+   "L1": 0.00493196911029873,
+   "L2": 0.025892837829068333,
+   "L3": 0.011313244932834369
+  },
+  "n_messages_per_rec": {
+   "h31_median": 53.0,
+   "val_median": 43.0
+  }
+ }
+}

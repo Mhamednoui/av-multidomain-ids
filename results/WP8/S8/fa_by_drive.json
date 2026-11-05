@@ -1,0 +1,520 @@
+{
+ "H31": {
+  "veh": {
+   "0004": {
+    "set": "H31",
+    "ticks": 352,
+    "gps_fa": 0.0,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0009": {
+    "set": "H31",
+    "ticks": 462,
+    "gps_fa": 0.006493506493506494,
+    "cross_fa": 0.025974025974025976,
+    "edge:gps-lidar speed": 0.004329004329004329,
+    "edge:gps-can speed": 0.004329004329004329,
+    "edge:lidar-can speed": 0.017316017316017316,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0016": {
+    "set": "H31",
+    "ticks": 290,
+    "gps_fa": 0.0,
+    "cross_fa": 0.0034482758620689655,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0034482758620689655,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0023": {
+    "set": "H31",
+    "ticks": 491,
+    "gps_fa": 0.006109979633401222,
+    "cross_fa": 0.002036659877800407,
+    "edge:gps-lidar speed": 0.002036659877800407,
+    "edge:gps-can speed": 0.002036659877800407,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0026": {
+    "set": "H31",
+    "ticks": 164,
+    "gps_fa": 0.0,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0032": {
+    "set": "H31",
+    "ticks": 404,
+    "gps_fa": 0.0024752475247524753,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0047": {
+    "set": "H31",
+    "ticks": 867,
+    "gps_fa": 0.01384083044982699,
+    "cross_fa": 0.049596309111880045,
+    "edge:gps-lidar speed": 0.010380622837370242,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.04498269896193772,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.002306805074971165,
+    "edge:compass-gyro yaw": 0.002306805074971165,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0056": {
+    "set": "H31",
+    "ticks": 303,
+    "gps_fa": 0.0,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0061": {
+    "set": "H31",
+    "ticks": 727,
+    "gps_fa": 0.0041265474552957355,
+    "cross_fa": 0.012379642365887207,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.008253094910591471,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0041265474552957355,
+    "edge:compass-gyro yaw": 0.0041265474552957355,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0064": {
+    "set": "H31",
+    "ticks": 589,
+    "gps_fa": 0.001697792869269949,
+    "cross_fa": 0.001697792869269949,
+    "edge:gps-lidar speed": 0.001697792869269949,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0084": {
+    "set": "H31",
+    "ticks": 396,
+    "gps_fa": 0.007575757575757576,
+    "cross_fa": 0.0025252525252525255,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0025252525252525255,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0093": {
+    "set": "H31",
+    "ticks": 448,
+    "gps_fa": 0.9441964285714286,
+    "cross_fa": 0.90625,
+    "edge:gps-lidar speed": 0.7589285714285714,
+    "edge:gps-can speed": 0.5245535714285714,
+    "edge:lidar-can speed": 0.8348214285714286,
+    "edge:gps-lidar lateral": 0.8705357142857143,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0101": {
+    "set": "H31",
+    "ticks": 967,
+    "gps_fa": 0.016546018614270942,
+    "cross_fa": 0.007238883143743537,
+    "edge:gps-lidar speed": 0.0031023784901758012,
+    "edge:gps-can speed": 0.002068252326783868,
+    "edge:lidar-can speed": 0.002068252326783868,
+    "edge:gps-lidar lateral": 0.001034126163391934,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   }
+  },
+  "lidar": {
+   "0004": {
+    "scans": 338,
+    "lidar_fa": 0.0621301775147929,
+    "v3_fa": 0.0621301775147929,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0621301775147929
+   },
+   "0009": {
+    "scans": 442,
+    "lidar_fa": 0.08823529411764706,
+    "v3_fa": 0.11085972850678733,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.083710407239819,
+    "fire:L2c": 0.0022624434389140274,
+    "fire:L2d": 0.0022624434389140274
+   },
+   "0016": {
+    "scans": 278,
+    "lidar_fa": 0.0,
+    "v3_fa": 0.0,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0023": {
+    "scans": 473,
+    "lidar_fa": 0.012684989429175475,
+    "v3_fa": 0.016913319238900635,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.012684989429175475,
+    "fire:L2d": 0.0
+   },
+   "0026": {
+    "scans": 157,
+    "lidar_fa": 0.0,
+    "v3_fa": 0.0,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0032": {
+    "scans": 389,
+    "lidar_fa": 0.015424164524421594,
+    "v3_fa": 0.007712082262210797,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.005141388174807198,
+    "fire:L2d": 0.010282776349614395
+   },
+   "0047": {
+    "scans": 836,
+    "lidar_fa": 0.01674641148325359,
+    "v3_fa": 0.04425837320574163,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0011961722488038277,
+    "fire:L2c": 0.01555023923444976,
+    "fire:L2d": 0.0
+   },
+   "0056": {
+    "scans": 293,
+    "lidar_fa": 0.017064846416382253,
+    "v3_fa": 0.013651877133105802,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.017064846416382253
+   },
+   "0061": {
+    "scans": 702,
+    "lidar_fa": 0.022792022792022793,
+    "v3_fa": 0.04985754985754986,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.018518518518518517,
+    "fire:L2c": 0.004273504273504274,
+    "fire:L2d": 0.0
+   },
+   "0064": {
+    "scans": 569,
+    "lidar_fa": 0.06502636203866433,
+    "v3_fa": 0.05975395430579965,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.06502636203866433,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0084": {
+    "scans": 382,
+    "lidar_fa": 0.007853403141361256,
+    "v3_fa": 0.002617801047120419,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.007853403141361256,
+    "fire:L2d": 0.0
+   },
+   "0093": {
+    "scans": 432,
+    "lidar_fa": 0.8587962962962963,
+    "v3_fa": 0.8587962962962963,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.12037037037037036,
+    "fire:L2d": 0.8587962962962963
+   },
+   "0101": {
+    "scans": 935,
+    "lidar_fa": 0.0042780748663101605,
+    "v3_fa": 0.017112299465240642,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0021390374331550803,
+    "fire:L2d": 0.0032085561497326204
+   }
+  }
+ },
+ "V31_val": {
+  "veh": {
+   "0001": {
+    "set": "V31_val",
+    "ticks": 111,
+    "gps_fa": 0.0,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0005": {
+    "set": "V31_val",
+    "ticks": 159,
+    "gps_fa": 0.018867924528301886,
+    "cross_fa": 0.006289308176100629,
+    "edge:gps-lidar speed": 0.006289308176100629,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0011": {
+    "set": "V31_val",
+    "ticks": 241,
+    "gps_fa": 0.008298755186721992,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0027": {
+    "set": "V31_val",
+    "ticks": 194,
+    "gps_fa": 0.02577319587628866,
+    "cross_fa": 0.020618556701030927,
+    "edge:gps-lidar speed": 0.005154639175257732,
+    "edge:gps-can speed": 0.015463917525773196,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.005154639175257732,
+    "edge:compass-gyro yaw": 0.005154639175257732,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0028": {
+    "set": "V31_val",
+    "ticks": 445,
+    "gps_fa": 0.015730337078651686,
+    "cross_fa": 0.0022471910112359553,
+    "edge:gps-lidar speed": 0.0022471910112359553,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0035": {
+    "set": "V31_val",
+    "ticks": 135,
+    "gps_fa": 0.007407407407407408,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0039": {
+    "set": "V31_val",
+    "ticks": 407,
+    "gps_fa": 0.007371007371007371,
+    "cross_fa": 0.0171990171990172,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.002457002457002457,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.004914004914004914,
+    "edge:compass-gyro yaw": 0.004914004914004914,
+    "edge:gyro-lidar yaw": 0.009828009828009828
+   },
+   "0052": {
+    "set": "V31_val",
+    "ticks": 80,
+    "gps_fa": 0.0,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0079": {
+    "set": "V31_val",
+    "ticks": 103,
+    "gps_fa": 0.0,
+    "cross_fa": 0.0,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   },
+   "0095": {
+    "set": "V31_val",
+    "ticks": 277,
+    "gps_fa": 0.032490974729241874,
+    "cross_fa": 0.0036101083032490976,
+    "edge:gps-lidar speed": 0.0,
+    "edge:gps-can speed": 0.0036101083032490976,
+    "edge:lidar-can speed": 0.0,
+    "edge:gps-lidar lateral": 0.0,
+    "edge:compass-lidar yaw": 0.0,
+    "edge:compass-gyro yaw": 0.0,
+    "edge:gyro-lidar yaw": 0.0
+   }
+  },
+  "lidar": {
+   "0001": {
+    "scans": 107,
+    "lidar_fa": 0.0,
+    "v3_fa": 0.018691588785046728,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0005": {
+    "scans": 153,
+    "lidar_fa": 0.0,
+    "v3_fa": 0.0,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0011": {
+    "scans": 232,
+    "lidar_fa": 0.017241379310344827,
+    "v3_fa": 0.017241379310344827,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.008620689655172414,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.008620689655172414
+   },
+   "0027": {
+    "scans": 187,
+    "lidar_fa": 0.03208556149732621,
+    "v3_fa": 0.1657754010695187,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.03208556149732621,
+    "fire:L2d": 0.0
+   },
+   "0028": {
+    "scans": 429,
+    "lidar_fa": 0.002331002331002331,
+    "v3_fa": 0.002331002331002331,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.002331002331002331
+   },
+   "0035": {
+    "scans": 130,
+    "lidar_fa": 0.015384615384615385,
+    "v3_fa": 0.015384615384615385,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.015384615384615385,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0039": {
+    "scans": 394,
+    "lidar_fa": 0.01015228426395939,
+    "v3_fa": 0.030456852791878174,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.01015228426395939,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0052": {
+    "scans": 77,
+    "lidar_fa": 0.0,
+    "v3_fa": 0.0,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0079": {
+    "scans": 99,
+    "lidar_fa": 0.0,
+    "v3_fa": 0.0,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.0,
+    "fire:L2d": 0.0
+   },
+   "0095": {
+    "scans": 267,
+    "lidar_fa": 0.011235955056179775,
+    "v3_fa": 0.0149812734082397,
+    "fire:L1": 0.0,
+    "fire:L2a": 0.0,
+    "fire:L2c": 0.011235955056179775,
+    "fire:L2d": 0.0
+   }
+  }
+ }
+}
