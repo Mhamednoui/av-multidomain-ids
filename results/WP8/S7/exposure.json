@@ -1,0 +1,66 @@
+{
+ "written": "WP8 S7",
+ "scored_once_on_H31": true,
+ "rows": [
+  {
+   "material": "KITTI 13 H31 drives (GPS, cross, LiDAR, blame, K vehicle block)",
+   "label": "fresh H31",
+   "exposure_before": 0,
+   "exposure_after": 1
+  },
+  {
+   "material": "comma2k19 Chunk_2 RAV4 21 routes (C vehicle block)",
+   "label": "fresh H31",
+   "exposure_before": 0,
+   "exposure_after": 1
+  },
+  {
+   "material": "comma2k19 Chunk_4 Civic",
+   "label": "not scored (no Civic decoder)",
+   "exposure_before": 0,
+   "exposure_after": 0
+  },
+  {
+   "material": "V2AIX 674 recordings",
+   "label": "fresh H31 (672 same site-day as calibration, 2 independent)",
+   "exposure_before": 0,
+   "exposure_after": 1
+  },
+  {
+   "material": "ROAD test captures (15)",
+   "label": "re-used test (exposure n+1)",
+   "exposure_before": 7,
+   "exposure_after": 8
+  },
+  {
+   "material": "ROAD accelerator drive_2 / reverse_2",
+   "label": "fresh H31 (capture level)",
+   "exposure_before": 0,
+   "exposure_after": 1
+  },
+  {
+   "material": "D10 test (network)",
+   "label": "re-used test (exposure n+1)",
+   "exposure_before": 7,
+   "exposure_after": 8
+  },
+  {
+   "material": "VeReMi test (V2X ego views)",
+   "label": "re-used test (exposure n+1)",
+   "exposure_before": 3,
+   "exposure_after": 4
+  },
+  {
+   "material": "system composites K / C",
+   "label": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "exposure_before": 5,
+   "exposure_after": 6
+  },
+  {
+   "material": "Car-Hacking, D11, OTIDS, normal_run, D23, Tampa, VeReMi 2018",
+   "label": "not scored in S7",
+   "exposure_before": null,
+   "exposure_after": null
+  }
+ ]
+}

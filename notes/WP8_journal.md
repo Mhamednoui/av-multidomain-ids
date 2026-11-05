@@ -730,3 +730,30 @@
 2026-11-05T18:59:14+01:00 | B4 | AV-GPS supervised test done (B4_gps_test.json); running v3 GPS layers on case I (tools/WP9_B4_gps_v3.py, bg, log B4_gps_v3.log) | LiDAR fit when build done
 2026-11-05T18:59:17+01:00 | S7 | CAN idle timing ambient_highway_street_driving_diagnostics: start | other python processes 7
 2026-11-05T19:00:16+01:00 | B4 | AV-GPS tests done (supervised + v3 layers); committing results | LiDAR fit after build finishes
+2026-11-05T19:01:14+01:00 | S7 | CAN idle timing correlated_signal_attack_3: start | other python processes 6
+2026-11-05T19:01:19+01:00 | S7 | CAN idle timing correlated_signal_attack_3_masquerade: start | other python processes 6
+2026-11-05T19:01:23+01:00 | S7 | CAN idle timing fuzzing_attack_3: start | other python processes 6
+2026-11-05T19:01:25+01:00 | S7 | CAN idle timing max_engine_coolant_temp_attack: start | other python processes 6
+2026-11-05T19:01:31+01:00 | S7 | CAN idle timing max_engine_coolant_temp_attack_masquerade: start | other python processes 6
+2026-11-05T19:01:38+01:00 | S7 | CAN idle timing max_speedometer_attack_3: start | other python processes 6
+2026-11-05T19:01:59+01:00 | S7 | CAN idle timing max_speedometer_attack_3_masquerade: start | other python processes 6
+2026-11-05T19:02:22+01:00 | S7 | CAN idle timing reverse_light_off_attack_3: start | other python processes 6
+2026-11-05T19:02:38+01:00 | S7 | CAN idle timing reverse_light_off_attack_3_masquerade: start | other python processes 6
+2026-11-05T19:02:53+01:00 | S7 | CAN idle timing reverse_light_on_attack_3: start | other python processes 6
+2026-11-05T19:03:10+01:00 | S7 | CAN idle timing reverse_light_on_attack_3_masquerade: start | other python processes 6
+2026-11-05T19:03:27+01:00 | S7 | CAN idle timing accelerator_attack_drive_2: start | other python processes 7
+2026-11-05T19:03:47+01:00 | S7 | CAN idle timing accelerator_attack_reverse_2: start | other python processes 6
+2026-11-05T19:04:20+01:00 | S7 | CAN idle timing: done | p99 max 304.8 ms
+2026-11-05T19:04:35+01:00 | S7 | timing repeats done (LiDAR median 111.9 ms first run / 147.9 repeat with 2 / 7 other python processes; CAN p99 max 195 ms loaded / 305 ms repeat with up to 7 other processes; Evidence identical). Post-hoc diagnostic without KITTI drive 0093 running (labelled, not a verdict). M4 verdict by make_report_v31.py: see results/WP8/S7/m4_verdict.json
+2026-11-05T19:04:37+01:00 | S7 | POST-HOC diagnostic (labelled, not a verdict): sim without KITTI drive 0093, tag h31_no0093 | tools/WP8_S7_posthoc.py
+2026-11-05T19:04:39+01:00 | S7 | system simulation h31_no0093: start | material h31; chunks results/WP8/S7/parts/sim_h31_no0093_*; log results/WP8/logs/S7_sim_h31_no0093.log
+2026-11-05T19:04:41+01:00 | S7 | sim h31_no0093 v31 K: start | chunk sim_h31_no0093_v31_K.pkl
+2026-11-05T19:04:42+01:00 | S7 | sim h31_no0093 v31 K: done | chunk sim_h31_no0093_v31_K.pkl
+2026-11-05T19:05:09+01:00 | S7 | sim h31_no0093 v31 C: start | chunk sim_h31_no0093_v31_C.pkl
+2026-11-05T19:05:10+01:00 | S7 | sim h31_no0093 v31 C: done | chunk sim_h31_no0093_v31_C.pkl
+2026-11-05T19:05:21+01:00 | B4 | LiDAR rows built (46 pkl); LiDAR fit on validation (bg, log B4_lidar_fit.log) | controls, commit, then test
+2026-11-05T19:05:35+01:00 | S7 | sim h31_no0093 v3 K: start | chunk sim_h31_no0093_v3_K.pkl
+2026-11-05T19:05:37+01:00 | S7 | sim h31_no0093 v3 K: done | chunk sim_h31_no0093_v3_K.pkl
+2026-11-05T19:06:01+01:00 | S7 | sim h31_no0093 v3 C: start | chunk sim_h31_no0093_v3_C.pkl
+2026-11-05T19:06:04+01:00 | S7 | sim h31_no0093 v3 C: done | chunk sim_h31_no0093_v3_C.pkl
+2026-11-05T19:07:25+01:00 | S7 | system simulation h31_no0093: done | results/WP8/S7/system_h31_no0093.json

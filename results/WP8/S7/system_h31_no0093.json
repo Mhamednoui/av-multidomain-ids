@@ -1,0 +1,3941 @@
+{
+ "tag": "h31_no0093",
+ "material": "h31",
+ "runs": {
+  "v31": {
+   "description": "v3.1 primary (frozen_system31 MX|L100|b2|m2w5|g15|d0|k1, F1, blame A1)",
+   "kwargs": {
+    "lvar": "L100",
+    "nvar": "F1",
+    "blame_key": "blame_A1"
+   },
+   "K": {
+    "clean_timelines": 16,
+    "clean_hours": 7.933333333333334,
+    "fa_tick": 0.04733893557422969,
+    "fa_tick_ci": [
+     0.04114958947769553,
+     0.05634115612648221
+    ],
+    "events_per_hour": 23.949579831932773,
+    "events_per_hour_ci": [
+     20.526144907723854,
+     27.539521783424217
+    ],
+    "WARN_per_hour": 12.731092436974789,
+    "WARN_per_hour_ci": [
+     10.714006696428573,
+     15.085929919137467
+    ],
+    "DEGRADE_per_hour": 10.714285714285714,
+    "DEGRADE_per_hour_ci": [
+     9.050169630924232,
+     12.218929415737927
+    ],
+    "SAFE_STOP_per_hour": 0.5042016806722689,
+    "SAFE_STOP_per_hour_ci": [
+     0.0,
+     1.099563058207576
+    ],
+    "clean_events_explained": [
+     190,
+     190
+    ],
+    "clean_event_domains": {
+     "lidar": 62,
+     "can": 148,
+     "v2x": 95,
+     "gps": 50,
+     "cross": 85,
+     "network": 17
+    },
+    "clean_event_blamed": {
+     "undecided": 58,
+     "can": 105,
+     "v2x": 13,
+     "lidar": 7,
+     "gps": 5,
+     "network": 2
+    },
+    "own_alarm_share": {
+     "gps": 0.00742296918767507,
+     "lidar": 0.0890406162464986,
+     "can": 0.03858543417366947,
+     "network": 0.04831932773109244,
+     "v2x": 0.10189075630252101,
+     "cross": 0.011589635854341737
+    },
+    "types": 55,
+    "held_out_types": 12,
+    "det_single": 0.8418181818181818,
+    "det_single_ci": [
+     0.8185280009783309,
+     0.8642321818235039
+    ],
+    "det_heldout": 0.8659722222222221,
+    "det_heldout_ci": [
+     0.8166666666666668,
+     0.9145833333333333
+    ],
+    "blame_correct": 0.779090209747004,
+    "blame_correct_ci": [
+     0.7549316566077349,
+     0.8032148537840139
+    ],
+    "blame_wrong": 0.15783451111882318,
+    "blame_wrong_ci": [
+     0.13245447479974723,
+     0.18448841917634742
+    ],
+    "attack_events_explained": [
+     1828,
+     1828
+    ],
+    "ttv_persistent_median": 5.0,
+    "by_attacked_domain": {
+     "can": {
+      "types": 11,
+      "event_detection": 0.9090909090909091,
+      "delay_available_median": 2.0
+     },
+     "cross": {
+      "types": 6,
+      "event_detection": 0.7916666666666666,
+      "delay_available_median": 4.0
+     },
+     "gps": {
+      "types": 4,
+      "event_detection": 0.9583333333333333,
+      "delay_available_median": 6.0
+     },
+     "lidar": {
+      "types": 6,
+      "event_detection": 0.375,
+      "delay_available_median": 2.0
+     },
+     "network": {
+      "types": 10,
+      "event_detection": 0.7666666666666666,
+      "delay_available_median": 84.5
+     },
+     "v2x": {
+      "types": 18,
+      "event_detection": 0.9888888888888889,
+      "delay_available_median": 1.0
+     }
+    },
+    "by_type": {
+     "can_episode|correlated_signal": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|correlated_signal_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|fuzzing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "WARN": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|max_engine_coolant_temp": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "can_episode|max_engine_coolant_temp_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "can_episode|max_speedometer": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|max_speedometer_masquerade": {
+      "n": 1,
+      "event_detection": 0.0,
+      "tick_detection": 1.0,
+      "blame": {},
+      "response_max": {},
+      "delay_available_median": null
+     },
+     "can_episode|reverse_light_off": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_off_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_on": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_on_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "lidar_episode|ep_PointDrop": {
+      "n": 36,
+      "event_detection": 0.05555555555555555,
+      "tick_detection": 0.4444444444444444,
+      "blame": {
+       "correct": 2
+      },
+      "response_max": {
+       "WARN": 2
+      },
+      "delay_available_median": 1.5
+     },
+     "lidar_scan|IntensitySpoof": {
+      "n": 12,
+      "event_detection": 0.25,
+      "tick_detection": 0.5833333333333334,
+      "blame": {
+       "wrong": 2,
+       "undecided": 1
+      },
+      "response_max": {
+       "DEGRADE": 2,
+       "WARN": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "lidar_scan|PointDrop": {
+      "n": 12,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 12
+      },
+      "response_max": {
+       "SAFE_STOP": 8,
+       "DEGRADE": 4
+      },
+      "delay_available_median": 1.0
+     },
+     "lidar_scan|ph_budget_far": {
+      "n": 12,
+      "event_detection": 0.3333333333333333,
+      "tick_detection": 0.75,
+      "blame": {
+       "undecided": 1,
+       "correct": 1,
+       "wrong": 2
+      },
+      "response_max": {
+       "WARN": 3,
+       "DEGRADE": 1
+      },
+      "delay_available_median": 14.5
+     },
+     "lidar_scan|ph_budget_near": {
+      "n": 12,
+      "event_detection": 0.16666666666666666,
+      "tick_detection": 0.8333333333333334,
+      "blame": {
+       "correct": 1,
+       "wrong": 1
+      },
+      "response_max": {
+       "WARN": 1,
+       "DEGRADE": 1
+      },
+      "delay_available_median": 7.0
+     },
+     "lidar_scan|ph_replace_far": {
+      "n": 12,
+      "event_detection": 0.3333333333333333,
+      "tick_detection": 0.6666666666666666,
+      "blame": {
+       "wrong": 2,
+       "undecided": 1,
+       "correct": 1
+      },
+      "response_max": {
+       "WARN": 3,
+       "DEGRADE": 1
+      },
+      "delay_available_median": 21.5
+     },
+     "lidar_scan|ph_replace_near": {
+      "n": 12,
+      "event_detection": 0.16666666666666666,
+      "tick_detection": 0.75,
+      "blame": {
+       "correct": 1,
+       "wrong": 1
+      },
+      "response_max": {
+       "WARN": 1,
+       "DEGRADE": 1
+      },
+      "delay_available_median": 9.5
+     },
+     "multi_can_gps|correlated_signal+drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|correlated_signal_masquerade+meaconing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|fuzzing+meaconing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|max_engine_coolant_temp+doppler_spoof": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "multi_can_gps|max_engine_coolant_temp_masquerade+drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "multi_can_gps|max_speedometer+accel_drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|max_speedometer_masquerade+meaconing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 5.0
+     },
+     "multi_can_gps|reverse_light_off+doppler_spoof": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|reverse_light_off_masquerade+accel_drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|reverse_light_on+accel_drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|reverse_light_on_masquerade+accel_drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_lidar|correlated_signal+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "multi_can_lidar|correlated_signal_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": -1.0
+     },
+     "multi_can_lidar|fuzzing+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "multi_can_lidar|max_engine_coolant_temp+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_lidar|max_engine_coolant_temp_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_lidar|max_speedometer+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "multi_can_lidar|max_speedometer_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 0.0
+     },
+     "multi_can_lidar|reverse_light_off+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": -1.0
+     },
+     "multi_can_lidar|reverse_light_off_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "multi_can_lidar|reverse_light_on+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "multi_can_lidar|reverse_light_on_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "network_block|DDoS-LOIC-HTTP": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 62.0
+     },
+     "network_block|DoS-GoldenEye": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 75.0
+     },
+     "network_block|DoS-Hulk": {
+      "n": 2,
+      "event_detection": 0.5,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 62.0
+     },
+     "network_block|DoS-SlowHTTPTest": {
+      "n": 2,
+      "event_detection": 0.0,
+      "tick_detection": 1.0,
+      "blame": {},
+      "response_max": {},
+      "delay_available_median": null
+     },
+     "network_block|DoS-Slowloris": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 70.0
+     },
+     "network_block|FTP-Patator": {
+      "n": 3,
+      "event_detection": 0.6666666666666666,
+      "tick_detection": 0.6666666666666666,
+      "blame": {
+       "wrong": 2
+      },
+      "response_max": {
+       "DEGRADE": 2
+      },
+      "delay_available_median": 174.0
+     },
+     "network_block|PortScan": {
+      "n": 3,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "undecided": 2,
+       "correct": 1
+      },
+      "response_max": {
+       "WARN": 2,
+       "DEGRADE": 1
+      },
+      "delay_available_median": 118.0
+     },
+     "network_block|SSH-Patator": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 67.0
+     },
+     "network_block|Web-BruteForce": {
+      "n": 2,
+      "event_detection": 0.5,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 243.0
+     },
+     "network_block|Web-XSS": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "undecided": 1
+      },
+      "response_max": {
+       "WARN": 1
+      },
+      "delay_available_median": 194.0
+     },
+     "v2x_episode|01_ConstPos": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "WARN": 1,
+       "DEGRADE": 29
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|02_ConstPosOffset": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 28,
+       "undecided": 1
+      },
+      "response_max": {
+       "DEGRADE": 28,
+       "WARN": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|03_RandomPos": {
+      "n": 30,
+      "event_detection": 0.9333333333333333,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 27,
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 28
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|04_RandomPosOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|05_ConstSpeed": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|06_ConstSpeedOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|07_RandomSpeed": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|08_RandomSpeedOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|09_EventualStop": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|10_Disruptive": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 29
+      },
+      "response_max": {
+       "DEGRADE": 29
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|11_DataReplay": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|13_DoS": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|14_DoSRandom": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|15_DoSDisruptive": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 29,
+       "undecided": 1
+      },
+      "response_max": {
+       "DEGRADE": 29,
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|16_GridSybil": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 29
+      },
+      "response_max": {
+       "DEGRADE": 29
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|17_DataReplaySybil": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|18_DoSRandomSybil": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 29
+      },
+      "response_max": {
+       "DEGRADE": 28,
+       "WARN": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|19_DoSDisruptiveSybil": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "undecided": 1,
+       "correct": 29
+      },
+      "response_max": {
+       "WARN": 1,
+       "DEGRADE": 29
+      },
+      "delay_available_median": 1.0
+     },
+     "vehicle|accel_drift": {
+      "n": 120,
+      "event_detection": 0.9916666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 119
+      },
+      "response_max": {
+       "DEGRADE": 44,
+       "WARN": 1,
+       "SAFE_STOP": 74
+      },
+      "delay_available_median": 7.0
+     },
+     "vehicle|can_freeze": {
+      "n": 120,
+      "event_detection": 0.9416666666666667,
+      "tick_detection": 0.95,
+      "blame": {
+       "correct": 113
+      },
+      "response_max": {
+       "DEGRADE": 39,
+       "SAFE_STOP": 73,
+       "WARN": 1
+      },
+      "delay_available_median": 6.0
+     },
+     "vehicle|can_offset": {
+      "n": 120,
+      "event_detection": 0.925,
+      "tick_detection": 0.95,
+      "blame": {
+       "correct": 104,
+       "undecided": 7
+      },
+      "response_max": {
+       "DEGRADE": 33,
+       "WARN": 8,
+       "SAFE_STOP": 70
+      },
+      "delay_available_median": 4.0
+     },
+     "vehicle|can_scale": {
+      "n": 120,
+      "event_detection": 0.8833333333333333,
+      "tick_detection": 0.9333333333333333,
+      "blame": {
+       "correct": 96,
+       "undecided": 10
+      },
+      "response_max": {
+       "DEGRADE": 36,
+       "WARN": 15,
+       "SAFE_STOP": 55
+      },
+      "delay_available_median": 3.0
+     },
+     "vehicle|doppler_spoof": {
+      "n": 120,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 0.9916666666666667,
+      "blame": {
+       "correct": 114,
+       "undecided": 1,
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 46,
+       "SAFE_STOP": 69,
+       "WARN": 1
+      },
+      "delay_available_median": 6.0
+     },
+     "vehicle|drift": {
+      "n": 120,
+      "event_detection": 0.95,
+      "tick_detection": 0.9833333333333333,
+      "blame": {
+       "correct": 110,
+       "wrong": 4
+      },
+      "response_max": {
+       "DEGRADE": 48,
+       "SAFE_STOP": 66
+      },
+      "delay_available_median": 5.0
+     },
+     "vehicle|gps_can": {
+      "n": 120,
+      "event_detection": 0.9416666666666667,
+      "tick_detection": 0.95,
+      "blame": {
+       "wrong": 99,
+       "undecided": 10,
+       "correct": 4
+      },
+      "response_max": {
+       "SAFE_STOP": 72,
+       "DEGRADE": 29,
+       "WARN": 12
+      },
+      "delay_available_median": 4.0
+     },
+     "vehicle|lidar_bias": {
+      "n": 120,
+      "event_detection": 0.9,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 93,
+       "wrong": 3,
+       "undecided": 12
+      },
+      "response_max": {
+       "DEGRADE": 30,
+       "SAFE_STOP": 64,
+       "WARN": 14
+      },
+      "delay_available_median": 4.0
+     },
+     "vehicle|lidar_scale": {
+      "n": 120,
+      "event_detection": 0.85,
+      "tick_detection": 0.9083333333333333,
+      "blame": {
+       "correct": 87,
+       "undecided": 10,
+       "wrong": 5
+      },
+      "response_max": {
+       "DEGRADE": 34,
+       "SAFE_STOP": 58,
+       "WARN": 10
+      },
+      "delay_available_median": 2.0
+     },
+     "vehicle|lidar_yaw": {
+      "n": 120,
+      "event_detection": 0.25,
+      "tick_detection": 0.6,
+      "blame": {
+       "wrong": 16,
+       "undecided": 11,
+       "correct": 3
+      },
+      "response_max": {
+       "WARN": 18,
+       "DEGRADE": 12
+      },
+      "delay_available_median": 12.0
+     },
+     "vehicle|meaconing": {
+      "n": 120,
+      "event_detection": 0.925,
+      "tick_detection": 0.9333333333333333,
+      "blame": {
+       "correct": 110,
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 30,
+       "SAFE_STOP": 80,
+       "WARN": 1
+      },
+      "delay_available_median": 6.0
+     }
+    },
+    "threshold": 0.9954545454545456
+   },
+   "C": {
+    "clean_timelines": 16,
+    "clean_hours": 7.933333333333334,
+    "fa_tick": 0.06130952380952381,
+    "fa_tick_ci": [
+     0.04620834540618286,
+     0.09432135086369305
+    ],
+    "events_per_hour": 22.56302521008403,
+    "events_per_hour_ci": [
+     19.431774022609517,
+     27.033014950166113
+    ],
+    "WARN_per_hour": 5.798319327731092,
+    "WARN_per_hour_ci": [
+     3.9831551757302632,
+     7.547266076241817
+    ],
+    "DEGRADE_per_hour": 15.88235294117647,
+    "DEGRADE_per_hour_ci": [
+     13.266827621961756,
+     19.90573791993844
+    ],
+    "SAFE_STOP_per_hour": 0.8823529411764706,
+    "SAFE_STOP_per_hour_ci": [
+     0.16215123479274424,
+     1.5499190315644158
+    ],
+    "clean_events_explained": [
+     179,
+     179
+    ],
+    "clean_event_domains": {
+     "v2x": 104,
+     "can": 144,
+     "cross": 58,
+     "network": 15
+    },
+    "clean_event_blamed": {
+     "v2x": 18,
+     "undecided": 32,
+     "can": 111,
+     "gps": 10,
+     "network": 8
+    },
+    "own_alarm_share": {
+     "can": 0.03848039215686275,
+     "network": 0.04831932773109244,
+     "v2x": 0.10003501400560225,
+     "cross": 0.011169467787114846
+    },
+    "types": 46,
+    "held_out_types": 12,
+    "det_single": 0.9246900646062511,
+    "det_single_ci": [
+     0.8977892021351406,
+     0.9517502636451346
+    ],
+    "det_heldout": 0.8442101740294511,
+    "det_heldout_ci": [
+     0.7740855016408813,
+     0.9140357730263158
+    ],
+    "blame_correct": 0.9111416812796557,
+    "blame_correct_ci": [
+     0.9065992101397464,
+     0.9157128640170821
+    ],
+    "blame_wrong": 0.07645819321711893,
+    "blame_wrong_ci": [
+     0.07358655810976904,
+     0.07935413769310684
+    ],
+    "attack_events_explained": [
+     2447,
+     2447
+    ],
+    "ttv_persistent_median": 4.0,
+    "by_attacked_domain": {
+     "can": {
+      "types": 11,
+      "event_detection": 0.9090909090909091,
+      "delay_available_median": 2.0
+     },
+     "cross": {
+      "types": 3,
+      "event_detection": 0.9718875502008032,
+      "delay_available_median": 4.0
+     },
+     "gps": {
+      "types": 4,
+      "event_detection": 0.9216867469879518,
+      "delay_available_median": 5.0
+     },
+     "network": {
+      "types": 10,
+      "event_detection": 0.8,
+      "delay_available_median": 62.0
+     },
+     "v2x": {
+      "types": 18,
+      "event_detection": 0.9962962962962963,
+      "delay_available_median": 1.0
+     }
+    },
+    "by_type": {
+     "can_episode|correlated_signal": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|correlated_signal_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|fuzzing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|max_engine_coolant_temp": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "can_episode|max_engine_coolant_temp_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "can_episode|max_speedometer": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|max_speedometer_masquerade": {
+      "n": 1,
+      "event_detection": 0.0,
+      "tick_detection": 1.0,
+      "blame": {},
+      "response_max": {},
+      "delay_available_median": null
+     },
+     "can_episode|reverse_light_off": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_off_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_on": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_on_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "network_block|DDoS-LOIC-HTTP": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 62.0
+     },
+     "network_block|DoS-GoldenEye": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 62.0
+     },
+     "network_block|DoS-Hulk": {
+      "n": 2,
+      "event_detection": 0.5,
+      "tick_detection": 0.5,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 62.0
+     },
+     "network_block|DoS-SlowHTTPTest": {
+      "n": 2,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 2
+      },
+      "response_max": {
+       "DEGRADE": 2
+      },
+      "delay_available_median": 92.0
+     },
+     "network_block|DoS-Slowloris": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 136.0
+     },
+     "network_block|FTP-Patator": {
+      "n": 3,
+      "event_detection": 0.3333333333333333,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 62.0
+     },
+     "network_block|PortScan": {
+      "n": 3,
+      "event_detection": 0.6666666666666666,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 2
+      },
+      "response_max": {
+       "DEGRADE": 2
+      },
+      "delay_available_median": 92.0
+     },
+     "network_block|SSH-Patator": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 68.0
+     },
+     "network_block|Web-BruteForce": {
+      "n": 2,
+      "event_detection": 0.5,
+      "tick_detection": 0.5,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 62.0
+     },
+     "network_block|Web-XSS": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 138.0
+     },
+     "v2x_episode|01_ConstPos": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|02_ConstPosOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 28,
+       "WARN": 1,
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|03_RandomPos": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 28,
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 29
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|04_RandomPosOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|05_ConstSpeed": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|06_ConstSpeedOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|07_RandomSpeed": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|08_RandomSpeedOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|09_EventualStop": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|10_Disruptive": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|11_DataReplay": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|13_DoS": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 29,
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|14_DoSRandom": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|15_DoSDisruptive": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|16_GridSybil": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|17_DataReplaySybil": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|18_DoSRandomSybil": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 28,
+       "undecided": 1
+      },
+      "response_max": {
+       "DEGRADE": 27,
+       "WARN": 1,
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|19_DoSDisruptiveSybil": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "vehicle|accel_drift": {
+      "n": 166,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 163,
+       "undecided": 1,
+       "wrong": 2
+      },
+      "response_max": {
+       "SAFE_STOP": 164,
+       "DEGRADE": 2
+      },
+      "delay_available_median": 9.5
+     },
+     "vehicle|can_bus": {
+      "n": 166,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 56,
+       "undecided": 107,
+       "correct": 3
+      },
+      "response_max": {
+       "SAFE_STOP": 47,
+       "WARN": 115,
+       "DEGRADE": 4
+      },
+      "delay_available_median": 3.0
+     },
+     "vehicle|can_freeze": {
+      "n": 166,
+      "event_detection": 0.963855421686747,
+      "tick_detection": 0.9939759036144579,
+      "blame": {
+       "correct": 157,
+       "wrong": 2,
+       "undecided": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 149,
+       "WARN": 3,
+       "DEGRADE": 8
+      },
+      "delay_available_median": 6.5
+     },
+     "vehicle|can_offset": {
+      "n": 166,
+      "event_detection": 0.9518072289156626,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 154,
+       "wrong": 3,
+       "undecided": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 143,
+       "WARN": 4,
+       "DEGRADE": 11
+      },
+      "delay_available_median": 4.0
+     },
+     "vehicle|can_scale": {
+      "n": 166,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 165,
+       "wrong": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 160,
+       "DEGRADE": 5,
+       "WARN": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "vehicle|doppler_spoof": {
+      "n": 166,
+      "event_detection": 0.963855421686747,
+      "tick_detection": 0.9879518072289156,
+      "blame": {
+       "correct": 146,
+       "wrong": 6,
+       "undecided": 8
+      },
+      "response_max": {
+       "SAFE_STOP": 126,
+       "DEGRADE": 16,
+       "WARN": 18
+      },
+      "delay_available_median": 4.0
+     },
+     "vehicle|drift": {
+      "n": 166,
+      "event_detection": 0.7228915662650602,
+      "tick_detection": 0.963855421686747,
+      "blame": {
+       "undecided": 17,
+       "wrong": 26,
+       "correct": 77
+      },
+      "response_max": {
+       "WARN": 23,
+       "SAFE_STOP": 66,
+       "DEGRADE": 31
+      },
+      "delay_available_median": 15.5
+     },
+     "vehicle|gnss_can": {
+      "n": 166,
+      "event_detection": 0.9819277108433735,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 161,
+       "undecided": 2
+      },
+      "response_max": {
+       "SAFE_STOP": 154,
+       "DEGRADE": 7,
+       "WARN": 2
+      },
+      "delay_available_median": 4.0
+     },
+     "vehicle|meaconing": {
+      "n": 166,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "undecided": 52,
+       "wrong": 17,
+       "correct": 97
+      },
+      "response_max": {
+       "WARN": 22,
+       "SAFE_STOP": 98,
+       "DEGRADE": 46
+      },
+      "delay_available_median": 3.0
+     }
+    },
+    "threshold": 0.9940476190476192
+   }
+  },
+  "v3": {
+   "description": "v3 frozen (load_system(2), v3 LiDAR / network / blame)",
+   "kwargs": {
+    "lvar": "V3",
+    "nvar": "V3",
+    "blame_key": "blame_V3"
+   },
+   "K": {
+    "clean_timelines": 16,
+    "clean_hours": 7.933333333333334,
+    "fa_tick": 0.049509803921568625,
+    "fa_tick_ci": [
+     0.042699483585569055,
+     0.06055412635590736
+    ],
+    "events_per_hour": 26.72268907563025,
+    "events_per_hour_ci": [
+     23.626216519998906,
+     29.753569779458648
+    ],
+    "WARN_per_hour": 16.134453781512605,
+    "WARN_per_hour_ci": [
+     13.629468599033816,
+     18.538233976632203
+    ],
+    "DEGRADE_per_hour": 9.327731092436974,
+    "DEGRADE_per_hour_ci": [
+     7.603686635944701,
+     11.265520603145713
+    ],
+    "SAFE_STOP_per_hour": 1.2605042016806722,
+    "SAFE_STOP_per_hour_ci": [
+     0.6147305144438389,
+     2.335813821215281
+    ],
+    "clean_events_explained": [
+     212,
+     212
+    ],
+    "clean_event_domains": {
+     "lidar": 140,
+     "v2x": 117,
+     "gps": 71,
+     "can": 113,
+     "cross": 86,
+     "network": 25
+    },
+    "clean_event_blamed": {
+     "undecided": 78,
+     "lidar": 59,
+     "can": 41,
+     "v2x": 16,
+     "gps": 8,
+     "network": 10
+    },
+    "own_alarm_share": {
+     "gps": 0.00742296918767507,
+     "lidar": 0.10756302521008404,
+     "can": 0.03858543417366947,
+     "network": 0.04201680672268908,
+     "v2x": 0.10189075630252101,
+     "cross": 0.011589635854341737
+    },
+    "types": 55,
+    "held_out_types": 12,
+    "det_single": 0.8119696969696968,
+    "det_single_ci": [
+     0.7862645466052449,
+     0.8365268385875928
+    ],
+    "det_heldout": 0.8958333333333334,
+    "det_heldout_ci": [
+     0.82156341374269,
+     0.9685971102150537
+    ],
+    "blame_correct": 0.7897603873502201,
+    "blame_correct_ci": [
+     0.7587951193467001,
+     0.8198531920278026
+    ],
+    "blame_wrong": 0.1503476160081473,
+    "blame_wrong_ci": [
+     0.12688132429156215,
+     0.17444078233675178
+    ],
+    "attack_events_explained": [
+     1793,
+     1793
+    ],
+    "ttv_persistent_median": 8.0,
+    "by_attacked_domain": {
+     "can": {
+      "types": 11,
+      "event_detection": 0.9090909090909091,
+      "delay_available_median": 4.5
+     },
+     "cross": {
+      "types": 6,
+      "event_detection": 0.6347222222222222,
+      "delay_available_median": 10.0
+     },
+     "gps": {
+      "types": 4,
+      "event_detection": 0.9416666666666665,
+      "delay_available_median": 7.0
+     },
+     "lidar": {
+      "types": 6,
+      "event_detection": 0.375,
+      "delay_available_median": 15.0
+     },
+     "network": {
+      "types": 10,
+      "event_detection": 0.8833333333333332,
+      "delay_available_median": 12.5
+     },
+     "v2x": {
+      "types": 18,
+      "event_detection": 0.8888888888888888,
+      "delay_available_median": 3.0
+     }
+    },
+    "by_type": {
+     "can_episode|correlated_signal": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|correlated_signal_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 5.0
+     },
+     "can_episode|fuzzing": {
+      "n": 1,
+      "event_detection": 0.0,
+      "tick_detection": 1.0,
+      "blame": {},
+      "response_max": {},
+      "delay_available_median": null
+     },
+     "can_episode|max_engine_coolant_temp": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 4.0
+     },
+     "can_episode|max_engine_coolant_temp_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 4.0
+     },
+     "can_episode|max_speedometer": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|max_speedometer_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 19.0
+     },
+     "can_episode|reverse_light_off": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 5.0
+     },
+     "can_episode|reverse_light_off_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_on": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 9.0
+     },
+     "can_episode|reverse_light_on_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 6.0
+     },
+     "lidar_episode|ep_PointDrop": {
+      "n": 36,
+      "event_detection": 0.05555555555555555,
+      "tick_detection": 0.08333333333333333,
+      "blame": {
+       "correct": 2
+      },
+      "response_max": {
+       "DEGRADE": 1,
+       "WARN": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "lidar_scan|IntensitySpoof": {
+      "n": 12,
+      "event_detection": 0.8333333333333334,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 9,
+       "undecided": 1
+      },
+      "response_max": {
+       "DEGRADE": 5,
+       "WARN": 1,
+       "SAFE_STOP": 4
+      },
+      "delay_available_median": 13.5
+     },
+     "lidar_scan|PointDrop": {
+      "n": 12,
+      "event_detection": 0.25,
+      "tick_detection": 0.6666666666666666,
+      "blame": {
+       "correct": 2,
+       "undecided": 1
+      },
+      "response_max": {
+       "DEGRADE": 2,
+       "WARN": 1
+      },
+      "delay_available_median": 20.0
+     },
+     "lidar_scan|ph_budget_far": {
+      "n": 12,
+      "event_detection": 0.3333333333333333,
+      "tick_detection": 0.6666666666666666,
+      "blame": {
+       "undecided": 1,
+       "correct": 2,
+       "wrong": 1
+      },
+      "response_max": {
+       "WARN": 4
+      },
+      "delay_available_median": 28.0
+     },
+     "lidar_scan|ph_budget_near": {
+      "n": 12,
+      "event_detection": 0.25,
+      "tick_detection": 0.5833333333333334,
+      "blame": {
+       "correct": 1,
+       "undecided": 1,
+       "wrong": 1
+      },
+      "response_max": {
+       "WARN": 3
+      },
+      "delay_available_median": 10.0
+     },
+     "lidar_scan|ph_replace_far": {
+      "n": 12,
+      "event_detection": 0.16666666666666666,
+      "tick_detection": 0.6666666666666666,
+      "blame": {
+       "correct": 2
+      },
+      "response_max": {
+       "WARN": 2
+      },
+      "delay_available_median": 29.0
+     },
+     "lidar_scan|ph_replace_near": {
+      "n": 12,
+      "event_detection": 0.4166666666666667,
+      "tick_detection": 0.9166666666666666,
+      "blame": {
+       "correct": 2,
+       "undecided": 1,
+       "wrong": 2
+      },
+      "response_max": {
+       "DEGRADE": 2,
+       "WARN": 3
+      },
+      "delay_available_median": 18.0
+     },
+     "multi_can_gps|correlated_signal+drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|correlated_signal_masquerade+meaconing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 4.0
+     },
+     "multi_can_gps|fuzzing+meaconing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|max_engine_coolant_temp+doppler_spoof": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "WARN": 1
+      },
+      "delay_available_median": 4.0
+     },
+     "multi_can_gps|max_engine_coolant_temp_masquerade+drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "multi_can_gps|max_speedometer+accel_drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 8.0
+     },
+     "multi_can_gps|max_speedometer_masquerade+meaconing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 6.0
+     },
+     "multi_can_gps|reverse_light_off+doppler_spoof": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "multi_can_gps|reverse_light_off_masquerade+accel_drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "undecided": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 5.0
+     },
+     "multi_can_gps|reverse_light_on+accel_drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_gps|reverse_light_on_masquerade+accel_drift": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 4.0
+     },
+     "multi_can_lidar|correlated_signal+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_lidar|correlated_signal_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_lidar|fuzzing+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "WARN": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_lidar|max_engine_coolant_temp+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "multi_can_lidar|max_engine_coolant_temp_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "WARN": 1
+      },
+      "delay_available_median": 5.0
+     },
+     "multi_can_lidar|max_speedometer+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_lidar|max_speedometer_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "undecided": 1
+      },
+      "response_max": {
+       "WARN": 1
+      },
+      "delay_available_median": 14.0
+     },
+     "multi_can_lidar|reverse_light_off+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "multi_can_lidar|reverse_light_off_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "multi_can_lidar|reverse_light_on+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "multi_can_lidar|reverse_light_on_masquerade+PointDrop": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "network_block|DDoS-LOIC-HTTP": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 21.0
+     },
+     "network_block|DoS-GoldenEye": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 43.0
+     },
+     "network_block|DoS-Hulk": {
+      "n": 2,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1,
+       "wrong": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 2
+      },
+      "delay_available_median": 15.0
+     },
+     "network_block|DoS-SlowHTTPTest": {
+      "n": 2,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "undecided": 1,
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 2
+      },
+      "delay_available_median": 23.0
+     },
+     "network_block|DoS-Slowloris": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 13.0
+     },
+     "network_block|FTP-Patator": {
+      "n": 3,
+      "event_detection": 0.6666666666666666,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1,
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1,
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 6.5
+     },
+     "network_block|PortScan": {
+      "n": 3,
+      "event_detection": 0.6666666666666666,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 2
+      },
+      "response_max": {
+       "DEGRADE": 2
+      },
+      "delay_available_median": 2.0
+     },
+     "network_block|SSH-Patator": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "network_block|Web-BruteForce": {
+      "n": 2,
+      "event_detection": 0.5,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 7.0
+     },
+     "network_block|Web-XSS": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 31.0
+     },
+     "v2x_episode|01_ConstPos": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 29
+      },
+      "response_max": {
+       "DEGRADE": 29
+      },
+      "delay_available_median": 2.0
+     },
+     "v2x_episode|02_ConstPosOffset": {
+      "n": 30,
+      "event_detection": 0.8333333333333334,
+      "tick_detection": 0.9,
+      "blame": {
+       "correct": 25
+      },
+      "response_max": {
+       "DEGRADE": 24,
+       "WARN": 1
+      },
+      "delay_available_median": 4.0
+     },
+     "v2x_episode|03_RandomPos": {
+      "n": 30,
+      "event_detection": 0.7333333333333333,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 21,
+       "undecided": 1
+      },
+      "response_max": {
+       "DEGRADE": 22
+      },
+      "delay_available_median": 2.5
+     },
+     "v2x_episode|04_RandomPosOffset": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 29
+      },
+      "response_max": {
+       "DEGRADE": 29
+      },
+      "delay_available_median": 2.0
+     },
+     "v2x_episode|05_ConstSpeed": {
+      "n": 30,
+      "event_detection": 0.9333333333333333,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 28
+      },
+      "response_max": {
+       "DEGRADE": 27,
+       "WARN": 1
+      },
+      "delay_available_median": 3.5
+     },
+     "v2x_episode|06_ConstSpeedOffset": {
+      "n": 30,
+      "event_detection": 0.8666666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 26
+      },
+      "response_max": {
+       "DEGRADE": 25,
+       "WARN": 1
+      },
+      "delay_available_median": 5.0
+     },
+     "v2x_episode|07_RandomSpeed": {
+      "n": 30,
+      "event_detection": 0.8333333333333334,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 25
+      },
+      "response_max": {
+       "DEGRADE": 25
+      },
+      "delay_available_median": 2.0
+     },
+     "v2x_episode|08_RandomSpeedOffset": {
+      "n": 30,
+      "event_detection": 0.9,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 27
+      },
+      "response_max": {
+       "DEGRADE": 25,
+       "WARN": 2
+      },
+      "delay_available_median": 4.0
+     },
+     "v2x_episode|09_EventualStop": {
+      "n": 30,
+      "event_detection": 0.9333333333333333,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 28
+      },
+      "response_max": {
+       "DEGRADE": 28
+      },
+      "delay_available_median": 5.0
+     },
+     "v2x_episode|10_Disruptive": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 29
+      },
+      "response_max": {
+       "DEGRADE": 29
+      },
+      "delay_available_median": 4.0
+     },
+     "v2x_episode|11_DataReplay": {
+      "n": 30,
+      "event_detection": 0.9,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 27
+      },
+      "response_max": {
+       "DEGRADE": 27
+      },
+      "delay_available_median": 2.0
+     },
+     "v2x_episode|13_DoS": {
+      "n": 30,
+      "event_detection": 0.9,
+      "tick_detection": 0.9333333333333333,
+      "blame": {
+       "correct": 27
+      },
+      "response_max": {
+       "DEGRADE": 27
+      },
+      "delay_available_median": 5.0
+     },
+     "v2x_episode|14_DoSRandom": {
+      "n": 30,
+      "event_detection": 0.9333333333333333,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 28
+      },
+      "response_max": {
+       "DEGRADE": 28
+      },
+      "delay_available_median": 5.0
+     },
+     "v2x_episode|15_DoSDisruptive": {
+      "n": 30,
+      "event_detection": 0.8333333333333334,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 25
+      },
+      "response_max": {
+       "DEGRADE": 24,
+       "WARN": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "v2x_episode|16_GridSybil": {
+      "n": 30,
+      "event_detection": 0.8666666666666667,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 26
+      },
+      "response_max": {
+       "DEGRADE": 25,
+       "WARN": 1
+      },
+      "delay_available_median": 5.5
+     },
+     "v2x_episode|17_DataReplaySybil": {
+      "n": 30,
+      "event_detection": 0.8666666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 26
+      },
+      "response_max": {
+       "DEGRADE": 25,
+       "WARN": 1
+      },
+      "delay_available_median": 5.5
+     },
+     "v2x_episode|18_DoSRandomSybil": {
+      "n": 30,
+      "event_detection": 0.8333333333333334,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 25
+      },
+      "response_max": {
+       "DEGRADE": 25
+      },
+      "delay_available_median": 4.0
+     },
+     "v2x_episode|19_DoSDisruptiveSybil": {
+      "n": 30,
+      "event_detection": 0.9333333333333333,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "undecided": 1,
+       "correct": 27
+      },
+      "response_max": {
+       "WARN": 3,
+       "DEGRADE": 25
+      },
+      "delay_available_median": 2.0
+     },
+     "vehicle|accel_drift": {
+      "n": 120,
+      "event_detection": 0.975,
+      "tick_detection": 0.9916666666666667,
+      "blame": {
+       "correct": 117
+      },
+      "response_max": {
+       "SAFE_STOP": 73,
+       "DEGRADE": 44
+      },
+      "delay_available_median": 7.0
+     },
+     "vehicle|can_freeze": {
+      "n": 120,
+      "event_detection": 0.7083333333333334,
+      "tick_detection": 0.9,
+      "blame": {
+       "correct": 74,
+       "undecided": 11
+      },
+      "response_max": {
+       "DEGRADE": 48,
+       "SAFE_STOP": 28,
+       "WARN": 9
+      },
+      "delay_available_median": 10.0
+     },
+     "vehicle|can_offset": {
+      "n": 120,
+      "event_detection": 0.7333333333333333,
+      "tick_detection": 0.8666666666666667,
+      "blame": {
+       "wrong": 18,
+       "correct": 51,
+       "undecided": 19
+      },
+      "response_max": {
+       "DEGRADE": 40,
+       "WARN": 22,
+       "SAFE_STOP": 26
+      },
+      "delay_available_median": 13.5
+     },
+     "vehicle|can_scale": {
+      "n": 120,
+      "event_detection": 0.6666666666666666,
+      "tick_detection": 0.8666666666666667,
+      "blame": {
+       "wrong": 15,
+       "correct": 36,
+       "undecided": 29
+      },
+      "response_max": {
+       "DEGRADE": 32,
+       "WARN": 25,
+       "SAFE_STOP": 23
+      },
+      "delay_available_median": 9.5
+     },
+     "vehicle|doppler_spoof": {
+      "n": 120,
+      "event_detection": 0.9333333333333333,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 108,
+       "undecided": 3,
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 48,
+       "SAFE_STOP": 62,
+       "WARN": 2
+      },
+      "delay_available_median": 7.0
+     },
+     "vehicle|drift": {
+      "n": 120,
+      "event_detection": 0.9416666666666667,
+      "tick_detection": 0.9916666666666667,
+      "blame": {
+       "correct": 110,
+       "undecided": 2,
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 59,
+       "WARN": 1,
+       "SAFE_STOP": 53
+      },
+      "delay_available_median": 7.0
+     },
+     "vehicle|gps_can": {
+      "n": 120,
+      "event_detection": 0.9083333333333333,
+      "tick_detection": 0.95,
+      "blame": {
+       "wrong": 78,
+       "undecided": 22,
+       "correct": 9
+      },
+      "response_max": {
+       "SAFE_STOP": 73,
+       "DEGRADE": 24,
+       "WARN": 12
+      },
+      "delay_available_median": 7.0
+     },
+     "vehicle|lidar_bias": {
+      "n": 120,
+      "event_detection": 0.675,
+      "tick_detection": 0.8583333333333333,
+      "blame": {
+       "correct": 51,
+       "wrong": 14,
+       "undecided": 16
+      },
+      "response_max": {
+       "DEGRADE": 34,
+       "SAFE_STOP": 21,
+       "WARN": 26
+      },
+      "delay_available_median": 10.0
+     },
+     "vehicle|lidar_scale": {
+      "n": 120,
+      "event_detection": 0.6666666666666666,
+      "tick_detection": 0.8416666666666667,
+      "blame": {
+       "correct": 50,
+       "wrong": 13,
+       "undecided": 17
+      },
+      "response_max": {
+       "DEGRADE": 51,
+       "SAFE_STOP": 18,
+       "WARN": 11
+      },
+      "delay_available_median": 9.5
+     },
+     "vehicle|lidar_yaw": {
+      "n": 120,
+      "event_detection": 0.35833333333333334,
+      "tick_detection": 0.6083333333333333,
+      "blame": {
+       "correct": 16,
+       "wrong": 16,
+       "undecided": 11
+      },
+      "response_max": {
+       "DEGRADE": 17,
+       "WARN": 24,
+       "SAFE_STOP": 2
+      },
+      "delay_available_median": 19.0
+     },
+     "vehicle|meaconing": {
+      "n": 120,
+      "event_detection": 0.9166666666666666,
+      "tick_detection": 0.9416666666666667,
+      "blame": {
+       "correct": 106,
+       "wrong": 2,
+       "undecided": 2
+      },
+      "response_max": {
+       "DEGRADE": 50,
+       "SAFE_STOP": 58,
+       "WARN": 2
+      },
+      "delay_available_median": 6.0
+     }
+    },
+    "threshold": 0.6963391591468857
+   },
+   "C": {
+    "clean_timelines": 16,
+    "clean_hours": 7.933333333333334,
+    "fa_tick": 0.06008403361344538,
+    "fa_tick_ci": [
+     0.052828202961532275,
+     0.07322173140846916
+    ],
+    "events_per_hour": 28.865546218487395,
+    "events_per_hour_ci": [
+     26.00257135683349,
+     31.49745962620214
+    ],
+    "WARN_per_hour": 10.966386554621849,
+    "WARN_per_hour_ci": [
+     8.755568734670902,
+     13.073958225379448
+    ],
+    "DEGRADE_per_hour": 16.26050420168067,
+    "DEGRADE_per_hour_ci": [
+     13.332993890020367,
+     19.914579825751506
+    ],
+    "SAFE_STOP_per_hour": 1.638655462184874,
+    "SAFE_STOP_per_hour_ci": [
+     0.8294454155410772,
+     2.2845977669624964
+    ],
+    "clean_events_explained": [
+     229,
+     229
+    ],
+    "clean_event_domains": {
+     "v2x": 165,
+     "cross": 58,
+     "can": 147,
+     "network": 17
+    },
+    "clean_event_blamed": {
+     "undecided": 36,
+     "v2x": 75,
+     "can": 105,
+     "network": 13
+    },
+    "own_alarm_share": {
+     "can": 0.03848039215686275,
+     "network": 0.04201680672268908,
+     "v2x": 0.10003501400560225,
+     "cross": 0.011169467787114846
+    },
+    "types": 46,
+    "held_out_types": 12,
+    "det_single": 0.9651300855596298,
+    "det_single_ci": [
+     0.9407896615140026,
+     0.9852127622409879
+    ],
+    "det_heldout": 0.9255354752342705,
+    "det_heldout_ci": [
+     0.8550374936384072,
+     0.9955227512806396
+    ],
+    "blame_correct": 0.8425984029997664,
+    "blame_correct_ci": [
+     0.820650739712053,
+     0.8649203571400409
+    ],
+    "blame_wrong": 0.12706958150138312,
+    "blame_wrong_ci": [
+     0.11350632364964268,
+     0.14048768473341372
+    ],
+    "attack_events_explained": [
+     2778,
+     2778
+    ],
+    "ttv_persistent_median": 9.0,
+    "by_attacked_domain": {
+     "can": {
+      "types": 11,
+      "event_detection": 1.0,
+      "delay_available_median": 2.0
+     },
+     "cross": {
+      "types": 3,
+      "event_detection": 0.9939759036144578,
+      "delay_available_median": 7.0
+     },
+     "gps": {
+      "types": 4,
+      "event_detection": 0.9201807228915663,
+      "delay_available_median": 10.0
+     },
+     "network": {
+      "types": 10,
+      "event_detection": 0.8833333333333332,
+      "delay_available_median": 5.5
+     },
+     "v2x": {
+      "types": 18,
+      "event_detection": 0.9944444444444444,
+      "delay_available_median": 1.0
+     }
+    },
+    "by_type": {
+     "can_episode|correlated_signal": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|correlated_signal_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|fuzzing": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "WARN": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|max_engine_coolant_temp": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "can_episode|max_engine_coolant_temp_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "can_episode|max_speedometer": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|max_speedometer_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 4.0
+     },
+     "can_episode|reverse_light_off": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_off_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_on": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "can_episode|reverse_light_on_masquerade": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "network_block|DDoS-LOIC-HTTP": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 3.0
+     },
+     "network_block|DoS-GoldenEye": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "network_block|DoS-Hulk": {
+      "n": 2,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1,
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 2
+      },
+      "delay_available_median": 17.0
+     },
+     "network_block|DoS-SlowHTTPTest": {
+      "n": 2,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 2
+      },
+      "response_max": {
+       "DEGRADE": 2
+      },
+      "delay_available_median": 33.5
+     },
+     "network_block|DoS-Slowloris": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "network_block|FTP-Patator": {
+      "n": 3,
+      "event_detection": 0.6666666666666666,
+      "tick_detection": 1.0,
+      "blame": {
+       "undecided": 1,
+       "correct": 1
+      },
+      "response_max": {
+       "WARN": 1,
+       "DEGRADE": 1
+      },
+      "delay_available_median": 11.0
+     },
+     "network_block|PortScan": {
+      "n": 3,
+      "event_detection": 0.6666666666666666,
+      "tick_detection": 0.6666666666666666,
+      "blame": {
+       "correct": 2
+      },
+      "response_max": {
+       "DEGRADE": 2
+      },
+      "delay_available_median": 3.0
+     },
+     "network_block|SSH-Patator": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 28.0
+     },
+     "network_block|Web-BruteForce": {
+      "n": 2,
+      "event_detection": 0.5,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 2.0
+     },
+     "network_block|Web-XSS": {
+      "n": 1,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 1
+      },
+      "delay_available_median": 142.0
+     },
+     "v2x_episode|01_ConstPos": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|02_ConstPosOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 29,
+       "WARN": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|03_RandomPos": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 28,
+       "wrong": 1
+      },
+      "response_max": {
+       "DEGRADE": 28,
+       "WARN": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|04_RandomPosOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|05_ConstSpeed": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|06_ConstSpeedOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|07_RandomSpeed": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|08_RandomSpeedOffset": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|09_EventualStop": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|10_Disruptive": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|11_DataReplay": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|13_DoS": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|14_DoSRandom": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|15_DoSDisruptive": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|16_GridSybil": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|17_DataReplaySybil": {
+      "n": 30,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 30
+      },
+      "response_max": {
+       "DEGRADE": 30
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|18_DoSRandomSybil": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 29
+      },
+      "response_max": {
+       "DEGRADE": 28,
+       "WARN": 1
+      },
+      "delay_available_median": 1.0
+     },
+     "v2x_episode|19_DoSDisruptiveSybil": {
+      "n": 30,
+      "event_detection": 0.9666666666666667,
+      "tick_detection": 0.9666666666666667,
+      "blame": {
+       "correct": 29
+      },
+      "response_max": {
+       "DEGRADE": 29
+      },
+      "delay_available_median": 1.0
+     },
+     "vehicle|accel_drift": {
+      "n": 166,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 148,
+       "undecided": 18
+      },
+      "response_max": {
+       "SAFE_STOP": 36,
+       "DEGRADE": 113,
+       "WARN": 17
+      },
+      "delay_available_median": 17.0
+     },
+     "vehicle|can_bus": {
+      "n": 166,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 113,
+       "correct": 34,
+       "undecided": 19
+      },
+      "response_max": {
+       "DEGRADE": 114,
+       "SAFE_STOP": 29,
+       "WARN": 23
+      },
+      "delay_available_median": 6.0
+     },
+     "vehicle|can_freeze": {
+      "n": 166,
+      "event_detection": 0.9879518072289156,
+      "tick_detection": 0.9939759036144579,
+      "blame": {
+       "correct": 157,
+       "wrong": 6,
+       "undecided": 1
+      },
+      "response_max": {
+       "SAFE_STOP": 142,
+       "DEGRADE": 21,
+       "WARN": 1
+      },
+      "delay_available_median": 11.0
+     },
+     "vehicle|can_offset": {
+      "n": 166,
+      "event_detection": 0.9939759036144579,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 147,
+       "undecided": 4,
+       "wrong": 14
+      },
+      "response_max": {
+       "SAFE_STOP": 133,
+       "DEGRADE": 27,
+       "WARN": 5
+      },
+      "delay_available_median": 7.0
+     },
+     "vehicle|can_scale": {
+      "n": 166,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 157,
+       "undecided": 3,
+       "wrong": 6
+      },
+      "response_max": {
+       "SAFE_STOP": 144,
+       "DEGRADE": 20,
+       "WARN": 2
+      },
+      "delay_available_median": 7.0
+     },
+     "vehicle|doppler_spoof": {
+      "n": 166,
+      "event_detection": 0.9819277108433735,
+      "tick_detection": 1.0,
+      "blame": {
+       "wrong": 131,
+       "undecided": 32
+      },
+      "response_max": {
+       "DEGRADE": 109,
+       "WARN": 30,
+       "SAFE_STOP": 24
+      },
+      "delay_available_median": 8.0
+     },
+     "vehicle|drift": {
+      "n": 166,
+      "event_detection": 0.7409638554216867,
+      "tick_detection": 0.963855421686747,
+      "blame": {
+       "wrong": 95,
+       "undecided": 28
+      },
+      "response_max": {
+       "SAFE_STOP": 17,
+       "DEGRADE": 67,
+       "WARN": 39
+      },
+      "delay_available_median": 25.0
+     },
+     "vehicle|gnss_can": {
+      "n": 166,
+      "event_detection": 1.0,
+      "tick_detection": 1.0,
+      "blame": {
+       "correct": 154,
+       "wrong": 7,
+       "undecided": 5
+      },
+      "response_max": {
+       "SAFE_STOP": 141,
+       "DEGRADE": 21,
+       "WARN": 4
+      },
+      "delay_available_median": 7.0
+     },
+     "vehicle|meaconing": {
+      "n": 166,
+      "event_detection": 0.9578313253012049,
+      "tick_detection": 0.9939759036144579,
+      "blame": {
+       "wrong": 109,
+       "undecided": 50
+      },
+      "response_max": {
+       "DEGRADE": 90,
+       "SAFE_STOP": 23,
+       "WARN": 46
+      },
+      "delay_available_median": 6.0
+     }
+    },
+    "threshold": 0.7031737671081112
+   }
+  }
+ },
+ "composites": {
+  "K": {
+   "attack": 2018,
+   "clean_timelines": 16,
+   "clean_hours": 7.933333333333334,
+   "single_types": 55,
+   "held_out_types": 12,
+   "by_scenario": {
+    "vehicle": 1320,
+    "lidar_scan": 72,
+    "lidar_episode": 36,
+    "can_episode": 11,
+    "multi_can_gps": 11,
+    "multi_can_lidar": 11,
+    "v2x_episode": 540,
+    "network_block": 17
+   }
+  },
+  "C": {
+   "attack": 2062,
+   "clean_timelines": 16,
+   "clean_hours": 7.933333333333334,
+   "single_types": 46,
+   "held_out_types": 12,
+   "by_scenario": {
+    "vehicle": 1494,
+    "can_episode": 11,
+    "v2x_episode": 540,
+    "network_block": 17
+   }
+  }
+ },
+ "paired_v31_minus_v3": {
+  "K": {
+   "det_single": {
+    "diff": 0.02984848484848484,
+    "ci": [
+     0.008420182482381673,
+     0.05135923856047693
+    ],
+    "types": 55
+   },
+   "det_heldout": {
+    "diff": -0.029861111111111106,
+    "ci": [
+     -0.06569898144358906,
+     0.023298004079254066
+    ],
+    "types": 12
+   },
+   "blame_correct": {
+    "diff": -0.009448958979111893,
+    "ci": [
+     -0.03791825700361077,
+     0.018747404201169462
+    ],
+    "types": 52
+   },
+   "blame_wrong": {
+    "diff": 0.012939908787057326,
+    "ci": [
+     -0.004554335652055355,
+     0.02956442344097806
+    ],
+    "types": 52
+   },
+   "fa_tick": {
+    "diff": -0.002170868347338935,
+    "ci": [
+     -0.00897274223514682,
+     0.0015909136110508458
+    ]
+   },
+   "events_per_hour": {
+    "diff": -2.7731092436974762,
+    "ci": [
+     -5.379165459287162,
+     -0.488972524437708
+    ]
+   },
+   "safe_stop_per_hour": {
+    "diff": -0.7563025210084033
+   },
+   "by_attacked_domain": {
+    "can": {
+     "diff": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "types": 11
+    },
+    "cross": {
+     "diff": 0.15694444444444444,
+     "ci": [
+      0.10416666666666667,
+      0.2111111111111111
+     ],
+     "types": 6
+    },
+    "gps": {
+     "diff": 0.01666666666666669,
+     "ci": [
+      -0.002083333333333326,
+      0.037500000000000006
+     ],
+     "types": 4
+    },
+    "lidar": {
+     "diff": -9.25185853854297e-18,
+     "ci": [
+      -0.09722222222222222,
+      0.11111111111111106
+     ],
+     "types": 6
+    },
+    "network": {
+     "diff": -0.11666666666666665,
+     "ci": [
+      -0.2,
+      -0.033333333333333326
+     ],
+     "types": 10
+    },
+    "v2x": {
+     "diff": 0.09999999999999998,
+     "ci": [
+      0.07728287451660192,
+      0.12647503460842316
+     ],
+     "types": 18
+    }
+   }
+  },
+  "C": {
+   "det_single": {
+    "diff": -0.04044002095337874,
+    "ci": [
+     -0.05899653722829724,
+     -0.021799931157253528
+    ],
+    "types": 46
+   },
+   "det_heldout": {
+    "diff": -0.08132530120481928,
+    "ci": [
+     -0.08433792593342558,
+     -0.07777541316872827
+    ],
+    "types": 12
+   },
+   "blame_correct": {
+    "diff": 0.028215600772214185,
+    "ci": [
+     0.023526883114578845,
+     0.032772829951989005
+    ],
+    "types": 45
+   },
+   "blame_wrong": {
+    "diff": -0.020314675364349003,
+    "ci": [
+     -0.02441192177231977,
+     -0.016308358578750026
+    ],
+    "types": 45
+   },
+   "fa_tick": {
+    "diff": 0.001225490196078427,
+    "ci": [
+     -0.009268804422374582,
+     0.023732632219234162
+    ]
+   },
+   "events_per_hour": {
+    "diff": -6.302521008403364,
+    "ci": [
+     -8.029036211199617,
+     -2.957512890611484
+    ]
+   },
+   "safe_stop_per_hour": {
+    "diff": -0.7563025210084033
+   },
+   "by_attacked_domain": {
+    "can": {
+     "diff": -0.09090909090909091,
+     "ci": [
+      -0.09090909090909091,
+      -0.09090909090909091
+     ],
+     "types": 11
+    },
+    "cross": {
+     "diff": -0.022088353413654633,
+     "ci": [
+      -0.037279185646466415,
+      -0.007870855922041536
+     ],
+     "types": 3
+    },
+    "gps": {
+     "diff": 0.0015060240963855331,
+     "ci": [
+      -0.018467096010922255,
+      0.02071536703640666
+     ],
+     "types": 4
+    },
+    "network": {
+     "diff": -0.08333333333333333,
+     "ci": [
+      -0.16666666666666669,
+      0.0
+     ],
+     "types": 10
+    },
+    "v2x": {
+     "diff": 0.0018518518518518515,
+     "ci": [
+      0.0,
+      0.008547008547008548
+     ],
+     "types": 18
+    }
+   }
+  }
+ }
+}

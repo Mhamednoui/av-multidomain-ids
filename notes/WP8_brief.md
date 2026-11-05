@@ -53,3 +53,8 @@
 - V31_val, LOGO entry ECDFs + LOTO thresholds, 648 candidates, one round: chosen MX|L100|b2|m2w5|g15|d0|k1 (equal per-domain split of 2 % = max; v3 persistence; tick_blame31 + A1). K FA 1.92 % [1.38, 3.45], 5.09 events/h, SAFE_STOP 0, detection 78.2 % [76.1, 80.0] (R0 v3 recipe 53.3 %), held-out 82.4 %, blame 79.9 / 7.0; C FA 1.85 %, 4.95/h, 88.1 %. All S2 rows MET.
 - Comma GNSS system blame fixed (drift 73/10, meaconing 64/0, doppler 94/0 vs v3 blame 0 % correct). LiDAR weak in system (PointDrop episodes 0/30): M4-8 expected NOT met. FA CI upper > 3 % (drift risk); clean SAFE_STOP 0 for every candidate (bound not exercised).
 - Pitfalls: frozen_lidar31 references contain the val drives (use LODO scores on val); noisy_or over 6 entries dilutes one strong domain; tests/v31/test_s6_regression diff check narrowed to modified v3 files.
+
+## S7 (final H31 scoring, M4, worker sonnet) - REVIEW 2026-11-05
+- freeze.json 8aac3dd before any H31 read; H31 sha256 all_ok; R2 regression 7/7. Outputs: reports/M4.md, WP8_S7.md, RESULTS_v31.md, results/WP8/S7/ (m4_verdict.json), scores results/WP8/scores/S7, tools/WP8_S7_*.py, system/runners31.py.
+- M4 NOT MET, 7/18: K clean FA 12.2 % (v3 12.4), C 6.1 %; events/h 24.8 / 22.6 (v3 27.9 / 28.9); drive 0093 alarms GPS 94 % / cross 91 % / LiDAR 86 %; LiDAR PointDrop scan 66 % vs v3 32 % (fresh); comma blame 81/0; K gps_can 13/81; timing under load.
+

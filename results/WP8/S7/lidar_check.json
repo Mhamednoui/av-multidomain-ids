@@ -1,0 +1,59 @@
+{
+ "speed": {
+  "scans": 1297,
+  "warmup_excluded": 3,
+  "median_ms": 147.8506000000266,
+  "p95_ms": 188.78261999997792,
+  "p99_ms": 210.08420800000292,
+  "max_ms": 254.07859999995708,
+  "rule": "median <= 100 ms, p99 <= 250 ms",
+  "met": false,
+  "other_python_processes_median": 7.0,
+  "stream_equals_batch": {
+   "scans": 1300,
+   "max_abs_diff_or_alarm_flip": 0.0,
+   "mismatches": 0
+  }
+ },
+ "v3sample": {
+  "scans": 104,
+  "alarm_disagreements": 0,
+  "max_abs_stat_diff": 0.009282970550576142,
+  "median_abs_stat_diff": 0.0,
+  "by_kind": {
+   "IntensitySpoof": {
+    "n": 18,
+    "alarm_disagreements": 0
+   },
+   "PointDrop": {
+    "n": 17,
+    "alarm_disagreements": 0
+   },
+   "clean": {
+    "n": 52,
+    "alarm_disagreements": 0
+   },
+   "ph_replace_near": {
+    "n": 17,
+    "alarm_disagreements": 0
+   }
+  },
+  "label": "sample check of the fast-path v3 columns against the literal frozen v3 LidarDomain (seeded sample of H31 scans)"
+ },
+ "speed_run1_loaded": {
+  "scans": 1297,
+  "warmup_excluded": 3,
+  "median_ms": 111.88509999999496,
+  "p95_ms": 131.28689999998642,
+  "p99_ms": 141.62465200000497,
+  "max_ms": 153.0963000000014,
+  "rule": "median <= 100 ms, p99 <= 250 ms",
+  "met": false,
+  "other_python_processes_median": 2.0,
+  "stream_equals_batch": {
+   "scans": 1300,
+   "max_abs_diff_or_alarm_flip": 0.0,
+   "mismatches": 0
+  }
+ }
+}

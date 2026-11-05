@@ -1,0 +1,290 @@
+{
+ "kitti/2011_09_26_drive_0009": {
+  "files": 895,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "5128e8552294c4553073cbf1fe42880b41afd6c378bfa451e573a9f45752b1a6",
+  "lock_sha256": "5128e8552294c4553073cbf1fe42880b41afd6c378bfa451e573a9f45752b1a6",
+  "ok": true
+ },
+ "kitti/2011_09_26_drive_0023": {
+  "files": 953,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "a88924e803a64719e389775a365927d4704b464d623ccbff27b1bdd430bd8bc0",
+  "lock_sha256": "a88924e803a64719e389775a365927d4704b464d623ccbff27b1bdd430bd8bc0",
+  "ok": true
+ },
+ "kitti/2011_09_26_drive_0032": {
+  "files": 785,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "85a5f766f86a65ba83f53647ed12db230d3913e964acc454b7f7a9ab36c232ab",
+  "lock_sha256": "85a5f766f86a65ba83f53647ed12db230d3913e964acc454b7f7a9ab36c232ab",
+  "ok": true
+ },
+ "kitti/2011_09_26_drive_0056": {
+  "files": 593,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "5eed3ef7c7f797319d729ac6f9d907961d420d447eff01cc503f6a1a7cbfd8fd",
+  "lock_sha256": "5eed3ef7c7f797319d729ac6f9d907961d420d447eff01cc503f6a1a7cbfd8fd",
+  "ok": true
+ },
+ "kitti/2011_09_26_drive_0061": {
+  "files": 1411,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "326b6454d8674800767ff9e2aca2543ebecee476cf607816b47ebcaaf4630cdc",
+  "lock_sha256": "326b6454d8674800767ff9e2aca2543ebecee476cf607816b47ebcaaf4630cdc",
+  "ok": true
+ },
+ "kitti/2011_09_26_drive_0064": {
+  "files": 1145,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "80494b61f7ea45ceaa040b0bf3005a299036f8bd83a7ab176337758ceab54d66",
+  "lock_sha256": "80494b61f7ea45ceaa040b0bf3005a299036f8bd83a7ab176337758ceab54d66",
+  "ok": true
+ },
+ "kitti/2011_09_26_drive_0084": {
+  "files": 771,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "dede20a1d0a43124097a6600fea8a29611940aebdfe301ce72b4747a2ace7b1f",
+  "lock_sha256": "dede20a1d0a43124097a6600fea8a29611940aebdfe301ce72b4747a2ace7b1f",
+  "ok": true
+ },
+ "kitti/2011_09_26_drive_0093": {
+  "files": 871,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "a1ed60278f9dcd3c1cc4a6d8f925feee681281c03249e3d4ff5a4118de08197a",
+  "lock_sha256": "a1ed60278f9dcd3c1cc4a6d8f925feee681281c03249e3d4ff5a4118de08197a",
+  "ok": true
+ },
+ "kitti/2011_09_26_drive_0101": {
+  "files": 1877,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "b27f4f70bfb33872648e83c23a24bf936878b7ee63764d3b3126bffddd8d10df",
+  "lock_sha256": "b27f4f70bfb33872648e83c23a24bf936878b7ee63764d3b3126bffddd8d10df",
+  "ok": true
+ },
+ "kitti/2011_09_29_drive_0004": {
+  "files": 683,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "c6b54d541fdd54bc616ad11a9e019abe7256af74a6e3350f387e250d7766f35a",
+  "lock_sha256": "c6b54d541fdd54bc616ad11a9e019abe7256af74a6e3350f387e250d7766f35a",
+  "ok": true
+ },
+ "kitti/2011_09_29_drive_0026": {
+  "files": 321,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "4e10c911445f9d076dda99d3f8fa21b7a1303d44c93ff50fc75ccee214d4d11f",
+  "lock_sha256": "4e10c911445f9d076dda99d3f8fa21b7a1303d44c93ff50fc75ccee214d4d11f",
+  "ok": true
+ },
+ "kitti/2011_09_30_drive_0016": {
+  "files": 563,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "625725250d587fb02873af0e3ba29b79d0e20a233b14d3147a65a0019aa6fef3",
+  "lock_sha256": "625725250d587fb02873af0e3ba29b79d0e20a233b14d3147a65a0019aa6fef3",
+  "ok": true
+ },
+ "kitti/2011_10_03_drive_0047": {
+  "files": 1679,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "5f5c73c5e5c90c8ffd0f3e2b07d51e8b0818aeac2cc7ea8f4b13124a35119046",
+  "lock_sha256": "5f5c73c5e5c90c8ffd0f3e2b07d51e8b0818aeac2cc7ea8f4b13124a35119046",
+  "ok": true
+ },
+ "comma/Chunk_2": {
+  "files": 7074,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "693758eb69f699db67010a9c86fa46871f7c3b7a8de89bdac41c8690964ead87",
+  "lock_sha256": "693758eb69f699db67010a9c86fa46871f7c3b7a8de89bdac41c8690964ead87",
+  "ok": true
+ },
+ "comma/Chunk_4": {
+  "files": 7543,
+  "bad_files": [],
+  "n_bad": 0,
+  "manifest_sha256": "955d1c5d2540b01309e3e25f66d78d31d4eea5124d4e99f905be82b62039952f",
+  "lock_sha256": "955d1c5d2540b01309e3e25f66d78d31d4eea5124d4e99f905be82b62039952f",
+  "ok": true
+ },
+ "can/ambient_dyno_drive_benign_anomaly.log": {
+  "path": "../data_extra/road/road/ambient/ambient_dyno_drive_benign_anomaly.log",
+  "ok": true,
+  "sha256": "2578f97340613b93b62a222769332019e78e4014278840c5e569f6b395b4d10d",
+  "lock_sha256": "2578f97340613b93b62a222769332019e78e4014278840c5e569f6b395b4d10d"
+ },
+ "can/ambient_dyno_drive_extended_short.log": {
+  "path": "../data_extra/road/road/ambient/ambient_dyno_drive_extended_short.log",
+  "ok": true,
+  "sha256": "ddc11a7ed5dcb85b7de063c609638b123eaf59b52939da55ea8a0cbfe6fe24b0",
+  "lock_sha256": "ddc11a7ed5dcb85b7de063c609638b123eaf59b52939da55ea8a0cbfe6fe24b0"
+ },
+ "can/ambient_dyno_reverse.log": {
+  "path": "../data_extra/road/road/ambient/ambient_dyno_reverse.log",
+  "ok": true,
+  "sha256": "c21004cd476155bde8459d7a96b87a8eec996d7410d294f51ee66c3217a13001",
+  "lock_sha256": "c21004cd476155bde8459d7a96b87a8eec996d7410d294f51ee66c3217a13001"
+ },
+ "can/ambient_highway_street_driving_diagnostics.log": {
+  "path": "../data_extra/road/road/ambient/ambient_highway_street_driving_diagnostics.log",
+  "ok": true,
+  "sha256": "95ccdc033aadf9156dc055f09ede2ca849b7c69a889c61c74107016c4956fa54",
+  "lock_sha256": "95ccdc033aadf9156dc055f09ede2ca849b7c69a889c61c74107016c4956fa54"
+ },
+ "can/correlated_signal_attack_3.log": {
+  "path": "../data_extra/road/road/attacks/correlated_signal_attack_3.log",
+  "ok": true,
+  "sha256": "ef8c97a6a4bd6eaaf14dfc6ff5908c38c02676d3a384e9bcf5b857fe71866110",
+  "lock_sha256": "ef8c97a6a4bd6eaaf14dfc6ff5908c38c02676d3a384e9bcf5b857fe71866110"
+ },
+ "can/correlated_signal_attack_3_masquerade.log": {
+  "path": "../data_extra/road/road/attacks/correlated_signal_attack_3_masquerade.log",
+  "ok": true,
+  "sha256": "e7053700495a18a67882c7666a0344bb0d43e0743744d42e3f502c7a0962e490",
+  "lock_sha256": "e7053700495a18a67882c7666a0344bb0d43e0743744d42e3f502c7a0962e490"
+ },
+ "can/fuzzing_attack_3.log": {
+  "path": "../data_extra/road/road/attacks/fuzzing_attack_3.log",
+  "ok": true,
+  "sha256": "53a67622b04e0ff0c63ca10b567a8ee31f17effbb96af8d369b8bbaadc0040aa",
+  "lock_sha256": "53a67622b04e0ff0c63ca10b567a8ee31f17effbb96af8d369b8bbaadc0040aa"
+ },
+ "can/max_engine_coolant_temp_attack.log": {
+  "path": "../data_extra/road/road/attacks/max_engine_coolant_temp_attack.log",
+  "ok": true,
+  "sha256": "0f907546586b3f9401772df4d7642e995f30e764baa86f0aec46b72598e2b541",
+  "lock_sha256": "0f907546586b3f9401772df4d7642e995f30e764baa86f0aec46b72598e2b541"
+ },
+ "can/max_engine_coolant_temp_attack_masquerade.log": {
+  "path": "../data_extra/road/road/attacks/max_engine_coolant_temp_attack_masquerade.log",
+  "ok": true,
+  "sha256": "6a6f3e419963b2118a9cc116021e62ad22c4138497aec0840b30f47320595c73",
+  "lock_sha256": "6a6f3e419963b2118a9cc116021e62ad22c4138497aec0840b30f47320595c73"
+ },
+ "can/max_speedometer_attack_3.log": {
+  "path": "../data_extra/road/road/attacks/max_speedometer_attack_3.log",
+  "ok": true,
+  "sha256": "dff0445e7941722227668865e10947e6c7a7bb15d1bf39b9425de4347288bd10",
+  "lock_sha256": "dff0445e7941722227668865e10947e6c7a7bb15d1bf39b9425de4347288bd10"
+ },
+ "can/max_speedometer_attack_3_masquerade.log": {
+  "path": "../data_extra/road/road/attacks/max_speedometer_attack_3_masquerade.log",
+  "ok": true,
+  "sha256": "f8bea0945d47fcbcdea26dcab38845274a20ba17698eb417e68bb3ba57863388",
+  "lock_sha256": "f8bea0945d47fcbcdea26dcab38845274a20ba17698eb417e68bb3ba57863388"
+ },
+ "can/reverse_light_off_attack_3.log": {
+  "path": "../data_extra/road/road/attacks/reverse_light_off_attack_3.log",
+  "ok": true,
+  "sha256": "b359e592f92775a9f10540b83f29a2e3de89e77b6828dee698fec3f9a8ee29ad",
+  "lock_sha256": "b359e592f92775a9f10540b83f29a2e3de89e77b6828dee698fec3f9a8ee29ad"
+ },
+ "can/reverse_light_off_attack_3_masquerade.log": {
+  "path": "../data_extra/road/road/attacks/reverse_light_off_attack_3_masquerade.log",
+  "ok": true,
+  "sha256": "19d02cc4c85c22aaab8e80ee700e0b139cc888c3232b2bd7c371c0877d6a9582",
+  "lock_sha256": "19d02cc4c85c22aaab8e80ee700e0b139cc888c3232b2bd7c371c0877d6a9582"
+ },
+ "can/reverse_light_on_attack_3.log": {
+  "path": "../data_extra/road/road/attacks/reverse_light_on_attack_3.log",
+  "ok": true,
+  "sha256": "8ad277b7b19e66a4744f8309c02e4c7a9c149ce4c3b141f557780baefe9dcb8e",
+  "lock_sha256": "8ad277b7b19e66a4744f8309c02e4c7a9c149ce4c3b141f557780baefe9dcb8e"
+ },
+ "can/reverse_light_on_attack_3_masquerade.log": {
+  "path": "../data_extra/road/road/attacks/reverse_light_on_attack_3_masquerade.log",
+  "ok": true,
+  "sha256": "4fbbce65cbe81c5fd762dd0440486a5dc0bb53cff3f29b408ab798236ba9c6e1",
+  "lock_sha256": "4fbbce65cbe81c5fd762dd0440486a5dc0bb53cff3f29b408ab798236ba9c6e1"
+ },
+ "can/accelerator_attack_drive_2.log": {
+  "path": "../data_extra/road/road/attacks/accelerator_attack_drive_2.log",
+  "ok": true,
+  "sha256": "b17381d3915b7fe2518866f7b7d293abe280d503ba2fa46e8517e8a365385985",
+  "lock_sha256": "b17381d3915b7fe2518866f7b7d293abe280d503ba2fa46e8517e8a365385985"
+ },
+ "can/accelerator_attack_reverse_2.log": {
+  "path": "../data_extra/road/road/attacks/accelerator_attack_reverse_2.log",
+  "ok": true,
+  "sha256": "584a5c102e3cb23a306978f76aef91ea3a7bd5fd5c8ba3493d211c43914b287b",
+  "lock_sha256": "584a5c102e3cb23a306978f76aef91ea3a7bd5fd5c8ba3493d211c43914b287b"
+ },
+ "d10/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": {
+  "path": "../data_extra/D10_cicids2017_generated_flows/extracted/TrafficLabelling/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv",
+  "ok": true,
+  "sha256": "1f779b4f0d78f9225554c4de53b5a2c07912b60dcd136ee4c5c1d0d2496b7cc4",
+  "lock_sha256": "1f779b4f0d78f9225554c4de53b5a2c07912b60dcd136ee4c5c1d0d2496b7cc4"
+ },
+ "d10/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": {
+  "path": "../data_extra/D10_cicids2017_generated_flows/extracted/TrafficLabelling/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv",
+  "ok": true,
+  "sha256": "7e2ddaa80a5849ba629463296b6128436c161b4a32e8034bb5beae06b0c45e08",
+  "lock_sha256": "7e2ddaa80a5849ba629463296b6128436c161b4a32e8034bb5beae06b0c45e08"
+ },
+ "d10/Friday-WorkingHours-Morning.pcap_ISCX.csv": {
+  "path": "../data_extra/D10_cicids2017_generated_flows/extracted/TrafficLabelling/Friday-WorkingHours-Morning.pcap_ISCX.csv",
+  "ok": true,
+  "sha256": "c061cd98f39d8054aeaed6244a5129a20b3985983d0d022b860ae8aa07fe8d21",
+  "lock_sha256": "c061cd98f39d8054aeaed6244a5129a20b3985983d0d022b860ae8aa07fe8d21"
+ },
+ "d10/Monday-WorkingHours.pcap_ISCX.csv": {
+  "path": "../data_extra/D10_cicids2017_generated_flows/extracted/TrafficLabelling/Monday-WorkingHours.pcap_ISCX.csv",
+  "ok": true,
+  "sha256": "96f26aea87d513073769b48ce204c2921791149e1c6225f7db65a3fed7973820",
+  "lock_sha256": "96f26aea87d513073769b48ce204c2921791149e1c6225f7db65a3fed7973820"
+ },
+ "d10/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": {
+  "path": "../data_extra/D10_cicids2017_generated_flows/extracted/TrafficLabelling/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv",
+  "ok": true,
+  "sha256": "d74238e054023c8bd4d8056650463cadb25c100fb0e26ebd4272c07b5c022c4b",
+  "lock_sha256": "d74238e054023c8bd4d8056650463cadb25c100fb0e26ebd4272c07b5c022c4b"
+ },
+ "d10/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": {
+  "path": "../data_extra/D10_cicids2017_generated_flows/extracted/TrafficLabelling/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv",
+  "ok": true,
+  "sha256": "e3deaff483d18b53b100a441dff9b8919416df8876b4edcc0f0d1e4bf48397d0",
+  "lock_sha256": "e3deaff483d18b53b100a441dff9b8919416df8876b4edcc0f0d1e4bf48397d0"
+ },
+ "d10/Tuesday-WorkingHours.pcap_ISCX.csv": {
+  "path": "../data_extra/D10_cicids2017_generated_flows/extracted/TrafficLabelling/Tuesday-WorkingHours.pcap_ISCX.csv",
+  "ok": true,
+  "sha256": "ae9c88e10c41a8eb1ff454ae98bc513454925097d0b0b57180f94e79de445815",
+  "lock_sha256": "ae9c88e10c41a8eb1ff454ae98bc513454925097d0b0b57180f94e79de445815"
+ },
+ "d10/Wednesday-workingHours.pcap_ISCX.csv": {
+  "path": "../data_extra/D10_cicids2017_generated_flows/extracted/TrafficLabelling/Wednesday-workingHours.pcap_ISCX.csv",
+  "ok": true,
+  "sha256": "ed538e85b84181e8897dedb3d37d365982f44b27eccd67c477581a8b65f3d170",
+  "lock_sha256": "ed538e85b84181e8897dedb3d37d365982f44b27eccd67c477581a8b65f3d170"
+ },
+ "veremi/mixalldata_clean.csv": {
+  "path": "../data_extra/D12_veremi_extension/mixalldata_clean.csv",
+  "ok": true,
+  "sha256": "884e4567c39c1ee2560e09c48b7c6319baffab5a8ba5ff6149b071f8bfad9f1d",
+  "lock_sha256": "884e4567c39c1ee2560e09c48b7c6319baffab5a8ba5ff6149b071f8bfad9f1d"
+ },
+ "v2aix/zip": {
+  "path": "../data_extra/D13_v2aix/v2aix_json.zip",
+  "ok": true,
+  "sha256": "14cfecdcc26e5988e56f8540edcc764536b0ea8e43344adc3399b81f99c75b67",
+  "lock_sha256": "14cfecdcc26e5988e56f8540edcc764536b0ea8e43344adc3399b81f99c75b67"
+ },
+ "v2aix/extracted_recordings": {
+  "count": 674,
+  "expected": 674,
+  "ok": true
+ },
+ "all_ok": true
+}

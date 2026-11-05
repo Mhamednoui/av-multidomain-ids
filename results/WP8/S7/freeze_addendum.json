@@ -1,0 +1,11 @@
+{
+ "note": "files added after the freeze commit 8aac3dd; format conversion / reporting only, no scoring parameter; written before the outputs they produce were read | can_idle / posthoc written after the H31 numbers were seen: timing re-run and a labelled post-hoc diagnostic, neither judges a row; report writers hashed after the verdict logic was fixed (the verdict code was edited once for the first-run-vs-repeat convention, journalled before the repeats).",
+ "files": {
+  "tools/WP8_S7_pack.py": "8d253aa8bfb9341510dd3ed4de15967791c736b6d4db8486d28ebedeab149b97",
+  "tools/WP8_S7_can_idle.py": "ed43bf01d6f2fb631c3010c4614baec0617af04d3b07b75b6a2c3ebf36cdda68",
+  "tools/WP8_S7_posthoc.py": "42ae82b7fd4c832c71d8a17a890953ccf70ad3720937d17230a327f1e539177e",
+  "make_report_v31.py": "ee8f95380cc83ac6491046e05a351f109c9d5248fbd99a4bdbb4e200cc9678e3",
+  "make_report_v31_docs.py": "fcef5d79bfb2e9c8605d6133327593ab209163290b0f36c066a6cc1b38eb03bf",
+  "make_report_v31_step.py": "5128cddf8d77d73d8bf60710a86a68771ed66ee18bbcda1354ed299311fa0382"
+ }
+}

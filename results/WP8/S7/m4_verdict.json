@@ -1,0 +1,345 @@
+{
+ "rows": [
+  {
+   "row": "M4-1 clean tick FA (K)",
+   "rule": "<= 3.0 %",
+   "verdict": "NOT MET",
+   "v31": "12.24 % [9.74, 14.55]",
+   "v3": "12.38 % [9.83, 14.74]",
+   "evidence": "system_h31.json runs.v31/v3.K.fa_tick; paired -0.14 pts [-0.81, 0.32]",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-2 alert events per clean hour (K)",
+   "rule": "<= 10",
+   "verdict": "NOT MET",
+   "v31": "24.83 [22.68, 26.74]",
+   "v3": "27.86 [25.00, 30.14]",
+   "evidence": "paired -3.03/h [-5.77, 0.46]",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-3 SAFE_STOP per clean hour (K)",
+   "rule": "<= 1",
+   "verdict": "NOT MET",
+   "v31": "6.43 [5.15, 7.69]",
+   "v3": "6.68 [5.39, 8.29]",
+   "evidence": "paired -0.25/h",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-1 clean tick FA (C)",
+   "rule": "<= 3.0 %",
+   "verdict": "NOT MET",
+   "v31": "6.13 % [4.62, 9.43]",
+   "v3": "6.01 % [5.28, 7.32]",
+   "evidence": "system_h31.json runs.v31/v3.C.fa_tick; paired 0.12 pts [-0.93, 2.37]",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-2 alert events per clean hour (C)",
+   "rule": "<= 10",
+   "verdict": "NOT MET",
+   "v31": "22.56 [19.43, 27.03]",
+   "v3": "28.87 [26.00, 31.50]",
+   "evidence": "paired -6.30/h [-8.03, -2.96]",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-3 SAFE_STOP per clean hour (C)",
+   "rule": "<= 1",
+   "verdict": "MET",
+   "v31": "0.88 [0.16, 1.55]",
+   "v3": "1.64 [0.83, 2.28]",
+   "evidence": "paired -0.76/h",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-4 K mean event detection, single-domain types",
+   "rule": ">= 70 %",
+   "verdict": "MET",
+   "v31": "87.1 % [85.5, 88.6]",
+   "v3": "83.4 % [81.0, 85.7]",
+   "evidence": "paired 3.7 pts [1.8, 5.8]",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-5 K held-out (zero-day) types",
+   "rule": ">= 60 %",
+   "verdict": "MET",
+   "v31": "90.8 % [89.6, 91.5]",
+   "v3": "95.5 % [90.6, 99.2]",
+   "evidence": "paired -4.7 pts [-8.0, 0.5]",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-6 blame equal weight per type (K): correct / wrong",
+   "rule": ">= 75 % / <= 10 %",
+   "verdict": "NOT MET",
+   "v31": "75.0 % / 18.7 %",
+   "v3": "74.0 % / 17.5 %",
+   "evidence": "paired correct 0.2 [-3.4, 3.6], wrong 3.2 [-0.7, 6.8]",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": "C: 91.1 % / 7.6 % (v3 84.3 % / 12.7 %)"
+  },
+  {
+   "row": "M4-7 events explained",
+   "rule": "100 %",
+   "verdict": "MET",
+   "v31": "197/197 clean, 1964/1964 attack (K) / 179/179 clean, 2447/2447 attack (C)",
+   "v3": "",
+   "evidence": "system_h31.json",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "note": ""
+  },
+  {
+   "row": "M4-8 LiDAR",
+   "rule": "median <= 0.10 s/scan, stream == batch, PointDrop per scan >= 65 %, scan FA <= 1.5 %, in-system PointDrop events >= 60 % (both scenarios)",
+   "verdict": "NOT MET",
+   "v31": "median 112 ms, p99 142 ms (repeat: 148 / 210 ms); PointDrop 66.1 %; FA 8.38 %; in-system per-scan 100.0 % / episodes 12.8 %",
+   "v3": "v3 PointDrop 32.0 %; FA 9.30 %; in-system 38.5 % / 12.8 %",
+   "evidence": "lidar_check.json, domains.json lidar, system_h31.json; components: {\"speed\": false, \"stream_eq_batch\": true, \"pointdrop_scan\": true, \"scan_fa\": false, \"in_system\": false}",
+   "exposure": "fresh H31",
+   "note": ""
+  },
+  {
+   "row": "M4-9 network",
+   "rule": "D10 delay median <= 60 s, max <= 120 s (amended); D23 <= 15 / 45 s; stack H macro >= v3 - 3 pts (paired)",
+   "verdict": "NOT EVALUATED",
+   "v31": "F1 delay median 60 s / max 74 s; macro 65.9 % (-0.00 pts [-0.00, 0.00]); FA 0.65 %",
+   "v3": "v3 delay median 120 s / max 314 s; macro 65.9 %; FA 0.48 %",
+   "evidence": "network.json; D10 half: met; D23 half NOT evaluated (no D23 cache; F1 tick 60 s)",
+   "exposure": "re-used (D10 test, exposure n+1)",
+   "note": "RC5 variant: macro 62.8 % (-3.13 pts), delay 0 s"
+  },
+  {
+   "row": "M4-10 CAN",
+   "rule": "p99 window <= 0.15 s on every capture, growth ratio <= 1.5, Evidence == v3 batch",
+   "verdict": "NOT MET",
+   "v31": "mismatches 0; p99 max 195 ms (loaded run, 5 processes); repeat (up to 7 other python processes) p99 max 305 ms; growth ratio max 1.45",
+   "v3": "same frozen object (v3 batch scoring is the reference)",
+   "evidence": "can_summary.json, can_idle_timing.json",
+   "exposure": "re-used (ROAD test)",
+   "note": "growth ratio measurable only on captures with windows before 100k and after 600k frames"
+  },
+  {
+   "row": "M4-11 V2X (V2AIX)",
+   "rule": "compute <= 0.5 s per stream s; genuine FA <= 1.5 % per message (V31_val thresholds); injected mean >= v3 - 3 pts",
+   "verdict": "NOT MET",
+   "v31": "compute max 0.038 s/s on 7 Mobile egos; FA Mobile 0.65 %, Stationary 2.26 %; injected mean Mobile 60.8 %, Stationary 49.2 %",
+   "v3": "v3 batch = same frozen object; stream rows differing from the batch: 0 of 347 (unexplained 0)",
+   "evidence": "v2aix.json; {\"compute\": true, \"fa\": false, \"injected\": true}",
+   "exposure": "fresh H31 (same site-day as calibration for 672 / 674)",
+   "note": ""
+  },
+  {
+   "row": "M4-12 KITTI gps_can blame",
+   "rule": "wrong <= 25 %, correct >= 40 %",
+   "verdict": "NOT MET",
+   "v31": "A1 correct 13.1 % / wrong 81.1 % (detected 122/130)",
+   "v3": "v3 correct 23.8 % / wrong 63.1 %",
+   "evidence": "blame.json K.A1/V3.gps_can; A3 variant 54.9 % / 40.2 %",
+   "exposure": "fresh H31",
+   "note": ""
+  },
+  {
+   "row": "M4-13 comma GNSS spoof blame",
+   "rule": "correct >= 60 %, wrong <= 15 %",
+   "verdict": "MET",
+   "v31": "A1 correct 80.6 % / wrong 0.0 %",
+   "v3": "v3 correct 0.0 % / wrong 0.0 %",
+   "evidence": "blame.json C.A1/V3.B2",
+   "exposure": "fresh H31",
+   "note": ""
+  },
+  {
+   "row": "M4-14 regression R2 before H31",
+   "rule": "all checks pass; H31 sha256 verified",
+   "verdict": "MET",
+   "v31": "regression.json all_pass=True; h31_verify.json all_ok=True",
+   "v3": "",
+   "evidence": "",
+   "exposure": "-",
+   "note": ""
+  },
+  {
+   "row": "M4-15 scores saved, curves + AUC",
+   "rule": "per-sample scores saved; curves / AUC with group-bootstrap CI for GPS, CAN, LiDAR, network, V2X, cross, system",
+   "verdict": "MET",
+   "v31": "36 score files, 8 curve figures",
+   "v3": "",
+   "evidence": "results/WP8/scores/S7, results/WP8/S7/curves",
+   "exposure": "-",
+   "note": ""
+  }
+ ],
+ "n_rows": 18,
+ "n_met": 7,
+ "m4": "NOT MET",
+ "improvement_G4": [
+  {
+   "family": "K",
+   "metric": "fa_tick",
+   "diff": -0.0014355742296918855,
+   "ci": [
+    -0.00809073046694406,
+    0.003223581213307218
+   ],
+   "ci_excludes_0_good_direction": false,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "no claim"
+  },
+  {
+   "family": "K",
+   "metric": "events_per_hour",
+   "diff": -3.0252100840336134,
+   "ci": [
+    -5.773508836524301,
+    0.4618110236220476
+   ],
+   "ci_excludes_0_good_direction": false,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "no claim"
+  },
+  {
+   "family": "K",
+   "metric": "det_single",
+   "diff": 0.037202797202797205,
+   "ci": [
+    0.018316013973813133,
+    0.05810095859252813
+   ],
+   "ci_excludes_0_good_direction": true,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "paired CI excludes 0 (partially fresh material)"
+  },
+  {
+   "family": "K",
+   "metric": "det_heldout",
+   "diff": -0.046794871794871795,
+   "ci": [
+    -0.08016802641802642,
+    0.00500949667616335
+   ],
+   "ci_excludes_0_good_direction": false,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "no claim"
+  },
+  {
+   "family": "K",
+   "metric": "blame_correct",
+   "diff": 0.0019452701526743977,
+   "ci": [
+    -0.033820330849962915,
+    0.03597614952501346
+   ],
+   "ci_excludes_0_good_direction": false,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "no claim"
+  },
+  {
+   "family": "K",
+   "metric": "blame_wrong",
+   "diff": 0.03181933954677597,
+   "ci": [
+    -0.007422275551048008,
+    0.06751269691329678
+   ],
+   "ci_excludes_0_good_direction": false,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "no claim"
+  },
+  {
+   "family": "C",
+   "metric": "fa_tick",
+   "diff": 0.001225490196078427,
+   "ci": [
+    -0.009268804422374582,
+    0.023732632219234162
+   ],
+   "ci_excludes_0_good_direction": false,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "no claim"
+  },
+  {
+   "family": "C",
+   "metric": "events_per_hour",
+   "diff": -6.302521008403364,
+   "ci": [
+    -8.029036211199617,
+    -2.957512890611484
+   ],
+   "ci_excludes_0_good_direction": true,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "paired CI excludes 0 (partially fresh material)"
+  },
+  {
+   "family": "C",
+   "metric": "det_single",
+   "diff": -0.04044002095337874,
+   "ci": [
+    -0.05899653722829724,
+    -0.021799931157253528
+   ],
+   "ci_excludes_0_good_direction": false,
+   "ci_excludes_0_bad_direction": true,
+   "material": "partially fresh",
+   "claim": "no claim"
+  },
+  {
+   "family": "C",
+   "metric": "det_heldout",
+   "diff": -0.08132530120481928,
+   "ci": [
+    -0.08433792593342558,
+    -0.07777541316872827
+   ],
+   "ci_excludes_0_good_direction": false,
+   "ci_excludes_0_bad_direction": true,
+   "material": "partially fresh",
+   "claim": "no claim"
+  },
+  {
+   "family": "C",
+   "metric": "blame_correct",
+   "diff": 0.028215600772214185,
+   "ci": [
+    0.023526883114578845,
+    0.032772829951989005
+   ],
+   "ci_excludes_0_good_direction": true,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "paired CI excludes 0 (partially fresh material)"
+  },
+  {
+   "family": "C",
+   "metric": "blame_wrong",
+   "diff": -0.020314675364349003,
+   "ci": [
+    -0.02441192177231977,
+    -0.016308358578750026
+   ],
+   "ci_excludes_0_good_direction": true,
+   "ci_excludes_0_bad_direction": false,
+   "material": "partially fresh",
+   "claim": "paired CI excludes 0 (partially fresh material)"
+  }
+ ]
+}

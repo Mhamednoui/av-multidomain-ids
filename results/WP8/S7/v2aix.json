@@ -1,0 +1,725 @@
+{
+ "exposure": "fresh H31 (per recording); 'same site-day as calibration' for the 672, 2 independent (descriptive)",
+ "recordings": 674,
+ "same_site_day": 672,
+ "independent": [
+  "Stationary/V2X-only/Aachen-Ponttor/2024-01-17T21-03-46Z",
+  "Stationary/V2X-only/Aachen-Ponttor/2024-01-17T22-47-49Z"
+ ],
+ "envs": {
+  "Mobile": {
+   "val_messages": 11778,
+   "val_recordings": 152,
+   "h31_messages": 1071,
+   "h31_recordings": 24,
+   "k_val": {
+    "L1": 20,
+    "L2": 20,
+    "L3": 11,
+    "physics": 16,
+    "physics+range": 15,
+    "range": 23,
+    "range_loc": 23,
+    "appear": 1,
+    "fresh": 1,
+    "physics+fresh": 16,
+    "rx": 23,
+    "physics+rx": 15
+   },
+   "thresholds_B_comb": 0.9987264391237902,
+   "false_alarms": {
+    "physics": {
+     "per_message": 0.006535947712418301,
+     "ci": [
+      0.0010326121156185762,
+      0.014260823149562554
+     ],
+     "same_site_day": 0.006535947712418301,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "A_physics": {
+     "per_message": 0.976657329598506,
+     "ci": [
+      0.9567424229251074,
+      0.9909185105544794
+     ],
+     "same_site_day": 0.976657329598506,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L1": {
+     "per_message": 0.004668534080298786,
+     "ci": [
+      0.0,
+      0.012672870804012134
+     ],
+     "same_site_day": 0.004668534080298786,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L2": {
+     "per_message": 0.0028011204481792717,
+     "ci": [
+      0.0,
+      0.006047206761492475
+     ],
+     "same_site_day": 0.0028011204481792717,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "L3": {
+     "per_message": 0.013071895424836602,
+     "ci": [
+      0.00460353451033798,
+      0.028351443418353238
+     ],
+     "same_site_day": 0.013071895424836602,
+     "independent": null,
+     "n_independent_messages": 0
+    },
+    "V31_val_target_per_message": 0.01
+   },
+   "injected": {
+    "1": {
+     "name": "ConstPos",
+     "n_injected": 491,
+     "physics_msg_all": 0.9714867617107943,
+     "ci": [
+      0.9583299839228296,
+      0.9778077044710383
+     ],
+     "physics_msg_scored": null,
+     "fa_on_scenario_genuine": 0.010344827586206896
+    },
+    "2": {
+     "name": "ConstPosOffset",
+     "n_injected": 514,
+     "physics_msg_all": 0.0019455252918287938,
+     "ci": [
+      0.0,
+      0.0070435021476375976
+     ],
+     "physics_msg_scored": 0.002012072434607646,
+     "fa_on_scenario_genuine": 0.010771992818671455
+    },
+    "3": {
+     "name": "RandomPos",
+     "n_injected": 475,
+     "physics_msg_all": 0.9726315789473684,
+     "ci": [
+      0.9631109593199757,
+      0.9777524069737185
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.008389261744966443
+    },
+    "4": {
+     "name": "RandomPosOffset",
+     "n_injected": 404,
+     "physics_msg_all": 0.9678217821782178,
+     "ci": [
+      0.9614011591478697,
+      0.9726027397260274
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0029985007496251873
+    },
+    "5": {
+     "name": "ConstSpeed",
+     "n_injected": 439,
+     "physics_msg_all": 0.6195899772209568,
+     "ci": [
+      0.44946394053755523,
+      0.8438287578757875
+     ],
+     "physics_msg_scored": 0.64,
+     "fa_on_scenario_genuine": 0.0031645569620253164
+    },
+    "6": {
+     "name": "ConstSpeedOffset",
+     "n_injected": 489,
+     "physics_msg_all": 0.9386503067484663,
+     "ci": [
+      0.9162692892849381,
+      0.9562366657549234
+     ],
+     "physics_msg_scored": 0.972457627118644,
+     "fa_on_scenario_genuine": 0.010309278350515464
+    },
+    "7": {
+     "name": "RandomSpeed",
+     "n_injected": 496,
+     "physics_msg_all": 0.9596774193548387,
+     "ci": [
+      0.9486542903253864,
+      0.9692914525416383
+     ],
+     "physics_msg_scored": 0.9916666666666667,
+     "fa_on_scenario_genuine": 0.010434782608695653
+    },
+    "8": {
+     "name": "RandomSpeedOffset",
+     "n_injected": 510,
+     "physics_msg_all": 0.9137254901960784,
+     "ci": [
+      0.8829686492585429,
+      0.9409477824358399
+     ],
+     "physics_msg_scored": 0.9471544715447154,
+     "fa_on_scenario_genuine": 0.008912655971479501
+    },
+    "9": {
+     "name": "EventualStop",
+     "n_injected": 274,
+     "physics_msg_all": 0.06204379562043796,
+     "ci": [
+      0.047613916256157636,
+      0.07804878048780488
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0037641154328732747
+    },
+    "10": {
+     "name": "Disruptive",
+     "n_injected": 593,
+     "physics_msg_all": 0.9713322091062394,
+     "ci": [
+      0.9621840369613981,
+      0.9785554343730447
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0041841004184100415
+    },
+    "11": {
+     "name": "DataReplay",
+     "n_injected": 476,
+     "physics_msg_all": 0.9369747899159664,
+     "ci": [
+      0.9060000189200439,
+      0.959746082426764
+     ],
+     "physics_msg_scored": 0.971677559912854,
+     "fa_on_scenario_genuine": 0.010084033613445379
+    },
+    "12": {
+     "name": "DelayedMessages",
+     "n_injected": 299,
+     "physics_msg_all": 0.9063545150501672,
+     "ci": [
+      0.8296943231441049,
+      0.9516631940827169
+     ],
+     "physics_msg_scored": 0.9112426035502958,
+     "fa_on_scenario_genuine": 0.008223684210526315
+    },
+    "13": {
+     "name": "DoS",
+     "n_injected": 956,
+     "physics_msg_all": 0.04079497907949791,
+     "ci": [
+      0.013077636327185246,
+      0.06433772692606504
+     ],
+     "physics_msg_scored": 0.041357370095440084,
+     "fa_on_scenario_genuine": 0.01011804384485666
+    },
+    "14": {
+     "name": "DoSRandom",
+     "n_injected": 1936,
+     "physics_msg_all": 0.9907024793388429,
+     "ci": [
+      0.988875688129201,
+      0.9926316274110691
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0068143100511073255
+    },
+    "15": {
+     "name": "DoSDisruptive",
+     "n_injected": 2104,
+     "physics_msg_all": 0.9890684410646388,
+     "ci": [
+      0.9847042310568296,
+      0.9923520193347118
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.005504587155963303
+    },
+    "16": {
+     "name": "GridSybil",
+     "n_injected": 3450,
+     "physics_msg_all": 0.02434782608695652,
+     "ci": [
+      0.020183100763241077,
+      0.030162663013041043
+     ],
+     "physics_msg_scored": 0.0017953321364452424,
+     "fa_on_scenario_genuine": 0.014112903225806451
+    },
+    "17": {
+     "name": "DataReplaySybil",
+     "n_injected": 506,
+     "physics_msg_all": 0.8754940711462451,
+     "ci": [
+      0.7564837247163058,
+      0.9557109557109557
+     ],
+     "physics_msg_scored": 0.9077868852459017,
+     "fa_on_scenario_genuine": 0.007079646017699115
+    },
+    "18": {
+     "name": "DoSRandomSybil",
+     "n_injected": 1028,
+     "physics_msg_all": 0.7042801556420234,
+     "ci": [
+      0.6401485926793304,
+      0.8004970769891336
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.010771992818671455
+    },
+    "19": {
+     "name": "DoSDisruptiveSybil",
+     "n_injected": 1006,
+     "physics_msg_all": 0.5099403578528827,
+     "ci": [
+      0.42240950614204653,
+      0.604865453155253
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.0017605633802816902
+    },
+    "12b": {
+     "name": "DelayedBurst",
+     "n_injected": 280,
+     "physics_msg_all": 0.0,
+     "ci": [
+      0.0,
+      0.0
+     ],
+     "physics_msg_scored": 0.0,
+     "fa_on_scenario_genuine": 0.008849557522123894
+    },
+    "20": {
+     "name": "GhostNearReceiver",
+     "n_injected": 112,
+     "physics_msg_all": 0.008928571428571428,
+     "ci": [
+      0.0,
+      0.02564102564102564
+     ],
+     "physics_msg_scored": 0.0,
+     "fa_on_scenario_genuine": 0.001451378809869376
+    },
+    "21": {
+     "name": "FarPosOffset",
+     "n_injected": 523,
+     "physics_msg_all": 0.0057361376673040155,
+     "ci": [
+      0.0,
+      0.013334448160535117
+     ],
+     "physics_msg_scored": 0.005928853754940711,
+     "fa_on_scenario_genuine": 0.0072992700729927005
+    }
+   },
+   "injected_mean_over_types": 0.6077966895749237
+  },
+  "Stationary": {
+   "val_messages": 76932,
+   "val_recordings": 456,
+   "h31_messages": 46229,
+   "h31_recordings": 645,
+   "k_val": {
+    "L1": 47,
+    "L2": 15,
+    "L3": 19,
+    "physics": 14,
+    "physics+range": 14,
+    "range": 33,
+    "range_loc": 25,
+    "appear": 1,
+    "fresh": 26,
+    "physics+fresh": 36,
+    "rx": 33,
+    "physics+rx": 14
+   },
+   "thresholds_B_comb": 0.9988171372120835,
+   "false_alarms": {
+    "physics": {
+     "per_message": 0.022561595535270068,
+     "ci": [
+      0.01858785729323635,
+      0.027034314556008316
+     ],
+     "same_site_day": 0.02218415231816802,
+     "independent": 0.17391304347826086,
+     "n_independent_messages": 115
+    },
+    "A_physics": {
+     "per_message": 0.8376776482294663,
+     "ci": [
+      0.8179877273419991,
+      0.857455805076307
+     ],
+     "same_site_day": 0.8374680140521317,
+     "independent": 0.9217391304347826,
+     "n_independent_messages": 115
+    },
+    "L1": {
+     "per_message": 0.00493196911029873,
+     "ci": [
+      0.002830857946506863,
+      0.007368276350279031
+     ],
+     "same_site_day": 0.0049008977750791514,
+     "independent": 0.017391304347826087,
+     "n_independent_messages": 115
+    },
+    "L2": {
+     "per_message": 0.025892837829068333,
+     "ci": [
+      0.021820677108704896,
+      0.03062286747181826
+     ],
+     "same_site_day": 0.025436960575963917,
+     "independent": 0.20869565217391303,
+     "n_independent_messages": 115
+    },
+    "L3": {
+     "per_message": 0.011313244932834369,
+     "ci": [
+      0.008235085558945449,
+      0.01526578611052807
+     ],
+     "same_site_day": 0.011298087348744415,
+     "independent": 0.017391304347826087,
+     "n_independent_messages": 115
+    },
+    "V31_val_target_per_message": 0.01
+   },
+   "injected": {
+    "1": {
+     "name": "ConstPos",
+     "n_injected": 23107,
+     "physics_msg_all": 0.21495650668628555,
+     "ci": [
+      0.15383334658733347,
+      0.2881199610921719
+     ],
+     "physics_msg_scored": null,
+     "fa_on_scenario_genuine": 0.02638180088227662
+    },
+    "2": {
+     "name": "ConstPosOffset",
+     "n_injected": 22473,
+     "physics_msg_all": 0.024518310861923198,
+     "ci": [
+      0.017966404080505215,
+      0.03188399229761928
+     ],
+     "physics_msg_scored": 0.030137312013315105,
+     "fa_on_scenario_genuine": 0.019616096986024584
+    },
+    "3": {
+     "name": "RandomPos",
+     "n_injected": 21691,
+     "physics_msg_all": 0.9817435802867549,
+     "ci": [
+      0.9796017548531613,
+      0.9835720715774002
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.01968375580731926
+    },
+    "4": {
+     "name": "RandomPosOffset",
+     "n_injected": 22958,
+     "physics_msg_all": 0.983056015332346,
+     "ci": [
+      0.9809357392194028,
+      0.9850610615254703
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.02105625026857462
+    },
+    "5": {
+     "name": "ConstSpeed",
+     "n_injected": 21140,
+     "physics_msg_all": 0.9160832544938505,
+     "ci": [
+      0.8949137895482312,
+      0.9371615684614518
+     ],
+     "physics_msg_scored": 0.9180750329617644,
+     "fa_on_scenario_genuine": 0.02060664036031727
+    },
+    "6": {
+     "name": "ConstSpeedOffset",
+     "n_injected": 23023,
+     "physics_msg_all": 0.6837944664031621,
+     "ci": [
+      0.6314404811527337,
+      0.7295655276142018
+     ],
+     "physics_msg_scored": 0.6618720596982642,
+     "fa_on_scenario_genuine": 0.021589244160992848
+    },
+    "7": {
+     "name": "RandomSpeed",
+     "n_injected": 20529,
+     "physics_msg_all": 0.9662915875103512,
+     "ci": [
+      0.9626719889875666,
+      0.9695232904125476
+     ],
+     "physics_msg_scored": 0.9825775361423452,
+     "fa_on_scenario_genuine": 0.021750972762645916
+    },
+    "8": {
+     "name": "RandomSpeedOffset",
+     "n_injected": 23434,
+     "physics_msg_all": 0.770760433558078,
+     "ci": [
+      0.7329034393843619,
+      0.805085017604053
+     ],
+     "physics_msg_scored": 0.797824874511991,
+     "fa_on_scenario_genuine": 0.022899758719017328
+    },
+    "9": {
+     "name": "EventualStop",
+     "n_injected": 12521,
+     "physics_msg_all": 0.016212762558901046,
+     "ci": [
+      0.01387785061043375,
+      0.018612874192892637
+     ],
+     "physics_msg_scored": 0.8926829268292683,
+     "fa_on_scenario_genuine": 0.021122582176337962
+    },
+    "10": {
+     "name": "Disruptive",
+     "n_injected": 23692,
+     "physics_msg_all": 0.9830322471720412,
+     "ci": [
+      0.9800950885943618,
+      0.9856329715540066
+     ],
+     "physics_msg_scored": 0.9999140080832402,
+     "fa_on_scenario_genuine": 0.021875138660868793
+    },
+    "11": {
+     "name": "DataReplay",
+     "n_injected": 22419,
+     "physics_msg_all": 0.3392211963067041,
+     "ci": [
+      0.276985246488457,
+      0.4020727182829911
+     ],
+     "physics_msg_scored": 0.38709446394041397,
+     "fa_on_scenario_genuine": 0.02112557748845023
+    },
+    "12": {
+     "name": "DelayedMessages",
+     "n_injected": 21863,
+     "physics_msg_all": 0.22947445455792892,
+     "ci": [
+      0.12636940950441,
+      0.34781613696157626
+     ],
+     "physics_msg_scored": 0.2552997681351441,
+     "fa_on_scenario_genuine": 0.020085896490390873
+    },
+    "13": {
+     "name": "DoS",
+     "n_injected": 43146,
+     "physics_msg_all": 0.1751494924210819,
+     "ci": [
+      0.15536643010362453,
+      0.19956053018577885
+     ],
+     "physics_msg_scored": 0.1980040625275987,
+     "fa_on_scenario_genuine": 0.02413205710577547
+    },
+    "14": {
+     "name": "DoSRandom",
+     "n_injected": 82872,
+     "physics_msg_all": 0.9950526112559127,
+     "ci": [
+      0.9945500206470593,
+      0.995493795739974
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.021010544471012506
+    },
+    "15": {
+     "name": "DoSDisruptive",
+     "n_injected": 93332,
+     "physics_msg_all": 0.9957142244889212,
+     "ci": [
+      0.9950734997260716,
+      0.9963920142416398
+     ],
+     "physics_msg_scored": 0.9999783816503448,
+     "fa_on_scenario_genuine": 0.024152690426275332
+    },
+    "16": {
+     "name": "GridSybil",
+     "n_injected": 132516,
+     "physics_msg_all": 0.15885628905188806,
+     "ci": [
+      0.11246679177690182,
+      0.2284358027221594
+     ],
+     "physics_msg_scored": 0.13343704521503488,
+     "fa_on_scenario_genuine": 0.02431346560079526
+    },
+    "17": {
+     "name": "DataReplaySybil",
+     "n_injected": 20910,
+     "physics_msg_all": 0.29139167862266857,
+     "ci": [
+      0.24863337831763835,
+      0.3338871980902415
+     ],
+     "physics_msg_scored": 0.32984611641627637,
+     "fa_on_scenario_genuine": 0.022828705715075635
+    },
+    "18": {
+     "name": "DoSRandomSybil",
+     "n_injected": 45884,
+     "physics_msg_all": 0.4759611193444338,
+     "ci": [
+      0.45704331919197044,
+      0.49741201351473757
+     ],
+     "physics_msg_scored": 1.0,
+     "fa_on_scenario_genuine": 0.02211534332460171
+    },
+    "19": {
+     "name": "DoSDisruptiveSybil",
+     "n_injected": 43494,
+     "physics_msg_all": 0.5435692279394859,
+     "ci": [
+      0.5298190204116217,
+      0.5607881872142908
+     ],
+     "physics_msg_scored": 0.9888594164456234,
+     "fa_on_scenario_genuine": 0.022588023854260272
+    },
+    "12b": {
+     "name": "DelayedBurst",
+     "n_injected": 11306,
+     "physics_msg_all": 0.026623032018397313,
+     "ci": [
+      0.019324724346212525,
+      0.03503355705316552
+     ],
+     "physics_msg_scored": 0.03200179030994741,
+     "fa_on_scenario_genuine": 0.021876700168943105
+    },
+    "20": {
+     "name": "GhostNearReceiver",
+     "n_injected": 18685,
+     "physics_msg_all": 0.0251003478726251,
+     "ci": [
+      0.017321265008862243,
+      0.034410899680134
+     ],
+     "physics_msg_scored": 0.02702890978753048,
+     "fa_on_scenario_genuine": 0.023231119297865425
+    },
+    "21": {
+     "name": "FarPosOffset",
+     "n_injected": 23622,
+     "physics_msg_all": 0.01722970112606892,
+     "ci": [
+      0.012959245202246715,
+      0.02194475561075275
+     ],
+     "physics_msg_scored": 0.02183823943265605,
+     "fa_on_scenario_genuine": 0.02702702702702703
+    }
+   },
+   "injected_mean_over_types": 0.49153602453953693
+  }
+ },
+ "runtime": {
+  "egos": 7,
+  "compute_per_stream_s_max": 0.038447316930087246,
+  "share_le_0.5": 1.0,
+  "msg_p99_ms_max": 24.07279200001085,
+  "identical_egos": 7,
+  "mismatch_rows_total": 0,
+  "mismatch_rows_unexplained": 0,
+  "messages_total": 347,
+  "evidence_alarm_mismatch": 0,
+  "per_ego": [
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T10-11-47Z",
+    "messages": 33,
+    "stream_s": 8.975064516067505,
+    "compute_per_stream_s": 0.028783848799895033,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   },
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T10-17-03Z",
+    "messages": 73,
+    "stream_s": 19.036362171173096,
+    "compute_per_stream_s": 0.02537598810405234,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   },
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T10-18-27Z",
+    "messages": 24,
+    "stream_s": 4.985063076019287,
+    "compute_per_stream_s": 0.038447316930087246,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   },
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T12-55-11Z",
+    "messages": 138,
+    "stream_s": 53.70172619819641,
+    "compute_per_stream_s": 0.020975362986329696,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   },
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T13-05-18Z",
+    "messages": 18,
+    "stream_s": 10.797734260559082,
+    "compute_per_stream_s": 0.010927533235459839,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   },
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T13-16-29Z",
+    "messages": 39,
+    "stream_s": 26.045716762542725,
+    "compute_per_stream_s": 0.01233363638746859,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   },
+   {
+    "ego": "Mobile/V2X-only/Highway/2024-01-14T14-17-59Z",
+    "messages": 22,
+    "stream_s": 8.282121419906616,
+    "compute_per_stream_s": 0.0217928826262149,
+    "raw_mismatch_total": 0,
+    "mismatch_rows": 0,
+    "reordered": 0
+   }
+  ]
+ }
+}
