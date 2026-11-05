@@ -37,10 +37,14 @@ def score(m, X):
 
 
 def main():
+    variant = sys.argv[1] if len(sys.argv) > 1 else "full"          # "full" (429 columns) | "static" (first 211 columns, amendment 3)
+    sfx = "" if variant == "full" else "_" + variant
+    nc = 429 if variant == "full" else L.N_DESCR
     t0 = time.time()
     MODELS.mkdir(parents=True, exist_ok=True)
     mtr, Xtr = L.load("train")
     mva, Xva = L.load("val")
+    Xtr, Xva = Xtr[:, :nc], Xva[:, :nc]
     assert not set(mtr.drive) & set(mva.drive)
     ytr, yva = mtr.cls.to_numpy(), mva.cls.to_numpy()
     print("train rows", len(mtr), np.bincount(ytr), "val rows", len(mva), np.bincount(yva), flush=True)
@@ -62,15 +66,15 @@ def main():
     m_best = fit(chosen["params"], chosen["weight_power"], Xtr, ytr, Xva, yva)
     assert int(m_best.best_iteration + 1) == chosen["trees"]
     best = (None, chosen, m_best)
-    best[2].save_model(str(MODELS / "chosen.json"))
+    best[2].save_model(str(MODELS / f"chosen{sfx}.json"))
     s = score(best[2], Xva)
-    np.savez_compressed(OUT / "scores" / "B4" / "lidar_val.npz", s=s, cls=yva, attack=mva.attack.to_numpy(), drive=mva.drive.to_numpy(), i=mva.i.to_numpy())
+    np.savez_compressed(OUT / "scores" / "B4" / f"lidar_val{sfx}.npz", s=s, cls=yva, attack=mva.attack.to_numpy(), drive=mva.drive.to_numpy(), i=mva.i.to_numpy())
     obj, tpr, thr10 = L.val_objective(mva, s, 0.10)
     _, tpr1, thr1 = L.val_objective(mva, s, 0.01)
     per_drive = {d: L.auc_any(mva[mva.drive == d], s[(mva.drive == d).to_numpy()]) for d in sorted(set(mva.drive))}
-    res = {"rule": "max validation mean TPR@FPR10% over 9 kinds; ties within 0.005: fewer trees then shallower", "n_train_rows": int(len(mtr)), "n_val_rows": int(len(mva)),
+    res = {"variant": variant, "n_columns": nc, "rule": "max validation mean TPR@FPR10% over 9 kinds; ties within 0.005: fewer trees then shallower", "n_train_rows": int(len(mtr)), "n_val_rows": int(len(mva)),
            "trials": trials, "chosen": chosen, "val_thr10": thr10, "val_thr1": thr1, "val_tpr10": tpr, "val_tpr1": tpr1, "val_auc_per_drive": per_drive}
-    (OUT / "B4_lidar_selection.json").write_text(json.dumps(res, indent=1))
+    (OUT / f"B4_lidar_selection{sfx}.json").write_text(json.dumps(res, indent=1))
     print("chosen trial", chosen["trial"], chosen["params"], chosen["weight_power"], "trees", chosen["trees"], flush=True)
     print("val TPR@10%", {k: round(v, 3) for k, v in tpr.items()}, flush=True)
     print("val TPR@1%", {k: round(v, 3) for k, v in tpr1.items()}, flush=True)

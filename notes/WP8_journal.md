@@ -757,3 +757,9 @@
 2026-11-05T19:06:01+01:00 | S7 | sim h31_no0093 v3 C: start | chunk sim_h31_no0093_v3_C.pkl
 2026-11-05T19:06:04+01:00 | S7 | sim h31_no0093 v3 C: done | chunk sim_h31_no0093_v3_C.pkl
 2026-11-05T19:07:25+01:00 | S7 | system simulation h31_no0093: done | results/WP8/S7/system_h31_no0093.json
+2026-11-05T19:10:22+01:00 | B4 | LiDAR fit done (chosen trial 7); controls on validation (bg, log B4_lidar_controls.log) | commit then test
+2026-11-05T19:12:10+01:00 | S8 | start: reading S7 inputs (kitti tool, parts) for drive 0093 diagnosis | root-cause table
+2026-11-05T19:13:40+01:00 | S8 | data-quality table (OXTS fields, timestamps, scan counts) for H31 + V31_val + train drives | tools/WP8_S8_dq.py -> results/WP8/S8/dq.json
+2026-11-05T19:17:35+01:00 | B2 | D23x B test start (log results/WP9/logs/B2_D23x_B_test.log)
+2026-11-05T19:17:44+01:00 | B2 | XGB named controls D23x G, D23x B (log results/WP9/logs/B2_ctl_xgb2.log)
+2026-11-05T19:18:32+01:00 | B4 | LiDAR full model RED FLAG (temporal gain 0.91); amendment 3 = static 211-column candidate; committing record, then fit static (bg) | controls static, commit, test

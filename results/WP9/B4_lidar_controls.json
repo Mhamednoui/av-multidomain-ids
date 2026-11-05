@@ -1,0 +1,105 @@
+{
+ "rules": {
+  "shuffle_band": [
+   0.42,
+   0.58
+  ],
+  "red_flag": "one feature > 0.40 of total gain, or temporal columns (211:) > 0.70"
+ },
+ "chosen": {
+  "trial": 7,
+  "params": {
+   "max_depth": 8,
+   "learning_rate": 0.05,
+   "subsample": 0.7,
+   "colsample_bytree": 1.0,
+   "min_child_weight": 3,
+   "reg_lambda": 3.0
+  },
+  "weight_power": 1.0,
+  "trees": 149,
+  "val_obj_tpr10_mean": 0.6438438438438437,
+  "val_obj_tpr1_mean": 0.5063063063063065,
+  "val_auc_any": 0.8205128625893654,
+  "tpr10": {
+   "ph_replace_near": 0.8378378378378378,
+   "ph_replace_far": 0.21621621621621623,
+   "ph_budget_near": 0.31351351351351353,
+   "ph_budget_far": 0.16216216216216217,
+   "PointDrop": 1.0,
+   "IntensitySpoof": 1.0,
+   "cmp_boxcloud": 0.8486486486486486,
+   "cmp_mradd_near": 0.972972972972973,
+   "cmp_mradd_far": 0.44324324324324327
+  }
+ },
+ "real_val_auc_any": 0.8205128625893654,
+ "val_auc_per_drive": {
+  "0011": 0.8630544503389331,
+  "0027": 0.7873977873977873,
+  "0035": 0.7895687645687647
+ },
+ "row_shuffle_val_auc": [
+  0.5147283895917776,
+  0.5287610014385971,
+  0.5269920193417461
+ ],
+ "row_shuffle_pass": true,
+ "within_scan_perm_val_auc": [
+  0.790533703102009,
+  0.7934694257098629,
+  0.7801457194899817,
+  0.7918842339607368,
+  0.7877757538959724
+ ],
+ "within_scan_perm_pass": false,
+ "within_scan_perm_summary": {
+  "min": 0.7801457194899817,
+  "max": 0.7934694257098629,
+  "mean": 0.7887617672317125
+ },
+ "top_gain_share": [
+  [
+   "d_n_pts",
+   0.30813962759049546
+  ],
+  [
+   "d_sect_hifrac_max",
+   0.17859841900429682
+  ],
+  [
+   "d_i_high_frac",
+   0.0504026020903184
+  ],
+  [
+   "d_i_std",
+   0.0430748400852489
+  ],
+  [
+   "d_sect_imean_peak",
+   0.03848580159404994
+  ],
+  [
+   "sect_hifrac_max",
+   0.03426004417727921
+  ],
+  [
+   "dt_cnt_min",
+   0.033961327540212444
+  ],
+  [
+   "d_double_return_cells",
+   0.03106820640885931
+  ],
+  [
+   "d_dr_patch_max_10x50",
+   0.03094915974443548
+  ],
+  [
+   "d_sect_std_ratio",
+   0.02752556299176107
+  ]
+ ],
+ "temporal_gain_share": 0.9134156526500371,
+ "red_flag": true
+}

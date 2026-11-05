@@ -94,3 +94,16 @@
   Result: the fixed-round nulls scatter 0.29-0.71 around 0.5 on 8 clustered validation sessions, so the band 0.42-0.58 FAILS as written for 4 of 5 sets (PASS for F_kin_noVS only); interpretation (stated in the report): the null is centred, the spread is a validation-size effect;
   the real validation AUC (0.93-0.998) exceeds the maximum of each null (<= 0.71). Not a stop condition. Session-label permutation: PASS for all sets in the sense "real AUC > null q95" but the null spans 0.00-0.99 (8 validation sessions): weak evidence either way.
 - v3 GPS layers script (tools/WP9_B4_gps_v3.py): F1 / AUC / CI are computed on the file-2 sessions only; file-3 normals contribute false alarms only (stated, same as the supervised rows).
+
+## 2026-11-05 LiDAR validation outcome of the first (full 429-column) model and amendment 3 (test NOT scored yet)
+- Full model (4-class XGBoost, chosen trial 7, 149 trees, depth 8): validation mean TPR@FPR10% 0.644 over the 9 kinds (AUC any-attack 0.8205). Validation TPR@10% / @1%:
+  ph_replace_near 0.838/0.649, ph_replace_far 0.216/0.049, ph_budget_near 0.314/0.076, ph_budget_far 0.162/0.022, PointDrop 1.0/0.995, IntensitySpoof 1.0/1.0, cmp_boxcloud 0.849/0.562, cmp_mradd_near 0.973/0.941, cmp_mradd_far 0.443/0.265.
+- Controls (results/WP9/B4_lidar_controls.json): row-shuffled labels 0.515/0.529/0.527 PASS. Within-scan permutation 0.78-0.79 FAIL as written: the implementation permuted labels inside every (drive, scan) group including the clean-only
+  singleton groups (even scans), which keeps "attacked scan vs clean-only scan" predictive (P(attack | clean-looking row) ~0.45 vs 0). That is a flaw of my control, not evidence of a leak: amendment 3b restricts the permutation to scans that have attacked rows
+  (10 rows each, then every row has P(attack)=0.9 whatever its features, expected AUC 0.5). The record of the flawed run stays in the file.
+- Feature importance: RED FLAG as pre-registered: the 218 temporal columns carry 0.913 of the gain (rule: > 0.70), top features d_n_pts 0.308 and d_sect_hifrac_max 0.179 (d_* = change of the descriptor vs the previous scan; attacks are evaluated at onset, previous scan clean).
+  Rule: red flag = STOP, no test scoring of this model. Reading (for the report, not a reason to waive the rule): the temporal block is the onset signal (a change in point count / sector statistics between two consecutive scans), legitimate for an onset attack
+  but zero for a sustained attack (previous scan also attacked); a model that mostly reads the change in point count is not a model of what the attack looks like.
+- Amendment 3 (decided on validation numbers, before any test row is scored): candidate B = STATIC descriptor only (first 211 columns, one scan, no previous scan) with the same 12-trial search, selection criterion and tie rules, controls (shuffle, within-scan permutation restricted to attacked scans, importance flag).
+  Eligibility rule: a candidate whose importance flag is raised is not test-scored. If B passes it, B is the supervised row (headline), the full model is reported on validation only ("flagged, not test-scored; release is a supervisor decision"). If B is flagged too, no supervised LiDAR test row is produced and the report says so.
+  The phys-only secondary row (cmp_* unseen) is built on the same columns as the eligible model.

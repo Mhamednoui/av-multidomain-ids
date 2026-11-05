@@ -19,17 +19,21 @@ OUT = L.ROOT / "results" / "WP9"
 
 
 def main():
+    variant = sys.argv[1] if len(sys.argv) > 1 else "full"
+    sfx = "" if variant == "full" else "_" + variant
+    nc = 429 if variant == "full" else L.N_DESCR
     t0 = time.time()
-    sel = json.loads((OUT / "B4_lidar_selection.json").read_text())
+    sel = json.loads((OUT / f"B4_lidar_selection{sfx}.json").read_text())
     ch = sel["chosen"]
     mtr, Xtr = L.load("train")
     mva, Xva = L.load("val")
+    Xtr, Xva = Xtr[:, :nc], Xva[:, :nc]
     ytr, yva = mtr.cls.to_numpy(), mva.cls.to_numpy()
     names = feature_names_temporal()
-    res = {"rules": {"shuffle_band": [0.42, 0.58], "red_flag": "one feature > 0.40 of total gain, or temporal columns (211:) > 0.70"}, "chosen": ch}
+    res = {"variant": variant, "rules": {"shuffle_band": [0.42, 0.58], "red_flag": "one feature > 0.40 of total gain, or temporal columns (211:) > 0.70"}, "chosen": ch}
     # real model (reload)
     m = xgb.XGBClassifier()
-    m.load_model(str(L.CACHE.parent / "lidar_model" / "chosen.json"))
+    m.load_model(str(L.CACHE.parent / "lidar_model" / f"chosen{sfx}.json"))
     s = score(m, Xva)
     res["real_val_auc_any"] = L.auc_any(mva, s)
     res["val_auc_per_drive"] = sel["val_auc_per_drive"]
@@ -47,13 +51,16 @@ def main():
     order = np.argsort(key, kind="stable")
     bounds = np.r_[0, np.flatnonzero(key[order][1:] != key[order][:-1]) + 1, len(key)]
     wp = []
+    sizes = np.diff(bounds)
+    keep_rows = np.concatenate([order[a:b] for a, b, z in zip(bounds[:-1], bounds[1:], sizes) if z > 1])     # amendment 3b: groups with attacked rows only
     for seed in range(5):
         rng = np.random.default_rng(1000 + seed)
         y = ytr.copy()
         for a, b in zip(bounds[:-1], bounds[1:]):
             idx = order[a:b]
-            y[idx] = ytr[rng.permutation(idx)]
-        mp = fit(ch["params"], ch["weight_power"], Xtr, y, Xva, yva, seed=seed, n_rounds=ch["trees"])
+            if len(idx) > 1:
+                y[idx] = ytr[rng.permutation(idx)]
+        mp = fit(ch["params"], ch["weight_power"], Xtr[keep_rows], y[keep_rows], Xva, yva, seed=seed, n_rounds=ch["trees"])
         wp.append(L.auc_any(mva, score(mp, Xva)))
         print("within-scan permutation seed", seed, round(wp[-1], 4), f"({time.time()-t0:.0f}s)", flush=True)
     res["within_scan_perm_val_auc"] = wp
@@ -68,7 +75,7 @@ def main():
     res["top_gain_share"] = top[:10]
     res["temporal_gain_share"] = float(temporal)
     res["red_flag"] = bool(top[0][1] > 0.40 or temporal > 0.70)
-    (OUT / "B4_lidar_controls.json").write_text(json.dumps(res, indent=1))
+    (OUT / f"B4_lidar_controls{sfx}.json").write_text(json.dumps(res, indent=1))
     print("real val AUC", round(res["real_val_auc_any"], 4), "shuffle", [round(x, 3) for x in sh], "within-scan", [round(x, 3) for x in wp], flush=True)
     print("top", [(a, round(b, 3)) for a, b in top[:6]], "temporal share", round(temporal, 3), "RED FLAG", res["red_flag"], flush=True)
     print("done", f"{time.time()-t0:.0f}s")
