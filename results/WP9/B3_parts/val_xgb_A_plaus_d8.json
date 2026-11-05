@@ -1,0 +1,19 @@
+{
+ "cand": {
+  "name": "xgb_A_plaus_d8",
+  "kind": "xgb",
+  "set": "A_plaus",
+  "depth": 8
+ },
+ "n_features": 27,
+ "best_iteration": 106,
+ "seconds": 216.65878176689148,
+ "val": {
+  "thr": 0.42967009544372564,
+  "macro_f1": 0.8494146364489403,
+  "fpr": 0.009995572226152367,
+  "mean_alarm_recall": 0.9238044641005624,
+  "auc": 0.9708135024305002,
+  "binary_f1": 0.9583236952724313
+ }
+}

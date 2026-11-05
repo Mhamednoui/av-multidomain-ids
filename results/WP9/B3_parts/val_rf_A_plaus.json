@@ -1,0 +1,19 @@
+{
+ "cand": {
+  "name": "rf_A_plaus",
+  "kind": "rf",
+  "set": "A_plaus",
+  "depth": 99
+ },
+ "n_features": 27,
+ "best_iteration": null,
+ "seconds": 227.0370945930481,
+ "val": {
+  "thr": 0.4143310189247132,
+  "macro_f1": 0.8465526237298221,
+  "fpr": 0.009995572226152367,
+  "mean_alarm_recall": 0.9237809750853392,
+  "auc": 0.9699154199036584,
+  "binary_f1": 0.9582032044608776
+ }
+}

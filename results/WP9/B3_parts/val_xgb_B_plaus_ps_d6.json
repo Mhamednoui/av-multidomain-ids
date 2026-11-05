@@ -1,0 +1,19 @@
+{
+ "cand": {
+  "name": "xgb_B_plaus_ps_d6",
+  "kind": "xgb",
+  "set": "B_plaus_ps",
+  "depth": 6
+ },
+ "n_features": 24,
+ "best_iteration": 145,
+ "seconds": 252.03475284576416,
+ "val": {
+  "thr": 0.3032601475715638,
+  "macro_f1": 0.8051138704465884,
+  "fpr": 0.009995572226152367,
+  "mean_alarm_recall": 0.9234174930415726,
+  "auc": 0.9699702854255876,
+  "binary_f1": 0.9582696855967997
+ }
+}
