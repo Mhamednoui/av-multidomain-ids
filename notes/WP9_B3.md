@@ -69,3 +69,19 @@
 ### Amendment 2026-11-04 (before any model was fitted)
 - Random Forest size: min_samples_leaf 20, max_samples 0.3 (100 trees, max_features sqrt) instead of 5 / 0.5: 20-class leaf arrays make the larger forest several GB. Nothing else changed.
 - Windows of the feature table: count-based (10 messages, l4.WINDOW), as the WP5 S5 recipe; the time-window variant is not a candidate.
+
+## 2026-11-05 selection + controls (validation only; written BEFORE the test scoring)
+- Selection (results/WP9/B3_selection.json, committed): chosen xgb_D_noT_d6 (33 features: v3 plaus features + raw fields, no track descriptors), val 20-class macro-F1 0.9174 at the 1% budget
+  (FPR 0.0100); best candidate by value was xgb_D_all_d8 0.9186; the tie rule (< 0.002) picked fewer features / smaller depth. Per-set: A_plaus 0.849, A_noT 0.830, B_plaus_ps 0.805, C_raw 0.526, D_all 0.917-0.919, RF D_all 0.901, RF A_plaus 0.847.
+  Thresholds: H = 0.1659 (1% val genuine budget), S = 0.3523 (val binary-F1 optimum; val FPR 0.0016), sender k = 16 (val genuine-sender FA <= 1%).
+  V3 L4 reference (binary S2_resid, scored rows only): val AUC 0.640, mean alarm recall 0.60 at 1%: rate-free residual features alone are weak on the full message stream.
+- Feature importance of the chosen model (val-independent, from the fitted model): cusum_hi 0.161, w_rate_max 0.086, rate 0.081, w_pos_speed_max 0.077, w_nis_mean 0.077, speed 0.056; track descriptors 0 (not in set), raw x,y 0.037: NO RED FLAG.
+- Controls (results/WP9/B3_controls.json; pass band 0.42-0.58):
+  1 row-level shuffled labels, chosen unit: AUC 0.496 PASS. v3 reference, shuffled rows: all-row AUC 0.333 (unscored rows get score 0 and are attack-rich, so the null is not flat on all rows), scored rows 0.489 PASS at the unit's own level (as WP5 / B1 convention).
+  2 within-block sender-label permutation: chosen 0.377 (outside band, BELOW 0.5), global sender permutation 0.446; v3 ref within-block 0.443 (all rows), 0.655 (scored rows). FAIL as written (not a red flag by the pre-registered rule).
+    Interpretation prepared before the test: a below/above-band AUC from sender-level permutation of ~10k senders is a null model whose chance correlation with the true label is large because rows of one sender are highly correlated
+    (few effective samples); a post-hoc 5-seed diagnostic (tools/WP9_B3_control_seeds.py, results/WP9/B3_control_seeds.json) measures the spread. It is NOT a selection basis and is reported next to the failure.
+  3 proxy-only (sendTime, sender id, pseudonym id): AUC 0.638 FAIL. Post-hoc split (tools/WP9_B3_proxy_diag.py): time alone 0.508, sender alone 0.508, pseudonym id alone 0.629 (its prefix = pseudonym ordinal 0.606).
+    So absolute time and sender id carry no label information (the leak the split guards against is absent); the pseudonym ordinal encodes pseudonym churn (Sybil / ghost behaviour). Pseudonym id is never a feature;
+    the model sees the same behaviour only through stream features (birth density, track residuals). State this in the report.
+- Decision: proceed to the single test scoring (the only pre-registered stop is a feature-importance red flag, which did not occur).
