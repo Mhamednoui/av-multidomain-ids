@@ -6,7 +6,13 @@ rules (L1), physics and consistency checks (L2), models of normal behaviour fitt
 ("the witness that disagrees is the attacked one"), a label-free fusion, a temporal correlator and a response policy produce alert events. The design is in `ARCHITECTURE.md`, the plan in
 `ROADMAP.md`, the rules every worker followed in `RULES.md`, and the state in `STATUS.md`.
 
-## Honest summary
+## v3.1 and benchmark track (latest, 2026-11-05)
+
+- **v3.1** (`RESULTS_v31.md`, `reports/M4.md`, `reports/WP8_S8.md`): targeted fixes tuned on validation only and scored once on a fresh hold-out (H31: 13 new KITTI drives, new comma2k19 chunks, 674 new V2AIX recordings). Milestone M4 is **NOT MET** (7 of 18 rows; false alarms on clean driving remain above the bounds). Real fresh gains over frozen v3: LiDAR PointDrop detection +34.1 pts [+29.8, +37.0], IntensitySpoof +8.9 pts, comma GNSS-spoof blame 0 % -> 80.6 % correct (0 % wrong). A post-M4 sensor-health gate (S8) cuts KITTI clean false alarms 12.2 % -> 4.7 %; that number is labelled "hold-out exposure 2, NOT fresh".
+- **Benchmark track** (`reports/WP9_final.md`, figures in `results/WP9/B5/figures/`): seen attack types on standard datasets with leak-free splits (capture / time block / 5-tuple group / session / drive), test scored once, 95 % CIs, compared with the published results. No row is "better" than the literature; three rows **equal** the best published results under a stricter split: Car-Hacking macro-F1 0.999, VeReMi Extension DoS family F1 0.995, AV-GPS F1 0.976 (dataset with artefacts). Also: CICIDS2017 (5-tuple group split) macro-F1 0.894 vs published 0.778 (not like-for-like), VeReMi Extension all 19 attack types 0.917, CSE-CIC-IDS2018 leak-free 0.945. Rows below the bar (CAN on can-train-and-test, unknown vehicle; LiDAR seen attacks) and every failed control are listed in the report.
+- Datasets are not included in this repository (download links and licences in `DATASETS.md`; V2AIX is non-commercial and must not be redistributed).
+
+## Honest summary (v3)
 
 - Results are in **`RESULTS_v3.md`**, generated from the JSON files by `make_report.py`. Every number in it is traced to a file and key path in its appendix. Read it, not this README, for numbers.
 - Every domain milestone that is closed is closed **PARTIAL**: some pre-registered targets were met, others were not, and the report says which. The system milestone M2 is **NOT MET**
