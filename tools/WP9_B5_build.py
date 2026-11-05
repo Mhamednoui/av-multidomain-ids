@@ -126,9 +126,11 @@ def b2row(tab, prot, label_set, protocol_text, leak, op_extra, bar, verdict, fla
               "fpr": b2(tab, prot, "fpr", "pct3"), "fprci": b2(tab, prot, "fpr_ci", "cipct3"),
               "auc": b2(tab, prot, "auc", "f3"), "det1": b2(tab, prot, "det1", "f3"), "fpr1": b2(tab, prot, "fpr1", "pct2"),
               "nel": b2(tab, prot, "n_eligible", "int"), "allp": b2(tab, prot, "macro_f1_all_present", "f3"),
-              "ctl": b2(tab, prot, "control_pass", "bool"), "ctlauc": b2(tab, prot, "control_auc_max", "f2"),
+              "ctl": b2(tab, prot, "control_pass", "bool"),
+              "bot_prec": F(B2, ["per_class", tab + "_" + prot, "per_class", "Bot", "precision"], "f2") if tab == "D10o" and prot == "G" else None, "ctlauc": b2(tab, prot, "control_auc_max", "f2"),
               "rows": b2(tab, prot, "test_rows", "int")}
     fields["fprci"]["fmt"] = "cipct3"
+    fields = {k: v for k, v in fields.items() if v is not None}
     return {"id": rid, "domain": "network", "dataset": label_set, "protocol": protocol_text, "leak": leak,
             "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
             "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). " + op_extra,
@@ -172,7 +174,7 @@ ROWS.append({
     "id": "CAN_ROAD", "domain": "CAN", "dataset": "ROAD (ORNL), 10 classes (fabrication + masquerade)",
     "protocol": "capture-level split (WP2), 1 s windows from a frame XGBoost; 13 test captures, 9 with attacks (locks/WP9_road.json); coolant family only in test (separate unseen row)",
     "leak": "leak-free by capture; but ambient vs attack captures differ in regime (shortcut learnable, see caveats)",
-    "ours": "macro-F1 {mf} {mfci}; attack F1 {af1}; FPR {fpr} {fprci}; recall {rec}; AUC {auc}; 9/9 attack captures alarmed; masquerade recall reverse_light_off {rl_off}, reverse_light_on {rl_on}",
+    "ours": "macro-F1 {mf} {mfci}; attack F1 {af1}; FPR {fpr} {fprci}; recall {rec}; AUC {auc}; masquerade recall reverse_light_off {rl_off}, reverse_light_on {rl_on}",
     "op": "H = 1% val budget (headline); S = val-F1-optimal: attack F1 {sf1}, FPR {sfpr}",
     "bar": {"text": "Guerra et al.: multiclass LCCDE mean F1 0.3212, DCNN 0.65-0.75, LSTM 1.0 on all classes (red flag); split random-or-not NOT stated, Accelerator captures excluded.",
             "probes": [[B0, 7, "0.3212"], [B0, 7, "0.6514"], [B0, 7, "0.7468"]], "b0": [7]},
@@ -235,7 +237,7 @@ ROWS.append(b2row("D10o", "T", "CICIDS2017, original CICFlowMeter labels (known 
                   "not comparable", NOFLAGS, "Bar has no usable time-split number. " + CTL, "NET_D10o_T"))
 ROWS.append(b2row("D10o", "G", "CICIDS2017, original CICFlowMeter labels (known errors)", "5-tuple group 70/10/20 (the Moczkodan and Ragab protocol), dedup (G)", "leak-free by 5-tuple group; time overlaps; 90,068 test rows are v3 D10 test rows (no v3 model reused)",
                   "", MOCZ_BAR, "comparable-not-like-for-like", NOFLAGS,
-                  "Same labels and group protocol as the bar RF 0.778, but our class set is 12 classes with >= 20 flows (bar keeps 13) and we deduplicate (bar does not): not like-for-like. Bot precision 0.56 on original labels = label noise. " + CTL, "NET_D10o_G"))
+                  "Same labels and group protocol as the bar RF 0.778, but our class set is 12 classes with >= 20 flows (bar keeps 13) and we deduplicate (bar does not): not like-for-like. Bot precision {bot_prec} on original labels = label noise. " + CTL, "NET_D10o_G"))
 ROWS.append(b2row("D10o", "B", "CICIDS2017, original CICFlowMeter labels (known errors)", "5-min block group (stricter than the bar), dedup (B)", "leak-free by 5-minute block group; 56,087 test rows are v3 D10 test rows",
                   "", {"text": "no bar at this strictness (strictest published: 5-tuple group, see G row).", "probes": MOCZ_BAR["probes"], "b0": [15]},
                   "not comparable", NOFLAGS, CTL, "NET_D10o_B"))
@@ -244,16 +246,16 @@ ROWS.append(b2row("D10e", "T", "CICIDS2017, corrected labels (Engelen 2021)", "t
                   "not comparable", NOFLAGS, "Corrected labels shrink the hard Web classes (12-151 flows), most fall below the support rule: a main reason the macro-F1 is higher. " + CTL, "NET_D10e_T"))
 ROWS.append(b2row("D10e", "G", "CICIDS2017, corrected labels (Engelen 2021)", "5-tuple group 70/10/20, dedup (G)", "leak-free by 5-tuple group",
                   "", {"text": "no bar on corrected labels (bar uses original labels).", "probes": [[B0, 12, "20%"]], "b0": [12]},
-                  "not comparable", NOFLAGS, "The selected model is a random forest: the registered shuffled-label AUC rule FAILED (10-seed AUC 0.558, macro-F1 0.086). " + CTL, "NET_D10e_G"))
+                  "not comparable", NOFLAGS, "The selected model is a random forest: the registered shuffled-label AUC rule FAILED (extra 10-seed control in results/WP9/B2/D10e_G_control_extra.json: macro-F1 stays near 0.09). " + CTL, "NET_D10e_G"))
 ROWS.append(b2row("D10e", "B", "CICIDS2017, corrected labels (Engelen 2021)", "5-min block group, dedup (B)", "leak-free by 5-minute block group",
                   "", {"text": "no bar on corrected labels (bar uses original labels).", "probes": [[B0, 12, "20%"]], "b0": [12]},
                   "not comparable", NOFLAGS, CTL, "NET_D10e_B"))
 ROWS.append(b2row("D23x", "T", "CSE-CIC-IDS2018, corrected (Liu 2022 release)", "time block per period, dedup, benign 1-in-10 sample weighted 10 (T)", "leak-free by time",
                   "", NOBAR2018, "not comparable", NOFLAGS,
-                  "Our numbers are the first leak-free numbers we know of; no bar to compare. Random-forest shuffled-label AUC rule FAILS (XGB control 0.52-0.60: density-structure effect, hypothesis untested). " + CTL, "NET_D23_T"))
+                  "Our numbers are the first leak-free numbers we know of; no bar to compare. Random-forest shuffled-label AUC rule FAILS (an XGBoost control is also above 0.5: density-structure effect, hypothesis untested). " + CTL, "NET_D23_T"))
 ROWS.append(b2row("D23x", "G", "CSE-CIC-IDS2018, corrected (Liu 2022 release)", "5-tuple group 70/10/20, dedup (G)", "leak-free by 5-tuple group",
                   "", NOBAR2018, "not comparable", NOFLAGS,
-                  "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Infiltration-NMAP precision 0.18-0.36 (benign scans). " + CTL, "NET_D23_G"))
+                  "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Infiltration-NMAP precision is low (benign scans). " + CTL, "NET_D23_G"))
 ROWS.append(b2row("D23x", "B", "CSE-CIC-IDS2018, corrected (Liu 2022 release)", "5-min block group, dedup (B)", "leak-free by 5-minute block group",
                   "", NOBAR2018, "not comparable", NOFLAGS,
                   "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. " + CTL, "NET_D23_B"))
@@ -270,7 +272,7 @@ ROWS.append({
     "op": "H = 1% val budget (headline); S = val-F1-optimal (secondary): macro-F1 {smf}, FPR {sfpr}",
     "bar": {"text": "none comparable: published VeReMi Extension numbers are DoS family only (5 types), 70/30 per dataset.", "probes": [[B0, 22, "DoS family only"]], "b0": [22, 23]},
     "verdict": "not comparable", "flags": NOFLAGS,
-    "caveats": "Failed controls as written: within-block sender permutation {c_perm} and proxy-only {c_proxy} (band 0.42-0.58); explanation: pseudonym id carries churn (alone {c_ps}), group-permutation nulls are not centred on 0.5 (0.34-0.52). Row-shuffle control {c_row} passes. Raw x,y,speed make the model map-specific (ConstPosOffset recall {cpo}). Class 12 is a placeholder artefact. In-distribution benchmark only.",
+    "caveats": "Failed controls as written: within-block sender permutation {c_perm} and proxy-only {c_proxy} (band 0.42-0.58); explanation: pseudonym id carries churn (alone {c_ps}), group-permutation nulls are not centred on 0.5 (results/WP9/B3_control_seeds.json). Row-shuffle control {c_row} passes. Raw x,y,speed make the model map-specific (ConstPosOffset recall {cpo}). Class 12 is a placeholder artefact. In-distribution benchmark only.",
     "fields": {
         "mf": F(B3, H + "macro_f1", "f3"), "mfci": F(B3, HC + "macro_f1", "ci3"), "bf1": F(B3, H + "binary.f1", "f3"),
         "fpr": F(B3, H + "fpr", "pct2"), "fprci": F(B3, HC + "fpr", "cipct2"), "auc": F(B3, H + "auc", "f3"),
@@ -306,7 +308,7 @@ ROWS.append({
     "op": "H = 1% val budget; at S (val-F1-optimal) F1 per type {smin}-{smax}, pooled {spool}",
     "bar": {"text": "F1 0.93-0.998 at the bar's 70/30 prevalence.", "probes": [[B0, 23, "99.06"]], "b0": [22, 23]},
     "verdict": "comparable-not-like-for-like", "flags": NOFLAGS,
-    "caveats": "Prevalence differs from the bar: the 1% FPR on abundant genuine traffic lowers precision (two types below 0.93 at H). Shows what the prevalence matching changes.",
+    "caveats": "Prevalence differs from the bar: the 1% FPR on abundant genuine traffic lowers precision (four of five types fall below 0.93 at H). Shows what the prevalence matching changes.",
     "fields": {
         "dmin": AGG("min", [(B3, H + f"dos.{k}.natural.f1") for k in (13, 14, 15, 18, 19)], "f3"),
         "dmax": AGG("max", [(B3, H + f"dos.{k}.natural.f1") for k in (13, 14, 15, 18, 19)], "f3"),
@@ -341,7 +343,7 @@ ROWS.append({
     "op": "fixed threshold 0.5 (no validation session set for this direction)",
     "bar": {"text": "Abrar cross-dataset Case II MLP F1 0.964.", "probes": [[B0, 26, "0.964"]], "b0": [26]},
     "verdict": "below", "flags": NOFLAGS,
-    "caveats": "A model trained on one day / one rover does not transfer: F_full alarms on everything. Only the vehicle-state-contaminated view F_kin reaches 0.806.",
+    "caveats": "A model trained on one day / one rover does not transfer: F_full alarms on everything. Only the vehicle-state-contaminated view F_kin reaches {kf1}.",
     "fields": {
         "f1": F(B4G, "case_II/F_full/f1", "f3"), "fpr": F(B4G, "case_II/F_full/fpr", "f2"),
         "kf1": F(B4G, "case_II/F_kin/f1", "f3"), "kci": F(B4G, "case_II/F_kin/ci_session_cluster/f1", "ci3"),
@@ -368,7 +370,7 @@ ROWS.append({
     "op": "H = 1% val budget (calibration on validation normals)",
     "bar": {"text": "Abrar cross-dataset F1 0.90-0.965 (trained supervised models).", "probes": [[B0, 26, "0.965"]], "b0": [26]},
     "verdict": "comparable-not-like-for-like", "flags": NOFLAGS,
-    "caveats": "F1 sits in the bar range but the CI is huge and AUC equals the permutation null: no evidence beyond chance on this dataset. One spoof session (171 rows) missed; the two latching CUSUMs do the work.",
+    "caveats": "F1 sits in the bar range but the CI is huge and AUC equals the permutation null: no evidence beyond chance on this dataset. One spoof session is missed; the two latching CUSUMs do the work.",
     "fields": {
         "f1": F(B4V, "combined/f1", "f3"), "fci": F(B4V, "combined/ci_session_cluster/f1", "ci3"), "rec": F(B4V, "combined/recall", "f3"),
         "fpr": F(B4V, "combined/fpr", "pct1"), "auc": F(B4V, "combined/auc", "f3")}})
@@ -384,13 +386,14 @@ ROWS.append({
     "bar": {"text": "object-level accuracy > 94% (Shadow-Catcher, KITTI, injected ghost objects); nuScenes TPR > 85% at FPR < 10% (ADoPT).",
             "probes": [[B0, 30, "94%"], [B0, 31, "85%"]], "b0": [30, 31]},
     "verdict": "not comparable", "flags": NOFLAGS,
-    "caveats": "Another metric level (object vs scan), other data (nuScenes) and other attacks. Our rule L1 (NAIVE TPR >= 0.85) NOT MET. The full 429-column model was red-flagged (temporal columns 91% of gain) and never test-scored. Single-return phantoms are at the physics bound for any detector. Within-scan permutation control marginal.",
+    "caveats": "Another metric level (object vs scan), other data (nuScenes) and other attacks. Our rule L1 (NAIVE TPR >= 0.85) NOT MET. The full 429-column model was red-flagged (temporal columns {tshare} of gain) and never test-scored. Single-return phantoms are at the physics bound for any detector. Within-scan permutation control marginal.",
     "fields": {
         "naive": F(B4L, LI + "kinds/NAIVE/tpr", "f3"), "naiveci": F(B4L, LI + "kinds/NAIVE/ci_drive_boot", "ci3"),
         "fpr": F(B4L, LI + "fpr/fpr", "pct1"), "fprci": F(B4L, LI + "fpr/ci_drive_boot", "cipct1"),
         "isp": F(B4L, LI + "kinds/IntensitySpoof/tpr", "f2"), "pd": F(B4L, LI + "kinds/PointDrop/tpr", "f2"),
         "ph1": AGG("min", [(B4L, P(LI + f"kinds/{k}/tpr")) for k in ("ph_replace_near", "ph_replace_far", "ph_budget_near", "ph_budget_far")], "f2"),
         "ph2": AGG("max", [(B4L, P(LI + f"kinds/{k}/tpr")) for k in ("ph_replace_near", "ph_replace_far", "ph_budget_near", "ph_budget_far")], "f2"),
+        "tshare": F(R9 + "B4_lidar_controls.json", "temporal_gain_share", "pct0"),
         "v31naive": F(B4L, "detectors/v31/ops/fpr10/kinds/NAIVE/tpr", "f3")}})
 
 # ---------------------------------------------------------------- second table (zero-shot / fresh hold-out track)
@@ -426,12 +429,12 @@ t2("T2_LFA", "2a", "LiDAR scan level", "clean scan false alarm (bound <= 1.5%)",
 GP = ["gps", "rows", {"subset": "gps pooled attacks [all]"}]
 CP = ["cross", "rows", {"subset": "cross pooled attacks [all]"}]
 t2("T2_GPS", "2a", "GPS domain (v3 = v3.1, same frozen object)", "pooled attacks", FRESH, "miss",
-   "det at 1% FA is 0 (scores saturate); clean FA 7.2% vs 1.4% on V31_val; one drive (0093) = 94% of its clean ticks",
+   "det at 1% FA is 0 (scores saturate); clean FA far above V31_val because of one defective drive (0093)",
    {"auc": F(S7DOM, GP + ["auc"], "f3"), "aci": F(S7DOM, GP + ["auc_ci"], "ci3"), "d1": F(S7DOM, GP + ["det@1.0%"], "pct1"),
     "fa": F(S7DOM, GP + ["op_fa"], "pct2"), "det": F(S7DOM, GP + ["op_det"], "pct1")},
    "AUC {auc} {aci}; det at 1% FA {d1}; frozen rule FA {fa}, det {det}", "same object", "-")
 t2("T2_CROSS", "2a", "Cross-domain layer (v3 = v3.1 recipe)", "pooled attacks", FRESH, "miss",
-   "det at 1% FA is 0; individual attacks as low as 8% (lidar_yaw) at the frozen rule",
+   "det at 1% FA is 0; several attacks (lidar_yaw, drift, meaconing) are rarely detected at the frozen rule",
    {"auc": F(S7DOM, CP + ["auc"], "f3"), "aci": F(S7DOM, CP + ["auc_ci"], "ci3"), "d1": F(S7DOM, CP + ["det@1.0%"], "pct1"),
     "fa": F(S7DOM, CP + ["op_fa"], "pct2"), "det": F(S7DOM, CP + ["op_det"], "pct1")},
    "AUC {auc} {aci}; det at 1% FA {d1}; frozen rule FA {fa}, det {det}", "same recipe", "-")
@@ -491,7 +494,7 @@ t2("T2_S8_EV", "2b", "S8 gate, system K", "alert events per clean hour (bound <=
     "d": F(S8SUM, ["h31_K", "paired", "events_per_hour", "diff"], "sgn2"), "ci": F(S8SUM, ["h31_K", "paired", "events_per_hour", "ci"], "ci2")},
    "{v3}", "{v31}", "{d} {ci}")
 t2("T2_S8_DET", "2b", "S8 gate, system K", "event detection, single-domain types", EXP2, "miss",
-   "cost of the gate; part of the ungated 87.1% was a flood effect on drive 0093",
+   "cost of the gate; part of the ungated {v3} was a flood effect on drive 0093",
    {"v3": F(S8SUM, ["h31_K", "det_ungated"], "pct1"), "v31": F(S8SUM, ["h31_K", "det_gated"], "pct1"),
     "d": F(S8SYS, PG + ["det_single", "diff"], "sgn_pts1"), "ci": F(S8SYS, PG + ["det_single", "ci"], "ci_pts1")}, "{v3}", "{v31}", "{d} pts {ci}")
 t2("T2_S8_HELD", "2b", "S8 gate, system K", "event detection, held-out types", EXP2, "miss", "CI touches 0",
@@ -503,7 +506,7 @@ t2("T2_S8_LFA", "2b", "S8 gate, LiDAR domain", "clean scan false alarm (bound <=
     "d": F(S8LID, ["rows", "clean scans (FA)", "paired_diff"], "sgn_pts1"), "ci": F(S8LID, ["rows", "clean scans (FA)", "paired_ci"], "ci_pts1")},
    "{v3}", "{v31}", "{d} pts {ci}")
 t2("T2_S8_PD", "2b", "S8 gate, LiDAR domain", "PointDrop per scan (bound >= 65%)", EXP2, "miss",
-   "part of the ungated 66.1% was flood on 0093 ({excl} on the 12 healthy drives); NOT MET after the fix",
+   "part of the ungated {v3} was flood on 0093 ({excl} on the 12 healthy drives); NOT MET after the fix",
    {"v3": F(S8SUM, ["lidar", "pointdrop_ungated"], "pct1"), "v31": F(S8SUM, ["lidar", "pointdrop_gated"], "pct1"),
     "excl": F(S8SUM, ["lidar", "pointdrop_excl_0093"], "pct1")}, "{v3}", "{v31}", "-")
 t2("T2_M4", "meta", "M4 verdict", "rows MET of all rows", "-", "miss", "M4 verdict NOT MET stands",
@@ -677,11 +680,17 @@ def write_report(m):
     A("")
     for f in m["figures"]:
         A(f"- results/WP9/B5/figures/{f[0]} (data: results/WP9/B5/figures/{f[2]}): {f[1]}")
+        A("")
+        A(f"![{f[1]}](../results/WP9/B5/figures/{f[0]})")
+        A("")
+    A("Operating points drawn on the curves were recomputed from the saved scores at the stored thresholds and equal the approved JSON values (results/WP9/B5/figures/ops_sanity.json: V2X H, GPS F_full H, LiDAR NAIVE at 10%).")
     A("")
     A("## Method notes, problems, limits")
     A("- Aggregation only: values are read by path from approved JSONs (B1 to B4, WP8 S7 / S8). The D11 means are plain means over the four sets of the per-set chosen model (labelled in the table). No threshold, model or split was touched.")
     A("- DoS 'matched' V2X numbers come from the B3 test JSON (genuine re-weighted to 70/30). Bar numbers are copied from B0 and probed against B0_literature.json by the check script; 0.778 (Moczkodan RF whole test) comes from reports/WP9_B2.md (HTML read in B2).")
     A("- Known display issue in reports/M4.md: the paired K events-per-hour line prints -302.52/h; the JSON value is the correct one (T2_K_EV).")
+    A("- Acceptance rule (fixed before building, notes/WP9_B5.md): the check script passes (every number equals its source, every cell is in this report); verdict 'better' only with all three flags; no overstating words outside 'cannot' contexts. Met: see the check output. Unit tests: tests/system/test_wp9_b5.py.")
+    A("- Open points for the supervisor: (1) whether to run the optional on-vehicle calibration for D11 (the biggest CAN gap); (2) whether to release the withheld 429-column LiDAR model for one scoring (it would be an amendment of the pre-registered red-flag rule); (3) an independent VeReMi simulation would replace the single-simulation caveat.")
     A("- Not done: no scoring of the withheld full 429-column LiDAR model; no on-vehicle calibration for D11; no independent VeReMi simulation; no KITTI / comma GPS supervised row.")
     A("")
     with open(os.path.join(ROOT, "reports/WP9_final.md"), "w", encoding="utf-8") as fh:

@@ -807,3 +807,5 @@
 2026-11-05T19:48:39+01:00 | B5 | build.py part 1 (master rows) written; writing part 2 (table 2, claims, main) | run build
 2026-11-05T19:51:21+01:00 | B5 | build.py runs: master json + reports/WP9_final.md generated; reviewing numbers vs reports | write check script, figures
 2026-11-05T19:52:37+01:00 | B5 | build+check scripts work (only figures missing); committing, then tools/WP9_B5_figs.py from saved scores
+2026-11-05T19:54:06+01:00 | B5 | running tools/WP9_B5_figs.py (saved scores only) | check + report
+2026-11-05T19:56:11+01:00 | B5 | DONE: report, master json, figures, check PASS, brief + STATUS REVIEW written; running wp9 tests then commit | stop

@@ -279,12 +279,12 @@
     ]
    },
    "templates": {
-    "ours": "macro-F1 {mf} {mfci}; attack F1 {af1}; FPR {fpr} {fprci}; recall {rec}; AUC {auc}; 9/9 attack captures alarmed; masquerade recall reverse_light_off {rl_off}, reverse_light_on {rl_on}",
+    "ours": "macro-F1 {mf} {mfci}; attack F1 {af1}; FPR {fpr} {fprci}; recall {rec}; AUC {auc}; masquerade recall reverse_light_off {rl_off}, reverse_light_on {rl_on}",
     "op": "H = 1% val budget (headline); S = val-F1-optimal: attack F1 {sf1}, FPR {sfpr}",
     "caveats": "Own rule NOT MET (FPR > 2%, masquerade recall low). Shuffled-label control FAILS (global AUC {ctl_g}) and within-capture AUC {ctl_w}: capture regime predicts attack-bearing. Normal windows next to attacks alarm {fpr_att} vs {fpr_amb} on ambient captures. Coolant (unseen family) recall {cool}, kept out of this row."
    },
    "cells": {
-    "ours": "macro-F1 0.829 [0.724, 0.996]; attack F1 0.836; FPR 3.2% [0.0%, 15.7%]; recall 0.858; AUC 0.973; 9/9 attack captures alarmed; masquerade recall reverse_light_off 0.48, reverse_light_on 0.00",
+    "ours": "macro-F1 0.829 [0.724, 0.996]; attack F1 0.836; FPR 3.2% [0.0%, 15.7%]; recall 0.858; AUC 0.973; masquerade recall reverse_light_off 0.48, reverse_light_on 0.00",
     "op": "H = 1% val budget (headline); S = val-F1-optimal: attack F1 0.856, FPR 2.3%",
     "caveats": "Own rule NOT MET (FPR > 2%, masquerade recall low). Shuffled-label control FAILS (global AUC 0.28) and within-capture AUC 0.88: capture regime predicts attack-bearing. Normal windows next to attacks alarm 13.8% vs 1.7% on ambient captures. Coolant (unseen family) recall 0.00, kept out of this row."
    },
@@ -1398,7 +1398,7 @@
    "templates": {
     "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
     "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
-    "caveats": "Same labels and group protocol as the bar RF 0.778, but our class set is 12 classes with >= 20 flows (bar keeps 13) and we deduplicate (bar does not): not like-for-like. Bot precision 0.56 on original labels = label noise. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+    "caveats": "Same labels and group protocol as the bar RF 0.778, but our class set is 12 classes with >= 20 flows (bar keeps 13) and we deduplicate (bar does not): not like-for-like. Bot precision {bot_prec} on original labels = label noise. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
    },
    "cells": {
     "ours": "macro-F1 0.894 [0.832, 0.926] over 12 classes (all present classes 0.863); FPR 0.118% [0.097%, 0.142%]; AUC 1.000",
@@ -1581,6 +1581,22 @@
      },
      "value": true,
      "text": "yes"
+    },
+    "bot_prec": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "per_class",
+       "D10o_G",
+       "per_class",
+       "Bot",
+       "precision"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.5608695652173913,
+     "text": "0.56"
     },
     "ctlauc": {
      "spec": {
@@ -2147,12 +2163,12 @@
    "templates": {
     "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
     "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
-    "caveats": "The selected model is a random forest: the registered shuffled-label AUC rule FAILED (10-seed AUC 0.558, macro-F1 0.086). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+    "caveats": "The selected model is a random forest: the registered shuffled-label AUC rule FAILED (extra 10-seed control in results/WP9/B2/D10e_G_control_extra.json: macro-F1 stays near 0.09). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
    },
    "cells": {
     "ours": "macro-F1 0.996 [0.977, 0.998] over 10 classes (all present classes 0.948); FPR 0.008% [0.004%, 0.014%]; AUC 1.000",
     "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 1.08%). ",
-    "caveats": "The selected model is a random forest: the registered shuffled-label AUC rule FAILED (10-seed AUC 0.558, macro-F1 0.086). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.62). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+    "caveats": "The selected model is a random forest: the registered shuffled-label AUC rule FAILED (extra 10-seed control in results/WP9/B2/D10e_G_control_extra.json: macro-F1 stays near 0.09). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.62). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
    },
    "fields": {
     "mf": {
@@ -2643,12 +2659,12 @@
    "templates": {
     "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
     "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
-    "caveats": "Our numbers are the first leak-free numbers we know of; no bar to compare. Random-forest shuffled-label AUC rule FAILS (XGB control 0.52-0.60: density-structure effect, hypothesis untested). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+    "caveats": "Our numbers are the first leak-free numbers we know of; no bar to compare. Random-forest shuffled-label AUC rule FAILS (an XGBoost control is also above 0.5: density-structure effect, hypothesis untested). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
    },
    "cells": {
     "ours": "macro-F1 0.926 [0.862, 0.986] over 11 classes (all present classes 0.880); FPR 0.056% [0.048%, 0.063%]; AUC 1.000",
     "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 1.07%). ",
-    "caveats": "Our numbers are the first leak-free numbers we know of; no bar to compare. Random-forest shuffled-label AUC rule FAILS (XGB control 0.52-0.60: density-structure effect, hypothesis untested). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.58). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+    "caveats": "Our numbers are the first leak-free numbers we know of; no bar to compare. Random-forest shuffled-label AUC rule FAILS (an XGBoost control is also above 0.5: density-structure effect, hypothesis untested). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.58). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
    },
    "fields": {
     "mf": {
@@ -2891,12 +2907,12 @@
    "templates": {
     "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
     "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
-    "caveats": "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Infiltration-NMAP precision 0.18-0.36 (benign scans). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+    "caveats": "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Infiltration-NMAP precision is low (benign scans). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
    },
    "cells": {
     "ours": "macro-F1 0.945 [0.918, 0.961] over 13 classes (all present classes 0.886); FPR 0.063% [0.057%, 0.069%]; AUC 1.000",
     "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 1.02%). ",
-    "caveats": "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Infiltration-NMAP precision 0.18-0.36 (benign scans). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.67). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+    "caveats": "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Infiltration-NMAP precision is low (benign scans). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.67). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
    },
    "fields": {
     "mf": {
@@ -3388,12 +3404,12 @@
    "templates": {
     "ours": "macro-F1 {mf} {mfci}; binary F1 {bf1}; FPR {fpr} {fprci}; AUC {auc}; mean alarm recall {mar}",
     "op": "H = 1% val budget (headline); S = val-F1-optimal (secondary): macro-F1 {smf}, FPR {sfpr}",
-    "caveats": "Failed controls as written: within-block sender permutation {c_perm} and proxy-only {c_proxy} (band 0.42-0.58); explanation: pseudonym id carries churn (alone {c_ps}), group-permutation nulls are not centred on 0.5 (0.34-0.52). Row-shuffle control {c_row} passes. Raw x,y,speed make the model map-specific (ConstPosOffset recall {cpo}). Class 12 is a placeholder artefact. In-distribution benchmark only."
+    "caveats": "Failed controls as written: within-block sender permutation {c_perm} and proxy-only {c_proxy} (band 0.42-0.58); explanation: pseudonym id carries churn (alone {c_ps}), group-permutation nulls are not centred on 0.5 (results/WP9/B3_control_seeds.json). Row-shuffle control {c_row} passes. Raw x,y,speed make the model map-specific (ConstPosOffset recall {cpo}). Class 12 is a placeholder artefact. In-distribution benchmark only."
    },
    "cells": {
     "ours": "macro-F1 0.917 [0.911, 0.923]; binary F1 0.968; FPR 1.04% [0.82%, 1.23%]; AUC 0.983; mean alarm recall 0.957",
     "op": "H = 1% val budget (headline); S = val-F1-optimal (secondary): macro-F1 0.918, FPR 0.17%",
-    "caveats": "Failed controls as written: within-block sender permutation 0.377 and proxy-only 0.638 (band 0.42-0.58); explanation: pseudonym id carries churn (alone 0.629), group-permutation nulls are not centred on 0.5 (0.34-0.52). Row-shuffle control 0.496 passes. Raw x,y,speed make the model map-specific (ConstPosOffset recall 0.63). Class 12 is a placeholder artefact. In-distribution benchmark only."
+    "caveats": "Failed controls as written: within-block sender permutation 0.377 and proxy-only 0.638 (band 0.42-0.58); explanation: pseudonym id carries churn (alone 0.629), group-permutation nulls are not centred on 0.5 (results/WP9/B3_control_seeds.json). Row-shuffle control 0.496 passes. Raw x,y,speed make the model map-specific (ConstPosOffset recall 0.63). Class 12 is a placeholder artefact. In-distribution benchmark only."
    },
    "fields": {
     "mf": {
@@ -3844,12 +3860,12 @@
    "templates": {
     "ours": "F1 per type {dmin}-{dmax} (H), pooled {dpool}; precision pooled {dprec}",
     "op": "H = 1% val budget; at S (val-F1-optimal) F1 per type {smin}-{smax}, pooled {spool}",
-    "caveats": "Prevalence differs from the bar: the 1% FPR on abundant genuine traffic lowers precision (two types below 0.93 at H). Shows what the prevalence matching changes."
+    "caveats": "Prevalence differs from the bar: the 1% FPR on abundant genuine traffic lowers precision (four of five types fall below 0.93 at H). Shows what the prevalence matching changes."
    },
    "cells": {
     "ours": "F1 per type 0.890-0.935 (H), pooled 0.982; precision pooled 0.966",
     "op": "H = 1% val budget; at S (val-F1-optimal) F1 per type 0.977-0.988, pooled 0.996",
-    "caveats": "Prevalence differs from the bar: the 1% FPR on abundant genuine traffic lowers precision (two types below 0.93 at H). Shows what the prevalence matching changes."
+    "caveats": "Prevalence differs from the bar: the 1% FPR on abundant genuine traffic lowers precision (four of five types fall below 0.93 at H). Shows what the prevalence matching changes."
    },
    "fields": {
     "dmin": {
@@ -4317,7 +4333,7 @@
    "templates": {
     "ours": "F_full F1 {f1}, FPR {fpr}; strongest view F_kin F1 {kf1} {kci}, recall {krec}, FPR {kfpr}",
     "op": "fixed threshold 0.5 (no validation session set for this direction)",
-    "caveats": "A model trained on one day / one rover does not transfer: F_full alarms on everything. Only the vehicle-state-contaminated view F_kin reaches 0.806."
+    "caveats": "A model trained on one day / one rover does not transfer: F_full alarms on everything. Only the vehicle-state-contaminated view F_kin reaches {kf1}."
    },
    "cells": {
     "ours": "F_full F1 0.358, FPR 1.00; strongest view F_kin F1 0.806 [0.660, 0.935], recall 0.678, FPR 0.1%",
@@ -4560,12 +4576,12 @@
    "templates": {
     "ours": "F1 {f1} {fci}; recall {rec}; FPR {fpr}; AUC {auc} (session-permutation null q95 = same value, rule G3 NOT MET)",
     "op": "H = 1% val budget (calibration on validation normals)",
-    "caveats": "F1 sits in the bar range but the CI is huge and AUC equals the permutation null: no evidence beyond chance on this dataset. One spoof session (171 rows) missed; the two latching CUSUMs do the work."
+    "caveats": "F1 sits in the bar range but the CI is huge and AUC equals the permutation null: no evidence beyond chance on this dataset. One spoof session is missed; the two latching CUSUMs do the work."
    },
    "cells": {
     "ours": "F1 0.903 [0.056, 0.985]; recall 0.885; FPR 2.5%; AUC 0.909 (session-permutation null q95 = same value, rule G3 NOT MET)",
     "op": "H = 1% val budget (calibration on validation normals)",
-    "caveats": "F1 sits in the bar range but the CI is huge and AUC equals the permutation null: no evidence beyond chance on this dataset. One spoof session (171 rows) missed; the two latching CUSUMs do the work."
+    "caveats": "F1 sits in the bar range but the CI is huge and AUC equals the permutation null: no evidence beyond chance on this dataset. One spoof session is missed; the two latching CUSUMs do the work."
    },
    "fields": {
     "f1": {
@@ -4673,7 +4689,7 @@
    "templates": {
     "ours": "NAIVE-ADD (box cloud + multi-return add) TPR {naive} {naiveci} at test FPR {fpr} {fprci}; IntensitySpoof {isp}; PointDrop {pd}; single-return phantom kinds {ph1}-{ph2}",
     "op": "10% validation clean-scan budget (headline for the bar's FPR < 10%); v3.1 at the same thresholds: NAIVE {v31naive}",
-    "caveats": "Another metric level (object vs scan), other data (nuScenes) and other attacks. Our rule L1 (NAIVE TPR >= 0.85) NOT MET. The full 429-column model was red-flagged (temporal columns 91% of gain) and never test-scored. Single-return phantoms are at the physics bound for any detector. Within-scan permutation control marginal."
+    "caveats": "Another metric level (object vs scan), other data (nuScenes) and other attacks. Our rule L1 (NAIVE TPR >= 0.85) NOT MET. The full 429-column model was red-flagged (temporal columns {tshare} of gain) and never test-scored. Single-return phantoms are at the physics bound for any detector. Within-scan permutation control marginal."
    },
    "cells": {
     "ours": "NAIVE-ADD (box cloud + multi-return add) TPR 0.426 [0.320, 0.542] at test FPR 6.5% [3.3%, 12.2%]; IntensitySpoof 1.00; PointDrop 0.82; single-return phantom kinds 0.07-0.20",
@@ -4908,6 +4924,18 @@
      },
      "value": 0.2019607843137255,
      "text": "0.20"
+    },
+    "tshare": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_lidar_controls.json",
+      "path": [
+       "temporal_gain_share"
+      ],
+      "fmt": "pct0"
+     },
+     "value": 0.9134156526500371,
+     "text": "91%"
     },
     "v31naive": {
      "spec": {
@@ -5345,13 +5373,13 @@
     "v3": "AUC {auc} {aci}; det at 1% FA {d1}; frozen rule FA {fa}, det {det}",
     "v31": "same object",
     "diff": "-",
-    "note": "det at 1% FA is 0 (scores saturate); clean FA 7.2% vs 1.4% on V31_val; one drive (0093) = 94% of its clean ticks"
+    "note": "det at 1% FA is 0 (scores saturate); clean FA far above V31_val because of one defective drive (0093)"
    },
    "cells": {
     "v3": "AUC 0.896 [0.789, 0.955]; det at 1% FA 0.0%; frozen rule FA 7.20%, det 81.3%",
     "v31": "same object",
     "diff": "-",
-    "note": "det at 1% FA is 0 (scores saturate); clean FA 7.2% vs 1.4% on V31_val; one drive (0093) = 94% of its clean ticks"
+    "note": "det at 1% FA is 0 (scores saturate); clean FA far above V31_val because of one defective drive (0093)"
    },
    "fields": {
     "auc": {
@@ -5455,13 +5483,13 @@
     "v3": "AUC {auc} {aci}; det at 1% FA {d1}; frozen rule FA {fa}, det {det}",
     "v31": "same recipe",
     "diff": "-",
-    "note": "det at 1% FA is 0; individual attacks as low as 8% (lidar_yaw) at the frozen rule"
+    "note": "det at 1% FA is 0; several attacks (lidar_yaw, drift, meaconing) are rarely detected at the frozen rule"
    },
    "cells": {
     "v3": "AUC 0.843 [0.760, 0.888]; det at 1% FA 0.0%; frozen rule FA 7.45%, det 60.2%",
     "v31": "same recipe",
     "diff": "-",
-    "note": "det at 1% FA is 0; individual attacks as low as 8% (lidar_yaw) at the frozen rule"
+    "note": "det at 1% FA is 0; several attacks (lidar_yaw, drift, meaconing) are rarely detected at the frozen rule"
    },
    "fields": {
     "auc": {
@@ -7038,7 +7066,7 @@
     "v3": "{v3}",
     "v31": "{v31}",
     "diff": "{d} pts {ci}",
-    "note": "cost of the gate; part of the ungated 87.1% was a flood effect on drive 0093"
+    "note": "cost of the gate; part of the ungated {v3} was a flood effect on drive 0093"
    },
    "cells": {
     "v3": "87.1%",
@@ -7279,7 +7307,7 @@
     "v3": "{v3}",
     "v31": "{v31}",
     "diff": "-",
-    "note": "part of the ungated 66.1% was flood on 0093 ({excl} on the 12 healthy drives); NOT MET after the fix"
+    "note": "part of the ungated {v3} was flood on 0093 ({excl} on the 12 healthy drives); NOT MET after the fix"
    },
    "cells": {
     "v3": "66.1%",

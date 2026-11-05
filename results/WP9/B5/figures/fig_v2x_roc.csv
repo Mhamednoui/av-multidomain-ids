@@ -1,0 +1,603 @@
+panel,curve,kind,fpr,tpr
+0,all 19 attack types vs genuine,curve,1e-05,0.9316227693063573
+0,all 19 attack types vs genuine,curve,1.059560179277617e-05,0.9316227693063573
+0,all 19 attack types vs genuine,curve,1.1226677735108135e-05,0.9316227693063573
+0,all 19 attack types vs genuine,curve,1.1895340673703208e-05,0.9320439032093912
+0,all 19 attack types vs genuine,curve,1.2603829296797274e-05,0.9320439032093912
+0,all 19 attack types vs genuine,curve,1.3354515629299001e-05,0.9320439032093912
+0,all 19 attack types vs genuine,curve,1.414991297434576e-05,0.9320439032093912
+0,all 19 attack types vs genuine,curve,1.4992684327860471e-05,0.9321272526277001
+0,all 19 attack types vs genuine,curve,1.588565129428053e-05,0.9321272526277001
+0,all 19 attack types vs genuine,curve,1.6831803533309584e-05,0.9321272526277001
+0,all 19 attack types vs genuine,curve,1.7834308769319092e-05,0.9335354191159697
+0,all 19 attack types vs genuine,curve,1.8896523396912115e-05,0.9335354191159697
+0,all 19 attack types vs genuine,curve,2.0022003718155845e-05,0.9335354191159697
+0,all 19 attack types vs genuine,curve,2.121451784910632e-05,0.934623348365474
+0,all 19 attack types vs genuine,curve,2.2478058335487252e-05,0.934623348365474
+0,all 19 attack types vs genuine,curve,2.3816855519761608e-05,0.9347988208250715
+0,all 19 attack types vs genuine,curve,2.523539170434766e-05,0.9347988208250715
+0,all 19 attack types vs genuine,curve,2.6738416158399493e-05,0.9347988208250715
+0,all 19 attack types vs genuine,curve,2.833096101839324e-05,0.9356016073277299
+0,all 19 attack types vs genuine,curve,3.001835813575592e-05,0.9360753829686431
+0,all 19 attack types vs genuine,curve,3.180625692794119e-05,0.9360753829686431
+0,all 19 attack types vs genuine,curve,3.370064329271932e-05,0.9362113741248311
+0,all 19 attack types vs genuine,curve,3.5707859649004625e-05,0.9370273210619593
+0,all 19 attack types vs genuine,curve,3.783462617131933e-05,0.9370273210619593
+0,all 19 attack types vs genuine,curve,4.008806328898465e-05,0.9370360946849392
+0,all 19 attack types vs genuine,curve,4.2475715525369026e-05,0.9370887364228184
+0,all 19 attack types vs genuine,curve,4.5005576757004976e-05,0.9371369913492077
+0,all 19 attack types vs genuine,curve,4.7686116977144744e-05,0.9371720858411272
+0,all 19 attack types vs genuine,curve,5.0526310653356795e-05,0.9372773693168858
+0,all 19 attack types vs genuine,curve,5.35356667741073e-05,0.9373168506202951
+0,all 19 attack types vs genuine,curve,5.672426068491978e-05,0.937330011054765
+0,all 19 attack types vs genuine,curve,6.0102767820703876e-05,0.9375274175718121
+0,all 19 attack types vs genuine,curve,6.368249944718586e-05,0.9376546351050202
+0,all 19 attack types vs genuine,curve,6.7475440531107e-05,0.937952938286336
+0,all 19 attack types vs genuine,curve,7.149428986597576e-05,0.9383302040744705
+0,all 19 attack types vs genuine,curve,7.57525025877192e-05,0.9384574216076786
+0,all 19 attack types vs genuine,curve,8.026433522257174e-05,0.9390277071013704
+0,all 19 attack types vs genuine,curve,8.504489341802686e-05,0.9390364807243503
+0,all 19 attack types vs genuine,curve,9.011018251665018e-05,0.9392426608643774
+0,all 19 attack types vs genuine,curve,9.547716114208066e-05,0.9395979925950622
+0,all 19 attack types vs genuine,curve,0.0001011637979766207,0.9397252101282704
+0,all 19 attack types vs genuine,curve,0.00010718913192051286,0.9398524276614786
+0,all 19 attack types vs genuine,curve,0.00011357333583431052,0.9400235133095861
+0,all 19 attack types vs genuine,curve,0.00012033778407775906,0.940093702293425
+0,all 19 attack types vs genuine,curve,0.00012750512407130128,0.9402077593921634
+0,all 19 attack types vs genuine,curve,0.00013509935211980279,0.9404578076470897
+0,all 19 attack types vs genuine,curve,0.00014314589375234786,0.940576251557318
+0,all 19 attack types vs genuine,curve,0.0001516716888470924,0.9408613943041639
+0,all 19 attack types vs genuine,curve,0.00016070528182616383,0.9409008756075734
+0,all 19 attack types vs genuine,curve,0.00017027691722259014,0.9410895085016406
+0,all 19 attack types vs genuine,curve,0.00018041864093920718,0.9412342732808086
+0,all 19 attack types vs genuine,curve,0.00019116440753857037,0.9413702644369966
+0,all 19 attack types vs genuine,curve,0.00020255019392306664,0.9415238028391444
+0,all 19 attack types vs genuine,curve,0.00021461411978584058,0.9416378599378827
+0,all 19 attack types vs genuine,curve,0.00022739657523579274,0.9417870115285406
+0,all 19 attack types vs genuine,curve,0.0002409403560239527,0.9418528137008897
+0,all 19 attack types vs genuine,curve,0.00025529080682395165,0.9419142290617487
+0,all 19 attack types vs genuine,curve,0.0002704959730463137,0.942037059783467
+0,all 19 attack types vs genuine,curve,0.000286606761694825,0.9422564003579638
+0,all 19 attack types vs genuine,curve,0.00030367711180354605,0.9424976749899103
+0,all 19 attack types vs genuine,curve,0.0003217641750250735,0.9426248925231185
+0,all 19 attack types vs genuine,curve,0.0003409285069746815,0.9428749407780449
+0,all 19 attack types vs genuine,curve,0.00036123426997094305,0.9429846110652933
+0,all 19 attack types vs genuine,curve,0.00038274944785163153,0.9431381494674411
+0,all 19 attack types vs genuine,curve,0.0004055460735840828,0.9432785274351191
+0,all 19 attack types vs genuine,curve,0.0004297004704320844,0.9435066416325958
+0,all 19 attack types vs genuine,curve,0.00045529350748669476,0.9436645668462335
+0,all 19 attack types vs genuine,curve,0.00048241087041653736,0.9438268788713612
+0,all 19 attack types vs genuine,curve,0.0005111433483440165,0.9439672568390391
+0,all 19 attack types vs genuine,curve,0.0005415871378079476,0.9441295688641668
+0,all 19 attack types vs genuine,curve,0.0005738441648302393,0.9443664566846234
+0,all 19 attack types vs genuine,curve,0.0006080224261649427,0.9445024478408114
+0,all 19 attack types vs genuine,curve,0.0006442363508721371,0.9445638632016705
+0,all 19 attack types vs genuine,curve,0.0006826071834272392,0.9447481092842478
+0,all 19 attack types vs genuine,curve,0.0007232633896483533,0.9449674498587447
+0,all 19 attack types vs genuine,curve,0.0007663410868007462,0.9450990542034428
+0,all 19 attack types vs genuine,curve,0.0008119844993184008,0.9453008475319798
+0,all 19 attack types vs genuine,curve,0.000860346441668451,0.9454587727456176
+0,all 19 attack types vs genuine,curve,0.0009115888299750819,0.9455552825983962
+0,all 19 attack types vs genuine,curve,0.0009658832241158709,0.9457439154924635
+0,all 19 attack types vs genuine,curve,0.0010234114021054539,0.9458272649107723
+0,all 19 attack types vs genuine,curve,0.0010843659686896108,0.9460071241818596
+0,all 19 attack types vs genuine,curve,0.0011489510001873099,0.946121181280598
+0,all 19 attack types vs genuine,curve,0.001217382727739662,0.9463492954780747
+0,all 19 attack types vs genuine,curve,0.0012898902612533095,0.9464808998227728
+0,all 19 attack types vs genuine,curve,0.0013667163564620073,0.9466300514134307
+0,all 19 attack types vs genuine,curve,0.0014481182276745346,0.9467616557581288
+0,all 19 attack types vs genuine,curve,0.0015343684089300133,0.9469634490866659
+0,all 19 attack types vs genuine,curve,0.0016257556664437951,0.9470994402428539
+0,all 19 attack types vs genuine,curve,0.0017225859653987874,0.9473056203828809
+0,all 19 attack types vs genuine,curve,0.0018251834943190442,0.9474854796539683
+0,all 19 attack types vs genuine,curve,0.0019338917504552321,0.9476521784905859
+0,all 19 attack types vs genuine,curve,0.0020490746898158482,0.9477969432697538
+0,all 19 attack types vs genuine,curve,0.002171117945694505,0.9480338310902104
+0,all 19 attack types vs genuine,curve,0.002300430119772919,0.9481873694923582
+0,all 19 attack types vs genuine,curve,0.002437444150122222,0.9483672287634456
+0,all 19 attack types vs genuine,curve,0.0025826187606826775,0.948617277018372
+0,all 19 attack types vs genuine,curve,0.0027364399970746718,0.9487971362894594
+0,all 19 attack types vs genuine,curve,0.002899422853882878,0.9489199670111776
+0,all 19 attack types vs genuine,curve,0.003072112998861759,0.9491173735282248
+0,all 19 attack types vs genuine,curve,0.00325508859983506,0.9492840723648424
+0,all 19 attack types vs genuine,curve,0.0034489622604057598,0.9495297338082788
+0,all 19 attack types vs genuine,curve,0.003654383070957258,0.9496744985874467
+0,all 19 attack types vs genuine,curve,0.003872038781812557,0.9498719051044938
+0,all 19 attack types vs genuine,curve,0.004102658105827195,0.9500517643755813
+0,all 19 attack types vs genuine,curve,0.004347013158125026,0.9502623313270983
+0,all 19 attack types vs genuine,curve,0.004605922041145108,0.9503676148028567
+0,all 19 attack types vs genuine,curve,0.004880251583654433,0.9505694081313938
+0,all 19 attack types vs genuine,curve,0.005170920242896761,0.9507887487058906
+0,all 19 attack types vs genuine,curve,0.005478901179593945,0.9509554475425082
+0,all 19 attack types vs genuine,curve,0.005805225516094902,0.9511484672480655
+0,all 19 attack types vs genuine,curve,0.006150985788580504,0.951315166084683
+0,all 19 attack types vs genuine,curve,0.006517339604882427,0.9514994121672603
+0,all 19 attack types vs genuine,curve,0.006905513520162331,0.9517187527417572
+0,all 19 attack types vs genuine,curve,0.0073168071434272,0.9519293196932741
+0,all 19 attack types vs genuine,curve,0.007752597488629464,0.9521574338907508
+0,all 19 attack types vs genuine,curve,0.00821434358491943,0.9523767744652477
+0,all 19 attack types vs genuine,curve,0.008703591361485167,0.952561020547825
+0,all 19 attack types vs genuine,curve,0.009221978823334332,0.9527496534418923
+0,all 19 attack types vs genuine,curve,0.009771241535346501,0.9529514467704294
+0,all 19 attack types vs genuine,curve,0.010353218432956626,0.9531400796644967
+0,all 19 attack types vs genuine,curve,0.01096985797892384,0.9533067785011142
+0,all 19 attack types vs genuine,curve,0.01162322468679853,0.9535217322641212
+0,all 19 attack types vs genuine,curve,0.012315506032928261,0.9537279124041481
+0,all 19 attack types vs genuine,curve,0.01304901978014403,0.9539604134131148
+0,all 19 attack types vs genuine,curve,0.013826221737646563,0.954228008914001
+0,all 19 attack types vs genuine,curve,0.014649713983072863,0.954429802242538
+0,all 19 attack types vs genuine,curve,0.01552225357427048,0.9546623032515047
+0,all 19 attack types vs genuine,curve,0.016446761779946643,0.9548991910719613
+0,all 19 attack types vs genuine,curve,0.017426333860096507,0.9551755601958273
+0,all 19 attack types vs genuine,curve,0.018464249428955443,0.9553729667128744
+0,all 19 attack types vs genuine,curve,0.01956398343517065,0.955614241344821
+0,all 19 attack types vs genuine,curve,0.02072921779595372,0.9558686764112373
+0,all 19 attack types vs genuine,curve,0.02196385372416547,0.9561274982891436
+0,all 19 attack types vs genuine,curve,0.023272024789604096,0.9563863201670498
+0,all 19 attack types vs genuine,curve,0.024658110758226038,0.9566495288564459
+0,all 19 attack types vs genuine,curve,0.026126752255633292,0.9569083507343522
+0,all 19 attack types vs genuine,curve,0.027682866303920667,0.9572592956535472
+0,all 19 attack types vs genuine,curve,0.029331662783900453,0.9575268911544333
+0,all 19 attack types vs genuine,curve,0.03107866187782014,0.9577944866553194
+0,all 19 attack types vs genuine,curve,0.03292971255097151,0.9580971766481251
+0,all 19 attack types vs genuine,curve,0.034891012134067735,0.9584349611328502
+0,all 19 attack types vs genuine,curve,0.036969127071950283,0.9587727456175753
+0,all 19 attack types vs genuine,curve,0.039171014908092605,0.9591017564793206
+0,all 19 attack types vs genuine,curve,0.04150404757850477,0.9593956728491463
+0,all 19 attack types vs genuine,curve,0.043976036093027214,0.959693976030462
+0,all 19 attack types vs genuine,curve,0.046595256686646824,0.9600493077611469
+0,all 19 attack types vs genuine,curve,0.049370478528390035,0.9603519977539525
+0,all 19 attack types vs genuine,curve,0.05231099308056263,0.9607380371650669
+0,all 19 attack types vs genuine,curve,0.05542664520663107,0.961010019477443
+0,all 19 attack types vs genuine,curve,0.05872786613189483,0.961426766568987
+0,all 19 attack types vs genuine,curve,0.06222570836730231,0.961773324676692
+0,all 19 attack types vs genuine,curve,0.06593188271333549,0.9621374300303568
+0,all 19 attack types vs genuine,curve,0.0698587974678525,0.9625804979908403
+0,all 19 attack types vs genuine,curve,0.07401959996915644,0.9629796978364246
+0,all 19 attack types vs genuine,curve,0.07842822061337681,0.9633262559441296
+0,all 19 attack types vs genuine,curve,0.08309941949353396,0.9636947481092842
+0,all 19 attack types vs genuine,curve,0.08804883581643465,0.9641685237501975
+0,all 19 attack types vs genuine,curve,0.09329304026284686,0.9646422993911106
+0,all 19 attack types vs genuine,curve,0.09884959046625587,0.9650765937286143
+0,all 19 attack types vs genuine,curve,0.10473708979594508,0.9655328221235677
+0,all 19 attack types vs genuine,curve,0.11097524964120721,0.9659758900840513
+0,all 19 attack types vs genuine,curve,0.11758495540521581,0.9663794767411255
+0,all 19 attack types vs genuine,curve,0.12458833642950082,0.9667962238326695
+0,all 19 attack types vs genuine,curve,0.13200884008314195,0.9671910368667638
+0,all 19 attack types vs genuine,curve,0.13987131026472385,0.9676781804760178
+0,all 19 attack types vs genuine,curve,0.14820207057988602,0.9682482584358385
+0,all 19 attack types vs genuine,curve,0.15702901247293774,0.9688053834950604
+0,all 19 attack types vs genuine,curve,0.16638168860761307,0.9693537349313025
+0,all 19 attack types vs genuine,curve,0.1762914118095948,0.9699108599905245
+0,all 19 attack types vs genuine,curve,0.18679135990207846,0.970362701573988
+0,all 19 attack types vs genuine,curve,0.19791668678535573,0.970981241994069
+0,all 19 attack types vs genuine,curve,0.20970464013232348,0.9716129428486199
+0,all 19 attack types vs genuine,curve,0.22219468609395238,0.9723148326870098
+0,all 19 attack types vs genuine,curve,0.23542864143224201,0.9729772412219903
+0,all 19 attack types vs genuine,curve,0.24945081352303167,0.9737010651178297
+0,all 19 attack types vs genuine,curve,0.2643081486974108,0.9745301724894277
+0,all 19 attack types vs genuine,curve,0.2800503894183631,0.9752276755163277
+0,all 19 attack types vs genuine,curve,0.29673024081888727,0.9759909807155767
+0,all 19 attack types vs genuine,curve,0.31440354715915003,0.9767718331607854
+0,all 19 attack types vs genuine,curve,0.3331294787934677,0.977561459228974
+0,all 19 attack types vs genuine,curve,0.352970730273065,0.9785879731176191
+0,all 19 attack types vs genuine,curve,0.3739937302478802,0.9795092035305059
+0,all 19 attack types vs genuine,curve,0.3962688638701478,0.9804786888697818
+0,all 19 attack types vs genuine,curve,0.41987070844439145,0.9814262401516082
+0,all 19 attack types vs genuine,curve,0.4448782831127585,0.9825580375160119
+0,all 19 attack types vs genuine,curve,0.4713753134116729,0.9836240327080664
+0,all 19 attack types vs genuine,curve,0.499450511585514,0.9846110652933022
+0,all 19 attack types vs genuine,curve,0.5291978735958447,0.9856902209198266
+0,all 19 attack types vs genuine,curve,0.5607169938205459,0.9867913106038008
+0,all 19 attack types vs genuine,curve,0.594113398496504,0.9878353717384056
+0,all 19 attack types vs genuine,curve,0.6294988990221888,0.9890724525785678
+0,all 19 attack types vs genuine,curve,0.6669919663030128,0.9903884960255488
+0,all 19 attack types vs genuine,curve,0.7067181273927491,0.9916738317921002
+0,all 19 attack types vs genuine,curve,0.748810385759003,0.9928933653863026
+0,all 19 attack types vs genuine,curve,0.7934096665797492,0.9942708241941427
+0,all 19 attack types vs genuine,curve,0.8406652885618334,0.9955254522802646
+0,all 19 attack types vs genuine,curve,0.890735463861044,0.9969292319570443
+0,all 19 attack types vs genuine,curve,0.9437878277775391,0.9985611258313007
+0,all 19 attack types vs genuine,curve,1.0,1.0
+0,all 19 attack types vs genuine,op_H,0.01040087961724763,0.9531576269104564
+0,DoS family (natural prevalence),curve,1e-05,0.9971722884265805
+0,DoS family (natural prevalence),curve,1.059560179277617e-05,0.9971722884265805
+0,DoS family (natural prevalence),curve,1.1226677735108135e-05,0.9971722884265805
+0,DoS family (natural prevalence),curve,1.1895340673703208e-05,0.9972126843062008
+0,DoS family (natural prevalence),curve,1.2603829296797274e-05,0.9972126843062008
+0,DoS family (natural prevalence),curve,1.3354515629299001e-05,0.9972126843062008
+0,DoS family (natural prevalence),curve,1.414991297434576e-05,0.9972126843062008
+0,DoS family (natural prevalence),curve,1.4992684327860471e-05,0.9972227832761058
+0,DoS family (natural prevalence),curve,1.588565129428053e-05,0.9972227832761058
+0,DoS family (natural prevalence),curve,1.6831803533309584e-05,0.9972227832761058
+0,DoS family (natural prevalence),curve,1.7834308769319092e-05,0.9973742678246819
+0,DoS family (natural prevalence),curve,1.8896523396912115e-05,0.9973742678246819
+0,DoS family (natural prevalence),curve,2.0022003718155845e-05,0.9973742678246819
+0,DoS family (natural prevalence),curve,2.121451784910632e-05,0.9974550595839224
+0,DoS family (natural prevalence),curve,2.2478058335487252e-05,0.9974550595839224
+0,DoS family (natural prevalence),curve,2.3816855519761608e-05,0.9974651585538276
+0,DoS family (natural prevalence),curve,2.523539170434766e-05,0.9974651585538276
+0,DoS family (natural prevalence),curve,2.6738416158399493e-05,0.9974651585538276
+0,DoS family (natural prevalence),curve,2.833096101839324e-05,0.9974954554635427
+0,DoS family (natural prevalence),curve,3.001835813575592e-05,0.9975055544334478
+0,DoS family (natural prevalence),curve,3.180625692794119e-05,0.9975055544334478
+0,DoS family (natural prevalence),curve,3.370064329271932e-05,0.9975055544334478
+0,DoS family (natural prevalence),curve,3.5707859649004625e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,3.783462617131933e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,4.008806328898465e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,4.2475715525369026e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,4.5005576757004976e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,4.7686116977144744e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,5.0526310653356795e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,5.35356667741073e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,5.672426068491978e-05,0.997535851343163
+0,DoS family (natural prevalence),curve,6.0102767820703876e-05,0.997545950313068
+0,DoS family (natural prevalence),curve,6.368249944718586e-05,0.997545950313068
+0,DoS family (natural prevalence),curve,6.7475440531107e-05,0.9975661482528783
+0,DoS family (natural prevalence),curve,7.149428986597576e-05,0.9975863461926884
+0,DoS family (natural prevalence),curve,7.57525025877192e-05,0.9975863461926884
+0,DoS family (natural prevalence),curve,8.026433522257174e-05,0.9976166431024035
+0,DoS family (natural prevalence),curve,8.504489341802686e-05,0.9976166431024035
+0,DoS family (natural prevalence),curve,9.011018251665018e-05,0.9976166431024035
+0,DoS family (natural prevalence),curve,9.547716114208066e-05,0.9976469400121187
+0,DoS family (natural prevalence),curve,0.0001011637979766207,0.9976469400121187
+0,DoS family (natural prevalence),curve,0.00010718913192051286,0.9976570389820238
+0,DoS family (natural prevalence),curve,0.00011357333583431052,0.9976570389820238
+0,DoS family (natural prevalence),curve,0.00012033778407775906,0.9976570389820238
+0,DoS family (natural prevalence),curve,0.00012750512407130128,0.997677236921834
+0,DoS family (natural prevalence),curve,0.00013509935211980279,0.9976873358917391
+0,DoS family (natural prevalence),curve,0.00014314589375234786,0.9976873358917391
+0,DoS family (natural prevalence),curve,0.0001516716888470924,0.9976873358917391
+0,DoS family (natural prevalence),curve,0.00016070528182616383,0.9976873358917391
+0,DoS family (natural prevalence),curve,0.00017027691722259014,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.00018041864093920718,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.00019116440753857037,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.00020255019392306664,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.00021461411978584058,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.00022739657523579274,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.0002409403560239527,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.00025529080682395165,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.0002704959730463137,0.9976974348616441
+0,DoS family (natural prevalence),curve,0.000286606761694825,0.9977176328014542
+0,DoS family (natural prevalence),curve,0.00030367711180354605,0.9977378307412644
+0,DoS family (natural prevalence),curve,0.0003217641750250735,0.9977378307412644
+0,DoS family (natural prevalence),curve,0.0003409285069746815,0.9977580286810745
+0,DoS family (natural prevalence),curve,0.00036123426997094305,0.9977580286810745
+0,DoS family (natural prevalence),curve,0.00038274944785163153,0.9977580286810745
+0,DoS family (natural prevalence),curve,0.0004055460735840828,0.9977681276509796
+0,DoS family (natural prevalence),curve,0.0004297004704320844,0.9977681276509796
+0,DoS family (natural prevalence),curve,0.00045529350748669476,0.9977782266208847
+0,DoS family (natural prevalence),curve,0.00048241087041653736,0.9977782266208847
+0,DoS family (natural prevalence),curve,0.0005111433483440165,0.9977782266208847
+0,DoS family (natural prevalence),curve,0.0005415871378079476,0.9977782266208847
+0,DoS family (natural prevalence),curve,0.0005738441648302393,0.9978085235305999
+0,DoS family (natural prevalence),curve,0.0006080224261649427,0.9978186225005049
+0,DoS family (natural prevalence),curve,0.0006442363508721371,0.99782872147041
+0,DoS family (natural prevalence),curve,0.0006826071834272392,0.9978388204403151
+0,DoS family (natural prevalence),curve,0.0007232633896483533,0.9978388204403151
+0,DoS family (natural prevalence),curve,0.0007663410868007462,0.9978388204403151
+0,DoS family (natural prevalence),curve,0.0008119844993184008,0.9978691173500303
+0,DoS family (natural prevalence),curve,0.000860346441668451,0.9978893152898405
+0,DoS family (natural prevalence),curve,0.0009115888299750819,0.9978994142597455
+0,DoS family (natural prevalence),curve,0.0009658832241158709,0.9979297111694607
+0,DoS family (natural prevalence),curve,0.0010234114021054539,0.9979398101393658
+0,DoS family (natural prevalence),curve,0.0010843659686896108,0.9979398101393658
+0,DoS family (natural prevalence),curve,0.0011489510001873099,0.9979398101393658
+0,DoS family (natural prevalence),curve,0.001217382727739662,0.9979499091092708
+0,DoS family (natural prevalence),curve,0.0012898902612533095,0.9980004039587962
+0,DoS family (natural prevalence),curve,0.0013667163564620073,0.9980105029287013
+0,DoS family (natural prevalence),curve,0.0014481182276745346,0.9980407998384165
+0,DoS family (natural prevalence),curve,0.0015343684089300133,0.9980609977782267
+0,DoS family (natural prevalence),curve,0.0016257556664437951,0.9980710967481317
+0,DoS family (natural prevalence),curve,0.0017225859653987874,0.9981013936578469
+0,DoS family (natural prevalence),curve,0.0018251834943190442,0.9981316905675621
+0,DoS family (natural prevalence),curve,0.0019338917504552321,0.9981316905675621
+0,DoS family (natural prevalence),curve,0.0020490746898158482,0.9981417895374671
+0,DoS family (natural prevalence),curve,0.002171117945694505,0.9981518885073722
+0,DoS family (natural prevalence),curve,0.002300430119772919,0.9981619874772774
+0,DoS family (natural prevalence),curve,0.002437444150122222,0.9981821854170875
+0,DoS family (natural prevalence),curve,0.0025826187606826775,0.9982023833568976
+0,DoS family (natural prevalence),curve,0.0027364399970746718,0.9982326802666128
+0,DoS family (natural prevalence),curve,0.002899422853882878,0.9982528782064229
+0,DoS family (natural prevalence),curve,0.003072112998861759,0.9982932740860432
+0,DoS family (natural prevalence),curve,0.00325508859983506,0.9983134720258534
+0,DoS family (natural prevalence),curve,0.0034489622604057598,0.9983437689355685
+0,DoS family (natural prevalence),curve,0.003654383070957258,0.9983538679054736
+0,DoS family (natural prevalence),curve,0.003872038781812557,0.9983740658452838
+0,DoS family (natural prevalence),curve,0.004102658105827195,0.9983841648151889
+0,DoS family (natural prevalence),curve,0.004347013158125026,0.9983942637850939
+0,DoS family (natural prevalence),curve,0.004605922041145108,0.9983942637850939
+0,DoS family (natural prevalence),curve,0.004880251583654433,0.9984245606948091
+0,DoS family (natural prevalence),curve,0.005170920242896761,0.9984649565744295
+0,DoS family (natural prevalence),curve,0.005478901179593945,0.9984952534841446
+0,DoS family (natural prevalence),curve,0.005805225516094902,0.9985053524540497
+0,DoS family (natural prevalence),curve,0.006150985788580504,0.9985154514239547
+0,DoS family (natural prevalence),curve,0.006517339604882427,0.9985356493637649
+0,DoS family (natural prevalence),curve,0.006905513520162331,0.99856594627348
+0,DoS family (natural prevalence),curve,0.0073168071434272,0.9985861442132903
+0,DoS family (natural prevalence),curve,0.007752597488629464,0.9986063421531004
+0,DoS family (natural prevalence),curve,0.00821434358491943,0.9986265400929105
+0,DoS family (natural prevalence),curve,0.008703591361485167,0.9986770349424359
+0,DoS family (natural prevalence),curve,0.009221978823334332,0.998697232882246
+0,DoS family (natural prevalence),curve,0.009771241535346501,0.9987174308220561
+0,DoS family (natural prevalence),curve,0.010353218432956626,0.9987679256715815
+0,DoS family (natural prevalence),curve,0.01096985797892384,0.9987982225812967
+0,DoS family (natural prevalence),curve,0.01162322468679853,0.9988184205211068
+0,DoS family (natural prevalence),curve,0.012315506032928261,0.998848717430822
+0,DoS family (natural prevalence),curve,0.01304901978014403,0.9988992122803474
+0,DoS family (natural prevalence),curve,0.013826221737646563,0.9989497071298727
+0,DoS family (natural prevalence),curve,0.014649713983072863,0.998990103009493
+0,DoS family (natural prevalence),curve,0.01552225357427048,0.9990103009493032
+0,DoS family (natural prevalence),curve,0.016446761779946643,0.9990405978590183
+0,DoS family (natural prevalence),curve,0.017426333860096507,0.9990607957988286
+0,DoS family (natural prevalence),curve,0.018464249428955443,0.9990809937386387
+0,DoS family (natural prevalence),curve,0.01956398343517065,0.9991213896182589
+0,DoS family (natural prevalence),curve,0.02072921779595372,0.9991516865279741
+0,DoS family (natural prevalence),curve,0.02196385372416547,0.9991617854978793
+0,DoS family (natural prevalence),curve,0.023272024789604096,0.9991819834376894
+0,DoS family (natural prevalence),curve,0.024658110758226038,0.9992324782872147
+0,DoS family (natural prevalence),curve,0.026126752255633292,0.999272874166835
+0,DoS family (natural prevalence),curve,0.027682866303920667,0.9993233690163603
+0,DoS family (natural prevalence),curve,0.029331662783900453,0.9993637648959806
+0,DoS family (natural prevalence),curve,0.03107866187782014,0.9994041607756009
+0,DoS family (natural prevalence),curve,0.03292971255097151,0.9994546556251263
+0,DoS family (natural prevalence),curve,0.034891012134067735,0.9994748535649364
+0,DoS family (natural prevalence),curve,0.036969127071950283,0.9995354473843668
+0,DoS family (natural prevalence),curve,0.039171014908092605,0.9995758432639871
+0,DoS family (natural prevalence),curve,0.04150404757850477,0.9996364370834175
+0,DoS family (natural prevalence),curve,0.043976036093027214,0.9996465360533225
+0,DoS family (natural prevalence),curve,0.046595256686646824,0.9996970309028479
+0,DoS family (natural prevalence),curve,0.049370478528390035,0.9997475257523732
+0,DoS family (natural prevalence),curve,0.05231099308056263,0.9997879216319935
+0,DoS family (natural prevalence),curve,0.05542664520663107,0.9998182185417087
+0,DoS family (natural prevalence),curve,0.05872786613189483,0.9998384164815188
+0,DoS family (natural prevalence),curve,0.06222570836730231,0.9999091092708544
+0,DoS family (natural prevalence),curve,0.06593188271333549,0.9999192082407594
+0,DoS family (natural prevalence),curve,0.0698587974678525,0.9999293072106645
+0,DoS family (natural prevalence),curve,0.07401959996915644,0.9999394061805695
+0,DoS family (natural prevalence),curve,0.07842822061337681,0.9999394061805695
+0,DoS family (natural prevalence),curve,0.08309941949353396,0.9999596041203798
+0,DoS family (natural prevalence),curve,0.08804883581643465,0.9999596041203798
+0,DoS family (natural prevalence),curve,0.09329304026284686,0.9999697030902848
+0,DoS family (natural prevalence),curve,0.09884959046625587,0.9999899010300949
+0,DoS family (natural prevalence),curve,0.10473708979594508,0.9999899010300949
+0,DoS family (natural prevalence),curve,0.11097524964120721,0.9999899010300949
+0,DoS family (natural prevalence),curve,0.11758495540521581,0.9999899010300949
+0,DoS family (natural prevalence),curve,0.12458833642950082,0.9999899010300949
+0,DoS family (natural prevalence),curve,0.13200884008314195,1.0
+0,DoS family (natural prevalence),curve,0.13987131026472385,1.0
+0,DoS family (natural prevalence),curve,0.14820207057988602,1.0
+0,DoS family (natural prevalence),curve,0.15702901247293774,1.0
+0,DoS family (natural prevalence),curve,0.16638168860761307,1.0
+0,DoS family (natural prevalence),curve,0.1762914118095948,1.0
+0,DoS family (natural prevalence),curve,0.18679135990207846,1.0
+0,DoS family (natural prevalence),curve,0.19791668678535573,1.0
+0,DoS family (natural prevalence),curve,0.20970464013232348,1.0
+0,DoS family (natural prevalence),curve,0.22219468609395238,1.0
+0,DoS family (natural prevalence),curve,0.23542864143224201,1.0
+0,DoS family (natural prevalence),curve,0.24945081352303167,1.0
+0,DoS family (natural prevalence),curve,0.2643081486974108,1.0
+0,DoS family (natural prevalence),curve,0.2800503894183631,1.0
+0,DoS family (natural prevalence),curve,0.29673024081888727,1.0
+0,DoS family (natural prevalence),curve,0.31440354715915003,1.0
+0,DoS family (natural prevalence),curve,0.3331294787934677,1.0
+0,DoS family (natural prevalence),curve,0.352970730273065,1.0
+0,DoS family (natural prevalence),curve,0.3739937302478802,1.0
+0,DoS family (natural prevalence),curve,0.3962688638701478,1.0
+0,DoS family (natural prevalence),curve,0.41987070844439145,1.0
+0,DoS family (natural prevalence),curve,0.4448782831127585,1.0
+0,DoS family (natural prevalence),curve,0.4713753134116729,1.0
+0,DoS family (natural prevalence),curve,0.499450511585514,1.0
+0,DoS family (natural prevalence),curve,0.5291978735958447,1.0
+0,DoS family (natural prevalence),curve,0.5607169938205459,1.0
+0,DoS family (natural prevalence),curve,0.594113398496504,1.0
+0,DoS family (natural prevalence),curve,0.6294988990221888,1.0
+0,DoS family (natural prevalence),curve,0.6669919663030128,1.0
+0,DoS family (natural prevalence),curve,0.7067181273927491,1.0
+0,DoS family (natural prevalence),curve,0.748810385759003,1.0
+0,DoS family (natural prevalence),curve,0.7934096665797492,1.0
+0,DoS family (natural prevalence),curve,0.8406652885618334,1.0
+0,DoS family (natural prevalence),curve,0.890735463861044,1.0
+0,DoS family (natural prevalence),curve,0.9437878277775391,1.0
+0,DoS family (natural prevalence),curve,1.0,1.0
+0,DoS family (natural prevalence),op_H,0.01040087961724763,0.9987679256715815
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1e-05,0.6048711154784256
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.059560179277617e-05,0.6048711154784256
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.1226677735108135e-05,0.6048711154784256
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.1895340673703208e-05,0.6055159767674464
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.2603829296797274e-05,0.6055159767674464
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.3354515629299001e-05,0.6055159767674464
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.414991297434576e-05,0.6055159767674464
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.4992684327860471e-05,0.6055686185053256
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.588565129428053e-05,0.6055686185053256
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.6831803533309584e-05,0.6055686185053256
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.7834308769319092e-05,0.6056519679236344
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.8896523396912115e-05,0.6056519679236344
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,2.0022003718155845e-05,0.6056519679236344
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,2.121451784910632e-05,0.6057572513993928
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,2.2478058335487252e-05,0.6057572513993928
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,2.3816855519761608e-05,0.6058230535717419
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,2.523539170434766e-05,0.6058230535717419
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,2.6738416158399493e-05,0.6058230535717419
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,2.833096101839324e-05,0.6058493744406815
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,3.001835813575592e-05,0.6059107898015407
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,3.180625692794119e-05,0.6059107898015407
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,3.370064329271932e-05,0.6059634315394199
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,3.5707859649004625e-05,0.6059765919738896
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,3.783462617131933e-05,0.6059765919738896
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,4.008806328898465e-05,0.6060687150151783
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,4.2475715525369026e-05,0.6060774886381582
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,4.5005576757004976e-05,0.6060818754496482
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,4.7686116977144744e-05,0.606090649072628
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,5.0526310653356795e-05,0.6060994226956079
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,5.35356667741073e-05,0.6061432908105073
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,5.672426068491978e-05,0.6061564512449771
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,6.0102767820703876e-05,0.6061827721139167
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,6.368249944718586e-05,0.6061915457368966
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,6.7475440531107e-05,0.6061915457368966
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,7.149428986597576e-05,0.606296829212655
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,7.57525025877192e-05,0.6063889522539437
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,8.026433522257174e-05,0.6064898489182123
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,8.504489341802686e-05,0.6066066190715932
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,9.011018251665018e-05,0.6067398971731387
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,9.547716114208066e-05,0.6068056993454877
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0001011637979766207,0.6070513607889242
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00010718913192051286,0.6070996157153135
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00011357333583431052,0.6071434838302129
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00012033778407775906,0.6071917387566022
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00012750512407130128,0.6072268332485217
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00013509935211980279,0.607270701363421
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00014314589375234786,0.6074988155608977
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0001516716888470924,0.6075251364298373
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00016070528182616383,0.6076260330941059
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00017027691722259014,0.6076611275860254
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00018041864093920718,0.6077839583077436
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00019116440753857037,0.6078190527996631
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00020255019392306664,0.6078980154064819
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00021461411978584058,0.6080481312071151
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00022739657523579274,0.6081436768499184
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0002409403560239527,0.608240186702697
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00025529080682395165,0.6082840548175964
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0002704959730463137,0.6083279229324957
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.000286606761694825,0.6083630174244152
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00030367711180354605,0.6084112723508045
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0003217641750250735,0.6084639140886838
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0003409285069746815,0.6085384898840127
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00036123426997094305,0.6086349997367914
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00038274944785163153,0.6087797645159592
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0004055460735840828,0.6088192458193686
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0004297004704320844,0.6088718875572479
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00045529350748669476,0.6089201424836372
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00048241087041653736,0.6089771710330064
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0005111433483440165,0.6091350962466441
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0005415871378079476,0.6091789643615435
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0005738441648302393,0.6092359929109127
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0006080224261649427,0.6093632104441208
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0006442363508721371,0.6094772675428591
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0006826071834272392,0.6095342960922283
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0007232633896483533,0.6095781642071277
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0007663410868007462,0.609626419133517
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0008119844993184008,0.6096981933171245
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.000860346441668451,0.6097580234782151
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0009115888299750819,0.6098106652160943
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0009658832241158709,0.6098723382034009
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0010234114021054539,0.6099598168067522
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0010843659686896108,0.6100080717331415
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0011489510001873099,0.6100563266595308
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.001217382727739662,0.6101747705697591
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0012898902612533095,0.610319535348927
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0013667163564620073,0.6104292056361754
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0014481182276745346,0.610525715488954
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0015343684089300133,0.6106529330221622
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0016257556664437951,0.610727508817491
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0017225859653987874,0.6107976978013301
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0018251834943190442,0.6108547263506993
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0019338917504552321,0.6109205285230483
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0020490746898158482,0.6110126515643369
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.002171117945694505,0.6110916141711559
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.002300430119772919,0.6111705767779747
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.002437444150122222,0.6112714734422432
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0025826187606826775,0.6114337854673709
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0027364399970746718,0.6116092579269684
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.002899422853882878,0.611701380968257
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.003072112998861759,0.611841758935935
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00325508859983506,0.6119558160346733
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0034489622604057598,0.6121093544368211
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.003654383070957258,0.6122557345435256
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.003872038781812557,0.6123813367491973
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.004102658105827195,0.6125655828317745
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.004347013158125026,0.6127103476109425
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.004605922041145108,0.6128244047096808
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.004880251583654433,0.6129472354313991
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.005170920242896761,0.6130612925301374
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.005478901179593945,0.6132192177437751
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.005805225516094902,0.6133662480409425
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.006150985788580504,0.613499973679131
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.006517339604882427,0.6136535120812788
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.006905513520162331,0.6137719559915071
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0073168071434272,0.6138644711519651
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.007752597488629464,0.6140132306234537
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.00821434358491943,0.6141360613451718
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.008703591361485167,0.6143290810507291
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.009221978823334332,0.6144343645264876
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.009771241535346501,0.6146054501745951
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.010353218432956626,0.6147984698801523
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.01096985797892384,0.6149871027742196
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.01162322468679853,0.6151274807418976
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.012315506032928261,0.6153073400129849
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.01304901978014403,0.6155310673989717
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.013826221737646563,0.6157504079734686
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.014649713983072863,0.6159210006589952
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.01552225357427048,0.6160487111547842
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.016446761779946643,0.6161934759339521
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.017426333860096507,0.61633824071312
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.018464249428955443,0.6165619680991068
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.01956398343517065,0.6167849293515258
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.02072921779595372,0.617048583682087
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.02196385372416547,0.6171936689536577
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.023272024789604096,0.6173340469213356
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.024658110758226038,0.6175446138728526
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.026126752255633292,0.6178209829967186
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.027682866303920667,0.6180183895137659
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.029331662783900453,0.618211409219323
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.03107866187782014,0.6184790047202091
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.03292971255097151,0.6186859638286661
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.034891012134067735,0.618819497838721
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.036969127071950283,0.6190313853378658
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.039171014908092605,0.6192598571654179
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.04150404757850477,0.6195011317973644
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.043976036093027214,0.619672217445472
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.046595256686646824,0.6198815031455606
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.049370478528390035,0.6200319359876467
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.05231099308056263,0.6201726738253371
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.05542664520663107,0.6203556664298094
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.05872786613189483,0.6205065129534046
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.06222570836730231,0.6207645335064662
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.06593188271333549,0.6209424895777175
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.0698587974678525,0.6211630173681825
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.07401959996915644,0.6214751969678359
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.07842822061337681,0.6216324271280772
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.08309941949353396,0.6219752934776887
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.08804883581643465,0.6222604362245345
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.09329304026284686,0.6225587394058503
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.09884959046625587,0.622799207816111
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.10473708979594508,0.6231884181316427
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.11097524964120721,0.6236550887975518
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.11758495540521581,0.6240670635496759
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.12458833642950082,0.6245722858797311
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.13200884008314195,0.625167172164942
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.13987131026472385,0.6258197800492941
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.14820207057988602,0.6265029598325496
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.15702901247293774,0.6271908466631619
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.16638168860761307,0.6280516399402151
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.1762914118095948,0.6288982089839746
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.18679135990207846,0.6295434800956872
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.19791668678535573,0.6304590009585695
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.20970464013232348,0.6315789665530531
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.22219468609395238,0.6323895839547983
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.23542864143224201,0.633310814367685
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.24945081352303167,0.6345069874046955
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.2643081486974108,0.6354657523972823
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.2800503894183631,0.6367413009528154
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.29673024081888727,0.63799503549984
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.31440354715915003,0.6394790666771933
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.3331294787934677,0.6407642090013782
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.352970730273065,0.6421553742399776
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.3739937302478802,0.6435971519625803
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.3962688638701478,0.6452701620243402
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.41987070844439145,0.6468781154430894
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.4448782831127585,0.648676854005637
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.4713753134116729,0.6505069131518294
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.499450511585514,0.6524800473160659
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.5291978735958447,0.6545649160364281
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.5607169938205459,0.6567720280943267
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.594113398496504,0.6592692831485611
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.6294988990221888,0.6618865044131323
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.6669919663030128,0.6647028373896717
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.7067181273927491,0.6672910561687343
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.748810385759003,0.6701424836371931
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.7934096665797492,0.673265893418028
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.8406652885618334,0.6764558067630732
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.890735463861044,0.6799689413746512
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,0.9437878277775391,0.6831888610082647
+0,v3 L4 layer reused (scored rows only: unscored = 0),curve,1.0,1.0
