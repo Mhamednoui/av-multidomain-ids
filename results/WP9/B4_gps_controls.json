@@ -1,0 +1,301 @@
+{
+ "rules": {
+  "shuffle_band": [
+   0.42,
+   0.58
+  ],
+  "session_permutation": "PASS if real val AUC > 95th percentile of the 20-draw null",
+  "flags": "single feature > 0.5 gain or satellite/HDOP group > 0.5"
+ },
+ "sets": {
+  "F_full": {
+   "depth": 3,
+   "real_val_auc": 0.9984355406999523,
+   "row_shuffle_val_auc": [
+    0.42549362010075353,
+    0.5720121526501495,
+    0.5136871785578683,
+    0.6449706319902424,
+    0.49519994132063094
+   ],
+   "row_shuffle_val_auc_earlystop_on_real_val": [
+    0.6895140731676661,
+    0.7625163742974351,
+    0.8513789931679507,
+    0.8629988240412036,
+    0.7397084666925414
+   ],
+   "row_shuffle_pass": false,
+   "session_perm_null_auc": {
+    "n": 20,
+    "q05_q50_q95": [
+     0.015883445633050806,
+     0.28321683423354915,
+     0.9491969158879858
+    ],
+    "min": 0.0036213661674309094,
+    "max": 0.9859024429799633
+   },
+   "session_perm_pass": true,
+   "top_gain_share": [
+    [
+     "Longitudinal Vibration",
+     0.29928008071155915
+    ],
+    [
+     "Velocity (m/s)",
+     0.29640151694403116
+    ],
+    [
+     "Distance To Home (m)",
+     0.10692009642068558
+    ],
+    [
+     "Distance To GCS (m)",
+     0.09553190148413168
+    ],
+    [
+     "Throttle (%)",
+     0.08390673726970391
+    ]
+   ],
+   "satellite_hdop_gain_share": 0.04680137028587328,
+   "flag_single_feature": false,
+   "flag_receiver_state": false
+  },
+  "F_nosat": {
+   "depth": 3,
+   "real_val_auc": 0.9983786102501553,
+   "row_shuffle_val_auc": [
+    0.46268990430282875,
+    0.5280268834904923,
+    0.500748815741248,
+    0.7094779367416904,
+    0.4086260434559329
+   ],
+   "row_shuffle_val_auc_earlystop_on_real_val": [
+    0.7465493263729641,
+    0.7261224109078808,
+    0.8513789931679507,
+    0.8671304892678939,
+    0.7397084666925414
+   ],
+   "row_shuffle_pass": false,
+   "session_perm_null_auc": {
+    "n": 20,
+    "q05_q50_q95": [
+     0.005250978472549938,
+     0.27764082027539516,
+     0.9494420412449828
+    ],
+    "min": 0.0031712582548328793,
+    "max": 0.9827425806959895
+   },
+   "session_perm_pass": true,
+   "top_gain_share": [
+    [
+     "Velocity (m/s)",
+     0.3227730465113657
+    ],
+    [
+     "Longitudinal Vibration",
+     0.2604668371906485
+    ],
+    [
+     "Distance To Home (m)",
+     0.10014136321913242
+    ],
+    [
+     "Throttle (%)",
+     0.09775974769631396
+    ],
+    [
+     "Distance To GCS (m)",
+     0.09352528725561847
+    ]
+   ],
+   "satellite_hdop_gain_share": 0,
+   "flag_single_feature": false,
+   "flag_receiver_state": false
+  },
+  "F_kin": {
+   "depth": 3,
+   "real_val_auc": 0.9968224179694304,
+   "row_shuffle_val_auc": [
+    0.6367359973160842,
+    0.6400216269836564,
+    0.29046776771506966,
+    0.6725924150657633,
+    0.31218614145864737
+   ],
+   "row_shuffle_val_auc_earlystop_on_real_val": [
+    0.737623629815654,
+    0.7390457876934581,
+    0.2436045548048707,
+    0.7442272408628686,
+    0.6898897285018631
+   ],
+   "row_shuffle_pass": false,
+   "session_perm_null_auc": {
+    "n": 20,
+    "q05_q50_q95": [
+     0.042967410932253654,
+     0.4369217203515703,
+     0.966006026838236
+    ],
+    "min": 0.020859921187309987,
+    "max": 0.9691279773456004
+   },
+   "session_perm_pass": true,
+   "top_gain_share": [
+    [
+     "Velocity (m/s)",
+     0.5787224595876754
+    ],
+    [
+     "Throttle (%)",
+     0.2523483616122403
+    ],
+    [
+     "heading_gap5",
+     0.07055819170659547
+    ],
+    [
+     "Steering Angle (deg)",
+     0.056647948947051295
+    ],
+    [
+     "speed_gap5",
+     0.023960103542821822
+    ]
+   ],
+   "satellite_hdop_gain_share": 0,
+   "flag_single_feature": true,
+   "flag_receiver_state": false
+  },
+  "F_kin_noVS": {
+   "depth": 5,
+   "real_val_auc": 0.981312954504913,
+   "row_shuffle_val_auc": [
+    0.4903107651610547,
+    0.5001450598400454,
+    0.48968811203938867,
+    0.5269640774625639,
+    0.47673801565450685
+   ],
+   "row_shuffle_val_auc_earlystop_on_real_val": [
+    0.610316793827257,
+    0.4679848149017667,
+    0.5683865706322273,
+    0.5645096926355152,
+    0.4608127968716281
+   ],
+   "row_shuffle_pass": true,
+   "session_perm_null_auc": {
+    "n": 20,
+    "q05_q50_q95": [
+     0.054576979256171144,
+     0.2748050556149727,
+     0.905598899356714
+    ],
+    "min": 0.044745876107747655,
+    "max": 0.9231797192691508
+   },
+   "session_perm_pass": true,
+   "top_gain_share": [
+    [
+     "speed_gap",
+     0.5299640233193256
+    ],
+    [
+     "heading_gap5",
+     0.28677739791602097
+    ],
+    [
+     "pos_step_m",
+     0.06541724071689756
+    ],
+    [
+     "pos_step_m5",
+     0.058920255178054486
+    ],
+    [
+     "speed_gap5",
+     0.052778382725134444
+    ]
+   ],
+   "satellite_hdop_gain_share": 0,
+   "flag_single_feature": true,
+   "flag_receiver_state": false
+  },
+  "F_pos": {
+   "depth": 3,
+   "real_val_auc": 0.9321839113396102,
+   "row_shuffle_val_auc": [
+    0.6010033295996707,
+    0.5701190299275322,
+    0.42285116288965985,
+    0.5278019448113552,
+    0.5017065219338844
+   ],
+   "row_shuffle_val_auc_earlystop_on_real_val": [
+    0.6400013299690847,
+    0.6790210106790129,
+    0.4673926608234979,
+    0.5933236062464149,
+    0.4262558985676912
+   ],
+   "row_shuffle_pass": false,
+   "session_perm_null_auc": {
+    "n": 20,
+    "q05_q50_q95": [
+     0.1372651301933679,
+     0.3216454683493707,
+     0.6550138249430004
+    ],
+    "min": 0.10365554419910829,
+    "max": 0.7237629838314229
+   },
+   "session_perm_pass": true,
+   "top_gain_share": [
+    [
+     "pos_step_m5",
+     0.6666604879386071
+    ],
+    [
+     "GPS Course",
+     0.2598873703640094
+    ],
+    [
+     "course_change5",
+     0.06568784270913726
+    ],
+    [
+     "pos_step_m",
+     0.005902922228880594
+    ],
+    [
+     "course_change",
+     0.0018613767593657076
+    ]
+   ],
+   "satellite_hdop_gain_share": 0,
+   "flag_single_feature": true,
+   "flag_receiver_state": false
+  }
+ },
+ "proxy_only_vehicle_state": {
+  "features": [
+   "Velocity (m/s)",
+   "Throttle (%)",
+   "Steering Angle (deg)",
+   "Yaw Rate (deg/s)",
+   "Roll (deg)",
+   "Pitch (deg)"
+  ],
+  "val_auc_by_depth": {
+   "3": 0.9973726193948622,
+   "5": 0.994484457147329
+  }
+ }
+}

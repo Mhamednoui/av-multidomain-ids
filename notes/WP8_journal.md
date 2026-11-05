@@ -712,3 +712,13 @@
 2026-11-05T18:36:12+01:00 | S7 | lidar check v3sample: start | tools/WP8_S7_lidar_check.py
 2026-11-05T18:39:27+01:00 | B4 | run tools/WP9_B4_lock.py (AV-GPS + KITTI locks) | write notes/WP9_B4.md pre-registration, commit locks+notes before any training
 2026-11-05T18:40:45+01:00 | B4 | pre-registration notes/WP9_B4.md + locks written; committing | build LiDAR descriptor rows (3 procs, resumable) and AV-GPS fit
+2026-11-05T18:41:13+01:00 | B4 | LiDAR descriptor build smoke test on drive 0048 | full build 3 procs if ok
+2026-11-05T18:41:30+01:00 | S7 | lidar check v3sample: done | {"scans": 104, "alarm_disagreements": 0, "max_abs_stat_diff": 0.009282970550576142, "median_abs_stat_diff": 0.0, "label": "sample check of the fast-path v3 columns against the literal frozen v3 LidarD
+2026-11-05T18:41:41+01:00 | B4 | LiDAR descriptor build FULL start (bg, log results/WP9/logs/B4_lidar_build.log, resumable per drive) | meanwhile AV-GPS lib
+2026-11-05T18:41:55+01:00 | S7 | decision before the repeats: M4-8 speed and M4-10 p99 are JUDGED on the first runs (lidar median 111.9 ms with 2 other python processes; CAN p99 > 150 ms on several captures under load). Repeat timings (LiDAR speed_run2, CAN idle) are labelled re-runs of timing only, reported next to the first runs, not used to flip a verdict
+2026-11-05T18:41:57+01:00 | S7 | lidar check speed: start | tools/WP8_S7_lidar_check.py
+2026-11-05T18:42:46+01:00 | B4 | AV-GPS fit/selection on validation (tools/WP9_B4_gps_fit.py) | controls script
+2026-11-05T18:44:04+01:00 | B4 | AV-GPS controls on validation (tools/WP9_B4_gps_controls.py) | commit, then v3 GPS layers script
+2026-11-05T18:47:05+01:00 | B2 | D23x G test start (log results/WP9/logs/B2_D23x_G_test.log)
+2026-11-05T18:47:33+01:00 | B4 | AV-GPS amendments 1 (extra sets F_kin_noVS, F_pos after proxy-only AUC 0.997) and 2 (row-shuffle with fixed rounds); re-run fit + controls on validation | commit, then v3 GPS layers + test
+2026-11-05T18:55:18+01:00 | B4 | AV-GPS controls done, amendments 1+2 written; committing selection+controls before test | run tools/WP9_B4_gps_test.py and tools/WP9_B4_gps_v3.py (test, once)

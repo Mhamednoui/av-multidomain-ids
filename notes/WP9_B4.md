@@ -82,3 +82,15 @@
 - No "better than the literature" statement unless the same dataset, same or stricter split and CI excluding the bar; here none of the rows meets that.
 - Crash safety: journal lines in notes/WP8_journal.md (format `<ISO> | B4 | what | next`), chunked resumable builds in ../data_extra/cache_v3/WP9/B4, logs in results/WP9/logs/, scores in results/WP9/scores/B4/.
 - CPU budget: the machine is shared with WP8 S7; descriptor builds run with 3 processes.
+
+## 2026-11-05 amendments before any test scoring (GPS validation seen; LiDAR not yet built)
+- Amendment 1 (after the first controls run, validation only): the proxy-only vehicle-state model (Velocity, Throttle, Steering, Yaw Rate, Roll, Pitch; no GPS field) reaches validation AUC 0.997 (depth 3) /
+  0.994 (depth 5): the AV-GPS label is predictable without any GPS information (the rover is almost stationary in the spoofed sessions; Velocity / Longitudinal Vibration carry most gain even in F_full:
+  satellite+HDOP gain share only 0.047). F_kin and F_nosat contain such fields, so G2 as written would not be artefact-free. Two extra feature sets were added BEFORE any test row was scored:
+  F_kin_noVS = {pos_step_m, speed_gap, heading_gap and their 5-row means} (the GPS-vs-vehicle consistency view, no vehicle-state field as such, though speed_gap uses Velocity as the independent witness) and
+  F_pos = {pos_step_m, pos_step_m5, course_change, course_change5, GPS Course} (GPS fields only). G2 is re-stated: artefact-free = F_kin_noVS or F_pos (Case I F1 at S >= 0.80 and FPR <= 5%);
+  the original G2 (F_nosat or F_kin) is still reported and labelled "contains vehicle-state proxy fields". Same depth grid and selection rule for the new sets (tools/WP9_B4_gps_fit.py re-run; the first three sets are unchanged).
+- Amendment 2: the row-shuffled control uses a FIXED number of rounds (the chosen trees) and 5 seeds; early stopping on the real validation labels (supplementary, also reported) selects the best-looking round and is biased upwards (AUC 0.6-0.87).
+  Result: the fixed-round nulls scatter 0.29-0.71 around 0.5 on 8 clustered validation sessions, so the band 0.42-0.58 FAILS as written for 4 of 5 sets (PASS for F_kin_noVS only); interpretation (stated in the report): the null is centred, the spread is a validation-size effect;
+  the real validation AUC (0.93-0.998) exceeds the maximum of each null (<= 0.71). Not a stop condition. Session-label permutation: PASS for all sets in the sense "real AUC > null q95" but the null spans 0.00-0.99 (8 validation sessions): weak evidence either way.
+- v3 GPS layers script (tools/WP9_B4_gps_v3.py): F1 / AUC / CI are computed on the file-2 sessions only; file-3 normals contribute false alarms only (stated, same as the supervised rows).
