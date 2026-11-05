@@ -1,5 +1,5 @@
 """WP9 B3 post-hoc diagnostic on VALIDATION (not a selection basis): is the below-band AUC of the within-block sender-label permutation control a systematic effect
-or sampling noise of a few label assignments?  Same feature set / depth as the chosen model, 100 trees fixed, 5 seeds, for (a) within-block sender permutation,
+or sampling noise of a few label assignments?  Same feature set / depth as the chosen model, 40 trees fixed, 4 seeds, for (a) within-block sender permutation,
 (b) global sender permutation, (c) row-level shuffle.  Also reports the AUC when the null model is scored per sender (mean score of the sender's messages).
 Run: python -I -u -W ignore tools/WP9_B3_control_seeds.py   -> results/WP9/B3_control_seeds.json
 """
@@ -38,16 +38,16 @@ def main():
     lab_s = ytr[first]
     blk_s = blk[first]
     inv = np.searchsorted(us, snd)
-    out = {"feature_set": c["set"], "depth": c["depth"], "trees": 100, "runs": []}
-    for seed in range(5):
+    out = {"feature_set": c["set"], "depth": c["depth"], "trees": 40, "runs": []}
+    for seed in range(4):
         rng = np.random.RandomState(1000 + seed)
         perm_wb = lab_s.copy()
         for b in np.unique(blk_s):
             ix = np.flatnonzero(blk_s == b)
             perm_wb[ix] = rng.permutation(lab_s[ix])
         perm_g = rng.permutation(lab_s)
-        for nm, y_new in (("within_block_sender", perm_wb[inv]), ("global_sender", perm_g[inv]), ("rows", rng.permutation(ytr))):
-            m = xgb.XGBClassifier(objective="multi:softprob", num_class=L.K, n_estimators=100, max_depth=c["depth"], tree_method="hist", n_jobs=4, random_state=1000 + seed,
+        for nm, y_new in (("within_block_sender", perm_wb[inv]), ("global_sender", perm_g[inv])):
+            m = xgb.XGBClassifier(objective="multi:softprob", num_class=L.K, n_estimators=40, max_depth=c["depth"], tree_method="hist", n_jobs=4, random_state=1000 + seed,
                                   eval_metric="mlogloss", **FIT.XGB_PARAMS)
             m.fit(X, y_new, verbose=False)
             P = m.predict_proba(Xv)

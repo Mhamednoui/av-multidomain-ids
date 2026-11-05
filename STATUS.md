@@ -68,6 +68,6 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP9 bench | B0 | APPROVED | worker sonnet (medium, T2) | 2026-11-04 | literature bar + leak-free split proposal; reports/WP9_B0.md, results/WP9/ |
 | WP9 bench | B1 | APPROVED | worker sonnet (high, T3) | 2026-11-04 | CAN: Car-Hacking MET (equal to leaky bar), ROAD NOT MET (FPR 3.2%), D11 NOT MET at 1% budget, unknown vehicle fails; reports/WP9_B1.md |
 | WP9 bench | B2 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-04 | network |
-| WP9 bench | B3 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-04 | V2X |
+| WP9 bench | B3 | REVIEW | worker sonnet (high, T3) | 2026-11-05 | V2X: DoS-family matched F1 0.992-0.996 (bar 0.93-0.998), all-19 macro-F1 0.917, FPR 1.0%; 2 pre-registered controls fail as written; reports/WP9_B3.md |
 | WP9 bench | B4 | TODO | | | GPS + LiDAR |
 | WP9 bench | B5 | TODO | | | final scoring + comparison |

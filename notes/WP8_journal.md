@@ -664,3 +664,42 @@
 2026-11-05T17:46:57+01:00 | S7 | domain rows v2x: start | tools/WP8_S7_domains.py
 2026-11-05T17:46:59+01:00 | S7 | domain rows v2x: done | 19 rows
 2026-11-05T17:47:41+01:00 | B2 | report fix: bootstrap macro-F1 skipped eligible classes absent in a resample (D10o T CI [0.43,0.83] excluded point 0.838); CIs to be recomputed from saved scores (no rescoring) via tools/WP9_B2_recompute.py
+2026-11-05T18:05:23+01:00 | B2 | D10o+D10e tests done (6 scored once), committed; waiting for D23x val (log results/WP9/logs/B2_D23x_val.log), then D23x test
+2026-11-05T18:13:13+01:00 | B3 | controls: DONE all_pass=False red_flag=False; results/WP9/B3_controls.json
+2026-11-05T18:13:20+01:00 | B3 | controls done: shuffled rows AUC 0.496 pass; within-block perm 0.377 FAIL; see log; launching post-hoc seeds diagnostic results/WP9/logs/B3_control_seeds.log
+2026-11-05T18:15:47+01:00 | B3 | controls committed; building test features then single test scoring: python -I -u -W ignore tools/WP9_B3_build.py --parts test ; then tools/WP9_B3_test.py (log results/WP9/logs/B3_test.log)
+2026-11-05T18:16:52+01:00 | B3 | test: START single scoring (chosen xgb_D_noT_d6)
+2026-11-05T18:17:22+01:00 | B3 | test: DONE results/WP9/B3_test.json, exposure registered
+2026-11-05T18:17:27+01:00 | B3 | test DONE (single scoring): results/WP9/B3_test.json; exposure registered; next tables + report
+2026-11-05T18:18:09+01:00 | B3 | restarted seeds diagnostic (40 trees, 4 seeds, within-block + global sender perm; was too slow); log results/WP9/logs/B3_control_seeds.log
+2026-11-05T18:19:23+01:00 | S7 | LiDAR H31 chunks complete (39 parts, each scored once); assembling lidar.pkl then system simulation (tag h31), domains lidar+system, then idle timing (lidar speed, CAN p99)
+2026-11-05T18:19:34+01:00 | S7 | domain rows lidar: start | tools/WP8_S7_domains.py
+2026-11-05T18:19:35+01:00 | S7 | system simulation h31: start | material h31; chunks results/WP8/S7/parts/sim_h31_*; log results/WP8/logs/S7_sim_h31.log
+2026-11-05T18:19:36+01:00 | S7 | sim h31 v31 K: start | chunk sim_h31_v31_K.pkl
+2026-11-05T18:19:38+01:00 | S7 | sim h31 v31 K: done | chunk sim_h31_v31_K.pkl
+2026-11-05T18:19:41+01:00 | S7 | domain rows lidar: done | 26 rows
+2026-11-05T18:20:02+01:00 | S7 | sim h31 v31 C: start | chunk sim_h31_v31_C.pkl
+2026-11-05T18:20:03+01:00 | S7 | sim h31 v31 C: done | chunk sim_h31_v31_C.pkl
+2026-11-05T18:20:27+01:00 | S7 | sim h31 v3 K: start | chunk sim_h31_v3_K.pkl
+2026-11-05T18:20:30+01:00 | S7 | sim h31 v3 K: done | chunk sim_h31_v3_K.pkl
+2026-11-05T18:20:54+01:00 | S7 | sim h31 v3 C: start | chunk sim_h31_v3_C.pkl
+2026-11-05T18:20:57+01:00 | S7 | sim h31 v3 C: done | chunk sim_h31_v3_C.pkl
+2026-11-05T18:21:06+01:00 | B2 | D23x T test start (log results/WP9/logs/B2_D23x_T_test.log)
+2026-11-05T18:21:25+01:00 | S7 | sim h31 v31_RC5 K: start | chunk sim_h31_v31_RC5_K.pkl
+2026-11-05T18:21:27+01:00 | S7 | sim h31 v31_RC5 K: done | chunk sim_h31_v31_RC5_K.pkl
+2026-11-05T18:21:56+01:00 | S7 | sim h31 v31_RC5 C: start | chunk sim_h31_v31_RC5_C.pkl
+2026-11-05T18:21:58+01:00 | S7 | sim h31 v31_RC5 C: done | chunk sim_h31_v31_RC5_C.pkl
+2026-11-05T18:22:26+01:00 | S7 | sim h31 v31_blameA3 K: start | chunk sim_h31_v31_blameA3_K.pkl
+2026-11-05T18:22:27+01:00 | S7 | sim h31 v31_blameA3 K: done | chunk sim_h31_v31_blameA3_K.pkl
+2026-11-05T18:22:56+01:00 | S7 | sim h31 v31_blameA3 C: start | chunk sim_h31_v31_blameA3_C.pkl
+2026-11-05T18:22:58+01:00 | S7 | sim h31 v31_blameA3 C: done | chunk sim_h31_v31_blameA3_C.pkl
+2026-11-05T18:23:28+01:00 | S7 | sim h31 v31_b15 K: start | chunk sim_h31_v31_b15_K.pkl
+2026-11-05T18:23:29+01:00 | S7 | sim h31 v31_b15 K: done | chunk sim_h31_v31_b15_K.pkl
+2026-11-05T18:23:59+01:00 | S7 | sim h31 v31_b15 C: start | chunk sim_h31_v31_b15_C.pkl
+2026-11-05T18:24:00+01:00 | S7 | sim h31 v31_b15 C: done | chunk sim_h31_v31_b15_C.pkl
+2026-11-05T18:24:04+01:00 | B2 | D23x T test scored (0.9257). Amendment diagnostics: XGB shuffled controls for failed RF controls (tools/WP9_B2_ctl_xgb.py D10e G; D23x T), log results/WP9/logs/B2_ctl_xgb.log
+2026-11-05T18:24:28+01:00 | S7 | sim h31 v31_mcSS K: start | chunk sim_h31_v31_mcSS_K.pkl
+2026-11-05T18:24:29+01:00 | S7 | sim h31 v31_mcSS K: done | chunk sim_h31_v31_mcSS_K.pkl
+2026-11-05T18:24:59+01:00 | S7 | sim h31 v31_mcSS C: start | chunk sim_h31_v31_mcSS_C.pkl
+2026-11-05T18:25:01+01:00 | S7 | sim h31 v31_mcSS C: done | chunk sim_h31_v31_mcSS_C.pkl
+2026-11-05T18:31:21+01:00 | B3 | DONE: report reports/WP9_B3.md, brief, STATUS B3 -> REVIEW; committing

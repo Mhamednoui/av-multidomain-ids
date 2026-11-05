@@ -1,0 +1,81 @@
+{
+ "feature_set": "D_noT",
+ "depth": 6,
+ "trees": 40,
+ "runs": [
+  {
+   "seed": 0,
+   "perm": "within_block_sender",
+   "val_auc_msg": 0.3581380835287935,
+   "val_auc_sender_mean_score": 0.3909920435639641
+  },
+  {
+   "seed": 0,
+   "perm": "global_sender",
+   "val_auc_msg": 0.3376341649006841,
+   "val_auc_sender_mean_score": 0.29322660982033966
+  },
+  {
+   "seed": 1,
+   "perm": "within_block_sender",
+   "val_auc_msg": 0.4401194853371597,
+   "val_auc_sender_mean_score": 0.48307831059821876
+  },
+  {
+   "seed": 1,
+   "perm": "global_sender",
+   "val_auc_msg": 0.36082897749413123,
+   "val_auc_sender_mean_score": 0.3419279240500275
+  },
+  {
+   "seed": 2,
+   "perm": "within_block_sender",
+   "val_auc_msg": 0.3528899562794489,
+   "val_auc_sender_mean_score": 0.3617947587959784
+  },
+  {
+   "seed": 2,
+   "perm": "global_sender",
+   "val_auc_msg": 0.5171185653445397,
+   "val_auc_sender_mean_score": 0.5395584160918834
+  },
+  {
+   "seed": 3,
+   "perm": "within_block_sender",
+   "val_auc_msg": 0.3709216383260939,
+   "val_auc_sender_mean_score": 0.34170040209210883
+  },
+  {
+   "seed": 3,
+   "perm": "global_sender",
+   "val_auc_msg": 0.4243038196913296,
+   "val_auc_sender_mean_score": 0.47398289827445433
+  }
+ ],
+ "summary": {
+  "('val_auc_msg', 'mean')": {
+   "global_sender": 0.41,
+   "within_block_sender": 0.381
+  },
+  "('val_auc_msg', 'min')": {
+   "global_sender": 0.338,
+   "within_block_sender": 0.353
+  },
+  "('val_auc_msg', 'max')": {
+   "global_sender": 0.517,
+   "within_block_sender": 0.44
+  },
+  "('val_auc_sender_mean_score', 'mean')": {
+   "global_sender": 0.412,
+   "within_block_sender": 0.394
+  },
+  "('val_auc_sender_mean_score', 'min')": {
+   "global_sender": 0.293,
+   "within_block_sender": 0.342
+  },
+  "('val_auc_sender_mean_score', 'max')": {
+   "global_sender": 0.54,
+   "within_block_sender": 0.483
+  }
+ }
+}
