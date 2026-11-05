@@ -30,3 +30,7 @@ M4-1..M4-15 and G1-G10 as pre-registered (notes/WP8_v31.md section 2, orchestrat
 - C clean FA is 6 % without a drive-level anomaly: V2X (about 10 % of clean ticks carry a V2X own alarm on VeReMi test egos), CAN and network dominate; the equal-split 2 % budget does not hold when a domain's tick FA exceeds 1 %.
 - Timing rules were measured on a shared machine; an isolated re-measurement is needed to settle M4-8 speed and M4-10 p99 (S3b / S5 numbers on quieter runs met them).
 - The D23 half of M4-9 cannot be evaluated (stage cache not on disk). V2AIX Stationary genuine FA is above the 1.5 % bound.
+
+## Orchestrator review note (2026-11-05)
+
+Protocol deviation: the V2AIX H31 recordings were scored at 2026-11-04 17:45:11-17:45:38, about 36 s before freeze.json was written (17:46:14) and 61 s before the freeze commit (8aac3dd, 17:46:23). The journal line "no H31 file opened before this commit" is therefore wrong for V2AIX. The V2AIX tool and library hashes in freeze.json equal the files committed at 35e6275 (17:46:02) and the current files; the V2AIX result is unfavourable (M4-11 NOT MET) and is kept as scored. Every other H31 domain was opened after the freeze commit.
