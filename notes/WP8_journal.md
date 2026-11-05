@@ -783,3 +783,15 @@
 2026-11-05T19:29:48+01:00 | S8 | sim s8_val v31_gated C: done | chunk sim_s8_val_v31_gated_C.pkl
 2026-11-05T19:30:29+01:00 | S8 | system simulation s8_val: start | material val; chunks results/WP8/S8/parts/sim_s8_val_*; log results/WP8/logs/S8_sim_val.log
 2026-11-05T19:31:51+01:00 | S8 | system simulation s8_val: done | results/WP8/S8/system_s8_val.json
+2026-11-05T19:32:00+01:00 | S8 | V31_val: gate fires 0 ticks/scans, gated == ungated == frozen_system31 in-sample check (A1, A2 met); committed. NEXT: ONE H31 re-scoring (exposure 2) | python tools/WP8_S8_sim.py --material h31 (bg, log results/WP8/logs/S8_sim_h31.log, chunks results/WP8/S8/parts/sim_s8_h31_*)
+2026-11-05T19:32:01+01:00 | S8 | system simulation s8_h31: start | material h31; chunks results/WP8/S8/parts/sim_s8_h31_*; log results/WP8/logs/S8_sim_h31.log
+2026-11-05T19:32:05+01:00 | S8 | sim s8_h31 v31_ungated K: start | chunk sim_s8_h31_v31_ungated_K.pkl
+2026-11-05T19:32:05+01:00 | S8 | sim s8_h31 v31_ungated K: done | chunk sim_s8_h31_v31_ungated_K.pkl
+2026-11-05T19:32:22+01:00 | S8 | sim s8_h31 v31_gated K: start | chunk sim_s8_h31_v31_gated_K.pkl
+2026-11-05T19:32:23+01:00 | S8 | sim s8_h31 v31_gated K: done | chunk sim_s8_h31_v31_gated_K.pkl
+2026-11-05T19:33:03+01:00 | S8 | sim s8_h31 v31_ungated C: start | chunk sim_s8_h31_v31_ungated_C.pkl
+2026-11-05T19:33:04+01:00 | S8 | sim s8_h31 v31_ungated C: done | chunk sim_s8_h31_v31_ungated_C.pkl
+2026-11-05T19:33:20+01:00 | S8 | sim s8_h31 v31_gated C: start | chunk sim_s8_h31_v31_gated_C.pkl
+2026-11-05T19:33:21+01:00 | S8 | sim s8_h31 v31_gated C: done | chunk sim_s8_h31_v31_gated_C.pkl
+2026-11-05T19:34:00+01:00 | S8 | system simulation s8_h31: done | results/WP8/S8/system_s8_h31.json
+2026-11-05T19:34:44+01:00 | S8 | H31 system re-scoring DONE (exposure 2): K FA 12.24 -> 4.70 %, SAFE_STOP/h 6.43 -> 0.88, det_single 87.1 -> 84.6; A3 ungated == S7 exactly. NEXT: LiDAR domain rows (scan FA / PointDrop) gated vs ungated, then report | tools/WP8_S8_lidar_domain.py
