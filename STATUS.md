@@ -46,7 +46,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 ## v3.1 (branch v3.1, WP8; plan: workpackages/WP8_v31.md; v3 frozen at tag v3.0)
 
-**v3.1 progress: 11 / 11 steps approved = 100% (WP8); WP9 benchmark 4 / 6; overall v3.1+WP9 15 / 17 = 88%** (updated 2026-11-05 19:45)
+**v3.1 progress: 11 / 11 steps approved = 100% (WP8); WP9 benchmark 5 / 6; overall v3.1+WP9 16 / 17 = 94%** (updated 2026-11-05 19:55)
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
@@ -68,7 +68,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 |---|---|---|---|---|---|
 | WP9 bench | B0 | APPROVED | worker sonnet (medium, T2) | 2026-11-04 | literature bar + leak-free split proposal; reports/WP9_B0.md, results/WP9/ |
 | WP9 bench | B1 | APPROVED | worker sonnet (high, T3) | 2026-11-04 | CAN: Car-Hacking MET (equal to leaky bar), ROAD NOT MET (FPR 3.2%), D11 NOT MET at 1% budget, unknown vehicle fails; reports/WP9_B1.md |
-| WP9 bench | B2 | REVIEW | worker sonnet (high, T3) | 2026-11-05 | network: test macro-F1 0.84-0.89 (CICIDS2017 original labels, T/G/B), 0.92-0.996 (corrected), 0.93-0.945 (CSE-CIC-IDS2018 corrected), FPR 0.006-0.12%; bar 0.778 group split (different classes); 4 RF controls fail AUC rule as written; reports/WP9_B2.md |
+| WP9 bench | B2 | APPROVED | worker sonnet (high, T3) | 2026-11-05 | network: CICIDS2017 group split macro-F1 0.894 orig / 0.996 corrected labels (bar 0.778 whole-test, 0.89 subset; not like-for-like), CSE-CIC-IDS2018 corrected 0.945 (first leak-free number); RF shuffled AUC control FAILS 4 units; reports/WP9_B2.md |
 | WP9 bench | B3 | APPROVED | worker sonnet (high, T3) | 2026-11-05 | V2X: DoS-family matched F1 0.992-0.996 (bar 0.93-0.998), all-19 macro-F1 0.917, FPR 1.0%; 2 pre-registered controls fail as written; reports/WP9_B3.md |
 | WP9 bench | B4 | REVIEW | worker sonnet (high, T3) | 2026-11-05 | GPS: AV-GPS Case I F_full F1 0.976 [0.69,0.995] (bar 0.90-0.965, equal not better; label predictable from vehicle state, AUC 0.997), Case II fails, v3 layers F1 0.90 AUC at null q95; LiDAR: full model red-flagged, static supervised NAIVE-add TPR@10% FPR 0.426 (rule 0.85 NOT MET), v3.1 0.446; reports/WP9_B4.md |
-| WP9 bench | B5 | TODO | | | final scoring + comparison |
+| WP9 bench | B5 | IN PROGRESS | worker sonnet (high, T3) | 2026-11-05 | final comparison table vs bar, no new test scoring |

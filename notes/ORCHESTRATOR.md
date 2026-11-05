@@ -289,3 +289,5 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
 
 - 2026-11-05 19:45 WP8 S8 APPROVED (diagnosis+rules b1d2749 before gate 6304fa0 before H31 re-score 17f79ce). Health gate = standard GNSS integrity practice, but its threshold was set after reading H31 -> every gated number is "H31 exposure 2, post-M4 fix, NOT fresh"; improvement rests on one drive (drive-cluster CI touches 0); gate is an attack surface (spoofed accuracy fields) -> stated limitation. WP8 complete 11/11. Overall 15/17 = 88%. Remaining: B2 (running), B5.
   Note for later: H31 is now exposure 2 for K; no fresh material left for further system claims. Remaining K clean-FA sources: V2X 9.6 %, LiDAR 8.2 %, network 4.8 %, CAN 3.8 % own-alarm shares.
+
+- 2026-11-05 19:55 WP9 B2 APPROVED (locks 0ed1e7b / 99608fd before training; one scoring per test; minor deviation: D23x val files committed with tests, order verified by mtimes + journal; CI bug fixed from saved scores, no rescoring). B5 launched (T3). Progress 16/17 = 94%.
