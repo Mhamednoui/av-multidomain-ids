@@ -722,3 +722,11 @@
 2026-11-05T18:47:05+01:00 | B2 | D23x G test start (log results/WP9/logs/B2_D23x_G_test.log)
 2026-11-05T18:47:33+01:00 | B4 | AV-GPS amendments 1 (extra sets F_kin_noVS, F_pos after proxy-only AUC 0.997) and 2 (row-shuffle with fixed rounds); re-run fit + controls on validation | commit, then v3 GPS layers + test
 2026-11-05T18:55:18+01:00 | B4 | AV-GPS controls done, amendments 1+2 written; committing selection+controls before test | run tools/WP9_B4_gps_test.py and tools/WP9_B4_gps_v3.py (test, once)
+2026-11-05T18:55:27+01:00 | B4 | AV-GPS TEST scoring (supervised Case I+II) | v3 GPS layers test
+2026-11-05T18:56:02+01:00 | S7 | lidar check speed: done | {"scans": 1297, "warmup_excluded": 3, "median_ms": 147.8506000000266, "p95_ms": 188.78261999997792, "p99_ms": 210.08420800000292, "max_ms": 254.07859999995708, "rule": "median <= 100 ms, p99 <= 250 ms
+2026-11-05T18:56:09+01:00 | S7 | CAN idle timing ambient_dyno_drive_benign_anomaly: start | other python processes 7
+2026-11-05T18:57:37+01:00 | S7 | CAN idle timing ambient_dyno_drive_extended_short: start | other python processes 7
+2026-11-05T18:59:04+01:00 | S7 | CAN idle timing ambient_dyno_reverse: start | other python processes 6
+2026-11-05T18:59:14+01:00 | B4 | AV-GPS supervised test done (B4_gps_test.json); running v3 GPS layers on case I (tools/WP9_B4_gps_v3.py, bg, log B4_gps_v3.log) | LiDAR fit when build done
+2026-11-05T18:59:17+01:00 | S7 | CAN idle timing ambient_highway_street_driving_diagnostics: start | other python processes 7
+2026-11-05T19:00:16+01:00 | B4 | AV-GPS tests done (supervised + v3 layers); committing results | LiDAR fit after build finishes
