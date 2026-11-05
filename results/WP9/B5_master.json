@@ -1,0 +1,7495 @@
+{
+ "generated_by": "tools/WP9_B5_build.py",
+ "step": "WP9 B5",
+ "allowed_verdicts": [
+  "better",
+  "equal",
+  "comparable-not-like-for-like",
+  "not comparable",
+  "below"
+ ],
+ "verdict_rule": "better only if same data, same-or-stricter split and CI excludes the bar (flags); equal / comparable / not comparable / below otherwise",
+ "operating_points": "H = threshold at the 1% validation false-alarm budget (headline); S = validation-F1-optimal (secondary, reported after H, same single test scoring)",
+ "rows": [
+  {
+   "id": "CAN_CH",
+   "domain": "CAN",
+   "dataset": "Car-Hacking (HCRL), seen attacks DoS/Fuzzy/RPM/Gear",
+   "protocol": "100-block split + 1 s gap, 1 s windows, test = held-out blocks (locks/WP9_carhacking.json); dedup 0 rows",
+   "leak": "leak-free by block (no neighbouring frames across parts); normal_run second half is a separate test",
+   "verdict": "equal",
+   "flags": {
+    "same_data": true,
+    "same_or_stricter": true,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "per-attack F1 0.9997-1.0000 (Hoang and Kim; Guerra et al.), random 7:3 / unstated 80:20 split (leaky); dataset recorded parked (Lampe and Meng).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      0,
+      "0.9997"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      1,
+      "1.0000"
+     ]
+    ],
+    "b0": [
+     0,
+     1,
+     4
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci}; attack recall {rec} {recci}; FPR {fpr}; AUC {auc}; normal_run FPR {nrfpr}",
+    "op": "H = 1% val budget (headline); S = val-F1-optimal: attack F1 {sf1}, FPR {sfpr} (labelled secondary)",
+    "caveats": "Unit = 1 s window, bar unit = frame. Shuffled-label control passes (AUC {ctl_g}) but within-capture permutation AUC {ctl_w} (capture regime is learnable); same-segment AUC {segauc}. Dataset is trivially separable (bar also ~1.0)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.999 [0.998, 1.000]; attack recall 0.999 [0.996, 1.000]; FPR 0.000; AUC 1.000; normal_run FPR 0.012",
+    "op": "H = 1% val budget (headline); S = val-F1-optimal: attack F1 0.999, FPR 0.000 (labelled secondary)",
+    "caveats": "Unit = 1 s window, bar unit = frame. Shuffled-label control passes (AUC 0.49) but within-capture permutation AUC 0.89 (capture regime is learnable); same-segment AUC 1.000. Dataset is trivially separable (bar also ~1.0)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_test.json",
+      "path": [
+       "models",
+       "W_rf_generic",
+       "subsets",
+       "test_blocks",
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.999465382929474,
+     "text": "0.999"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_test.json",
+      "path": [
+       "models",
+       "W_rf_generic",
+       "subsets",
+       "test_blocks",
+       "ci95",
+       "macro_f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.9981151856326959,
+      1.0
+     ],
+     "text": "[0.998, 1.000]"
+    },
+    "rec": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_test.json",
+      "path": [
+       "models",
+       "W_rf_generic",
+       "subsets",
+       "test_blocks",
+       "recall_any"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9988888888888889,
+     "text": "0.999"
+    },
+    "recci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_test.json",
+      "path": [
+       "models",
+       "W_rf_generic",
+       "subsets",
+       "test_blocks",
+       "ci95",
+       "recall_any"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.9963545775163798,
+      1.0
+     ],
+     "text": "[0.996, 1.000]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_test.json",
+      "path": [
+       "models",
+       "W_rf_generic",
+       "subsets",
+       "test_blocks",
+       "fpr"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.0,
+     "text": "0.000"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_test.json",
+      "path": [
+       "models",
+       "W_rf_generic",
+       "subsets",
+       "test_blocks",
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999198359433259,
+     "text": "1.000"
+    },
+    "nrfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_test.json",
+      "path": [
+       "models",
+       "W_rf_generic",
+       "subsets",
+       "normal_run_test",
+       "fpr"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.011904761904761904,
+     "text": "0.012"
+    },
+    "sf1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_f1op.json",
+      "path": [
+       "carhacking|W_rf_generic|test_blocks",
+       "test_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9994441356309061,
+     "text": "0.999"
+    },
+    "sfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_f1op.json",
+      "path": [
+       "carhacking|W_rf_generic|test_blocks",
+       "test_fpr"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.0,
+     "text": "0.000"
+    },
+    "ctl_g": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_selection.json",
+      "path": [
+       "controls",
+       "W_rf_generic",
+       "shuffled_auc_window"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.48678272082527396,
+     "text": "0.49"
+    },
+    "ctl_w": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_carhacking_control2.json",
+      "path": [
+       "units",
+       "W_rf_generic",
+       "within_capture_shuffled_auc"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.8877375579503238,
+     "text": "0.89"
+    },
+    "segauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_regime.json",
+      "path": [
+       "carhacking|W_rf_generic|test_blocks",
+       "auc_attack_vs_normal_same_segments"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9998675710594316,
+     "text": "1.000"
+    }
+   }
+  },
+  {
+   "id": "CAN_ROAD",
+   "domain": "CAN",
+   "dataset": "ROAD (ORNL), 10 classes (fabrication + masquerade)",
+   "protocol": "capture-level split (WP2), 1 s windows from a frame XGBoost; 13 test captures, 9 with attacks (locks/WP9_road.json); coolant family only in test (separate unseen row)",
+   "leak": "leak-free by capture; but ambient vs attack captures differ in regime (shortcut learnable, see caveats)",
+   "verdict": "comparable-not-like-for-like",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Guerra et al.: multiclass LCCDE mean F1 0.3212, DCNN 0.65-0.75, LSTM 1.0 on all classes (red flag); split random-or-not NOT stated, Accelerator captures excluded.",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      7,
+      "0.3212"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      7,
+      "0.6514"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      7,
+      "0.7468"
+     ]
+    ],
+    "b0": [
+     7
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci}; attack F1 {af1}; FPR {fpr} {fprci}; recall {rec}; AUC {auc}; 9/9 attack captures alarmed; masquerade recall reverse_light_off {rl_off}, reverse_light_on {rl_on}",
+    "op": "H = 1% val budget (headline); S = val-F1-optimal: attack F1 {sf1}, FPR {sfpr}",
+    "caveats": "Own rule NOT MET (FPR > 2%, masquerade recall low). Shuffled-label control FAILS (global AUC {ctl_g}) and within-capture AUC {ctl_w}: capture regime predicts attack-bearing. Normal windows next to attacks alarm {fpr_att} vs {fpr_amb} on ambient captures. Coolant (unseen family) recall {cool}, kept out of this row."
+   },
+   "cells": {
+    "ours": "macro-F1 0.829 [0.724, 0.996]; attack F1 0.836; FPR 3.2% [0.0%, 15.7%]; recall 0.858; AUC 0.973; 9/9 attack captures alarmed; masquerade recall reverse_light_off 0.48, reverse_light_on 0.00",
+    "op": "H = 1% val budget (headline); S = val-F1-optimal: attack F1 0.856, FPR 2.3%",
+    "caveats": "Own rule NOT MET (FPR > 2%, masquerade recall low). Shuffled-label control FAILS (global AUC 0.28) and within-capture AUC 0.88: capture regime predicts attack-bearing. Normal windows next to attacks alarm 13.8% vs 1.7% on ambient captures. Coolant (unseen family) recall 0.00, kept out of this row."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8285316197084438,
+     "text": "0.829"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "ci95",
+       "macro_f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.7235677444064968,
+      0.9964612046080612
+     ],
+     "text": "[0.724, 0.996]"
+    },
+    "af1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "f1_attack_binary"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8362919132149902,
+     "text": "0.836"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.031978680879413725,
+     "text": "3.2%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "ci95",
+       "fpr"
+      ],
+      "fmt": "cipct1"
+     },
+     "value": [
+      0.0,
+      0.15721378115420495
+     ],
+     "text": "[0.0%, 15.7%]"
+    },
+    "rec": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "recall_any"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8582995951417004,
+     "text": "0.858"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9727671430921895,
+     "text": "0.973"
+    },
+    "rl_off": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "per_class_recall",
+       "7"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.48,
+     "text": "0.48"
+    },
+    "rl_on": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "test",
+       "per_class_recall",
+       "9"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.0,
+     "text": "0.00"
+    },
+    "sf1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_f1op.json",
+      "path": [
+       "road|Fb|test",
+       "test_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8559837728194726,
+     "text": "0.856"
+    },
+    "sfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_f1op.json",
+      "path": [
+       "road|Fb|test",
+       "test_fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.023317788141239172,
+     "text": "2.3%"
+    },
+    "ctl_g": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_selection.json",
+      "path": [
+       "controls",
+       "Fb",
+       "shuffled_auc_frame"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.28059383166739144,
+     "text": "0.28"
+    },
+    "ctl_w": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_control2.json",
+      "path": [
+       "units",
+       "Fb",
+       "within_capture_shuffled_auc"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.8807844886512759,
+     "text": "0.88"
+    },
+    "fpr_att": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "fpr_context",
+       "normal_windows_in_attack_captures"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.13756613756613756,
+     "text": "13.8%"
+    },
+    "fpr_amb": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "fpr_context",
+       "ambient_captures"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.01676829268292683,
+     "text": "1.7%"
+    },
+    "cool": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_road_test.json",
+      "path": [
+       "models",
+       "Fb",
+       "subsets",
+       "unseen_family",
+       "recall_any"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.0,
+     "text": "0.00"
+    }
+   }
+  },
+  {
+   "id": "CAN_D11K",
+   "domain": "CAN",
+   "dataset": "can-train-and-test (D11), known vehicle + known attacks (test_01), 4 sets",
+   "protocol": "capture-disjoint train/val/test per set (WP2 splits_d11.json, locks/WP9_d11.json), 1 s windows; chosen model per set on validation",
+   "leak": "leak-free by capture (same protocol family as the bar); captures of one vehicle in train and test",
+   "verdict": "below",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Lampe and Meng (arXiv 2308.04972) set_01 test1: F1 0.9878 (LogReg), 0.9834 (BIRCH), 0.9811 (MLP); capture-disjoint, unit not stated, mean over 18 learners 0.42-0.46.",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      9,
+      "0.9878"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      9,
+      "0.9834"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      9,
+      "0.9811"
+     ]
+    ],
+    "b0": [
+     9,
+     10
+    ]
+   },
+   "templates": {
+    "ours": "attack F1 mean over 4 sets {f1h}; set_01 {s1f1} {s1ci}, FPR {s1fpr}; AUC mean {aucm}",
+    "op": "H = 1% val budget (headline); S = val-F1-optimal (reported after H): mean {f1s} over sets (per set {f1s1} / {f1s2} / {f1s3} / {f1s4})",
+    "caveats": "Own rule NOT MET at the 1% budget. Unit differs (1 s window vs unstated). Shuffled-label control FAILS for most D11 units (set_01 global AUC {ctl_g}, within-capture {ctl_w}): capture regime is learnable; state this wherever D11 seen rows are used. test_03/04 are UNSEEN-attack rows (not here)."
+   },
+   "cells": {
+    "ours": "attack F1 mean over 4 sets 0.801; set_01 0.723 [0.583, 0.827], FPR 1.9%; AUC mean 0.980",
+    "op": "H = 1% val budget (headline); S = val-F1-optimal (reported after H): mean 0.875 over sets (per set 0.964 / 0.571 / 0.985 / 0.979)",
+    "caveats": "Own rule NOT MET at the 1% budget. Unit differs (1 s window vs unstated). Shuffled-label control FAILS for most D11 units (set_01 global AUC 0.16, within-capture 0.72): capture regime is learnable; state this wherever D11 seen rows are used. test_03/04 are UNSEEN-attack rows (not here)."
+   },
+   "fields": {
+    "f1h": {
+     "spec": {
+      "kind": "mean",
+      "srcs": [
+       {
+        "file": "results/WP9/B1_d11_set_01_test.json",
+        "path": [
+         "models",
+         "W_xgb_a_ids",
+         "subsets",
+         "test_01",
+         "f1_attack_binary"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_02_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_01",
+         "f1_attack_binary"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_03_test.json",
+        "path": [
+         "models",
+         "F_noid",
+         "subsets",
+         "test_01",
+         "f1_attack_binary"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_04_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_01",
+         "f1_attack_binary"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8013520002711404,
+     "text": "0.801"
+    },
+    "s1f1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_d11_set_01_test.json",
+      "path": [
+       "models",
+       "W_xgb_a_ids",
+       "subsets",
+       "test_01",
+       "f1_attack_binary"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.7232472324723247,
+     "text": "0.723"
+    },
+    "s1ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_d11_set_01_test.json",
+      "path": [
+       "models",
+       "W_xgb_a_ids",
+       "subsets",
+       "test_01",
+       "ci95",
+       "f1_attack_binary"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.5829713171818435,
+      0.8270046937920538
+     ],
+     "text": "[0.583, 0.827]"
+    },
+    "s1fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_d11_set_01_test.json",
+      "path": [
+       "models",
+       "W_xgb_a_ids",
+       "subsets",
+       "test_01",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.018967334035827187,
+     "text": "1.9%"
+    },
+    "aucm": {
+     "spec": {
+      "kind": "mean",
+      "srcs": [
+       {
+        "file": "results/WP9/B1_d11_set_01_test.json",
+        "path": [
+         "models",
+         "W_xgb_a_ids",
+         "subsets",
+         "test_01",
+         "auc"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_02_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_01",
+         "auc"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_03_test.json",
+        "path": [
+         "models",
+         "F_noid",
+         "subsets",
+         "test_01",
+         "auc"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_04_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_01",
+         "auc"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9800532089018912,
+     "text": "0.980"
+    },
+    "f1s": {
+     "spec": {
+      "kind": "mean",
+      "srcs": [
+       {
+        "file": "results/WP9/B1_f1op.json",
+        "path": [
+         "d11_set_01|W_xgb_a_ids|test_01",
+         "test_f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_f1op.json",
+        "path": [
+         "d11_set_02|E|test_01",
+         "test_f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_f1op.json",
+        "path": [
+         "d11_set_03|F_noid|test_01",
+         "test_f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_f1op.json",
+        "path": [
+         "d11_set_04|E|test_01",
+         "test_f1"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8750070574709703,
+     "text": "0.875"
+    },
+    "f1s1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_f1op.json",
+      "path": [
+       "d11_set_01|W_xgb_a_ids|test_01",
+       "test_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9641025641025642,
+     "text": "0.964"
+    },
+    "f1s2": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_f1op.json",
+      "path": [
+       "d11_set_02|E|test_01",
+       "test_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.5714285714285714,
+     "text": "0.571"
+    },
+    "f1s3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_f1op.json",
+      "path": [
+       "d11_set_03|F_noid|test_01",
+       "test_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9853862212943633,
+     "text": "0.985"
+    },
+    "f1s4": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_f1op.json",
+      "path": [
+       "d11_set_04|E|test_01",
+       "test_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9791108730583825,
+     "text": "0.979"
+    },
+    "ctl_g": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_d11_set_01_selection.json",
+      "path": [
+       "controls",
+       "W_xgb_a_ids",
+       "shuffled_auc_window"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.16273674132752725,
+     "text": "0.16"
+    },
+    "ctl_w": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B1_d11_set_01_control2.json",
+      "path": [
+       "units",
+       "W_xgb_a_ids",
+       "within_capture_shuffled_auc"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.7201568881785684,
+     "text": "0.72"
+    }
+   }
+  },
+  {
+   "id": "CAN_D11U",
+   "domain": "CAN",
+   "dataset": "can-train-and-test (D11), UNKNOWN vehicle + known attacks (test_02), 4 sets",
+   "protocol": "as above, thresholds calibrated on the known vehicle only",
+   "leak": "leak-free by capture and by vehicle",
+   "verdict": "below",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Lampe and Meng test2 (unknown vehicle): F1 0.9620 (BIRCH), 0.9594 (MLP), 0.9539 (LogReg).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      9,
+      "0.9620"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      9,
+      "0.9594"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      9,
+      "0.9539"
+     ]
+    ],
+    "b0": [
+     9
+    ]
+   },
+   "templates": {
+    "ours": "attack F1 mean {f1}; FPR min {fpr_min}, max {fpr_max} over the 4 sets; AUC mean {aucm}",
+    "op": "H = 1% val budget calibrated on the KNOWN vehicle (no on-vehicle calibration)",
+    "caveats": "Every normal window alarms (FPR 1.0): zero-shot vehicle fails with a threshold from another vehicle (same as v3 WP2). On-vehicle calibration needs benign data of the new vehicle; not tried in WP9."
+   },
+   "cells": {
+    "ours": "attack F1 mean 0.116; FPR min 1.00, max 1.00 over the 4 sets; AUC mean 0.723",
+    "op": "H = 1% val budget calibrated on the KNOWN vehicle (no on-vehicle calibration)",
+    "caveats": "Every normal window alarms (FPR 1.0): zero-shot vehicle fails with a threshold from another vehicle (same as v3 WP2). On-vehicle calibration needs benign data of the new vehicle; not tried in WP9."
+   },
+   "fields": {
+    "f1": {
+     "spec": {
+      "kind": "mean",
+      "srcs": [
+       {
+        "file": "results/WP9/B1_d11_set_01_test.json",
+        "path": [
+         "models",
+         "W_xgb_a_ids",
+         "subsets",
+         "test_02",
+         "f1_attack_binary"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_02_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_02",
+         "f1_attack_binary"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_03_test.json",
+        "path": [
+         "models",
+         "F_noid",
+         "subsets",
+         "test_02",
+         "f1_attack_binary"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_04_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_02",
+         "f1_attack_binary"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.11638606950161515,
+     "text": "0.116"
+    },
+    "fpr_min": {
+     "spec": {
+      "kind": "min",
+      "srcs": [
+       {
+        "file": "results/WP9/B1_d11_set_01_test.json",
+        "path": [
+         "models",
+         "W_xgb_a_ids",
+         "subsets",
+         "test_02",
+         "fpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_02_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_02",
+         "fpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_03_test.json",
+        "path": [
+         "models",
+         "F_noid",
+         "subsets",
+         "test_02",
+         "fpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_04_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_02",
+         "fpr"
+        ]
+       }
+      ],
+      "fmt": "f2"
+     },
+     "value": 1.0,
+     "text": "1.00"
+    },
+    "fpr_max": {
+     "spec": {
+      "kind": "max",
+      "srcs": [
+       {
+        "file": "results/WP9/B1_d11_set_01_test.json",
+        "path": [
+         "models",
+         "W_xgb_a_ids",
+         "subsets",
+         "test_02",
+         "fpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_02_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_02",
+         "fpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_03_test.json",
+        "path": [
+         "models",
+         "F_noid",
+         "subsets",
+         "test_02",
+         "fpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_04_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_02",
+         "fpr"
+        ]
+       }
+      ],
+      "fmt": "f2"
+     },
+     "value": 1.0,
+     "text": "1.00"
+    },
+    "aucm": {
+     "spec": {
+      "kind": "mean",
+      "srcs": [
+       {
+        "file": "results/WP9/B1_d11_set_01_test.json",
+        "path": [
+         "models",
+         "W_xgb_a_ids",
+         "subsets",
+         "test_02",
+         "auc"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_02_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_02",
+         "auc"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_03_test.json",
+        "path": [
+         "models",
+         "F_noid",
+         "subsets",
+         "test_02",
+         "auc"
+        ]
+       },
+       {
+        "file": "results/WP9/B1_d11_set_04_test.json",
+        "path": [
+         "models",
+         "E",
+         "subsets",
+         "test_02",
+         "auc"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.7228744269425175,
+     "text": "0.723"
+    }
+   }
+  },
+  {
+   "id": "NET_D10o_T",
+   "domain": "network",
+   "dataset": "CICIDS2017, original CICFlowMeter labels (known errors)",
+   "protocol": "time block per period, 65-80% test, dedup (T)",
+   "leak": "leak-free by time; no row in the v3 D10 test",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Moczkodan and Ragab (arXiv 2606.11098), original labels, no dedup, 13 classes: RF on last flow, 5-tuple group 80/20 macro-F1 0.778; headline 0.89 is a non-padded-window subset only; time split degenerate (2 classes in test). Time-split bar is degenerate.",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      15,
+      "0.89"
+     ],
+     [
+      "reports/WP9_B2.md",
+      null,
+      "0.778"
+     ]
+    ],
+    "b0": [
+     15
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "Bar has no usable time-split number. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.838 [0.719, 0.905] over 11 classes (all present classes 0.709); FPR 0.078% [0.059%, 0.099%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 0.999 at the 1% val budget (realised test FPR 0.68%). ",
+    "caveats": "Bar has no usable time-split number. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = yes (max shuffled AUC 0.52). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8377002504316722,
+     "text": "0.838"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.718814793635158,
+      0.9050329228089168
+     ],
+     "text": "[0.719, 0.905]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 0.0007820329820511507,
+     "text": "0.078%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      0.0005889546191113259,
+      0.0009862402513452467
+     ],
+     "text": "[0.059%, 0.099%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999625198027856,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9993144151663288,
+     "text": "0.999"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.0067915388586874,
+     "text": "0.68%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 11,
+     "text": "11"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.7088232888267996,
+     "text": "0.709"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": true,
+     "text": "yes"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.5165164835950109,
+     "text": "0.52"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "T"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 296975,
+     "text": "296,975"
+    }
+   }
+  },
+  {
+   "id": "NET_D10o_G",
+   "domain": "network",
+   "dataset": "CICIDS2017, original CICFlowMeter labels (known errors)",
+   "protocol": "5-tuple group 70/10/20 (the Moczkodan and Ragab protocol), dedup (G)",
+   "leak": "leak-free by 5-tuple group; time overlaps; 90,068 test rows are v3 D10 test rows (no v3 model reused)",
+   "verdict": "comparable-not-like-for-like",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Moczkodan and Ragab (arXiv 2606.11098), original labels, no dedup, 13 classes: RF on last flow, 5-tuple group 80/20 macro-F1 0.778; headline 0.89 is a non-padded-window subset only; time split degenerate (2 classes in test).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      15,
+      "0.89"
+     ],
+     [
+      "reports/WP9_B2.md",
+      null,
+      "0.778"
+     ]
+    ],
+    "b0": [
+     15
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "Same labels and group protocol as the bar RF 0.778, but our class set is 12 classes with >= 20 flows (bar keeps 13) and we deduplicate (bar does not): not like-for-like. Bot precision 0.56 on original labels = label noise. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.894 [0.832, 0.926] over 12 classes (all present classes 0.863); FPR 0.118% [0.097%, 0.142%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 1.30%). ",
+    "caveats": "Same labels and group protocol as the bar RF 0.778, but our class set is 12 classes with >= 20 flows (bar keeps 13) and we deduplicate (bar does not): not like-for-like. Bot precision 0.56 on original labels = label noise. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = yes (max shuffled AUC 0.52). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8935741671423288,
+     "text": "0.894"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.831656493590026,
+      0.9256567214772828
+     ],
+     "text": "[0.832, 0.926]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 0.001182343304981015,
+     "text": "0.118%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      0.0009681611444002675,
+      0.0014220882383776778
+     ],
+     "text": "[0.097%, 0.142%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999914723715286,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.999938491819412,
+     "text": "1.000"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.012997488901719093,
+     "text": "1.30%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 12,
+     "text": "12"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8632992312083035,
+     "text": "0.863"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": true,
+     "text": "yes"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.5249423042261644,
+     "text": "0.52"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "G"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 427025,
+     "text": "427,025"
+    }
+   }
+  },
+  {
+   "id": "NET_D10o_B",
+   "domain": "network",
+   "dataset": "CICIDS2017, original CICFlowMeter labels (known errors)",
+   "protocol": "5-min block group (stricter than the bar), dedup (B)",
+   "leak": "leak-free by 5-minute block group; 56,087 test rows are v3 D10 test rows",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "no bar at this strictness (strictest published: 5-tuple group, see G row).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      15,
+      "0.89"
+     ],
+     [
+      "reports/WP9_B2.md",
+      null,
+      "0.778"
+     ]
+    ],
+    "b0": [
+     15
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.876 [0.697, 0.952] over 12 classes (all present classes 0.851); FPR 0.079% [0.053%, 0.109%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 0.88%). ",
+    "caveats": "Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = yes (max shuffled AUC 0.52). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8756521250009461,
+     "text": "0.876"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.6974106993909628,
+      0.9524097950481801
+     ],
+     "text": "[0.697, 0.952]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 0.0007913587408883149,
+     "text": "0.079%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      0.0005295003846465113,
+      0.0010922785497337938
+     ],
+     "text": "[0.053%, 0.109%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999802663158471,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9998445289746167,
+     "text": "1.000"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.00880268368350695,
+     "text": "0.88%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 12,
+     "text": "12"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8505589642865253,
+     "text": "0.851"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": true,
+     "text": "yes"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.5187745607157199,
+     "text": "0.52"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10o",
+        "protocol": "B"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 413657,
+     "text": "413,657"
+    }
+   }
+  },
+  {
+   "id": "NET_D10e_T",
+   "domain": "network",
+   "dataset": "CICIDS2017, corrected labels (Engelen 2021)",
+   "protocol": "time block per period, dedup (T)",
+   "leak": "leak-free by time",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "no bar on corrected labels (bar uses original labels).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      12,
+      "20%"
+     ]
+    ],
+    "b0": [
+     12
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "Corrected labels shrink the hard Web classes (12-151 flows), most fall below the support rule: a main reason the macro-F1 is higher. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.918 [0.865, 1.000] over 9 classes (all present classes 0.812); FPR 0.006% [0.001%, 0.013%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 0.76%). ",
+    "caveats": "Corrected labels shrink the hard Web classes (12-151 flows), most fall below the support rule: a main reason the macro-F1 is higher. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = yes (max shuffled AUC 0.53). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9178039732565766,
+     "text": "0.918"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.8654795576816117,
+      0.999986717919491
+     ],
+     "text": "[0.865, 1.000]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 6.233183390647046e-05,
+     "text": "0.006%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      1.1343693647153374e-05,
+      0.00013025501232747923
+     ],
+     "text": "[0.001%, 0.013%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999968542607204,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999243741964758,
+     "text": "1.000"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.007583706458616856,
+     "text": "0.76%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 9,
+     "text": "9"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8115365841796234,
+     "text": "0.812"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": true,
+     "text": "yes"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.5295549851511598,
+     "text": "0.53"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "T"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 218975,
+     "text": "218,975"
+    }
+   }
+  },
+  {
+   "id": "NET_D10e_G",
+   "domain": "network",
+   "dataset": "CICIDS2017, corrected labels (Engelen 2021)",
+   "protocol": "5-tuple group 70/10/20, dedup (G)",
+   "leak": "leak-free by 5-tuple group",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "no bar on corrected labels (bar uses original labels).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      12,
+      "20%"
+     ]
+    ],
+    "b0": [
+     12
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "The selected model is a random forest: the registered shuffled-label AUC rule FAILED (10-seed AUC 0.558, macro-F1 0.086). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.996 [0.977, 0.998] over 10 classes (all present classes 0.948); FPR 0.008% [0.004%, 0.014%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 1.08%). ",
+    "caveats": "The selected model is a random forest: the registered shuffled-label AUC rule FAILED (10-seed AUC 0.558, macro-F1 0.086). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.62). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.995923927888688,
+     "text": "0.996"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.9766198241280677,
+      0.997788307221699
+     ],
+     "text": "[0.977, 0.998]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 8.20408787324256e-05,
+     "text": "0.008%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      3.732769481391285e-05,
+      0.00014185728819893494
+     ],
+     "text": "[0.004%, 0.014%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999789599515656,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999421072944809,
+     "text": "1.000"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.010762271637349483,
+     "text": "1.08%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 10,
+     "text": "10"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9481374709694425,
+     "text": "0.948"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": false,
+     "text": "no"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.623913203148047,
+     "text": "0.62"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "G"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 319979,
+     "text": "319,979"
+    }
+   }
+  },
+  {
+   "id": "NET_D10e_B",
+   "domain": "network",
+   "dataset": "CICIDS2017, corrected labels (Engelen 2021)",
+   "protocol": "5-min block group, dedup (B)",
+   "leak": "leak-free by 5-minute block group",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "no bar on corrected labels (bar uses original labels).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      12,
+      "20%"
+     ]
+    ],
+    "b0": [
+     12
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.937 [0.896, 0.995] over 11 classes (all present classes 0.906); FPR 0.007% [0.002%, 0.013%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 0.998 at the 1% val budget (realised test FPR 0.89%). ",
+    "caveats": "Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = yes (max shuffled AUC 0.54). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.937273447811518,
+     "text": "0.937"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.8957454677851947,
+      0.9948360122078089
+     ],
+     "text": "[0.896, 0.995]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 6.989027227255473e-05,
+     "text": "0.007%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      2.1114671188821042e-05,
+      0.00013374530045845155
+     ],
+     "text": "[0.002%, 0.013%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999691708309228,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9981852663244286,
+     "text": "0.998"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.008891041065527122,
+     "text": "0.89%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 11,
+     "text": "11"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9058980455841049,
+     "text": "0.906"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": true,
+     "text": "yes"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.5367959369854861,
+     "text": "0.54"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D10e",
+        "protocol": "B"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 261480,
+     "text": "261,480"
+    }
+   }
+  },
+  {
+   "id": "NET_D23_T",
+   "domain": "network",
+   "dataset": "CSE-CIC-IDS2018, corrected (Liu 2022 release)",
+   "protocol": "time block per period, dedup, benign 1-in-10 sample weighted 10 (T)",
+   "leak": "leak-free by time",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "none: no leak-free published number for CSE-CIC-IDS2018 (B0).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      20,
+      "random vs temporal"
+     ]
+    ],
+    "b0": [
+     20
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "Our numbers are the first leak-free numbers we know of; no bar to compare. Random-forest shuffled-label AUC rule FAILS (XGB control 0.52-0.60: density-structure effect, hypothesis untested). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.926 [0.862, 0.986] over 11 classes (all present classes 0.880); FPR 0.056% [0.048%, 0.063%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 1.07%). ",
+    "caveats": "Our numbers are the first leak-free numbers we know of; no bar to compare. Random-forest shuffled-label AUC rule FAILS (XGB control 0.52-0.60: density-structure effect, hypothesis untested). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.58). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9257403665804584,
+     "text": "0.926"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.8616188618409347,
+      0.9858150535021537
+     ],
+     "text": "[0.862, 0.986]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 0.0005551360826888674,
+     "text": "0.056%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      0.0004841118973392372,
+      0.0006269772730425782
+     ],
+     "text": "[0.048%, 0.063%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999986555069372,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 1.0,
+     "text": "1.000"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.010678108638148753,
+     "text": "1.07%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 11,
+     "text": "11"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8798251881811128,
+     "text": "0.880"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": false,
+     "text": "no"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.5775884035147328,
+     "text": "0.58"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "T"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 947073,
+     "text": "947,073"
+    }
+   }
+  },
+  {
+   "id": "NET_D23_G",
+   "domain": "network",
+   "dataset": "CSE-CIC-IDS2018, corrected (Liu 2022 release)",
+   "protocol": "5-tuple group 70/10/20, dedup (G)",
+   "leak": "leak-free by 5-tuple group",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "none: no leak-free published number for CSE-CIC-IDS2018 (B0).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      20,
+      "random vs temporal"
+     ]
+    ],
+    "b0": [
+     20
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Infiltration-NMAP precision 0.18-0.36 (benign scans). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.945 [0.918, 0.961] over 13 classes (all present classes 0.886); FPR 0.063% [0.057%, 0.069%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 1.02%). ",
+    "caveats": "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Infiltration-NMAP precision 0.18-0.36 (benign scans). Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.67). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9451921014378891,
+     "text": "0.945"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.9183441346191773,
+      0.96117794865126
+     ],
+     "text": "[0.918, 0.961]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 0.000630989896950318,
+     "text": "0.063%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      0.0005732343360794173,
+      0.0006916324200471003
+     ],
+     "text": "[0.057%, 0.069%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999996705517108,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999956608898647,
+     "text": "1.000"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.010223238216113439,
+     "text": "1.02%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 13,
+     "text": "13"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8859599534055762,
+     "text": "0.886"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": false,
+     "text": "no"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.6668360684984045,
+     "text": "0.67"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "G"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 1523412,
+     "text": "1,523,412"
+    }
+   }
+  },
+  {
+   "id": "NET_D23_B",
+   "domain": "network",
+   "dataset": "CSE-CIC-IDS2018, corrected (Liu 2022 release)",
+   "protocol": "5-min block group, dedup (B)",
+   "leak": "leak-free by 5-minute block group",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "none: no leak-free published number for CSE-CIC-IDS2018 (B0).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      20,
+      "random vs temporal"
+     ]
+    ],
+    "b0": [
+     20
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci} over {nel} classes (all present classes {allp}); FPR {fpr} {fprci}; AUC {auc}",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection {det1} at the 1% val budget (realised test FPR {fpr1}). ",
+    "caveats": "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = {ctl} (max shuffled AUC {ctlauc}). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "cells": {
+    "ours": "macro-F1 0.945 [0.911, 0.959] over 12 classes (all present classes 0.886); FPR 0.065% [0.054%, 0.078%]; AUC 1.000",
+    "op": "argmax multiclass (macro-F1, FPR); binary detection 1.000 at the 1% val budget (realised test FPR 1.01%). ",
+    "caveats": "First leak-free numbers we know of; no bar. Random-forest shuffled-label AUC rule FAILS. Controls: macro-F1 shuffled-label passes everywhere; registered AUC rule: control passed = no (max shuffled AUC 0.60). All CICIDS-family splits are in-distribution (same campaigns on both sides) and AUC ~1.0: these datasets are known to be trivially separable (Engelen 2021, Arp 2022)."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9447008107384045,
+     "text": "0.945"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "macro_f1_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.9114493555692312,
+      0.9590221792036001
+     ],
+     "text": "[0.911, 0.959]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "fpr"
+      ],
+      "fmt": "pct3"
+     },
+     "value": 0.000650278194856968,
+     "text": "0.065%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "fpr_ci"
+      ],
+      "fmt": "cipct3"
+     },
+     "value": [
+      0.0005406222142807088,
+      0.0007767240515010154
+     ],
+     "text": "[0.054%, 0.078%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999968256842396,
+     "text": "1.000"
+    },
+    "det1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "det1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999781051304059,
+     "text": "1.000"
+    },
+    "fpr1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "fpr1"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.010134110744568534,
+     "text": "1.01%"
+    },
+    "nel": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "n_eligible"
+      ],
+      "fmt": "int"
+     },
+     "value": 12,
+     "text": "12"
+    },
+    "allp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "macro_f1_all_present"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8856364092043467,
+     "text": "0.886"
+    },
+    "ctl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "control_pass"
+      ],
+      "fmt": "bool"
+     },
+     "value": false,
+     "text": "no"
+    },
+    "ctlauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "control_auc_max"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.6031484308650864,
+     "text": "0.60"
+    },
+    "rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B2_summary.json",
+      "path": [
+       "rows",
+       {
+        "table": "D23x",
+        "protocol": "B"
+       },
+       "test_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 1004186,
+     "text": "1,004,186"
+    }
+   }
+  },
+  {
+   "id": "V2X_ALL",
+   "domain": "V2X",
+   "dataset": "VeReMi Extension (D12), genuine + all 19 attack types, message level",
+   "protocol": "1800 s time blocks of ONE simulation (23 train / 7 val / 8 test), H31's 10 WP5 blocks excluded (locks/WP9_veremi.json)",
+   "leak": "leak-free by time block (no sender on air in two parts); but one simulation, one map, one day pattern",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "none comparable: published VeReMi Extension numbers are DoS family only (5 types), 70/30 per dataset.",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      22,
+      "DoS family only"
+     ]
+    ],
+    "b0": [
+     22,
+     23
+    ]
+   },
+   "templates": {
+    "ours": "macro-F1 {mf} {mfci}; binary F1 {bf1}; FPR {fpr} {fprci}; AUC {auc}; mean alarm recall {mar}",
+    "op": "H = 1% val budget (headline); S = val-F1-optimal (secondary): macro-F1 {smf}, FPR {sfpr}",
+    "caveats": "Failed controls as written: within-block sender permutation {c_perm} and proxy-only {c_proxy} (band 0.42-0.58); explanation: pseudonym id carries churn (alone {c_ps}), group-permutation nulls are not centred on 0.5 (0.34-0.52). Row-shuffle control {c_row} passes. Raw x,y,speed make the model map-specific (ConstPosOffset recall {cpo}). Class 12 is a placeholder artefact. In-distribution benchmark only."
+   },
+   "cells": {
+    "ours": "macro-F1 0.917 [0.911, 0.923]; binary F1 0.968; FPR 1.04% [0.82%, 1.23%]; AUC 0.983; mean alarm recall 0.957",
+    "op": "H = 1% val budget (headline); S = val-F1-optimal (secondary): macro-F1 0.918, FPR 0.17%",
+    "caveats": "Failed controls as written: within-block sender permutation 0.377 and proxy-only 0.638 (band 0.42-0.58); explanation: pseudonym id carries churn (alone 0.629), group-permutation nulls are not centred on 0.5 (0.34-0.52). Row-shuffle control 0.496 passes. Raw x,y,speed make the model map-specific (ConstPosOffset recall 0.63). Class 12 is a placeholder artefact. In-distribution benchmark only."
+   },
+   "fields": {
+    "mf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9171732003446896,
+     "text": "0.917"
+    },
+    "mfci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "ci95",
+       "macro_f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.9112282727618638,
+      0.9226997025682476
+     ],
+     "text": "[0.911, 0.923]"
+    },
+    "bf1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "binary.f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9684044445038709,
+     "text": "0.968"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "fpr"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.01040087961724763,
+     "text": "1.04%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "ci95",
+       "fpr"
+      ],
+      "fmt": "cipct2"
+     },
+     "value": [
+      0.00822487049381942,
+      0.012316475539312016
+     ],
+     "text": "[0.82%, 1.23%]"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9826149407353592,
+     "text": "0.983"
+    },
+    "mar": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "mean_alarm_recall"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9571496255045174,
+     "text": "0.957"
+    },
+    "smf": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "S_valF1opt",
+       "point",
+       "macro_f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9179063585599527,
+     "text": "0.918"
+    },
+    "sfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "S_valF1opt",
+       "point",
+       "fpr"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.001732489376244391,
+     "text": "0.17%"
+    },
+    "c_perm": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_controls.json",
+      "path": [
+       "units",
+       "chosen_within_block_sender_permutation",
+       "val_auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.37673355754367155,
+     "text": "0.377"
+    },
+    "c_proxy": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_controls.json",
+      "path": [
+       "units",
+       "proxy_only_t_sender_pseudo",
+       "val_auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.638363073990672,
+     "text": "0.638"
+    },
+    "c_ps": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_proxy_diag.json",
+      "path": [
+       "pseudo_only"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.6287908461162549,
+     "text": "0.629"
+    },
+    "c_row": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_controls.json",
+      "path": [
+       "units",
+       "chosen_shuffled_rows",
+       "val_auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.49591844789899775,
+     "text": "0.496"
+    },
+    "cpo": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "alarm_recall.2"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.6326054113445956,
+     "text": "0.63"
+    }
+   }
+  },
+  {
+   "id": "V2X_DOS_M",
+   "domain": "V2X",
+   "dataset": "VeReMi Extension (D12), DoS family (13, 14, 15, 18, 19), prevalence-matched 70 % genuine / 30 % attack",
+   "protocol": "as above; genuine re-weighted so the sender mix equals the bar's 70/30",
+   "leak": "stricter than the bar (block-disjoint in time; bar = 70/30 inside each dataset, per vehicle)",
+   "verdict": "equal",
+   "flags": {
+    "same_data": true,
+    "same_or_stricter": true,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "F1 0.93-0.998 (Baharlouei 2024; Asensio-Garriga as cited: 99.06 DoS, 99.77 DoSRandom, 97.97 DoSDisruptive, 94.46 Random Sybil, 92.56 Disruptive Sybil), 70/30 inside each dataset, dedup not stated.",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      23,
+      "99.06"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      23,
+      "99.77"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      23,
+      "92.56"
+     ]
+    ],
+    "b0": [
+     22,
+     23
+    ]
+   },
+   "templates": {
+    "ours": "F1 per type {dmin}-{dmax}, pooled {dpool} {dpoolci}; recall pooled {drec}",
+    "op": "H = 1% val budget",
+    "caveats": "Inside the bar range, not above it: no 'better'. Same failed controls as V2X_ALL (sender permutation, proxy-only) apply; one simulation, one map."
+   },
+   "cells": {
+    "ours": "F1 per type 0.992-0.996, pooled 0.995 [0.994, 0.996]; recall pooled 0.999",
+    "op": "H = 1% val budget",
+    "caveats": "Inside the bar range, not above it: no 'better'. Same failed controls as V2X_ALL (sender permutation, proxy-only) apply; one simulation, one map."
+   },
+   "fields": {
+    "dmin": {
+     "spec": {
+      "kind": "min",
+      "srcs": [
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.13.matched.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.14.matched.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.15.matched.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.18.matched.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.19.matched.f1"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9918787625525949,
+     "text": "0.992"
+    },
+    "dmax": {
+     "spec": {
+      "kind": "max",
+      "srcs": [
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.13.matched.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.14.matched.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.15.matched.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.18.matched.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.19.matched.f1"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9961304377332667,
+     "text": "0.996"
+    },
+    "dpool": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "dos.pooled.matched.f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9947351679136688,
+     "text": "0.995"
+    },
+    "dpoolci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "ci95",
+       "dos.pooled.matched.f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.9941052121043338,
+      0.995546142496889
+     ],
+     "text": "[0.994, 0.996]"
+    },
+    "drec": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "dos.pooled.matched.recall"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9987679256715815,
+     "text": "0.999"
+    }
+   }
+  },
+  {
+   "id": "V2X_DOS_N",
+   "domain": "V2X",
+   "dataset": "VeReMi Extension (D12), DoS family, natural (mixed-CSV) prevalence",
+   "protocol": "as above; no re-weighting (59% genuine traffic)",
+   "leak": "leak-free by time block",
+   "verdict": "comparable-not-like-for-like",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "F1 0.93-0.998 at the bar's 70/30 prevalence.",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      23,
+      "99.06"
+     ]
+    ],
+    "b0": [
+     22,
+     23
+    ]
+   },
+   "templates": {
+    "ours": "F1 per type {dmin}-{dmax} (H), pooled {dpool}; precision pooled {dprec}",
+    "op": "H = 1% val budget; at S (val-F1-optimal) F1 per type {smin}-{smax}, pooled {spool}",
+    "caveats": "Prevalence differs from the bar: the 1% FPR on abundant genuine traffic lowers precision (two types below 0.93 at H). Shows what the prevalence matching changes."
+   },
+   "cells": {
+    "ours": "F1 per type 0.890-0.935 (H), pooled 0.982; precision pooled 0.966",
+    "op": "H = 1% val budget; at S (val-F1-optimal) F1 per type 0.977-0.988, pooled 0.996",
+    "caveats": "Prevalence differs from the bar: the 1% FPR on abundant genuine traffic lowers precision (two types below 0.93 at H). Shows what the prevalence matching changes."
+   },
+   "fields": {
+    "dmin": {
+     "spec": {
+      "kind": "min",
+      "srcs": [
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.13.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.14.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.15.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.18.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.19.natural.f1"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8902774770315836,
+     "text": "0.890"
+    },
+    "dmax": {
+     "spec": {
+      "kind": "max",
+      "srcs": [
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.13.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.14.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.15.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.18.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "H_budget1pct",
+         "point",
+         "dos.19.natural.f1"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9347381722228416,
+     "text": "0.935"
+    },
+    "dpool": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "dos.pooled.natural.f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9820174959536884,
+     "text": "0.982"
+    },
+    "dprec": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "H_budget1pct",
+       "point",
+       "dos.pooled.natural.precision"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9658196449149398,
+     "text": "0.966"
+    },
+    "smin": {
+     "spec": {
+      "kind": "min",
+      "srcs": [
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.13.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.14.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.15.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.18.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.19.natural.f1"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9766649633793221,
+     "text": "0.977"
+    },
+    "smax": {
+     "spec": {
+      "kind": "max",
+      "srcs": [
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.13.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.14.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.15.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.18.natural.f1"
+        ]
+       },
+       {
+        "file": "results/WP9/B3_test.json",
+        "path": [
+         "ops",
+         "S_valF1opt",
+         "point",
+         "dos.19.natural.f1"
+        ]
+       }
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9882699675803125,
+     "text": "0.988"
+    },
+    "spool": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B3_test.json",
+      "path": [
+       "ops",
+       "S_valF1opt",
+       "point",
+       "dos.pooled.natural.f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9961145967193287,
+     "text": "0.996"
+    }
+   }
+  },
+  {
+   "id": "GPS_I",
+   "domain": "GPS",
+   "dataset": "AV-GPS-Dataset (Abrar et al.), Case I: train file 1, test file 2 (+ file-3 normals)",
+   "protocol": "session split, train 17 / val 8 sessions of file 1; test = 5 sessions of file 2 (2 normal + 3 spoof) after dedup (locks/WP9_avgps.json)",
+   "leak": "session-disjoint (stricter than the bar's stratified folds); dataset itself has copies (file 0 inside file 1, duplicate spoof sessions, file 3 = copies of file 2)",
+   "verdict": "equal",
+   "flags": {
+    "same_data": true,
+    "same_or_stricter": true,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Abrar et al. (arXiv 2405.08359) cross-dataset MLP F1 0.965 (Case I), 0.964 (II), 0.905 (III); RF 0.919, XGB 0.915; stratified 5-fold, folds NOT by session.",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      26,
+      "0.965"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      26,
+      "0.905"
+     ]
+    ],
+    "b0": [
+     26
+    ]
+   },
+   "templates": {
+    "ours": "F1 at S {sf1} {sci}; FPR {sfpr}; AUC {sauc}. At H: F1 {hf1} {hci}, FPR {hfpr}",
+    "op": "S = val-F1-optimal (the rule G1 was written for S); H = 1% val budget shown for completeness, below the bar range",
+    "caveats": "Equal at S only, on a dataset with artefacts; never 'better'. CI over 5 sessions spans the whole bar range. The label is predictable from vehicle state alone (val AUC {vsauc}); any F1 above ~0.9 measures that, not spoof detection under motion. GPS row-shuffle band control fails as written (8 clustered val sessions)."
+   },
+   "cells": {
+    "ours": "F1 at S 0.976 [0.690, 0.995]; FPR 1.6%; AUC 1.000. At H: F1 0.880 [0.285, 0.973], FPR 9.0%",
+    "op": "S = val-F1-optimal (the rule G1 was written for S); H = 1% val budget shown for completeness, below the bar range",
+    "caveats": "Equal at S only, on a dataset with artefacts; never 'better'. CI over 5 sessions spans the whole bar range. The label is predictable from vehicle state alone (val AUC 0.997); any F1 above ~0.9 measures that, not spoof detection under motion. GPS row-shuffle band control fails as written (8 clustered val sessions)."
+   },
+   "fields": {
+    "sf1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_full",
+       "S",
+       "f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9758759333716256,
+     "text": "0.976"
+    },
+    "sci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_full",
+       "S",
+       "ci_session_cluster",
+       "f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.6895424836601307,
+      0.9949536057300993
+     ],
+     "text": "[0.690, 0.995]"
+    },
+    "sfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_full",
+       "S",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.016203703703703703,
+     "text": "1.6%"
+    },
+    "sauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_full",
+       "S",
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9999039467660715,
+     "text": "1.000"
+    },
+    "hf1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_full",
+       "H",
+       "f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8796272327206834,
+     "text": "0.880"
+    },
+    "hci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_full",
+       "H",
+       "ci_session_cluster",
+       "f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.28455832771409306,
+      0.9734034081860169
+     ],
+     "text": "[0.285, 0.973]"
+    },
+    "hfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_full",
+       "H",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.08969907407407407,
+     "text": "9.0%"
+    },
+    "vsauc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_controls.json",
+      "path": [
+       "proxy_only_vehicle_state",
+       "val_auc_by_depth",
+       "3"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9973726193948622,
+     "text": "0.997"
+    }
+   }
+  },
+  {
+   "id": "GPS_II",
+   "domain": "GPS",
+   "dataset": "AV-GPS-Dataset, Case II: train file 2 (5 sessions), test the 25 file-1 sessions",
+   "protocol": "session split, fixed config, threshold 0.5",
+   "leak": "session-disjoint, cross-day",
+   "verdict": "below",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Abrar cross-dataset Case II MLP F1 0.964.",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      26,
+      "0.964"
+     ]
+    ],
+    "b0": [
+     26
+    ]
+   },
+   "templates": {
+    "ours": "F_full F1 {f1}, FPR {fpr}; strongest view F_kin F1 {kf1} {kci}, recall {krec}, FPR {kfpr}",
+    "op": "fixed threshold 0.5 (no validation session set for this direction)",
+    "caveats": "A model trained on one day / one rover does not transfer: F_full alarms on everything. Only the vehicle-state-contaminated view F_kin reaches 0.806."
+   },
+   "cells": {
+    "ours": "F_full F1 0.358, FPR 1.00; strongest view F_kin F1 0.806 [0.660, 0.935], recall 0.678, FPR 0.1%",
+    "op": "fixed threshold 0.5 (no validation session set for this direction)",
+    "caveats": "A model trained on one day / one rover does not transfer: F_full alarms on everything. Only the vehicle-state-contaminated view F_kin reaches 0.806."
+   },
+   "fields": {
+    "f1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_II",
+       "F_full",
+       "f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.3579651049901529,
+     "text": "0.358"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_II",
+       "F_full",
+       "fpr"
+      ],
+      "fmt": "f2"
+     },
+     "value": 1.0,
+     "text": "1.00"
+    },
+    "kf1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_II",
+       "F_kin",
+       "f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8058288130918452,
+     "text": "0.806"
+    },
+    "kci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_II",
+       "F_kin",
+       "ci_session_cluster",
+       "f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.6595638837106022,
+      0.9349959260840937
+     ],
+     "text": "[0.660, 0.935]"
+    },
+    "krec": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_II",
+       "F_kin",
+       "recall"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.6781956050758279,
+     "text": "0.678"
+    },
+    "kfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_II",
+       "F_kin",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.0014047068484861582,
+     "text": "0.1%"
+    }
+   }
+  },
+  {
+   "id": "GPS_POS",
+   "domain": "GPS",
+   "dataset": "AV-GPS-Dataset, Case I, GPS-only view (position steps + course, no vehicle-state fields)",
+   "protocol": "as GPS_I (view added by amendment 1 after the vehicle-state control, before any test row)",
+   "leak": "session-disjoint",
+   "verdict": "comparable-not-like-for-like",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Abrar cross-dataset F1 0.90-0.965 (uses all fields).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      26,
+      "0.965"
+     ]
+    ],
+    "b0": [
+     26
+    ]
+   },
+   "templates": {
+    "ours": "F_pos at H: F1 {hf1} {hci}, FPR {hfpr}; at S: F1 {sf1}, FPR {sfpr}",
+    "op": "H = 1% val budget (transfers); S = val-F1-optimal (does NOT transfer: FPR {sfpr})",
+    "caveats": "Rule G2 (restated: artefact-free view F1 >= 0.80 and FPR <= 5% at S) NOT MET. 5 test sessions; CI wide."
+   },
+   "cells": {
+    "ours": "F_pos at H: F1 0.970 [0.683, 0.994], FPR 1.3%; at S: F1 0.809, FPR 15.3%",
+    "op": "H = 1% val budget (transfers); S = val-F1-optimal (does NOT transfer: FPR 15.3%)",
+    "caveats": "Rule G2 (restated: artefact-free view F1 >= 0.80 and FPR <= 5% at S) NOT MET. 5 test sessions; CI wide."
+   },
+   "fields": {
+    "hf1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_pos",
+       "H",
+       "f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9696261682242991,
+     "text": "0.970"
+    },
+    "hci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_pos",
+       "H",
+       "ci_session_cluster",
+       "f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.6833976833976834,
+      0.9940425531914894
+     ],
+     "text": "[0.683, 0.994]"
+    },
+    "hfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_pos",
+       "H",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.01253858024691358,
+     "text": "1.3%"
+    },
+    "sf1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_pos",
+       "S",
+       "f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8087039693926351,
+     "text": "0.809"
+    },
+    "sfpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_test.json",
+      "path": [
+       "case_I",
+       "F_pos",
+       "S",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.1527777777777778,
+     "text": "15.3%"
+    }
+   }
+  },
+  {
+   "id": "GPS_V3",
+   "domain": "GPS",
+   "dataset": "AV-GPS-Dataset, Case I test, v3 label-free layers (no training)",
+   "protocol": "v3 GPS layers calibrated on the validation normals at 1%; same 5 test sessions",
+   "leak": "no training on this data",
+   "verdict": "comparable-not-like-for-like",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "Abrar cross-dataset F1 0.90-0.965 (trained supervised models).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      26,
+      "0.965"
+     ]
+    ],
+    "b0": [
+     26
+    ]
+   },
+   "templates": {
+    "ours": "F1 {f1} {fci}; recall {rec}; FPR {fpr}; AUC {auc} (session-permutation null q95 = same value, rule G3 NOT MET)",
+    "op": "H = 1% val budget (calibration on validation normals)",
+    "caveats": "F1 sits in the bar range but the CI is huge and AUC equals the permutation null: no evidence beyond chance on this dataset. One spoof session (171 rows) missed; the two latching CUSUMs do the work."
+   },
+   "cells": {
+    "ours": "F1 0.903 [0.056, 0.985]; recall 0.885; FPR 2.5%; AUC 0.909 (session-permutation null q95 = same value, rule G3 NOT MET)",
+    "op": "H = 1% val budget (calibration on validation normals)",
+    "caveats": "F1 sits in the bar range but the CI is huge and AUC equals the permutation null: no evidence beyond chance on this dataset. One spoof session (171 rows) missed; the two latching CUSUMs do the work."
+   },
+   "fields": {
+    "f1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_v3.json",
+      "path": [
+       "combined",
+       "f1"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9027027027027027,
+     "text": "0.903"
+    },
+    "fci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_v3.json",
+      "path": [
+       "combined",
+       "ci_session_cluster",
+       "f1"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.05574912891986063,
+      0.9848844472204872
+     ],
+     "text": "[0.056, 0.985]"
+    },
+    "rec": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_v3.json",
+      "path": [
+       "combined",
+       "recall"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8846380223660977,
+     "text": "0.885"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_v3.json",
+      "path": [
+       "combined",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.024691358024691357,
+     "text": "2.5%"
+    },
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_gps_v3.json",
+      "path": [
+       "combined",
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.9092713624208867,
+     "text": "0.909"
+    }
+   }
+  },
+  {
+   "id": "LIDAR",
+   "domain": "LiDAR",
+   "dataset": "KITTI raw, 7 test drives, 9 generated attack kinds seen in training (scan level)",
+   "protocol": "drive split 13 train / 3 val / 7 test (locks/WP9_kitti.json); static 211-column XGBoost; attacks generated by the WP3 recipe (documented attacker capabilities)",
+   "leak": "leak-free by drive; the 7 test drives are V31_val material for v3.1 (tuned-on)",
+   "verdict": "not comparable",
+   "flags": {
+    "same_data": false,
+    "same_or_stricter": false,
+    "ci_excludes_bar": false
+   },
+   "bar": {
+    "text": "object-level accuracy > 94% (Shadow-Catcher, KITTI, injected ghost objects); nuScenes TPR > 85% at FPR < 10% (ADoPT).",
+    "probes": [
+     [
+      "results/WP9/B0_literature.json",
+      30,
+      "94%"
+     ],
+     [
+      "results/WP9/B0_literature.json",
+      31,
+      "85%"
+     ]
+    ],
+    "b0": [
+     30,
+     31
+    ]
+   },
+   "templates": {
+    "ours": "NAIVE-ADD (box cloud + multi-return add) TPR {naive} {naiveci} at test FPR {fpr} {fprci}; IntensitySpoof {isp}; PointDrop {pd}; single-return phantom kinds {ph1}-{ph2}",
+    "op": "10% validation clean-scan budget (headline for the bar's FPR < 10%); v3.1 at the same thresholds: NAIVE {v31naive}",
+    "caveats": "Another metric level (object vs scan), other data (nuScenes) and other attacks. Our rule L1 (NAIVE TPR >= 0.85) NOT MET. The full 429-column model was red-flagged (temporal columns 91% of gain) and never test-scored. Single-return phantoms are at the physics bound for any detector. Within-scan permutation control marginal."
+   },
+   "cells": {
+    "ours": "NAIVE-ADD (box cloud + multi-return add) TPR 0.426 [0.320, 0.542] at test FPR 6.5% [3.3%, 12.2%]; IntensitySpoof 1.00; PointDrop 0.82; single-return phantom kinds 0.07-0.20",
+    "op": "10% validation clean-scan budget (headline for the bar's FPR < 10%); v3.1 at the same thresholds: NAIVE 0.446",
+    "caveats": "Another metric level (object vs scan), other data (nuScenes) and other attacks. Our rule L1 (NAIVE TPR >= 0.85) NOT MET. The full 429-column model was red-flagged (temporal columns 91% of gain) and never test-scored. Single-return phantoms are at the physics bound for any detector. Within-scan permutation control marginal."
+   },
+   "fields": {
+    "naive": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_lidar_test.json",
+      "path": [
+       "detectors",
+       "supervised",
+       "ops",
+       "fpr10",
+       "kinds",
+       "NAIVE",
+       "tpr"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.4261437908496732,
+     "text": "0.426"
+    },
+    "naiveci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_lidar_test.json",
+      "path": [
+       "detectors",
+       "supervised",
+       "ops",
+       "fpr10",
+       "kinds",
+       "NAIVE",
+       "ci_drive_boot"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.32046070460704607,
+      0.5422106179286336
+     ],
+     "text": "[0.320, 0.542]"
+    },
+    "fpr": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_lidar_test.json",
+      "path": [
+       "detectors",
+       "supervised",
+       "ops",
+       "fpr10",
+       "fpr",
+       "fpr"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.06487549148099607,
+     "text": "6.5%"
+    },
+    "fprci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_lidar_test.json",
+      "path": [
+       "detectors",
+       "supervised",
+       "ops",
+       "fpr10",
+       "fpr",
+       "ci_drive_boot"
+      ],
+      "fmt": "cipct1"
+     },
+     "value": [
+      0.03278688524590164,
+      0.12159716241867342
+     ],
+     "text": "[3.3%, 12.2%]"
+    },
+    "isp": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_lidar_test.json",
+      "path": [
+       "detectors",
+       "supervised",
+       "ops",
+       "fpr10",
+       "kinds",
+       "IntensitySpoof",
+       "tpr"
+      ],
+      "fmt": "f2"
+     },
+     "value": 1.0,
+     "text": "1.00"
+    },
+    "pd": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_lidar_test.json",
+      "path": [
+       "detectors",
+       "supervised",
+       "ops",
+       "fpr10",
+       "kinds",
+       "PointDrop",
+       "tpr"
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.8156862745098039,
+     "text": "0.82"
+    },
+    "ph1": {
+     "spec": {
+      "kind": "min",
+      "srcs": [
+       {
+        "file": "results/WP9/B4_lidar_test.json",
+        "path": [
+         "detectors",
+         "supervised",
+         "ops",
+         "fpr10",
+         "kinds",
+         "ph_replace_near",
+         "tpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B4_lidar_test.json",
+        "path": [
+         "detectors",
+         "supervised",
+         "ops",
+         "fpr10",
+         "kinds",
+         "ph_replace_far",
+         "tpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B4_lidar_test.json",
+        "path": [
+         "detectors",
+         "supervised",
+         "ops",
+         "fpr10",
+         "kinds",
+         "ph_budget_near",
+         "tpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B4_lidar_test.json",
+        "path": [
+         "detectors",
+         "supervised",
+         "ops",
+         "fpr10",
+         "kinds",
+         "ph_budget_far",
+         "tpr"
+        ]
+       }
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.06666666666666667,
+     "text": "0.07"
+    },
+    "ph2": {
+     "spec": {
+      "kind": "max",
+      "srcs": [
+       {
+        "file": "results/WP9/B4_lidar_test.json",
+        "path": [
+         "detectors",
+         "supervised",
+         "ops",
+         "fpr10",
+         "kinds",
+         "ph_replace_near",
+         "tpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B4_lidar_test.json",
+        "path": [
+         "detectors",
+         "supervised",
+         "ops",
+         "fpr10",
+         "kinds",
+         "ph_replace_far",
+         "tpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B4_lidar_test.json",
+        "path": [
+         "detectors",
+         "supervised",
+         "ops",
+         "fpr10",
+         "kinds",
+         "ph_budget_near",
+         "tpr"
+        ]
+       },
+       {
+        "file": "results/WP9/B4_lidar_test.json",
+        "path": [
+         "detectors",
+         "supervised",
+         "ops",
+         "fpr10",
+         "kinds",
+         "ph_budget_far",
+         "tpr"
+        ]
+       }
+      ],
+      "fmt": "f2"
+     },
+     "value": 0.2019607843137255,
+     "text": "0.20"
+    },
+    "v31naive": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP9/B4_lidar_test.json",
+      "path": [
+       "detectors",
+       "v31",
+       "ops",
+       "fpr10",
+       "kinds",
+       "NAIVE",
+       "tpr"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.44575163398692813,
+     "text": "0.446"
+    }
+   }
+  }
+ ],
+ "table2": [
+  {
+   "id": "T2_PD",
+   "group": "2a",
+   "track": "LiDAR scan level, frozen alarm rule",
+   "metric": "PointDrop: detection per scan",
+   "exposure": "fresh H31",
+   "kind": "gain",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "real fresh gain (M4-8 target 65% reached ungated, but a flood on drive 0093 inflates it: v3.1 on the 12 healthy drives {excl}, S8; v3 without drive 0093 was not computed)"
+   },
+   "cells": {
+    "v3": "32.0%",
+    "v31": "66.1%",
+    "diff": "+34.1 pts [+29.8, +37.0]",
+    "note": "real fresh gain (M4-8 target 65% reached ungated, but a flood on drive 0093 inflates it: v3.1 on the 12 healthy drives 63.8%, S8; v3 without drive 0093 was not computed)"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "PointDrop",
+       "v3"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.31971153846153844,
+     "text": "32.0%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "PointDrop",
+       "v31"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.6610576923076923,
+     "text": "66.1%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "PointDrop",
+       "diff_points"
+      ],
+      "fmt": "sgn1"
+     },
+     "value": 34.13461538461539,
+     "text": "+34.1"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "PointDrop",
+       "ci_points"
+      ],
+      "fmt": "ci_sgn1"
+     },
+     "value": [
+      29.767586663654022,
+      37.028462825975
+     ],
+     "text": "[+29.8, +37.0]"
+    },
+    "excl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "lidar",
+       "pointdrop_excl_0093"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.6379132231404959,
+     "text": "63.8%"
+    }
+   }
+  },
+  {
+   "id": "T2_IS",
+   "group": "2a",
+   "track": "LiDAR scan level, frozen alarm rule",
+   "metric": "IntensitySpoof: detection per scan",
+   "exposure": "fresh H31",
+   "kind": "gain",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "real fresh gain, low absolute level"
+   },
+   "cells": {
+    "v3": "43.8%",
+    "v31": "52.7%",
+    "diff": "+8.9 pts [+7.2, +10.7]",
+    "note": "real fresh gain, low absolute level"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "IntensitySpoof",
+       "v3"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.43846153846153846,
+     "text": "43.8%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "IntensitySpoof",
+       "v31"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.5274038461538462,
+     "text": "52.7%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "IntensitySpoof",
+       "diff_points"
+      ],
+      "fmt": "sgn1"
+     },
+     "value": 8.89423076923077,
+     "text": "+8.9"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "IntensitySpoof",
+       "ci_points"
+      ],
+      "fmt": "ci_sgn1"
+     },
+     "value": [
+      7.202044512247398,
+      10.724467549891001
+     ],
+     "text": "[+7.2, +10.7]"
+    }
+   }
+  },
+  {
+   "id": "T2_PN",
+   "group": "2a",
+   "track": "LiDAR scan level, frozen alarm rule",
+   "metric": "ph_replace_near: detection per scan",
+   "exposure": "fresh H31",
+   "kind": "neutral",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "tiny gain, both near chance"
+   },
+   "cells": {
+    "v3": "26.4%",
+    "v31": "27.8%",
+    "diff": "+1.4 pts [+0.3, +2.5]",
+    "note": "tiny gain, both near chance"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "ph_replace_near",
+       "v3"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.2639423076923077,
+     "text": "26.4%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "ph_replace_near",
+       "v31"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.2778846153846154,
+     "text": "27.8%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "ph_replace_near",
+       "diff_points"
+      ],
+      "fmt": "sgn1"
+     },
+     "value": 1.3942307692307698,
+     "text": "+1.4"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "ph_replace_near",
+       "ci_points"
+      ],
+      "fmt": "ci_sgn1"
+     },
+     "value": [
+      0.3002237906696493,
+      2.5241755887947748
+     ],
+     "text": "[+0.3, +2.5]"
+    }
+   }
+  },
+  {
+   "id": "T2_PF",
+   "group": "2a",
+   "track": "LiDAR scan level, frozen alarm rule",
+   "metric": "ph_budget_far: detection per scan",
+   "exposure": "fresh H31",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "far single-return phantoms: at chance for both (physics bound)"
+   },
+   "cells": {
+    "v3": "9.5%",
+    "v31": "8.4%",
+    "diff": "-1.1 pts [-1.9, -0.2]",
+    "note": "far single-return phantoms: at chance for both (physics bound)"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "ph_budget_far",
+       "v3"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.09519230769230769,
+     "text": "9.5%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "ph_budget_far",
+       "v31"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.08413461538461539,
+     "text": "8.4%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "ph_budget_far",
+       "diff_points"
+      ],
+      "fmt": "sgn1"
+     },
+     "value": -1.1057692307692295,
+     "text": "-1.1"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "paired_scan_level_v31_minus_v3",
+       "ph_budget_far",
+       "ci_points"
+      ],
+      "fmt": "ci_sgn1"
+     },
+     "value": [
+      -1.9129062610633178,
+      -0.1925487716763007
+     ],
+     "text": "[-1.9, -0.2]"
+    }
+   }
+  },
+  {
+   "id": "T2_LFA",
+   "group": "2a",
+   "track": "LiDAR scan level",
+   "metric": "clean scan false alarm (bound <= 1.5%)",
+   "exposure": "fresh H31",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "-",
+    "note": "both far above the bound; dominated by the defective drive 0093 (S8)"
+   },
+   "cells": {
+    "v3": "9.30%",
+    "v31": "8.38%",
+    "diff": "-",
+    "note": "both far above the bound; dominated by the defective drive 0093 (S8)"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "clean",
+       "v3_fa"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.09299710889816896,
+     "text": "9.30%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "lidar",
+       "clean",
+       "v31_fa"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.08384195309990362,
+     "text": "8.38%"
+    }
+   }
+  },
+  {
+   "id": "T2_GPS",
+   "group": "2a",
+   "track": "GPS domain (v3 = v3.1, same frozen object)",
+   "metric": "pooled attacks",
+   "exposure": "fresh H31",
+   "kind": "miss",
+   "templates": {
+    "v3": "AUC {auc} {aci}; det at 1% FA {d1}; frozen rule FA {fa}, det {det}",
+    "v31": "same object",
+    "diff": "-",
+    "note": "det at 1% FA is 0 (scores saturate); clean FA 7.2% vs 1.4% on V31_val; one drive (0093) = 94% of its clean ticks"
+   },
+   "cells": {
+    "v3": "AUC 0.896 [0.789, 0.955]; det at 1% FA 0.0%; frozen rule FA 7.20%, det 81.3%",
+    "v31": "same object",
+    "diff": "-",
+    "note": "det at 1% FA is 0 (scores saturate); clean FA 7.2% vs 1.4% on V31_val; one drive (0093) = 94% of its clean ticks"
+   },
+   "fields": {
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "gps",
+       "rows",
+       {
+        "subset": "gps pooled attacks [all]"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8962293265871336,
+     "text": "0.896"
+    },
+    "aci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "gps",
+       "rows",
+       {
+        "subset": "gps pooled attacks [all]"
+       },
+       "auc_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.7893283981021104,
+      0.95493599898634
+     ],
+     "text": "[0.789, 0.955]"
+    },
+    "d1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "gps",
+       "rows",
+       {
+        "subset": "gps pooled attacks [all]"
+       },
+       "det@1.0%"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.0,
+     "text": "0.0%"
+    },
+    "fa": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "gps",
+       "rows",
+       {
+        "subset": "gps pooled attacks [all]"
+       },
+       "op_fa"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.07198142414860681,
+     "text": "7.20%"
+    },
+    "det": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "gps",
+       "rows",
+       {
+        "subset": "gps pooled attacks [all]"
+       },
+       "op_det"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8129159802306425,
+     "text": "81.3%"
+    }
+   }
+  },
+  {
+   "id": "T2_CROSS",
+   "group": "2a",
+   "track": "Cross-domain layer (v3 = v3.1 recipe)",
+   "metric": "pooled attacks",
+   "exposure": "fresh H31",
+   "kind": "miss",
+   "templates": {
+    "v3": "AUC {auc} {aci}; det at 1% FA {d1}; frozen rule FA {fa}, det {det}",
+    "v31": "same recipe",
+    "diff": "-",
+    "note": "det at 1% FA is 0; individual attacks as low as 8% (lidar_yaw) at the frozen rule"
+   },
+   "cells": {
+    "v3": "AUC 0.843 [0.760, 0.888]; det at 1% FA 0.0%; frozen rule FA 7.45%, det 60.2%",
+    "v31": "same recipe",
+    "diff": "-",
+    "note": "det at 1% FA is 0; individual attacks as low as 8% (lidar_yaw) at the frozen rule"
+   },
+   "fields": {
+    "auc": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "cross",
+       "rows",
+       {
+        "subset": "cross pooled attacks [all]"
+       },
+       "auc"
+      ],
+      "fmt": "f3"
+     },
+     "value": 0.8427692877124049,
+     "text": "0.843"
+    },
+    "aci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "cross",
+       "rows",
+       {
+        "subset": "cross pooled attacks [all]"
+       },
+       "auc_ci"
+      ],
+      "fmt": "ci3"
+     },
+     "value": [
+      0.759501569785544,
+      0.8880686182683973
+     ],
+     "text": "[0.760, 0.888]"
+    },
+    "d1": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "cross",
+       "rows",
+       {
+        "subset": "cross pooled attacks [all]"
+       },
+       "det@1.0%"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.0,
+     "text": "0.0%"
+    },
+    "fa": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "cross",
+       "rows",
+       {
+        "subset": "cross pooled attacks [all]"
+       },
+       "op_fa"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.07445820433436533,
+     "text": "7.45%"
+    },
+    "det": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/domains.json",
+      "path": [
+       "cross",
+       "rows",
+       {
+        "subset": "cross pooled attacks [all]"
+       },
+       "op_det"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.6016923768159353,
+     "text": "60.2%"
+    }
+   }
+  },
+  {
+   "id": "T2_BL_C",
+   "group": "2a",
+   "track": "Blame, comma GNSS spoof (drift / meaconing / doppler)",
+   "metric": "correct blame of detected runs (wrong)",
+   "exposure": "fresh H31",
+   "kind": "gain",
+   "templates": {
+    "v3": "{v3} ({w3})",
+    "v31": "{v31} ({w31})",
+    "diff": "-",
+    "note": "real fresh gain (M4-13 MET); v3 abstains (undecided) on these types, v3.1 blames"
+   },
+   "cells": {
+    "v3": "0.0% (0.0%)",
+    "v31": "80.6% (0.0%)",
+    "diff": "-",
+    "note": "real fresh gain (M4-13 MET); v3 abstains (undecided) on these types, v3.1 blames"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/blame.json",
+      "path": [
+       "C",
+       "V3",
+       "B2",
+       "correct"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.0,
+     "text": "0.0%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/blame.json",
+      "path": [
+       "C",
+       "A1",
+       "B2",
+       "correct"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8062660580209036,
+     "text": "80.6%"
+    },
+    "w3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/blame.json",
+      "path": [
+       "C",
+       "V3",
+       "B2",
+       "wrong"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.0,
+     "text": "0.0%"
+    },
+    "w31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/blame.json",
+      "path": [
+       "C",
+       "A1",
+       "B2",
+       "wrong"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.0,
+     "text": "0.0%"
+    }
+   }
+  },
+  {
+   "id": "T2_BL_K",
+   "group": "2a",
+   "track": "Blame, KITTI gps_can",
+   "metric": "correct blame of detected runs (wrong)",
+   "exposure": "fresh H31",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3} ({w3})",
+    "v31": "{v31} ({w31})",
+    "diff": "-",
+    "note": "v3.1 blames worse than v3 (M4-12 NOT MET)"
+   },
+   "cells": {
+    "v3": "23.8% (63.1%)",
+    "v31": "13.1% (81.1%)",
+    "diff": "-",
+    "note": "v3.1 blames worse than v3 (M4-12 NOT MET)"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/blame.json",
+      "path": [
+       "K",
+       "V3",
+       "gps_can",
+       "correct"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.23770491803278687,
+     "text": "23.8%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/blame.json",
+      "path": [
+       "K",
+       "A1",
+       "gps_can",
+       "correct"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.13114754098360656,
+     "text": "13.1%"
+    },
+    "w3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/blame.json",
+      "path": [
+       "K",
+       "V3",
+       "gps_can",
+       "wrong"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.6311475409836066,
+     "text": "63.1%"
+    },
+    "w31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/blame.json",
+      "path": [
+       "K",
+       "A1",
+       "gps_can",
+       "wrong"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8114754098360656,
+     "text": "81.1%"
+    }
+   }
+  },
+  {
+   "id": "T2_V2AIX_M",
+   "group": "2a",
+   "track": "V2AIX real V2X, Mobile",
+   "metric": "genuine false alarm per message (bound <= 1.5%); injected mean",
+   "exposure": "fresh H31 (same site-day as calibration for most recordings)",
+   "kind": "neutral",
+   "templates": {
+    "v3": "same object",
+    "v31": "FA {fa}; injected {inj}",
+    "diff": "-",
+    "note": "inside the bound, but only 24 recordings"
+   },
+   "cells": {
+    "v3": "same object",
+    "v31": "FA 0.65%; injected 60.8%",
+    "diff": "-",
+    "note": "inside the bound, but only 24 recordings"
+   },
+   "fields": {
+    "fa": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/v2aix.json",
+      "path": [
+       "envs",
+       "Mobile",
+       "false_alarms",
+       "physics",
+       "per_message"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.006535947712418301,
+     "text": "0.65%"
+    },
+    "inj": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/v2aix.json",
+      "path": [
+       "envs",
+       "Mobile",
+       "injected_mean_over_types"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.6077966895749237,
+     "text": "60.8%"
+    }
+   }
+  },
+  {
+   "id": "T2_V2AIX_S",
+   "group": "2a",
+   "track": "V2AIX real V2X, Stationary",
+   "metric": "genuine false alarm per message (bound <= 1.5%); injected mean",
+   "exposure": "fresh H31 (same site-day as calibration for most recordings)",
+   "kind": "miss",
+   "templates": {
+    "v3": "same object",
+    "v31": "FA {fa}; injected {inj}",
+    "diff": "-",
+    "note": "M4-11 NOT MET"
+   },
+   "cells": {
+    "v3": "same object",
+    "v31": "FA 2.26%; injected 49.2%",
+    "diff": "-",
+    "note": "M4-11 NOT MET"
+   },
+   "fields": {
+    "fa": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/v2aix.json",
+      "path": [
+       "envs",
+       "Stationary",
+       "false_alarms",
+       "physics",
+       "per_message"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.022561595535270068,
+     "text": "2.26%"
+    },
+    "inj": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/v2aix.json",
+      "path": [
+       "envs",
+       "Stationary",
+       "injected_mean_over_types"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.49153602453953693,
+     "text": "49.2%"
+    }
+   }
+  },
+  {
+   "id": "T2_K_DET",
+   "group": "2a",
+   "track": "System K (KITTI H31)",
+   "metric": "event detection, single-domain types (bound >= 70%)",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "gain",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "paired CI excludes 0 in the good direction (partially fresh)"
+   },
+   "cells": {
+    "v3": "83.4%",
+    "v31": "87.1%",
+    "diff": "+3.7 pts [+1.8, +5.8]",
+    "note": "paired CI excludes 0 in the good direction (partially fresh)"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "K",
+       "det_single"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8339860139860141,
+     "text": "83.4%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "K",
+       "det_single"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8711888111888112,
+     "text": "87.1%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "det_single",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": 0.037202797202797205,
+     "text": "+3.7"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "det_single",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      0.018316013973813133,
+      0.05810095859252813
+     ],
+     "text": "[+1.8, +5.8]"
+    }
+   }
+  },
+  {
+   "id": "T2_K_HELD",
+   "group": "2a",
+   "track": "System K (KITTI H31)",
+   "metric": "event detection, held-out (zero-day) types (bound >= 60%)",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "point estimate lower, CI includes 0"
+   },
+   "cells": {
+    "v3": "95.5%",
+    "v31": "90.8%",
+    "diff": "-4.7 pts [-8.0, +0.5]",
+    "note": "point estimate lower, CI includes 0"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "K",
+       "det_heldout"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9551282051282052,
+     "text": "95.5%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "K",
+       "det_heldout"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9083333333333333,
+     "text": "90.8%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "det_heldout",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.046794871794871795,
+     "text": "-4.7"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "det_heldout",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.08016802641802642,
+      0.00500949667616335
+     ],
+     "text": "[-8.0, +0.5]"
+    }
+   }
+  },
+  {
+   "id": "T2_K_FA",
+   "group": "2a",
+   "track": "System K (KITTI H31)",
+   "metric": "clean tick false alarm (bound <= 3%)",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "no change; M4-1 NOT MET (defective drive 0093)"
+   },
+   "cells": {
+    "v3": "12.38%",
+    "v31": "12.24%",
+    "diff": "-0.1 pts [-0.8, +0.3]",
+    "note": "no change; M4-1 NOT MET (defective drive 0093)"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "K",
+       "fa_tick"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.12384453781512605,
+     "text": "12.38%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "K",
+       "fa_tick"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.12240896358543417,
+     "text": "12.24%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "fa_tick",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.0014355742296918855,
+     "text": "-0.1"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "fa_tick",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.00809073046694406,
+      0.003223581213307218
+     ],
+     "text": "[-0.8, +0.3]"
+    }
+   }
+  },
+  {
+   "id": "T2_K_EV",
+   "group": "2a",
+   "track": "System K (KITTI H31)",
+   "metric": "alert events per clean hour (bound <= 10)",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} {ci}",
+    "note": "M4-2 NOT MET"
+   },
+   "cells": {
+    "v3": "27.9",
+    "v31": "24.8",
+    "diff": "-3.03 [-5.77, 0.46]",
+    "note": "M4-2 NOT MET"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "K",
+       "events_per_hour"
+      ],
+      "fmt": "x1"
+     },
+     "value": 27.857142857142858,
+     "text": "27.9"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "K",
+       "events_per_hour"
+      ],
+      "fmt": "x1"
+     },
+     "value": 24.831932773109244,
+     "text": "24.8"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "events_per_hour",
+       "diff"
+      ],
+      "fmt": "sgn2"
+     },
+     "value": -3.0252100840336134,
+     "text": "-3.03"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "events_per_hour",
+       "ci"
+      ],
+      "fmt": "ci2"
+     },
+     "value": [
+      -5.773508836524301,
+      0.4618110236220476
+     ],
+     "text": "[-5.77, 0.46]"
+    }
+   }
+  },
+  {
+   "id": "T2_C_DET",
+   "group": "2a",
+   "track": "System C (comma Chunk_2)",
+   "metric": "event detection, single-domain types",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "paired CI excludes 0 in the BAD direction"
+   },
+   "cells": {
+    "v3": "96.5%",
+    "v31": "92.5%",
+    "diff": "-4.0 pts [-5.9, -2.2]",
+    "note": "paired CI excludes 0 in the BAD direction"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "C",
+       "det_single"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9651300855596298,
+     "text": "96.5%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "C",
+       "det_single"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9246900646062511,
+     "text": "92.5%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "C",
+       "det_single",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.04044002095337874,
+     "text": "-4.0"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "C",
+       "det_single",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.05899653722829724,
+      -0.021799931157253528
+     ],
+     "text": "[-5.9, -2.2]"
+    }
+   }
+  },
+  {
+   "id": "T2_C_HELD",
+   "group": "2a",
+   "track": "System C (comma Chunk_2)",
+   "metric": "event detection, held-out types",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "paired CI excludes 0 in the BAD direction"
+   },
+   "cells": {
+    "v3": "92.6%",
+    "v31": "84.4%",
+    "diff": "-8.1 pts [-8.4, -7.8]",
+    "note": "paired CI excludes 0 in the BAD direction"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "C",
+       "det_heldout"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9255354752342705,
+     "text": "92.6%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "C",
+       "det_heldout"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8442101740294511,
+     "text": "84.4%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "C",
+       "det_heldout",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.08132530120481928,
+     "text": "-8.1"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "C",
+       "det_heldout",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.08433792593342558,
+      -0.07777541316872827
+     ],
+     "text": "[-8.4, -7.8]"
+    }
+   }
+  },
+  {
+   "id": "T2_C_BLC",
+   "group": "2a",
+   "track": "System C (comma Chunk_2)",
+   "metric": "blame correct (per type)",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "gain",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "paired CI excludes 0 in the good direction (partially fresh)"
+   },
+   "cells": {
+    "v3": "84.3%",
+    "v31": "91.1%",
+    "diff": "+2.8 pts [+2.4, +3.3]",
+    "note": "paired CI excludes 0 in the good direction (partially fresh)"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "C",
+       "blame_correct"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8425984029997664,
+     "text": "84.3%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "C",
+       "blame_correct"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9111416812796557,
+     "text": "91.1%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "C",
+       "blame_correct",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": 0.028215600772214185,
+     "text": "+2.8"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "C",
+       "blame_correct",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      0.023526883114578845,
+      0.032772829951989005
+     ],
+     "text": "[+2.4, +3.3]"
+    }
+   }
+  },
+  {
+   "id": "T2_KD_cross",
+   "group": "2a",
+   "track": "System K by attacked domain",
+   "metric": "event detection, cross types",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "gain",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "paired CI excludes 0 in the good direction"
+   },
+   "cells": {
+    "v3": "66.5%",
+    "v31": "81.3%",
+    "diff": "+14.7 pts [+10.0, +19.5]",
+    "note": "paired CI excludes 0 in the good direction"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "K",
+       "by_attacked_domain",
+       "cross",
+       "event_detection"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.6653846153846156,
+     "text": "66.5%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "K",
+       "by_attacked_domain",
+       "cross",
+       "event_detection"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8128205128205127,
+     "text": "81.3%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "by_attacked_domain",
+       "cross",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": 0.14743589743589747,
+     "text": "+14.7"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "by_attacked_domain",
+       "cross",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      0.09999999999999998,
+      0.19490384615384607
+     ],
+     "text": "[+10.0, +19.5]"
+    }
+   }
+  },
+  {
+   "id": "T2_KD_v2x",
+   "group": "2a",
+   "track": "System K by attacked domain",
+   "metric": "event detection, v2x types",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "gain",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "paired CI excludes 0 in the good direction"
+   },
+   "cells": {
+    "v3": "92.0%",
+    "v31": "99.1%",
+    "diff": "+7.0 pts [+5.3, +9.0]",
+    "note": "paired CI excludes 0 in the good direction"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "K",
+       "by_attacked_domain",
+       "v2x",
+       "event_detection"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9203703703703704,
+     "text": "92.0%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "K",
+       "by_attacked_domain",
+       "v2x",
+       "event_detection"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9907407407407407,
+     "text": "99.1%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "by_attacked_domain",
+       "v2x",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": 0.07037037037037036,
+     "text": "+7.0"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "by_attacked_domain",
+       "v2x",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      0.053171519712220554,
+      0.0895168685952901
+     ],
+     "text": "[+5.3, +9.0]"
+    }
+   }
+  },
+  {
+   "id": "T2_KD_lidar",
+   "group": "2a",
+   "track": "System K by attacked domain",
+   "metric": "event detection, lidar types",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "neutral",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "no detectable change"
+   },
+   "cells": {
+    "v3": "44.9%",
+    "v31": "44.9%",
+    "diff": "+0.0 pts [-9.0, +9.0]",
+    "note": "no detectable change"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "K",
+       "by_attacked_domain",
+       "lidar",
+       "event_detection"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.44871794871794873,
+     "text": "44.9%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "K",
+       "by_attacked_domain",
+       "lidar",
+       "event_detection"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.44871794871794873,
+     "text": "44.9%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "by_attacked_domain",
+       "lidar",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": 1.850371707708594e-17,
+     "text": "+0.0"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "by_attacked_domain",
+       "lidar",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.08974358974358974,
+      0.08974358974358972
+     ],
+     "text": "[-9.0, +9.0]"
+    }
+   }
+  },
+  {
+   "id": "T2_KD_network",
+   "group": "2a",
+   "track": "System K by attacked domain",
+   "metric": "event detection, network types",
+   "exposure": "partially fresh (vehicle block fresh; CAN / network / V2X streams re-used)",
+   "kind": "neutral",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "no detectable change"
+   },
+   "cells": {
+    "v3": "88.3%",
+    "v31": "86.7%",
+    "diff": "-1.7 pts [-10.0, +6.7]",
+    "note": "no detectable change"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v3",
+       "K",
+       "by_attacked_domain",
+       "network",
+       "event_detection"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8833333333333332,
+     "text": "88.3%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "runs",
+       "v31",
+       "K",
+       "by_attacked_domain",
+       "network",
+       "event_detection"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8666666666666666,
+     "text": "86.7%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "by_attacked_domain",
+       "network",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.016666666666666663,
+     "text": "-1.7"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/system_h31.json",
+      "path": [
+       "paired_v31_minus_v3",
+       "K",
+       "by_attacked_domain",
+       "network",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.1,
+      0.06666666666666668
+     ],
+     "text": "[-10.0, +6.7]"
+    }
+   }
+  },
+  {
+   "id": "T2_S8_FA",
+   "group": "2b",
+   "track": "S8 gate, system K",
+   "metric": "clean tick false alarm (bound <= 3%)",
+   "exposure": "H31 exposure 2, post-M4 fix, NOT fresh",
+   "kind": "repair (not fresh)",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31} {gci}",
+    "diff": "{d} pts {ci}",
+    "note": "gate repairs the defective drive 0093; still NOT MET"
+   },
+   "cells": {
+    "v3": "12.2%",
+    "v31": "4.7% [4.2, 5.4]",
+    "diff": "-7.5 pts [-9.5, -5.3]",
+    "note": "gate repairs the defective drive 0093; still NOT MET"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "fa_ungated"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.12240896358543417,
+     "text": "12.2%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "fa_gated"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.04695378151260504,
+     "text": "4.7%"
+    },
+    "gci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/system_s8_h31.json",
+      "path": [
+       "runs",
+       "v31_gated",
+       "K",
+       "fa_tick_ci"
+      ],
+      "fmt": "cip1_br"
+     },
+     "value": [
+      0.04191759597915472,
+      0.05435942760942761
+     ],
+     "text": "[4.2, 5.4]"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/system_s8_h31.json",
+      "path": [
+       "paired_gated_minus_ungated",
+       "K",
+       "fa_tick",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.07545518207282913,
+     "text": "-7.5"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/system_s8_h31.json",
+      "path": [
+       "paired_gated_minus_ungated",
+       "K",
+       "fa_tick",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.09475148123765637,
+      -0.052905259236973784
+     ],
+     "text": "[-9.5, -5.3]"
+    }
+   }
+  },
+  {
+   "id": "T2_S8_SS",
+   "group": "2b",
+   "track": "S8 gate, system K",
+   "metric": "SAFE_STOP per clean hour (bound <= 1)",
+   "exposure": "H31 exposure 2, post-M4 fix, NOT fresh",
+   "kind": "repair (not fresh)",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31} {gci}",
+    "diff": "-",
+    "note": "upper CI above 1"
+   },
+   "cells": {
+    "v3": "6.43",
+    "v31": "0.88 [0.17, 1.76]",
+    "diff": "-",
+    "note": "upper CI above 1"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "safe_stop_ungated"
+      ],
+      "fmt": "x2"
+     },
+     "value": 6.428571428571428,
+     "text": "6.43"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "safe_stop_gated"
+      ],
+      "fmt": "x2"
+     },
+     "value": 0.8823529411764706,
+     "text": "0.88"
+    },
+    "gci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/system_s8_h31.json",
+      "path": [
+       "runs",
+       "v31_gated",
+       "K",
+       "SAFE_STOP_per_hour_ci"
+      ],
+      "fmt": "ci2"
+     },
+     "value": [
+      0.16897867652844442,
+      1.7604990651517327
+     ],
+     "text": "[0.17, 1.76]"
+    }
+   }
+  },
+  {
+   "id": "T2_S8_EV",
+   "group": "2b",
+   "track": "S8 gate, system K",
+   "metric": "alert events per clean hour (bound <= 10)",
+   "exposure": "H31 exposure 2, post-M4 fix, NOT fresh",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} {ci}",
+    "note": "NOT MET"
+   },
+   "cells": {
+    "v3": "24.8",
+    "v31": "22.4",
+    "diff": "-2.39 [-3.71, -1.11]",
+    "note": "NOT MET"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "events_ungated"
+      ],
+      "fmt": "x1"
+     },
+     "value": 24.831932773109244,
+     "text": "24.8"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "events_gated"
+      ],
+      "fmt": "x1"
+     },
+     "value": 22.436974789915965,
+     "text": "22.4"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "paired",
+       "events_per_hour",
+       "diff"
+      ],
+      "fmt": "sgn2"
+     },
+     "value": -2.3949579831932795,
+     "text": "-2.39"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "paired",
+       "events_per_hour",
+       "ci"
+      ],
+      "fmt": "ci2"
+     },
+     "value": [
+      -3.7113905772524274,
+      -1.1109195402298893
+     ],
+     "text": "[-3.71, -1.11]"
+    }
+   }
+  },
+  {
+   "id": "T2_S8_DET",
+   "group": "2b",
+   "track": "S8 gate, system K",
+   "metric": "event detection, single-domain types",
+   "exposure": "H31 exposure 2, post-M4 fix, NOT fresh",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "cost of the gate; part of the ungated 87.1% was a flood effect on drive 0093"
+   },
+   "cells": {
+    "v3": "87.1%",
+    "v31": "84.6%",
+    "diff": "-2.5 pts [-3.9, -1.3]",
+    "note": "cost of the gate; part of the ungated 87.1% was a flood effect on drive 0093"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "det_ungated"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8711888111888112,
+     "text": "87.1%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "det_gated"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8458275058275057,
+     "text": "84.6%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/system_s8_h31.json",
+      "path": [
+       "paired_gated_minus_ungated",
+       "K",
+       "det_single",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.02536130536130536,
+     "text": "-2.5"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/system_s8_h31.json",
+      "path": [
+       "paired_gated_minus_ungated",
+       "K",
+       "det_single",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.03911771561771562,
+      -0.012580419580419618
+     ],
+     "text": "[-3.9, -1.3]"
+    }
+   }
+  },
+  {
+   "id": "T2_S8_HELD",
+   "group": "2b",
+   "track": "S8 gate, system K",
+   "metric": "event detection, held-out types",
+   "exposure": "H31 exposure 2, post-M4 fix, NOT fresh",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "CI touches 0"
+   },
+   "cells": {
+    "v3": "90.8%",
+    "v31": "86.8%",
+    "diff": "-4.0 pts [-9.0, +0.0]",
+    "note": "CI touches 0"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "held_ungated"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.9083333333333333,
+     "text": "90.8%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "h31_K",
+       "held_gated"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.8683760683760684,
+     "text": "86.8%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/system_s8_h31.json",
+      "path": [
+       "paired_gated_minus_ungated",
+       "K",
+       "det_heldout",
+       "diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.039957264957264954,
+     "text": "-4.0"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/system_s8_h31.json",
+      "path": [
+       "paired_gated_minus_ungated",
+       "K",
+       "det_heldout",
+       "ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.08974358974358976,
+      0.0
+     ],
+     "text": "[-9.0, +0.0]"
+    }
+   }
+  },
+  {
+   "id": "T2_S8_LFA",
+   "group": "2b",
+   "track": "S8 gate, LiDAR domain",
+   "metric": "clean scan false alarm (bound <= 1.5%)",
+   "exposure": "H31 exposure 2, post-M4 fix, NOT fresh",
+   "kind": "repair (not fresh)",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "{d} pts {ci}",
+    "note": "one drive changes: drive-bootstrap CI touches 0; still NOT MET"
+   },
+   "cells": {
+    "v3": "8.38%",
+    "v31": "2.43%",
+    "diff": "-6.0 pts [-19.8, +0.0]",
+    "note": "one drive changes: drive-bootstrap CI touches 0; still NOT MET"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "lidar",
+       "clean_fa_ungated"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.08384195309990362,
+     "text": "8.38%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "lidar",
+       "clean_fa_gated"
+      ],
+      "fmt": "pct2"
+     },
+     "value": 0.024253132026983617,
+     "text": "2.43%"
+    },
+    "d": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/lidar_domain.json",
+      "path": [
+       "rows",
+       "clean scans (FA)",
+       "paired_diff"
+      ],
+      "fmt": "sgn_pts1"
+     },
+     "value": -0.059588821072920004,
+     "text": "-6.0"
+    },
+    "ci": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/lidar_domain.json",
+      "path": [
+       "rows",
+       "clean scans (FA)",
+       "paired_ci"
+      ],
+      "fmt": "ci_pts1"
+     },
+     "value": [
+      -0.19793016135629643,
+      0.0
+     ],
+     "text": "[-19.8, +0.0]"
+    }
+   }
+  },
+  {
+   "id": "T2_S8_PD",
+   "group": "2b",
+   "track": "S8 gate, LiDAR domain",
+   "metric": "PointDrop per scan (bound >= 65%)",
+   "exposure": "H31 exposure 2, post-M4 fix, NOT fresh",
+   "kind": "miss",
+   "templates": {
+    "v3": "{v3}",
+    "v31": "{v31}",
+    "diff": "-",
+    "note": "part of the ungated 66.1% was flood on 0093 ({excl} on the 12 healthy drives); NOT MET after the fix"
+   },
+   "cells": {
+    "v3": "66.1%",
+    "v31": "59.4%",
+    "diff": "-",
+    "note": "part of the ungated 66.1% was flood on 0093 (63.8% on the 12 healthy drives); NOT MET after the fix"
+   },
+   "fields": {
+    "v3": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "lidar",
+       "pointdrop_ungated"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.6610576923076923,
+     "text": "66.1%"
+    },
+    "v31": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "lidar",
+       "pointdrop_gated"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.59375,
+     "text": "59.4%"
+    },
+    "excl": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S8/s8_summary.json",
+      "path": [
+       "lidar",
+       "pointdrop_excl_0093"
+      ],
+      "fmt": "pct1"
+     },
+     "value": 0.6379132231404959,
+     "text": "63.8%"
+    }
+   }
+  },
+  {
+   "id": "T2_M4",
+   "group": "meta",
+   "track": "M4 verdict",
+   "metric": "rows MET of all rows",
+   "exposure": "-",
+   "kind": "miss",
+   "templates": {
+    "v3": "{n_met} of {n_rows}",
+    "v31": "-",
+    "diff": "-",
+    "note": "M4 verdict NOT MET stands"
+   },
+   "cells": {
+    "v3": "7 of 18",
+    "v31": "-",
+    "diff": "-",
+    "note": "M4 verdict NOT MET stands"
+   },
+   "fields": {
+    "n_met": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/m4_verdict.json",
+      "path": [
+       "n_met"
+      ],
+      "fmt": "int"
+     },
+     "value": 7,
+     "text": "7"
+    },
+    "n_rows": {
+     "spec": {
+      "kind": "path",
+      "file": "results/WP8/S7/m4_verdict.json",
+      "path": [
+       "n_rows"
+      ],
+      "fmt": "int"
+     },
+     "value": 18,
+     "text": "18"
+    }
+   }
+  }
+ ],
+ "claims": [
+  {
+   "row": "CAN_CH",
+   "template": "Car-Hacking, seen attacks, block split: macro-F1 {CAN_CH.mf} {CAN_CH.mfci} matches the near-perfect published numbers (0.9997-1.0000, random or unstated splits) under a stricter block-disjoint split; it does not exceed them. Verdict equal.",
+   "text": "Car-Hacking, seen attacks, block split: macro-F1 0.999 [0.998, 1.000] matches the near-perfect published numbers (0.9997-1.0000, random or unstated splits) under a stricter block-disjoint split; it does not exceed them. Verdict equal."
+  },
+  {
+   "row": "V2X_DOS_M",
+   "template": "VeReMi Extension DoS family, prevalence-matched 70/30: pooled F1 {V2X_DOS_M.dpool} {V2X_DOS_M.dpoolci} (per type {V2X_DOS_M.dmin}-{V2X_DOS_M.dmax}) matches the best published results (0.93-0.998) under a stricter block-disjoint split. Verdict equal.",
+   "text": "VeReMi Extension DoS family, prevalence-matched 70/30: pooled F1 0.995 [0.994, 0.996] (per type 0.992-0.996) matches the best published results (0.93-0.998) under a stricter block-disjoint split. Verdict equal."
+  },
+  {
+   "row": "V2X_ALL",
+   "template": "All 19 VeReMi Extension types, block split: macro-F1 {V2X_ALL.mf} {V2X_ALL.mfci} at FPR {V2X_ALL.fpr}; no published number exists for all 19 types, so these are the first such numbers we know of (one simulation, in-distribution). Verdict not comparable.",
+   "text": "All 19 VeReMi Extension types, block split: macro-F1 0.917 [0.911, 0.923] at FPR 1.04%; no published number exists for all 19 types, so these are the first such numbers we know of (one simulation, in-distribution). Verdict not comparable."
+  },
+  {
+   "row": "GPS_I",
+   "template": "AV-GPS Case I with session-disjoint splits: F1 {GPS_I.sf1} {GPS_I.sci} at the validation-F1-optimal threshold equals the published cross-dataset F1 0.90-0.965 on a dataset with artefacts (at the 1% budget F1 is {GPS_I.hf1}). Verdict equal.",
+   "text": "AV-GPS Case I with session-disjoint splits: F1 0.976 [0.690, 0.995] at the validation-F1-optimal threshold equals the published cross-dataset F1 0.90-0.965 on a dataset with artefacts (at the 1% budget F1 is 0.880). Verdict equal."
+  },
+  {
+   "row": "NET_D10o_G",
+   "template": "CICIDS2017, original labels, 5-tuple group protocol of Moczkodan and Ragab: macro-F1 {NET_D10o_G.mf} {NET_D10o_G.mfci} against their RF 0.778; class set and dedup differ, so comparable, not like-for-like.",
+   "text": "CICIDS2017, original labels, 5-tuple group protocol of Moczkodan and Ragab: macro-F1 0.894 [0.832, 0.926] against their RF 0.778; class set and dedup differ, so comparable, not like-for-like."
+  },
+  {
+   "row": "NET_D23_G",
+   "template": "CICIDS2017 corrected labels and CSE-CIC-IDS2018 under time, group and block splits: macro-F1 {NET_D10e_T.mf} to {NET_D10e_G.mf} and {NET_D23_T.mf} to {NET_D23_G.mf} (the random-forest units fail the shuffled-label AUC rule). First leak-free numbers we know of for 2018; no bar (not comparable), in-distribution.",
+   "text": "CICIDS2017 corrected labels and CSE-CIC-IDS2018 under time, group and block splits: macro-F1 0.918 to 0.996 and 0.926 to 0.945 (the random-forest units fail the shuffled-label AUC rule). First leak-free numbers we know of for 2018; no bar (not comparable), in-distribution."
+  },
+  {
+   "row": "T2_PD",
+   "template": "Fresh hold-out H31: v3.1 beats frozen v3 on LiDAR PointDrop ({T2_PD.d} pts {T2_PD.ci}), IntensitySpoof ({T2_IS.d} pts {T2_IS.ci}) and on comma GNSS-spoof blame ({T2_BL_C.v3} to {T2_BL_C.v31} correct). Partially fresh: system event detection K {T2_K_DET.d} pts {T2_K_DET.ci}, cross {T2_KD_cross.d} pts, V2X {T2_KD_v2x.d} pts. Table 2a.",
+   "text": "Fresh hold-out H31: v3.1 beats frozen v3 on LiDAR PointDrop (+34.1 pts [+29.8, +37.0]), IntensitySpoof (+8.9 pts [+7.2, +10.7]) and on comma GNSS-spoof blame (0.0% to 80.6% correct). Partially fresh: system event detection K +3.7 pts [+1.8, +5.8], cross +14.7 pts, V2X +7.0 pts. Table 2a."
+  },
+  {
+   "row": "T2_S8_FA",
+   "template": "The S8 sensor-health gate removes the false-alarm flood caused by one defective recording: K clean tick FA {T2_S8_FA.v3} to {T2_S8_FA.v31}, SAFE_STOP per hour {T2_S8_SS.v3} to {T2_S8_SS.v31}. This is exposure 2 on H31 (a repair of a seen failure, NOT fresh evidence). Table 2b.",
+   "text": "The S8 sensor-health gate removes the false-alarm flood caused by one defective recording: K clean tick FA 12.2% to 4.7%, SAFE_STOP per hour 6.43 to 0.88. This is exposure 2 on H31 (a repair of a seen failure, NOT fresh evidence). Table 2b."
+  }
+ ],
+ "cannot": [
+  {
+   "row": "-",
+   "template": "No row has the verdict better: we cannot claim 'state of the art', 'best' or 'better than' anywhere. Equal rows are worded 'matches the best published results under a stricter split'.",
+   "text": "No row has the verdict better: we cannot claim 'state of the art', 'best' or 'better than' anywhere. Equal rows are worded 'matches the best published results under a stricter split'."
+  },
+  {
+   "row": "CAN_D11U",
+   "template": "CAN detection on a new vehicle: D11 unknown-vehicle attack F1 mean {CAN_D11U.f1}, FPR {CAN_D11U.fpr_min} to {CAN_D11U.fpr_max} (every normal window alarms) against the bar 0.95-0.96. Verdict below.",
+   "text": "CAN detection on a new vehicle: D11 unknown-vehicle attack F1 mean 0.116, FPR 1.00 to 1.00 (every normal window alarms) against the bar 0.95-0.96. Verdict below."
+  },
+  {
+   "row": "CAN_D11K",
+   "template": "The published D11 known-vehicle bar: mean attack F1 {CAN_D11K.f1h} at the 1% budget, {CAN_D11K.f1s} at the validation-F1-optimal threshold, against 0.98-0.99. Verdict below. ROAD is comparable at most and our own rule is NOT MET (FPR {CAN_ROAD.fpr}).",
+   "text": "The published D11 known-vehicle bar: mean attack F1 0.801 at the 1% budget, 0.875 at the validation-F1-optimal threshold, against 0.98-0.99. Verdict below. ROAD is comparable at most and our own rule is NOT MET (FPR 3.2%)."
+  },
+  {
+   "row": "LIDAR",
+   "template": "LiDAR spoofing detection at the published level: NAIVE-ADD TPR {LIDAR.naive} {LIDAR.naiveci} at test FPR {LIDAR.fpr}; the bar is object-level / nuScenes (not comparable); single-return phantoms are at the physics bound.",
+   "text": "LiDAR spoofing detection at the published level: NAIVE-ADD TPR 0.426 [0.320, 0.542] at test FPR 6.5%; the bar is object-level / nuScenes (not comparable); single-return phantoms are at the physics bound."
+  },
+  {
+   "row": "GPS_II",
+   "template": "Spoof detection under motion or transfer across days on AV-GPS: the label is predictable from vehicle state alone (val AUC {GPS_I.vsauc}); Case II (other day) F1 {GPS_II.f1} with FPR {GPS_II.fpr}; the v3 label-free layers are indistinguishable from chance there (AUC {GPS_V3.auc} = permutation null q95).",
+   "text": "Spoof detection under motion or transfer across days on AV-GPS: the label is predictable from vehicle state alone (val AUC 0.997); Case II (other day) F1 0.358 with FPR 1.00; the v3 label-free layers are indistinguishable from chance there (AUC 0.909 = permutation null q95)."
+  },
+  {
+   "row": "NET_D10e_G",
+   "template": "Generalisation from the benchmark numbers: all CICIDS / VeReMi splits are in-distribution (same campaigns, one simulation, one map); AUC ~1.0 on CICIDS is a known dataset property; several shuffled-label controls failed as written (RF AUC rule on 4 network units, VeReMi sender permutation {V2X_ALL.c_perm} and proxy-only {V2X_ALL.c_proxy}, ROAD / D11 global shuffle, GPS row-shuffle band).",
+   "text": "Generalisation from the benchmark numbers: all CICIDS / VeReMi splits are in-distribution (same campaigns, one simulation, one map); AUC ~1.0 on CICIDS is a known dataset property; several shuffled-label controls failed as written (RF AUC rule on 4 network units, VeReMi sender permutation 0.377 and proxy-only 0.638, ROAD / D11 global shuffle, GPS row-shuffle band)."
+  },
+  {
+   "row": "T2_M4",
+   "template": "That M4 was met: M4 verdict NOT MET ({T2_M4.n_met} of {T2_M4.n_rows} rows MET). The S8 repair is exposure 2 and still misses the K FA bound ({T2_S8_FA.v31} vs 3%) and the events bound ({T2_S8_EV.v31} vs 10 per hour).",
+   "text": "That M4 was met: M4 verdict NOT MET (7 of 18 rows MET). The S8 repair is exposure 2 and still misses the K FA bound (4.7% vs 3%) and the events bound (22.4 vs 10 per hour)."
+  },
+  {
+   "row": "T2_C_DET",
+   "template": "That v3.1 improves on v3 everywhere: on comma Chunk_2 event detection ({T2_C_DET.d} pts) and held-out ({T2_C_HELD.d} pts) are worse (CI excludes 0 in the bad direction); KITTI gps_can blame is worse ({T2_BL_K.v3} to {T2_BL_K.v31} correct); KITTI held-out detection is lower ({T2_K_HELD.d} pts, CI includes 0).",
+   "text": "That v3.1 improves on v3 everywhere: on comma Chunk_2 event detection (-4.0 pts) and held-out (-8.1 pts) are worse (CI excludes 0 in the bad direction); KITTI gps_can blame is worse (23.8% to 13.1% correct); KITTI held-out detection is lower (-4.7 pts, CI includes 0)."
+  }
+ ],
+ "figures": [
+  [
+   "fig_can_roc.png",
+   "CAN: detection vs false-alarm rate (1 s windows)",
+   "fig_can_roc.csv"
+  ],
+  [
+   "fig_network_det_vs_fa.png",
+   "Network: detection vs false-alarm rate (flow level, G protocol)",
+   "fig_network_det_vs_fa.csv"
+  ],
+  [
+   "fig_v2x_roc.png",
+   "V2X: VeReMi Extension, all 19 attack types and DoS family",
+   "fig_v2x_roc.csv"
+  ],
+  [
+   "fig_gps_roc.png",
+   "GPS: AV-GPS Case I, supervised views and v3 label-free",
+   "fig_gps_roc.csv"
+  ],
+  [
+   "fig_lidar_roc.png",
+   "LiDAR: KITTI seen attacks, supervised static model vs v3.1",
+   "fig_lidar_roc.csv"
+  ],
+  [
+   "fig_h31_zeroshot.png",
+   "H31 system K: v3 vs v3.1 vs v3.1 + S8 (exposure labelled)",
+   "fig_h31_zeroshot.csv"
+  ]
+ ]
+}

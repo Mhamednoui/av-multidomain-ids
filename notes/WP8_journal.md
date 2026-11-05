@@ -798,3 +798,12 @@
 2026-11-05T19:35:12+01:00 | S8 | committed H31 results; running unit tests tests/v31 (bg, log results/WP8/logs/S8_tests.log) while writing report | tools/WP8_S8_report.py
 2026-11-05T19:37:41+01:00 | S8 | report, brief, STATUS S8 -> REVIEW written; committing | stop
 2026-11-05T19:39:55+01:00 | B2 | DONE: all 9 test sets scored once, report reports/WP9_B2.md, brief, STATUS B2 -> REVIEW; committing, stop
+2026-11-05T19:41:00+01:00 | B5 | read rules/brief, reading reports B0-B4 | read M4,S8,RESULTS_v31
+2026-11-05T19:41:06+01:00 | B5 | read B0-B4 reports | read M4, S8, RESULTS_v31
+2026-11-05T19:41:22+01:00 | B5 | read all reports; inspecting result JSON keys | write tools/WP9_B5_build.py
+2026-11-05T19:43:12+01:00 | B5 | inspected B1-B4 json; now S7/S8 json keys
+2026-11-05T19:44:08+01:00 | B5 | design: tools/WP9_B5_build.py (master json+report), WP9_B5_figs.py, WP9_B5_check.py | write build
+2026-11-05T19:45:51+01:00 | B5 | writing tools/WP9_B5_build.py (spec of master rows, resolver, report) | run it, then figs, check
+2026-11-05T19:48:39+01:00 | B5 | build.py part 1 (master rows) written; writing part 2 (table 2, claims, main) | run build
+2026-11-05T19:51:21+01:00 | B5 | build.py runs: master json + reports/WP9_final.md generated; reviewing numbers vs reports | write check script, figures
+2026-11-05T19:52:37+01:00 | B5 | build+check scripts work (only figures missing); committing, then tools/WP9_B5_figs.py from saved scores
