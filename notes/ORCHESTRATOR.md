@@ -286,3 +286,6 @@ User: "do v3.1, work with agents, follow old rules, optimise tokens/context, sca
   Decision: add WP8 S8 (T3) = root-cause diagnostic + validation-only fix; H31 now exposure 1 -> any re-run is "re-used hold-out, exposure 2", never called fresh. Progress 13/17 = 76%.
 
 - 2026-11-05 19:35 WP9 B4 APPROVED (locks 2ebaec3 before training; controls + amendments before each test; one scoring each). Decision: full LiDAR model not released (red flag). Progress 14/17 = 82%. Remaining: WP8 S8 (running), WP9 B2 (running), then B5 (final comparison; needs B2).
+
+- 2026-11-05 19:45 WP8 S8 APPROVED (diagnosis+rules b1d2749 before gate 6304fa0 before H31 re-score 17f79ce). Health gate = standard GNSS integrity practice, but its threshold was set after reading H31 -> every gated number is "H31 exposure 2, post-M4 fix, NOT fresh"; improvement rests on one drive (drive-cluster CI touches 0); gate is an attack surface (spoofed accuracy fields) -> stated limitation. WP8 complete 11/11. Overall 15/17 = 88%. Remaining: B2 (running), B5.
+  Note for later: H31 is now exposure 2 for K; no fresh material left for further system claims. Remaining K clean-FA sources: V2X 9.6 %, LiDAR 8.2 %, network 4.8 %, CAN 3.8 % own-alarm shares.

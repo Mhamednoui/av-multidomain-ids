@@ -46,7 +46,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 
 ## v3.1 (branch v3.1, WP8; plan: workpackages/WP8_v31.md; v3 frozen at tag v3.0)
 
-**v3.1 progress: 10 / 11 steps approved = 91% (WP8, S8 added); WP9 benchmark 4 / 6; overall v3.1+WP9 14 / 17 = 82%** (updated 2026-11-05 19:35)
+**v3.1 progress: 11 / 11 steps approved = 100% (WP8); WP9 benchmark 4 / 6; overall v3.1+WP9 15 / 17 = 88%** (updated 2026-11-05 19:45)
 
 | WP | Step | State | Assigned to | Date | Note |
 |---|---|---|---|---|---|
@@ -60,7 +60,7 @@ Logged in `notes/ORCHESTRATOR.md` (assignments, approvals, changes requested, us
 | WP8 v3.1 | S2 | APPROVED | worker opus (medium, T4) | 2026-11-04 | V31_val all S2 rows MET: chosen MX/L100/b2 (equal split = max), K FA 1.92 %, 5.09 ev/h, det 78.2 %; frozen_system31 sha256 a8994883; reports/WP8_S2.md |
 | WP8 v3.1 | S7 | APPROVED | worker sonnet (high, T3) | 2026-11-05 | M4 NOT MET (7 of 18 rows): H31 clean FA K 12.2 % / C 6.1 % (drive 0093 anomaly), events/h 24.8 / 22.6; PointDrop scan +34 pts (fresh); comma GNSS blame fixed; reports/M4.md, WP8_S7.md, RESULTS_v31.md |
 | WP8 v3.1 | P1 | APPROVED | worker sonnet (medium, T2) | 2026-11-03 | paper curves / AUC from saved v3 outputs |
-| WP8 v3.1 | S8 | REVIEW | worker sonnet (high, T3) | 2026-11-05 | 0093 = non-converged OXTS record (data defect); pre-registered sensor-health gate (system/health31.py): V31_val no-op, H31 exposure 2 (NOT fresh) K FA 12.2 -> 4.7 %, SAFE_STOP 6.43 -> 0.88/h, det 87.1 -> 84.6; M4 still NOT MET; reports/WP8_S8.md |
+| WP8 v3.1 | S8 | APPROVED | worker sonnet (high, T3) | 2026-11-05 | root cause: drive 0093 OXTS reference never converged (pos_accuracy 19-44 m) = data defect; sensor-health gate (system/health31.py); H31 exposure 2: K clean FA 12.2 -> 4.7 % [-9.5,-5.3], SAFE_STOP K 6.43 -> 0.88/h, detection -2.5 pts; reports/WP8_S8.md |
 
 ## WP9 benchmark track (plan: workpackages/WP9_benchmark.md; deadline 2026-11-30)
 
