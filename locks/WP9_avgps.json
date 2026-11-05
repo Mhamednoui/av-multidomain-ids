@@ -1,0 +1,528 @@
+{
+ "_note": "WP9 B4 AV-GPS lock, written BEFORE any B4 model was fitted (2026-11-05). Source: public GitHub clone of the dataset already on disk (../codes/data/AV-GPS-Dataset); nothing downloaded.",
+ "dataset": "D03 AV-GPS-Dataset (Abrar et al., arXiv 2405.08359)",
+ "files_sha256": {
+  "AV-GPS-Dataset-0.csv": "3ed111e07726db8b2d3b27ebb28b0e5c963a2d8cd5b0cd07800aaa04bf84dbc4",
+  "AV-GPS-Dataset-1.csv": "6953154a1710d25251d73378ec48b8628326a5fe077c080eb96c5e0c17e3245d",
+  "AV-GPS-Dataset-2.csv": "4b11e336ed133d8ffccd9263340e3b476ab94a6c8803967d36242777b93ae013",
+  "AV-GPS-Dataset-3.csv": "bb5bd8b3fdfc7593914dff27de25ab0fa486a7fd5f8e8d67998f3170ac11eb08"
+ },
+ "session_rule": "contiguous rows with one Data Type label and no Run Time reset (<0) or gap (>5 s)",
+ "dedup": {
+  "file0": "dropped entirely: all 46,287 rows are normal rows of file 1 (key lat, lon, clock time, heading)",
+  "rule": "exact duplicate sessions (lat/lon md5) keep first; file-3 sessions with >= 50% rows in file 2 dropped; sessions < 10 rows dropped",
+  "dropped_sessions": [
+   {
+    "session": "f1:0-9",
+    "file": 1,
+    "start": 0,
+    "end": 9,
+    "rows": 9,
+    "label": 0,
+    "latlon_md5": "0f6bd46c0ba2b355e8c08f8896d94a1d",
+    "reason": "fewer than 10 rows"
+   },
+   {
+    "session": "f1:34305-34310",
+    "file": 1,
+    "start": 34305,
+    "end": 34310,
+    "rows": 5,
+    "label": 0,
+    "latlon_md5": "4a1ea59abeffac82ffb6dcf5bc74967c",
+    "reason": "fewer than 10 rows"
+   },
+   {
+    "session": "f1:50526-51773",
+    "file": 1,
+    "start": 50526,
+    "end": 51773,
+    "rows": 1247,
+    "label": 1,
+    "latlon_md5": "75d075929cbbf4285821e538bc85d25b",
+    "reason": "exact duplicate of session f1:49279-50526 (lat/lon sequence)"
+   },
+   {
+    "session": "f1:52611-54195",
+    "file": 1,
+    "start": 52611,
+    "end": 54195,
+    "rows": 1584,
+    "label": 1,
+    "latlon_md5": "49fc31c47471487281145778a4c83b61",
+    "reason": "exact duplicate of session f1:326-1910 (lat/lon sequence)"
+   },
+   {
+    "session": "f2:171-178",
+    "file": 2,
+    "start": 171,
+    "end": 178,
+    "rows": 7,
+    "label": 1,
+    "latlon_md5": "bb7b1957497e57fbd1c9901595aeb7f9",
+    "reason": "fewer than 10 rows"
+   },
+   {
+    "session": "f3:142-323",
+    "file": 3,
+    "start": 142,
+    "end": 323,
+    "rows": 181,
+    "label": 1,
+    "latlon_md5": "d7385813b31bcde25010421782b04cd6",
+    "frac_rows_in_file2": 0.9447513812154696,
+    "reason": "0.94 of the rows also in file 2"
+   },
+   {
+    "session": "f3:412-636",
+    "file": 3,
+    "start": 412,
+    "end": 636,
+    "rows": 224,
+    "label": 1,
+    "latlon_md5": "200ffa07234b7424691dc7660954ceeb",
+    "frac_rows_in_file2": 0.9642857142857143,
+    "reason": "0.96 of the rows also in file 2"
+   }
+  ]
+ },
+ "sessions": [
+  {
+   "session": "f1:9-326",
+   "file": 1,
+   "start": 9,
+   "end": 326,
+   "rows": 317,
+   "label": 1,
+   "latlon_md5": "06c3caf8e1c97f88f758f559401d4889"
+  },
+  {
+   "session": "f1:326-1910",
+   "file": 1,
+   "start": 326,
+   "end": 1910,
+   "rows": 1584,
+   "label": 1,
+   "latlon_md5": "49fc31c47471487281145778a4c83b61"
+  },
+  {
+   "session": "f1:1910-4702",
+   "file": 1,
+   "start": 1910,
+   "end": 4702,
+   "rows": 2792,
+   "label": 1,
+   "latlon_md5": "b44d4581ff05910b82dbf2ea208389ab"
+  },
+  {
+   "session": "f1:4702-5134",
+   "file": 1,
+   "start": 4702,
+   "end": 5134,
+   "rows": 432,
+   "label": 0,
+   "latlon_md5": "1f2dbd8ec015899ddc2ede4975b7e42d"
+  },
+  {
+   "session": "f1:5134-6266",
+   "file": 1,
+   "start": 5134,
+   "end": 6266,
+   "rows": 1132,
+   "label": 0,
+   "latlon_md5": "d4373020b031d5efcce940601204a53a"
+  },
+  {
+   "session": "f1:6266-7272",
+   "file": 1,
+   "start": 6266,
+   "end": 7272,
+   "rows": 1006,
+   "label": 0,
+   "latlon_md5": "c17758704ba85085432de4d6e7438389"
+  },
+  {
+   "session": "f1:7272-11213",
+   "file": 1,
+   "start": 7272,
+   "end": 11213,
+   "rows": 3941,
+   "label": 0,
+   "latlon_md5": "8bc803d8f29a671572e26ca8db11da5f"
+  },
+  {
+   "session": "f1:11213-15574",
+   "file": 1,
+   "start": 11213,
+   "end": 15574,
+   "rows": 4361,
+   "label": 0,
+   "latlon_md5": "cb0d5b0eec722b257088bc67abd5ef32"
+  },
+  {
+   "session": "f1:15574-19902",
+   "file": 1,
+   "start": 15574,
+   "end": 19902,
+   "rows": 4328,
+   "label": 0,
+   "latlon_md5": "cef84d6f59b64bd2171cf42e3257e8f2"
+  },
+  {
+   "session": "f1:19902-23528",
+   "file": 1,
+   "start": 19902,
+   "end": 23528,
+   "rows": 3626,
+   "label": 0,
+   "latlon_md5": "74f65720ee9af67d012533f93c7deece"
+  },
+  {
+   "session": "f1:23528-28562",
+   "file": 1,
+   "start": 23528,
+   "end": 28562,
+   "rows": 5034,
+   "label": 0,
+   "latlon_md5": "908db3294559c36554742e52120cf435"
+  },
+  {
+   "session": "f1:28562-29152",
+   "file": 1,
+   "start": 28562,
+   "end": 29152,
+   "rows": 590,
+   "label": 1,
+   "latlon_md5": "cb9f2fa84730fa2e69c3bf1a93803a2f"
+  },
+  {
+   "session": "f1:29152-30997",
+   "file": 1,
+   "start": 29152,
+   "end": 30997,
+   "rows": 1845,
+   "label": 0,
+   "latlon_md5": "3c2a099b99515dea76e42bc049cde289"
+  },
+  {
+   "session": "f1:30997-33521",
+   "file": 1,
+   "start": 30997,
+   "end": 33521,
+   "rows": 2524,
+   "label": 0,
+   "latlon_md5": "86a1889b91c8f89160b0b1af4b0a3f06"
+  },
+  {
+   "session": "f1:33521-34305",
+   "file": 1,
+   "start": 33521,
+   "end": 34305,
+   "rows": 784,
+   "label": 0,
+   "latlon_md5": "49469e4eb39506d4d735aeb78d11ad96"
+  },
+  {
+   "session": "f1:34310-38532",
+   "file": 1,
+   "start": 34310,
+   "end": 38532,
+   "rows": 4222,
+   "label": 0,
+   "latlon_md5": "43fbb42a3d2e3aba37c2f9cca8a289ea"
+  },
+  {
+   "session": "f1:38532-43642",
+   "file": 1,
+   "start": 38532,
+   "end": 43642,
+   "rows": 5110,
+   "label": 0,
+   "latlon_md5": "5cdb460971dbe6273018ec723cbdc875"
+  },
+  {
+   "session": "f1:43642-44251",
+   "file": 1,
+   "start": 43642,
+   "end": 44251,
+   "rows": 609,
+   "label": 1,
+   "latlon_md5": "144cad05cb9b0e5c6b176378075b5a57"
+  },
+  {
+   "session": "f1:44251-44332",
+   "file": 1,
+   "start": 44251,
+   "end": 44332,
+   "rows": 81,
+   "label": 0,
+   "latlon_md5": "eb09279abad97dfd5d470a77de22854f"
+  },
+  {
+   "session": "f1:44332-46768",
+   "file": 1,
+   "start": 44332,
+   "end": 46768,
+   "rows": 2436,
+   "label": 1,
+   "latlon_md5": "78930b3f58f4423ffa37b76f46bc4c15"
+  },
+  {
+   "session": "f1:46768-49279",
+   "file": 1,
+   "start": 46768,
+   "end": 49279,
+   "rows": 2511,
+   "label": 1,
+   "latlon_md5": "14d7c9a2a69d35fa7794184af0948e04"
+  },
+  {
+   "session": "f1:49279-50526",
+   "file": 1,
+   "start": 49279,
+   "end": 50526,
+   "rows": 1247,
+   "label": 1,
+   "latlon_md5": "75d075929cbbf4285821e538bc85d25b"
+  },
+  {
+   "session": "f1:51773-52611",
+   "file": 1,
+   "start": 51773,
+   "end": 52611,
+   "rows": 838,
+   "label": 1,
+   "latlon_md5": "d820adfd822f200a17719c00b03524d7"
+  },
+  {
+   "session": "f1:54195-57871",
+   "file": 1,
+   "start": 54195,
+   "end": 57871,
+   "rows": 3676,
+   "label": 0,
+   "latlon_md5": "b23787d3d2076eadf681111666f8de8e"
+  },
+  {
+   "session": "f1:57871-62042",
+   "file": 1,
+   "start": 57871,
+   "end": 62042,
+   "rows": 4171,
+   "label": 0,
+   "latlon_md5": "519ef7e904fda1e1843fe066f8e29335"
+  },
+  {
+   "session": "f2:0-171",
+   "file": 2,
+   "start": 0,
+   "end": 171,
+   "rows": 171,
+   "label": 1,
+   "latlon_md5": "730412957b14c74f1139edb641f33b2d"
+  },
+  {
+   "session": "f2:178-389",
+   "file": 2,
+   "start": 178,
+   "end": 389,
+   "rows": 211,
+   "label": 1,
+   "latlon_md5": "76d22eefb15747e6731b137d11195476"
+  },
+  {
+   "session": "f2:389-1706",
+   "file": 2,
+   "start": 389,
+   "end": 1706,
+   "rows": 1317,
+   "label": 1,
+   "latlon_md5": "452c7b1ebdb938c3ecafdaf43abc4755"
+  },
+  {
+   "session": "f2:1706-3964",
+   "file": 2,
+   "start": 1706,
+   "end": 3964,
+   "rows": 2258,
+   "label": 0,
+   "latlon_md5": "9136635d344d4aa6da7f087ebfa0d36e"
+  },
+  {
+   "session": "f2:3964-6890",
+   "file": 2,
+   "start": 3964,
+   "end": 6890,
+   "rows": 2926,
+   "label": 0,
+   "latlon_md5": "3ca790bc6208e941c54cf3eb13f29175"
+  },
+  {
+   "session": "f3:0-142",
+   "file": 3,
+   "start": 0,
+   "end": 142,
+   "rows": 142,
+   "label": 0,
+   "latlon_md5": "0993e0f67a8a381f33b509dfb3784ad4",
+   "frac_rows_in_file2": 0.0
+  },
+  {
+   "session": "f3:323-412",
+   "file": 3,
+   "start": 323,
+   "end": 412,
+   "rows": 89,
+   "label": 0,
+   "latlon_md5": "b4c0777dc0bfc1962fedd04ef869bc92",
+   "frac_rows_in_file2": 0.011235955056179775
+  }
+ ],
+ "case_I": {
+  "train": [
+   "f1:11213-15574",
+   "f1:15574-19902",
+   "f1:1910-4702",
+   "f1:19902-23528",
+   "f1:28562-29152",
+   "f1:29152-30997",
+   "f1:30997-33521",
+   "f1:326-1910",
+   "f1:38532-43642",
+   "f1:44251-44332",
+   "f1:46768-49279",
+   "f1:5134-6266",
+   "f1:51773-52611",
+   "f1:57871-62042",
+   "f1:6266-7272",
+   "f1:7272-11213",
+   "f1:9-326"
+  ],
+  "val": [
+   "f1:23528-28562",
+   "f1:33521-34305",
+   "f1:34310-38532",
+   "f1:43642-44251",
+   "f1:44332-46768",
+   "f1:4702-5134",
+   "f1:49279-50526",
+   "f1:54195-57871"
+  ],
+  "test": [
+   "f2:0-171",
+   "f2:178-389",
+   "f2:389-1706",
+   "f2:1706-3964",
+   "f2:3964-6890"
+  ],
+  "test_normal_only_extra": [
+   "f3:0-142",
+   "f3:323-412"
+  ],
+  "summary": {
+   "train": {
+    "sessions": 17,
+    "normal_sessions": 11,
+    "spoof_sessions": 6,
+    "normal_rows": 32125,
+    "spoof_rows": 8632
+   },
+   "val": {
+    "sessions": 8,
+    "normal_sessions": 5,
+    "spoof_sessions": 3,
+    "normal_rows": 14148,
+    "spoof_rows": 4292
+   },
+   "test": {
+    "sessions": 5,
+    "normal_sessions": 2,
+    "spoof_sessions": 3,
+    "normal_rows": 5184,
+    "spoof_rows": 1699
+   },
+   "test_normal_only_extra": {
+    "sessions": 2,
+    "normal_sessions": 2,
+    "spoof_sessions": 0,
+    "normal_rows": 231,
+    "spoof_rows": 0
+   }
+  }
+ },
+ "case_II": {
+  "train": [
+   "f2:0-171",
+   "f2:178-389",
+   "f2:389-1706",
+   "f2:1706-3964",
+   "f2:3964-6890"
+  ],
+  "val": [],
+  "test": [
+   "f1:9-326",
+   "f1:326-1910",
+   "f1:1910-4702",
+   "f1:4702-5134",
+   "f1:5134-6266",
+   "f1:6266-7272",
+   "f1:7272-11213",
+   "f1:11213-15574",
+   "f1:15574-19902",
+   "f1:19902-23528",
+   "f1:23528-28562",
+   "f1:28562-29152",
+   "f1:29152-30997",
+   "f1:30997-33521",
+   "f1:33521-34305",
+   "f1:34310-38532",
+   "f1:38532-43642",
+   "f1:43642-44251",
+   "f1:44251-44332",
+   "f1:44332-46768",
+   "f1:46768-49279",
+   "f1:49279-50526",
+   "f1:51773-52611",
+   "f1:54195-57871",
+   "f1:57871-62042"
+  ],
+  "test_normal_only_extra": [
+   "f3:0-142",
+   "f3:323-412"
+  ],
+  "summary": {
+   "train": {
+    "sessions": 5,
+    "normal_sessions": 2,
+    "spoof_sessions": 3,
+    "normal_rows": 5184,
+    "spoof_rows": 1699
+   },
+   "val": {
+    "sessions": 0,
+    "normal_sessions": 0,
+    "spoof_sessions": 0,
+    "normal_rows": 0,
+    "spoof_rows": 0
+   },
+   "test": {
+    "sessions": 25,
+    "normal_sessions": 16,
+    "spoof_sessions": 9,
+    "normal_rows": 46273,
+    "spoof_rows": 12924
+   },
+   "test_normal_only_extra": {
+    "sessions": 2,
+    "normal_sessions": 2,
+    "spoof_sessions": 0,
+    "normal_rows": 231,
+    "spoof_rows": 0
+   }
+  }
+ },
+ "case_III": "train on dataset 3 cannot be formed: after dedup dataset 3 has normal sessions only (its two spoofed sessions are copies of file 2)",
+ "h31_overlap": 0,
+ "h31_note": "H31 has no GPS-spoof dataset of this kind (kitti / comma / veremi / ...); nothing in AV-GPS is listed in locks/H31.json",
+ "val_draw": "per label, group_split(fractions 0.7/0.3, seed SEED=42) of DS1 sessions"
+}

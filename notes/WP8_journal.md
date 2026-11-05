@@ -703,3 +703,12 @@
 2026-11-05T18:24:59+01:00 | S7 | sim h31 v31_mcSS C: start | chunk sim_h31_v31_mcSS_C.pkl
 2026-11-05T18:25:01+01:00 | S7 | sim h31 v31_mcSS C: done | chunk sim_h31_v31_mcSS_C.pkl
 2026-11-05T18:31:21+01:00 | B3 | DONE: report reports/WP9_B3.md, brief, STATUS B3 -> REVIEW; committing
+2026-11-05T18:31:37+01:00 | S7 | system simulation h31: done | results/WP8/S7/system_h31.json
+2026-11-05T18:31:38+01:00 | S7 | domain rows system: start | tools/WP8_S7_domains.py
+2026-11-05T18:31:45+01:00 | S7 | domain rows system: done | 24 rows
+2026-11-05T18:32:07+01:00 | S7 | system simulation h31 DONE (system_h31.json; scores/S7/system_*), domain rows done; running lidar_check speed+v3sample (idle machine) then CAN idle timing re-run (labelled), then report generation
+2026-11-05T18:32:08+01:00 | S7 | lidar check speed: start | tools/WP8_S7_lidar_check.py
+2026-11-05T18:36:12+01:00 | S7 | lidar check speed: done | {"scans": 1297, "warmup_excluded": 3, "median_ms": 111.88509999999496, "p95_ms": 131.28689999998642, "p99_ms": 141.62465200000497, "max_ms": 153.0963000000014, "rule": "median <= 100 ms, p99 <= 250 ms
+2026-11-05T18:36:12+01:00 | S7 | lidar check v3sample: start | tools/WP8_S7_lidar_check.py
+2026-11-05T18:39:27+01:00 | B4 | run tools/WP9_B4_lock.py (AV-GPS + KITTI locks) | write notes/WP9_B4.md pre-registration, commit locks+notes before any training
+2026-11-05T18:40:45+01:00 | B4 | pre-registration notes/WP9_B4.md + locks written; committing | build LiDAR descriptor rows (3 procs, resumable) and AV-GPS fit

@@ -1,0 +1,92 @@
+{
+ "_note": "WP9 B4 KITTI lock (LiDAR), written BEFORE any B4 model was fitted (2026-11-05). WP1 / WP3 drive split of the 23 old drives (TEST 7, VAL 3, train 13).",
+ "group": "drive (group id of a scan = <drive>/<file>)",
+ "parts": {
+  "train": {
+   "drives": [
+    "0002",
+    "0013",
+    "0015",
+    "0017",
+    "0019",
+    "0020",
+    "0029",
+    "0046",
+    "0048",
+    "0060",
+    "0070",
+    "0106",
+    "0113"
+   ],
+   "n_scans": {
+    "0002": 77,
+    "0013": 144,
+    "0015": 297,
+    "0017": 114,
+    "0019": 481,
+    "0020": 86,
+    "0029": 430,
+    "0046": 125,
+    "0048": 22,
+    "0060": 78,
+    "0070": 420,
+    "0106": 227,
+    "0113": 87
+   },
+   "total_scans": 2588
+  },
+  "val": {
+   "drives": [
+    "0011",
+    "0027",
+    "0035"
+   ],
+   "n_scans": {
+    "0011": 233,
+    "0027": 188,
+    "0035": 131
+   },
+   "total_scans": 552
+  },
+  "test": {
+   "drives": [
+    "0001",
+    "0005",
+    "0028",
+    "0039",
+    "0052",
+    "0079",
+    "0095"
+   ],
+   "n_scans": {
+    "0001": 108,
+    "0005": 154,
+    "0028": 430,
+    "0039": 395,
+    "0052": 78,
+    "0079": 100,
+    "0095": 268
+   },
+   "total_scans": 1533
+  }
+ },
+ "scan_groups_sha256": "f5cc43fc39b66f4e8f8f9039c7de7fed0f71fe59ceb6545beaca73b455f9a8ad",
+ "h31_drives_excluded": [
+  "2011_09_26_drive_0009",
+  "2011_09_26_drive_0023",
+  "2011_09_26_drive_0032",
+  "2011_09_26_drive_0056",
+  "2011_09_26_drive_0061",
+  "2011_09_26_drive_0064",
+  "2011_09_26_drive_0084",
+  "2011_09_26_drive_0093",
+  "2011_09_26_drive_0101",
+  "2011_09_29_drive_0004",
+  "2011_09_29_drive_0026",
+  "2011_09_30_drive_0016",
+  "2011_10_03_drive_0047"
+ ],
+ "h31_overlap": 0,
+ "exposure_note": "the 7 test drives were scored by v3 frozen layers (WP3 S1-S9, WP1) and used as V31_val material by v3.1 (WP8 S2-S6): they are NOT fresh for v3 / v3.1. For the B4 SUPERVISED model they are scored for the first time (exposure 1 for that model).",
+ "attack_seeds": "training rows: rng [97, drive, scan] on every 2nd scan (B4); evaluation attacks = the S4 / WP8 S3 set: scans i % 3 == 1, rng [83, drive, i] (lidar.s4_build.attack_cases)"
+}
