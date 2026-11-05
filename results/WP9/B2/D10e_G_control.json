@@ -1,0 +1,38 @@
+{
+ "cand": {
+  "id": "rf_c60",
+  "kind": "rf",
+  "feats": "c60"
+ },
+ "runs": [
+  {
+   "seed": 1,
+   "macro_f1": 0.08611110979176956,
+   "auc_binary": 0.5225150796462008,
+   "fpr": 0.25636331386435907
+  },
+  {
+   "seed": 2,
+   "macro_f1": 0.08474727282043161,
+   "auc_binary": 0.5552430553955856,
+   "fpr": 0.25321491467014656
+  },
+  {
+   "seed": 3,
+   "macro_f1": 0.085903825941835,
+   "auc_binary": 0.623913203148047,
+   "fpr": 0.2483434479088802
+  }
+ ],
+ "real_val": {
+  "macro_f1": 0.9943054067630818,
+  "fpr": 5.067845785455827e-05,
+  "auc": 0.9999997832132321,
+  "top_feature": [
+   "Fwd Pkt Len Max",
+   0.05208129187626939
+  ]
+ },
+ "pass": false,
+ "rule": "max AUC <= 0.55 and mean macro-F1 < 0.5 x real val macro-F1; scored on validation only"
+}

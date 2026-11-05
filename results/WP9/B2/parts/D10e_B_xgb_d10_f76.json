@@ -1,0 +1,64 @@
+{
+ "macro_f1": 0.9563087556324179,
+ "eligible": [
+  "BENIGN",
+  "DDoS-LOIC-HTTP",
+  "DoS-Hulk",
+  "DoS-SlowHTTPTest",
+  "FTP-Patator",
+  "SSH-Patator"
+ ],
+ "fpr": 0.00016473017197826678,
+ "per_class_recall": {
+  "BENIGN": 0.9998352698280217,
+  "Bot": 1.0,
+  "DDoS-LOIC-HTTP": 1.0,
+  "DoS-GoldenEye": null,
+  "DoS-Hulk": 1.0,
+  "DoS-SlowHTTPTest": 0.5909752547307132,
+  "DoS-Slowloris": 0.2857142857142857,
+  "FTP-Patator": 1.0,
+  "Heartbleed": 1.0,
+  "Infiltration": 0.5,
+  "PortScan": 1.0,
+  "SSH-Patator": 1.0,
+  "Web-BruteForce": 1.0,
+  "Web-SQLi": null,
+  "Web-XSS": 0.25
+ },
+ "per_class_f1": {
+  "BENIGN": 0.9983441893107002,
+  "Bot": 1.0,
+  "DDoS-LOIC-HTTP": 1.0,
+  "DoS-GoldenEye": 0.0,
+  "DoS-Hulk": 0.999981932826248,
+  "DoS-SlowHTTPTest": 0.7395264116575592,
+  "DoS-Slowloris": 0.36363636363636365,
+  "FTP-Patator": 1.0,
+  "Heartbleed": 1.0,
+  "Infiltration": 0.6666666666666666,
+  "PortScan": 0.6976744186046512,
+  "SSH-Patator": 1.0,
+  "Web-BruteForce": 0.8888888888888888,
+  "Web-SQLi": 0.0,
+  "Web-XSS": 0.4
+ },
+ "auc_binary": 0.9999950202145075,
+ "cand": {
+  "id": "xgb_d10_f76",
+  "kind": "xgb",
+  "depth": 10,
+  "feats": "f76"
+ },
+ "importance_top5": {
+  "Bwd Pkt Len Std": 0.13511595259323317,
+  "Subflow Fwd Byts": 0.08492608525148423,
+  "Pkt Len Min": 0.08233233614078113,
+  "Down/Up Ratio": 0.052642991590406085,
+  "Fwd PSH Flags": 0.04970301830928796
+ },
+ "info": {
+  "best_iteration": 35
+ },
+ "seconds": 76.8
+}

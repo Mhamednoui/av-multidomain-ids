@@ -1,0 +1,68 @@
+{
+ "selected": {
+  "id": "rf_c60",
+  "kind": "rf",
+  "feats": "c60"
+ },
+ "eligible_val": [
+  "BENIGN",
+  "Bot",
+  "DDoS-LOIC-HTTP",
+  "DoS-GoldenEye",
+  "DoS-Hulk",
+  "DoS-SlowHTTPTest",
+  "DoS-Slowloris",
+  "FTP-Patator",
+  "PortScan",
+  "SSH-Patator",
+  "Web-BruteForce"
+ ],
+ "val": {
+  "xgb_d6_f76": {
+   "macro_f1": 0.9937959777306986,
+   "fpr": 3.1674036159112795e-05,
+   "auc": 0.9999999815896734,
+   "top_feature": [
+    "Bwd Pkt Len Std",
+    0.1229576599241122
+   ]
+  },
+  "xgb_d6_c60": {
+   "macro_f1": 0.9901927832557895,
+   "fpr": 6.968287955000374e-05,
+   "auc": 0.9999998303767657,
+   "top_feature": [
+    "Fwd Pkt Len Mean",
+    0.14453587711222252
+   ]
+  },
+  "xgb_d10_f76": {
+   "macro_f1": 0.9938804193616484,
+   "fpr": 1.9004421695445473e-05,
+   "auc": 0.9999999830376766,
+   "top_feature": [
+    "Bwd Pkt Len Std",
+    0.12279591021314058
+   ]
+  },
+  "rf_f76": {
+   "macro_f1": 0.9940417814555058,
+   "fpr": 6.334807231811457e-05,
+   "auc": 0.999999900501493,
+   "top_feature": [
+    "Fwd Pkt Len Max",
+    0.04885315348826892
+   ]
+  },
+  "rf_c60": {
+   "macro_f1": 0.9943054067630818,
+   "fpr": 5.067845785455827e-05,
+   "auc": 0.9999997832132321,
+   "top_feature": [
+    "Fwd Pkt Len Max",
+    0.05208129187626939
+   ]
+  }
+ },
+ "rule": "max val macro-F1 over eligible classes (>=20 in train and val); tie -> clean60"
+}

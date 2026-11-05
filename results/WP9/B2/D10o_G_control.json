@@ -1,0 +1,39 @@
+{
+ "cand": {
+  "id": "xgb_d10_f76",
+  "kind": "xgb",
+  "depth": 10,
+  "feats": "f76"
+ },
+ "runs": [
+  {
+   "seed": 1,
+   "macro_f1": 0.08267228584251905,
+   "auc_binary": 0.5196727497134914,
+   "fpr": 0.19426101629407577
+  },
+  {
+   "seed": 2,
+   "macro_f1": 0.08354841372198296,
+   "auc_binary": 0.5182641395280247,
+   "fpr": 0.1932900647143941
+  },
+  {
+   "seed": 3,
+   "macro_f1": 0.08214852320726364,
+   "auc_binary": 0.5249423042261644,
+   "fpr": 0.18771887652418187
+  }
+ ],
+ "real_val": {
+  "macro_f1": 0.907363474169455,
+  "fpr": 0.000923818007852453,
+  "auc": 0.9999760315326116,
+  "top_feature": [
+   "Init Bwd Win Byts",
+   0.0940154558953466
+  ]
+ },
+ "pass": true,
+ "rule": "max AUC <= 0.55 and mean macro-F1 < 0.5 x real val macro-F1; scored on validation only"
+}

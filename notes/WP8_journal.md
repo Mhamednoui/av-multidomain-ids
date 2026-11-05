@@ -568,3 +568,78 @@
 2026-11-04T17:45:55+01:00 | B3 | fit xgb_A_plaus_d6: START (log results/WP9/logs/B3_fit.log)
 2026-11-04T17:46:14+01:00 | S7 | freeze.json written | 610 code files, parent commit 35e62750
 2026-11-04T17:46:22+01:00 | S7 | FREEZE committed: results/WP8/S7/freeze.json (sha256 of 39 artefact files + 610 code files, parent commit 35e6275); no H31 file opened before this commit; next: verify H31 sha256 vs locks, then odometry / LiDAR / CAN / network / V2X / V2AIX builds, then ONE scoring
+2026-11-04T17:46:30+01:00 | S7 | verify H31 files against locks/H31.json: start | tools/WP8_S7_verify.py; result results/WP8/S7/h31_verify.json
+2026-11-04T17:50:10+01:00 | B3 | fit xgb_A_plaus_d6: DONE val macro-F1 0.8489 FPR 0.0100
+2026-11-04T17:50:10+01:00 | B3 | fit xgb_A_plaus_d8: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T17:52:12+01:00 | S7 | verify H31 files: done | all_ok=True, 43 items
+2026-11-04T17:53:46+01:00 | B3 | fit xgb_A_plaus_d8: DONE val macro-F1 0.8494 FPR 0.0100
+2026-11-04T17:53:46+01:00 | B3 | fit xgb_A_noT_d6: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T17:58:05+01:00 | B3 | fit xgb_A_noT_d6: DONE val macro-F1 0.8299 FPR 0.0100
+2026-11-04T17:58:05+01:00 | B3 | fit xgb_A_noT_d8: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T18:01:44+01:00 | B3 | fit xgb_A_noT_d8: DONE val macro-F1 0.8297 FPR 0.0100
+2026-11-04T18:01:44+01:00 | B3 | fit xgb_B_plaus_ps_d6: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T18:05:56+01:00 | B3 | fit xgb_B_plaus_ps_d6: DONE val macro-F1 0.8051 FPR 0.0100
+2026-11-04T18:05:56+01:00 | B3 | fit xgb_B_plaus_ps_d8: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T18:09:33+01:00 | B3 | fit xgb_B_plaus_ps_d8: DONE val macro-F1 0.8061 FPR 0.0100
+2026-11-04T18:09:33+01:00 | B3 | fit xgb_C_raw_d6: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T18:16:30+01:00 | B3 | fit xgb_C_raw_d6: DONE val macro-F1 0.5256 FPR 0.0100
+2026-11-04T18:16:30+01:00 | B3 | fit xgb_C_raw_d8: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T18:22:56+01:00 | B3 | fit xgb_C_raw_d8: DONE val macro-F1 0.5269 FPR 0.0100
+2026-11-04T18:22:56+01:00 | B3 | fit xgb_D_all_d6: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T18:39:36+01:00 | B3 | fit xgb_D_all_d6: DONE val macro-F1 0.9173 FPR 0.0100
+2026-11-04T18:39:36+01:00 | B3 | fit xgb_D_all_d8: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T18:51:57+01:00 | B3 | fit xgb_D_all_d8: DONE val macro-F1 0.9186 FPR 0.0100
+2026-11-04T18:51:57+01:00 | B3 | fit xgb_D_noT_d6: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T19:08:17+01:00 | B3 | fit xgb_D_noT_d6: DONE val macro-F1 0.9174 FPR 0.0100
+2026-11-04T19:08:17+01:00 | B3 | fit xgb_D_noT_d8: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T19:18:23+01:00 | B3 | fit xgb_D_noT_d8: DONE val macro-F1 0.9178 FPR 0.0100
+2026-11-04T19:18:23+01:00 | B3 | fit rf_A_plaus: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T19:22:10+01:00 | B3 | fit rf_A_plaus: DONE val macro-F1 0.8466 FPR 0.0100
+2026-11-04T19:22:10+01:00 | B3 | fit rf_D_all: START (log results/WP9/logs/B3_fit.log)
+2026-11-04T19:26:50+01:00 | B3 | fit rf_D_all: DONE val macro-F1 0.9014 FPR 0.0100
+2026-11-04T19:27:02+01:00 | B3 | select: chosen xgb_D_noT_d6 val macro-F1 0.9174; results/WP9/B3_selection.json
+2026-11-05T17:21:51+01:00 | B3 | controls: START chosen-unit importance + shuffled + within-block permutation (log results/WP9/logs/B3_controls.log)
+2026-11-05T17:21:52+01:00 | B2 | resumed after limit reset: D10o + D10e val/control done (all 3 protocols), D23x pass1 parts done; next: fix labels, pass2, D23x splits+lock, D23x val, then test stages
+2026-11-05T17:21:59+01:00 | S7 | resume after usage limit: freeze 8aac3dd committed, H31 verify all_ok=True (43 items), NO H31 chunk scored yet (parts empty); starting odometry (3 procs, bg) log results/WP8/logs/S7_odom.log; next kitti/comma/lidar/can/net/v2x/v2aix builds
+2026-11-05T17:21:59+01:00 | B2 | D23x pass2 start (log results/WP9/logs/B2_build_D23x_pass2.log)
+2026-11-05T17:22:28+01:00 | S7 | CAN capture ambient_dyno_drive_benign_anomaly: start (IncrementalCan vs batch) | part can_test_ambient_dyno_drive_benign_anomaly.json
+2026-11-05T17:22:38+01:00 | B2 | D10e G registered control FAILED the max-AUC rule (rf_c60: AUC 0.52/0.56/0.62, macro-F1 0.085 vs real 0.994); registered verdict stays FAIL; diagnostic amendment: 7 more seeds, tools/WP9_B2_ctl_extra.py D10e G (log results/WP9/logs/B2_ctl_extra.log)
+2026-11-05T17:23:54+01:00 | S7 | CAN capture ambient_dyno_drive_benign_anomaly: done | mismatches 0/0, p99 178.4 ms
+2026-11-05T17:23:54+01:00 | S7 | CAN capture ambient_dyno_drive_extended_short: start (IncrementalCan vs batch) | part can_test_ambient_dyno_drive_extended_short.json
+2026-11-05T17:25:16+01:00 | S7 | CAN capture ambient_dyno_drive_extended_short: done | mismatches 0/0, p99 171.1 ms
+2026-11-05T17:25:16+01:00 | S7 | CAN capture ambient_dyno_reverse: start (IncrementalCan vs batch) | part can_test_ambient_dyno_reverse.json
+2026-11-05T17:25:29+01:00 | S7 | CAN capture ambient_dyno_reverse: done | mismatches 0/0, p99 194.8 ms
+2026-11-05T17:25:29+01:00 | S7 | CAN capture ambient_highway_street_driving_diagnostics: start (IncrementalCan vs batch) | part can_test_ambient_highway_street_driving_diagnostics.json
+2026-11-05T17:27:21+01:00 | S7 | CAN capture ambient_highway_street_driving_diagnostics: done | mismatches 0/0, p99 183.0 ms
+2026-11-05T17:27:21+01:00 | S7 | CAN capture correlated_signal_attack_3: start (IncrementalCan vs batch) | part can_test_correlated_signal_attack_3.json
+2026-11-05T17:27:25+01:00 | S7 | CAN capture correlated_signal_attack_3: done | mismatches 0/0, p99 161.6 ms
+2026-11-05T17:27:25+01:00 | S7 | CAN capture correlated_signal_attack_3_masquerade: start (IncrementalCan vs batch) | part can_test_correlated_signal_attack_3_masquerade.json
+2026-11-05T17:27:29+01:00 | S7 | CAN capture correlated_signal_attack_3_masquerade: done | mismatches 0/0, p99 156.3 ms
+2026-11-05T17:27:29+01:00 | S7 | CAN capture fuzzing_attack_3: start (IncrementalCan vs batch) | part can_test_fuzzing_attack_3.json
+2026-11-05T17:27:30+01:00 | S7 | CAN capture fuzzing_attack_3: done | mismatches 0/0, p99 49.1 ms
+2026-11-05T17:27:30+01:00 | S7 | CAN capture max_engine_coolant_temp_attack: start (IncrementalCan vs batch) | part can_test_max_engine_coolant_temp_attack.json
+2026-11-05T17:27:36+01:00 | S7 | CAN capture max_engine_coolant_temp_attack: done | mismatches 0/0, p99 168.8 ms
+2026-11-05T17:27:36+01:00 | S7 | CAN capture max_engine_coolant_temp_attack_masquerade: start (IncrementalCan vs batch) | part can_test_max_engine_coolant_temp_attack_masquerade.json
+2026-11-05T17:27:41+01:00 | S7 | CAN capture max_engine_coolant_temp_attack_masquerade: done | mismatches 0/0, p99 125.5 ms
+2026-11-05T17:27:41+01:00 | S7 | CAN capture max_speedometer_attack_3: start (IncrementalCan vs batch) | part can_test_max_speedometer_attack_3.json
+2026-11-05T17:28:00+01:00 | S7 | CAN capture max_speedometer_attack_3: done | mismatches 0/0, p99 138.9 ms
+2026-11-05T17:28:00+01:00 | S7 | CAN capture max_speedometer_attack_3_masquerade: start (IncrementalCan vs batch) | part can_test_max_speedometer_attack_3_masquerade.json
+2026-11-05T17:28:17+01:00 | S7 | CAN capture max_speedometer_attack_3_masquerade: done | mismatches 0/0, p99 129.8 ms
+2026-11-05T17:28:17+01:00 | S7 | CAN capture reverse_light_off_attack_3: start (IncrementalCan vs batch) | part can_test_reverse_light_off_attack_3.json
+2026-11-05T17:28:28+01:00 | S7 | CAN capture reverse_light_off_attack_3: done | mismatches 0/0, p99 117.3 ms
+2026-11-05T17:28:28+01:00 | S7 | CAN capture reverse_light_off_attack_3_masquerade: start (IncrementalCan vs batch) | part can_test_reverse_light_off_attack_3_masquerade.json
+2026-11-05T17:28:39+01:00 | S7 | CAN capture reverse_light_off_attack_3_masquerade: done | mismatches 0/0, p99 109.9 ms
+2026-11-05T17:28:39+01:00 | S7 | CAN capture reverse_light_on_attack_3: start (IncrementalCan vs batch) | part can_test_reverse_light_on_attack_3.json
+2026-11-05T17:28:52+01:00 | S7 | CAN capture reverse_light_on_attack_3: done | mismatches 0/0, p99 104.5 ms
+2026-11-05T17:28:52+01:00 | S7 | CAN capture reverse_light_on_attack_3_masquerade: start (IncrementalCan vs batch) | part can_test_reverse_light_on_attack_3_masquerade.json
+2026-11-05T17:29:04+01:00 | S7 | CAN capture reverse_light_on_attack_3_masquerade: done | mismatches 0/0, p99 114.3 ms
+2026-11-05T17:29:04+01:00 | S7 | CAN capture accelerator_attack_drive_2: start (IncrementalCan vs batch) | part can_test_accelerator_attack_drive_2.json
+2026-11-05T17:29:06+01:00 | S7 | comma Chunk_2 builder start (bg) log results/WP8/logs/S7_comma.log; resumable per route
+2026-11-05T17:29:21+01:00 | S7 | CAN capture accelerator_attack_drive_2: done | mismatches 0/0, p99 149.0 ms
+2026-11-05T17:29:21+01:00 | S7 | CAN capture accelerator_attack_reverse_2: start (IncrementalCan vs batch) | part can_test_accelerator_attack_reverse_2.json
+2026-11-05T17:29:43+01:00 | S7 | CAN capture accelerator_attack_reverse_2: done | mismatches 0/0, p99 151.9 ms
+2026-11-05T17:30:44+01:00 | S7 | odometry done (13 drives); starting KITTI vehicle records (log S7_kitti.log) and LiDAR per-scan scoring (3 procs, log S7_lidar.log, chunks results/WP8/S7/parts/lidar_*.pkl)
+2026-11-05T17:33:30+01:00 | S7 | network test: start (v3 batch, F1, RC5) | out C:\Users\nouir\PFE\codes_v3\results\WP8\S7
+2026-11-05T17:34:12+01:00 | S7 | network test: done | v3 macro 0.6589, F1 0.6589, RC5 0.6276
+2026-11-05T17:34:52+01:00 | B2 | D23x pass2 done (7.6M stored rows); splits -> locks/WP9_D23x.json
+2026-11-05T17:35:27+01:00 | S7 | V2X VeReMi test: start | parts C:\Users\nouir\PFE\data_extra\cache_v3\WP8\S7\v2x_parts

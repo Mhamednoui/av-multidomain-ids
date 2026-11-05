@@ -1,0 +1,69 @@
+{
+ "selected": {
+  "id": "xgb_d6_f76",
+  "kind": "xgb",
+  "depth": 6,
+  "feats": "f76"
+ },
+ "eligible_val": [
+  "BENIGN",
+  "Bot",
+  "DDoS-LOIC-HTTP",
+  "DoS-Hulk",
+  "DoS-SlowHTTPTest",
+  "DoS-Slowloris",
+  "FTP-Patator",
+  "PortScan",
+  "SSH-Patator",
+  "Web-BruteForce",
+  "Web-XSS"
+ ],
+ "val": {
+  "xgb_d6_f76": {
+   "macro_f1": 0.8614800397456865,
+   "fpr": 0.0011240950082560541,
+   "auc": 0.9999886545891222,
+   "top_feature": [
+    "Init Bwd Win Byts",
+    0.08757273723809106
+   ]
+  },
+  "xgb_d6_c60": {
+   "macro_f1": 0.7984381761525328,
+   "fpr": 0.00508700622380287,
+   "auc": 0.9994851974867156,
+   "top_feature": [
+    "Fwd Pkt Len Mean",
+    0.0697243929692234
+   ]
+  },
+  "xgb_d10_f76": {
+   "macro_f1": 0.8384256673139696,
+   "fpr": 0.0010351835386764874,
+   "auc": 0.9999878824285404,
+   "top_feature": [
+    "Init Bwd Win Byts",
+    0.08887513723350632
+   ]
+  },
+  "rf_f76": {
+   "macro_f1": 0.8017151720115681,
+   "fpr": 0.0016893179220119903,
+   "auc": 0.9999193701175463,
+   "top_feature": [
+    "Init Bwd Win Byts",
+    0.040417237787299345
+   ]
+  },
+  "rf_c60": {
+   "macro_f1": 0.6712742947281625,
+   "fpr": 0.03226851263813035,
+   "auc": 0.9993916304335667,
+   "top_feature": [
+    "Bwd Header Len",
+    0.0441888825749063
+   ]
+  }
+ },
+ "rule": "max val macro-F1 over eligible classes (>=20 in train and val); tie -> clean60"
+}

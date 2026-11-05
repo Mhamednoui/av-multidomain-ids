@@ -84,11 +84,15 @@ FAM_KEYS.update({"benign": "BENIGN", "dosattackshulk": "DoS-Hulk", "dosattacksgo
                  "dosattacksslowhttptest": "DoS-SlowHTTPTest", "infiltration": "Infiltration", "infilteration": "Infiltration", "bot": "Bot",
                  "ddosattackshoic": "DDoS-HOIC", "ddosattackhoic": "DDoS-HOIC", "ddosattacksloichttp": "DDoS-LOIC-HTTP", "ddosattackloicudp": "DDoS-LOIC-UDP",
                  "ddosattacksloicudp": "DDoS-LOIC-UDP", "ftpbruteforce": "FTP-Patator", "sshbruteforce": "SSH-Patator", "bruteforceweb": "Web-BruteForce",
-                 "bruteforcexss": "Web-XSS", "sqlinjection": "Web-SQLi", "webattackbruteforce": "Web-BruteForce", "webattackxss": "Web-XSS", "webattacksqlinjection": "Web-SQLi"})
+                 "bruteforcexss": "Web-XSS", "sqlinjection": "Web-SQLi", "webattackbruteforce": "Web-BruteForce", "webattackxss": "Web-XSS", "webattacksqlinjection": "Web-SQLi", "webattacksql": "Web-SQLi", "ddosloicudp": "DDoS-LOIC-UDP", "ddosloichttp": "DDoS-LOIC-HTTP", "ddoshoic": "DDoS-HOIC", "botnetares": "Bot"})
 
 
 def fam_of(lab):
     k = key(lab).replace("attempted", "")
+    if k.startswith("infiltrationnmap"):
+        return "Infiltration-NMAP"          # the improved set labels the NMAP port scan of the infiltration stage separately
+    if k.startswith("infiltration"):
+        return "Infiltration"
     return FAM_KEYS.get(k)
 
 
